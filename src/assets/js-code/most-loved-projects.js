@@ -446,7 +446,7 @@
 				output += '<td class="col-project-layer">' + layerHTML + '</td>';
 				output += '<td class="col-project-token"><span class="project-token">' + tokenHTML + '</span></td>';
 				output += '<td class="col-project-native">' + nativeHTML + '</td>';
-				output += '<td class="col-project-github">' + getGithubLink( thisProject.gitHub ) + '</td>';
+				output += '<td class="col-project-github">' + getGithubLink( thisProject.github ) + '</td>';
 				output += '<td class="col-project-twitter">' + getTwitterLink( thisProject.twitter ) + '</td>';
 				output += '<td class="col-mobile-project-info">' + getHTMLInfoMobile( thisProject, layerHTML, tokenHTML, nativeHTML ) + '</td>';
 				output += '<td class="col-project-love">' + getLoveButton( thisProject ) + '</td>';
@@ -562,7 +562,7 @@
 
 			output += '<div class="project-info-line">'
 			output += '<div class="label">Github: </div>';
-			output += '<div class="value">' + getGithubLink( project.gitHub ) + '</div>';
+			output += '<div class="value">' + getGithubLink( project.github ) + '</div>';
 			output += '</div>';
 
 			output += '<div class="project-info-line">'
