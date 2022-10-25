@@ -1,0 +1,22 @@
+.svg-icon {
+	font-size: 36px;
+	line-height: 1;
+	display: inline-block;
+
+	svg {
+		width: 1em;
+		height: 1em;
+		position: relative;
+		display: block;
+
+		*[stroke^="#"],
+		*[stroke^="url(#"] {
+			stroke: currentColor;
+		}
+
+		*[fill^="#"],
+		*[fill^="url(#"] {
+			fill: currentColor;
+		}
+	}
+}

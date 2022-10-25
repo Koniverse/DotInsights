@@ -1,0 +1,61 @@
+.video-popup {
+	position: relative;
+	display: inline-block;
+	--outline-size: 2px;
+	border-radius: 10px;
+	padding: var(--outline-size);
+
+	&:before {
+		@extend %NormalTransition;
+		content: '';
+		position: absolute;
+		top: calc(-1 * var(--outline-size));
+		right: calc(-1 * var(--outline-size));
+		bottom: calc(-1 * var(--outline-size));
+		left: calc(-1 * var(--outline-size));
+		border-radius: inherit;
+		background: linear-gradient(
+				-135deg, #4a75ad 0%, rgba(43, 54, 28, 0) 53.57%, #42703d 100%);
+		box-shadow: 0 4px 59px rgba(144, 255, 44, .25);
+	}
+
+	.video-play-btn {
+		transition: all .75s cubic-bezier(0, 0, .2, 1);
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		width: 74px;
+		height: 74px;
+		background: $primary-color;
+		border-radius: 50%;
+		color: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.video-play-icon {
+		margin: 0 0 0 2px;
+	}
+
+	.video-link {
+		--outline-size: 2px;
+		position: relative;
+		border-radius: inherit;
+		display: block;
+		overflow: hidden;
+
+		img {
+			position: relative;
+			border-radius: inherit;
+		}
+	}
+
+	&:hover {
+		.video-play-btn {
+			transform: translate(-50%, -50%) scale3d(1.2, 1.2, 1.2);
+		}
+	}
+}

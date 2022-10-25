@@ -1,0 +1,27 @@
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+td, th {
+	border: 1px solid rgba(0, 0, 0, .08);
+	padding: 10px;
+	text-align: start;
+	vertical-align: middle;
+}
+
+th {
+	color: $heading-color;
+	font-weight: 700;
+}
+
+table {
+	th {
+		&.empty {
+			visibility: hidden;
+			border: 0;
+			background: none;
+		}
+	}
+}
+

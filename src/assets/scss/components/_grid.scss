@@ -1,0 +1,89 @@
+.grid-modern {
+	display: grid;
+	grid-template-columns: repeat(var(--grid-columns, 3), 1fr);
+	grid-gap: calc(1px * var(--grid-gutter, 30));
+
+	.grid-item {
+		min-width: 0;
+	}
+
+	&[style*='--grid-columns-desktop:'] {
+		--grid-columns: var(--grid-columns-desktop);
+	}
+
+	&[style*='--grid-gutter-desktop:'] {
+		--grid-gutter: var(--grid-gutter-desktop);
+	}
+}
+
+@include subwallet-breakpoint-up(widescreen) {
+	.grid-modern {
+		&[style*='--grid-columns-widescreen:'] {
+			--grid-columns: var(--grid-columns-widescreen);
+		}
+
+		&[style*='--grid-gutter-widescreen:'] {
+			--grid-gutter: var(--grid-gutter-widescreen);
+		}
+	}
+}
+
+@include subwallet-breakpoint-down(laptop) {
+	.grid-modern {
+		&[style*='--grid-columns-laptop:'] {
+			--grid-columns: var(--grid-columns-laptop);
+		}
+
+		&[style*='--grid-gutter-laptop:'] {
+			--grid-gutter: var(--grid-gutter-laptop);
+		}
+	}
+}
+
+@include subwallet-breakpoint-down(tablet-extra) {
+	.grid-modern {
+		&[style*='--grid-columns-tablet-extra:'] {
+			--grid-columns: var(--grid-columns-tablet-extra);
+		}
+
+		&[style*='--grid-gutter-tablet-extra:'] {
+			--grid-gutter: var(--grid-gutter-tablet-extra);
+		}
+	}
+}
+
+@include subwallet-breakpoint-down(tablet) {
+	.grid-modern {
+		&[style*='--grid-columns-tablet:'] {
+			--grid-columns: var(--grid-columns-tablet);
+		}
+
+		&[style*='--grid-gutter-tablet:'] {
+			--grid-gutter: var(--grid-gutter-tablet);
+		}
+	}
+}
+
+@include subwallet-breakpoint-down(mobile-extra) {
+	.grid-modern {
+		&[style*='--grid-columns-mobile-extra:'] {
+			--grid-columns: var(--grid-columns-mobile-extra);
+		}
+
+		&[style*='--grid-gutter-mobile-extra:'] {
+			--grid-gutter: var(--grid-gutter-mobile-extra);
+		}
+	}
+}
+
+@include subwallet-breakpoint-down(mobile) {
+	.grid-modern {
+		&[style*='--grid-columns-mobile:'] {
+			--grid-columns: var(--grid-columns-mobile);
+		}
+
+		&[style*='--grid-gutter-mobile:'] {
+			--grid-gutter: var(--grid-gutter-mobile);
+		}
+	}
+}

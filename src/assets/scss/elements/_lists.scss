@@ -1,0 +1,50 @@
+ul {
+	padding-left: 20px;
+}
+
+ol {
+	list-style: decimal;
+	padding-left: 30px;
+}
+
+ol, ul {
+	margin-top: 1em;
+	margin-bottom: 1em;
+
+	li + li {
+		margin: 6px 0 0;
+	}
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+}
+
+dt {
+	font-weight: 700;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+.list-style-dots {
+	list-style-type: none;
+	padding: 0;
+
+	li {
+		position: relative;
+		padding: 0 0 0 15px;
+
+		&:before {
+			position: absolute;
+			top: 10px;
+			left: 0;
+			width: 4px;
+			height: 4px;
+			border-radius: 50%;
+			background: currentColor;
+		}
+	}
+}

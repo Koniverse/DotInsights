@@ -1,0 +1,192 @@
+body {
+	color: $body-color;
+	background-color: $body-bg-color;
+	font-family: $body-font-family;
+	font-weight: $body-font-weight;
+	font-size: 18px;
+	line-height: 1.667;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+	line-height: 1.2;
+	font-family: $heading-font-family;
+	font-weight: $heading-font-weight;
+	color: $heading-color;
+}
+
+h1 {
+	font-size: 56px;
+}
+
+h2 {
+	font-size: 40px;
+}
+
+h3 {
+	font-size: 32px;
+}
+
+h4 {
+	font-size: 24px;
+}
+
+h5 {
+	font-size: 20px;
+}
+
+h6 {
+	font-size: 18px;
+}
+
+p {
+	margin-bottom: 1.5em;
+	margin-top: 0;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	font-size: 15px;
+	overflow: auto;
+	margin-bottom: 1.6em;
+	padding: 1.6em;
+	max-width: 100%;
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	line-height: 1.6;
+	white-space: pre-wrap; /* css-3 */
+	white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+	white-space: -pre-wrap; /* Opera 4-6 */
+	white-space: -o-pre-wrap; /* Opera 7 */
+	word-wrap: break-word;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-size: 15px;
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+code {
+	background: #f3f4f5;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: none;
+	text-decoration: none;
+}
+
+mark {
+	color: $primary-color;
+	padding: 0;
+}
+
+big {
+	font-size: 125%;
+}
+
+blockquote,
+q {
+	quotes: "" "";
+
+	&:before,
+	&:after {
+		content: "";
+	}
+}
+
+blockquote {
+	margin: 50px 0 44px 48px !important;
+	border: 0;
+	padding: 0;
+	font-family: $heading-font-family;
+	font-weight: $heading-font-weight;
+	color: $heading-color;
+	font-style: normal;
+	font-size: 28px;
+	line-height: 1.43;
+	max-width: 660px;
+
+	cite {
+		display: block;
+		font-family: $body-font-family;
+		font-weight: $body-font-weight;
+		font-size: 14px;
+		line-height: 20px;
+		font-style: normal;
+		text-transform: uppercase;
+		letter-spacing: .1em;
+		margin: 18px 0 0;
+
+		em {
+			font-style: inherit;
+		}
+	}
+
+	p {
+		margin: 0 0 18px;
+
+		> cite {
+			display: block;
+			margin: 36px 0 0;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	blockquote {
+		font-size: 24px;
+
+		p > cite {
+			margin: 20px 0 0;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	blockquote {
+		font-size: 20px;
+		margin: 30px 0 !important;
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	body {
+		font-size: 16px;
+	}
+}
+
+@include media-breakpoint-down(xs) {
+	body {
+		font-size: 14px;
+		line-height: 24px;
+	}
+}

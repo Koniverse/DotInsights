@@ -1,0 +1,50 @@
+body {
+	overflow-x: hidden;
+}
+
+.container-wide,
+.container-large,
+.container-fluid,
+.container-full-gap-100 {
+	@include make-container();
+}
+
+.container {
+	max-width: 100% !important;
+}
+
+@media screen and (min-width: 1200px) {
+	.container {
+		--bs-gutter-x: 50px;
+		max-width: 1270px !important;
+
+		&.container--gutter-70 {
+			max-width: 1370px;
+
+			[class*="col-"] {
+				padding-left: 35px;
+				padding-right: 35px;
+			}
+		}
+	}
+
+	.container-full-gap-100 {
+		--bs-gutter-x: 50px;
+	}
+
+	.container-wide {
+		--bs-gutter-x: 50px;
+		max-width: 1822px !important;
+	}
+
+	.container-large {
+		--bs-gutter-x: 50px;
+		max-width: 1512px !important;
+	}
+}
+
+@media screen and (min-width: 1400px) {
+	.container-full-gap-100 {
+		--bs-gutter-x: 100px;
+	}
+}

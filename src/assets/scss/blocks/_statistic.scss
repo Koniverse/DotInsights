@@ -1,0 +1,109 @@
+.block-statistic {
+	display: block;
+	z-index: 0;
+	position: relative;
+	padding: 27px 36px;
+	width: 408px;
+	max-width: 85vw;
+	min-height: 188px;
+
+	&:before {
+		transition: all .35s cubic-bezier(.2, .75, .5, 1);
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		border-radius: 16px;
+		background: #151515 url(../images/dot-price.png) no-repeat bottom right;
+		background-blend-mode: lighten;
+		z-index: -1;
+	}
+
+	&:hover {
+		&:before {
+			background-color: #292929;
+			transform: scale(1.05, 1.05);
+		}
+	}
+}
+
+.statistic-amount {
+	color: #fff;
+	font-family: $heading-font-family;
+	font-weight: $heading-font-weight;
+	line-height: 1.5;
+	font-size: 32px;
+}
+
+@media screen and(max-width: 500px) {
+	.block-statistic {
+		padding: 25px 20px;
+		min-height: 165px;
+	}
+
+	.statistic-amount {
+		font-size: calc(var(--statistic-block-width) / 15);
+	}
+}
+
+.statistic-heading {
+	color: #fff;
+	font-family: $body-font-family;
+	font-weight: $body-font-weight-secondary;
+	line-height: 1.5;
+	font-size: 24px;
+	letter-spacing: 0;
+	text-transform: none;
+	margin: 20px 0 0;
+}
+
+.statistic-volume {
+	display: flex;
+	align-items: center;
+
+	.label {
+		margin: 0 5px 0 0;
+	}
+
+	.value-down {
+		color: #f82613;
+	}
+
+	.value-up {
+		color: #66e1b6;
+	}
+}
+
+.statistic-dot-marketcap {
+	&:before {
+		background-image: url(../images/dot-marketcap.png);
+	}
+}
+
+.statistic-dot-accounts {
+	&:before {
+		background-image: url(../images/dot-accounts.png);
+	}
+}
+
+.statistic-dot-transactions {
+	&:before {
+		background-image: url(../images/dot-transactions.png);
+	}
+}
+
+.polkadot-statistic-slider {
+	.swiper-inner {
+		margin: -20px;
+	}
+
+	.swiper-container {
+		padding: 20px;
+	}
+
+	.swiper-pagination-container {
+		margin-top: 20px;
+	}
+}

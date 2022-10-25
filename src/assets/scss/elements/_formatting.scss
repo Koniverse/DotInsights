@@ -1,0 +1,24 @@
+::selection {
+	-webkit-text-fill-color: $primary-color;
+	color: $primary-color;
+	background: #070e30;
+}
+
+::-moz-selection {
+	-webkit-text-fill-color: $primary-color;
+	color: $primary-color;
+	background: #070e30;
+}
+
+::-webkit-selection {
+	-webkit-text-fill-color: $primary-color;
+	color: $primary-color;
+	background: #070e30;
+}
+
+hr {
+	margin-bottom: 1.5em;
+	height: 1px;
+	border: 0;
+	background-color: #ccc;
+}

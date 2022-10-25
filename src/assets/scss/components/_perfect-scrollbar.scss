@@ -1,0 +1,47 @@
+.ps-container {
+	.ps-scrollbar-x-rail {
+		height: 10px;
+
+		> .ps-scrollbar-x {
+			bottom: 0;
+			border-radius: $box-small-rounded;
+		}
+
+		&:hover,
+		&:active {
+			> .ps-scrollbar-y {
+				height: 100%;
+			}
+		}
+	}
+
+	> .ps-scrollbar-y-rail {
+		width: 10px;
+
+		> .ps-scrollbar-y {
+			right: 0;
+			border-radius: $box-small-rounded;
+		}
+
+		&:hover,
+		&:active {
+			> .ps-scrollbar-y {
+				width: 100%;
+			}
+		}
+	}
+
+	&:hover {
+		> .ps-scrollbar-y-rail:hover {
+			> .ps-scrollbar-y {
+				background-color: #000;
+			}
+		}
+
+		> .ps-scrollbar-x-rail:hover {
+			> .ps-scrollbar-x {
+				background-color: #000;
+			}
+		}
+	}
+}

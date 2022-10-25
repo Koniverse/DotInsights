@@ -1,0 +1,22 @@
+/**
+ * source: hint-color-types.scss
+ *
+ * Contains tooltips of various types based on color differences.
+ *
+ * Classes added:
+ * 	1) hint--error
+ * 	2) hint--warning
+ * 	3) hint--info
+ * 	4) hint--success
+ *
+ */
+
+.#{$hintPrefix}white {
+	--hint-background: #fff;
+	--hint-text: #{$hintDefaultColor};
+}
+
+.#{$hintPrefix}primary {
+	--hint-background: #{$primary-color};
+	--hint-text: #fff;
+}

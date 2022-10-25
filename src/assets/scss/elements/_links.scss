@@ -1,0 +1,58 @@
+a {
+	@extend %NormalTransition;
+	color: $link-color;
+	text-decoration: none;
+
+	&:hover,
+	&:focus,
+	&:active {
+		outline: 0;
+	}
+
+	&:hover,
+	&:focus {
+		color: $link-hover-color;
+	}
+
+	&.active {
+		color: $link-color;
+	}
+
+	&[href^=tel] {
+		text-decoration: none;
+	}
+}
+
+.link-secret {
+	color: inherit !important;
+}
+
+.link-transition-01 {
+	@include LinkTransition();
+}
+
+.link-transition-02 {
+	@include LinkTransition02();
+}
+
+.link-in-title {
+	color: inherit !important;
+	font-size: inherit !important;
+	line-height: inherit !important;
+
+	&:hover {
+		color: $link-hover-color !important;
+	}
+}
+
+.title-has-link {
+	a {
+		color: inherit !important;
+		font-size: inherit !important;
+		line-height: inherit !important;
+
+		&:hover {
+			color: $link-hover-color !important;
+		}
+	}
+}

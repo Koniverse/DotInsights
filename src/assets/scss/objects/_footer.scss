@@ -1,0 +1,234 @@
+.site-footer {
+	--s-desc-top: 0;
+	--s-desc-width: 834px;
+	--s-callout-top: 42px;
+	padding: 167px 0 68px;
+	text-align: center;
+
+	.site-branding img {
+		width: 220px;
+	}
+
+	.section-description {
+		font-size: 20px;
+		line-height: 1.5;
+
+		mark {
+			color: #fff;
+		}
+	}
+
+	.button-group {
+		justify-content: center;
+	}
+}
+
+.section-footer-bg {
+	left: 50%;
+	bottom: 0;
+	transform: translateX(-50%);
+
+	img {
+		max-width: 60vw;
+	}
+}
+
+.footer-shape-s-circle {
+	bottom: 10%;
+	right: 15%;
+
+	img {
+		width: 233px;
+		max-width: 12vw;
+	}
+}
+
+.footer-shape-dot {
+	top: 10%;
+	right: 10%;
+
+	img {
+		width: 157px;
+		max-width: 9vw;
+	}
+}
+
+.footer-shape-ksm {
+	bottom: 3%;
+	left: 30%;
+
+	img {
+		width: 102px;
+		max-width: 7vw;
+	}
+}
+
+.footer-shape-02 {
+	bottom: 3%;
+	right: 38%;
+
+	img {
+		width: 51px;
+		max-width: 5vw;
+	}
+}
+
+.footer-shape-satellite {
+	left: 10%;
+	bottom: 20%;
+}
+
+.footer-shape-03 {
+	top: 10%;
+	left: 13%;
+
+	img {
+		width: 164px;
+		max-width: 9vw;
+	}
+}
+
+.copyright-text {
+	margin: 42px 0 0;
+	font-size: 20px;
+	font-weight: 400;
+	color: #777;
+
+	a,
+	mark {
+		color: #fff;
+	}
+}
+
+.footer-widget-title {
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 1.5;
+	margin: 0 0 10px;
+}
+
+.footer-menu {
+	margin: 0;
+	padding: 0;
+
+	a {
+		display: block;
+		font-size: 18px;
+		font-weight: 500;
+		color: #a8adc3;
+		padding: 5px 0;
+		transition: none;
+
+		> span {
+			display: block;
+			@extend %NormalTransition;
+		}
+
+		&:hover {
+			color: #fff;
+
+			> span {
+				transform: translateX(20px);
+			}
+		}
+	}
+
+	li {
+		list-style-type: none;
+
+		+ li {
+			margin: 1px 0 0;
+		}
+	}
+}
+
+.footer-social-networks {
+	margin: 27px 0 0;
+
+	.inner {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		margin: 0 -7px;
+	}
+
+	.icon-wallet {
+		display: block;
+		background-color: currentColor;
+		-webkit-mask-image: url(../images/socials/wallet.png);
+		mask-image: url(../images/socials/wallet.png);
+		-webkit-mask-repeat: no-repeat;
+		mask-repeat: no-repeat;
+		-webkit-mask-position: center center;
+		mask-position: center center;
+	}
+}
+
+.footer-social-link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 52px;
+	height: 52px;
+	border-radius: 50%;
+	background: #262d51;
+	color: var(--color-primary);
+	margin: 7px;
+
+	* {
+		width: 24px;
+		height: 24px;
+	}
+
+	svg *[fill] {
+		fill: currentColor;
+	}
+
+	&:hover {
+		color: #020722;
+		background: $primary-color;
+		box-shadow: 0 4px 4px rgba(102, 255, 182, 0.3);
+	}
+}
+
+.footer-widget-spacer {
+	height: 30px;
+}
+
+@include media-breakpoint-down(sm) {
+	.site-footer {
+		padding: 80px 0 50px;
+
+		.site-branding img {
+			width: 180px;
+		}
+	}
+
+	.footer-widget-title {
+		font-size: 21px;
+	}
+}
+
+@include media-breakpoint-down(xs) {
+	.site-footer {
+		padding: 60px 0 40px;
+
+		.site-branding img {
+			width: 140px;
+		}
+	}
+
+	.footer-widget-spacer {
+		height: 20px;
+	}
+
+	.footer-widget-title {
+		font-size: 18px;
+	}
+
+	.footer-menu a {
+		font-size: 16px;
+		padding: 3px 0;
+	}
+}

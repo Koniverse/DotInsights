@@ -1,0 +1,197 @@
+input:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+
+/* FF 4-18 */
+input:focus:-moz-placeholder {
+	color: transparent;
+}
+
+/* FF 19+ */
+input:focus::-moz-placeholder {
+	color: transparent;
+}
+
+/* IE 10+ */
+input:focus:-ms-input-placeholder {
+	color: transparent;
+}
+
+input:focus::placeholder {
+	color: transparent;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search'],
+input[type='number'],
+input[type='tel'] {
+	@include NormalTransition();
+	width: 100%;
+	padding: 3px $form-input-padding;
+	min-height: $form-input-height;
+	outline: none;
+	border-radius: $form-input-rounded;
+	font-family: $form-font-family;
+	font-size: $form-font-size;
+	font-weight: $form-font-weight;
+	line-height: $form-line-height;
+	color: $form-text;
+	border: $form-input-border-thickness solid $form-border;
+	background-color: $form-background;
+	box-shadow: $form-shadow;
+
+	&:focus {
+		color: $form-focus-text;
+		border-color: $form-focus-border;
+		background-color: $form-focus-background;
+		box-shadow: $form-focus-shadow;
+	}
+
+	&[disabled] {
+		color: $heading-color !important;
+		background-color: #f1f1f1 !important;
+		border-color: #f1f1f1 !important;
+	}
+}
+
+select {
+	@extend %NormalTransition;
+	width: 100%;
+	max-width: 100%;
+	padding: 3px 30px 3px $form-input-padding;
+	min-height: $form-input-height;
+	outline: none;
+	border-radius: $form-input-rounded;
+	background: transparent url(../svgs/select-arrow.svg) no-repeat;
+	background-position: center right $form-input-padding;
+	background-size: 10px auto;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	font-family: $form-font-family;
+	font-size: $form-font-size;
+	font-weight: $form-font-weight;
+	line-height: $form-line-height;
+	color: $form-text;
+	border: $form-input-border-thickness solid $form-border;
+	background-color: $form-background;
+	box-shadow: $form-shadow;
+
+	&:focus {
+		color: $form-focus-text;
+		border-color: $form-focus-border;
+		background-color: $form-focus-background;
+		box-shadow: $form-focus-shadow;
+	}
+}
+
+textarea {
+	@extend %NormalTransition;
+	width: 100%;
+	outline: none;
+	border-radius: $form-textarea-rounded;
+	display: block;
+	padding: 12px $form-input-padding;
+	max-width: 100%;
+	font-family: $form-font-family;
+	font-size: $form-font-size;
+	font-weight: $form-font-weight;
+	line-height: $form-line-height;
+	color: $form-text;
+	border: $form-input-border-thickness solid $form-border;
+	background-color: $form-background;
+	box-shadow: $form-shadow;
+
+	&:focus {
+		color: $form-focus-text;
+		border-color: $form-focus-border;
+		background-color: $form-focus-background;
+		box-shadow: $form-focus-shadow;
+	}
+}
+
+/* Remove box shadow from input on ios */
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+textarea {
+	-webkit-appearance: none;
+}
+
+@-webkit-keyframes autofill {
+	to {
+		color: #7e7e7e;
+		background: #fff;
+	}
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+	-webkit-animation-name: autofill;
+	-webkit-animation-fill-mode: both;
+}
+
+// Form style.
+.form-group {
+	margin: 0 0 25px;
+
+	p, label {
+		&.error {
+			display: block;
+			margin: 3px 0 0;
+			font-size: 13px;
+			color: $error-color;
+		}
+	}
+}
+
+.form-label {
+	display: block;
+	font-size: 13px;
+	line-height: 24px;
+	font-weight: $body-font-weight-secondary;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin: 0 0 6px;
+
+	&[for] {
+		cursor: pointer;
+	}
+}
+
+.form-label-checkbox {
+	font-weight: $body-font-weight;
+	text-transform: none;
+	letter-spacing: 0;
+	font-size: 14px;
+
+	input[type=checkbox] {
+		top: 2px;
+	}
+}
+
+/**
+ * Fix IOS zooming on form focus
+ */
+@supports (-webkit-overflow-scrolling: touch) {
+	input[type='text'],
+	input[type='email'],
+	input[type='url'],
+	input[type='password'],
+	input[type='search'],
+	input[type='number'],
+	input[type='tel'],
+	select,
+	textarea {
+		font-size: 16px !important;
+	}
+}

@@ -1,0 +1,120 @@
+(
+	function( $ ) {
+		'use strict';
+
+		var Helpers = DotInsights.Helpers,
+		    $window = $( window ),
+		    wWidth  = window.innerWidth,
+		    wHeight = window.innerHeight,
+		    resizeTimer,
+		    $header = $( '#header' );
+
+		$window.on( 'resize', function() {
+			if ( wWidth !== window.innerWidth ) {
+				$window.trigger( 'hresize' );
+
+				clearTimeout( resizeTimer );
+				resizeTimer = setTimeout( function() {
+					// Run code here, resizing has "stopped".
+					$window.trigger( 'hresize_one' );
+				}, 500 );
+			}
+
+			if ( wHeight !== window.innerHeight ) {
+				$window.trigger( 'vresize' );
+			}
+
+			wWidth = window.innerWidth;
+			wHeight = window.innerHeight;
+		} );
+
+		$window.on( 'scroll', function() {
+			var currentST = $( this ).scrollTop();
+
+			if ( currentST > 0 ) {
+				$header.addClass( 'header-pinned' );
+			} else {
+				$header.removeClass( 'header-pinned' );
+			}
+		} );
+
+		var $switcher = $( '.language-switcher' );
+
+		$switcher.on( 'click', '.current-lang', function( evt ) {
+			evt.preventDefault();
+
+			$switcher.addClass( 'show' );
+		} );
+
+		$( document ).on( 'click', function( e ) {
+			if ( $( e.target ).closest( $switcher ).length == 0 ) {
+				$switcher.removeClass( 'show' );
+			}
+		} );
+
+		$( document ).ready( function() {
+			scrollTo();
+			initSliders();
+			initGrids();
+		} );
+
+		$( window ).on( 'load', function() {
+			initSectionEffectSnow();
+		} );
+
+		function scrollTo() {
+			$( document.body ).on( 'click', '.scroll-to', function( evt ) {
+				evt.preventDefault();
+				const target = $( this ).attr( 'href' );
+				const offsetTop = $( target ).offset().top;
+
+				window.scroll( {
+					top: offsetTop - 30 - 80,
+					left: 0,
+					behavior: 'smooth'
+				} )
+			} )
+		}
+
+		function initSliders() {
+			if ( $.fn.SubwalletSwiper ) {
+				$( '.tm-swiper' ).each( function() {
+					$( this ).SubwalletSwiper();
+				} );
+			}
+		}
+
+		function initGrids() {
+			if ( $.fn.SubwalletGridLayout ) {
+				$( '.block-grid' ).SubwalletGridLayout();
+			}
+		}
+
+		function initSectionEffectSnow() {
+			if ( ! $.firefly ) {
+				return;
+			}
+
+			$( '.section-effect-snow' ).each( function() {
+				var $thisSection = $( this );
+
+				var total = $thisSection.data( 'firefly-total' ) ? $thisSection.data( 'firefly-total' ) : 50;
+
+				var minPixel = Helpers.isHandheld() ? 2 : 3;
+				var maxPixel = Helpers.isHandheld() ? 3 : 4;
+
+				var settings = {
+					color: 'rgba(255,255,255,0.3)',
+					minPixel: minPixel,
+					maxPixel: maxPixel,
+					total: total,
+					on: $thisSection,
+					zIndex: 0,
+				};
+
+				$.firefly( settings );
+			} );
+		}
+
+	}( jQuery )
+);

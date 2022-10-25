@@ -1,0 +1,10 @@
+.fade-in-up {
+	transition: all .3s linear;
+	opacity: 0;
+	transform: translateY(30px);
+
+	&.animate {
+		opacity: 1;
+		transform: none;
+	}
+}

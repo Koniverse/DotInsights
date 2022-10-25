@@ -1,0 +1,65 @@
+.section-bubble-projects {
+	padding: 90px 0 0;
+}
+
+#bubble-projects {
+	position: relative;
+	width: 100%;
+	height: 715px;
+}
+
+.bubble-project {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	position: absolute;
+	border-radius: 50%;
+	//transform: translate(-50%, -50%);
+	background: radial-gradient(70% 70% at 50% 50%, rgba(0, 0, 0, 0) 10.42%, rgba(0, 0, 34, 0.1) 44.27%, #004bff 100%);
+
+	img {
+		max-width: 50%;
+	}
+
+	h3 {
+		font-family: $body-font-family;
+		font-weight: 600;
+		color: #fff;
+		font-size: calc(var(--circle-size) / 7);
+		margin: .3em 0 0;
+	}
+
+	.total-likes {
+		font-size: calc(var(--circle-size) / 10);
+		line-height: 1;
+		color: #fff;
+
+		svg {
+			position: relative;
+			top: -0.05em;
+			width: 1em;
+			height: 1em;
+			margin: 0 5px 0 0;
+
+			.heart {
+				fill: #fff;
+			}
+
+			* {
+				fill: #fff;
+			}
+		}
+	}
+
+	&.bubble-project--subwallet {
+		background: radial-gradient(70% 70% at 50% 50%, rgba(0, 0, 0, 0) 10.42%, rgba(0, 0, 34, 0.1) 44.27%, #66e1b6 100%);
+	}
+}
+
+#symbol-ph-heart-straight {
+	.icon {
+		fill: #fff;
+	}
+}

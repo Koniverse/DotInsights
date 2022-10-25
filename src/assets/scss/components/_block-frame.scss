@@ -1,0 +1,36 @@
+.block-frame {
+	--outline-size: -2px;
+	display: inline-flex;
+	position: relative;
+	border-radius: 10px;
+
+	.block-frame-border {
+		@extend %NormalTransition;
+		position: absolute;
+		top: var(--outline-size);
+		right: var(--outline-size);
+		bottom: var(--outline-size);
+		left: var(--outline-size);
+		pointer-events: none;
+		border-radius: inherit;
+		overflow: hidden;
+		opacity: 0;
+		box-shadow: 0 4px 59px rgba(144, 255, 44, .25);
+
+		svg {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&:hover {
+		.block-frame-border {
+			opacity: 1;
+		}
+	}
+}
+
+.block-frame-content {
+	position: relative;
+	z-index: 1;
+}

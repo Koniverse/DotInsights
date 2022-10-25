@@ -1,0 +1,56 @@
+$primary-color: #66e1b6;
+$secondary-color: #004bff;
+
+$body-font-family: 'TTCommons', sans-serif;
+$body-font-weight: 400;
+$body-font-weight-secondary: 500;
+$body-color: #777;
+$body-bg-color: #000;
+$heading-font-family: 'Unbounded', sans-serif;
+$heading-font-weight: 700;
+$heading-font-weight-secondary: 500;
+$heading-color: #fff;
+$link-color: #a8adc3;
+$link-hover-color: #66e1b6;
+
+$button-rounded: 48px;
+$button-font-family: $body-font-family;
+$button-font-size: 20px;
+$button-font-weight: 600;
+$button-letter-spacing: 0;
+$button-text-transform: none;
+$button-text: #fff;
+$button-background: $secondary-color;
+$button-border: $secondary-color;
+$button-hover-text: #fff;
+$button-hover-background: $secondary-color;
+$button-hover-border: $secondary-color;
+
+$form-font-family: $body-font-family;
+$form-font-weight: $body-font-weight;
+$form-font-size: 20px;
+$form-line-height: 26px;
+$form-input-border-thickness: 1px;
+$form-input-padding: 18px;
+$form-input-height: 48px;
+$form-input-rounded: 48px;
+$form-textarea-rounded: 5px;
+$form-text: #777;
+$form-border: #232323;
+$form-background: #232323;
+$form-shadow: none;
+$form-focus-text: #fff;
+$form-focus-border: #fff;
+$form-focus-background: #232323;
+$form-focus-shadow: none;
+
+// Alert
+$success-color: #6cbd7e;
+$error-color: #d9534f;
+$warning-color: #ff9800;
+$info-color: #2196f3;
+
+$box-small-rounded: 0;
+
+$box-background: rgba(15, 21, 51, 0.7);
+$box-hover-background: rgba(2, 7, 34, 0.7);

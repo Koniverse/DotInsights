@@ -1,0 +1,52 @@
+{
+  "notify": {
+    "backgroundColor": "#ff0000",
+    "fontSize": "1.2em",
+    "top": "50%"
+  },
+  "compileMinifyJS": [
+    {
+      "name": "frontend",
+      "files": [
+        "src/assets/js-code/helpers.js",
+        "src/assets/js-code/frontend.js"
+      ]
+    },
+    {
+      "name": "reports",
+      "files": [
+        "src/assets/js-code/reports.js"
+      ]
+    },
+    {
+      "name": "ecosystem-map",
+      "files": [
+        "src/assets/js-code/ecosystem-map.js"
+      ]
+    },
+    {
+      "name": "projects",
+      "files": [
+        "src/assets/js-code/projects.js"
+      ]
+    },
+    {
+      "name": "most-loved-projects",
+      "files": [
+        "src/assets/js-code/most-loved-projects.js"
+      ]
+    },
+    {
+      "name": "swiper-wrapper",
+      "files": [
+        "src/assets/js-code/swiper-wrapper.js"
+      ]
+    },
+    {
+      "name": "grid-layout",
+      "files": [
+        "src/assets/js-code/grid-layout.js"
+      ]
+    }
+  ]
+}

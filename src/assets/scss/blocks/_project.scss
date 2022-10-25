@@ -1,0 +1,56 @@
+.project-item {
+	min-width: 0;
+	display: block;
+	position: relative;
+	text-align: center;
+	border-radius: 10px;
+	padding: 17px 15px 11px;
+	z-index: 0;
+
+	&:before {
+		transition: all .35s cubic-bezier(.2, .75, .5, 1);
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		border-radius: inherit;
+		background: #151515;
+		z-index: -1;
+	}
+
+	&:hover {
+		&:before {
+			background-color: #232323;
+			transform: scale(1.1, 1.1);
+		}
+	}
+
+	.project-thumbnail {
+		max-width: 90%;
+		margin: 0 auto 7px;
+
+		img {
+			width: 80px;
+		}
+	}
+
+	.project-name {
+		font-family: $body-font-family;
+		font-weight: $body-font-weight-secondary;
+		font-size: 18px;
+		line-height: 22px;
+		text-transform: none;
+		letter-spacing: 0;
+		margin: 0;
+	}
+
+	.project-info {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		min-height: 44px;
+	}
+}
+
