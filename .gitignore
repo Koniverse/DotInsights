@@ -50,5 +50,3 @@ Thumbs.db
 
 package-lock.json
 sourcemap/
-docs/assets/js/*.js
-docs/assets/css/*.css
