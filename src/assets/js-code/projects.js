@@ -143,7 +143,7 @@
 
 			if ( '' !== cat ) {
 				rules.push( {
-					key: 'category_id',
+					key: 'category_slug',
 					value: cat,
 					operator: '='
 				} );
@@ -226,7 +226,7 @@
 		}
 
 		function sortAndGroup( array ) {
-			array = Helpers.groupByKey( array, 'category_id' );
+			array = Helpers.groupByKey( array, 'category_slug' );
 			var results = [];
 
 			for ( var catKey in projectSortedCategories ) {

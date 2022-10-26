@@ -111,151 +111,151 @@
 
 		var bubbles    = [
 			    {
-				    project_id: 'polkadot',
+				    project_slug: 'polkadot',
 				    name: 'Polkadot',
 				    likes: 7927,
 				    r: 197,
 				    fontSize: 30
 			    }, {
-				    project_id: 'subwallet',
+				    project_slug: 'subwallet',
 				    name: 'SubWallet',
 				    likes: 6827,
 				    r: 144,
 				    fontSize: 20
 			    }, {
-				    project_id: 'ampnet',
+				    project_slug: 'ampnet',
 				    name: 'Ampnet',
 				    likes: 4072,
 				    r: 107,
 				    fontSize: 18
 			    }, {
-				    project_id: 'acala',
+				    project_slug: 'acala',
 				    name: 'Acala',
 				    likes: 4072,
 				    r: 88,
 				    fontSize: 16
 			    }, {
-				    project_id: 'demodyfi',
+				    project_slug: 'demodyfi',
 				    name: 'Demodyfi',
 				    likes: 5072,
 				    r: 121,
 				    fontSize: 16
 			    }, {
-				    project_id: 'chainsafe',
+				    project_slug: 'chainsafe',
 				    name: 'ChainSafe',
 				    likes: 2989,
 				    r: 102,
 				    fontSize: 16
 			    }, {
-				    project_id: '1beam',
+				    project_slug: '1beam',
 				    name: '1beam',
 				    likes: 2989,
 				    r: 102,
 				    fontSize: 16
 			    }, {
-				    project_id: 'unilend',
+				    project_slug: 'unilend',
 				    name: 'Unilend',
 				    likes: 2025,
 				    r: 96,
 				    fontSize: 16
 			    }, {
-				    project_id: 'metamask',
+				    project_slug: 'metamask',
 				    name: 'MetaMask',
 				    likes: 3325,
 				    r: 76,
 				    fontSize: 16
 			    }, {
-				    project_id: 'onfinality',
+				    project_slug: 'onfinality',
 				    name: 'OnFinality',
 				    likes: 2028,
 				    r: 68,
 				    fontSize: 16
 			    }, {
-				    project_id: 'nabox',
+				    project_slug: 'nabox',
 				    name: 'Nabox',
 				    likes: 1931,
 				    r: 77,
 				    fontSize: 16
 			    }, {
-				    project_id: 'anchor',
+				    project_slug: 'anchor',
 				    name: 'Anchor',
 				    likes: 1931,
 				    r: 52,
 				    fontSize: 16
 			    }, {
-				    project_id: 'athos_finance',
+				    project_slug: 'athos_finance',
 				    name: 'Athos Finance',
 				    likes: 1092,
 				    r: 64,
 				    fontSize: 16
 			    }, {
-				    project_id: 'huckleberry',
+				    project_slug: 'huckleberry',
 				    name: 'Huckleberry',
 				    likes: 821,
 				    r: 39,
 				    fontSize: 16
 			    }, {
-				    project_id: 'ambire_wallet',
+				    project_slug: 'ambire_wallet',
 				    name: 'Ambire Wallet',
 				    likes: 821,
 				    r: 48,
 				    fontSize: 16
 			    }, {
-				    project_id: 'polkafoundry',
+				    project_slug: 'polkafoundry',
 				    name: 'PolkaFoundry',
 				    likes: 821,
 				    r: 57,
 				    fontSize: 16
 			    }, {
-				    project_id: 'lido',
+				    project_slug: 'lido',
 				    name: 'Lido',
 				    likes: 821,
 				    r: 60,
 				    fontSize: 16
 			    }, {
-				    project_id: 'beyondfi',
+				    project_slug: 'beyondfi',
 				    name: 'BeyondFi',
 				    likes: 821,
 				    r: 38,
 				    fontSize: 16
 			    }, {
-				    project_id: 'basilisk',
+				    project_slug: 'basilisk',
 				    name: 'Basilisk',
 				    likes: 821,
 				    r: 49,
 				    fontSize: 16
 			    }, {
-				    project_id: 'avault',
+				    project_slug: 'avault',
 				    name: 'Avault',
 				    likes: 821,
 				    r: 35,
 				    fontSize: 16
 			    }, {
-				    project_id: 'curve',
+				    project_slug: 'curve',
 				    name: 'Curve',
 				    likes: 821,
 				    r: 60,
 				    fontSize: 16
 			    }, {
-				    project_id: 'linear',
+				    project_slug: 'linear',
 				    name: 'Linear',
 				    likes: 821,
 				    r: 54,
 				    fontSize: 16
 			    }, {
-				    project_id: 'prime_protocol',
+				    project_slug: 'prime_protocol',
 				    name: 'Prime Protocol',
 				    likes: 821,
 				    r: 33,
 				    fontSize: 16
 			    }, {
-				    project_id: 'riodefi',
+				    project_slug: 'riodefi',
 				    name: 'RioDeFi',
 				    likes: 821,
 				    r: 57,
 				    fontSize: 16
 			    }, {
-				    project_id: 'parallel',
+				    project_slug: 'parallel',
 				    name: 'Parallel',
 				    likes: 821,
 				    r: 76,
@@ -370,12 +370,12 @@
 			];
 			for ( var i = 0; i < circles.length; i ++ ) {
 				var thisCircle  = circles[ i ],
-				    circleClass = 'bubble-project bubble-project--' + thisCircle.project_id;
+				    circleClass = 'bubble-project bubble-project--' + thisCircle.project_slug;
 				circleClass += i % 2 === 0 ? ' move-vertical' : ' move-vertical-reversed';
 				circleClass += ' ' + moveDurations[ DotInsights.NumberUtil.getRandomInt( 0, 3 ) ];
 
 				var html = '<div class="' + circleClass + '">';
-				html += '<img src="./assets/images/bubbles/' + thisCircle.project_id + '.png" alt="">';
+				html += '<img src="./assets/images/bubbles/' + thisCircle.project_slug + '.png" alt="">';
 				html += '<h3>' + thisCircle.name + '</h3><div class="total-likes"><svg><use xlink:href="#symbol-ph-heart-straight"></use></svg>' + thisCircle.likes + '</div>';
 				html += '</div>';
 
@@ -423,14 +423,15 @@
 
 				itemClass += isInTop3 ? ' row-project-highlight' : '';
 
-
-				var layerClass = 'project-layer project-layer-color--' + Helpers.sanitizeKey( thisProject.layer );
-				var layerHTML = '' !== thisProject.layer ? '<span class="' + layerClass + '">' + thisProject.layer + '</span>' : '<span class="text-placeholder">--</span>';
+				var layerClass = 'project-layer';
+				console.log( typeof thisProject.layer );
+				layerClass += thisProject.layer ? ' project-layer-color--' + Helpers.sanitizeKey( thisProject.layer ) : '';
+				var layerHTML = typeof thisProject.layer === 'string' ? '<span class="' + layerClass + '">' + thisProject.layer + '</span>' : '<span class="text-placeholder">--</span>';
 				var tokenHTML = '' !== thisProject.token ? thisProject.token : '<span class="text-placeholder">--</span>';
 				var native = 'Yes' === thisProject.native ? ' checked' : '';
 				var nativeHTML = '<input type="checkbox" readonly disabled class="project-is-native"' + native + ' />'
 
-				var itemCatClass = 'project-category project-cat-color--' + thisProject.category_id;
+				var itemCatClass = 'project-category project-cat-color--' + thisProject.category_slug;
 
 				output += '<tr class="' + itemClass + '">';
 				output += '<td class="col-project-info">' +
@@ -446,8 +447,8 @@
 				output += '<td class="col-project-layer">' + layerHTML + '</td>';
 				output += '<td class="col-project-token"><span class="project-token">' + tokenHTML + '</span></td>';
 				output += '<td class="col-project-native">' + nativeHTML + '</td>';
-				output += '<td class="col-project-github">' + getGithubLink( thisProject.github ) + '</td>';
-				output += '<td class="col-project-twitter">' + getTwitterLink( thisProject.twitter ) + '</td>';
+				output += '<td class="col-project-github">' + getGithubLink( thisProject ) + '</td>';
+				output += '<td class="col-project-twitter">' + getTwitterLink( thisProject ) + '</td>';
 				output += '<td class="col-mobile-project-info">' + getHTMLInfoMobile( thisProject, layerHTML, tokenHTML, nativeHTML ) + '</td>';
 				output += '<td class="col-project-love">' + getLoveButton( thisProject ) + '</td>';
 				output += '</tr>';
@@ -514,21 +515,21 @@
 			$pagination.html( output );
 		}
 
-		function getTwitterLink( link ) {
-			if ( '' !== link && 'N/A' !== link ) {
-				var text = link.replace( 'https://twitter.com/', '@', link );
+		function getTwitterLink( project ) {
+			if ( project.twitter && '' !== project.twitter && 'N/A' !== project.twitter ) {
+				var text = project.twitter.replace( 'https://twitter.com/', '@' );
 				text = text.replace( 'https://mobile.twitter.com/', '@', text );
 				text = DotInsights.StringUtil.rtrim( text, '/' );
 
-				return '<a href="' + link + '" target="_blank" class="project-link-twitter">' + text + '</a>';
+				return '<a href="' + project.twitter + '" target="_blank" class="project-link-twitter">' + text + '</a>';
 			}
 
 			return '<span class="text-placeholder">--</span>';
 		}
 
-		function getGithubLink( link ) {
-			if ( '' !== link && 'N/A' !== link ) {
-				return '<a href="' + link + '" target="_blank" class="project-link-github"><span class="fab fa-github"></span></a>';
+		function getGithubLink( project ) {
+			if ( project.github && '' !== project.github && 'N/A' !== project.github ) {
+				return '<a href="' + project.github + '" target="_blank" class="project-link-github"><span class="fab fa-github"></span></a>';
 			}
 
 			return '<span class="text-placeholder">--</span>';
@@ -562,12 +563,12 @@
 
 			output += '<div class="project-info-line">'
 			output += '<div class="label">Github: </div>';
-			output += '<div class="value">' + getGithubLink( project.github ) + '</div>';
+			output += '<div class="value">' + getGithubLink( project ) + '</div>';
 			output += '</div>';
 
 			output += '<div class="project-info-line">'
 			output += '<div class="label">Twitter: </div>';
-			output += '<div class="value">' + getTwitterLink( project.twitter ) + '</div>';
+			output += '<div class="value">' + getTwitterLink( project ) + '</div>';
 			output += '</div>';
 
 			return output;

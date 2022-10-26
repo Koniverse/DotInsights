@@ -4,22 +4,22 @@
 
 		window.DotInsights = window.DotInsights || {};
 		DotInsights.Projects = DotInsights.Projects || {};
-		var Helpers       = window.DotInsights.Helpers,
-		    baseUrl       = location.origin,
+		var Helpers    = window.DotInsights.Helpers,
+		    NumberUtil = window.DotInsights.NumberUtil;
+
+		/*
+		var baseUrl       = location.origin,
 		    partname      = location.pathname.split( '/' ),
 		    exclude_parts = [
 			    'projects'
 		    ];
-
 		for ( var i = 0; i < partname.length; i ++ ) {
 			if ( '' !== partname[ i ] && ! exclude_parts.includes( partname[ i ] ) ) {
 				baseUrl += '/' + partname[ i ];
 			}
 		}
-
-		var sourceUrl = baseUrl + '/assets/data/ecosystem-map.json';
-
-		fetch( sourceUrl ).then( function( response ) {
+		var sourceUrl2 = baseUrl + '/assets/data/ecosystem-map.json';
+		fetch( sourceUrl2 ).then( function( response ) {
 			return response.json();
 		} ).then( function( jsonData ) {
 			prepareData( jsonData );
@@ -30,81 +30,45 @@
 
 			$( document.body ).trigger( 'DotInsights/EcosystemMap/Loaded' );
 		} );
+		*/
 
-		// Get Dot accounts.
-		$.ajax( {
-			method: 'POST',
-			url: 'https://polkadot.api.subscan.io/api/v2/scan/accounts',
-			headers: {
-				"X-API-Key": "a21ca935f82e4cd3810c6f78ae4bc4ca",
-				"Content-Type": "application/json",
-			},
-			data: JSON.stringify( {
-				row: 1,
-				page: 1
-			} ),
-			success: function( response ) {
-				if ( 0 === response.code ) {
-					var $dotAccounts = $( '#statistic-dot-accounts' ),
-					    data         = response.data;
+		fetch( Helpers.getApiEndpointUrl( 'getProjects' ) ).then( function( response ) {
+			return response.json();
+		} ).then( function( jsonData ) {
+			var projects = jsonData.projects;
+			prepareData( projects );
 
-					$dotAccounts.find( '.statistic-amount' ).html( DotInsights.NumberUtil.formatWithCommas( data.count ) );
-				}
-			},
+			$( document.body ).trigger( 'DotInsights/EcosystemMap/Data', [ projects ] );
+
+			DotInsights.Projects = projects;
+
+			console.log( DotInsights.Projects );
+
+			$( document.body ).trigger( 'DotInsights/EcosystemMap/Loaded' );
 		} );
 
-		// Get Dot transactions.
-		$.ajax( {
-			method: 'POST',
-			url: 'https://polkadot.api.subscan.io/api/v2/scan/transfers',
-			headers: {
-				"X-API-Key": "a21ca935f82e4cd3810c6f78ae4bc4ca",
-				"Content-Type": "application/json",
-			},
-			data: JSON.stringify( {
-				row: 1,
-				page: 1
-			} ),
-			success: function( response ) {
-				if ( 0 === response.code ) {
-					var $dotTransactions = $( '#statistic-dot-transactions' ),
-					    data             = response.data;
+		fetch( Helpers.getApiEndpointUrl( 'chainData/polkadot' ) ).then( function( response ) {
+			return response.json();
+		} ).then( function( polkadot ) {
+			var $dotPrice        = $( '#statistic-dot-price' ),
+			    $dotVolume       = $dotPrice.find( '.statistic-volume .value' ),
+			    $dotMarketCap    = $( '#statistic-dot-marketcap' ),
+			    $dotAccounts     = $( '#statistic-dot-accounts' ),
+			    $dotTransactions = $( '#statistic-dot-transactions' ),
+			    volume24h        = polkadot.volume24h;
 
-					$dotTransactions.find( '.statistic-amount' ).html( DotInsights.NumberUtil.formatWithCommas( data.count ) );
-				}
-			},
-		} );
+			$dotPrice.find( '.statistic-amount' ).html( '$' + polkadot.current_price );
+			$dotVolume.html( NumberUtil.precisionRoundMod( volume24h, 1 ) + '%' );
+			volume24h > 0 ? $dotVolume.addClass( 'value-up' ) : $dotVolume.addClass( 'value-down' );
 
-		// Dot Price + Marketcap.
-		$.ajax( {
-			method: 'GET',
-			url: 'https://api.coingecko.com/api/v3/coins/polkadot',
-			contentType: 'application/json',
-			dataType: 'json',
-			data: {
-				tickers: false,
-				market_data: true,
-				community_data: false,
-				developer_data: false,
-				sparkline: false
-			},
-			success: function( response ) {
-				var $dotPrice     = $( '#statistic-dot-price' ),
-				    $dotVolumn    = $dotPrice.find( '.statistic-volume .value' ),
-				    $dotMarketcap = $( '#statistic-dot-marketcap' );
+			$dotMarketCap.find( '.statistic-amount' ).html( '$' + NumberUtil.formatWithCommas( polkadot.market_cap ) );
+			$dotMarketCap.find( '.statistic-volume .value' ).html( '#' + polkadot.market_cap_rank );
 
-				var marketData   = response.market_data,
-				    currentPrice = marketData.current_price.usd,
-				    volume24h    = marketData.market_cap_change_percentage_24h,
-				    marketcap    = marketData.market_cap.usd;
+			$dotAccounts.find( '.statistic-amount' ).html( NumberUtil.formatWithCommas( polkadot.accounts ) );
+			$dotAccounts.find( '.statistic-volume .value' ).html( NumberUtil.formatWithCommas( '+' + polkadot.accounts_change_24h ) );
 
-				$dotPrice.find( '.statistic-amount' ).html( '$' + currentPrice );
-				$dotVolumn.html( DotInsights.NumberUtil.precisionRoundMod( volume24h, 1 ) + '%' );
-				volume24h > 0 ? $dotVolumn.addClass( 'value-up' ) : $dotVolumn.addClass( 'value-down' );
-
-				$dotMarketcap.find( '.statistic-amount' ).html( '$' + DotInsights.NumberUtil.formatWithCommas( marketcap ) );
-				$dotMarketcap.find( '.statistic-volume .value' ).html( '#' + marketData.market_cap_rank );
-			},
+			$dotTransactions.find( '.statistic-amount' ).html( NumberUtil.formatWithCommas( polkadot.transfers ) );
+			$dotTransactions.find( '.statistic-volume .value' ).html( NumberUtil.formatWithCommas( '+' + polkadot.transfers_change_24h ) );
 		} );
 
 		var $statisticSlider = $( '#polkadot-statistic-slider' );
@@ -118,8 +82,9 @@
 		} );
 
 		function getStatisticBlockWidth() {
-			var wWidth = window.innerWidth;
-			var statisticBlockWidth = wWidth / 100 * 85;
+			var wWidth              = window.innerWidth,
+			    statisticBlockWidth = wWidth / 100 * 85;
+
 			statisticBlockWidth = Math.min( statisticBlockWidth, 408 );
 			$statisticSlider.css( '--statistic-block-width', statisticBlockWidth + 'px' );
 		}
@@ -130,8 +95,8 @@
 		 */
 		function prepareData( data ) {
 			for ( var i = data.length - 1; i >= 0; i -- ) {
-				data[ i ].category_id = Helpers.sanitizeKey( data[ i ].category );
-				data[ i ].project_id = Helpers.sanitizeKey( data[ i ].project );
+				data[ i ].category_slug = Helpers.sanitizeKey( data[ i ].category ); // Using group projects by cat.
+				data[ i ].project_slug = Helpers.sanitizeKey( data[ i ].project ); // Using render on bubbles.
 			}
 		}
 	}( jQuery )

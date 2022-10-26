@@ -38,6 +38,9 @@
 		};
 
 		DotInsights.Helpers = {
+			getApiEndpointUrl: ( endpoint ) => {
+				return 'https://dot-insights-api.subwallet.app/api/%%endpoint%%'.replace( '%%endpoint%%', endpoint );
+			},
 			setElementHandling: ( $element ) => {
 				$element.addClass( 'updating-icon' );
 			},
@@ -59,7 +62,7 @@
 			},
 
 			sanitizeKey: function( key ) {
-				key = key.replace( ' ', '_', key );
+				key = key.replace( ' ', '_' );
 
 				return key.toLowerCase();
 			},
