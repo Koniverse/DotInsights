@@ -42,8 +42,6 @@
 
 			DotInsights.Projects = projects;
 
-			console.log( DotInsights.Projects );
-
 			$( document.body ).trigger( 'DotInsights/EcosystemMap/Loaded' );
 		} );
 

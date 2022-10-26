@@ -424,7 +424,6 @@
 				itemClass += isInTop3 ? ' row-project-highlight' : '';
 
 				var layerClass = 'project-layer';
-				console.log( typeof thisProject.layer );
 				layerClass += thisProject.layer ? ' project-layer-color--' + Helpers.sanitizeKey( thisProject.layer ) : '';
 				var layerHTML = typeof thisProject.layer === 'string' ? '<span class="' + layerClass + '">' + thisProject.layer + '</span>' : '<span class="text-placeholder">--</span>';
 				var tokenHTML = '' !== thisProject.token ? thisProject.token : '<span class="text-placeholder">--</span>';
