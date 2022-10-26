@@ -291,11 +291,11 @@
 				output += '<div class="' + catItemClass + '"><h3 class="' + catHeadingClass + '">' + catName + '<span class="count">' + catTotalProjects + '</span></h3>';
 
 				output += '<div class="projects-grid grid-modern" style="--grid-columns-desktop: 8; --grid-gutter-desktop: 20;--grid-columns-laptop: 7; --grid-columns-tablet-extra: 6; --grid-columns-tablet: 4; --grid-columns-mobile-extra: 3; --grid-columns-mobile: 2;">';
-
 				for ( var i = 0; i < catTotalProjects; i ++ ) {
 					var thisProject = projects[ i ];
+					var thumbnailUrl = '../assets/images/projects/' + thisProject.project_slug + '.png';
 					output += '<a href="' + thisProject.website + '" target="_blank" rel="nofollow" class="grid-item project-item">';
-					output += '<div class="project-thumbnail"><img src="../assets/images/projects/glmr-punks.png" alt="' + thisProject.project + '" width="80" height="80"/></div>';
+					output += '<div class="project-thumbnail"><img src="' + thumbnailUrl + '" alt="' + thisProject.project + '" width="80" height="80"/></div>';
 					output += '<div class="project-info"><h3 class="project-name">' + thisProject.project + '</h3></div>';
 					output += '</a>';
 				}

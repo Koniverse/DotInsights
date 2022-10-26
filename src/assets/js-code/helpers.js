@@ -62,7 +62,9 @@
 			},
 
 			sanitizeKey: function( key ) {
-				key = key.replace( ' ', '_' );
+				key = key.replace( / /g, '-' );
+				key = key.replace( /,/g, '' );
+				key = key.replace( /&/g, '_' );
 
 				return key.toLowerCase();
 			},

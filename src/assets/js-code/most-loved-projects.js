@@ -427,16 +427,22 @@
 				layerClass += thisProject.layer ? ' project-layer-color--' + Helpers.sanitizeKey( thisProject.layer ) : '';
 				var layerHTML = typeof thisProject.layer === 'string' ? '<span class="' + layerClass + '">' + thisProject.layer + '</span>' : '<span class="text-placeholder">--</span>';
 				var tokenHTML = '' !== thisProject.token ? thisProject.token : '<span class="text-placeholder">--</span>';
-				var native = 'Yes' === thisProject.native ? ' checked' : '';
+				var native = true === thisProject.native ? ' checked' : '';
 				var nativeHTML = '<input type="checkbox" readonly disabled class="project-is-native"' + native + ' />'
 
 				var itemCatClass = 'project-category project-cat-color--' + thisProject.category_slug;
+				var thumbnailUrl = './assets/images/projects/' + thisProject.project_slug + '.png';
+
+				/*if ( ! imageExists( thumbnailUrl ) ) {
+					console.log( thisProject.project_slug );
+					console.log( thisProject );
+				}*/
 
 				output += '<tr class="' + itemClass + '">';
 				output += '<td class="col-project-info">' +
 				          '<a href="' + thisProject.website + '" target="_blank" rel="nofollow" class="project-info">' +
 				          '<div class="project-rank">' + rankHTML + '</div>' +
-				          '<div class="project-thumbnail"><img src="./assets/images/projects/glmr-punks.png" alt="' + thisProject.project + '" width="80" height="80"/></div>' +
+				          '<div class="project-thumbnail"><img src="' + thumbnailUrl + '" alt="' + thisProject.project + '" width="80" height="80"/></div>' +
 				          '<div class="project-details">' +
 				          '<h3 class="project-name">' + thisProject.project + '</h3>' +
 				          '<p class="' + itemCatClass + '">' + thisProject.category + '</p>' +
@@ -571,6 +577,15 @@
 			output += '</div>';
 
 			return output;
+		}
+
+		function imageExists( image_url ) {
+			var http = new XMLHttpRequest();
+
+			http.open( 'HEAD', image_url, false );
+			http.send();
+
+			return http.status != 404;
 		}
 	}( jQuery )
 );
