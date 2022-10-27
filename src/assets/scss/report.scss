@@ -59,7 +59,7 @@
 .block-report-chart {
 	--border-size: -3px;
 	position: relative;
-	padding: var(--content-top-spacing, 28px) var(--content-h-spacing, 34px) var(--content-bottom-spacing, 20px);
+	padding: var(--content-top-spacing, 30px) var(--content-h-spacing, 34px) var(--content-bottom-spacing, 20px);
 	border-radius: var(--block-round, 10px);
 
 	&:before {
@@ -129,16 +129,16 @@
 
 	.blur-1 {
 		position: absolute;
-		top: 28px;
+		top: 0;
 		left: 0;
-		transform: translate(-30%, 0);
+		transform: translate(-30%, -30%);
 	}
 
 	.blur-2 {
 		position: absolute;
-		top: 0;
-		left: 97px;
-		transform: translate(0, -30%);
+		bottom: 0;
+		right: 0;
+		transform: translate(30%, 30%);
 	}
 
 	&.style-02 {
