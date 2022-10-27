@@ -1,1 +1,1 @@
-# Apache ECharts Version 5.3.3
+# Apache ECharts Version 5.4.0
