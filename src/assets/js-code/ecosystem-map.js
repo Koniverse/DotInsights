@@ -46,8 +46,11 @@
 		} );
 
 		fetch( Helpers.getApiEndpointUrl( 'chainData/polkadot' ) ).then( function( response ) {
-			return response.json();
+			return 200 === response.status ? response.json() : false;
 		} ).then( function( polkadot ) {
+			if ( ! polkadot ) {
+				return;
+			}
 			var $dotPrice        = $( '#statistic-dot-price' ),
 			    $dotVolume       = $dotPrice.find( '.statistic-volume .value' ),
 			    $dotMarketCap    = $( '#statistic-dot-marketcap' ),
