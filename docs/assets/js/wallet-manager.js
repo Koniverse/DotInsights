@@ -7,6 +7,7 @@
 			isInstalled: false,
 			isConnected: false
 		};
+		DotInsights.VotedProjects = [];
 		var Helpers = DotInsights.Helpers;
 
 		const USER_LS_KEY = 'userAccount';
@@ -106,22 +107,30 @@
 				address: walletInfo.selectedAccountAddress
 			} );*/
 
-			// Get Dot accounts.
 			$.ajax( {
 				method: 'POST',
 				url: Helpers.getApiEndpointUrl( 'getVotedProject' ),
-				data: JSON.stringify( {
+				data: {
 					address: walletInfo.selectedAccountAddress
-				} ),
+				},
 				success: function( projects ) {
-					if ( projects.length > 0 ) {
-						for ( var i = 0; i < projects.length; i ++ ) {
-							$( '.btn-vote[data-project-id="' + projects[ i ] + '"]' ).removeClass( 'vote-this' ).addClass( 'unvote-this' );
-						}
-					}
+					DotInsights.VotedProjects = projects;
+
+					$( document.body ).trigger( 'DotInsights/VotedProjects/Refreshed' );
 				},
 			} );
 		};
+
+		$( document.body ).on( 'DotInsights/VotedProjects/Refreshed', function() {
+			$( '.btn-vote' ).removeClass( 'unvote-this' );
+
+			if ( DotInsights.VotedProjects.length > 0 ) {
+				for ( var i = 0; i < DotInsights.VotedProjects.length; i ++ ) {
+					var $thisButton = $( '.btn-vote[data-project-id="' + DotInsights.VotedProjects[ i ] + '"]' );
+					$thisButton.removeClass( 'vote-this' ).addClass( 'unvote-this' );
+				}
+			}
+		} );
 
 		function getWallet( walletName ) {
 			return window.injectedWeb3 && window.injectedWeb3[ walletName ];

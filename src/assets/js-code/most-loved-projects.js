@@ -533,9 +533,9 @@
 		}
 
 		function getVoteButton( project ) {
-			var isLoved = false;
+			var isVoted = DotInsights.VotedProjects.includes( project.project_id );
 			var voteBtnClass = 'button btn-vote';
-			voteBtnClass += isLoved ? ' unvote-this' : ' vote-this';
+			voteBtnClass += isVoted ? ' unvote-this' : ' vote-this';
 
 			return '<a href="#" data-project-id="' + project.project_id + '" class="' + voteBtnClass + '"><svg class="button-icon"><use xlink:href="#symbol-ph-heart-straight"></use></svg><span class="button-text">' + DotInsights.NumberUtil.formatWithCommas( project.vote_count ) + '</span></a>';
 		}
