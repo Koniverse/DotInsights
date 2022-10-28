@@ -41,6 +41,43 @@
 			getApiEndpointUrl: ( endpoint ) => {
 				return 'https://dot-insights-api.subwallet.app/api/%%endpoint%%'.replace( '%%endpoint%%', endpoint );
 			},
+
+			getScrollbarWidth: () => {
+				// Creating invisible container.
+				const outer = document.createElement( 'div' );
+				outer.style.visibility = 'hidden';
+				outer.style.overflow = 'scroll'; // forcing scrollbar to appear.
+				outer.style.msOverflowStyle = 'scrollbar'; // needed for WinJS apps.
+				document.body.appendChild( outer );
+
+				// Creating inner element and placing it in the container.
+				const inner = document.createElement( 'div' );
+				outer.appendChild( inner );
+
+				// Calculating difference between container's full width and the child width.
+				const scrollbarWidth = (
+					outer.offsetWidth - inner.offsetWidth
+				);
+
+				// Removing temporary elements from the DOM.
+				outer.parentNode.removeChild( outer );
+
+				return scrollbarWidth;
+			},
+
+			setBodyOverflow() {
+				$( 'body' ).css( {
+					'overflow': 'hidden',
+					'paddingRight': this.getScrollbarWidth() + 'px'
+				} );
+			},
+
+			unsetBodyOverflow: () => {
+				$( 'body' ).css( {
+					'overflow': 'visible',
+					'paddingRight': 0
+				} );
+			},
 			setElementHandling: ( $element ) => {
 				$element.addClass( 'updating-icon' );
 			},
@@ -182,5 +219,40 @@
 				}
 			}
 		};
+
+		DotInsights.BrowserUtil = {
+			isOpera: false,
+			isChrome: false,
+			isFirefox: false,
+			isSafari: false,
+			isIE: false,
+			isEdge: false,
+			isEdgeChromium: false
+		};
+
+		const agent = window.navigator.userAgent.toLowerCase();
+		switch ( true ) {
+			case agent.indexOf( 'edge' ) > - 1:
+				DotInsights.BrowserUtil.isEdge = true;
+				break;
+			case agent.indexOf( 'edg/' ) > - 1:
+				DotInsights.BrowserUtil.isEdgeChromium = true;
+				break;
+			case agent.indexOf( 'opr' ) > - 1 && ! ! window.opr:
+				DotInsights.BrowserUtil.isOpera = true;
+				break;
+			case agent.indexOf( 'chrome' ) > - 1 && ! ! window.chrome:
+				DotInsights.BrowserUtil.isChrome = true;
+				break;
+			case agent.indexOf( 'trident' ) > - 1:
+				DotInsights.BrowserUtil.isIE = true;
+				break;
+			case agent.indexOf( 'firefox' ) > - 1:
+				DotInsights.BrowserUtil.isFirefox = true;
+				break;
+			case agent.indexOf( 'safari' ) > - 1:
+				DotInsights.BrowserUtil.isSafari = true;
+				break;
+		}
 	}( window, jQuery )
 );

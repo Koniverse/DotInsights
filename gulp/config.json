@@ -25,6 +25,18 @@
       ]
     },
     {
+      "name": "wallet-manager",
+      "files": [
+        "src/assets/js-code/wallet-manager.js"
+      ]
+    },
+    {
+      "name": "modal",
+      "files": [
+        "src/assets/js-code/modal.js"
+      ]
+    },
+    {
       "name": "projects",
       "files": [
         "src/assets/js-code/projects.js"

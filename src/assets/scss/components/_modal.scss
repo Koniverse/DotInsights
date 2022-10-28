@@ -1,0 +1,141 @@
+.dotinsights-modal {
+	--modal-rounded: 16px;
+	--modal-width: 450px;
+	--modal-spacing: 30px 2rem 40px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 100001;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	@include LightCloseCursor();
+
+	&.open {
+		@extend %NormalTransition;
+		opacity: 1;
+		visibility: visible;
+
+		.modal-content {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	.modal-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background: #000;
+		opacity: .9;
+	}
+
+	.button-close-modal {
+		@extend %FontAwesomeLight;
+		@extend %NormalTransition;
+		font-size: 24px;
+		width: 28px;
+		height: 28px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		cursor: pointer;
+		flex-shrink: 0;
+	}
+
+	.modal-content {
+		@extend %NormalTransition;
+		position: relative;
+		opacity: 0;
+		visibility: hidden;
+		width: var(--modal-width);
+		max-width: calc(100vw - 50px);
+		cursor: auto;
+		border: 0;
+		background: none;
+		border-radius: 0;
+	}
+
+	.modal-content-header {
+		position: relative;
+		margin: 0 0 24px;
+		display: flex;
+	}
+
+	.modal-title {
+		flex-grow: 1;
+		position: relative;
+		z-index: 1;
+		font-size: 20px;
+		line-height: 1.4;
+		margin: 0;
+	}
+
+	.modal-description {
+		position: relative;
+		z-index: 1;
+		font-size: 15px;
+		line-height: 26px;
+		margin: 10px 0 0;
+	}
+
+	.modal-content-wrap {
+		position: relative;
+		overflow-y: auto;
+		border-radius: var(--modal-rounded);
+		background: #232323;
+		max-height: calc(100vh - 60px);
+
+		.handheld & {
+			overflow-y: scroll;
+		}
+	}
+
+	.modal-content-inner {
+		padding: var(--modal-spacing);
+	}
+}
+
+.modal-connect-wallet {
+	.button {
+		--mg-button-height: 72px;
+		--mg-button-rounded: 10px;
+		--mg-button-background: #151515;
+		--mg-button-border: #151515;
+		width: 100%;
+		justify-content: space-between;
+		padding: 10px 17px 10px 74px;
+
+		&:before {
+			position: absolute;
+			top: 50%;
+			left: 14px;
+			transform: translateY(-50%);
+			content: '';
+			width: 48px;
+			height: 48px;
+			background: url(../images/sw-logo.png) no-repeat center;
+		}
+	}
+}
+
+@include media-breakpoint-down(xs) {
+	.dotinsights-modal {
+		--modal-spacing: 2rem 20px;
+
+		.modal-content-header {
+			margin: 0 0 20px;
+		}
+
+		.modal-title {
+			font-size: 22px;
+		}
+	}
+}

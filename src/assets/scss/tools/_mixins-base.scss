@@ -201,7 +201,7 @@
 }
 
 @mixin LightCloseCursor {
-	cursor: url('assets/images/cursor/light-close.png') 16 16, pointer;
+	cursor: url('../images/cursor/light-close.png') 16 16, pointer;
 }
 
 %LightCloseCursor {

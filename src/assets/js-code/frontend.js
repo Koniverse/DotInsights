@@ -4,6 +4,7 @@
 
 		var Helpers = DotInsights.Helpers,
 		    $window = $( window ),
+		    $body   = $( document.body ),
 		    wWidth  = window.innerWidth,
 		    wHeight = window.innerHeight,
 		    resizeTimer,
@@ -56,11 +57,30 @@
 			scrollTo();
 			initSliders();
 			initGrids();
+			initModal();
 		} );
 
 		$( window ).on( 'load', function() {
 			initSectionEffectSnow();
 		} );
+
+		function initModal() {
+
+			if ( $.fn.DotInsightsModal ) {
+				$body.on( 'click', '[data-dotinsights-toggle="modal"]', function( evt ) {
+					evt.preventDefault();
+					var $target = $( $( this ).data( 'dotinsights-target' ) );
+
+					if ( $target.length > 0 ) {
+						if ( $( this ).attr( 'data-dotinsights-dismiss' ) === '1' ) {
+							$target.DotInsightsModal( 'close' );
+						} else {
+							$target.DotInsightsModal( 'open' );
+						}
+					}
+				} );
+			}
+		}
 
 		function scrollTo() {
 			$( document.body ).on( 'click', '.scroll-to', function( evt ) {

@@ -403,6 +403,15 @@
 			buildPagination();
 		} );
 
+		$( document.body ).on( 'click', '.btn-like', function( evt ) {
+			evt.preventDefault();
+
+			var $thisButton = $( this ),
+			    projectID   = $thisButton.data( 'project-id' );
+
+			console.log( projectID );
+		} );
+
 		function buildTable( append = false ) {
 			var offset = (
 				             DotInsights.Query.page - 1
@@ -545,7 +554,7 @@
 			var loveBtnClass = 'button btn-like ';
 			loveBtnClass += isLoved ? ' dislike-this' : ' like-this';
 
-			return '<a href="#" class="' + loveBtnClass + '"><svg class="button-icon"><use xlink:href="#symbol-ph-heart-straight"></use></svg><span class="button-text">' + DotInsights.NumberUtil.formatWithCommas( project.totalLikes ) + '</span></a>';
+			return '<a href="#" data-project-id="' + project.project_id + '" class="' + loveBtnClass + '"><svg class="button-icon"><use xlink:href="#symbol-ph-heart-straight"></use></svg><span class="button-text">' + DotInsights.NumberUtil.formatWithCommas( project.totalLikes ) + '</span></a>';
 		}
 
 		function getHTMLInfoMobile( project, layerHTML, tokenHTML, nativeHTML ) {
