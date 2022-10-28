@@ -304,8 +304,8 @@
 			    },
 			    colors     = [
 				    '#66E1B6',
-				    '#EC4E44',
-				    '#A2B253'
+				    '#E6007A',
+				    '#0091FF'
 			    ];
 
 			for ( var i = 0; i < totalItems; i ++ ) {
@@ -350,7 +350,7 @@
 					axisLabel: {
 						align: 'left',
 						formatter: dateFormatter,
-						color: '#7B8098'
+						color: '#858585'
 					}
 				},
 				yAxis: [
@@ -376,12 +376,17 @@
 						},
 						axisPointer: {
 							label: {
+								/*width: 50,
+								padding: [ 6, 3, 4, 3 ],
+								fontFamily: fontFamily,
+								fontStyle: 500,
+								fontSize: 10,*/
 								color: '#020722',
 								backgroundColor: '#66E1B6'
 							}
 						},
 						axisLabel: {
-							color: '#7B8098'
+							color: '#858585'
 						}
 					},
 					{
@@ -392,7 +397,7 @@
 						},
 						position: 'right',
 						alignTicks: true,
-						offset: 60,
+						offset: 70,
 						axisLine: {
 							show: true,
 							lineStyle: {
@@ -406,7 +411,7 @@
 							}
 						},
 						axisLabel: {
-							color: '#7B8098'
+							color: '#858585'
 						}
 					}, {
 						type: 'value',
@@ -416,7 +421,7 @@
 						},
 						position: 'right',
 						alignTicks: true,
-						offset: 120,
+						offset: 140,
 						splitLine: {
 							lineStyle: {
 								type: [ 4, 4 ],
@@ -430,7 +435,7 @@
 							}
 						},
 						axisLabel: {
-							color: '#7B8098'
+							color: '#858585'
 						}
 					}
 				],
@@ -471,7 +476,7 @@
 							color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
 								{
 									offset: 0,
-									color: 'rgba(213, 234, 114,0.5)'
+									color: 'rgba(0, 145, 255,0.5)'
 								},
 								{
 									offset: 1,
@@ -542,7 +547,7 @@
 			    },
 			    colors     = [
 				    '#4CFCFC',
-				    '#004BFF',
+				    '#8B93AF',
 				    '#8E54F7',
 				    '#E6007A',
 				    '#EA973D'
@@ -592,7 +597,7 @@
 					axisLabel: {
 						align: 'left',
 						formatter: dateFormatter,
-						color: '#7B8098'
+						color: '#858585'
 					}
 				},
 				yAxis: {
@@ -612,7 +617,7 @@
 					},
 					axisPointer: defaultAxisPointerSettings,
 					axisLabel: {
-						color: '#7B8098'
+						color: '#858585'
 					}
 				},
 				series: [
@@ -777,7 +782,7 @@
 					    axisPointer: defaultAxisPointerSettings,
 					    axisLabel: {
 						    formatter: dateFormatter,
-						    color: '#7B8098'
+						    color: '#858585'
 					    }
 				    },
 				    yAxis: {
@@ -797,7 +802,7 @@
 					    },
 					    axisPointer: defaultAxisPointerSettings,
 					    axisLabel: {
-						    color: '#7B8098'
+						    color: '#858585'
 					    }
 				    },
 				    series: {
@@ -935,7 +940,7 @@
 					},
 					axisLabel: {
 						formatter: "{value}%",
-						color: '#7B8098'
+						color: '#858585'
 					}
 				},
 				yAxis: {
@@ -1148,7 +1153,7 @@
 					    axisPointer: defaultAxisPointerSettings,
 					    axisLabel: {
 						    formatter: dateFormatter,
-						    color: '#7B8098'
+						    color: '#858585'
 					    }
 				    },
 				    yAxis: {
@@ -1174,7 +1179,7 @@
 						    formatter: function( value ) {
 							    return moneyFormat( value );
 						    },
-						    color: '#7B8098'
+						    color: '#858585'
 					    }
 				    },
 				    series: [
@@ -1462,7 +1467,7 @@
 					    nameGap: 83,
 					    nameTextStyle: {
 						    fontFamily: fontFamily,
-						    color: '#7B8098',
+						    color: '#858585',
 						    fontSize: 15,
 						    fontWeight: '500'
 					    },
@@ -1563,7 +1568,7 @@
 					    extraCssText: 'border-radius: 10px;box-shadow: 0 4px 50px rgba(161, 107, 216, 0.5);',
 					    textStyle: {
 						    fontFamily: fontFamily,
-						    color: '#7B8098',
+						    color: '#858585',
 						    fontSize: 14,
 						    fontWeight: '500'
 					    },
@@ -1616,7 +1621,7 @@
 					    },
 					    axisLabel: {
 						    formatter: dateFormatter,
-						    color: '#7B8098'
+						    color: '#858585'
 					    }
 				    },
 				    yAxis: {
@@ -1638,14 +1643,14 @@
 						    }
 					    },
 					    axisLabel: {
-						    color: '#7B8098'
+						    color: '#858585'
 					    },
 					    name: 'Volume (KSM)',
 					    nameLocation: 'middle',
 					    nameGap: 100,
 					    nameTextStyle: {
 						    fontFamily: fontFamily,
-						    color: '#7B8098',
+						    color: '#858585',
 						    fontSize: 15,
 						    fontWeight: '500'
 					    }
@@ -1872,7 +1877,7 @@
 					extraCssText: 'border-radius: 10px;box-shadow: 0 4px 50px rgba(161, 107, 216, 0.5);',
 					textStyle: {
 						fontFamily: fontFamily,
-						color: '#7B8098',
+						color: '#858585',
 						fontSize: 14,
 						fontWeight: '500'
 					},
@@ -1937,7 +1942,7 @@
 					},
 					axisLabel: {
 						formatter: '{value}%',
-						color: '#7B8098'
+						color: '#858585'
 					}
 				},
 				series: chartSeries
@@ -2151,7 +2156,7 @@
 					},
 					axisLabel: {
 						formatter: dateFormatter,
-						color: '#7B8098'
+						color: '#858585'
 					}
 				},
 				yAxis: {
@@ -2173,7 +2178,7 @@
 						}
 					},
 					axisLabel: {
-						color: '#7B8098'
+						color: '#858585'
 					}
 				},
 				series: chartSeries
