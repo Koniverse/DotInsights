@@ -15,6 +15,8 @@
 
 		$modalConnectWallet.DotInsightsModal(); // Init modal.
 
+		console.log( 'Ver 2.0' );
+
 		$( document ).ready( function() {
 			renderWalletArea();
 		} );
@@ -123,7 +125,9 @@
 
 					// Get and select accounts.
 					const accounts = await activeWallet.accounts.get();
-					const selectedAccountAddress = accounts[ 1 ][ 'address' ];
+					console.log(activeWallet);
+					console.log(accounts);
+					const selectedAccountAddress = accounts[ 0 ][ 'address' ];
 
 					console.log( accounts );
 
