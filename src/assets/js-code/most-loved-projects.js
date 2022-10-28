@@ -36,16 +36,8 @@
 		    $pagination      = $( '#most-loved-projects-pagination' );
 
 		$( document.body ).on( 'DotInsights/EcosystemMap/Data', function( evt, data ) {
-			/**
-			 * Fake likes count for testing:
-			 * @todo Remove on production
-			 */
-			for ( var i = 0; i < data.length; i ++ ) {
-				data[ i ].totalLikes = DotInsights.NumberUtil.getRandomInt( 1000, 4000 ); // Fake like count;
-			}
-
-			// Sort by total likes.
-			data.sort( DotInsights.ArrayUtil.dynamicSort( 'totalLikes' ) );
+			// Sort by total vote.
+			data.sort( DotInsights.ArrayUtil.dynamicSort( 'vote_count' ) );
 
 			// Add rank for project after total likes sorted.
 			for ( var i = 0; i < data.length; i ++ ) {
@@ -403,15 +395,6 @@
 			buildPagination();
 		} );
 
-		$( document.body ).on( 'click', '.btn-like', function( evt ) {
-			evt.preventDefault();
-
-			var $thisButton = $( this ),
-			    projectID   = $thisButton.data( 'project-id' );
-
-			console.log( projectID );
-		} );
-
 		function buildTable( append = false ) {
 			var offset = (
 				             DotInsights.Query.page - 1
@@ -464,7 +447,7 @@
 				output += '<td class="col-project-github">' + getGithubLink( thisProject ) + '</td>';
 				output += '<td class="col-project-twitter">' + getTwitterLink( thisProject ) + '</td>';
 				output += '<td class="col-mobile-project-info">' + getHTMLInfoMobile( thisProject, layerHTML, tokenHTML, nativeHTML ) + '</td>';
-				output += '<td class="col-project-love">' + getLoveButton( thisProject ) + '</td>';
+				output += '<td class="col-project-love">' + getVoteButton( thisProject ) + '</td>';
 				output += '</tr>';
 			}
 
@@ -549,12 +532,12 @@
 			return '<span class="text-placeholder">--</span>';
 		}
 
-		function getLoveButton( project ) {
+		function getVoteButton( project ) {
 			var isLoved = false;
-			var loveBtnClass = 'button btn-like ';
-			loveBtnClass += isLoved ? ' dislike-this' : ' like-this';
+			var voteBtnClass = 'button btn-vote';
+			voteBtnClass += isLoved ? ' unvote-this' : ' vote-this';
 
-			return '<a href="#" data-project-id="' + project.project_id + '" class="' + loveBtnClass + '"><svg class="button-icon"><use xlink:href="#symbol-ph-heart-straight"></use></svg><span class="button-text">' + DotInsights.NumberUtil.formatWithCommas( project.totalLikes ) + '</span></a>';
+			return '<a href="#" data-project-id="' + project.project_id + '" class="' + voteBtnClass + '"><svg class="button-icon"><use xlink:href="#symbol-ph-heart-straight"></use></svg><span class="button-text">' + DotInsights.NumberUtil.formatWithCommas( project.vote_count ) + '</span></a>';
 		}
 
 		function getHTMLInfoMobile( project, layerHTML, tokenHTML, nativeHTML ) {

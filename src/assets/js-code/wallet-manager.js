@@ -7,6 +7,7 @@
 			isInstalled: false,
 			isConnected: false
 		};
+		var Helpers = DotInsights.Helpers;
 
 		const USER_LS_KEY = 'userAccount';
 
@@ -15,7 +16,7 @@
 
 		$modalConnectWallet.DotInsightsModal(); // Init modal.
 
-		console.log( 'Ver 2.0' );
+		console.log( 'Ver 3.0' );
 
 		$( document ).ready( function() {
 			renderWalletArea();
@@ -27,19 +28,19 @@
 			connectSubWallet();
 		} );
 
-		$( document.body ).on( 'click', '.btn-like', function( evt ) {
+		$( document.body ).on( 'click', '.btn-logout-subwallet', logoutSubWallet );
+
+		$( document.body ).on( 'click', '.btn-vote', function( evt ) {
 			evt.preventDefault();
 
 			var $thisButton = $( this ),
 			    projectID   = $thisButton.data( 'project-id' ),
-			    doVote      = $thisButton.hasClass( 'like-this' );
-
-			$modalConnectWallet.DotInsightsModal( 'open' );
+			    doVote      = $thisButton.hasClass( 'vote-this' );
 
 			if ( DotInsights.Wallet.isConnected ) {
 				const wallet = JSON.parse( localStorage.getItem( USER_LS_KEY ) );
 
-				const voteRs = vote( wallet.selectedAccountAddress, wallet.signature, projectID, doVote );
+				const voteRs = voteProject( wallet.selectedAccountAddress, wallet.signature, projectID, doVote );
 				console.log( 'Voted Rs', voteRs );
 			} else {
 				$modalConnectWallet.DotInsightsModal( 'open' );
@@ -89,25 +90,37 @@
 		const onSuccessfullyConnect = ( wallet = null ) => {
 			const walletInfo = wallet || JSON.parse( localStorage.getItem( USER_LS_KEY ) );
 			const html = `<div class="connected-wallet-info-card">
-                                    <div class="card-title">
-                                        Connect successfully with subwallet
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="wallet-address-heading">
-                                            <div>Your address: </div>
-                                        </div>
-                                        <div class="wallet-address">
-                                            <div class="wallet-icon"></div>
-                                            <div id="wallet-account-address"><span>${walletInfo.account}</span></div>
-                                            <span class="logout-connect-subwallet button" id="logout-btn">
-                                                Log out
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <a href="#gleam-competition" class="scroll-to go-to-gleam-competition"></a>
-                                </div>`;
+								<div class="wallet-address-heading">Your address:</div>
+                                <div class="wallet-address">
+                                    <div class="wallet-icon"></div>
+                                    <div id="wallet-account-address"><span>${walletInfo.selectedAccountAddress}</span></div>
+                                    <a href="#" class="button btn-logout-subwallet"><span class="button-text">Log out</span></a>
+                                </div>
+							</div>`;
 
-			$modalConnectWalletContent.empty().html( html );
+			$modalConnectWalletContent.empty();
+			$modalConnectWalletContent.html( html );
+
+			// Append status for all projects.
+			/*var votedProjects = await sendPost( Helpers.getApiEndpointUrl( 'getVotedProject' ), {
+				address: walletInfo.selectedAccountAddress
+			} );*/
+
+			// Get Dot accounts.
+			$.ajax( {
+				method: 'POST',
+				url: Helpers.getApiEndpointUrl( 'getVotedProject' ),
+				data: JSON.stringify( {
+					address: walletInfo.selectedAccountAddress
+				} ),
+				success: function( projects ) {
+					if ( projects.length > 0 ) {
+						for ( var i = 0; i < projects.length; i ++ ) {
+							$( '.btn-vote[data-project-id="' + projects[ i ] + '"]' ).removeClass( 'vote-this' ).addClass( 'unvote-this' );
+						}
+					}
+				},
+			} );
 		};
 
 		function getWallet( walletName ) {
@@ -125,8 +138,8 @@
 
 					// Get and select accounts.
 					const accounts = await activeWallet.accounts.get();
-					console.log(activeWallet);
-					console.log(accounts);
+					console.log( activeWallet );
+					console.log( accounts );
 					const selectedAccountAddress = accounts[ 0 ][ 'address' ];
 
 					console.log( accounts );
@@ -153,6 +166,11 @@
 			}, 300 ); // Wait a small amount time to ensure wallet is initialized.
 		}
 
+		function logoutSubWallet() {
+			window.localStorage.removeItem( USER_LS_KEY );
+			renderWalletArea();
+		}
+
 		async function sendPost( url, data ) {
 			return new Promise( ( resolve, reject ) => {
 				const xhr = new XMLHttpRequest();
@@ -175,12 +193,12 @@
 		}
 
 		async function getSignMessage( address ) {
-			const rs = await sendPost( "https://dot-insights-api.subwallet.app/api/getMessage", { address } );
+			const rs = await sendPost( Helpers.getApiEndpointUrl( 'getMessage' ), { address } );
 			return rs[ 'message' ];
 		}
 
-		async function vote( address, signature, project_id, isVote ) {
-			return await sendPost( "https://dot-insights-api.subwallet.app/api/voteProject", {
+		async function voteProject( address, signature, project_id, isVote ) {
+			return await sendPost( Helpers.getApiEndpointUrl( 'voteProject' ), {
 				project_id,
 				address,
 				signature,
