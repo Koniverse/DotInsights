@@ -35,14 +35,45 @@
 			evt.preventDefault();
 
 			var $thisButton = $( this ),
-			    projectID   = $thisButton.data( 'project-id' ),
-			    doVote      = $thisButton.hasClass( 'vote-this' );
+			    projectID   = $thisButton.data( 'project-id' );
 
 			if ( DotInsights.Wallet.isConnected ) {
 				const wallet = JSON.parse( localStorage.getItem( USER_LS_KEY ) );
 
-				const voteRs = voteProject( wallet.selectedAccountAddress, wallet.signature, projectID, doVote );
-				console.log( 'Voted Rs', voteRs );
+				$.ajax( {
+					method: 'POST',
+					url: Helpers.getApiEndpointUrl( 'toggleVoteProject' ),
+					data: {
+						project_id: projectID,
+						address: wallet.selectedAccountAddress,
+						signature: wallet.signature
+					},
+					success: function( response ) {
+						DotInsights.Projects = DotInsights.Projects.map( obj =>
+							obj.project_id === projectID ? {
+								...obj,
+								vote_count: response.vote_count
+							} : obj
+						);
+
+						var $theVoteButtons = $( '.btn-vote[data-project-id="' + projectID + '"]' );
+						$theVoteButtons.find( '.button-text' ).text( response.vote_count );
+						if ( response.isVote ) {
+							$theVoteButtons.removeClass( 'vote-this' ).addClass( 'unvote-this' );
+
+							if ( DotInsights.VotedProjects.indexOf( projectID ) === - 1 ) {
+								DotInsights.VotedProjects.push( projectID );
+							}
+						} else {
+							$theVoteButtons.removeClass( 'unvote-this' ).addClass( 'vote-this' );
+
+							var index = DotInsights.VotedProjects.indexOf( projectID );
+							if ( index > - 1 ) {
+								DotInsights.VotedProjects.splice( index, 1 );
+							}
+						}
+					},
+				} );
 			} else {
 				$modalConnectWallet.DotInsightsModal( 'open' );
 			}
@@ -78,8 +109,6 @@
 			} else { // Render list account.
 				const wallet = JSON.parse( localStorage.getItem( USER_LS_KEY ) );
 				onSuccessfullyConnect( wallet );
-
-				console.log( onSuccessfullyConnect );
 			}
 		};
 
@@ -206,12 +235,11 @@
 			return rs[ 'message' ];
 		}
 
-		async function voteProject( address, signature, project_id, isVote ) {
-			return await sendPost( Helpers.getApiEndpointUrl( 'voteProject' ), {
+		async function voteProject( address, signature, project_id ) {
+			return await sendPost( Helpers.getApiEndpointUrl( 'toggleVoteProject' ), {
 				project_id,
 				address,
 				signature,
-				isVote
 			} );
 		}
 	}( jQuery )
