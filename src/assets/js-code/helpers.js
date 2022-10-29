@@ -99,6 +99,8 @@
 			},
 
 			sanitizeKey: function( key ) {
+				if (!key)
+					return '';
 				key = key.replace( / /g, '-' );
 				key = key.replace( /,/g, '' );
 				key = key.replace( /&/g, '_' );
