@@ -52,8 +52,8 @@
 	color: #fff;
 	font-family: $body-font-family;
 	font-weight: $body-font-weight-secondary;
-	line-height: 1.5;
-	font-size: 24px;
+	line-height: 28px;
+	font-size: $body-font-size-large;
 	letter-spacing: 0;
 	text-transform: none;
 	margin: 20px 0 0;
@@ -62,6 +62,10 @@
 .statistic-volume {
 	display: flex;
 	align-items: center;
+	font-size: $body-font-size-small;
+	font-weight: $body-font-weight-secondary;
+	line-height: 28px;
+	margin: 9px 0 0;
 
 	.label {
 		margin: 0 5px 0 0;

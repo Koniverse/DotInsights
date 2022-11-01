@@ -1642,8 +1642,8 @@ input[type='tel'] {
   min-height: 48px;
   outline: none;
   border-radius: 48px;
-  font-family: "TTCommons", sans-serif;
-  font-size: 20px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 17px;
   font-weight: 400;
   line-height: 26px;
   color: #ccc;
@@ -1684,8 +1684,8 @@ select {
   background-size: 10px auto;
   -moz-appearance: none;
   -webkit-appearance: none;
-  font-family: "TTCommons", sans-serif;
-  font-size: 20px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 17px;
   font-weight: 400;
   line-height: 26px;
   color: #ccc;
@@ -1705,8 +1705,8 @@ textarea {
   display: block;
   padding: 12px 18px;
   max-width: 100%;
-  font-family: "TTCommons", sans-serif;
-  font-size: 20px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 17px;
   font-weight: 400;
   line-height: 26px;
   color: #ccc;
@@ -1882,10 +1882,10 @@ input[type='submit'],
   border: 2px solid var(--mg-button-border, #004bff);
   background-color: var(--mg-button-background, #004bff);
   border-radius: var(--mg-button-rounded, var(--mg-button-height, 48px));
-  font-family: "TTCommons", sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 30px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
   letter-spacing: 0;
   text-transform: none;
   cursor: pointer;
@@ -1925,9 +1925,6 @@ input[type='submit'],
     border-color: var(--mg-button-hover-border, #004bff);
     background-color: var(--mg-button-hover-background, #004bff);
     box-shadow: 0 0 0 0.2rem var(--mg-button-hover-background, #004bff); }
-
-.button-text {
-  padding-top: var(--mg-button-text-offset, 4px); }
 
 .button-icon {
   line-height: 1;
@@ -1999,7 +1996,7 @@ input[type='submit'],
 @media (min-width: 768px) {
   .button.button-size-lg {
     --mg-button-height: 64px;
-    font-size: 22px;
+    font-size: 18px;
     padding: 0 30px; } }
 
 ::selection {
@@ -2095,7 +2092,7 @@ table th.empty {
 body {
   color: #ccc;
   background-color: #000;
-  font-family: "TTCommons", sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.667; }
@@ -2212,7 +2209,7 @@ blockquote {
   max-width: 660px; }
   blockquote cite {
     display: block;
-    font-family: "TTCommons", sans-serif;
+    font-family: "Plus Jakarta Sans", sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
@@ -3638,8 +3635,8 @@ body {
   .site-footer .site-branding img {
     width: 220px; }
   .site-footer .section-description {
-    font-size: 20px;
-    line-height: 1.5; }
+    font-size: 17px;
+    line-height: 30px; }
     .site-footer .section-description mark {
       color: #fff; }
   .site-footer .button-group {
@@ -3693,9 +3690,9 @@ body {
 
 .copyright-text {
   margin: 42px 0 0;
-  font-size: 20px;
-  font-weight: 400;
-  color: #ccc; }
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 30px; }
   .copyright-text a,
   .copyright-text mark {
     color: #fff; }
@@ -3817,9 +3814,9 @@ body {
     .project-item .project-thumbnail img {
       width: 80px; }
   .project-item .project-name {
-    font-family: "TTCommons", sans-serif;
+    font-family: "Plus Jakarta Sans", sans-serif;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 22px;
     text-transform: none;
     letter-spacing: 0;
@@ -3963,17 +3960,21 @@ body {
 
 .statistic-heading {
   color: #fff;
-  font-family: "TTCommons", sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 500;
-  line-height: 1.5;
-  font-size: 24px;
+  line-height: 28px;
+  font-size: 20px;
   letter-spacing: 0;
   text-transform: none;
   margin: 20px 0 0; }
 
 .statistic-volume {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 28px;
+  margin: 9px 0 0; }
   .statistic-volume .label {
     margin: 0 5px 0 0; }
   .statistic-volume .value-down {
@@ -4019,7 +4020,7 @@ body {
   .bubble-project img {
     max-width: 50%; }
   .bubble-project h3 {
-    font-family: "TTCommons", sans-serif;
+    font-family: "Plus Jakarta Sans", sans-serif;
     font-weight: 600;
     color: #fff;
     font-size: calc(var(--circle-size) / 7);
@@ -4469,9 +4470,9 @@ body {
     line-height: 28px;
     margin: 0; }
     .most-loved-projects-table table td, .most-loved-projects-table table th {
-      font-family: "TTCommons", sans-serif;
+      font-family: "Plus Jakarta Sans", sans-serif;
       font-weight: 400;
-      font-size: 20px;
+      font-size: 16px;
       line-height: 1.5;
       border: 0;
       width: 22%;
@@ -4479,8 +4480,12 @@ body {
       .most-loved-projects-table table td:first-child, .most-loved-projects-table table th:first-child {
         width: 40%; }
     .most-loved-projects-table table th {
+      font-size: 18px;
+      font-weight: 700;
       line-height: 26px;
       padding: 0 var(--td-hoz-gap); }
+    .most-loved-projects-table table thead tr:before {
+      background: none !important; }
     .most-loved-projects-table table td {
       padding: var(--td-ver-gap) var(--td-hoz-gap);
       background: var(--table-row-bg, #151515);
@@ -4519,7 +4524,7 @@ body {
         .most-loved-projects-table table tr.row-project-highlight .project-layer {
           background: #122b68; }
         .most-loved-projects-table table tr.row-project-highlight .project-rank {
-          font-size: 24px; }
+          font-size: 20px; }
         .most-loved-projects-table table tr.row-project-highlight .vote-this {
           --mg-button-text: #fff;
           --mg-button-border: #122b68;
@@ -4542,7 +4547,7 @@ body {
     align-items: center;
     min-width: 40px;
     margin: 0 5px 0 0;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 600;
     color: #fff; }
     .most-loved-projects-table .project-rank svg {
@@ -4557,31 +4562,31 @@ body {
     flex-shrink: 0;
     margin: 0 10px 0 0; }
   .most-loved-projects-table .project-name {
-    font-family: "TTCommons", sans-serif;
-    font-weight: 500;
-    font-size: 20px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
     line-height: 1.5;
     text-transform: none;
     letter-spacing: 0;
     margin: 0; }
   .most-loved-projects-table .project-category {
-    font-size: 14px;
+    font-size: 12px;
     line-height: 16px;
     font-weight: 500;
     text-transform: uppercase;
-    margin: 4px 0 0; }
+    margin: 7px 0 0; }
   .most-loved-projects-table .project-layer {
     display: inline-block;
-    font-size: 18px;
+    font-size: 15px;
+    font-weight: 500;
     line-height: 24px;
-    padding: 5px 16px 3px;
+    padding: 4px 16px;
     color: #66e1b6;
     background: rgba(255, 255, 255, 0.065);
     border-radius: 8px; }
   .most-loved-projects-table .project-token {
-    font-family: "Unbounded", sans-serif;
-    font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 500;
     line-height: 26px; }
   .most-loved-projects-table .project-link-github svg {
     width: 24px;
@@ -4631,7 +4636,7 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
   color: #fff; }
 
 .most-loved-projects-pagination li {
@@ -4652,8 +4657,6 @@ body {
     background: #292929;
     border-radius: 50%;
     color: inherit; }
-  .most-loved-projects-pagination li .page-numbers {
-    padding: 3px 0 0; }
   .most-loved-projects-pagination li svg {
     width: 18px; }
     .most-loved-projects-pagination li svg > *[fill]:not([fill='none']) {

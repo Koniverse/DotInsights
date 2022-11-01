@@ -10,8 +10,8 @@
 	}
 
 	.section-description {
-		font-size: 20px;
-		line-height: 1.5;
+		font-size: $body-font-size-small;
+		line-height: 30px;
 
 		mark {
 			color: #fff;
@@ -90,9 +90,9 @@
 
 .copyright-text {
 	margin: 42px 0 0;
-	font-size: 20px;
-	font-weight: 400;
-	color: #777;
+	font-size: $body-font-size-small;
+	font-weight: 500;
+	line-height: 30px;
 
 	a,
 	mark {

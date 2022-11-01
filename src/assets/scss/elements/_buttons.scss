@@ -16,7 +16,7 @@ input[type='submit'],
 	font-family: $button-font-family;
 	font-size: $button-font-size;
 	font-weight: $button-font-weight;
-	line-height: 30px;
+	line-height: 28px;
 	letter-spacing: $button-letter-spacing;
 	text-transform: $button-text-transform;
 	cursor: pointer;
@@ -44,10 +44,6 @@ input[type='submit'],
 		background-color: var(--mg-button-hover-background, $button-hover-background);
 		box-shadow: 0 0 0 0.2rem var(--mg-button-hover-background, $button-hover-background);
 	}
-}
-
-.button-text {
-	padding-top: var(--mg-button-text-offset, 4px);
 }
 
 .button-icon {
@@ -143,7 +139,7 @@ input[type='submit'],
 	.button {
 		&.button-size-lg {
 			--mg-button-height: 64px;
-			font-size: 22px;
+			font-size: 18px;
 			padding: 0 30px;
 		}
 	}

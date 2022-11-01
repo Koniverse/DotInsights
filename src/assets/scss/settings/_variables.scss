@@ -1,10 +1,10 @@
 $primary-color: #66e1b6;
 $secondary-color: #004bff;
 
-$body-font-family: 'TTCommons', sans-serif;
+$body-font-family: 'Plus Jakarta Sans', sans-serif;
 $body-font-weight: 400;
 $body-font-weight-secondary: 500;
-$body-color: #777;
+$body-color: #ccc;
 $body-bg-color: #000;
 $heading-font-family: 'Unbounded', sans-serif;
 $heading-font-weight: 700;
@@ -12,11 +12,14 @@ $heading-font-weight-secondary: 500;
 $heading-color: #fff;
 $link-color: #a8adc3;
 $link-hover-color: #66e1b6;
+$body-font-size-large: 20px;
+$body-font-size-medium: 18px;
+$body-font-size-small: 17px;
 
 $button-rounded: 48px;
 $button-font-family: $body-font-family;
-$button-font-size: 20px;
-$button-font-weight: 600;
+$button-font-size: 18px;
+$button-font-weight: 700;
 $button-letter-spacing: 0;
 $button-text-transform: none;
 $button-text: #fff;
@@ -28,14 +31,14 @@ $button-hover-border: $secondary-color;
 
 $form-font-family: $body-font-family;
 $form-font-weight: $body-font-weight;
-$form-font-size: 20px;
+$form-font-size: $body-font-size-small;
 $form-line-height: 26px;
 $form-input-border-thickness: 1px;
 $form-input-padding: 18px;
 $form-input-height: 48px;
 $form-input-rounded: 48px;
 $form-textarea-rounded: 5px;
-$form-text: #777;
+$form-text: #ccc;
 $form-border: #232323;
 $form-background: #232323;
 $form-shadow: none;
