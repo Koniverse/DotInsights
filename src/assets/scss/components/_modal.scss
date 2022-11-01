@@ -126,6 +126,18 @@
 	}
 }
 
+#wallet-account-address {
+	margin: 5px 0 0;
+	font-size: $body-font-size-small;
+	font-weight: 500;
+	color: #fff;
+	word-break: break-all;
+}
+
+.btn-logout-subwallet {
+	margin: 25px 0 0;
+}
+
 @include media-breakpoint-down(xs) {
 	.dotinsights-modal {
 		--modal-spacing: 2rem 20px;

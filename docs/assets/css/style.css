@@ -3317,6 +3317,16 @@ body.rtl .tm-swiper.pagination-style-07 .swiper-pagination-bullet:after {
     height: 48px;
     background: url(../images/sw-logo.png) no-repeat center; }
 
+#wallet-account-address {
+  margin: 5px 0 0;
+  font-size: 17px;
+  font-weight: 500;
+  color: #fff;
+  word-break: break-all; }
+
+.btn-logout-subwallet {
+  margin: 25px 0 0; }
+
 @media (max-width: 543px) {
   .dotinsights-modal {
     --modal-spacing: 2rem 20px; }
