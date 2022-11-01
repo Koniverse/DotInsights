@@ -4367,6 +4367,10 @@ body {
     position: absolute;
     top: 0;
     right: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     background: none !important;
     border: 0 !important;
     box-shadow: none !important;
@@ -4376,8 +4380,11 @@ body {
     min-width: var(--input-height) !important;
     font-size: 24px; }
     .project-form-filter .search-submit svg {
+      display: block;
       width: 1em;
       height: 1em; }
+    .project-form-filter .search-submit span {
+      line-height: 1; }
 
 .project-categories-filter {
   display: flex;

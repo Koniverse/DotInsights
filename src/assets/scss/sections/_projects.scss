@@ -59,6 +59,10 @@
 		position: absolute;
 		top: 0;
 		right: 4px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
 		background: none !important;
 		border: 0 !important;
 		box-shadow: none !important;
@@ -69,8 +73,13 @@
 		font-size: 24px;
 
 		svg {
+			display: block;
 			width: 1em;
 			height: 1em;
+		}
+
+		span {
+			line-height: 1;
 		}
 	}
 }
