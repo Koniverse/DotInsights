@@ -7,36 +7,19 @@
 		var Helpers    = window.DotInsights.Helpers,
 		    NumberUtil = window.DotInsights.NumberUtil;
 
-		/*
-		var baseUrl       = location.origin,
-		    partname      = location.pathname.split( '/' ),
-		    exclude_parts = [
-			    'projects'
-		    ];
-		for ( var i = 0; i < partname.length; i ++ ) {
-			if ( '' !== partname[ i ] && ! exclude_parts.includes( partname[ i ] ) ) {
-				baseUrl += '/' + partname[ i ];
-			}
-		}
-		var sourceUrl2 = baseUrl + '/assets/data/ecosystem-map.json';
-		fetch( sourceUrl2 ).then( function( response ) {
-			return response.json();
-		} ).then( function( jsonData ) {
-			prepareData( jsonData );
-
-			$( document.body ).trigger( 'DotInsights/EcosystemMap/Data', [ jsonData ] );
-
-			DotInsights.Projects = jsonData;
-
-			$( document.body ).trigger( 'DotInsights/EcosystemMap/Loaded' );
-		} );
-		*/
-
 		fetch( Helpers.getApiEndpointUrl( 'getProjects' ) ).then( function( response ) {
 			return response.json();
 		} ).then( function( jsonData ) {
 			var projects = jsonData.projects;
 			prepareData( projects );
+
+			// Sort by total vote.
+			projects.sort( DotInsights.ArrayUtil.dynamicSort( 'vote_count' ) );
+
+			// Add rank for project after total likes sorted.
+			for ( var i = 0; i < projects.length; i ++ ) {
+				projects[ i ].rank = i + 1;
+			}
 
 			$( document.body ).trigger( 'DotInsights/EcosystemMap/Data', [ projects ] );
 

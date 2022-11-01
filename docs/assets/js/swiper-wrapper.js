@@ -1,1 +1,589 @@
-!function(I){"use strict";function L(e="",i=""){return void 0===e||""===e||isNaN(e)?i:parseInt(e)}function z(e="",i=""){return void 0===e||""===e?i:"auto-fixed"===e?"auto":e}function D(e="",i,t){return"auto"===t?1:("auto"===i?i=1:("inherit"===i||parseInt(i)>parseInt(t))&&(i=t),void 0===e||""===e?i||1:"inherit"===e?t||1:parseInt(e))}function N(e){e.$wrapperEl.find(".swiper-slide").css({height:"auto"});var i=e.activeIndex,i=I(e.slides[i]).height(),t=e.params.slidesPerView,t=t*i+(t-1)*e.params.spaceBetween;I(e.$el).height(t),I(e.$wrapperEl).find(".swiper-slide").height(i),e.update()}I.fn.SubwalletSwiper=function(e){var M,V=I.extend({},{},e);return this.each(function(){var e,s,i,t,a,n=I(this),r=n.children(".swiper-inner").first(),l=n.data(),o=r.children(".swiper-container").first(),d=z(l.itemsDesktop,1),p=z(l.itemsWideScreen,d),c=z(l.itemsLaptop,d),v=z(l.itemsTabletExtra,c),u=z(l.itemsTablet,v),w=z(l.itemsMobileExtra,u),f=z(l.itemsMobile,w),g=D(l.itemsGroupDesktop,d,d),h=D(l.itemsGroupWideScreen,g,p),b=D(l.itemsGroupLaptop,g,c),m=D(l.itemsGroupTabletExtra,b,v),S=D(l.itemsGroupTablet,m,u),y=D(l.itemsGroupMobileExtra,S,w),C=D(l.itemsGroupMobile,y,f),x=L(l.gutterDesktop,0),k=L(l.gutterWideScreen,x),E=L(l.gutterLaptop,x),P=L(l.gutterTabletExtra,E),T=L(l.gutterTablet,P),B=L(l.gutterMobileExtra,T),G=L(l.gutterMobile,B),$=L(l.speed,500),f=I.extend({},{init:!1,watchSlidesVisibility:!0,slidesPerView:f,slidesPerGroup:C,spaceBetween:G,resizeObserver:!0,breakpoints:{361:{slidesPerView:w,slidesPerGroup:y,spaceBetween:B},576:{slidesPerView:u,slidesPerGroup:S,spaceBetween:T},768:{slidesPerView:v,slidesPerGroup:m,spaceBetween:P},992:{slidesPerView:c,slidesPerGroup:b,spaceBetween:E},1200:{slidesPerView:d,slidesPerGroup:g,spaceBetween:x},1600:{slidesPerView:p,slidesPerGroup:h,spaceBetween:k}}},V);f.watchOverflow=!0,l.slideColumns&&(f.slidesPerColumn=l.slideColumns),l.initialSlide&&(f.initialSlide=l.initialSlide),l.autoHeight&&(f.autoHeight=!0),void 0===l.simulateTouch||l.simulateTouch||(f.simulateTouch=!1),$&&(f.speed=$),l.effect&&(f.effect=l.effect,"fade"===l.effect)&&("custom"===l.fadeEffect?f.fadeEffect={crossFade:!1}:f.fadeEffect={crossFade:!0}),l.loop&&(f.loop=!0,l.loopedSlides)&&(f.loopedSlides=l.loopedSlides),l.centered&&(f.centeredSlides=!0),l.autoplay&&(f.autoplay={delay:l.autoplay,disableOnInteraction:!1},l.autoplayReverseDirection)&&(f.autoplay.reverseDirection=!0),l.freeMode&&(f.freeMode=!0),l.wrapControls&&(C=I('<div class="swiper-controls-wrap"></div>'),e=I('<div class="swiper-controls"></div>'),C.append(e),n.append(C)),l.nav&&(l.customNav&&""!==l.customNav?(s=I("#"+l.customNav),G=I(".pagination-wrapper",s),i=s.find(".slider-prev-btn"),t=s.find(".slider-next-btn"),s.hasClass("style-02")?(f.pagination={el:G,type:"custom",clickable:!0},f.pagination.renderCustom=function(e,i,t){i=i.toString(),t=t.toString();return'<div class="fraction"><div class="text">'+s.data("text")+'</div><div class="current">'+i+'</div><div class="separator">/</div><div class="total">'+t+"</div></div>"}):(s.hasClass("style-03")||s.hasClass("style-04"))&&(f.pagination={el:G,type:"bullets",clickable:!0},f.pagination.renderBullet=function(e,i){return'<span class="'+i+'"></span>'})):(i=I('<div class="swiper-nav-button swiper-button-prev"><i class="nav-button-icon"></i><span class="nav-button-text"></span></div>'),t=I('<div class="swiper-nav-button swiper-button-next"><i class="nav-button-icon"></i><span class="nav-button-text"></span></div>'),"03"===l.navStyle&&(i=I('<div class="swiper-nav-button swiper-button-prev"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23 8L2.77778 8" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.22266 1L1.22266 8L8.22266 15" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>'),t=I('<div class="swiper-nav-button swiper-button-next"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 8L21.2222 8" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.7773 1L22.7773 8L15.7773 15" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>')),(w=I('<div class="swiper-nav-buttons"></div>')).append(i).append(t),y=I('<div class="swiper-nav-buttons-wrap"></div>'),("grid"==l.navAlignedBy?(y.append('<div class="container"><div class="row"><div class="col-sm-12"></div></div></div>'),y.find(".col-sm-12")):y).append(w),(e||r).append(y)),f.navigation={nextEl:t,prevEl:i}),l.pagination&&(B=I('<div class="swiper-pagination-wrap"><div class="swiper-pagination-inner"></div></div>'),u=I('<div class="swiper-pagination"></div>'),B.find(".swiper-pagination-inner").append(u),S=I('<div class="swiper-pagination-container"></div>'),("grid"==l.paginationAlignedBy?(S.append('<div class="container"><div class="row"><div class="col-sm-12"></div></div></div>'),S.find(".col-sm-12")):S).append(B),(e||n).append(S),T="bullets",l.paginationType&&(T=l.paginationType),f.pagination={el:u,type:T,clickable:!0},l.paginationDynamicBullets&&(f.pagination.dynamicBullets=!0),n.hasClass("pagination-style-04")?(a=I('<div class="swiper-alt-arrow-button swiper-alt-arrow-prev" data-action="prev"></div><div class="swiper-alt-arrow-button swiper-alt-arrow-next" data-action="next"></div>'),B.find(".swiper-pagination-inner").append(a),f.pagination.renderCustom=function(e,i,t){i=i.toString(),t=t.toString();return'<div class="fraction"><div class="text">'+l.paginationText+'</div><div class="current">'+i+'</div><div class="separator">/</div><div class="total">'+t+"</div></div>"}):n.hasClass("pagination-style-03")?f.pagination.renderCustom=function(e,i,t){i=i.toString(),t=t.toString();return'<div class="fraction"><div class="current">'+(i=i.padStart(2,"0"))+'</div><div class="separator"></div><div class="total">'+(t=t.padStart(2,"0"))+"</div></div>"}:n.hasClass("pagination-style-06")?f.pagination.renderCustom=function(e,i,t){var s=i.toString(),a=t.toString(),s=s.padStart(2,"0"),a=a.padStart(2,"0");return'<div class="fraction"><div class="current">'+i+'<div class="separator">/</div></div><div class="total">'+t+"</div></div>"}:n.hasClass("pagination-style-07")?f.pagination.renderBullet=function(e,i){return'<span class="'+i+'">'+(e+1).toString().padStart(2,"0")+'<span class="dot">.</span></span>'}:n.hasClass("pagination-style-08")&&(a=I('<div class="swiper-alt-arrow-button swiper-alt-arrow-prev" data-action="prev"></div><div class="swiper-alt-arrow-button swiper-alt-arrow-next" data-action="next"></div>'),B.find(".swiper-pagination-inner").append(a),f.pagination.renderBullet=function(e,i){return'<span class="'+i+'"></span>'})),l.mousewheel&&(f.mousewheel={enabled:!0}),l.vertical&&(f.direction="vertical"),l.slideToClickedSlide&&(f.slideToClickedSlide=!0,f.touchRatio=.2),M=new Swiper(o,f),l.layerTransition&&(M.on("init",function(){var e=M.$wrapperEl.find(".swiper-slide");I(e).filter(".swiper-slide-visible").addClass("animated")}),M.on("slideChangeTransitionEnd",function(){var e=M.$wrapperEl.find(".swiper-slide"),i=I(e).filter(".swiper-slide-visible");i.addClass("animated"),e.removeClass("swiper-ken-burn-active"),i.addClass("swiper-ken-burn-active")}),M.on("slideChangeTransitionStart",function(){M.$wrapperEl.find(".swiper-slide").removeClass("animated")})),l.vertical&&l.verticalAutoHeight&&(M.on("init",function(){N(this)}),M.on("transitionEnd",function(){N(this)}),M.on("resize",function(){N(this)})),M.on("resize",function(){var e=this.params.slidesPerView;I(this.$wrapperEl).attr("data-active-items",e)}),M.on("beforeInit",function(){var e=this.params.slidesPerView;I(this.$wrapperEl).attr("data-active-items",e)}),M.on("init",function(){var e=this.params.slidesPerView,e=(I(this.$wrapperEl).attr("data-active-items",e),M.$wrapperEl.find(".swiper-slide"));I(e).filter(".swiper-slide-visible").addClass("subwallet-slide-active")}),M.on("slideChangeTransitionEnd",function(){var e=M.$wrapperEl.find(".swiper-slide");I(e).filter(".swiper-slide-visible").addClass("subwallet-slide-active")}),M.on("slideChangeTransitionStart",function(){M.$wrapperEl.find(".swiper-slide").removeClass("subwallet-slide-active")}),I.fn.laziestloader&&n.waypoint(function(){var e=this.element||this,e=I(e).find(".ll-image");0<e.length&&e.laziestloader({},function(){I(this).unwrap(".subwallet-lazy-image")}).trigger("laziestloader"),this.destroy()},{offset:"90%"}),l.centeredHightlight&&"scale"===l.centeredHightlight&&M.on("beforeInit resize",function(){this.$wrapperEl.find(".swiper-slide").each(function(){var e=I(this);e.css("--placeholder-height",e.children().height()+"px")})}),M.init(),(n.hasClass("pagination-style-04")||n.hasClass("pagination-style-08"))&&n.on("click",".swiper-alt-arrow-button",function(){switch(I(this).data("action")){case"prev":M.slidePrev();break;case"next":M.slideNext()}}),I(document).trigger("SubwalletSwiperInit",[M,n,f])}),M}}(jQuery);
+(
+	function( $ ) {
+		'use strict';
+
+		$.fn.SubwalletSwiper = function( options ) {
+			var defaults = {};
+			var settings = $.extend( {}, defaults, options );
+
+			var $swiper;
+
+			this.each( function() {
+				var $slider = $( this );
+				var $sliderInner = $slider.children( '.swiper-inner' ).first();
+				var sliderSettings = $slider.data();
+
+				var $sliderContainer      = $sliderInner.children( '.swiper-container' ).first(),
+				    itemsDesktop          = parseItemValue( sliderSettings.itemsDesktop, 1 ), // Slides Per View.
+				    itemsWideScreen       = parseItemValue( sliderSettings.itemsWideScreen, itemsDesktop ),
+				    itemsLaptop           = parseItemValue( sliderSettings.itemsLaptop, itemsDesktop ),
+				    itemsTabletExtra      = parseItemValue( sliderSettings.itemsTabletExtra, itemsLaptop ),
+				    itemsTablet           = parseItemValue( sliderSettings.itemsTablet, itemsTabletExtra ),
+				    itemsMobileExtra      = parseItemValue( sliderSettings.itemsMobileExtra, itemsTablet ),
+				    itemsMobile           = parseItemValue( sliderSettings.itemsMobile, itemsMobileExtra ),
+				    itemsGroupDesktop     = parseItemGroupValue( sliderSettings.itemsGroupDesktop, itemsDesktop, itemsDesktop ), // Slides Per Group, Default same as Slides Per View.
+				    itemsGroupWideScreen  = parseItemGroupValue( sliderSettings.itemsGroupWideScreen, itemsGroupDesktop, itemsWideScreen ),
+				    itemsGroupLaptop      = parseItemGroupValue( sliderSettings.itemsGroupLaptop, itemsGroupDesktop, itemsLaptop ),
+				    itemsGroupTabletExtra = parseItemGroupValue( sliderSettings.itemsGroupTabletExtra, itemsGroupLaptop, itemsTabletExtra ),
+				    itemsGroupTablet      = parseItemGroupValue( sliderSettings.itemsGroupTablet, itemsGroupTabletExtra, itemsTablet ),
+				    itemsGroupMobileExtra = parseItemGroupValue( sliderSettings.itemsGroupMobileExtra, itemsGroupTablet, itemsMobileExtra ),
+				    itemsGroupMobile      = parseItemGroupValue( sliderSettings.itemsGroupMobile, itemsGroupMobileExtra, itemsMobile ),
+				    gutterDesktop         = parseNumberValue( sliderSettings.gutterDesktop, 0 ), // Distance between slides.
+				    gutterWideScreen      = parseNumberValue( sliderSettings.gutterWideScreen, gutterDesktop ),
+				    gutterLaptop          = parseNumberValue( sliderSettings.gutterLaptop, gutterDesktop ),
+				    gutterTabletExtra     = parseNumberValue( sliderSettings.gutterTabletExtra, gutterLaptop ),
+				    gutterTablet          = parseNumberValue( sliderSettings.gutterTablet, gutterTabletExtra ),
+				    gutterMobileExtra     = parseNumberValue( sliderSettings.gutterMobileExtra, gutterTablet ),
+				    gutterMobile          = parseNumberValue( sliderSettings.gutterMobile, gutterMobileExtra ),
+				    speed                 = parseNumberValue( sliderSettings.speed, 500 );
+
+				var swiperOptions = $.extend( {}, {
+					init: false,
+					watchSlidesVisibility: true,
+					slidesPerView: itemsMobile,
+					slidesPerGroup: itemsGroupMobile,
+					spaceBetween: gutterMobile,
+					resizeObserver: true,
+					breakpoints: {
+						// when window width is >=
+						361: {
+							slidesPerView: itemsMobileExtra,
+							slidesPerGroup: itemsGroupMobileExtra,
+							spaceBetween: gutterMobileExtra
+						},
+						576: {
+							slidesPerView: itemsTablet,
+							slidesPerGroup: itemsGroupTablet,
+							spaceBetween: gutterTablet
+						},
+						768: {
+							slidesPerView: itemsTabletExtra,
+							slidesPerGroup: itemsGroupTabletExtra,
+							spaceBetween: gutterTabletExtra
+						},
+						992: {
+							slidesPerView: itemsLaptop,
+							slidesPerGroup: itemsGroupLaptop,
+							spaceBetween: gutterLaptop
+						},
+						1200: {
+							slidesPerView: itemsDesktop,
+							slidesPerGroup: itemsGroupDesktop,
+							spaceBetween: gutterDesktop
+						},
+						1600: {
+							slidesPerView: itemsWideScreen,
+							slidesPerGroup: itemsGroupWideScreen,
+							spaceBetween: gutterWideScreen
+						}
+					}
+				}, settings );
+
+				swiperOptions.watchOverflow = true;
+
+				if ( sliderSettings.slideColumns ) {
+					swiperOptions.slidesPerColumn = sliderSettings.slideColumns;
+				}
+
+				if ( sliderSettings.initialSlide ) {
+					swiperOptions.initialSlide = sliderSettings.initialSlide;
+				}
+
+				if ( sliderSettings.autoHeight ) {
+					swiperOptions.autoHeight = true;
+				}
+
+				if ( typeof sliderSettings.simulateTouch !== 'undefined' && ! sliderSettings.simulateTouch ) {
+					swiperOptions.simulateTouch = false;
+				}
+
+				if ( speed ) {
+					swiperOptions.speed = speed;
+				}
+
+				// Maybe: fade, flip
+				if ( sliderSettings.effect ) {
+					swiperOptions.effect = sliderSettings.effect;
+
+					if ( 'fade' === sliderSettings.effect ) {
+						if ( 'custom' === sliderSettings.fadeEffect ) {
+							swiperOptions.fadeEffect = {
+								crossFade: false
+							};
+						} else {
+							swiperOptions.fadeEffect = {
+								crossFade: true
+							};
+						}
+					}
+				}
+
+				if ( sliderSettings.loop ) {
+					swiperOptions.loop = true;
+
+					if ( sliderSettings.loopedSlides ) {
+						swiperOptions.loopedSlides = sliderSettings.loopedSlides;
+					}
+				}
+
+				if ( sliderSettings.centered ) {
+					swiperOptions.centeredSlides = true;
+				}
+
+				if ( sliderSettings.autoplay ) {
+					swiperOptions.autoplay = {
+						delay: sliderSettings.autoplay,
+						disableOnInteraction: false
+					};
+
+					if ( sliderSettings.autoplayReverseDirection ) {
+						swiperOptions.autoplay.reverseDirection = true;
+					}
+				}
+
+				if ( sliderSettings.freeMode ) {
+					swiperOptions.freeMode = true;
+				}
+
+				var $wrapControls;
+
+				if ( sliderSettings.wrapControls ) {
+					var $wrapControlsWrap = $( '<div class="swiper-controls-wrap"></div>' );
+					$wrapControls = $( '<div class="swiper-controls"></div>' );
+
+					$wrapControlsWrap.append( $wrapControls );
+					$slider.append( $wrapControlsWrap );
+				}
+
+				if ( sliderSettings.nav ) {
+
+					if ( sliderSettings.customNav && sliderSettings.customNav !== '' ) {
+						var $customBtn = $( '#' + sliderSettings.customNav );
+						var $fractionWrapper = $( '.pagination-wrapper', $customBtn );
+						var $swiperPrev = $customBtn.find( '.slider-prev-btn' );
+						var $swiperNext = $customBtn.find( '.slider-next-btn' );
+
+						if ( $customBtn.hasClass( 'style-02' ) ) {
+							swiperOptions.pagination = {
+								el: $fractionWrapper,
+								type: 'custom',
+								clickable: true
+							};
+
+							swiperOptions.pagination.renderCustom = function( swiper, current, total ) {
+								// Convert to string.
+								var currentStr = current.toString();
+								var totalStr = total.toString();
+
+								return '<div class="fraction"><div class="text">' + $customBtn.data( 'text' ) + '</div><div class="current">' + currentStr + '</div><div class="separator">/</div><div class="total">' + totalStr + '</div></div>';
+							};
+						} else if ( $customBtn.hasClass( 'style-03' ) || $customBtn.hasClass( 'style-04' ) ) {
+							swiperOptions.pagination = {
+								el: $fractionWrapper,
+								type: 'bullets',
+								clickable: true
+							};
+
+							swiperOptions.pagination.renderBullet = function( index, className ) {
+								return '<span class="' + className + '"></span>';
+							};
+						}
+
+					} else {
+						var $swiperPrev = $( '<div class="swiper-nav-button swiper-button-prev"><i class="nav-button-icon"></i><span class="nav-button-text"></span></div>' );
+						var $swiperNext = $( '<div class="swiper-nav-button swiper-button-next"><i class="nav-button-icon"></i><span class="nav-button-text"></span></div>' );
+
+						if ( '03' === sliderSettings.navStyle ) {
+							var $arrowRightSvg = '<svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 8L21.2222 8" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.7773 1L22.7773 8L15.7773 15" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+							var $arrowLeftSvg = '<svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23 8L2.77778 8" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.22266 1L1.22266 8L8.22266 15" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+							$swiperPrev = $( '<div class="swiper-nav-button swiper-button-prev">' + $arrowLeftSvg + '</div>' );
+							$swiperNext = $( '<div class="swiper-nav-button swiper-button-next">' + $arrowRightSvg + '</div>' );
+						}
+
+						var $swiperNavButtons = $( '<div class="swiper-nav-buttons"></div>' );
+						$swiperNavButtons.append( $swiperPrev ).append( $swiperNext );
+
+						var $swiperNavButtonsWrap = $( '<div class="swiper-nav-buttons-wrap"></div>' );
+
+						if ( 'grid' == sliderSettings.navAlignedBy ) {
+							$swiperNavButtonsWrap.append( '<div class="container"><div class="row"><div class="col-sm-12"></div></div></div>' );
+							$swiperNavButtonsWrap.find( '.col-sm-12' ).append( $swiperNavButtons );
+						} else {
+							$swiperNavButtonsWrap.append( $swiperNavButtons );
+						}
+
+						if ( $wrapControls ) {
+							$wrapControls.append( $swiperNavButtonsWrap );
+						} else {
+							$sliderInner.append( $swiperNavButtonsWrap );
+						}
+					}
+
+					swiperOptions.navigation = {
+						nextEl: $swiperNext,
+						prevEl: $swiperPrev
+					};
+				}
+
+				if ( sliderSettings.pagination ) {
+					var $swiperPaginationWrap = $( '<div class="swiper-pagination-wrap"><div class="swiper-pagination-inner"></div></div>' );
+					var $swiperPagination = $( '<div class="swiper-pagination"></div>' );
+
+					$swiperPaginationWrap.find( '.swiper-pagination-inner' ).append( $swiperPagination );
+
+					var $swiperPaginationContainerWrap = $( '<div class="swiper-pagination-container"></div>' );
+
+					if ( 'grid' == sliderSettings.paginationAlignedBy ) {
+						$swiperPaginationContainerWrap.append( '<div class="container"><div class="row"><div class="col-sm-12"></div></div></div>' );
+						$swiperPaginationContainerWrap.find( '.col-sm-12' ).append( $swiperPaginationWrap );
+					} else {
+						$swiperPaginationContainerWrap.append( $swiperPaginationWrap );
+					}
+
+					if ( $wrapControls ) {
+						$wrapControls.append( $swiperPaginationContainerWrap );
+					} else {
+						$slider.append( $swiperPaginationContainerWrap );
+					}
+
+					var paginationType = 'bullets';
+
+					if ( sliderSettings.paginationType ) {
+						paginationType = sliderSettings.paginationType;
+					}
+
+					swiperOptions.pagination = {
+						el: $swiperPagination,
+						type: paginationType,
+						clickable: true
+					};
+
+					if ( sliderSettings.paginationDynamicBullets ) {
+						swiperOptions.pagination.dynamicBullets = true;
+					}
+
+					if ( $slider.hasClass( 'pagination-style-04' ) ) {
+						var $swiperAltArrows = $( '<div class="swiper-alt-arrow-button swiper-alt-arrow-prev" data-action="prev"></div><div class="swiper-alt-arrow-button swiper-alt-arrow-next" data-action="next"></div>' );
+
+						$swiperPaginationWrap.find( '.swiper-pagination-inner' ).append( $swiperAltArrows );
+
+						swiperOptions.pagination.renderCustom = function( swiper, current, total ) {
+							// Convert to string.
+							var currentStr = current.toString();
+							var totalStr = total.toString();
+
+							return '<div class="fraction"><div class="text">' + sliderSettings.paginationText + '</div><div class="current">' + currentStr + '</div><div class="separator">/</div><div class="total">' + totalStr + '</div></div>';
+						};
+					} else if ( $slider.hasClass( 'pagination-style-03' ) ) {
+						swiperOptions.pagination.renderCustom = function( swiper, current, total ) {
+							// Convert to string.
+							var currentStr = current.toString();
+							var totalStr = total.toString();
+
+							// Add leading 0.
+							currentStr = currentStr.padStart( 2, '0' );
+							totalStr = totalStr.padStart( 2, '0' );
+
+							return '<div class="fraction"><div class="current">' + currentStr + '</div><div class="separator"></div><div class="total">' + totalStr + '</div></div>';
+						};
+					} else if ( $slider.hasClass( 'pagination-style-06' ) ) {
+						swiperOptions.pagination.renderCustom = function( swiper, current, total ) {
+							// Convert to string.
+							var currentStr = current.toString();
+							var totalStr = total.toString();
+
+							// Add leading 0.
+							currentStr = currentStr.padStart( 2, '0' );
+							totalStr = totalStr.padStart( 2, '0' );
+
+							return '<div class="fraction"><div class="current">' + current + '<div class="separator">/</div></div><div class="total">' + total + '</div></div>';
+						};
+					} else if ( $slider.hasClass( 'pagination-style-07' ) ) {
+						swiperOptions.pagination.renderBullet = function( index, className ) {
+							// Convert to string.
+							var indexStr = (
+								index + 1
+							).toString();
+
+							// Add leading 0.
+							indexStr = indexStr.padStart( 2, '0' );
+
+							return '<span class="' + className + '">' + indexStr + '<span class="dot">.</span></span>';
+						};
+					} else if ( $slider.hasClass( 'pagination-style-08' ) ) {
+						var $swiperAltArrows = $( '<div class="swiper-alt-arrow-button swiper-alt-arrow-prev" data-action="prev"></div><div class="swiper-alt-arrow-button swiper-alt-arrow-next" data-action="next"></div>' );
+
+						$swiperPaginationWrap.find( '.swiper-pagination-inner' ).append( $swiperAltArrows );
+
+						swiperOptions.pagination.renderBullet = function( index, className ) {
+							return '<span class="' + className + '"></span>';
+						};
+					}
+				}
+
+				if ( sliderSettings.mousewheel ) {
+					swiperOptions.mousewheel = {
+						enabled: true
+					};
+				}
+
+				if ( sliderSettings.vertical ) {
+					swiperOptions.direction = 'vertical';
+				}
+
+				if ( sliderSettings.slideToClickedSlide ) {
+					swiperOptions.slideToClickedSlide = true;
+					swiperOptions.touchRatio = 0.2;
+				}
+
+				$swiper = new Swiper( $sliderContainer, swiperOptions );
+
+				if ( sliderSettings.layerTransition ) {
+					$swiper.on( 'init', function() {
+						var slides = $swiper.$wrapperEl.find( '.swiper-slide' );
+						/**
+						 * index = $swiper.activeIndex;
+						 * currentSlide = slides.eq( index );
+						 *
+						 * Work properly if slides per view is greater than 1
+						 */
+						var currentSlide = $( slides ).filter( '.swiper-slide-visible' );
+						currentSlide.addClass( 'animated' );
+					} );
+
+					$swiper.on( 'slideChangeTransitionEnd', function() {
+						var slides = $swiper.$wrapperEl.find( '.swiper-slide' );
+						/**
+						 * index = $swiper.activeIndex;
+						 * currentSlide = slides.eq( index );
+						 *
+						 * Work properly if slides per view is greater than 1
+						 */
+						var visibleSlides = $( slides ).filter( '.swiper-slide-visible' );
+						visibleSlides.addClass( 'animated' );
+
+						slides.removeClass( 'swiper-ken-burn-active' );
+						visibleSlides.addClass( 'swiper-ken-burn-active' );
+					} );
+
+					$swiper.on( 'slideChangeTransitionStart', function() {
+						var slides = $swiper.$wrapperEl.find( '.swiper-slide' );
+						slides.removeClass( 'animated' );
+					} );
+				}
+
+				if ( sliderSettings.vertical && sliderSettings.verticalAutoHeight ) {
+					$swiper.on( 'init', function() {
+						setSlideHeight( this );
+					} );
+
+					$swiper.on( 'transitionEnd', function() {
+						setSlideHeight( this );
+					} );
+
+					$swiper.on( 'resize', function() {
+						setSlideHeight( this );
+					} );
+				}
+
+				$swiper.on( 'resize', function() {
+					var slidesPerView = this.params.slidesPerView;
+
+					$( this.$wrapperEl ).attr( 'data-active-items', slidesPerView );
+				} );
+
+				/**
+				 * Use beforeInit instead of init to avoid broken slider view auto.
+				 * Updated: On some cases Normal per views return "auto" instead of real per view on beforeInit
+				 * then we needed init event to avoid broken render.
+				 */
+				$swiper.on( 'beforeInit', function() {
+					var slidesPerView = this.params.slidesPerView;
+					$( this.$wrapperEl ).attr( 'data-active-items', slidesPerView );
+				} );
+
+				$swiper.on( 'init', function() {
+					var slidesPerView = this.params.slidesPerView;
+					$( this.$wrapperEl ).attr( 'data-active-items', slidesPerView );
+
+					var slides = $swiper.$wrapperEl.find( '.swiper-slide' );
+					var visibleSlide = $( slides ).filter( '.swiper-slide-visible' );
+					visibleSlide.addClass( 'subwallet-slide-active' );
+				} );
+
+				$swiper.on( 'slideChangeTransitionEnd', function() {
+					var slides = $swiper.$wrapperEl.find( '.swiper-slide' );
+					var visibleSlide = $( slides ).filter( '.swiper-slide-visible' );
+					visibleSlide.addClass( 'subwallet-slide-active' );
+				} );
+
+				$swiper.on( 'slideChangeTransitionStart', function() {
+					var slides = $swiper.$wrapperEl.find( '.swiper-slide' );
+					slides.removeClass( 'subwallet-slide-active' );
+				} );
+
+				// If lazy load + retina enable.
+				if ( $.fn.laziestloader ) {
+					$slider.waypoint( function() {
+						var _self = this.element ? this.element : this;
+						var $self = $( _self );
+						var llImages = $self.find( '.ll-image' );
+
+						if ( llImages.length > 0 ) {
+							llImages.laziestloader( {}, function() {
+								$( this ).unwrap( '.subwallet-lazy-image' );
+							} ).trigger( 'laziestloader' );
+						}
+
+						this.destroy(); // trigger once.
+					}, {
+						offset: '90%'
+					} );
+				}
+
+				/**
+				 * Center Mode Handler
+				 */
+				if ( sliderSettings.centeredHightlight && 'scale' === sliderSettings.centeredHightlight ) {
+					$swiper.on( 'beforeInit resize', function() {
+						setSlideHeightCenterMode( this );
+					} );
+				}
+
+				$swiper.init();
+
+				if ( $slider.hasClass( 'pagination-style-04' ) || $slider.hasClass( 'pagination-style-08' ) ) {
+					$slider.on( 'click', '.swiper-alt-arrow-button', function() {
+						var action = $( this ).data( 'action' );
+
+						switch ( action ) {
+							case 'prev' :
+								$swiper.slidePrev();
+								break;
+							case 'next' :
+								$swiper.slideNext();
+								break;
+						}
+					} );
+				}
+
+				$( document ).trigger( 'SubwalletSwiperInit', [ $swiper, $slider, swiperOptions ] );
+			} );
+
+			return $swiper;
+		};
+
+		function parseNumberValue( setting = '', defaultValue = '' ) {
+			if ( undefined === setting || '' === setting || isNaN( setting ) ) {
+				return defaultValue;
+			}
+
+			return parseInt( setting );
+		}
+
+		function parseItemValue( setting = '', defaultValue = '' ) {
+			if ( undefined === setting || '' === setting ) {
+				return defaultValue;
+			}
+
+			// Normalize slide per view, reset fake view to exist view.
+			if ( 'auto-fixed' === setting ) {
+				return 'auto';
+			}
+
+			return setting;
+		}
+
+		function parseItemGroupValue( setting = '', inherit, itemsPerView ) {
+			if ( 'auto' === itemsPerView ) {
+				return 1;
+			}
+
+			if ( 'auto' === inherit ) {
+				inherit = 1;
+			} else if ( 'inherit' === inherit || parseInt( inherit ) > parseInt( itemsPerView ) ) {
+				inherit = itemsPerView;
+			}
+
+			if ( undefined === setting || '' === setting ) {
+				return inherit || 1;
+			} else if ( 'inherit' === setting ) {
+				return itemsPerView || 1;
+			}
+
+			return parseInt( setting );
+		}
+
+		function setSlideHeight( that ) {
+			var slides = that.$wrapperEl.find( '.swiper-slide' );
+			slides.css( { height: 'auto' } );
+			var currentSlide = that.activeIndex;
+			var itemHeight = $( that.slides[ currentSlide ] ).height();
+
+			var slidesPerView = that.params.slidesPerView;
+			var spaceBetween = that.params.spaceBetween;
+			var wrapperHeight = slidesPerView * itemHeight + (
+				slidesPerView - 1
+			) * spaceBetween;
+
+			$( that.$el ).height( wrapperHeight );
+			$( that.$wrapperEl ).find( '.swiper-slide' ).height( itemHeight );
+
+			that.update();
+		}
+
+		function setSlideHeightCenterMode( that ) {
+			var slides = that.$wrapperEl.find( '.swiper-slide' ).each( function() {
+				var $thisSlide = $( this );
+				$thisSlide.css( '--placeholder-height', $thisSlide.children().height() + 'px' );
+			} );
+		}
+
+		// Get total slides.
+		function getTotalSlides( swiper ) {
+			var slidesLength = swiper.slides.length;
+			var total = swiper.params.loop ? Math.ceil( (
+				                                            slidesLength - (
+					                                            swiper.loopedSlides * 2
+				                                            )
+			                                            ) / swiper.params.slidesPerGroup ) : swiper.snapGrid.length;
+
+			return total;
+		}
+
+		// Get current index.
+		function getCurrentIndex( swiper ) {
+			var slidesLength = swiper.slides.length;
+			var total = getTotalSlides( swiper );
+			var current;
+
+			if ( swiper.params.loop ) {
+				current = Math.ceil( (
+					                     swiper.activeIndex - swiper.loopedSlides
+				                     ) / swiper.params.slidesPerGroup );
+				if ( current > slidesLength - 1 - (
+					swiper.loopedSlides * 2
+				) ) {
+					current -= (
+						slidesLength - (
+							swiper.loopedSlides * 2
+						)
+					);
+				}
+				if ( current > total - 1 ) {
+					current -= total;
+				}
+				if ( current < 0 && swiper.params.paginationType !== 'bullets' ) {
+					current = total + current;
+				}
+			} else if ( typeof swiper.snapIndex !== 'undefined' ) {
+				current = swiper.snapIndex;
+			} else {
+				current = swiper.activeIndex || 0;
+			}
+
+			return current;
+		}
+
+	}( jQuery )
+);

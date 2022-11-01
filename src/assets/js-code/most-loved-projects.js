@@ -35,16 +35,6 @@
 		    $projectTable    = $( '#most-loved-projects-table tbody' ),
 		    $pagination      = $( '#most-loved-projects-pagination' );
 
-		$( document.body ).on( 'DotInsights/EcosystemMap/Data', function( evt, data ) {
-			// Sort by total vote.
-			data.sort( DotInsights.ArrayUtil.dynamicSort( 'vote_count' ) );
-
-			// Add rank for project after total likes sorted.
-			for ( var i = 0; i < data.length; i ++ ) {
-				data[ i ].rank = i + 1;
-			}
-		} );
-
 		$( document.body ).on( 'DotInsights/EcosystemMap/Loaded', function() {
 			DotInsights.FilteredProjects = DotInsights.Projects;
 			var foundItems = DotInsights.FilteredProjects.length;
