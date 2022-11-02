@@ -11,11 +11,11 @@ var lang = {
 	output: 'Output',
 	treasury: 'Treasury',
 	totalVCs: 'Total VCs',
-	dotVCsInvesting: 'VCs Investing in Polkadot',
 	notUsed: 'Not used',
 	usedOccasionally: 'Have used occasionally',
 	useSometimes: 'Use sometimes',
 	useFrequently: 'Use frequently',
+	projectCount: 'Project Count',
 	others: 'Others'
 };
 
