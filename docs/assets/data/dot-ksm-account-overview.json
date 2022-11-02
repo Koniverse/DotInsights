@@ -1,0 +1,1913 @@
+﻿[
+  {
+    "date": "2022-01-01",
+    "dot_incremental": "3269",
+    "dot_cumulative": "381985",
+    "ksm_incremental": "188",
+    "ksm_cumulative": "37874"
+  },
+  {
+    "date": "2022-01-02",
+    "dot_incremental": "3823",
+    "dot_cumulative": "385808",
+    "ksm_incremental": "227",
+    "ksm_cumulative": "38101"
+  },
+  {
+    "date": "2022-01-03",
+    "dot_incremental": "4012",
+    "dot_cumulative": "389820",
+    "ksm_incremental": "217",
+    "ksm_cumulative": "38318"
+  },
+  {
+    "date": "2022-01-04",
+    "dot_incremental": "4160",
+    "dot_cumulative": "393980",
+    "ksm_incremental": "247",
+    "ksm_cumulative": "38565"
+  },
+  {
+    "date": "2022-01-05",
+    "dot_incremental": "4463",
+    "dot_cumulative": "398443",
+    "ksm_incremental": "301",
+    "ksm_cumulative": "38866"
+  },
+  {
+    "date": "2022-01-06",
+    "dot_incremental": "4159",
+    "dot_cumulative": "402602",
+    "ksm_incremental": "297",
+    "ksm_cumulative": "39163"
+  },
+  {
+    "date": "2022-01-07",
+    "dot_incremental": "4140",
+    "dot_cumulative": "406742",
+    "ksm_incremental": "285",
+    "ksm_cumulative": "39448"
+  },
+  {
+    "date": "2022-01-08",
+    "dot_incremental": "3616",
+    "dot_cumulative": "410358",
+    "ksm_incremental": "236",
+    "ksm_cumulative": "39684"
+  },
+  {
+    "date": "2022-01-09",
+    "dot_incremental": "3255",
+    "dot_cumulative": "413613",
+    "ksm_incremental": "220",
+    "ksm_cumulative": "39904"
+  },
+  {
+    "date": "2022-01-10",
+    "dot_incremental": "3493",
+    "dot_cumulative": "417106",
+    "ksm_incremental": "317",
+    "ksm_cumulative": "40221"
+  },
+  {
+    "date": "2022-01-11",
+    "dot_incremental": "4670",
+    "dot_cumulative": "421776",
+    "ksm_incremental": "349",
+    "ksm_cumulative": "40570"
+  },
+  {
+    "date": "2022-01-12",
+    "dot_incremental": "5954",
+    "dot_cumulative": "427730",
+    "ksm_incremental": "270",
+    "ksm_cumulative": "40840"
+  },
+  {
+    "date": "2022-01-13",
+    "dot_incremental": "3898",
+    "dot_cumulative": "431628",
+    "ksm_incremental": "276",
+    "ksm_cumulative": "41116"
+  },
+  {
+    "date": "2022-01-14",
+    "dot_incremental": "3415",
+    "dot_cumulative": "435043",
+    "ksm_incremental": "268",
+    "ksm_cumulative": "41384"
+  },
+  {
+    "date": "2022-01-15",
+    "dot_incremental": "2911",
+    "dot_cumulative": "437954",
+    "ksm_incremental": "266",
+    "ksm_cumulative": "41650"
+  },
+  {
+    "date": "2022-01-16",
+    "dot_incremental": "3418",
+    "dot_cumulative": "441372",
+    "ksm_incremental": "202",
+    "ksm_cumulative": "41852"
+  },
+  {
+    "date": "2022-01-17",
+    "dot_incremental": "3194",
+    "dot_cumulative": "444566",
+    "ksm_incremental": "159",
+    "ksm_cumulative": "42011"
+  },
+  {
+    "date": "2022-01-18",
+    "dot_incremental": "2961",
+    "dot_cumulative": "447527",
+    "ksm_incremental": "205",
+    "ksm_cumulative": "42216"
+  },
+  {
+    "date": "2022-01-19",
+    "dot_incremental": "3514",
+    "dot_cumulative": "451041",
+    "ksm_incremental": "191",
+    "ksm_cumulative": "42407"
+  },
+  {
+    "date": "2022-01-20",
+    "dot_incremental": "3484",
+    "dot_cumulative": "454525",
+    "ksm_incremental": "214",
+    "ksm_cumulative": "42621"
+  },
+  {
+    "date": "2022-01-21",
+    "dot_incremental": "4223",
+    "dot_cumulative": "458748",
+    "ksm_incremental": "227",
+    "ksm_cumulative": "42848"
+  },
+  {
+    "date": "2022-01-22",
+    "dot_incremental": "4940",
+    "dot_cumulative": "463688",
+    "ksm_incremental": "251",
+    "ksm_cumulative": "43099"
+  },
+  {
+    "date": "2022-01-23",
+    "dot_incremental": "3914",
+    "dot_cumulative": "467602",
+    "ksm_incremental": "207",
+    "ksm_cumulative": "43306"
+  },
+  {
+    "date": "2022-01-24",
+    "dot_incremental": "4210",
+    "dot_cumulative": "471812",
+    "ksm_incremental": "215",
+    "ksm_cumulative": "43521"
+  },
+  {
+    "date": "2022-01-25",
+    "dot_incremental": "3836",
+    "dot_cumulative": "475648",
+    "ksm_incremental": "188",
+    "ksm_cumulative": "43709"
+  },
+  {
+    "date": "2022-01-26",
+    "dot_incremental": "3612",
+    "dot_cumulative": "479260",
+    "ksm_incremental": "177",
+    "ksm_cumulative": "43886"
+  },
+  {
+    "date": "2022-01-27",
+    "dot_incremental": "3089",
+    "dot_cumulative": "482349",
+    "ksm_incremental": "160",
+    "ksm_cumulative": "44046"
+  },
+  {
+    "date": "2022-01-28",
+    "dot_incremental": "2987",
+    "dot_cumulative": "485336",
+    "ksm_incremental": "143",
+    "ksm_cumulative": "44189"
+  },
+  {
+    "date": "2022-01-29",
+    "dot_incremental": "3113",
+    "dot_cumulative": "488449",
+    "ksm_incremental": "141",
+    "ksm_cumulative": "44330"
+  },
+  {
+    "date": "2022-01-30",
+    "dot_incremental": "2927",
+    "dot_cumulative": "491376",
+    "ksm_incremental": "142",
+    "ksm_cumulative": "44472"
+  },
+  {
+    "date": "2022-01-31",
+    "dot_incremental": "2967",
+    "dot_cumulative": "494343",
+    "ksm_incremental": "171",
+    "ksm_cumulative": "44643"
+  },
+  {
+    "date": "2022-02-01",
+    "dot_incremental": "3366",
+    "dot_cumulative": "497709",
+    "ksm_incremental": "219",
+    "ksm_cumulative": "44862"
+  },
+  {
+    "date": "2022-02-02",
+    "dot_incremental": "2957",
+    "dot_cumulative": "500666",
+    "ksm_incremental": "153",
+    "ksm_cumulative": "45015"
+  },
+  {
+    "date": "2022-02-03",
+    "dot_incremental": "2644",
+    "dot_cumulative": "503310",
+    "ksm_incremental": "132",
+    "ksm_cumulative": "45147"
+  },
+  {
+    "date": "2022-02-04",
+    "dot_incremental": "2823",
+    "dot_cumulative": "506133",
+    "ksm_incremental": "153",
+    "ksm_cumulative": "45300"
+  },
+  {
+    "date": "2022-02-05",
+    "dot_incremental": "2967",
+    "dot_cumulative": "509100",
+    "ksm_incremental": "499",
+    "ksm_cumulative": "45799"
+  },
+  {
+    "date": "2022-02-06",
+    "dot_incremental": "2682",
+    "dot_cumulative": "511782",
+    "ksm_incremental": "462",
+    "ksm_cumulative": "46261"
+  },
+  {
+    "date": "2022-02-07",
+    "dot_incremental": "3502",
+    "dot_cumulative": "515284",
+    "ksm_incremental": "173",
+    "ksm_cumulative": "46434"
+  },
+  {
+    "date": "2022-02-08",
+    "dot_incremental": "3261",
+    "dot_cumulative": "518545",
+    "ksm_incremental": "144",
+    "ksm_cumulative": "46578"
+  },
+  {
+    "date": "2022-02-09",
+    "dot_incremental": "3367",
+    "dot_cumulative": "521912",
+    "ksm_incremental": "142",
+    "ksm_cumulative": "46720"
+  },
+  {
+    "date": "2022-02-10",
+    "dot_incremental": "3165",
+    "dot_cumulative": "525077",
+    "ksm_incremental": "125",
+    "ksm_cumulative": "46845"
+  },
+  {
+    "date": "2022-02-11",
+    "dot_incremental": "2877",
+    "dot_cumulative": "527954",
+    "ksm_incremental": "128",
+    "ksm_cumulative": "46973"
+  },
+  {
+    "date": "2022-02-12",
+    "dot_incremental": "2531",
+    "dot_cumulative": "530485",
+    "ksm_incremental": "115",
+    "ksm_cumulative": "47088"
+  },
+  {
+    "date": "2022-02-13",
+    "dot_incremental": "2629",
+    "dot_cumulative": "533114",
+    "ksm_incremental": "136",
+    "ksm_cumulative": "47224"
+  },
+  {
+    "date": "2022-02-14",
+    "dot_incremental": "2660",
+    "dot_cumulative": "535774",
+    "ksm_incremental": "176",
+    "ksm_cumulative": "47400"
+  },
+  {
+    "date": "2022-02-15",
+    "dot_incremental": "2852",
+    "dot_cumulative": "538626",
+    "ksm_incremental": "160",
+    "ksm_cumulative": "47560"
+  },
+  {
+    "date": "2022-02-16",
+    "dot_incremental": "2768",
+    "dot_cumulative": "541394",
+    "ksm_incremental": "135",
+    "ksm_cumulative": "47695"
+  },
+  {
+    "date": "2022-02-17",
+    "dot_incremental": "2363",
+    "dot_cumulative": "543757",
+    "ksm_incremental": "133",
+    "ksm_cumulative": "47828"
+  },
+  {
+    "date": "2022-02-18",
+    "dot_incremental": "2495",
+    "dot_cumulative": "546252",
+    "ksm_incremental": "135",
+    "ksm_cumulative": "47963"
+  },
+  {
+    "date": "2022-02-19",
+    "dot_incremental": "2651",
+    "dot_cumulative": "548903",
+    "ksm_incremental": "220",
+    "ksm_cumulative": "48183"
+  },
+  {
+    "date": "2022-02-20",
+    "dot_incremental": "2931",
+    "dot_cumulative": "551834",
+    "ksm_incremental": "169",
+    "ksm_cumulative": "48352"
+  },
+  {
+    "date": "2022-02-21",
+    "dot_incremental": "2920",
+    "dot_cumulative": "554754",
+    "ksm_incremental": "198",
+    "ksm_cumulative": "48550"
+  },
+  {
+    "date": "2022-02-22",
+    "dot_incremental": "3079",
+    "dot_cumulative": "557833",
+    "ksm_incremental": "1228",
+    "ksm_cumulative": "49778"
+  },
+  {
+    "date": "2022-02-23",
+    "dot_incremental": "2815",
+    "dot_cumulative": "560648",
+    "ksm_incremental": "175",
+    "ksm_cumulative": "49953"
+  },
+  {
+    "date": "2022-02-24",
+    "dot_incremental": "3594",
+    "dot_cumulative": "564242",
+    "ksm_incremental": "385",
+    "ksm_cumulative": "50338"
+  },
+  {
+    "date": "2022-02-25",
+    "dot_incremental": "2435",
+    "dot_cumulative": "566677",
+    "ksm_incremental": "137",
+    "ksm_cumulative": "50475"
+  },
+  {
+    "date": "2022-02-26",
+    "dot_incremental": "2562",
+    "dot_cumulative": "569239",
+    "ksm_incremental": "146",
+    "ksm_cumulative": "50621"
+  },
+  {
+    "date": "2022-02-27",
+    "dot_incremental": "3043",
+    "dot_cumulative": "572282",
+    "ksm_incremental": "140",
+    "ksm_cumulative": "50761"
+  },
+  {
+    "date": "2022-02-28",
+    "dot_incremental": "3235",
+    "dot_cumulative": "575517",
+    "ksm_incremental": "172",
+    "ksm_cumulative": "50933"
+  },
+  {
+    "date": "2022-03-01",
+    "dot_incremental": "3483",
+    "dot_cumulative": "579000",
+    "ksm_incremental": "124",
+    "ksm_cumulative": "51057"
+  },
+  {
+    "date": "2022-03-02",
+    "dot_incremental": "3532",
+    "dot_cumulative": "582532",
+    "ksm_incremental": "137",
+    "ksm_cumulative": "51194"
+  },
+  {
+    "date": "2022-03-03",
+    "dot_incremental": "3384",
+    "dot_cumulative": "585916",
+    "ksm_incremental": "200",
+    "ksm_cumulative": "51394"
+  },
+  {
+    "date": "2022-03-04",
+    "dot_incremental": "2740",
+    "dot_cumulative": "588656",
+    "ksm_incremental": "126",
+    "ksm_cumulative": "51520"
+  },
+  {
+    "date": "2022-03-05",
+    "dot_incremental": "2449",
+    "dot_cumulative": "591105",
+    "ksm_incremental": "183",
+    "ksm_cumulative": "51703"
+  },
+  {
+    "date": "2022-03-06",
+    "dot_incremental": "2207",
+    "dot_cumulative": "593312",
+    "ksm_incremental": "176",
+    "ksm_cumulative": "51879"
+  },
+  {
+    "date": "2022-03-07",
+    "dot_incremental": "2514",
+    "dot_cumulative": "595826",
+    "ksm_incremental": "160",
+    "ksm_cumulative": "52039"
+  },
+  {
+    "date": "2022-03-08",
+    "dot_incremental": "2558",
+    "dot_cumulative": "598384",
+    "ksm_incremental": "138",
+    "ksm_cumulative": "52177"
+  },
+  {
+    "date": "2022-03-09",
+    "dot_incremental": "3063",
+    "dot_cumulative": "601447",
+    "ksm_incremental": "187",
+    "ksm_cumulative": "52364"
+  },
+  {
+    "date": "2022-03-10",
+    "dot_incremental": "2389",
+    "dot_cumulative": "603836",
+    "ksm_incremental": "188",
+    "ksm_cumulative": "52552"
+  },
+  {
+    "date": "2022-03-11",
+    "dot_incremental": "2309",
+    "dot_cumulative": "606145",
+    "ksm_incremental": "152",
+    "ksm_cumulative": "52704"
+  },
+  {
+    "date": "2022-03-12",
+    "dot_incremental": "3419",
+    "dot_cumulative": "609564",
+    "ksm_incremental": "176",
+    "ksm_cumulative": "52880"
+  },
+  {
+    "date": "2022-03-13",
+    "dot_incremental": "2290",
+    "dot_cumulative": "611854",
+    "ksm_incremental": "203",
+    "ksm_cumulative": "53083"
+  },
+  {
+    "date": "2022-03-14",
+    "dot_incremental": "2634",
+    "dot_cumulative": "614488",
+    "ksm_incremental": "179",
+    "ksm_cumulative": "53262"
+  },
+  {
+    "date": "2022-03-15",
+    "dot_incremental": "2363",
+    "dot_cumulative": "616851",
+    "ksm_incremental": "183",
+    "ksm_cumulative": "53445"
+  },
+  {
+    "date": "2022-03-16",
+    "dot_incremental": "2340",
+    "dot_cumulative": "619191",
+    "ksm_incremental": "146",
+    "ksm_cumulative": "53591"
+  },
+  {
+    "date": "2022-03-17",
+    "dot_incremental": "2170",
+    "dot_cumulative": "621361",
+    "ksm_incremental": "191",
+    "ksm_cumulative": "53782"
+  },
+  {
+    "date": "2022-03-18",
+    "dot_incremental": "2045",
+    "dot_cumulative": "623406",
+    "ksm_incremental": "126",
+    "ksm_cumulative": "53908"
+  },
+  {
+    "date": "2022-03-19",
+    "dot_incremental": "2041",
+    "dot_cumulative": "625447",
+    "ksm_incremental": "137",
+    "ksm_cumulative": "54045"
+  },
+  {
+    "date": "2022-03-20",
+    "dot_incremental": "2006",
+    "dot_cumulative": "627453",
+    "ksm_incremental": "178",
+    "ksm_cumulative": "54223"
+  },
+  {
+    "date": "2022-03-21",
+    "dot_incremental": "1940",
+    "dot_cumulative": "629393",
+    "ksm_incremental": "185",
+    "ksm_cumulative": "54408"
+  },
+  {
+    "date": "2022-03-22",
+    "dot_incremental": "2404",
+    "dot_cumulative": "631797",
+    "ksm_incremental": "148",
+    "ksm_cumulative": "54556"
+  },
+  {
+    "date": "2022-03-23",
+    "dot_incremental": "2279",
+    "dot_cumulative": "634076",
+    "ksm_incremental": "140",
+    "ksm_cumulative": "54696"
+  },
+  {
+    "date": "2022-03-24",
+    "dot_incremental": "2585",
+    "dot_cumulative": "636661",
+    "ksm_incremental": "195",
+    "ksm_cumulative": "54891"
+  },
+  {
+    "date": "2022-03-25",
+    "dot_incremental": "2364",
+    "dot_cumulative": "639025",
+    "ksm_incremental": "157",
+    "ksm_cumulative": "55048"
+  },
+  {
+    "date": "2022-03-26",
+    "dot_incremental": "2057",
+    "dot_cumulative": "641082",
+    "ksm_incremental": "138",
+    "ksm_cumulative": "55186"
+  },
+  {
+    "date": "2022-03-27",
+    "dot_incremental": "2332",
+    "dot_cumulative": "643414",
+    "ksm_incremental": "180",
+    "ksm_cumulative": "55366"
+  },
+  {
+    "date": "2022-03-28",
+    "dot_incremental": "3034",
+    "dot_cumulative": "646448",
+    "ksm_incremental": "170",
+    "ksm_cumulative": "55536"
+  },
+  {
+    "date": "2022-03-29",
+    "dot_incremental": "2735",
+    "dot_cumulative": "649183",
+    "ksm_incremental": "156",
+    "ksm_cumulative": "55692"
+  },
+  {
+    "date": "2022-03-30",
+    "dot_incremental": "2400",
+    "dot_cumulative": "651583",
+    "ksm_incremental": "175",
+    "ksm_cumulative": "55867"
+  },
+  {
+    "date": "2022-03-31",
+    "dot_incremental": "2521",
+    "dot_cumulative": "654104",
+    "ksm_incremental": "197",
+    "ksm_cumulative": "56064"
+  },
+  {
+    "date": "2022-04-01",
+    "dot_incremental": "2262",
+    "dot_cumulative": "656366",
+    "ksm_incremental": "140",
+    "ksm_cumulative": "56204"
+  },
+  {
+    "date": "2022-04-02",
+    "dot_incremental": "2527",
+    "dot_cumulative": "658893",
+    "ksm_incremental": "134",
+    "ksm_cumulative": "56338"
+  },
+  {
+    "date": "2022-04-03",
+    "dot_incremental": "2245",
+    "dot_cumulative": "661138",
+    "ksm_incremental": "155",
+    "ksm_cumulative": "56493"
+  },
+  {
+    "date": "2022-04-04",
+    "dot_incremental": "2190",
+    "dot_cumulative": "663328",
+    "ksm_incremental": "164",
+    "ksm_cumulative": "56657"
+  },
+  {
+    "date": "2022-04-05",
+    "dot_incremental": "2289",
+    "dot_cumulative": "665617",
+    "ksm_incremental": "200",
+    "ksm_cumulative": "56857"
+  },
+  {
+    "date": "2022-04-06",
+    "dot_incremental": "2296",
+    "dot_cumulative": "667913",
+    "ksm_incremental": "165",
+    "ksm_cumulative": "57022"
+  },
+  {
+    "date": "2022-04-07",
+    "dot_incremental": "2000",
+    "dot_cumulative": "669913",
+    "ksm_incremental": "161",
+    "ksm_cumulative": "57183"
+  },
+  {
+    "date": "2022-04-08",
+    "dot_incremental": "1980",
+    "dot_cumulative": "671893",
+    "ksm_incremental": "128",
+    "ksm_cumulative": "57311"
+  },
+  {
+    "date": "2022-04-09",
+    "dot_incremental": "1753",
+    "dot_cumulative": "673646",
+    "ksm_incremental": "149",
+    "ksm_cumulative": "57460"
+  },
+  {
+    "date": "2022-04-10",
+    "dot_incremental": "1771",
+    "dot_cumulative": "675417",
+    "ksm_incremental": "162",
+    "ksm_cumulative": "57622"
+  },
+  {
+    "date": "2022-04-11",
+    "dot_incremental": "2092",
+    "dot_cumulative": "677509",
+    "ksm_incremental": "131",
+    "ksm_cumulative": "57753"
+  },
+  {
+    "date": "2022-04-12",
+    "dot_incremental": "2269",
+    "dot_cumulative": "679778",
+    "ksm_incremental": "142",
+    "ksm_cumulative": "57895"
+  },
+  {
+    "date": "2022-04-13",
+    "dot_incremental": "2257",
+    "dot_cumulative": "682035",
+    "ksm_incremental": "117",
+    "ksm_cumulative": "58012"
+  },
+  {
+    "date": "2022-04-14",
+    "dot_incremental": "2005",
+    "dot_cumulative": "684040",
+    "ksm_incremental": "150",
+    "ksm_cumulative": "58162"
+  },
+  {
+    "date": "2022-04-15",
+    "dot_incremental": "2172",
+    "dot_cumulative": "686212",
+    "ksm_incremental": "178",
+    "ksm_cumulative": "58340"
+  },
+  {
+    "date": "2022-04-16",
+    "dot_incremental": "1754",
+    "dot_cumulative": "687966",
+    "ksm_incremental": "119",
+    "ksm_cumulative": "58459"
+  },
+  {
+    "date": "2022-04-17",
+    "dot_incremental": "1900",
+    "dot_cumulative": "689866",
+    "ksm_incremental": "113",
+    "ksm_cumulative": "58572"
+  },
+  {
+    "date": "2022-04-18",
+    "dot_incremental": "2129",
+    "dot_cumulative": "691995",
+    "ksm_incremental": "113",
+    "ksm_cumulative": "58685"
+  },
+  {
+    "date": "2022-04-19",
+    "dot_incremental": "1979",
+    "dot_cumulative": "693974",
+    "ksm_incremental": "114",
+    "ksm_cumulative": "58799"
+  },
+  {
+    "date": "2022-04-20",
+    "dot_incremental": "1930",
+    "dot_cumulative": "695904",
+    "ksm_incremental": "141",
+    "ksm_cumulative": "58940"
+  },
+  {
+    "date": "2022-04-21",
+    "dot_incremental": "2922",
+    "dot_cumulative": "698826",
+    "ksm_incremental": "144",
+    "ksm_cumulative": "59084"
+  },
+  {
+    "date": "2022-04-22",
+    "dot_incremental": "2254",
+    "dot_cumulative": "701080",
+    "ksm_incremental": "174",
+    "ksm_cumulative": "59258"
+  },
+  {
+    "date": "2022-04-23",
+    "dot_incremental": "2138",
+    "dot_cumulative": "703218",
+    "ksm_incremental": "149",
+    "ksm_cumulative": "59407"
+  },
+  {
+    "date": "2022-04-24",
+    "dot_incremental": "2110",
+    "dot_cumulative": "705328",
+    "ksm_incremental": "143",
+    "ksm_cumulative": "59550"
+  },
+  {
+    "date": "2022-04-25",
+    "dot_incremental": "2057",
+    "dot_cumulative": "707385",
+    "ksm_incremental": "144",
+    "ksm_cumulative": "59694"
+  },
+  {
+    "date": "2022-04-26",
+    "dot_incremental": "2019",
+    "dot_cumulative": "709404",
+    "ksm_incremental": "161",
+    "ksm_cumulative": "59855"
+  },
+  {
+    "date": "2022-04-27",
+    "dot_incremental": "2092",
+    "dot_cumulative": "711496",
+    "ksm_incremental": "148",
+    "ksm_cumulative": "60003"
+  },
+  {
+    "date": "2022-04-28",
+    "dot_incremental": "2250",
+    "dot_cumulative": "713746",
+    "ksm_incremental": "151",
+    "ksm_cumulative": "60154"
+  },
+  {
+    "date": "2022-04-29",
+    "dot_incremental": "1822",
+    "dot_cumulative": "715568",
+    "ksm_incremental": "125",
+    "ksm_cumulative": "60279"
+  },
+  {
+    "date": "2022-04-30",
+    "dot_incremental": "1791",
+    "dot_cumulative": "717359",
+    "ksm_incremental": "221",
+    "ksm_cumulative": "60500"
+  },
+  {
+    "date": "2022-05-01",
+    "dot_incremental": "1871",
+    "dot_cumulative": "719230",
+    "ksm_incremental": "123",
+    "ksm_cumulative": "60623"
+  },
+  {
+    "date": "2022-05-02",
+    "dot_incremental": "1859",
+    "dot_cumulative": "721089",
+    "ksm_incremental": "258",
+    "ksm_cumulative": "60881"
+  },
+  {
+    "date": "2022-05-03",
+    "dot_incremental": "1782",
+    "dot_cumulative": "722871",
+    "ksm_incremental": "179",
+    "ksm_cumulative": "61060"
+  },
+  {
+    "date": "2022-05-04",
+    "dot_incremental": "1812",
+    "dot_cumulative": "724683",
+    "ksm_incremental": "107",
+    "ksm_cumulative": "61167"
+  },
+  {
+    "date": "2022-05-05",
+    "dot_incremental": "2025",
+    "dot_cumulative": "726708",
+    "ksm_incremental": "119",
+    "ksm_cumulative": "61286"
+  },
+  {
+    "date": "2022-05-06",
+    "dot_incremental": "1857",
+    "dot_cumulative": "728565",
+    "ksm_incremental": "174",
+    "ksm_cumulative": "61460"
+  },
+  {
+    "date": "2022-05-07",
+    "dot_incremental": "1701",
+    "dot_cumulative": "730266",
+    "ksm_incremental": "136",
+    "ksm_cumulative": "61596"
+  },
+  {
+    "date": "2022-05-08",
+    "dot_incremental": "1964",
+    "dot_cumulative": "732230",
+    "ksm_incremental": "128",
+    "ksm_cumulative": "61724"
+  },
+  {
+    "date": "2022-05-09",
+    "dot_incremental": "3637",
+    "dot_cumulative": "735867",
+    "ksm_incremental": "151",
+    "ksm_cumulative": "61875"
+  },
+  {
+    "date": "2022-05-10",
+    "dot_incremental": "3428",
+    "dot_cumulative": "739295",
+    "ksm_incremental": "182",
+    "ksm_cumulative": "62057"
+  },
+  {
+    "date": "2022-05-11",
+    "dot_incremental": "5190",
+    "dot_cumulative": "744485",
+    "ksm_incremental": "179",
+    "ksm_cumulative": "62236"
+  },
+  {
+    "date": "2022-05-12",
+    "dot_incremental": "5957",
+    "dot_cumulative": "750442",
+    "ksm_incremental": "172",
+    "ksm_cumulative": "62408"
+  },
+  {
+    "date": "2022-05-13",
+    "dot_incremental": "4294",
+    "dot_cumulative": "754736",
+    "ksm_incremental": "174",
+    "ksm_cumulative": "62582"
+  },
+  {
+    "date": "2022-05-14",
+    "dot_incremental": "3173",
+    "dot_cumulative": "757909",
+    "ksm_incremental": "97",
+    "ksm_cumulative": "62679"
+  },
+  {
+    "date": "2022-05-15",
+    "dot_incremental": "2664",
+    "dot_cumulative": "760573",
+    "ksm_incremental": "708",
+    "ksm_cumulative": "63387"
+  },
+  {
+    "date": "2022-05-16",
+    "dot_incremental": "2473",
+    "dot_cumulative": "763046",
+    "ksm_incremental": "539",
+    "ksm_cumulative": "63926"
+  },
+  {
+    "date": "2022-05-17",
+    "dot_incremental": "2259",
+    "dot_cumulative": "765305",
+    "ksm_incremental": "246",
+    "ksm_cumulative": "64172"
+  },
+  {
+    "date": "2022-05-18",
+    "dot_incremental": "2221",
+    "dot_cumulative": "767526",
+    "ksm_incremental": "214",
+    "ksm_cumulative": "64386"
+  },
+  {
+    "date": "2022-05-19",
+    "dot_incremental": "1976",
+    "dot_cumulative": "769502",
+    "ksm_incremental": "233",
+    "ksm_cumulative": "64619"
+  },
+  {
+    "date": "2022-05-20",
+    "dot_incremental": "1846",
+    "dot_cumulative": "771348",
+    "ksm_incremental": "165",
+    "ksm_cumulative": "64784"
+  },
+  {
+    "date": "2022-05-21",
+    "dot_incremental": "1652",
+    "dot_cumulative": "773000",
+    "ksm_incremental": "122",
+    "ksm_cumulative": "64906"
+  },
+  {
+    "date": "2022-05-22",
+    "dot_incremental": "1722",
+    "dot_cumulative": "774722",
+    "ksm_incremental": "197",
+    "ksm_cumulative": "65103"
+  },
+  {
+    "date": "2022-05-23",
+    "dot_incremental": "1753",
+    "dot_cumulative": "776475",
+    "ksm_incremental": "158",
+    "ksm_cumulative": "65261"
+  },
+  {
+    "date": "2022-05-24",
+    "dot_incremental": "1625",
+    "dot_cumulative": "778100",
+    "ksm_incremental": "119",
+    "ksm_cumulative": "65380"
+  },
+  {
+    "date": "2022-05-25",
+    "dot_incremental": "1650",
+    "dot_cumulative": "779750",
+    "ksm_incremental": "123",
+    "ksm_cumulative": "65503"
+  },
+  {
+    "date": "2022-05-26",
+    "dot_incremental": "1811",
+    "dot_cumulative": "781561",
+    "ksm_incremental": "133",
+    "ksm_cumulative": "65636"
+  },
+  {
+    "date": "2022-05-27",
+    "dot_incremental": "1840",
+    "dot_cumulative": "783401",
+    "ksm_incremental": "106",
+    "ksm_cumulative": "65742"
+  },
+  {
+    "date": "2022-05-28",
+    "dot_incremental": "1499",
+    "dot_cumulative": "784900",
+    "ksm_incremental": "73",
+    "ksm_cumulative": "65815"
+  },
+  {
+    "date": "2022-05-29",
+    "dot_incremental": "1609",
+    "dot_cumulative": "786509",
+    "ksm_incremental": "135",
+    "ksm_cumulative": "65950"
+  },
+  {
+    "date": "2022-05-30",
+    "dot_incremental": "1743",
+    "dot_cumulative": "788252",
+    "ksm_incremental": "192",
+    "ksm_cumulative": "66142"
+  },
+  {
+    "date": "2022-05-31",
+    "dot_incremental": "1826",
+    "dot_cumulative": "790078",
+    "ksm_incremental": "166",
+    "ksm_cumulative": "66308"
+  },
+  {
+    "date": "2022-06-01",
+    "dot_incremental": "1582",
+    "dot_cumulative": "791660",
+    "ksm_incremental": "165",
+    "ksm_cumulative": "66473"
+  },
+  {
+    "date": "2022-06-02",
+    "dot_incremental": "1698",
+    "dot_cumulative": "793358",
+    "ksm_incremental": "156",
+    "ksm_cumulative": "66629"
+  },
+  {
+    "date": "2022-06-03",
+    "dot_incremental": "1377",
+    "dot_cumulative": "794735",
+    "ksm_incremental": "131",
+    "ksm_cumulative": "66760"
+  },
+  {
+    "date": "2022-06-04",
+    "dot_incremental": "1273",
+    "dot_cumulative": "796008",
+    "ksm_incremental": "107",
+    "ksm_cumulative": "66867"
+  },
+  {
+    "date": "2022-06-05",
+    "dot_incremental": "1346",
+    "dot_cumulative": "797354",
+    "ksm_incremental": "118",
+    "ksm_cumulative": "66985"
+  },
+  {
+    "date": "2022-06-06",
+    "dot_incremental": "1576",
+    "dot_cumulative": "798930",
+    "ksm_incremental": "146",
+    "ksm_cumulative": "67131"
+  },
+  {
+    "date": "2022-06-07",
+    "dot_incremental": "1655",
+    "dot_cumulative": "800585",
+    "ksm_incremental": "154",
+    "ksm_cumulative": "67285"
+  },
+  {
+    "date": "2022-06-08",
+    "dot_incremental": "1518",
+    "dot_cumulative": "802103",
+    "ksm_incremental": "131",
+    "ksm_cumulative": "67416"
+  },
+  {
+    "date": "2022-06-09",
+    "dot_incremental": "1568",
+    "dot_cumulative": "803671",
+    "ksm_incremental": "130",
+    "ksm_cumulative": "67546"
+  },
+  {
+    "date": "2022-06-10",
+    "dot_incremental": "1595",
+    "dot_cumulative": "805266",
+    "ksm_incremental": "165",
+    "ksm_cumulative": "67711"
+  },
+  {
+    "date": "2022-06-11",
+    "dot_incremental": "1821",
+    "dot_cumulative": "807087",
+    "ksm_incremental": "157",
+    "ksm_cumulative": "67868"
+  },
+  {
+    "date": "2022-06-12",
+    "dot_incremental": "2166",
+    "dot_cumulative": "809253",
+    "ksm_incremental": "163",
+    "ksm_cumulative": "68031"
+  },
+  {
+    "date": "2022-06-13",
+    "dot_incremental": "3824",
+    "dot_cumulative": "813077",
+    "ksm_incremental": "223",
+    "ksm_cumulative": "68254"
+  },
+  {
+    "date": "2022-06-14",
+    "dot_incremental": "2873",
+    "dot_cumulative": "815950",
+    "ksm_incremental": "170",
+    "ksm_cumulative": "68424"
+  },
+  {
+    "date": "2022-06-15",
+    "dot_incremental": "2956",
+    "dot_cumulative": "818906",
+    "ksm_incremental": "168",
+    "ksm_cumulative": "68592"
+  },
+  {
+    "date": "2022-06-16",
+    "dot_incremental": "2273",
+    "dot_cumulative": "821179",
+    "ksm_incremental": "179",
+    "ksm_cumulative": "68771"
+  },
+  {
+    "date": "2022-06-17",
+    "dot_incremental": "2172",
+    "dot_cumulative": "823351",
+    "ksm_incremental": "126",
+    "ksm_cumulative": "68897"
+  },
+  {
+    "date": "2022-06-18",
+    "dot_incremental": "2757",
+    "dot_cumulative": "826108",
+    "ksm_incremental": "139",
+    "ksm_cumulative": "69036"
+  },
+  {
+    "date": "2022-06-19",
+    "dot_incremental": "2314",
+    "dot_cumulative": "828422",
+    "ksm_incremental": "108",
+    "ksm_cumulative": "69144"
+  },
+  {
+    "date": "2022-06-20",
+    "dot_incremental": "2141",
+    "dot_cumulative": "830563",
+    "ksm_incremental": "120",
+    "ksm_cumulative": "69264"
+  },
+  {
+    "date": "2022-06-21",
+    "dot_incremental": "2108",
+    "dot_cumulative": "832671",
+    "ksm_incremental": "129",
+    "ksm_cumulative": "69393"
+  },
+  {
+    "date": "2022-06-22",
+    "dot_incremental": "1682",
+    "dot_cumulative": "834353",
+    "ksm_incremental": "100",
+    "ksm_cumulative": "69493"
+  },
+  {
+    "date": "2022-06-23",
+    "dot_incremental": "1690",
+    "dot_cumulative": "836043",
+    "ksm_incremental": "175",
+    "ksm_cumulative": "69668"
+  },
+  {
+    "date": "2022-06-24",
+    "dot_incremental": "1749",
+    "dot_cumulative": "837792",
+    "ksm_incremental": "197",
+    "ksm_cumulative": "69865"
+  },
+  {
+    "date": "2022-06-25",
+    "dot_incremental": "1557",
+    "dot_cumulative": "839349",
+    "ksm_incremental": "111",
+    "ksm_cumulative": "69976"
+  },
+  {
+    "date": "2022-06-26",
+    "dot_incremental": "1584",
+    "dot_cumulative": "840933",
+    "ksm_incremental": "82",
+    "ksm_cumulative": "70058"
+  },
+  {
+    "date": "2022-06-27",
+    "dot_incremental": "1502",
+    "dot_cumulative": "842435",
+    "ksm_incremental": "127",
+    "ksm_cumulative": "70185"
+  },
+  {
+    "date": "2022-06-28",
+    "dot_incremental": "1746",
+    "dot_cumulative": "844181",
+    "ksm_incremental": "259",
+    "ksm_cumulative": "70444"
+  },
+  {
+    "date": "2022-06-29",
+    "dot_incremental": "1967",
+    "dot_cumulative": "846148",
+    "ksm_incremental": "149",
+    "ksm_cumulative": "70593"
+  },
+  {
+    "date": "2022-06-30",
+    "dot_incremental": "2210",
+    "dot_cumulative": "848358",
+    "ksm_incremental": "181",
+    "ksm_cumulative": "70774"
+  },
+  {
+    "date": "2022-07-01",
+    "dot_incremental": "2408",
+    "dot_cumulative": "850766",
+    "ksm_incremental": "188",
+    "ksm_cumulative": "70962"
+  },
+  {
+    "date": "2022-07-02",
+    "dot_incremental": "3789",
+    "dot_cumulative": "854555",
+    "ksm_incremental": "245",
+    "ksm_cumulative": "71207"
+  },
+  {
+    "date": "2022-07-03",
+    "dot_incremental": "2534",
+    "dot_cumulative": "857089",
+    "ksm_incremental": "159",
+    "ksm_cumulative": "71366"
+  },
+  {
+    "date": "2022-07-04",
+    "dot_incremental": "2390",
+    "dot_cumulative": "859479",
+    "ksm_incremental": "155",
+    "ksm_cumulative": "71521"
+  },
+  {
+    "date": "2022-07-05",
+    "dot_incremental": "2315",
+    "dot_cumulative": "861794",
+    "ksm_incremental": "121",
+    "ksm_cumulative": "71642"
+  },
+  {
+    "date": "2022-07-06",
+    "dot_incremental": "2126",
+    "dot_cumulative": "863920",
+    "ksm_incremental": "134",
+    "ksm_cumulative": "71776"
+  },
+  {
+    "date": "2022-07-07",
+    "dot_incremental": "2184",
+    "dot_cumulative": "866104",
+    "ksm_incremental": "113",
+    "ksm_cumulative": "71889"
+  },
+  {
+    "date": "2022-07-08",
+    "dot_incremental": "2120",
+    "dot_cumulative": "868224",
+    "ksm_incremental": "122",
+    "ksm_cumulative": "72011"
+  },
+  {
+    "date": "2022-07-09",
+    "dot_incremental": "1531",
+    "dot_cumulative": "869755",
+    "ksm_incremental": "160",
+    "ksm_cumulative": "72171"
+  },
+  {
+    "date": "2022-07-10",
+    "dot_incremental": "1630",
+    "dot_cumulative": "871385",
+    "ksm_incremental": "93",
+    "ksm_cumulative": "72264"
+  },
+  {
+    "date": "2022-07-11",
+    "dot_incremental": "1659",
+    "dot_cumulative": "873044",
+    "ksm_incremental": "131",
+    "ksm_cumulative": "72395"
+  },
+  {
+    "date": "2022-07-12",
+    "dot_incremental": "1736",
+    "dot_cumulative": "874780",
+    "ksm_incremental": "101",
+    "ksm_cumulative": "72496"
+  },
+  {
+    "date": "2022-07-13",
+    "dot_incremental": "1438",
+    "dot_cumulative": "876218",
+    "ksm_incremental": "115",
+    "ksm_cumulative": "72611"
+  },
+  {
+    "date": "2022-07-14",
+    "dot_incremental": "1945",
+    "dot_cumulative": "878163",
+    "ksm_incremental": "106",
+    "ksm_cumulative": "72717"
+  },
+  {
+    "date": "2022-07-15",
+    "dot_incremental": "1748",
+    "dot_cumulative": "879911",
+    "ksm_incremental": "127",
+    "ksm_cumulative": "72844"
+  },
+  {
+    "date": "2022-07-16",
+    "dot_incremental": "1860",
+    "dot_cumulative": "881771",
+    "ksm_incremental": "89",
+    "ksm_cumulative": "72933"
+  },
+  {
+    "date": "2022-07-17",
+    "dot_incremental": "1904",
+    "dot_cumulative": "883675",
+    "ksm_incremental": "109",
+    "ksm_cumulative": "73042"
+  },
+  {
+    "date": "2022-07-18",
+    "dot_incremental": "2274",
+    "dot_cumulative": "885949",
+    "ksm_incremental": "205",
+    "ksm_cumulative": "73247"
+  },
+  {
+    "date": "2022-07-19",
+    "dot_incremental": "2321",
+    "dot_cumulative": "888270",
+    "ksm_incremental": "152",
+    "ksm_cumulative": "73399"
+  },
+  {
+    "date": "2022-07-20",
+    "dot_incremental": "2051",
+    "dot_cumulative": "890321",
+    "ksm_incremental": "106",
+    "ksm_cumulative": "73505"
+  },
+  {
+    "date": "2022-07-21",
+    "dot_incremental": "1747",
+    "dot_cumulative": "892068",
+    "ksm_incremental": "73",
+    "ksm_cumulative": "73578"
+  },
+  {
+    "date": "2022-07-22",
+    "dot_incremental": "1861",
+    "dot_cumulative": "893929",
+    "ksm_incremental": "600",
+    "ksm_cumulative": "74178"
+  },
+  {
+    "date": "2022-07-23",
+    "dot_incremental": "1733",
+    "dot_cumulative": "895662",
+    "ksm_incremental": "438",
+    "ksm_cumulative": "74616"
+  },
+  {
+    "date": "2022-07-24",
+    "dot_incremental": "1616",
+    "dot_cumulative": "897278",
+    "ksm_incremental": "194",
+    "ksm_cumulative": "74810"
+  },
+  {
+    "date": "2022-07-25",
+    "dot_incremental": "1565",
+    "dot_cumulative": "898843",
+    "ksm_incremental": "169",
+    "ksm_cumulative": "74979"
+  },
+  {
+    "date": "2022-07-26",
+    "dot_incremental": "1848",
+    "dot_cumulative": "900691",
+    "ksm_incremental": "125",
+    "ksm_cumulative": "75104"
+  },
+  {
+    "date": "2022-07-27",
+    "dot_incremental": "1811",
+    "dot_cumulative": "902502",
+    "ksm_incremental": "183",
+    "ksm_cumulative": "75287"
+  },
+  {
+    "date": "2022-07-28",
+    "dot_incremental": "1848",
+    "dot_cumulative": "904350",
+    "ksm_incremental": "159",
+    "ksm_cumulative": "75446"
+  },
+  {
+    "date": "2022-07-29",
+    "dot_incremental": "2300",
+    "dot_cumulative": "906650",
+    "ksm_incremental": "119",
+    "ksm_cumulative": "75565"
+  },
+  {
+    "date": "2022-07-30",
+    "dot_incremental": "2401",
+    "dot_cumulative": "909051",
+    "ksm_incremental": "93",
+    "ksm_cumulative": "75658"
+  },
+  {
+    "date": "2022-07-31",
+    "dot_incremental": "3049",
+    "dot_cumulative": "912100",
+    "ksm_incremental": "164",
+    "ksm_cumulative": "75822"
+  },
+  {
+    "date": "2022-08-01",
+    "dot_incremental": "2402",
+    "dot_cumulative": "914502",
+    "ksm_incremental": "119",
+    "ksm_cumulative": "75941"
+  },
+  {
+    "date": "2022-08-02",
+    "dot_incremental": "1641",
+    "dot_cumulative": "916143",
+    "ksm_incremental": "119",
+    "ksm_cumulative": "76060"
+  },
+  {
+    "date": "2022-08-03",
+    "dot_incremental": "1631",
+    "dot_cumulative": "917774",
+    "ksm_incremental": "129",
+    "ksm_cumulative": "76189"
+  },
+  {
+    "date": "2022-08-04",
+    "dot_incremental": "1515",
+    "dot_cumulative": "919289",
+    "ksm_incremental": "121",
+    "ksm_cumulative": "76310"
+  },
+  {
+    "date": "2022-08-05",
+    "dot_incremental": "1644",
+    "dot_cumulative": "920933",
+    "ksm_incremental": "102",
+    "ksm_cumulative": "76412"
+  },
+  {
+    "date": "2022-08-06",
+    "dot_incremental": "1484",
+    "dot_cumulative": "922417",
+    "ksm_incremental": "92",
+    "ksm_cumulative": "76504"
+  },
+  {
+    "date": "2022-08-07",
+    "dot_incremental": "1488",
+    "dot_cumulative": "923905",
+    "ksm_incremental": "151",
+    "ksm_cumulative": "76655"
+  },
+  {
+    "date": "2022-08-08",
+    "dot_incremental": "1868",
+    "dot_cumulative": "925773",
+    "ksm_incremental": "1854",
+    "ksm_cumulative": "78509"
+  },
+  {
+    "date": "2022-08-09",
+    "dot_incremental": "1660",
+    "dot_cumulative": "927433",
+    "ksm_incremental": "385",
+    "ksm_cumulative": "78894"
+  },
+  {
+    "date": "2022-08-10",
+    "dot_incremental": "2005",
+    "dot_cumulative": "929438",
+    "ksm_incremental": "293",
+    "ksm_cumulative": "79187"
+  },
+  {
+    "date": "2022-08-11",
+    "dot_incremental": "1834",
+    "dot_cumulative": "931272",
+    "ksm_incremental": "285",
+    "ksm_cumulative": "79472"
+  },
+  {
+    "date": "2022-08-12",
+    "dot_incremental": "1648",
+    "dot_cumulative": "932920",
+    "ksm_incremental": "199",
+    "ksm_cumulative": "79671"
+  },
+  {
+    "date": "2022-08-13",
+    "dot_incremental": "1491",
+    "dot_cumulative": "934411",
+    "ksm_incremental": "190",
+    "ksm_cumulative": "79861"
+  },
+  {
+    "date": "2022-08-14",
+    "dot_incremental": "2117",
+    "dot_cumulative": "936528",
+    "ksm_incremental": "231",
+    "ksm_cumulative": "80092"
+  },
+  {
+    "date": "2022-08-15",
+    "dot_incremental": "1732",
+    "dot_cumulative": "938260",
+    "ksm_incremental": "160",
+    "ksm_cumulative": "80252"
+  },
+  {
+    "date": "2022-08-16",
+    "dot_incremental": "1579",
+    "dot_cumulative": "939839",
+    "ksm_incremental": "163",
+    "ksm_cumulative": "80415"
+  },
+  {
+    "date": "2022-08-17",
+    "dot_incremental": "2231",
+    "dot_cumulative": "942070",
+    "ksm_incremental": "176",
+    "ksm_cumulative": "80591"
+  },
+  {
+    "date": "2022-08-18",
+    "dot_incremental": "1738",
+    "dot_cumulative": "943808",
+    "ksm_incremental": "200",
+    "ksm_cumulative": "80791"
+  },
+  {
+    "date": "2022-08-19",
+    "dot_incremental": "1910",
+    "dot_cumulative": "945718",
+    "ksm_incremental": "193",
+    "ksm_cumulative": "80984"
+  },
+  {
+    "date": "2022-08-20",
+    "dot_incremental": "1499",
+    "dot_cumulative": "947217",
+    "ksm_incremental": "143",
+    "ksm_cumulative": "81127"
+  },
+  {
+    "date": "2022-08-21",
+    "dot_incremental": "1361",
+    "dot_cumulative": "948578",
+    "ksm_incremental": "111",
+    "ksm_cumulative": "81238"
+  },
+  {
+    "date": "2022-08-22",
+    "dot_incremental": "1302",
+    "dot_cumulative": "949880",
+    "ksm_incremental": "175",
+    "ksm_cumulative": "81413"
+  },
+  {
+    "date": "2022-08-23",
+    "dot_incremental": "1568",
+    "dot_cumulative": "951448",
+    "ksm_incremental": "151",
+    "ksm_cumulative": "81564"
+  },
+  {
+    "date": "2022-08-24",
+    "dot_incremental": "1304",
+    "dot_cumulative": "952752",
+    "ksm_incremental": "162",
+    "ksm_cumulative": "81726"
+  },
+  {
+    "date": "2022-08-25",
+    "dot_incremental": "1261",
+    "dot_cumulative": "954013",
+    "ksm_incremental": "147",
+    "ksm_cumulative": "81873"
+  },
+  {
+    "date": "2022-08-26",
+    "dot_incremental": "1229",
+    "dot_cumulative": "955242",
+    "ksm_incremental": "143",
+    "ksm_cumulative": "82016"
+  },
+  {
+    "date": "2022-08-27",
+    "dot_incremental": "1283",
+    "dot_cumulative": "956525",
+    "ksm_incremental": "135",
+    "ksm_cumulative": "82151"
+  },
+  {
+    "date": "2022-08-28",
+    "dot_incremental": "1187",
+    "dot_cumulative": "957712",
+    "ksm_incremental": "157",
+    "ksm_cumulative": "82308"
+  },
+  {
+    "date": "2022-08-29",
+    "dot_incremental": "1315",
+    "dot_cumulative": "959027",
+    "ksm_incremental": "162",
+    "ksm_cumulative": "82470"
+  },
+  {
+    "date": "2022-08-30",
+    "dot_incremental": "1474",
+    "dot_cumulative": "960501",
+    "ksm_incremental": "199",
+    "ksm_cumulative": "82669"
+  },
+  {
+    "date": "2022-08-31",
+    "dot_incremental": "1346",
+    "dot_cumulative": "961847",
+    "ksm_incremental": "127",
+    "ksm_cumulative": "82796"
+  },
+  {
+    "date": "2022-09-01",
+    "dot_incremental": "1368",
+    "dot_cumulative": "963215",
+    "ksm_incremental": "144",
+    "ksm_cumulative": "82940"
+  },
+  {
+    "date": "2022-09-02",
+    "dot_incremental": "1322",
+    "dot_cumulative": "964537",
+    "ksm_incremental": "100",
+    "ksm_cumulative": "83040"
+  },
+  {
+    "date": "2022-09-03",
+    "dot_incremental": "1162",
+    "dot_cumulative": "965699",
+    "ksm_incremental": "112",
+    "ksm_cumulative": "83152"
+  },
+  {
+    "date": "2022-09-04",
+    "dot_incremental": "1199",
+    "dot_cumulative": "966898",
+    "ksm_incremental": "111",
+    "ksm_cumulative": "83263"
+  },
+  {
+    "date": "2022-09-05",
+    "dot_incremental": "1352",
+    "dot_cumulative": "968250",
+    "ksm_incremental": "346",
+    "ksm_cumulative": "83609"
+  },
+  {
+    "date": "2022-09-06",
+    "dot_incremental": "1423",
+    "dot_cumulative": "969673",
+    "ksm_incremental": "155",
+    "ksm_cumulative": "83764"
+  },
+  {
+    "date": "2022-09-07",
+    "dot_incremental": "1469",
+    "dot_cumulative": "971142",
+    "ksm_incremental": "120",
+    "ksm_cumulative": "83884"
+  },
+  {
+    "date": "2022-09-08",
+    "dot_incremental": "1342",
+    "dot_cumulative": "972484",
+    "ksm_incremental": "121",
+    "ksm_cumulative": "84005"
+  },
+  {
+    "date": "2022-09-09",
+    "dot_incremental": "1543",
+    "dot_cumulative": "974027",
+    "ksm_incremental": "118",
+    "ksm_cumulative": "84123"
+  },
+  {
+    "date": "2022-09-10",
+    "dot_incremental": "1321",
+    "dot_cumulative": "975348",
+    "ksm_incremental": "107",
+    "ksm_cumulative": "84230"
+  },
+  {
+    "date": "2022-09-11",
+    "dot_incremental": "1288",
+    "dot_cumulative": "976636",
+    "ksm_incremental": "110",
+    "ksm_cumulative": "84340"
+  },
+  {
+    "date": "2022-09-12",
+    "dot_incremental": "1383",
+    "dot_cumulative": "978019",
+    "ksm_incremental": "125",
+    "ksm_cumulative": "84465"
+  },
+  {
+    "date": "2022-09-13",
+    "dot_incremental": "1389",
+    "dot_cumulative": "979408",
+    "ksm_incremental": "142",
+    "ksm_cumulative": "84607"
+  },
+  {
+    "date": "2022-09-14",
+    "dot_incremental": "1439",
+    "dot_cumulative": "980847",
+    "ksm_incremental": "124",
+    "ksm_cumulative": "84731"
+  },
+  {
+    "date": "2022-09-15",
+    "dot_incremental": "1412",
+    "dot_cumulative": "982259",
+    "ksm_incremental": "334",
+    "ksm_cumulative": "85065"
+  },
+  {
+    "date": "2022-09-16",
+    "dot_incremental": "1384",
+    "dot_cumulative": "983643",
+    "ksm_incremental": "135",
+    "ksm_cumulative": "85200"
+  },
+  {
+    "date": "2022-09-17",
+    "dot_incremental": "1360",
+    "dot_cumulative": "985003",
+    "ksm_incremental": "121",
+    "ksm_cumulative": "85321"
+  },
+  {
+    "date": "2022-09-18",
+    "dot_incremental": "1328",
+    "dot_cumulative": "986331",
+    "ksm_incremental": "115",
+    "ksm_cumulative": "85436"
+  },
+  {
+    "date": "2022-09-19",
+    "dot_incremental": "1805",
+    "dot_cumulative": "988136",
+    "ksm_incremental": "155",
+    "ksm_cumulative": "85591"
+  },
+  {
+    "date": "2022-09-20",
+    "dot_incremental": "1371",
+    "dot_cumulative": "989507",
+    "ksm_incremental": "129",
+    "ksm_cumulative": "85720"
+  },
+  {
+    "date": "2022-09-21",
+    "dot_incremental": "1491",
+    "dot_cumulative": "990998",
+    "ksm_incremental": "113",
+    "ksm_cumulative": "85833"
+  },
+  {
+    "date": "2022-09-22",
+    "dot_incremental": "1574",
+    "dot_cumulative": "992572",
+    "ksm_incremental": "127",
+    "ksm_cumulative": "85960"
+  },
+  {
+    "date": "2022-09-23",
+    "dot_incremental": "1467",
+    "dot_cumulative": "994039",
+    "ksm_incremental": "122",
+    "ksm_cumulative": "86082"
+  },
+  {
+    "date": "2022-09-24",
+    "dot_incremental": "1359",
+    "dot_cumulative": "995398",
+    "ksm_incremental": "106",
+    "ksm_cumulative": "86188"
+  },
+  {
+    "date": "2022-09-25",
+    "dot_incremental": "1304",
+    "dot_cumulative": "996702",
+    "ksm_incremental": "120",
+    "ksm_cumulative": "86308"
+  },
+  {
+    "date": "2022-09-26",
+    "dot_incremental": "1475",
+    "dot_cumulative": "998177",
+    "ksm_incremental": "131",
+    "ksm_cumulative": "86439"
+  },
+  {
+    "date": "2022-09-27",
+    "dot_incremental": "1559",
+    "dot_cumulative": "999736",
+    "ksm_incremental": "131",
+    "ksm_cumulative": "86570"
+  },
+  {
+    "date": "2022-09-28",
+    "dot_incremental": "1546",
+    "dot_cumulative": "1001282",
+    "ksm_incremental": "116",
+    "ksm_cumulative": "86686"
+  },
+  {
+    "date": "2022-09-29",
+    "dot_incremental": "2169",
+    "dot_cumulative": "1003451",
+    "ksm_incremental": "132",
+    "ksm_cumulative": "86818"
+  },
+  {
+    "date": "2022-09-30",
+    "dot_incremental": "824",
+    "dot_cumulative": "1004275",
+    "ksm_incremental": "133",
+    "ksm_cumulative": "86951"
+  }
+]

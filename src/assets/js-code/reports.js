@@ -124,8 +124,8 @@
 						case 'vc-polkadot':
 							chartOptions = getChartResponsiveOptionsVCPolkadot();
 							break;
-						case 'polkadot-account-overview':
-							chartOptions = getChartResponsiveOptionsDotAccOverview();
+						case 'dot-ksm-account-overview':
+							chartOptions = getChartResponsiveOptionsDotKsmAccOverview();
 							break;
 						case 'dot-treasury-activity':
 							chartOptions = getChartResponsiveOptionsDotTreasuryActivity();
@@ -245,6 +245,9 @@
 						case 'dev-act-comparison':
 							chartOptions = getChartOptionsDevActComparison( chartName, jsonData );
 							break;
+						case 'dot-ksm-account-overview':
+							chartOptions = getChartOptionsDotKsmAccOverview( chartName, jsonData );
+							break;
 						case 'polkadot-parachain':
 							chartOptions = getChartOptionsPolkadotParachain( chartName, jsonData );
 							break;
@@ -285,9 +288,6 @@
 						break;
 					case 'nakamoto-coefficient':
 						chartOptions = getChartOptionsNakamotoCoefficient( chartName );
-						break;
-					case 'polkadot-account-overview':
-						chartOptions = getChartOptionsDotAccOverview( chartName );
 						break;
 					case 'vc-polkadot':
 						chartOptions = getChartOptionsVCPolkadot( chartName );
@@ -353,7 +353,7 @@
 					axisLabel: {
 						align: 'left',
 						formatter: dateFormatter,
-						color: '#858585'
+						color: '#ccc'
 					}
 				},
 				yAxis: [
@@ -384,7 +384,7 @@
 							}
 						},
 						axisLabel: {
-							color: '#858585'
+							color: '#ccc'
 						}
 					},
 					{
@@ -409,7 +409,7 @@
 							}
 						},
 						axisLabel: {
-							color: '#858585'
+							color: '#ccc'
 						}
 					}, {
 						type: 'value',
@@ -433,7 +433,7 @@
 							}
 						},
 						axisLabel: {
-							color: '#858585'
+							color: '#ccc'
 						}
 					}
 				],
@@ -598,7 +598,7 @@
 					axisLabel: {
 						align: 'left',
 						formatter: dateFormatter,
-						color: '#858585'
+						color: '#ccc'
 					}
 				},
 				yAxis: {
@@ -618,7 +618,7 @@
 					},
 					axisPointer: defaultAxisPointerSettings,
 					axisLabel: {
-						color: '#858585'
+						color: '#ccc'
 					}
 				},
 				series: [
@@ -784,10 +784,7 @@
 						showMaxLabel: true,
 						overflow: 'breakAll',
 						formatter: function( value ) {
-							console.log( '{' + value + '| }{value|' + value + '}' );
 							return '{' + value + '|}{spacing|}{value|' + value + '}';
-							//return '{' + value + '|}{value|' + value + '}';
-							//return '{' + value + '|}';
 						},
 						align: 'right',
 						rich: {
@@ -962,31 +959,56 @@
 			return newOptions;
 		}
 
-		function getChartOptionsDotAccOverview() {
-			var colors            = [
-				    '#E6007A'
+		function getChartOptionsDotKsmAccOverview( chartName, jsonData ) {
+			var datasets   = [
+				    {
+					    name: 'dot_cumulative',
+					    label: 'DOT'
+				    }, {
+					    name: 'ksm_cumulative',
+					    label: 'KSM'
+				    }
 			    ],
-			    data              = getChartDataPolkadotAccOverview(),
-			    baseOptions       = {
+			    colors     = [
+				    '#E6007A',
+				    '#004BFF',
+			    ],
+
+			    totalItems = jsonData.length,
+			    data       = [];
+
+			datasets.forEach( function( dataset ) {
+				data[ dataset.name ] = [];
+			} );
+
+			for ( var i = 0; i < totalItems; i ++ ) {
+				datasets.forEach( function( dataset ) {
+					var value = jsonData[ i ][ dataset.name ] ? validate_number( jsonData[ i ][ dataset.name ] ) : '';
+					data[ dataset.name ].push( [ jsonData[ i ].date, value ] );
+				} );
+			}
+
+			console.log( data );
+
+			//var test = getChartDataPolkadotAccOverview(jsonData);
+
+			var baseOptions = {
 				    color: colors,
 				    textStyle: {
 					    fontFamily: fontFamily,
 					    fontWeight: 500
 				    },
 				    tooltip: defaultTooltipSettings,
-				    legend: {
-					    show: false
-				    },
+				legend: defaultLegendSettings,
 				    grid: {
 					    left: '3%',
 					    right: '3%',
 					    top: '3%',
-					    bottom: '3%',
 					    containLabel: true
 				    },
-				    dataset: {
-					    source: data
-				    },
+				/*dataset: {
+					source: data
+				},*/
 				    xAxis: {
 					    type: 'time',
 					    boundaryGap: [ '0%', '0%' ],
@@ -1009,66 +1031,117 @@
 					    axisPointer: defaultAxisPointerSettings,
 					    axisLabel: {
 						    formatter: dateFormatter,
-						    color: '#858585'
+						    color: '#ccc'
 					    }
 				    },
-				    yAxis: {
-					    type: 'value',
-					    splitLine: {
-						    lineStyle: {
-							    type: [ 4, 4 ],
-							    color: [ '#262626' ]
-						    }
-					    },
-					    axisLine: {
-						    show: false,
-						    lineStyle: {
-							    type: [ 4, 4 ],
-							    color: '#262626'
-						    }
-					    },
-					    axisPointer: defaultAxisPointerSettings,
-					    axisLabel: {
-						    color: '#858585'
-					    }
-				    },
-				    series: {
-					    name: 'Cumulative',
-					    areaStyle: {
-						    color: new echarts.graphic.LinearGradient( 0.5, 0.5, 1, 1, [
-							    {
-								    offset: 0.6,
-								    color: 'rgba(80,9,72,0.6)'
-							    },
-							    {
-								    offset: 1,
-								    color: 'rgba(80,9,72,0)'
-							    }
-						    ] )
-					    },
-					    itemStyle: {
-						    color: colors[ 0 ]
-					    },
-					    type: 'line',
-					    smooth: true,
-					    showSymbol: false,
-					    emphasis: {
-						    focus: 'series'
-					    },
-					    encode: {
-						    // Map "date" column to x-axis.
-						    x: 'date',
-						    // Map "cumulative" row to y-axis.
-						    y: 'cumulative'
-					    }
-				    }
-			    },
-			    responsiveOptions = getChartResponsiveOptionsDotAccOverview();
+				yAxis: [
+					{
+						name: 'DOT',
+						type: 'value',
+						position: 'left',
+						splitLine: {
+							lineStyle: {
+								type: [ 4, 4 ],
+								color: [ '#262626' ]
+							}
+						},
+						axisLine: {
+							show: false,
+							lineStyle: {
+								type: [ 4, 4 ],
+								color: '#262626'
+							}
+						},
+						axisPointer: defaultAxisPointerSettings,
+						axisLabel: {
+							color: '#ccc'
+						}
+					}, {
+						name: 'KSM',
+						type: 'value',
+						position: 'right',
+						splitLine: {
+							lineStyle: {
+								type: [ 4, 4 ],
+								color: [ '#262626' ]
+							}
+						},
+						axisLine: {
+							show: false,
+							lineStyle: {
+								type: [ 4, 4 ],
+								color: '#262626'
+							}
+						},
+						axisPointer: defaultAxisPointerSettings,
+						axisLabel: {
+							color: '#ccc'
+						}
+					}
+				],
+				series: [
+					{
+						name: 'DOT',
+						data: data.dot_cumulative,
+						areaStyle: {
+							color: new echarts.graphic.LinearGradient( 0.5, 0.5, 1, 1, [
+								{
+									offset: 0.6,
+									color: 'rgba(93,25,110,0.6)'
+								},
+								{
+									offset: 1,
+									color: 'rgba(93,25,110,0)'
+								}
+							] )
+						},
+						itemStyle: {
+							color: colors[ 0 ]
+						},
+						type: 'line',
+						z: 9,
+						smooth: true,
+						showSymbol: false,
+						emphasis: {
+							focus: 'series'
+						},
+					},{
+						name: 'KSM',
+						data: data.ksm_cumulative,
+						areaStyle: {
+							color: new echarts.graphic.LinearGradient( 0.5, 0.5, 1, 1, [
+								{
+									offset: 0.6,
+									color: 'rgba(14,40,104,0.6)'
+								},
+								{
+									offset: 1,
+									color: 'rgba(14,40,104,0)'
+								}
+							] )
+						},
+						itemStyle: {
+							color: colors[ 1 ]
+						},
+						yAxisIndex: 1,
+
+						type: 'line',
+						smooth: true,
+						showSymbol: false,
+						emphasis: {
+							focus: 'series'
+						},
+					},
+				]
+			};
+
+			//responsiveOptions = getChartResponsiveOptionsDotKsmAccOverview();
+			var responsiveOptions = {};
 
 			return $.extend( true, baseOptions, responsiveOptions );
 		}
 
-		function getChartResponsiveOptionsDotAccOverview() {
+		function getChartResponsiveOptionsDotKsmAccOverview() {
 			var newOptions = {};
 
 			if ( window.innerWidth > 767 ) {
@@ -1167,7 +1240,7 @@
 					},
 					axisLabel: {
 						formatter: "{value}%",
-						color: '#858585'
+						color: '#ccc'
 					}
 				},
 				yAxis: {
@@ -1380,7 +1453,7 @@
 					    axisPointer: defaultAxisPointerSettings,
 					    axisLabel: {
 						    formatter: dateFormatter,
-						    color: '#858585'
+						    color: '#ccc'
 					    }
 				    },
 				    yAxis: {
@@ -1406,7 +1479,7 @@
 						    formatter: function( value ) {
 							    return moneyFormat( value );
 						    },
-						    color: '#858585'
+						    color: '#ccc'
 					    }
 				    },
 				    series: [
@@ -1694,7 +1767,7 @@
 					    nameGap: 83,
 					    nameTextStyle: {
 						    fontFamily: fontFamily,
-						    color: '#858585',
+						    color: '#ccc',
 						    fontSize: 15,
 						    fontWeight: '500'
 					    },
@@ -1795,7 +1868,7 @@
 					    extraCssText: 'border-radius: 10px;box-shadow: 0 4px 50px rgba(161, 107, 216, 0.5);',
 					    textStyle: {
 						    fontFamily: fontFamily,
-						    color: '#858585',
+						    color: '#ccc',
 						    fontSize: 14,
 						    fontWeight: '500'
 					    },
@@ -1848,7 +1921,7 @@
 					    },
 					    axisLabel: {
 						    formatter: dateFormatter,
-						    color: '#858585'
+						    color: '#ccc'
 					    }
 				    },
 				    yAxis: {
@@ -1870,14 +1943,14 @@
 						    }
 					    },
 					    axisLabel: {
-						    color: '#858585'
+						    color: '#ccc'
 					    },
 					    name: 'Volume (KSM)',
 					    nameLocation: 'middle',
 					    nameGap: 100,
 					    nameTextStyle: {
 						    fontFamily: fontFamily,
-						    color: '#858585',
+						    color: '#ccc',
 						    fontSize: 15,
 						    fontWeight: '500'
 					    }
@@ -2104,7 +2177,7 @@
 					extraCssText: 'border-radius: 10px;box-shadow: 0 4px 50px rgba(161, 107, 216, 0.5);',
 					textStyle: {
 						fontFamily: fontFamily,
-						color: '#858585',
+						color: '#ccc',
 						fontSize: 14,
 						fontWeight: '500'
 					},
@@ -2169,7 +2242,7 @@
 					},
 					axisLabel: {
 						formatter: '{value}%',
-						color: '#858585'
+						color: '#ccc'
 					}
 				},
 				series: chartSeries
@@ -2383,7 +2456,7 @@
 					},
 					axisLabel: {
 						formatter: dateFormatter,
-						color: '#858585'
+						color: '#ccc'
 					}
 				},
 				yAxis: {
@@ -2405,7 +2478,7 @@
 						}
 					},
 					axisLabel: {
-						color: '#858585'
+						color: '#ccc'
 					}
 				},
 				series: chartSeries
@@ -2897,11 +2970,7 @@
 					break;
 			}
 
-			var iconPath = '' !== icon ? tokenBaseUrl + icon : '';
-
-			console.log( iconPath );
-
-			return iconPath;
+			return '' !== icon ? tokenBaseUrl + icon : ''
 		}
 
 	}( jQuery )
