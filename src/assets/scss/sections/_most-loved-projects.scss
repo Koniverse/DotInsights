@@ -280,7 +280,7 @@
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: center;
-		font-size: 18px;
+		font-size: $button-font-size;
 		font-weight: 700;
 		color: #fff;
 	}
@@ -347,6 +347,10 @@
 	.project-layer {
 		padding: 3px 10px 1px;
 	}
+}
+
+.btn-vote {
+	font-size: 18px;
 }
 
 @include media-breakpoint-up(md) {

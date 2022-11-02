@@ -22,9 +22,10 @@
 }
 
 .section-description {
-	font-size: 20px;
-	line-height: 1.5;
-	color: #858585;
+	font-size: $body-font-size-small;
+	font-weight: 500;
+	line-height: 30px;
+	color: #ccc;
 
 	a {
 		color: $primary-color;
@@ -59,7 +60,7 @@
 .block-report-chart {
 	--border-size: -3px;
 	position: relative;
-	padding: var(--content-top-spacing, 30px) var(--content-h-spacing, 34px) var(--content-bottom-spacing, 20px);
+	padding: var(--content-top-spacing, 31px) var(--content-h-spacing, 30px) var(--content-bottom-spacing, 33px);
 	border-radius: var(--block-round, 10px);
 
 	&:before {
@@ -81,7 +82,7 @@
 		bottom: 0;
 		left: 0;
 		border-radius: inherit;
-		background: #151515;
+		background: var(--block-bg, #151515);
 	}
 
 	.block-content {
@@ -131,7 +132,7 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		transform: translate(-30%, -30%);
+		transform: translate(-35%, -35%);
 	}
 
 	.blur-2 {
@@ -202,28 +203,25 @@
 	}
 }
 
-.block-table-header,
-.block-chart-header {
+.block-table-heading,
+.block-chart-heading {
+	font-family: $body-font-family;
+	font-size: $body-font-size-large;
+	font-weight: 700;
+	line-height: 34px;
 	margin: 0 0 25px;
 	display: flex;
 	align-items: center;
 
-	.chart-logo {
-		margin: 0 18px 0 0;
-
-		img {
-			width: 28px;
-		}
+	&:before {
+		flex-shrink: 0;
+		content: '';
+		width: 32px;
+		height: 34px;
+		background: url(../images/logo/simple-logo.png) no-repeat center;
+		background-size: 32px 34px;
+		margin: 0 15px 0 0;
 	}
-}
-
-.block-table-heading,
-.block-chart-heading {
-	font-family: $body-font-family;
-	font-weight: 600;
-	font-size: 24px;
-	line-height: 1.5;
-	margin: 0;
 }
 
 .block-table-footer,
@@ -237,9 +235,9 @@
 
 .block-table-source,
 .block-chart-source {
-	font-size: 18px;
-	line-height: 26px;
-	color: #858585;
+	font-size: $body-font-size-small;
+	font-weight: 500;
+	line-height: 30px;
 	max-width: 570px;
 	margin: 0 10px 0 0;
 
@@ -254,8 +252,11 @@
 
 .block-table-branding,
 .block-chart-branding {
+	padding: 2px 0 0;
+	line-height: 1;
+
 	img {
-		max-width: 134px;
+		max-width: 138px;
 	}
 }
 
@@ -278,15 +279,38 @@
 	}
 }
 
-.block-table-widget {
+.block-report-table {
 	--td-beside-gap: 19px;
 	--td-ver-gap: 11px;
 	--td-hoz-gap: 10px;
+
+	margin: var(--table-top-spacing, 0) 0 var(--table-bottom-spacing, 0);
+
+	.block-table-heading {
+		margin: 0 0 10px;
+	}
+
+	&.table-style-02 {
+		--block-bg: #000;
+		--th-bg: none;
+		--td-bg: #151515;
+		--tr-radius: 8px;
+		--tr-spacing: 8px;
+
+		table {
+			font-size: 18px;
+			line-height: 30px;
+			font-weight: 400;
+		}
+	}
+}
+
+.block-table-widget {
 	border-collapse: separate !important;
-	border-spacing: 0 6px !important;
-	line-height: 26px;
+	border-spacing: 0 var(--tr-spacing, 6px) !important;
+	line-height: 28px;
 	margin: 0;
-	font-size: 15px;
+	font-size: 16px;
 	font-weight: 500;
 	border-bottom: 0 !important;
 
@@ -312,44 +336,125 @@
 
 	td, th {
 		border: 0 !important;
-		width: 22%;
 		padding: var(--td-ver-gap) var(--td-hoz-gap);
-		border-spacing: 12px !important;
 
 		&:first-child {
-			text-align: start;
-			width: 56%;
-			color: $primary-color;
-			border-radius: 7px 0 0 7px;
 			padding: var(--td-ver-gap) var(--td-hoz-gap) var(--td-ver-gap) var(--td-beside-gap);
 		}
 
-		&:nth-child(2) {
-			width: 40%;
+		&:last-child {
+			padding: var(--td-ver-gap) var(--td-beside-gap) var(--td-ver-gap) var(--td-hoz-gap);
 		}
 
-		&:last-child {
-			border-radius: 0 7px 7px 0;
-			padding: var(--td-ver-gap) var(--td-beside-gap) var(--td-ver-gap) var(--td-hoz-gap);
+		img {
+			margin: 0 9px 0 0;
+			vertical-align: middle;
+		}
+	}
+
+	thead tr {
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: -1;
+			border-radius: var(--tr-radius, 4px);
+			background: var(--th-bg, $secondary-color);
+		}
+	}
+
+	tbody tr {
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: -1;
+			border-radius: var(--tr-radius, 4px);
+			background: var(--td-bg, rgba(41, 41, 41, .6));
 		}
 	}
 
 	th {
-		font-size: 15px;
-		font-family: $heading-font-family;
-		font-weight: $heading-font-weight !important;
-		background: $secondary-color;
+		font-size: 16px;
+		font-weight: 700;
+		background: none;
 		color: #fff !important;
+		vertical-align: bottom;
 	}
 
 	td {
-		color: #a8adc3;
-		background: rgba(28, 44, 74, 0.5) !important;
+		color: #ccc;
+		background: none;
+	}
+
+	.token-info {
+		display: flex;
+		align-items: center;
+		text-align: left;
+		font-weight: 700;
+		font-size: 16px;
+		color: #fff;
+
+		img {
+			width: var(--token-icon-size, 24px);
+		}
 	}
 }
 
 .block-table-footer {
 	margin: 8px 0 0 !important;
+}
+
+.table--top-10-networks-dev-act {
+	td, th {
+		width: 22%;
+
+		&:first-child {
+			width: 40px;
+			text-align: start;
+		}
+
+		&:nth-child(2) {
+			width: 60%;
+		}
+
+		&:last-child {
+			text-align: right;
+			width: 150px;
+		}
+	}
+}
+
+.table--electricity-consumption {
+	--block-round: 20px;
+	--token-icon-size: 28px;
+
+	table {
+		table-layout: fixed;
+	}
+
+	td, th {
+		width: 16%;
+		text-align: center;
+
+		&:first-child {
+			width: 150px;
+		}
+	}
+
+	.token-info {
+		min-height: 42px;
+	}
 }
 
 .block-text {
@@ -371,6 +476,7 @@
 		text-fill-color: transparent;
 		/** Fix text gradient cropped **/
 		padding-top: .1785em;
+		margin: 0 0 var(--header-spacing, 29px);
 	}
 
 	.text-wrap {
@@ -378,11 +484,12 @@
 	}
 
 	.text {
-		font-size: 20px;
+		font-size: $body-font-size-small;
+		font-weight: 500;
 		line-height: 30px;
 		width: var(--text-width, 100%);
 		max-width: 100%;
-		color: #858585;
+		color: #ccc;
 
 		a {
 			color: $primary-color;
@@ -542,54 +649,6 @@
 
 .section-report-holder-investor {
 	padding: 175px 0 0;
-
-	.shape-smooth-grid {
-		left: 0;
-		right: 0;
-		text-align: center;
-		top: 0;
-		transform: translateY(-25%);
-
-		img {
-			max-width: 80vw;
-		}
-	}
-
-	.shape-radial-circle {
-		top: 0;
-		left: 0;
-		transform: translate(-40%, -36%);
-	}
-
-	.section-shape-kusama {
-		top: 1%;
-		left: 7%;
-
-		img {
-			width: 157px;
-			max-width: 8vw;
-		}
-	}
-
-	.section-shape-dot {
-		top: 0;
-		left: 54%;
-
-		img {
-			width: 173px;
-			max-width: 9vw;
-		}
-	}
-
-	.section-shape-diamond {
-		top: 220px;
-		right: 5%;
-
-		img {
-			width: 138px;
-			max-width: 7vw;
-		}
-	}
 }
 
 .section-governance-treasury {
@@ -1146,15 +1205,6 @@
 
 		.sub-title {
 			font-size: 76px;
-		}
-	}
-}
-
-@media screen and (max-width: 1600px) {
-	.section-report-holder-investor {
-		.section-shape-diamond {
-			right: 2%;
-			top: 150px;
 		}
 	}
 }

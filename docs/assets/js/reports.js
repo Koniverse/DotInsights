@@ -17,7 +17,7 @@
 		var $allCharts                 = $( '.block-chart' ),
 		    dateFormatter              = '{dd}/{MM}/{yyyy}',
 		    dateShortFormatter         = '{MM}/{yyyy}',
-		    fontFamily                 = 'TT Commons',
+		    fontFamily                 = 'Plus Jakarta Sans',
 		    echarts                    = window.echarts,
 		    defaultTooltipStyle        = {
 			    padding: [ 15, 20 ],
@@ -91,11 +91,11 @@
 				offset: '90%'
 			} );
 
-			$( '#table-nft-market-overview' ).DataTable( {
+			/*$( '.js-data-table' ).DataTable( {
 				info: false,
 				paging: false,
 				searching: false
-			} );
+			} );*/
 
 			initTableOfContents();
 		} );
@@ -376,11 +376,6 @@
 						},
 						axisPointer: {
 							label: {
-								/*width: 50,
-								padding: [ 6, 3, 4, 3 ],
-								fontFamily: fontFamily,
-								fontStyle: 500,
-								fontSize: 10,*/
 								color: '#020722',
 								backgroundColor: '#66E1B6'
 							}

@@ -1883,7 +1883,7 @@ input[type='submit'],
   background-color: var(--mg-button-background, #004bff);
   border-radius: var(--mg-button-rounded, var(--mg-button-height, 48px));
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   line-height: 28px;
   letter-spacing: 0;
@@ -3600,7 +3600,7 @@ body {
 
 @media screen and (min-width: 1400px) {
   .header .header-inner {
-    padding: 57px 0 20px; }
+    padding: 47px 0 20px; }
   .primary-menu .nav-item {
     margin: 0 44px 0 0; }
     .primary-menu .nav-item:last-child {
@@ -4652,7 +4652,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   color: #fff; }
 
@@ -4698,6 +4698,9 @@ body {
     min-width: 80px; }
   .project-info-line .project-layer {
     padding: 3px 10px 1px; }
+
+.btn-vote {
+  font-size: 18px; }
 
 @media (min-width: 768px) {
   .col-mobile-project-info {
