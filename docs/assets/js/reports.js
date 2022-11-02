@@ -12,7 +12,8 @@
 			}
 		}
 
-		baseUrl += '/assets/data/';
+		var sourceBaseUrl = baseUrl + '/assets/data/';
+		var tokenBaseUrl = baseUrl + '/assets/images/token/';
 
 		var $allCharts                 = $( '.block-chart' ),
 		    dateFormatter              = '{dd}/{MM}/{yyyy}',
@@ -72,7 +73,6 @@
 		    },
 		    defaultAxisPointerSettings = {
 			    label: {
-				    padding: [ 7, 10, 3, 10 ],
 				    color: '#fff',
 				    backgroundColor: '#004bff'
 			    }
@@ -231,7 +231,7 @@
 
 			if ( 'inline' !== chartSource ) {
 				var fileName = typeof chartSource !== 'undefined' ? chartSource : chartName;
-				var url = baseUrl + fileName + '.json';
+				var url = sourceBaseUrl + fileName + '.json';
 
 				fetch( url ).then( function( response ) {
 					return response.json();
@@ -282,6 +282,9 @@
 				switch ( chartName ) {
 					case 'treasury-output':
 						chartOptions = getChartOptionsTreasuryOutput( chartName );
+						break;
+					case 'nakamoto-coefficient':
+						chartOptions = getChartOptionsNakamotoCoefficient( chartName );
 						break;
 					case 'polkadot-account-overview':
 						chartOptions = getChartOptionsDotAccOverview( chartName );
@@ -538,14 +541,16 @@
 				    dot: [],
 				    eth: [],
 				    sol: [],
-				    btc: []
+				    btc: [],
+				    ada: []
 			    },
 			    colors     = [
 				    '#4CFCFC',
 				    '#8B93AF',
 				    '#8E54F7',
 				    '#E6007A',
-				    '#EA973D'
+				    '#EA973D',
+				    '#004BFF',
 			    ];
 
 			for ( var i = 0; i < totalItems; i ++ ) {
@@ -554,6 +559,7 @@
 				data.sol.push( [ jsonData[ i ].date, jsonData[ i ].sol ] );
 				data.cosmos.push( [ jsonData[ i ].date, jsonData[ i ].near ] );
 				data.btc.push( [ jsonData[ i ].date, jsonData[ i ].matic ] );
+				data.ada.push( [ jsonData[ i ].date, jsonData[ i ].ada ] );
 			}
 
 			var baseOptions = {
@@ -661,21 +667,6 @@
 						itemStyle: {
 							color: colors[ 3 ]
 						},
-						/*areaStyle: {
-							color: new echarts.graphic.LinearGradient( 0, 0, 0, 1, [
-								{
-									offset: 0.5,
-									color: 'rgba(79,91,60,1)'
-								}, {
-									offset: 1,
-									color: 'rgba(79,91,60,0)'
-								}
-							] ),
-							opacity: 1
-						},
-						lineStyle: {
-							width: 0
-						},*/
 						type: 'line',
 						smooth: true,
 						showSymbol: false,
@@ -688,6 +679,19 @@
 						data: data.btc,
 						itemStyle: {
 							color: colors[ 4 ]
+						},
+						type: 'line',
+						smooth: true,
+						showSymbol: false,
+						emphasis: {
+							focus: 'series'
+						}
+					},
+					{
+						name: 'Cardano',
+						data: data.ada,
+						itemStyle: {
+							color: colors[ 5 ]
 						},
 						type: 'line',
 						smooth: true,
@@ -725,6 +729,234 @@
 						}
 					} )
 				}
+			}
+
+			return newOptions;
+		}
+
+		function getChartOptionsNakamotoCoefficient() {
+			var colors = [
+				'#EA3572'
+			];
+
+			var baseOptions = {
+				color: colors,
+				textStyle: {
+					fontFamily: fontFamily,
+					fontWeight: 500
+				},
+				/*tooltip: {
+					show: false
+				},*/
+				legend: {
+					show: false
+				},
+				grid: {
+					left: '3%',
+					right: '3%',
+					top: '3%',
+					containLabel: true
+				},
+				xAxis: {
+					type: 'category',
+					data: [ 'Solana', 'Avalanche', 'Polkadot', 'Cosmos', 'NEAR', 'Polygon', 'Fantom', 'BSC' ],
+					axisTick: {
+						show: false
+					},
+					//boundaryGap: [ '40%', '40%' ],
+					//
+					axisLine: {
+						show: true,
+						lineStyle: {
+							type: [ 4, 4 ],
+							color: '#262626'
+						}
+					},
+					splitLine: {
+						lineStyle: {
+							type: [ 4, 4 ],
+							color: [ '#262626' ]
+						}
+					},
+					axisLabel: {
+						hideOverlap: false,
+						rotate: 45,
+						showMaxLabel: true,
+						overflow: 'breakAll',
+						formatter: function( value ) {
+							console.log( '{' + value + '| }{value|' + value + '}' );
+							return '{' + value + '|}{spacing|}{value|' + value + '}';
+							//return '{' + value + '|}{value|' + value + '}';
+							//return '{' + value + '|}';
+						},
+						align: 'right',
+						rich: {
+							value: {
+								lineHeight: 30,
+								align: 'center'
+							},
+							spacing: {
+								width: 7,
+							},
+							Solana: {
+								height: 20,
+								//align: 'center',
+								backgroundColor: {
+									image: getTokenIcon( 'Solana' )
+								}
+							},
+							Avalanche: {
+								height: 20,
+								align: 'center',
+								backgroundColor: {
+									image: getTokenIcon( 'Avax' )
+								}
+							},
+							Polkadot: {
+								height: 20,
+								//align: 'center',
+								backgroundColor: {
+									image: getTokenIcon( 'Polkadot' )
+								}
+							},
+							Cosmos: {
+								height: 20,
+								//align: 'center',
+								backgroundColor: {
+									image: getTokenIcon( 'Cosmos' )
+								}
+							},
+							NEAR: {
+								height: 20,
+								//align: 'center',
+								backgroundColor: {
+									image: getTokenIcon( 'Near' )
+								}
+							},
+							Polygon: {
+								height: 20,
+								//align: 'center',
+								backgroundColor: {
+									image: getTokenIcon( 'Polygon' )
+								}
+							},
+							Fantom: {
+								height: 20,
+								//align: 'center',
+								backgroundColor: {
+									image: getTokenIcon( 'Fantom' )
+								}
+							},
+							BSC: {
+								height: 20,
+								//align: 'center',
+								backgroundColor: {
+									image: getTokenIcon( 'BSC' )
+								}
+							},
+						},
+						/*formatter: function( value ) {
+							return '{icon|' + getTokenIcon( value ) + '}' + value;
+						},
+						rich: {
+							icon: {
+								fontSize: 25,
+								padding: 5
+							}
+						},*/
+						fontFamily: fontFamily,
+						fontSize: 13,
+						fontWeight: 500,
+						color: '#FFFFFF'
+					}
+				},
+				yAxis: {
+					type: 'value',
+					max: 100,
+					splitNumber: 4,
+					maxInterval: 25,
+					axisLine: {
+						show: false
+					},
+					splitLine: {
+						lineStyle: {
+							type: [ 4, 4 ],
+							color: [ '#262626' ]
+						}
+					},
+					axisLabel: {
+						fontFamily: fontFamily,
+						fontSize: 12,
+						fontWeight: 500,
+						color: '#ccc'
+					}
+				},
+				series: [
+					{
+						type: 'bar',
+						data: [ 27, 28, 82, 7, 7, 3, 3, 7 ],
+						name: locate.dotVCsInvesting,
+						label: {
+							fontFamily: fontFamily,
+							fontSize: 13,
+							fontWeight: 500,
+							color: '#EA3572',
+							show: true,
+							position: 'top'
+						},
+						//barMaxWidth: 56,
+						itemStyle: {
+							color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
+								{
+									offset: 0,
+									color: '#B82DA7'
+								},
+								{
+									offset: 1,
+									color: '#EB3571'
+								}
+							] ),
+							borderRadius: [ 8, 8, 0, 0 ]
+						},
+					}
+				]
+			};
+			var responsiveOptions = getChartResponsiveOptionsNakamotoCoefficient();
+			//var responsiveOptions = {};
+			return $.extend( true, baseOptions, responsiveOptions );
+		}
+
+		function getChartResponsiveOptionsNakamotoCoefficient() {
+			var newOptions = {};
+
+			if ( window.innerWidth > 767 ) {
+				newOptions = {
+					series: [
+						{
+							label: {
+								fontSize: 17
+							},
+							barMaxWidth: 56,
+							itemStyle: {
+								borderRadius: [ 8, 8, 0, 0 ]
+							}
+						}
+					]
+				};
+			} else {
+				newOptions = {
+					series: [
+						{
+							label: {
+								fontSize: 15
+							},
+							barMaxWidth: 40,
+							itemStyle: {
+								borderRadius: [ 5, 5, 0, 0 ]
+							}
+						}
+					]
+				};
 			}
 
 			return newOptions;
@@ -2632,6 +2864,44 @@
 			}
 
 			return data;
+		}
+
+		function getTokenIcon( name ) {
+			var icon = '';
+
+			switch ( name ) {
+				case 'Polkadot':
+					icon = 'dot.png';
+					break;
+				case 'Solana':
+					icon = 'sol.png';
+					break;
+				case 'Avalanche':
+				case 'Avax':
+					icon = 'avax.png';
+					break;
+				case 'Cosmos':
+					icon = 'atom.png';
+					break;
+				case 'Near':
+					icon = 'near.png';
+					break;
+				case 'Polygon':
+					icon = 'polygon.png';
+					break;
+				case 'Fantom':
+					icon = 'fantom.png';
+					break;
+				case 'BSC':
+					icon = 'bsc.png';
+					break;
+			}
+
+			var iconPath = '' !== icon ? tokenBaseUrl + icon : '';
+
+			console.log( iconPath );
+
+			return iconPath;
 		}
 
 	}( jQuery )

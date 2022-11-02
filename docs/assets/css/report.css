@@ -329,7 +329,8 @@
     width: 60%; }
   .table--top-10-networks-dev-act td:last-child, .table--top-10-networks-dev-act th:last-child {
     text-align: right;
-    width: 150px; }
+    width: 150px;
+    font-weight: 700; }
 
 .table--electricity-consumption {
   --block-round: 20px;
