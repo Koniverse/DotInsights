@@ -16,6 +16,8 @@ var lang = {
 	useSometimes: 'Use sometimes',
 	useFrequently: 'Use frequently',
 	projectCount: 'Project Count',
+	inUSD: 'In (USD)',
+	outUSD: 'Out (USD)',
 	others: 'Others'
 };
 

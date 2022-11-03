@@ -292,6 +292,9 @@
 					case 'vcs-dot-ksm':
 						chartOptions = getChartOptionsVCsDotKsm( chartName );
 						break;
+					case 'xcm-transfers':
+						chartOptions = getChartOptionsXCMTransfers( chartName );
+						break;
 				}
 				chartInstance.hideLoading();
 				chartInstance.setOption( chartOptions );
@@ -988,10 +991,6 @@
 				} );
 			}
 
-			console.log( data );
-
-			//var test = getChartDataPolkadotAccOverview(jsonData);
-
 			var baseOptions = {
 				    color: colors,
 				    textStyle: {
@@ -1301,6 +1300,211 @@
 								fontSize: 16
 							},
 							barMaxWidth: 50,
+							itemStyle: {
+								borderRadius: [ 8, 8, 0, 0 ]
+							}
+						}
+					]
+				};
+			} else {
+				newOptions = {
+					series: [
+						{
+							label: {
+								fontSize: 15
+							},
+							barMaxWidth: 40,
+							itemStyle: {
+								borderRadius: [ 5, 5, 0, 0 ]
+							}
+						}
+					]
+				};
+			}
+
+			return newOptions;
+		}
+
+		function getChartOptionsXCMTransfers() {
+			var colors = [
+				    '#004BFF',
+				    '#66E1B6',
+			    ],
+			    data   = getChartDataXCMTransfers();
+
+			var baseOptions = {
+				color: colors,
+				textStyle: {
+					fontFamily: fontFamily,
+					fontWeight: 500
+				},
+				tooltip: defaultTooltipSettings,
+				legend: defaultLegendSettings,
+				grid: {
+					left: '3%',
+					right: '3%',
+					top: '3%',
+					containLabel: true
+				},
+				xAxis: {
+					type: 'category',
+					data: data[ 0 ],
+					axisTick: {
+						show: false
+					},
+					axisLine: {
+						show: true,
+						lineStyle: {
+							type: [ 4, 4 ],
+							color: '#262626'
+						}
+					},
+					splitLine: {
+						lineStyle: {
+							type: [ 4, 4 ],
+							color: [ '#262626' ]
+						}
+					},
+					axisLabel: {
+						hideOverlap: false,
+						rotate: 45,
+						showMaxLabel: true,
+						overflow: 'breakAll',
+						formatter: function( value ) {
+							var iconKey = value.replace( / /g, '' );
+							return '{' + iconKey + '|}{spacing|}{value|' + value + '}';
+						},
+						align: 'right',
+						rich: {
+							value: {
+								lineHeight: 30,
+								align: 'center'
+							},
+							spacing: {
+								width: 7,
+							},
+							Moonbeam: {
+								height: 20,
+								backgroundColor: {
+									image: getTokenIcon( 'Moonbeam' )
+								}
+							},
+							Acala: {
+								height: 20,
+								backgroundColor: {
+									image: getTokenIcon( 'Acala' )
+								}
+							},
+							Moonriver: {
+								height: 20,
+								backgroundColor: {
+									image: getTokenIcon( 'Moonriver' )
+								}
+							},
+							Parallel: {
+								height: 20,
+								backgroundColor: {
+									image: getTokenIcon( 'Parallel' )
+								}
+							},
+							Karura: {
+								height: 20,
+								backgroundColor: {
+									image: getTokenIcon( 'Karura' )
+								}
+							},
+							ParallelHeiko: {
+								height: 20,
+								backgroundColor: {
+									image: getTokenIcon( 'ParallelHeiko' )
+								}
+							},
+							Interlay: {
+								height: 20,
+								backgroundColor: {
+									image: getTokenIcon( 'Interlay' )
+								}
+							},
+							BifrostKusama: {
+								height: 20,
+								backgroundColor: {
+									image: getTokenIcon( 'Bifrost' )
+								}
+							},
+							Astar: {
+								height: 20,
+								backgroundColor: {
+									image: getTokenIcon( 'Astar' )
+								}
+							},
+							Kintsugi: {
+								height: 20,
+								backgroundColor: {
+									image: getTokenIcon( 'Kintsugi' )
+								}
+							},
+						},
+						fontFamily: fontFamily,
+						fontSize: 13,
+						fontWeight: 500,
+						color: '#FFFFFF'
+					}
+				},
+				yAxis: {
+					type: 'value',
+					splitNumber: 3,
+					axisLine: {
+						show: false
+					},
+					splitLine: {
+						lineStyle: {
+							type: [ 4, 4 ],
+							color: [ '#262626' ]
+						}
+					},
+					axisLabel: {
+						fontFamily: fontFamily,
+						fontSize: 12,
+						fontWeight: 500,
+						color: '#ccc'
+					}
+				},
+				series: [
+					{
+						type: 'bar',
+						data: data[ 1 ],
+						name: locate.inUSD,
+						barMaxWidth: 24,
+						itemStyle: {
+							borderRadius: [ 5, 5, 0, 0 ]
+						},
+					}, {
+						type: 'bar',
+						data: data[ 2 ],
+						name: locate.outUSD,
+						barMaxWidth: 24,
+						itemStyle: {
+							borderRadius: [ 5, 5, 0, 0 ]
+						},
+					}
+				]
+			};
+			//var responsiveOptions = getChartResponsiveOptionsNakamotoCoefficient();
+			var responsiveOptions = {};
+			return $.extend( true, baseOptions, responsiveOptions );
+		}
+
+		function getChartResponsiveOptionsXCMTransfers() {
+			var newOptions = {};
+
+			if ( window.innerWidth > 767 ) {
+				newOptions = {
+					series: [
+						{
+							label: {
+								fontSize: 17
+							},
+							barMaxWidth: 56,
 							itemStyle: {
 								borderRadius: [ 8, 8, 0, 0 ]
 							}
@@ -2566,6 +2770,25 @@
 			return newOptions;
 		}
 
+		function getChartDataXCMTransfers() {
+			return [
+				[
+					'Moonbeam',
+					'Acala',
+					'Moonriver',
+					'Parallel',
+					'Karura',
+					'Parallel Heiko',
+					'Interlay',
+					'Bifrost Kusama',
+					'Astar',
+					'Kintsugi'
+				],
+				[ 56878947, 21890482, 18066626, 17998162, 15076004, 12107783, 6417391, 5148441, 3876451, 1699308 ],
+				[ 39684136, 27054801, 11053411, 19805052, 18723873, 8756901, 1443603, 2449835, 8005710, 856864 ],
+			]
+		}
+
 		function getTokenIcon( name ) {
 			var icon = '';
 
@@ -2594,6 +2817,36 @@
 					break;
 				case 'BSC':
 					icon = 'bsc.png';
+					break;
+				case 'Moonbeam':
+					icon = 'moonbeam.png';
+					break;
+				case 'Acala':
+					icon = 'acala.png';
+					break;
+				case 'Moonriver':
+					icon = 'moonriver.png';
+					break;
+				case 'Parallel':
+					icon = 'parallel.png';
+					break;
+				case 'Karura':
+					icon = 'karura.png';
+					break;
+				case 'ParallelHeiko':
+					icon = 'parallel-keiko.png';
+					break;
+				case 'Interlay':
+					icon = 'interlay.png';
+					break;
+				case 'Bifrost':
+					icon = 'bifrost.png';
+					break;
+				case 'Astar':
+					icon = 'astar.png';
+					break;
+				case 'Kintsugi':
+					icon = 'kintsugi.png';
 					break;
 			}
 
