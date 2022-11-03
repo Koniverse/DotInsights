@@ -1539,14 +1539,14 @@
 					    name: 'output',
 					    label: locate.output
 				    }, {
-					    name: 'treasury_balance',
+					    name: 'treasury',
 					    label: locate.treasury
 				    }
 			    ],
 			    colors     = [
 				    '#66E1B6',
-				    '#EA1B53',
-				    '#F7A21B'
+				    '#9D3BEA',
+				    '#004BFF'
 			    ],
 			    totalItems = jsonData.length,
 			    data       = [];
@@ -1639,6 +1639,7 @@
 						    type: 'line',
 						    smooth: true,
 						    showSymbol: false,
+						    connectNulls: true,
 						    emphasis: {
 							    focus: 'series'
 						    }
@@ -1646,17 +1647,17 @@
 					    {
 						    name: locate.output,
 						    data: data.output,
-						    zlevel: 3,
+						    z: 9,
 						    areaStyle: {
 							    opacity: 1,
 							    color: new echarts.graphic.LinearGradient( 0, 0, 0, 1, [
 								    {
 									    offset: 0,
-									    color: 'rgba(107,20,63,1)'
+									    color: 'rgba(80,38,114,1)'
 								    },
 								    {
 									    offset: 1,
-									    color: 'rgba(42,16,53,0)'
+									    color: 'rgba(80,38,114,0.5)'
 								    }
 							    ] )
 
@@ -1667,23 +1668,28 @@
 						    type: 'line',
 						    smooth: true,
 						    showSymbol: false,
+						    connectNulls: true,
 						    emphasis: {
 							    focus: 'series'
 						    }
 					    },
 					    {
 						    name: locate.treasury,
-						    data: data.treasury_balance,
+						    data: data.treasury,
 						    areaStyle: {
 							    opacity: 1,
 							    color: new echarts.graphic.LinearGradient( 0, 0, 0, 1, [
 								    {
 									    offset: 0,
-									    color: 'rgba(92,91,61,1)'
+									    color: 'rgba(14,65,125,1)'
 								    },
 								    {
-									    offset: 0.7,
-									    color: 'rgba(7,14,48,1)'
+									    offset: 0.6,
+									    color: 'rgba(14,65,125,0.5)'
+								    },
+								    {
+									    offset: 1,
+									    color: 'rgba(21,21,21,1)'
 								    }
 							    ] )
 						    },
@@ -1693,6 +1699,7 @@
 						    type: 'line',
 						    smooth: true,
 						    showSymbol: false,
+						    connectNulls: true,
 						    emphasis: {
 							    focus: 'series'
 						    }
@@ -2834,7 +2841,7 @@
 					icon = 'karura.png';
 					break;
 				case 'ParallelHeiko':
-					icon = 'parallel-keiko.png';
+					icon = 'parallel-heiko.png';
 					break;
 				case 'Interlay':
 					icon = 'interlay.png';
