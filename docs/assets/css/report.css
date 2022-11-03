@@ -507,25 +507,6 @@
     .section-treasury-output .shape-dot img {
       max-width: 10vw; }
 
-.row-chart-treasury-output {
-  position: relative;
-  padding-bottom: 208px; }
-  .row-chart-treasury-output .shape-smooth-grid2 {
-    bottom: 0;
-    left: 30%;
-    transform: translate(0, 30px); }
-  .row-chart-treasury-output .shape-diamond {
-    top: 5%;
-    right: 0; }
-    .row-chart-treasury-output .shape-diamond img {
-      max-width: 10vw; }
-  .row-chart-treasury-output .brand-01 {
-    top: 20%;
-    right: 38%; }
-  .row-chart-treasury-output .brand-03 {
-    left: 30%;
-    bottom: 36%; }
-
 .section-report-dex {
   padding: 134px 0 135px;
   background: url(../images/reports/grid-border.png) no-repeat bottom center;

@@ -15,12 +15,13 @@
 		var sourceBaseUrl = baseUrl + '/assets/data/';
 		var tokenBaseUrl = baseUrl + '/assets/images/token/';
 
-		var $allCharts                 = $( '.block-chart' ),
-		    dateFormatter              = '{dd}/{MM}/{yyyy}',
-		    dateShortFormatter         = '{MM}/{yyyy}',
-		    fontFamily                 = 'Plus Jakarta Sans',
-		    echarts                    = window.echarts,
-		    defaultTooltipStyle        = {
+		var NumberUtil             = DotInsights.NumberUtil,
+		    $allCharts             = $( '.block-chart' ),
+		    dateFormatter          = '{dd}/{MM}/{yyyy}',
+		    dateShortFormatter     = '{MM}/{yyyy}',
+		    fontFamily             = 'Plus Jakarta Sans',
+		    echarts                = window.echarts,
+		    defaultTooltipStyle    = {
 			    padding: [ 15, 20 ],
 			    backgroundColor: '#000',
 			    borderWidth: 0,
@@ -32,7 +33,7 @@
 				    fontWeight: '500'
 			    }
 		    },
-		    defaultTooltipSettings     = $.extend( true, {}, defaultTooltipStyle, {
+		    defaultTooltipSettings = $.extend( true, {}, defaultTooltipStyle, {
 			    trigger: 'axis',
 			    axisPointer: {
 				    type: 'cross',
@@ -45,7 +46,7 @@
 				    }
 			    }
 		    } ),
-		    defaultLegendSettings      = {
+		    defaultLegendSettings  = {
 			    show: true,
 			    icon: 'roundRect',
 			    textStyle: {
@@ -130,9 +131,8 @@
 						case 'dot-treasury-activity':
 							chartOptions = getChartResponsiveOptionsDotTreasuryActivity();
 							break;
-						case 'polkadot-parachain':
 						case 'kusama-parachain':
-						case 'polkadot-dex':
+						case 'dex-with-average-tvl':
 						case 'polkadot-lending-protocol':
 						case 'ausd-issuance':
 						case 'rmrk-cumulative-sales':
@@ -248,14 +248,14 @@
 						case 'dot-ksm-account-overview':
 							chartOptions = getChartOptionsDotKsmAccOverview( chartName, jsonData );
 							break;
-						case 'polkadot-parachain':
-							chartOptions = getChartOptionsPolkadotParachain( chartName, jsonData );
-							break;
 						case 'kusama-parachain':
 							chartOptions = getChartOptionsKusamaParachain( chartName, jsonData );
 							break;
-						case 'polkadot-dex':
-							chartOptions = getChartOptionsDotsamaDex( chartName, jsonData );
+						case 'dex-with-average-tvl-higher-than-10':
+							chartOptions = getChartOptionsDexWithAverageTVLHigherThan10M( chartName, jsonData );
+							break;
+						case 'dex-with-average-tvl-higher-than-5':
+							chartOptions = getChartOptionsDexWithAverageTVLHigherThan5M( chartName, jsonData );
 							break;
 						case 'polkadot-lending-protocol':
 							chartOptions = getChartOptionsDotsamaLendingProtocol( chartName, jsonData );
@@ -283,8 +283,11 @@
 				var chartOptions = {};
 
 				switch ( chartName ) {
-					case 'treasury-output':
-						chartOptions = getChartOptionsTreasuryOutput( chartName );
+					case 'web3-foundation-grants':
+						chartOptions = getChartOptionsWeb3FoundationGrants( chartName );
+						break;
+					case 'tvl-by-chain':
+						chartOptions = getChartOptionsTvlByChain( chartName );
 						break;
 					case 'nakamoto-coefficient':
 						chartOptions = getChartOptionsNakamotoCoefficient( chartName );
@@ -1615,7 +1618,7 @@
 					    axisPointer: $.extend( true, {}, defaultAxisPointerSettings, {
 						    label: {
 							    formatter: function( params ) {
-								    return DotInsights.NumberUtil.formatWithCommas( parseInt( params.value ) );
+								    return NumberUtil.formatWithCommas( parseInt( params.value ) );
 							    }
 						    }
 					    } ),
@@ -1739,30 +1742,6 @@
 			return newOptions;
 		}
 
-		function getChartOptionsPolkadotParachain( chartName, jsonData ) {
-			var datasets       = [
-				    {
-					    name: 'parallel',
-					    label: 'Parallel'
-				    }, {
-					    name: 'acala',
-					    label: 'Acala'
-				    }
-			    ],
-			    colors         = [
-				    '#2F74F7',
-				    '#EA1B53'
-			    ],
-			    areaBackground = [
-				    [ 'rgba(26,65,149,1)', 'rgba(26,65,149,0)' ],
-				    [ 'rgba(102,19,63,1)', 'rgba(102,19,63,0.3)' ]
-			    ];
-
-			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors, areaBackground );
-			var responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
-			return $.extend( true, baseOptions, responsiveOptions );
-		}
-
 		function getChartOptionsKusamaParachain( chartName, jsonData ) {
 			var datasets = [
 				    {
@@ -1787,36 +1766,75 @@
 			return $.extend( true, baseOptions, responsiveOptions );
 		}
 
-		function getChartOptionsDotsamaDex( chartName, jsonData ) {
+		function getChartOptionsDexWithAverageTVLHigherThan10M( chartName, jsonData ) {
 			var datasets = [
 				    {
-					    name: 'stellaswap',
-					    label: 'StellaSwap'
+					    name: 'arthswap',
+					    label: 'ArthSwap'
 				    }, {
-					    name: 'beamswap',
-					    label: 'Beamswap'
+					    name: 'curve_glmr',
+					    label: 'Curve Finance on Moonbeam'
 				    }, {
 					    name: 'solarbeam',
 					    label: 'Solarbeam'
 				    }, {
-					    name: 'solarflare',
-					    label: 'Solarflare'
+					    name: 'stellaswap',
+					    label: 'StellaSwap'
 				    }, {
 					    name: 'zenlink',
 					    label: 'Zenlink'
-				    }
-				    , {
-					    name: 'arthswap',
-					    label: 'ArthSwap'
-				    }
+				    },
 			    ],
 			    colors   = [
 				    '#66E1B6',
 				    '#C30D00',
 				    '#F7A21B',
 				    '#9D3BEA',
+				    '#89C900'
+			    ];
+
+			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors );
+			var responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
+			return $.extend( true, baseOptions, responsiveOptions );
+		}
+
+		function getChartOptionsDexWithAverageTVLHigherThan5M( chartName, jsonData ) {
+			var datasets = [
+				    {
+					    name: 'avault',
+					    label: 'Avault'
+				    }, {
+					    name: 'beamswap',
+					    label: 'Beamswap'
+				    }, {
+					    name: 'beefy_glmr',
+					    label: 'Beefy on Moonbeam'
+				    }, {
+					    name: 'beefy_movr',
+					    label: 'Beefy on Moonriver'
+				    }, {
+					    name: 'bifrost',
+					    label: 'Bifrost'
+				    }, {
+					    name: 'solarflare',
+					    label: 'Solarflare'
+				    }, {
+					    name: 'parallel',
+					    label: 'Parallel'
+				    }, {
+					    name: 'karura',
+					    label: 'Karura'
+				    },
+			    ],
+			    colors   = [
+				    '#D251FD',
+				    '#774EED',
+				    '#66E1B6',
+				    '#FFA800',
+				    '#0049F1',
 				    '#89C900',
-				    '#004BFF'
+				    '#22BFFE',
+				    '#C30D00'
 			    ];
 
 			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors );
@@ -2272,10 +2290,10 @@
 
 			for ( var i = 0; i < categories.length; i ++ ) {
 				var total = categories[ i ].total;
-				categories[ i ].frequentlyPercent = DotInsights.NumberUtil.precisionRoundMod( categories[ i ].frequently / total * 100, 2 );
-				categories[ i ].sometimesPercent = DotInsights.NumberUtil.precisionRoundMod( categories[ i ].sometimes / total * 100, 2 );
-				categories[ i ].occasionallyPercent = DotInsights.NumberUtil.precisionRoundMod( categories[ i ].occasionally / total * 100, 2 );
-				categories[ i ].notusedPercent = DotInsights.NumberUtil.precisionRoundMod( 100 - categories[ i ].frequentlyPercent - categories[ i ].sometimesPercent - categories[ i ].occasionallyPercent, 2 );
+				categories[ i ].frequentlyPercent = NumberUtil.precisionRoundMod( categories[ i ].frequently / total * 100, 2 );
+				categories[ i ].sometimesPercent = NumberUtil.precisionRoundMod( categories[ i ].sometimes / total * 100, 2 );
+				categories[ i ].occasionallyPercent = NumberUtil.precisionRoundMod( categories[ i ].occasionally / total * 100, 2 );
+				categories[ i ].notusedPercent = NumberUtil.precisionRoundMod( 100 - categories[ i ].frequentlyPercent - categories[ i ].sometimesPercent - categories[ i ].occasionallyPercent, 2 );
 			}
 
 			for ( var dataIndex = 0; dataIndex < datasets.length; dataIndex ++ ) {
@@ -2400,44 +2418,385 @@
 			};
 		}
 
-		function getChartOptionsTreasuryOutput( chartName ) {
+		function getChartOptionsWeb3FoundationGrants( chartName ) {
 			var datasets = [
-				{
-					value: 470447,
-					name: locate.proposal
-				}, {
-					value: 12212,
-					name: locate.tips
-				}, {
-					value: 1103232,
-					name: locate.bounties
-				}, {
-					value: 5070182,
-					name: locate.burnt
-				}
-			], colors    = [
-				'#66E1B6',
-				'#F7A21B',
-				'#DF5C53',
-				'#004BFF'
-			];
+				    {
+					    name: locate.runtimeModulesChains,
+					    value: 41.5,
+					    labelLine: {
+						    lineStyle: {
+							    color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
+								    {
+									    offset: 0,
+									    color: '#fff'
 
-			// find the sum of all data values
-			/*var sum = datasets.reduce( function( prev, current ) {
-				return prev + current.value;
-			}, 0 );
+								    },
+								    {
+									    offset: 1,
+									    color: 'rgba(255,255,255,0)'
+								    }
+							    ] )
+						    }
+					    }
+				}, {
+					    name: locate.developmentTools,
+					    value: 11.1,
+					    labelLine: {
+						    lineStyle: {
+							    color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
+								    {
+									    offset: 0,
+									    color: '#fff'
 
-			sum = moneyFormat( sum );*/
+								    },
+								    {
+									    offset: 1,
+									    color: 'rgba(255,255,255,0)'
+								    }
+							    ] )
+						    }
+					    }
+				}, {
+					    name: locate.wallets,
+					    value: 8.5
+				}, {
+					    name: locate.uiDevelopment,
+					    value: 13.2
+				    }, {
+					    name: locate.deploymentTooling,
+					    value: 5.6
+				    }, {
+					    name: locate.runtimeEnvironment,
+					    value: 2.6
+				    }, {
+					    name: locate.languageDevelopment,
+					    value: 2.1
+				    }, {
+					    name: locate.apis,
+					    value: 4.5
+				    }, {
+					    name: locate.bridges,
+					    value: 2.4
+				    }, {
+					    name: locate.cryptography,
+					    value: 3.0
+				    }, {
+					    name: locate.smartContracts,
+					    value: 4.0
+				    }
+			    ],
+			    colors   = [
+				    '#004BFF',
+				    '#66E1B6',
+				    '#9293FF',
+				    '#FD5BDB',
+				    '#F01923',
+				    '#FF7D0A',
+				    '#FFEF5B',
+				    '#F0A08C',
+				    '#C669FF',
+				    '#A9AC24',
+				    '#47D9FA',
+			    ];
 
 			return {
 				color: colors,
 				tooltip: $.extend( true, {}, defaultTooltipStyle, {
 					trigger: 'item',
 					valueFormatter: function( value ) {
-						return DotInsights.NumberUtil.formatWithCommas( value ) + ' DOT';
+						return value + '%';
 					}
 				} ),
-				legend: defaultLegendSettings,
+				//legend: defaultLegendSettings,
+				grid: {
+					left: '3%',
+					right: '3%',
+					top: '0',
+					containLabel: true
+				},
+				series: [
+					{ // Center logo.
+						name: 'Label',
+						type: 'pie',
+						//top: 'top',
+						center: [ '50%', '45%' ],
+						radius: [ '68%', '86%' ],
+						label: {
+							show: true,
+							position: 'center',
+							formatter: '',
+							/*rich: {
+								branding: {
+									width: 252,
+									height: 106,
+									image: baseUrl + '/assets/images/report/web3-foundation-grants.png'
+								}
+							}*/
+							backgroundColor: {
+								image: baseUrl + '/assets/images/report/web3-foundation-grants.png'
+								// It can be URL of a image,
+								// or dataURI,
+								// or HTMLImageElement,
+								// or HTMLCanvasElement.
+							},
+							width: 252,
+							height: 106
+						},
+						itemStyle: {
+							color: '#151515'
+						},
+						silent: true,
+						labelLine: {
+							show: false
+						},
+						emphasis: {
+							scaleSize: 5
+						},
+						data: [
+							{
+								name: '',
+								value: 100
+							}
+						]
+					}, {
+						name: 'Category',
+						type: 'pie',
+						//top: 'top',
+						center: [ '50%', '45%' ],
+						radius: [ '68%', '86%' ],
+						label: {
+							alignTo: 'edge',
+							minMargin: 5,
+							edgeDistance: 10,
+							color: '#fff',
+							fontFamily: fontFamily,
+							fontWeight: 500,
+							fontSize: 17,
+							lineHeight: 30,
+							formatter: function( params ) {
+								console.log( params );
+								return `${params.name} ${params.value}%`;
+							}
+						},
+						labelLine: {
+							showAbove: false,
+							length: 30,
+							length2: 0,
+							lineStyle: {
+								color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
+									{
+										offset: 0,
+										color: 'rgba(255,255,255,0)'
+
+									},
+									{
+										offset: 1,
+										color: '#fff'
+									}
+								] ),
+								//color: '#fff'
+							},
+							maxSurfaceAngle: 80
+
+						},
+						/*labelLayout: function( params ) {
+							console.log( params );
+							const isLeft = params.labelRect.x < 570;
+							const points = params.labelLinePoints;
+							// Update the end point.
+							points[ 2 ][ 0 ] = isLeft
+								? params.labelRect.x
+								: params.labelRect.x + params.labelRect.width;
+							return {
+								labelLinePoints: points
+							};
+						},*/
+						itemStyle: {
+							borderColor: '#151515',
+							borderWidth: 5
+						},
+						emphasis: {
+							scaleSize: 5
+						},
+						data: datasets
+					}
+				]
+			};
+		}
+
+		function getChartOptionsTvlByChain( chartName ) {
+			var colors   = [
+				    '#E4A30D',
+				    '#66E1B6',
+				    '#D81356',
+				    '#22BFFE',
+				    '#1B6AE0',
+				    '#F42F44',
+				    '#B1B1B1',
+				    '#C669FF',
+				    '#EC7430',
+				    '#9871EB',
+				    '#89E469'
+			    ],
+			    datasets = [
+				    {
+					    value: 66609820.48,
+					    name: 'Moonriver',
+					    label: {
+						    color: colors[ 0 ]
+					    },
+					    labelLine: {
+						    lineStyle: {
+							    color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
+								    {
+									    offset: 0,
+									    color: '#fff'
+
+								    },
+								    {
+									    offset: 1,
+									    color: 'rgba(255,255,255,0)'
+								    }
+							    ] )
+						    }
+					    }
+				    }, {
+					    value: 59641462.91,
+					    name: 'Moonbeam',
+					    label: {
+						    color: colors[ 1 ]
+					    },
+					    labelLine: {
+						    lineStyle: {
+							    color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
+								    {
+									    offset: 0,
+									    color: '#fff'
+
+								    },
+								    {
+									    offset: 1,
+									    color: 'rgba(255,255,255,0)'
+								    }
+							    ] )
+						    }
+					    }
+				    }, {
+					    value: 47800887.19,
+					    name: 'Acala',
+					    label: {
+						    color: colors[ 2 ]
+					    },
+				    }, {
+					    value: 40774324.99,
+					    name: 'Parallel',
+					    label: {
+						    color: colors[ 3 ]
+					    },
+				    }, {
+					    value: 36916163.3,
+					    name: 'Astar',
+					    label: {
+						    color: colors[ 4 ]
+					    },
+				    }, {
+					    value: 14488857.47,
+					    name: 'Karura',
+					    label: {
+						    color: colors[ 5 ]
+					    },
+				    }, {
+					    value: 5290490.04,
+					    name: 'Heiko',
+					    label: {
+						    color: colors[ 6 ]
+					    },
+				    }, {
+					    value: 4172517.9,
+					    name: 'Interlay',
+					    label: {
+						    color: colors[ 7 ]
+					    },
+				    }, {
+					    value: 2825232.73,
+					    name: 'Bifrost',
+					    label: {
+						    color: colors[ 8 ]
+					    },
+					    labelLine: {
+						    lineStyle: {
+							    color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
+								    {
+									    offset: 0,
+									    color: '#fff'
+
+								    },
+								    {
+									    offset: 1,
+									    color: 'rgba(255,255,255,0)'
+								    }
+							    ] )
+						    }
+					    }
+				    }, {
+					    value: 1827688.62,
+					    name: 'Kintsugi',
+					    label: {
+						    color: colors[ 9 ]
+					    },
+					    labelLine: {
+						    lineStyle: {
+							    color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
+								    {
+									    offset: 0,
+									    color: '#fff'
+
+								    },
+								    {
+									    offset: 1,
+									    color: 'rgba(255,255,255,0)'
+								    }
+							    ] )
+						    }
+					    }
+				    }, {
+					    value: 2453873.6,
+					    name: 'Others',
+					    label: {
+						    color: colors[ 10 ]
+					    },
+					    labelLine: {
+						    lineStyle: {
+							    color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
+								    {
+									    offset: 0,
+									    color: '#fff'
+
+								    },
+								    {
+									    offset: 1,
+									    color: 'rgba(255,255,255,0)'
+								    }
+							    ] )
+						    }
+					    }
+				    }
+			    ];
+
+			return {
+				color: colors,
+				tooltip: $.extend( true, {}, defaultTooltipStyle, {
+					trigger: 'item',
+					valueFormatter: function( value ) {
+						return NumberUtil.formatWithCommas( value );
+					}
+				} ),
+				/*title: {
+					text: `Hello`,
+					left: 'center',
+					top: 'center',
+				},*/
+				//legend: defaultLegendSettings,
 				grid: {
 					left: '3%',
 					right: '3%',
@@ -2446,49 +2805,60 @@
 				},
 				series: [
 					{
-						name: 'Treasury Output',
+						startAngle: 80,
+						name: '',
 						type: 'pie',
 						//top: 'top',
 						center: [ '50%', '45%' ],
 						radius: [ '68%', '86%' ],
 						label: {
-							color: '#A8ADC3',
+							alignTo: 'edge',
+							minMargin: 5,
+							edgeDistance: 10,
+							color: '#fff',
 							fontFamily: fontFamily,
 							fontWeight: 500,
-							fontSize: 18,
-							position: 'center',
-							formatter: [
-								'{a|6.66M} {x|DOT}',
-								'{t| ' + locate.totalAmount + ' }'
-							].join( '\n' ),
-							rich: {
-								a: {
-									color: '#66E1B6',
-									fontFamily: fontFamily,
-									fontWeight: 700,
-									fontSize: '30'
-								},
-								x: {
-									color: '#ffffff',
-									fontFamily: fontFamily,
-									fontWeight: 700,
-									fontSize: '30'
-								},
-								t: {
-									color: '#A8ADC3',
-									fontFamily: fontFamily,
-									fontWeight: 500,
-									fontSize: 18,
-									padding: [ 18, 0, 0, 0 ]
-								}
+							fontSize: 17,
+							lineHeight: 30,
+							formatter: function( params ) {
+								console.log( params );
+								return `${params.name} ${params.percent}%`;
 							}
 						},
 						labelLine: {
-							show: false
+							showAbove: false,
+							length: 30,
+							length2: 0,
+							lineStyle: {
+								color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
+									{
+										offset: 0,
+										color: 'rgba(255,255,255,0)'
+
+									},
+									{
+										offset: 1,
+										color: '#fff'
+									}
+								] )
+							},
+							maxSurfaceAngle: 80
 						},
+						/*labelLayout: function( params ) {
+							console.log( params );
+							const isLeft = params.labelRect.x < 570;
+							const points = params.labelLinePoints;
+							// Update the end point.
+							points[ 2 ][ 0 ] = isLeft
+								? params.labelRect.x
+								: params.labelRect.x + params.labelRect.width;
+							return {
+								labelLinePoints: points
+							};
+						},*/
 						itemStyle: {
-							borderColor: '#070e30',
-							borderWidth: 4
+							borderColor: '#151515',
+							borderWidth: 2
 						},
 						emphasis: {
 							scaleSize: 5
@@ -2669,14 +3039,13 @@
 
 			var yAxis = {};
 			switch ( chartName ) {
-				case 'polkadot-parachain':
 				case 'kusama-parachain':
-				case 'polkadot-dex':
+				case 'dex-with-average-tvl':
 				case 'polkadot-lending-protocol':
 				case 'ausd-issuance':
 					var tooltip = {
 						valueFormatter: function( value ) {
-							return value ? '$' + DotInsights.NumberUtil.formatWithCommas( value ) : '-';
+							return value ? '$' + NumberUtil.formatWithCommas( value ) : '-';
 						}
 					};
 					newOptions.tooltip = tooltip;
