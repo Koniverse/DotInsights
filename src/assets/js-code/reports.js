@@ -134,7 +134,6 @@
 						case 'dex-with-average-tvl':
 						case 'tvl-lending-borrowing':
 						case 'stablecoin-total-issuance':
-						case 'rmrk-cumulative-sales':
 							chartOptions = getChartLinesBaseResponsiveOptions( chartName );
 							break;
 						case 'rmrk-daily-sales':
@@ -237,9 +236,6 @@
 							break;
 						case 'stablecoin-total-issuance':
 							chartOptions = getChartOptionsStablecoinTotalIssuance( chartName, jsonData );
-							break;
-						case 'rmrk-cumulative-sales':
-							chartOptions = getChartOptionsRmrkCumulativeSales( chartName, jsonData );
 							break;
 						case 'rmrk-daily-sales':
 							chartOptions = getChartOptionsRmrkDailySales( chartName, jsonData );
@@ -1905,58 +1901,6 @@
 			return $.extend( true, {}, baseOptions, responsiveOptions );
 		}
 
-		function getChartOptionsRmrkCumulativeSales( chartName, jsonData ) {
-			var datasets          = [
-				    {
-					    name: 'cumulative_sum_of_amount',
-					    label: 'Cumulative Sum of Amount'
-				    }
-			    ],
-			    colors            = [
-				    '#CA2B77'
-			    ],
-			    areaBackground    = [
-				    [ 'rgba(86,25,77,1)', 'rgba(86,25,77,0)' ]
-			    ],
-			    seriesOptions     = {
-				    lineStyle: {
-					    width: 4
-				    }
-			    },
-			    chartExtraOptions = {
-				    legend: {
-					    show: false
-				    },
-				    grid: {
-					    left: 54,
-					    bottom: '3%'
-				    },
-				    xAxis: {
-					    splitLine: {
-						    show: true
-					    }
-				    },
-				    yAxis: {
-					    name: 'Volume (KSM)',
-					    nameLocation: 'middle',
-					    nameGap: 83,
-					    nameTextStyle: {
-						    fontFamily: fontFamily,
-						    color: '#ccc',
-						    fontSize: 15,
-						    fontWeight: '500'
-					    },
-					    splitNumber: 4
-				    }
-			    };
-
-			var baseOptions       = getChartLinesBaseOptions( jsonData, datasets, colors, areaBackground, seriesOptions, chartExtraOptions ),
-			    responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
-			$.extend( true, {}, baseOptions, responsiveOptions );
-
-			return baseOptions;
-		}
-
 		function getChartOptionsRmrkDailySales( chartName, jsonData ) {
 			var datasets    = [
 				    {
@@ -3083,70 +3027,6 @@
 					}
 					newOptions.yAxis = yAxis;
 
-					break;
-
-				case 'rmrk-cumulative-sales':
-					if ( window.innerWidth > 767 ) {
-						yAxis = {
-							axisLabel: {
-								formatter: "{value}"
-							}
-						};
-					} else {
-						yAxis = {
-							axisLabel: {
-								formatter: function( value ) {
-									return value ? NumberUtil.formatMoney( value ) : '-';
-								}
-							}
-						};
-					}
-					newOptions.yAxis = yAxis;
-
-					break;
-			}
-
-			switch ( chartName ) {
-				case 'rmrk-cumulative-sales':
-					if ( window.innerWidth > 767 ) {
-						$.extend( true, newOptions, {
-							grid: {
-								left: 54
-							},
-							yAxis: {
-								nameTextStyle: {
-									fontSize: 15
-								},
-								nameGap: 83
-							},
-							series: [
-								{
-									lineStyle: {
-										width: 4
-									}
-								}
-							]
-						} );
-					} else {
-						$.extend( true, newOptions, {
-							grid: {
-								left: 40
-							},
-							yAxis: {
-								nameTextStyle: {
-									fontSize: 14
-								},
-								nameGap: 56
-							},
-							series: [
-								{
-									lineStyle: {
-										width: 2
-									}
-								}
-							]
-						} );
-					}
 					break;
 			}
 
