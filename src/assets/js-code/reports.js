@@ -239,9 +239,6 @@
 						case 'nft-marketplace-daily-volume':
 							chartOptions = getChartOptionsNftMarketplaceDailyVolume( chartName, jsonData );
 							break;
-						case 'web-assembly-usage':
-							chartOptions = getChartOptionsWebAssemblyUsage( chartName, jsonData );
-							break;
 						case 'dot-treasury-activity':
 							chartOptions = getChartOptionsDotTreasuryActivity( chartName, jsonData );
 							break;
@@ -2040,9 +2037,7 @@
 			    },
 			    responsiveOptions = getChartResponsiveOptionsNftMarketplaceDailyVolume( chartName );
 
-			var a = $.extend( true, {}, baseOptions, responsiveOptions );
-			console.log(a)
-			return a;
+			return $.extend( true, {}, baseOptions, responsiveOptions );
 		}
 
 		function getChartResponsiveOptionsNftMarketplaceDailyVolume() {
@@ -2089,232 +2084,6 @@
 			}
 
 			return newOptions;
-		}
-
-		function getChartOptionsWebAssemblyUsage( chartName, jsonData ) {
-			var datasets       = [
-				    {
-					    name: 'notused',
-					    label: locate.notUsed
-				    }, {
-					    name: 'occasionally',
-					    label: locate.usedOccasionally
-				    }, {
-					    name: 'sometimes',
-					    label: locate.useSometimes
-				    },
-				    {
-					    name: 'frequently',
-					    label: locate.useFrequently
-				    }
-			    ],
-			    datasetsLength = datasets.length,
-			    colors         = [
-				    '#004BFF',
-				    '#DF5C53',
-				    '#F7A21B',
-				    '#66E1B6'
-			    ],
-			    categories     = [
-				    {
-					    name: 'rust',
-					    label: 'Rust'
-				    }, {
-					    name: 'javascript',
-					    label: 'JavaScript'
-				    }, {
-					    name: 'c_plus',
-					    label: 'C++'
-				    }, {
-					    name: 'blazor',
-					    label: 'Blazor'
-				    }, {
-					    name: 'assemblyscript',
-					    label: 'AssemblyScript'
-				    }, {
-					    name: 'python',
-					    label: 'Python'
-				    }, {
-					    name: 'go',
-					    label: 'Go'
-				    }, {
-					    name: 'wat',
-					    label: 'WAT'
-				    }, {
-					    name: 'zig',
-					    label: 'Zig'
-				    }, {
-					    name: 'java',
-					    label: 'Java'
-				    }, {
-					    name: 'swift',
-					    label: 'Swift'
-				    }, {
-					    name: 'ruby',
-					    label: 'Ruby'
-				    }, {
-					    name: 'grain',
-					    label: 'Grain'
-				    }
-			    ],
-			    totalItems     = jsonData.length,
-			    data           = [],
-			    chartSeries    = [];
-
-			datasets.forEach( function( dataset ) {
-				data[ dataset.name ] = [];
-			} );
-
-			for ( var catIndex = 0; catIndex < categories.length; catIndex ++ ) {
-				categories[ catIndex ].total = 0;
-				for ( var i = 0; i < totalItems; i ++ ) {
-					var value = parseInt( jsonData[ i ][ categories[ catIndex ].name ] );
-					categories[ catIndex ].total += value;
-					switch ( jsonData[ i ].category ) {
-						case 'use frequently':
-							categories[ catIndex ].frequently = value;
-							break;
-						case 'use sometimes':
-							categories[ catIndex ].sometimes = value;
-							break;
-						case 'have used occasionally':
-							categories[ catIndex ].occasionally = value;
-							break;
-						case 'not used':
-							categories[ catIndex ].notused = value;
-							break;
-					}
-				}
-			}
-
-			for ( var i = 0; i < categories.length; i ++ ) {
-				var total = categories[ i ].total;
-				categories[ i ].frequentlyPercent = NumberUtil.precisionRoundMod( categories[ i ].frequently / total * 100, 2 );
-				categories[ i ].sometimesPercent = NumberUtil.precisionRoundMod( categories[ i ].sometimes / total * 100, 2 );
-				categories[ i ].occasionallyPercent = NumberUtil.precisionRoundMod( categories[ i ].occasionally / total * 100, 2 );
-				categories[ i ].notusedPercent = NumberUtil.precisionRoundMod( 100 - categories[ i ].frequentlyPercent - categories[ i ].sometimesPercent - categories[ i ].occasionallyPercent, 2 );
-			}
-
-			for ( var dataIndex = 0; dataIndex < datasets.length; dataIndex ++ ) {
-				datasets[ dataIndex ].data = [];
-				var name = datasets[ dataIndex ].name;
-				for ( var catIndex = 0; catIndex < categories.length; catIndex ++ ) {
-					datasets[ dataIndex ].data.push( categories[ catIndex ][ name + 'Percent' ] );
-				}
-			}
-
-			datasets.forEach( function( dataset, index ) {
-				var datasetOptions = {
-					name: dataset.label,
-					data: dataset.data,
-					realData: dataset.realData,
-					foo: 'bar',
-					itemStyle: {
-						color: colors[ index ]
-					},
-					barMaxWidth: 24,
-					type: 'bar',
-					stack: 'total',
-					emphasis: {
-						focus: 'series'
-					}
-				};
-
-				if ( index === 0 ) {
-					datasetOptions.itemStyle.borderRadius = [ 0, 0, 3, 3 ];
-				}
-
-				if ( index === datasetsLength - 1 ) {
-					datasetOptions.itemStyle.borderRadius = [ 3, 3, 0, 0 ];
-				}
-
-				chartSeries.push( datasetOptions );
-			} );
-
-			return {
-				color: colors,
-				textStyle: {
-					fontFamily: fontFamily,
-					fontWeight: 500
-				},
-				tooltip: {
-					trigger: 'axis',
-					padding: [ 15, 20 ],
-					backgroundColor: '#21063C',
-					borderWidth: 0,
-					extraCssText: 'border-radius: 10px;box-shadow: 0 4px 50px rgba(161, 107, 216, 0.5);',
-					textStyle: {
-						fontFamily: fontFamily,
-						color: '#ccc',
-						fontSize: 14,
-						fontWeight: '500'
-					},
-					valueFormatter: function( value ) {
-						return value + '%';
-					},
-					axisPointer: {
-						type: 'shadow',
-						label: {
-							color: '#020722',
-							backgroundColor: '#4ccbc9'
-						},
-						crossStyle: {
-							color: 'rgba(255,255,255,0.3)'
-						},
-						lineStyle: {
-							type: [ 4, 4 ],
-							color: 'rgba(255,255,255,0.3)'
-						}
-					}
-				},
-				legend: defaultLegendSettings,
-				grid: {
-					left: '3%',
-					right: '3%',
-					top: '3%',
-					containLabel: true
-				},
-				xAxis: {
-					type: 'category',
-					data: [
-						'Rust',
-						'JavaScript',
-						'C++',
-						'Blazor',
-						'AssemblyScript',
-						'Python',
-						'Go',
-						'WAT',
-						'Zig',
-						'Java',
-						'Swift',
-						'Ruby',
-						'Grain'
-					],
-					axisLabel: {
-						interval: 0,
-						rotate: 30
-					}
-				},
-				yAxis: {
-					type: 'value',
-					axisLine: {
-						show: false
-					},
-					splitLine: {
-						show: true,
-						lineStyle: {
-							type: [ 4, 4 ],
-							color: [ '#262626' ]
-						}
-					},
-					axisLabel: {
-						formatter: '{value}%',
-						color: '#ccc'
-					}
-				},
-				series: chartSeries
-			};
 		}
 
 		function getChartOptionsWeb3FoundationGrants( chartName ) {
@@ -2741,7 +2510,6 @@
 							maxSurfaceAngle: 80
 						},
 						/*labelLayout: function( params ) {
-							console.log( params );
 							const isLeft = params.labelRect.x < 570;
 							const points = params.labelLinePoints;
 							// Update the end point.
@@ -2933,8 +2701,6 @@
 					};
 				}
 			}
-
-			console.log( newOptions );
 
 			var yAxis = {};
 			switch ( chartName ) {

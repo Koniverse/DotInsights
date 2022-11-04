@@ -189,11 +189,20 @@
 
 .block-table-footer,
 .block-chart-footer {
+  --branding-size: 138px;
   margin: 26px 0 0;
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between; }
+  .block-table-footer:after,
+  .block-chart-footer:after {
+    content: '';
+    width: var(--branding-size);
+    height: 24px;
+    background: url(../images/logo/logo.png) no-repeat left center;
+    background-size: var(--branding-size) auto; }
 
 .block-table-source,
 .block-chart-source {
@@ -208,14 +217,6 @@
     .block-table-source p:last-child,
     .block-chart-source p:last-child {
       margin: 0; }
-
-.block-table-branding,
-.block-chart-branding {
-  padding: 2px 0 0;
-  line-height: 1; }
-  .block-table-branding img,
-  .block-chart-branding img {
-    max-width: 138px; }
 
 .block-chart {
   position: relative;
@@ -235,7 +236,7 @@
   --td-beside-gap: 19px;
   --td-ver-gap: 11px;
   --td-hoz-gap: 10px;
-  margin: var(--table-top-spacing, 0) 0 var(--table-bottom-spacing, 0); }
+  margin: var(--table-top-spacing, 100px) 0 var(--table-bottom-spacing, 100px); }
   .block-report-table .block-table-heading {
     margin: 0 0 10px; }
   .block-report-table.table-style-02 {
@@ -361,6 +362,44 @@
       width: 150px; }
   .table-top-10-nft-collections td:first-child {
     font-size: 16px; }
+
+.table-bitcountry-pioneer-app {
+  --tr-radius: 8px;
+  --td-ver-gap: 11px;
+  --td-ver-gap: 17px;
+  --td-hoz-gap: 5px; }
+  .table-bitcountry-pioneer-app table {
+    font-size: 16px !important;
+    line-height: 30px;
+    font-weight: 400;
+    table-layout: fixed; }
+  .table-bitcountry-pioneer-app .th-label-group {
+    display: flex;
+    align-items: center; }
+    .table-bitcountry-pioneer-app .th-label-group .category {
+      color: #66e1b6; }
+    .table-bitcountry-pioneer-app .th-label-group .separator {
+      width: 25px;
+      height: 100%;
+      position: relative; }
+      .table-bitcountry-pioneer-app .th-label-group .separator:before {
+        content: '';
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        width: 48px;
+        height: 1px;
+        background: #fff;
+        transform: translateX(-25%) rotate(60deg); }
+    .table-bitcountry-pioneer-app .th-label-group .day {
+      text-align: right; }
+  .table-bitcountry-pioneer-app td, .table-bitcountry-pioneer-app th {
+    width: 130px;
+    text-align: right; }
+    .table-bitcountry-pioneer-app td:first-child, .table-bitcountry-pioneer-app th:first-child {
+      color: #66e1b6;
+      text-align: start;
+      width: 200px; }
 
 .nft-collection--volume {
   display: flex;
@@ -574,64 +613,6 @@
   padding: 20px 0 0; }
   .section-report-web3 .section-header {
     margin: 0 0 99px; }
-
-.section-web3-infrastructure {
-  padding: 145px 0 0; }
-  .section-web3-infrastructure .shape-union {
-    top: 4%;
-    right: 0;
-    transform: translate(26%); }
-    .section-web3-infrastructure .shape-union .main-image > img {
-      max-width: 40vw; }
-    .section-web3-infrastructure .shape-union .shape-dot {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%); }
-      .section-web3-infrastructure .shape-union .shape-dot img {
-        width: 221px;
-        max-width: 12vw;
-        transform: rotate(56.11deg); }
-    .section-web3-infrastructure .shape-union .shape-ksm {
-      bottom: 0;
-      left: 40%; }
-      .section-web3-infrastructure .shape-union .shape-ksm img {
-        width: 152px;
-        max-width: 8vw;
-        transform: rotate(-10deg); }
-    .section-web3-infrastructure .shape-union .shape-diamond {
-      top: 24%;
-      left: 2%; }
-      .section-web3-infrastructure .shape-union .shape-diamond img {
-        width: 112px;
-        max-width: 6vw; }
-  .section-web3-infrastructure .image-group {
-    margin: -50px auto 0; }
-    .section-web3-infrastructure .image-group .section-shape {
-      z-index: 2; }
-    .section-web3-infrastructure .image-group .main-image > img {
-      max-width: 80vw; }
-    .section-web3-infrastructure .image-group .shape-ksm {
-      top: 21%;
-      left: 28%; }
-      .section-web3-infrastructure .image-group .shape-ksm img {
-        max-width: 10vw; }
-    .section-web3-infrastructure .image-group .shape-dot {
-      bottom: 30%;
-      right: 30%; }
-      .section-web3-infrastructure .image-group .shape-dot img {
-        max-width: 11vw; }
-    .section-web3-infrastructure .image-group .shape-diamond {
-      bottom: 30%;
-      left: 30%;
-      opacity: .6; }
-      .section-web3-infrastructure .image-group .shape-diamond img {
-        max-width: 7vw; }
-    .section-web3-infrastructure .image-group .brand-01 {
-      right: 30%;
-      top: 30%; }
-    .section-web3-infrastructure .image-group .brand-03 {
-      left: 48%;
-      bottom: 25%; }
 
 .section-report-closing-thought {
   overflow: hidden;
@@ -896,13 +877,6 @@
     padding: 90px 0 0; }
     .section-game-fi .row-table-overview {
       margin-bottom: 60px; }
-  .section-web3-infrastructure {
-    padding: 90px 0 0; }
-    .section-web3-infrastructure > .shape-union {
-      display: none; }
-    .section-web3-infrastructure .block-report-chart {
-      --chart-top-spacing: 50px !important;
-      --chart-bot-spacing: 60px !important; }
   .section-report-closing-thought {
     padding: 30px 0 180px; }
     .section-report-closing-thought .row-closing-image-wrap {
