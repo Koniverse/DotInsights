@@ -689,63 +689,6 @@
 	}
 }
 
-.section-report-dex {
-	padding: 134px 0 135px;
-	background: url(../images/reports/grid-border.png) no-repeat bottom center;
-	background-size: 100% auto;
-
-	.shape-blue-blur {
-		bottom: 30%;
-		left: 0;
-
-		img {
-			transform: scale(-1, 1);
-		}
-	}
-
-	.shape-radial-circle {
-		right: 0;
-		bottom: 0;
-		transform: translate(20%, -10%);
-	}
-
-	.shape-diamond {
-		bottom: 3%;
-		left: 3%;
-
-		img {
-			width: 239px;
-			max-width: 12.4vw;
-		}
-	}
-}
-
-.section-report-lending-borrowing {
-	padding: 100px 0 121px;
-
-	.shape-bot-bg {
-		bottom: -40px;
-		left: 0;
-		right: 0;
-		text-align: center;
-	}
-}
-
-.section-report-stablecoin {
-	overflow: hidden;
-	padding: 0 0 235px;
-
-	.shape-diamond {
-		bottom: 130px;
-		left: 3%;
-
-		img {
-			width: 239px;
-			max-width: 12.4vw;
-		}
-	}
-}
-
 .section-report-nfts {
 	padding: 26px 0 0;
 
@@ -1313,18 +1256,6 @@
 		.section-header {
 			margin: 0 0 40px;
 		}
-	}
-
-	.section-report-dex {
-		padding: 90px 0 0;
-	}
-
-	.section-report-lending-borrowing {
-		padding: 90px 0;
-	}
-
-	.section-report-stablecoin {
-		padding: 0 0 180px;
 	}
 
 	.section-nft-overview {

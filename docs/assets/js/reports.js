@@ -133,8 +133,7 @@
 							break;
 						case 'dex-with-average-tvl':
 						case 'tvl-lending-borrowing':
-						case 'polkadot-lending-protocol':
-						case 'ausd-issuance':
+						case 'stablecoin-total-issuance':
 						case 'rmrk-cumulative-sales':
 							chartOptions = getChartLinesBaseResponsiveOptions( chartName );
 							break;
@@ -236,11 +235,8 @@
 						case 'dex-with-average-tvl-lower-than-5m':
 							chartOptions = getChartOptionsDexWithAverageTvlLowerThan5M( chartName, jsonData );
 							break;
-						case 'polkadot-lending-protocol':
-							chartOptions = getChartOptionsDotsamaLendingProtocol( chartName, jsonData );
-							break;
-						case 'ausd-issuance':
-							chartOptions = getChartOptionsAUsdIssuance( chartName, jsonData );
+						case 'stablecoin-total-issuance':
+							chartOptions = getChartOptionsStablecoinTotalIssuance( chartName, jsonData );
 							break;
 						case 'rmrk-cumulative-sales':
 							chartOptions = getChartOptionsRmrkCumulativeSales( chartName, jsonData );
@@ -1861,59 +1857,50 @@
 			return $.extend( true, {}, baseOptions, responsiveOptions );
 		}
 
-		function getChartOptionsDotsamaLendingProtocol( chartName, jsonData ) {
+		function getChartOptionsStablecoinTotalIssuance( chartName, jsonData ) {
 			var datasets       = [
 				    {
-					    name: 'starlay',
-					    label: 'Starlay'
+					    name: 'karura',
+					    label: 'aUSD (Karura)',
+					    options: {
+						    areaStyle: {
+							    color: new echarts.graphic.LinearGradient( 0.5, 0, 0.5, 1, [
+								    {
+									    offset: 0,
+									    color: 'rgba(203,47,90,0.42)'
+								    },
+								    {
+									    offset: 1,
+									    color: 'rgba(203,47,90,0.05)'
+								    }
+							    ] )
+						    }
+					    }
 				    }, {
-					    name: 'artemis',
-					    label: 'Moonwell Artemis'
-				    }, {
-					    name: 'apollo',
-					    label: 'Moonwell Apollo'
+					    name: 'bai',
+					    label: 'BAI (AstridDAO)',
+					    options: {
+						    areaStyle: {
+							    color: new echarts.graphic.LinearGradient( 0.5, 0, 0.5, 1, [
+								    {
+									    offset: 0,
+									    color: 'rgba(233,178,8,0.42)'
+								    },
+								    {
+									    offset: 1,
+									    color: 'rgba(233,178,8,0.05)'
+								    }
+							    ] )
+						    }
+					    }
 				    }
 			    ],
 			    colors         = [
-				    '#D50075',
-				    '#B8E94A',
-				    '#5C42FB'
-			    ],
-			    areaBackground = [
-				    [ 'rgba(95,16,102,1)', 'rgba(95,16,102,0.4)' ],
-				    [ 'rgba(77,99,64,1)', 'rgba(77,99,64,0.4)' ],
-				    [ 'rgba(37,33,122,1)', 'rgba(37,33,122,0.4)' ]
+				    '#CB2F5A',
+				    '#E9B255'
 			    ];
 
-			var baseOptions       = getChartLinesBaseOptions( jsonData, datasets, colors, areaBackground ),
-			    responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
-
-			return $.extend( true, {}, baseOptions, responsiveOptions );
-		}
-
-		function getChartOptionsAUsdIssuance( chartName, jsonData ) {
-			var datasets       = [
-				    {
-					    name: 'acala',
-					    label: 'Acala'
-				    }, {
-					    name: 'karura',
-					    label: 'Karura'
-				    }
-			    ],
-			    colors         = [
-				    '#C30D00',
-				    '#004BFF'
-			    ],
-			    areaBackground = [
-				    [ 'rgba(108,13,22,0.9)', 'rgba(108,13,22,0.3)' ],
-				    [ 'rgba(23,46,152,0.9)', 'rgba(23,46,152,0.3)' ]
-			    ],
-			    seriesOptions  = {
-				    stack: 'total'
-			    };
-
-			var baseOptions       = getChartLinesBaseOptions( jsonData, datasets, colors, areaBackground, seriesOptions ),
+			var baseOptions       = getChartLinesBaseOptions( jsonData, datasets, colors ),
 			    responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
 			return $.extend( true, {}, baseOptions, responsiveOptions );
 		}
@@ -2918,9 +2905,13 @@
 					}
 				};
 
+				if ( dataset.hasOwnProperty( 'options' ) ) {
+					options = $.extend( true, {}, options, dataset.options );
+				}
+
+				// Used dateset.options instead of.
 				if ( areaBackground && areaBackground[ index ] ) {
 					options.areaStyle = {
-						//opacity: 0.6,
 						color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
 							{
 								offset: 0,
@@ -3027,6 +3018,7 @@
 					case 'dex-with-average-tvl-lower-than-5m':
 					case 'tvl-lending-borrowing':
 					case 'tvl-liquid-staking':
+					case 'stablecoin-total-issuance':
 						newOptions[ 'xAxis' ] = {
 							splitNumber: 5
 						};
@@ -3057,8 +3049,7 @@
 				case 'dex-with-average-tvl-lower-than-5m':
 				case 'tvl-lending-borrowing':
 				case 'tvl-liquid-staking':
-				case 'polkadot-lending-protocol':
-				case 'ausd-issuance':
+				case 'stablecoin-total-issuance':
 					newOptions.tooltip = {
 						valueFormatter: function( value ) {
 							return value ? '$' + NumberUtil.formatWithCommas( value ) : '-';
