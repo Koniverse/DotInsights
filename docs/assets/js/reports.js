@@ -136,10 +136,9 @@
 						case 'stablecoin-total-issuance':
 							chartOptions = getChartLinesBaseResponsiveOptions( chartName );
 							break;
-						case 'rmrk-daily-sales':
-							chartOptions = getChartResponsiveOptionsRmrkDailySales( chartName );
+						case 'nft-marketplace-daily-volume':
+							chartOptions = getChartResponsiveOptionsNftMarketplaceDailyVolume( chartName );
 							break;
-
 					}
 
 					if ( chartOptions ) {
@@ -237,8 +236,8 @@
 						case 'stablecoin-total-issuance':
 							chartOptions = getChartOptionsStablecoinTotalIssuance( chartName, jsonData );
 							break;
-						case 'rmrk-daily-sales':
-							chartOptions = getChartOptionsRmrkDailySales( chartName, jsonData );
+						case 'nft-marketplace-daily-volume':
+							chartOptions = getChartOptionsNftMarketplaceDailyVolume( chartName, jsonData );
 							break;
 						case 'web-assembly-usage':
 							chartOptions = getChartOptionsWebAssemblyUsage( chartName, jsonData );
@@ -1901,47 +1900,55 @@
 			return $.extend( true, {}, baseOptions, responsiveOptions );
 		}
 
-		function getChartOptionsRmrkDailySales( chartName, jsonData ) {
+		function getChartOptionsNftMarketplaceDailyVolume( chartName, jsonData ) {
 			var datasets    = [
 				    {
-					    name: 'kanbird',
-					    label: 'KANBIRD'
-				    }, {
-					    name: 'kanchamp',
-					    label: 'KANCHAMP'
-				    }, {
-					    name: 'kanprtn',
-					    label: 'KANPRTN'
-				    }, {
-					    name: 'evrloot',
-					    label: 'EVRLOOT'
-				    }, {
-					    name: 'kk01',
-					    label: 'KK01'
-				    }, {
-					    name: 'rmrkbnnrs',
-					    label: 'RMRKBNNRS'
-				    }, {
-					    name: 'kq01',
-					    label: 'KQ01'
-				    }, {
-					    name: 'kanbg',
-					    label: 'KANBG'
-				    }, {
-					    name: 'others',
-					    label: locate.others
+					    name: 'singular',
+					    label: 'Singular'
+				    },
+				    {
+					    name: 'tofu_glmr',
+					    label: 'tofu GLMR'
+				    },
+				    {
+					    name: 'tofu_movr',
+					    label: 'tofu MOVR'
+				    },
+				    {
+					    name: 'tofu_astr',
+					    label: 'tofu ASTR'
+				    },
+				    {
+					    name: 'tofu_sdn',
+					    label: 'tofu SDN'
+				    },
+				    {
+					    name: 'moonbeans_glmr',
+					    label: 'MoonBeans GLMR'
+				    },
+				    {
+					    name: 'moonbeans_movr',
+					    label: 'Moonbeans MOVR'
+				    },
+				    {
+					    name: 'nft_trades',
+					    label: 'NFTTrades'
+				    },
+				    {
+					    name: 'mintverse',
+					    label: 'Mintverse'
 				    }
 			    ],
 			    colors      = [
+				    '#E6007A',
+				    '#FFB800',
 				    '#004BFF',
-				    '#DF5C53',
-				    '#709BF5',
-				    '#66E1B6',
-				    '#9D3BEA',
-				    '#2D9C42',
-				    '#889641',
-				    '#E12C29',
-				    '#F7A21B'
+				    '#FF6B00',
+				    '#F0A08C',
+				    '#4CCBC9',
+				    '#9EE542',
+				    '#429DF4',
+				    '#BB3E24'
 			    ],
 			    totalItems  = jsonData.length,
 			    data        = [],
@@ -1979,36 +1986,10 @@
 					    fontFamily: fontFamily,
 					    fontWeight: 500
 				    },
-				    tooltip: {
-					    trigger: 'axis',
-					    padding: [ 15, 20 ],
-					    backgroundColor: '#21063C',
-					    borderWidth: 0,
-					    extraCssText: 'border-radius: 10px;box-shadow: 0 4px 50px rgba(161, 107, 216, 0.5);',
-					    textStyle: {
-						    fontFamily: fontFamily,
-						    color: '#ccc',
-						    fontSize: 14,
-						    fontWeight: '500'
-					    },
-					    axisPointer: {
-						    type: 'shadow',
-						    label: {
-							    color: '#020722',
-							    backgroundColor: '#4ccbc9'
-						    },
-						    crossStyle: {
-							    color: 'rgba(255,255,255,0.3)'
-						    },
-						    lineStyle: {
-							    type: [ 4, 4 ],
-							    color: 'rgba(255,255,255,0.3)'
-						    }
-					    }
-				    },
+				    tooltip: defaultTooltipSettings,
 				    legend: defaultLegendSettings,
 				    grid: {
-					    left: 78,
+					    left: '3%',
 					    right: '3%',
 					    top: '3%',
 					    containLabel: true
@@ -2032,12 +2013,7 @@
 							    color: [ '#262626' ]
 						    }
 					    },
-					    axisPointer: {
-						    label: {
-							    color: '#66E1B6',
-							    backgroundColor: '#262C4A'
-						    }
-					    },
+					    axisPointer: defaultAxisPointerLabelSettings,
 					    axisLabel: {
 						    formatter: dateFormatter,
 						    color: '#ccc'
@@ -2055,52 +2031,32 @@
 							    color: [ '#262626' ]
 						    }
 					    },
-					    axisPointer: {
-						    label: {
-							    color: '#66E1B6',
-							    backgroundColor: '#262C4A'
-						    }
-					    },
+					    axisPointer: defaultAxisPointerLabelSettings,
 					    axisLabel: {
 						    color: '#ccc'
-					    },
-					    name: 'Volume (KSM)',
-					    nameLocation: 'middle',
-					    nameGap: 100,
-					    nameTextStyle: {
-						    fontFamily: fontFamily,
-						    color: '#ccc',
-						    fontSize: 15,
-						    fontWeight: '500'
 					    }
 				    },
 				    series: chartSeries
 			    },
-			    responsiveOptions = getChartResponsiveOptionsRmrkDailySales( chartName );
+			    responsiveOptions = getChartResponsiveOptionsNftMarketplaceDailyVolume( chartName );
 
-			$.extend( true, baseOptions, responsiveOptions );
-			return baseOptions;
+			var a = $.extend( true, {}, baseOptions, responsiveOptions );
+			console.log(a)
+			return a;
 		}
 
-		function getChartResponsiveOptionsRmrkDailySales() {
+		function getChartResponsiveOptionsNftMarketplaceDailyVolume() {
 			var newOptions = {};
 
 			if ( window.innerWidth > 767 ) {
 				newOptions = {
-					grid: {
-						left: 78
-					},
 					yAxis: {
-						nameGap: 100,
-						nameTextStyle: {
-							fontSize: 15
-						},
 						axisLabel: {
-							formatter: '{value}'
+							formatter: '${value}'
 						}
 					},
 					xAxis: {
-						splitNumber: 8,
+						splitNumber: 5,
 						axisLabel: {
 							formatter: dateFormatter
 						}
@@ -2108,17 +2064,10 @@
 				};
 			} else {
 				newOptions = {
-					grid: {
-						left: 50
-					},
 					yAxis: {
-						nameGap: 50,
-						nameTextStyle: {
-							fontSize: 14
-						},
 						axisLabel: {
 							formatter: function( value ) {
-								return NumberUtil.formatMoney( value );
+								return '$' + NumberUtil.formatWithCommas( value );
 							}
 						}
 					},

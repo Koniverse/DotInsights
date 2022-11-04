@@ -1,0 +1,17 @@
+.dotinsights-progress-bar {
+	background: var(--bar-color, #333);
+	border-radius: var(--bar-rounded, 4px);
+	height: var(--bar-height, 5px);
+	position: relative;
+
+	&:before {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: var(--bar-fill-width, 0);
+		border-radius: inherit;
+		background: var(--fill-color, $secondary-color);
+	}
+}

@@ -238,7 +238,7 @@
 	font-size: $body-font-size-small;
 	font-weight: 500;
 	line-height: 30px;
-	max-width: 570px;
+	max-width: 670px;
 	margin: 0 10px 0 0;
 
 	p {
@@ -363,7 +363,7 @@
 			bottom: 0;
 			left: 0;
 			z-index: -1;
-			border-radius: var(--tr-radius, 4px);
+			border-radius: var(--tr-radius, 8px);
 			background: var(--th-bg, $secondary-color);
 		}
 	}
@@ -456,6 +456,75 @@
 	.token-info {
 		min-height: 42px;
 	}
+}
+
+.table-top-10-nft-collections {
+	--tr-spacing: 8px;
+	--td-bg: #151515;
+	--block-bg: #000;
+
+	td, th {
+		width: 22%;
+
+		&:first-child {
+			width: 40px;
+			text-align: start;
+		}
+
+		&:nth-child(2) {
+			width: 60%;
+		}
+
+		&:last-child {
+			text-align: right;
+			width: 150px;
+		}
+	}
+
+	td:first-child {
+		font-size: 16px;
+	}
+}
+
+.nft-collection--volume {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	font-size: 15px;
+	font-weight: 600;
+	color: #fff;
+	margin: 0 0 7px;
+
+	img {
+		vertical-align: middle;
+		margin: 0 4px 0 0 !important;
+	}
+}
+
+.nft-collection {
+	display: flex;
+	align-items: center;
+}
+
+.nft-collection--thumbnail {
+	width: 44px;
+	flex-shrink: 0;
+	margin: 0 9px 0 0;
+}
+
+.nft-collection--name {
+	font-family: $body-font-family;
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 22px;
+	color: #fff;
+	margin: 0 0 2px;
+}
+
+.nft-collection--details {
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 20px;
 }
 
 .block-text {
@@ -701,43 +770,11 @@
 	}
 }
 
-.section-nft-overview {
+.section-game-fi {
 	padding: 130px 0 0;
 
 	.row-table-overview {
 		margin-bottom: 100px;
-	}
-
-	.shape-bot-bg {
-		bottom: 80px;
-		left: 0;
-		right: 0;
-		text-align: center;
-	}
-}
-
-.section-nft-rmrk-daily-sales {
-	overflow: hidden;
-	padding: 113px 0 230px;
-
-	.section-shape-diamond {
-		bottom: 20%;
-		right: 1%;
-
-		img {
-			width: 220px;
-			max-width: 12vw;
-		}
-	}
-
-	.shape-ksm {
-		top: 20%;
-		left: 3%;
-
-		img {
-			width: 175px;
-			max-width: 9vw;
-		}
 	}
 }
 
@@ -1170,7 +1207,7 @@
 		}
 	}
 
-	.section-nft-overview {
+	.section-game-fi {
 		.row-table-overview {
 			.block-text {
 				--text-width: 100% !important;
@@ -1258,16 +1295,12 @@
 		}
 	}
 
-	.section-nft-overview {
+	.section-game-fi {
 		padding: 90px 0 0;
 
 		.row-table-overview {
 			margin-bottom: 60px;
 		}
-	}
-
-	.section-nft-rmrk-daily-sales {
-		padding: 90px 0 170px;
 	}
 
 	.section-web3-infrastructure {

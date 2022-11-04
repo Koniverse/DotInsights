@@ -3335,6 +3335,21 @@ body.rtl .tm-swiper.pagination-style-07 .swiper-pagination-bullet:after {
     .dotinsights-modal .modal-title {
       font-size: 22px; } }
 
+.dotinsights-progress-bar {
+  background: var(--bar-color, #333);
+  border-radius: var(--bar-rounded, 4px);
+  height: var(--bar-height, 5px);
+  position: relative; }
+  .dotinsights-progress-bar:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: var(--bar-fill-width, 0);
+    border-radius: inherit;
+    background: var(--fill-color, #004bff); }
+
 body {
   overflow-x: hidden; }
 

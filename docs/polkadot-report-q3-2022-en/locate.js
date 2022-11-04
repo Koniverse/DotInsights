@@ -24,8 +24,7 @@ var lang = {
 	useFrequently: 'Use frequently',
 	projectCount: 'Project Count',
 	inUSD: 'In (USD)',
-	outUSD: 'Out (USD)',
-	others: 'Others'
+	outUSD: 'Out (USD)'
 };
 
 window.DotInsights = window.DotInsights || {};
