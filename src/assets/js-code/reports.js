@@ -15,13 +15,13 @@
 		var sourceBaseUrl = baseUrl + '/assets/data/';
 		var tokenBaseUrl = baseUrl + '/assets/images/token/';
 
-		var NumberUtil             = DotInsights.NumberUtil,
-		    $allCharts             = $( '.block-chart' ),
-		    dateFormatter          = '{dd}/{MM}/{yyyy}',
-		    dateShortFormatter     = '{MM}/{yyyy}',
-		    fontFamily             = 'Plus Jakarta Sans',
-		    echarts                = window.echarts,
-		    defaultTooltipStyle    = {
+		var NumberUtil                      = DotInsights.NumberUtil,
+		    $allCharts                      = $( '.block-chart' ),
+		    dateFormatter                   = '{dd}/{MM}/{yyyy}',
+		    dateShortFormatter              = '{MM}/{yyyy}',
+		    fontFamily                      = 'Plus Jakarta Sans',
+		    echarts                         = window.echarts,
+		    defaultTooltipStyle             = {
 			    padding: [ 15, 20 ],
 			    backgroundColor: '#000',
 			    borderWidth: 0,
@@ -33,7 +33,7 @@
 				    fontWeight: '500'
 			    }
 		    },
-		    defaultTooltipSettings = $.extend( true, {}, defaultTooltipStyle, {
+		    defaultTooltipSettings          = $.extend( true, {}, defaultTooltipStyle, {
 			    trigger: 'axis',
 			    axisPointer: {
 				    type: 'cross',
@@ -46,7 +46,7 @@
 				    }
 			    }
 		    } ),
-		    defaultLegendSettings  = {
+		    defaultLegendSettings           = {
 			    show: true,
 			    icon: 'roundRect',
 			    textStyle: {
@@ -72,7 +72,7 @@
 				    fontWeight: '500'
 			    }
 		    },
-		    defaultAxisPointerSettings = {
+		    defaultAxisPointerLabelSettings = {
 			    label: {
 				    color: '#fff',
 				    backgroundColor: '#004bff'
@@ -181,30 +181,6 @@
 			} );
 		}
 
-		function validate_number( number ) {
-			// Remove thousand separator chars.
-			return number.replace( /,(?=[\d,]*\.\d{2}\b)/g, '' );
-		}
-
-		function moneyFormat( value ) {
-			// Nine Zeroes for Billions.
-			return Math.abs( Number( value ) ) >= 1.0e+9
-
-				? Math.abs( Number( value ) ) / 1.0e+9 + "B"
-				// Six Zeroes for Millions.
-				: Math.abs( Number( value ) ) >= 1.0e+6
-
-					? (
-						  Math.abs( Number( value ) ) / 1.0e+6
-					  ) + "M"
-					// Three Zeroes for Thousands.
-					: Math.abs( Number( value ) ) >= 1.0e+3
-
-						? Math.abs( Number( value ) ) / 1.0e+3 + "K"
-
-						: Math.abs( Number( value ) );
-		}
-
 		function initCharts( $chart ) {
 			var chartName     = $chart.data( 'chart-name' ),
 			    chartSource   = $chart.data( 'chart-source' ),
@@ -251,10 +227,10 @@
 						case 'kusama-parachain':
 							chartOptions = getChartOptionsKusamaParachain( chartName, jsonData );
 							break;
-						case 'dex-with-average-tvl-higher-than-10':
+						case 'dex-with-average-tvl-higher-than-10m':
 							chartOptions = getChartOptionsDexWithAverageTVLHigherThan10M( chartName, jsonData );
 							break;
-						case 'dex-with-average-tvl-higher-than-5':
+						case 'dex-with-average-tvl-higher-than-5m':
 							chartOptions = getChartOptionsDexWithAverageTVLHigherThan5M( chartName, jsonData );
 							break;
 						case 'polkadot-lending-protocol':
@@ -355,7 +331,7 @@
 							color: '#262626'
 						}
 					},
-					axisPointer: defaultAxisPointerSettings,
+					axisPointer: defaultAxisPointerLabelSettings,
 					axisLabel: {
 						align: 'left',
 						formatter: dateFormatter,
@@ -600,7 +576,7 @@
 							color: [ '#262626' ]
 						}
 					},
-					axisPointer: defaultAxisPointerSettings,
+					axisPointer: defaultAxisPointerLabelSettings,
 					axisLabel: {
 						align: 'left',
 						formatter: dateFormatter,
@@ -622,7 +598,7 @@
 							color: [ '#262626' ]
 						}
 					},
-					axisPointer: defaultAxisPointerSettings,
+					axisPointer: defaultAxisPointerLabelSettings,
 					axisLabel: {
 						color: '#ccc'
 					}
@@ -989,7 +965,7 @@
 
 			for ( var i = 0; i < totalItems; i ++ ) {
 				datasets.forEach( function( dataset ) {
-					var value = jsonData[ i ][ dataset.name ] ? validate_number( jsonData[ i ][ dataset.name ] ) : '';
+					var value = jsonData[ i ][ dataset.name ] ? NumberUtil.validate( jsonData[ i ][ dataset.name ] ) : '';
 					data[ dataset.name ].push( [ jsonData[ i ].date, value ] );
 				} );
 			}
@@ -1030,7 +1006,7 @@
 							    color: '#262626'
 						    }
 					    },
-					    axisPointer: defaultAxisPointerSettings,
+					    axisPointer: defaultAxisPointerLabelSettings,
 					    axisLabel: {
 						    formatter: dateFormatter,
 						    color: '#ccc'
@@ -1054,7 +1030,7 @@
 								color: '#262626'
 							}
 						},
-						axisPointer: defaultAxisPointerSettings,
+						axisPointer: defaultAxisPointerLabelSettings,
 						axisLabel: {
 							color: '#ccc'
 						}
@@ -1075,7 +1051,7 @@
 								color: '#262626'
 							}
 						},
-						axisPointer: defaultAxisPointerSettings,
+						axisPointer: defaultAxisPointerLabelSettings,
 						axisLabel: {
 							color: '#ccc'
 						}
@@ -1162,7 +1138,7 @@
 					yAxis: {
 						axisLabel: {
 							formatter: function( value ) {
-								return moneyFormat( value );
+								return NumberUtil.formatMoney( value );
 							}
 						}
 					},
@@ -1560,7 +1536,7 @@
 
 			for ( var i = 0; i < totalItems; i ++ ) {
 				datasets.forEach( function( dataset ) {
-					var value = jsonData[ i ][ dataset.name ] ? validate_number( jsonData[ i ][ dataset.name ] ) : '';
+					var value = jsonData[ i ][ dataset.name ] ? NumberUtil.validate( jsonData[ i ][ dataset.name ] ) : '';
 					data[ dataset.name ].push( [ jsonData[ i ].date, value ] );
 				} );
 			}
@@ -1597,7 +1573,7 @@
 							    color: [ '#262626' ]
 						    }
 					    },
-					    axisPointer: defaultAxisPointerSettings,
+					    axisPointer: defaultAxisPointerLabelSettings,
 					    axisLabel: {
 						    formatter: dateFormatter,
 						    color: '#ccc'
@@ -1615,7 +1591,7 @@
 							    color: [ '#262626' ]
 						    }
 					    },
-					    axisPointer: $.extend( true, {}, defaultAxisPointerSettings, {
+					    axisPointer: $.extend( true, {}, defaultAxisPointerLabelSettings, {
 						    label: {
 							    formatter: function( params ) {
 								    return NumberUtil.formatWithCommas( parseInt( params.value ) );
@@ -1624,7 +1600,7 @@
 					    } ),
 					    axisLabel: {
 						    formatter: function( value ) {
-							    return moneyFormat( value );
+							    return NumberUtil.formatMoney( value );
 						    },
 						    color: '#ccc'
 					    }
@@ -1763,7 +1739,7 @@
 
 			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors );
 			var responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
-			return $.extend( true, baseOptions, responsiveOptions );
+			return $.extend( true, {}, baseOptions, responsiveOptions );
 		}
 
 		function getChartOptionsDexWithAverageTVLHigherThan10M( chartName, jsonData ) {
@@ -1795,7 +1771,7 @@
 
 			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors );
 			var responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
-			return $.extend( true, baseOptions, responsiveOptions );
+			return $.extend( true, {}, baseOptions, responsiveOptions );
 		}
 
 		function getChartOptionsDexWithAverageTVLHigherThan5M( chartName, jsonData ) {
@@ -1839,7 +1815,7 @@
 
 			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors );
 			var responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
-			return $.extend( true, baseOptions, responsiveOptions );
+			return $.extend( true, {}, baseOptions, responsiveOptions );
 		}
 
 		function getChartOptionsDotsamaLendingProtocol( chartName, jsonData ) {
@@ -1869,7 +1845,7 @@
 			var baseOptions       = getChartLinesBaseOptions( jsonData, datasets, colors, areaBackground ),
 			    responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
 
-			return $.extend( true, baseOptions, responsiveOptions );
+			return $.extend( true, {}, baseOptions, responsiveOptions );
 		}
 
 		function getChartOptionsAUsdIssuance( chartName, jsonData ) {
@@ -1896,7 +1872,7 @@
 
 			var baseOptions       = getChartLinesBaseOptions( jsonData, datasets, colors, areaBackground, seriesOptions ),
 			    responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
-			return $.extend( true, baseOptions, responsiveOptions );
+			return $.extend( true, {}, baseOptions, responsiveOptions );
 		}
 
 		function getChartOptionsRmrkCumulativeSales( chartName, jsonData ) {
@@ -1946,7 +1922,7 @@
 
 			var baseOptions       = getChartLinesBaseOptions( jsonData, datasets, colors, areaBackground, seriesOptions, chartExtraOptions ),
 			    responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
-			$.extend( true, baseOptions, responsiveOptions );
+			$.extend( true, {}, baseOptions, responsiveOptions );
 
 			return baseOptions;
 		}
@@ -2003,7 +1979,7 @@
 
 			for ( var i = 0; i < totalItems; i ++ ) {
 				datasets.forEach( function( dataset ) {
-					var value = jsonData[ i ][ dataset.name ] ? validate_number( jsonData[ i ][ dataset.name ] ) : '';
+					var value = jsonData[ i ][ dataset.name ] ? NumberUtil.validate( jsonData[ i ][ dataset.name ] ) : '';
 					data[ dataset.name ].push( [ jsonData[ i ].date, value ] );
 				} );
 			}
@@ -2168,7 +2144,7 @@
 						},
 						axisLabel: {
 							formatter: function( value ) {
-								return moneyFormat( value );
+								return NumberUtil.formatMoney( value );
 							}
 						}
 					},
@@ -2574,7 +2550,6 @@
 							fontSize: 17,
 							lineHeight: 30,
 							formatter: function( params ) {
-								console.log( params );
 								return `${params.name} ${params.value}%`;
 							}
 						},
@@ -2600,7 +2575,6 @@
 
 						},
 						/*labelLayout: function( params ) {
-							console.log( params );
 							const isLeft = params.labelRect.x < 570;
 							const points = params.labelLinePoints;
 							// Update the end point.
@@ -2821,7 +2795,6 @@
 							fontSize: 17,
 							lineHeight: 30,
 							formatter: function( params ) {
-								console.log( params );
 								return `${params.name} ${params.percent}%`;
 							}
 						},
@@ -2879,7 +2852,7 @@
 
 			for ( var i = 0; i < totalItems; i ++ ) {
 				datasets.forEach( function( dataset ) {
-					var value = jsonData[ i ][ dataset.name ] ? validate_number( jsonData[ i ][ dataset.name ] ) : '';
+					var value = jsonData[ i ][ dataset.name ] ? NumberUtil.validate( jsonData[ i ][ dataset.name ] ) : '';
 					data[ dataset.name ].push( [ jsonData[ i ].date, value ] );
 				} );
 			}
@@ -2969,12 +2942,7 @@
 							color: [ '#262626' ]
 						}
 					},
-					axisPointer: {
-						label: {
-							color: '#66E1B6',
-							backgroundColor: '#262C4A'
-						}
-					},
+					axisPointer: defaultAxisPointerLabelSettings,
 					axisLabel: {
 						formatter: dateFormatter,
 						color: '#ccc'
@@ -2992,12 +2960,7 @@
 							color: [ '#262626' ]
 						}
 					},
-					axisPointer: {
-						label: {
-							color: '#66E1B6',
-							backgroundColor: '#262C4A'
-						}
-					},
+					axisPointer: defaultAxisPointerLabelSettings,
 					axisLabel: {
 						color: '#ccc'
 					}
@@ -3016,39 +2979,45 @@
 			var newOptions = {};
 
 			if ( window.innerWidth > 767 ) {
-				newOptions = {
-					xAxis: {
-						splitNumber: 8
-					}
-				};
+				switch ( chartName ) {
+					case 'dex-with-average-tvl-higher-than-10m':
+					case 'dex-with-average-tvl-higher-than-5m':
+						newOptions[ 'xAxis' ] = {
+							splitNumber: 5
+						};
+						break;
+					default:
+						newOptions[ 'xAxis' ] = {
+							splitNumber: 8
+						};
+						break;
+				}
 			} else {
-				newOptions = {
-					xAxis: {
-						splitNumber: 3
-					}
+				newOptions[ 'xAxis' ] = {
+					splitNumber: 3
 				};
 
 				if ( window.innerWidth < 460 ) {
-					$.extend( true, newOptions, {
-						xAxis: {
-							splitNumber: 2
-						}
-					} );
+					newOptions[ 'xAxis' ] = {
+						splitNumber: 2
+					};
 				}
 			}
+
+			console.log( newOptions );
 
 			var yAxis = {};
 			switch ( chartName ) {
 				case 'kusama-parachain':
-				case 'dex-with-average-tvl':
+				case 'dex-with-average-tvl-higher-than-10m':
+				case 'dex-with-average-tvl-higher-than-5m':
 				case 'polkadot-lending-protocol':
 				case 'ausd-issuance':
-					var tooltip = {
+					newOptions.tooltip = {
 						valueFormatter: function( value ) {
 							return value ? '$' + NumberUtil.formatWithCommas( value ) : '-';
 						}
 					};
-					newOptions.tooltip = tooltip;
 
 					if ( window.innerWidth > 767 ) {
 						yAxis = {
@@ -3070,7 +3039,7 @@
 							},
 							axisLabel: {
 								formatter: function( value ) {
-									return value ? '$' + moneyFormat( value ) : '-';
+									return value ? '$' + NumberUtil.formatMoney( value ) : '-';
 								}
 							}
 						};
@@ -3078,6 +3047,7 @@
 					newOptions.yAxis = yAxis;
 
 					break;
+
 				case 'rmrk-cumulative-sales':
 					if ( window.innerWidth > 767 ) {
 						yAxis = {
@@ -3089,7 +3059,7 @@
 						yAxis = {
 							axisLabel: {
 								formatter: function( value ) {
-									return value ? moneyFormat( value ) : '-';
+									return value ? NumberUtil.formatMoney( value ) : '-';
 								}
 							}
 						};
@@ -3228,6 +3198,5 @@
 
 			return '' !== icon ? tokenBaseUrl + icon : ''
 		}
-
 	}( jQuery )
 );

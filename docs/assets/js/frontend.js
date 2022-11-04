@@ -153,6 +153,24 @@
 			formatWithCommas: function( x ) {
 				return x.toString().replace( /\B(?=(\d{3})+(?!\d))/g, "," );
 			},
+			formatMoney: function( value ) {
+				// Nine Zeroes for Billions.
+				return Math.abs( Number( value ) ) >= 1.0e+9
+
+					? Math.abs( Number( value ) ) / 1.0e+9 + "B"
+					// Six Zeroes for Millions.
+					: Math.abs( Number( value ) ) >= 1.0e+6
+
+						? (
+							  Math.abs( Number( value ) ) / 1.0e+6
+						  ) + "M"
+						// Three Zeroes for Thousands.
+						: Math.abs( Number( value ) ) >= 1.0e+3
+
+							? Math.abs( Number( value ) ) / 1.0e+3 + "K"
+
+							: Math.abs( Number( value ) );
+			},
 
 			getRandomInt: function( min, max ) {
 				min = Math.ceil( min );
@@ -193,6 +211,15 @@
 			dist: function( x1, y1, x2, y2 ) {
 				return Math.hypot( x2 - x1, y2 - y1 );
 			},
+
+			/**
+			 * Remove thousand separator chars.
+			 * @param number
+			 * @returns {*}
+			 */
+			validate( number ) {
+				return number.replace( /,(?=[\d,]*\.\d{2}\b)/g, '' );
+			}
 		};
 
 		DotInsights.StringUtil = {
