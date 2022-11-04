@@ -131,8 +131,8 @@
 						case 'dot-treasury-activity':
 							chartOptions = getChartResponsiveOptionsDotTreasuryActivity();
 							break;
-						case 'kusama-parachain':
 						case 'dex-with-average-tvl':
+						case 'tvl-lending-borrowing':
 						case 'polkadot-lending-protocol':
 						case 'ausd-issuance':
 						case 'rmrk-cumulative-sales':
@@ -224,14 +224,17 @@
 						case 'dot-ksm-account-overview':
 							chartOptions = getChartOptionsDotKsmAccOverview( chartName, jsonData );
 							break;
-						case 'kusama-parachain':
-							chartOptions = getChartOptionsKusamaParachain( chartName, jsonData );
+						case 'tvl-lending-borrowing':
+							chartOptions = getChartOptionsTvlLendingBorrowing( chartName, jsonData );
+							break;
+						case 'tvl-liquid-staking':
+							chartOptions = getChartOptionsTvlLiquidStaking( chartName, jsonData );
 							break;
 						case 'dex-with-average-tvl-higher-than-10m':
-							chartOptions = getChartOptionsDexWithAverageTVLHigherThan10M( chartName, jsonData );
+							chartOptions = getChartOptionsDexWithAverageTvlHigherThan10M( chartName, jsonData );
 							break;
-						case 'dex-with-average-tvl-higher-than-5m':
-							chartOptions = getChartOptionsDexWithAverageTVLHigherThan5M( chartName, jsonData );
+						case 'dex-with-average-tvl-lower-than-5m':
+							chartOptions = getChartOptionsDexWithAverageTvlLowerThan5M( chartName, jsonData );
 							break;
 						case 'polkadot-lending-protocol':
 							chartOptions = getChartOptionsDotsamaLendingProtocol( chartName, jsonData );
@@ -1718,31 +1721,7 @@
 			return newOptions;
 		}
 
-		function getChartOptionsKusamaParachain( chartName, jsonData ) {
-			var datasets = [
-				    {
-					    name: 'karura',
-					    label: 'Karura'
-				    }, {
-					    name: 'bifrost',
-					    label: 'Bifrost'
-				    }, {
-					    name: 'genshiro',
-					    label: 'Genshiro'
-				    }
-			    ],
-			    colors   = [
-				    '#C30D00',
-				    '#5A25F0',
-				    '#FB7930'
-			    ];
-
-			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors );
-			var responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
-			return $.extend( true, {}, baseOptions, responsiveOptions );
-		}
-
-		function getChartOptionsDexWithAverageTVLHigherThan10M( chartName, jsonData ) {
+		function getChartOptionsDexWithAverageTvlHigherThan10M( chartName, jsonData ) {
 			var datasets = [
 				    {
 					    name: 'arthswap',
@@ -1774,7 +1753,7 @@
 			return $.extend( true, {}, baseOptions, responsiveOptions );
 		}
 
-		function getChartOptionsDexWithAverageTVLHigherThan5M( chartName, jsonData ) {
+		function getChartOptionsDexWithAverageTvlLowerThan5M( chartName, jsonData ) {
 			var datasets = [
 				    {
 					    name: 'avault',
@@ -1811,6 +1790,70 @@
 				    '#89C900',
 				    '#22BFFE',
 				    '#C30D00'
+			    ];
+
+			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors );
+			var responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
+			return $.extend( true, {}, baseOptions, responsiveOptions );
+		}
+
+		function getChartOptionsTvlLendingBorrowing( chartName, jsonData ) {
+			var datasets = [
+				    {
+					    name: 'moonwell_apollo',
+					    label: 'Moonwell Apollo'
+				    }, {
+					    name: 'moonwell_artemis',
+					    label: 'Moonwell Artemis'
+				    }, {
+					    name: 'parallel',
+					    label: 'Parallel'
+				    }, {
+					    name: 'starlay',
+					    label: 'Starlay'
+				    }
+			    ],
+			    colors   = [
+				    '#5C42FB',
+				    '#B8E94A',
+				    '#22BFFE',
+				    '#D50075'
+			    ];
+
+			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors );
+			var responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
+			return $.extend( true, {}, baseOptions, responsiveOptions );
+		}
+
+		function getChartOptionsTvlLiquidStaking( chartName, jsonData ) {
+			var datasets = [
+				    {
+					    name: 'lido_moonbeam',
+					    label: 'Lido on Moonbeam (DOT)'
+				    }, {
+					    name: 'lido_moonriver',
+					    label: 'Lido Moonriver (KSM)'
+				    }, {
+					    name: 'karura',
+					    label: 'Karura (KSM)'
+				    }, {
+					    name: 'parallel',
+					    label: 'Parallel (DOT)'
+				    }, {
+					    name: 'bifrost',
+					    label: 'Bifrost (KSM)'
+				    }, {
+					    name: 'taiga',
+					    label: 'Taiga (KSM)'
+				    }
+			    ],
+			    colors   = [
+				    '#E6007A',
+				    '#66E1B6',
+				    '#C30D00',
+				    '#22BFFE',
+				    '#0049F1',
+				    '#A23CC8'
 			    ];
 
 			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors );
@@ -2981,7 +3024,9 @@
 			if ( window.innerWidth > 767 ) {
 				switch ( chartName ) {
 					case 'dex-with-average-tvl-higher-than-10m':
-					case 'dex-with-average-tvl-higher-than-5m':
+					case 'dex-with-average-tvl-lower-than-5m':
+					case 'tvl-lending-borrowing':
+					case 'tvl-liquid-staking':
 						newOptions[ 'xAxis' ] = {
 							splitNumber: 5
 						};
@@ -3008,9 +3053,10 @@
 
 			var yAxis = {};
 			switch ( chartName ) {
-				case 'kusama-parachain':
 				case 'dex-with-average-tvl-higher-than-10m':
-				case 'dex-with-average-tvl-higher-than-5m':
+				case 'dex-with-average-tvl-lower-than-5m':
+				case 'tvl-lending-borrowing':
+				case 'tvl-liquid-staking':
 				case 'polkadot-lending-protocol':
 				case 'ausd-issuance':
 					newOptions.tooltip = {

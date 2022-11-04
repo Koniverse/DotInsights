@@ -1,0 +1,646 @@
+﻿[
+  {
+    "date": "2022-07-01",
+    "moonwell_apollo": "48487133",
+    "moonwell_artemis": "82927824",
+    "parallel": "51691031",
+    "starlay": "13182148"
+  },
+  {
+    "date": "2022-07-02",
+    "moonwell_apollo": "49716847",
+    "moonwell_artemis": "81594136",
+    "parallel": "51508654",
+    "starlay": "12098626"
+  },
+  {
+    "date": "2022-07-03",
+    "moonwell_apollo": "50030791",
+    "moonwell_artemis": "84974615",
+    "parallel": "51808527",
+    "starlay": "12626341"
+  },
+  {
+    "date": "2022-07-04",
+    "moonwell_apollo": "50167944",
+    "moonwell_artemis": "85747520",
+    "parallel": "54666976",
+    "starlay": "12615493"
+  },
+  {
+    "date": "2022-07-05",
+    "moonwell_apollo": "46855835",
+    "moonwell_artemis": "89681367",
+    "parallel": "51630007",
+    "starlay": "13109047"
+  },
+  {
+    "date": "2022-07-06",
+    "moonwell_apollo": "48772232",
+    "moonwell_artemis": "89174076",
+    "parallel": "52722411",
+    "starlay": "13414046"
+  },
+  {
+    "date": "2022-07-07",
+    "moonwell_apollo": "49357367",
+    "moonwell_artemis": "89096212",
+    "parallel": "55903371",
+    "starlay": "11407604"
+  },
+  {
+    "date": "2022-07-08",
+    "moonwell_apollo": "50720582",
+    "moonwell_artemis": "90631905",
+    "parallel": "53945689",
+    "starlay": "12292729"
+  },
+  {
+    "date": "2022-07-09",
+    "moonwell_apollo": "49930719",
+    "moonwell_artemis": "90554383",
+    "parallel": "54996275",
+    "starlay": "12035841"
+  },
+  {
+    "date": "2022-07-10",
+    "moonwell_apollo": "50311827",
+    "moonwell_artemis": "90283075",
+    "parallel": "52388595",
+    "starlay": "12083200"
+  },
+  {
+    "date": "2022-07-11",
+    "moonwell_apollo": "49677591",
+    "moonwell_artemis": "89079550",
+    "parallel": "49362377",
+    "starlay": "11990332"
+  },
+  {
+    "date": "2022-07-12",
+    "moonwell_apollo": "48432966",
+    "moonwell_artemis": "86698643",
+    "parallel": "47783680",
+    "starlay": "11101976"
+  },
+  {
+    "date": "2022-07-13",
+    "moonwell_apollo": "47726696",
+    "moonwell_artemis": "86166889",
+    "parallel": "48674351",
+    "starlay": "11499497"
+  },
+  {
+    "date": "2022-07-14",
+    "moonwell_apollo": "47778902",
+    "moonwell_artemis": "87779239",
+    "parallel": "50096489",
+    "starlay": "10055947"
+  },
+  {
+    "date": "2022-07-15",
+    "moonwell_apollo": "48437364",
+    "moonwell_artemis": "89486425",
+    "parallel": "51713018",
+    "starlay": "10211518"
+  },
+  {
+    "date": "2022-07-16",
+    "moonwell_apollo": "49844957",
+    "moonwell_artemis": "90458690",
+    "parallel": "53226645",
+    "starlay": "10234059"
+  },
+  {
+    "date": "2022-07-17",
+    "moonwell_apollo": "51356834",
+    "moonwell_artemis": "93099122",
+    "parallel": "51824109",
+    "starlay": "10614451"
+  },
+  {
+    "date": "2022-07-18",
+    "moonwell_apollo": "51424807",
+    "moonwell_artemis": "98041762",
+    "parallel": "58543766",
+    "starlay": "10861553"
+  },
+  {
+    "date": "2022-07-19",
+    "moonwell_apollo": "53746726",
+    "moonwell_artemis": "103657274",
+    "parallel": "57812338",
+    "starlay": "11370382"
+  },
+  {
+    "date": "2022-07-20",
+    "moonwell_apollo": "53743633",
+    "moonwell_artemis": "103871809",
+    "parallel": "58104903",
+    "starlay": "10141926"
+  },
+  {
+    "date": "2022-07-21",
+    "moonwell_apollo": "53684776",
+    "moonwell_artemis": "105496323",
+    "parallel": "58518333",
+    "starlay": "9275965"
+  },
+  {
+    "date": "2022-07-22",
+    "moonwell_apollo": "55261363",
+    "moonwell_artemis": "109351871",
+    "parallel": "62134018",
+    "starlay": "13128757"
+  },
+  {
+    "date": "2022-07-23",
+    "moonwell_apollo": "54705492",
+    "moonwell_artemis": "112421967",
+    "parallel": "63721994",
+    "starlay": "12560633"
+  },
+  {
+    "date": "2022-07-24",
+    "moonwell_apollo": "55488294",
+    "moonwell_artemis": "112332550",
+    "parallel": "64750386",
+    "starlay": "11800898"
+  },
+  {
+    "date": "2022-07-25",
+    "moonwell_apollo": "57521715",
+    "moonwell_artemis": "112488480",
+    "parallel": "59070307",
+    "starlay": "12204131"
+  },
+  {
+    "date": "2022-07-26",
+    "moonwell_apollo": "55868737",
+    "moonwell_artemis": "88330762",
+    "parallel": "60164476",
+    "starlay": "11747551"
+  },
+  {
+    "date": "2022-07-27",
+    "moonwell_apollo": "54862699",
+    "moonwell_artemis": "88477245",
+    "parallel": "67074497",
+    "starlay": "11767020"
+  },
+  {
+    "date": "2022-07-28",
+    "moonwell_apollo": "56849283",
+    "moonwell_artemis": "90552828",
+    "parallel": "68634131",
+    "starlay": "12067995"
+  },
+  {
+    "date": "2022-07-29",
+    "moonwell_apollo": "56909272",
+    "moonwell_artemis": "99215097",
+    "parallel": "69002074",
+    "starlay": "12490323"
+  },
+  {
+    "date": "2022-07-30",
+    "moonwell_apollo": "56796125",
+    "moonwell_artemis": "100017762",
+    "parallel": "66886644",
+    "starlay": "12316645"
+  },
+  {
+    "date": "2022-07-31",
+    "moonwell_apollo": "56701792",
+    "moonwell_artemis": "103920584",
+    "parallel": "69190984",
+    "starlay": "11872262"
+  },
+  {
+    "date": "2022-08-01",
+    "moonwell_apollo": "56219238",
+    "moonwell_artemis": "103042389",
+    "parallel": "68252230",
+    "starlay": "11915999"
+  },
+  {
+    "date": "2022-08-02",
+    "moonwell_apollo": "54218814",
+    "moonwell_artemis": "86287098",
+    "parallel": "66978083",
+    "starlay": "11841008"
+  },
+  {
+    "date": "2022-08-03",
+    "moonwell_apollo": "36825894",
+    "moonwell_artemis": "32675069",
+    "parallel": "69278783",
+    "starlay": "11405982"
+  },
+  {
+    "date": "2022-08-04",
+    "moonwell_apollo": "37006024",
+    "moonwell_artemis": "22201012",
+    "parallel": "69101051",
+    "starlay": "9999277"
+  },
+  {
+    "date": "2022-08-05",
+    "moonwell_apollo": "37014344",
+    "moonwell_artemis": "21146396",
+    "parallel": "74732388",
+    "starlay": "9584480"
+  },
+  {
+    "date": "2022-08-06",
+    "moonwell_apollo": "37156901",
+    "moonwell_artemis": "21156750",
+    "parallel": "75252626",
+    "starlay": "10809193"
+  },
+  {
+    "date": "2022-08-07",
+    "moonwell_apollo": "42043738",
+    "moonwell_artemis": "21945622",
+    "parallel": "74639420",
+    "starlay": "10909929"
+  },
+  {
+    "date": "2022-08-08",
+    "moonwell_apollo": "43196888",
+    "moonwell_artemis": "21823182",
+    "parallel": "70454213",
+    "starlay": "10900544"
+  },
+  {
+    "date": "2022-08-09",
+    "moonwell_apollo": "43572578",
+    "moonwell_artemis": "22632535",
+    "parallel": "67393229",
+    "starlay": "11147298"
+  },
+  {
+    "date": "2022-08-10",
+    "moonwell_apollo": "42603204",
+    "moonwell_artemis": "21824336",
+    "parallel": "71765139",
+    "starlay": "9567158"
+  },
+  {
+    "date": "2022-08-11",
+    "moonwell_apollo": "43467030",
+    "moonwell_artemis": "22620527",
+    "parallel": "73476715",
+    "starlay": "9401631"
+  },
+  {
+    "date": "2022-08-12",
+    "moonwell_apollo": "44269197",
+    "moonwell_artemis": "22677436",
+    "parallel": "74188948",
+    "starlay": "9361143"
+  },
+  {
+    "date": "2022-08-13",
+    "moonwell_apollo": "44428024",
+    "moonwell_artemis": "23302114",
+    "parallel": "73630005",
+    "starlay": "9347758"
+  },
+  {
+    "date": "2022-08-14",
+    "moonwell_apollo": "44728262",
+    "moonwell_artemis": "24834313",
+    "parallel": "69340570",
+    "starlay": "9377652"
+  },
+  {
+    "date": "2022-08-15",
+    "moonwell_apollo": "44195713",
+    "moonwell_artemis": "23343086",
+    "parallel": "67568739",
+    "starlay": "8263022"
+  },
+  {
+    "date": "2022-08-16",
+    "moonwell_apollo": "44064768",
+    "moonwell_artemis": "23505236",
+    "parallel": "69598515",
+    "starlay": "9370411"
+  },
+  {
+    "date": "2022-08-17",
+    "moonwell_apollo": "43920928",
+    "moonwell_artemis": "23669194",
+    "parallel": "66230900",
+    "starlay": "9373244"
+  },
+  {
+    "date": "2022-08-18",
+    "moonwell_apollo": "43286902",
+    "moonwell_artemis": "23617558",
+    "parallel": "57891288",
+    "starlay": "9167763"
+  },
+  {
+    "date": "2022-08-19",
+    "moonwell_apollo": "43632377",
+    "moonwell_artemis": "22383057",
+    "parallel": "52643058",
+    "starlay": "8747563"
+  },
+  {
+    "date": "2022-08-20",
+    "moonwell_apollo": "41887351",
+    "moonwell_artemis": "21529742",
+    "parallel": "49874946",
+    "starlay": "8242875"
+  },
+  {
+    "date": "2022-08-21",
+    "moonwell_apollo": "41589779",
+    "moonwell_artemis": "21422487",
+    "parallel": "51320837",
+    "starlay": "8130693"
+  },
+  {
+    "date": "2022-08-22",
+    "moonwell_apollo": "42069683",
+    "moonwell_artemis": "21782700",
+    "parallel": "51043875",
+    "starlay": "8233418"
+  },
+  {
+    "date": "2022-08-23",
+    "moonwell_apollo": "42094282",
+    "moonwell_artemis": "21570946",
+    "parallel": "52293362",
+    "starlay": "8238988"
+  },
+  {
+    "date": "2022-08-24",
+    "moonwell_apollo": "42138474",
+    "moonwell_artemis": "21448218",
+    "parallel": "51516011",
+    "starlay": "8256780"
+  },
+  {
+    "date": "2022-08-25",
+    "moonwell_apollo": "42497107",
+    "moonwell_artemis": "21683975",
+    "parallel": "52912380",
+    "starlay": "8016034"
+  },
+  {
+    "date": "2022-08-26",
+    "moonwell_apollo": "42647294",
+    "moonwell_artemis": "21692453",
+    "parallel": "47997032",
+    "starlay": "8035165"
+  },
+  {
+    "date": "2022-08-27",
+    "moonwell_apollo": "41551054",
+    "moonwell_artemis": "20922058",
+    "parallel": "49106501",
+    "starlay": "7648127"
+  },
+  {
+    "date": "2022-08-28",
+    "moonwell_apollo": "41206408",
+    "moonwell_artemis": "20671864",
+    "parallel": "48166635",
+    "starlay": "7497596"
+  },
+  {
+    "date": "2022-08-29",
+    "moonwell_apollo": "40959841",
+    "moonwell_artemis": "20458563",
+    "parallel": "51822892",
+    "starlay": "7300768"
+  },
+  {
+    "date": "2022-08-30",
+    "moonwell_apollo": "41510990",
+    "moonwell_artemis": "21232346",
+    "parallel": "49651672",
+    "starlay": "7311162"
+  },
+  {
+    "date": "2022-08-31",
+    "moonwell_apollo": "41533436",
+    "moonwell_artemis": "20201779",
+    "parallel": "50713802",
+    "starlay": "6757674"
+  },
+  {
+    "date": "2022-09-01",
+    "moonwell_apollo": "41545647",
+    "moonwell_artemis": "20062274",
+    "parallel": "52084456",
+    "starlay": "6644288"
+  },
+  {
+    "date": "2022-09-02",
+    "moonwell_apollo": "42049308",
+    "moonwell_artemis": "19976470",
+    "parallel": "53617721",
+    "starlay": "7159197"
+  },
+  {
+    "date": "2022-09-03",
+    "moonwell_apollo": "47336657",
+    "moonwell_artemis": "20066747",
+    "parallel": "53512034",
+    "starlay": "6951768"
+  },
+  {
+    "date": "2022-09-04",
+    "moonwell_apollo": "47178216",
+    "moonwell_artemis": "19952222",
+    "parallel": "54801667",
+    "starlay": "6954322"
+  },
+  {
+    "date": "2022-09-05",
+    "moonwell_apollo": "47471670",
+    "moonwell_artemis": "19309624",
+    "parallel": "54503570",
+    "starlay": "6989768"
+  },
+  {
+    "date": "2022-09-06",
+    "moonwell_apollo": "44405672",
+    "moonwell_artemis": "18820132",
+    "parallel": "50843107",
+    "starlay": "6589303"
+  },
+  {
+    "date": "2022-09-07",
+    "moonwell_apollo": "44775525",
+    "moonwell_artemis": "18482674",
+    "parallel": "53907562",
+    "starlay": "6384928"
+  },
+  {
+    "date": "2022-09-08",
+    "moonwell_apollo": "45259333",
+    "moonwell_artemis": "18894391",
+    "parallel": "55680256",
+    "starlay": "6497919"
+  },
+  {
+    "date": "2022-09-09",
+    "moonwell_apollo": "45834116",
+    "moonwell_artemis": "19098626",
+    "parallel": "58402937",
+    "starlay": "6014754"
+  },
+  {
+    "date": "2022-09-10",
+    "moonwell_apollo": "46157242",
+    "moonwell_artemis": "19938693",
+    "parallel": "58251004",
+    "starlay": "6196625"
+  },
+  {
+    "date": "2022-09-11",
+    "moonwell_apollo": "46237191",
+    "moonwell_artemis": "20120377",
+    "parallel": "55471708",
+    "starlay": "6271525"
+  },
+  {
+    "date": "2022-09-12",
+    "moonwell_apollo": "46051730",
+    "moonwell_artemis": "20243731",
+    "parallel": "55402848",
+    "starlay": "6056107"
+  },
+  {
+    "date": "2022-09-13",
+    "moonwell_apollo": "41722824",
+    "moonwell_artemis": "19941358",
+    "parallel": "51288926",
+    "starlay": "6149429"
+  },
+  {
+    "date": "2022-09-14",
+    "moonwell_apollo": "39610157",
+    "moonwell_artemis": "19218769",
+    "parallel": "52592047",
+    "starlay": "5686234"
+  },
+  {
+    "date": "2022-09-15",
+    "moonwell_apollo": "38021070",
+    "moonwell_artemis": "19509071",
+    "parallel": "50158913",
+    "starlay": "5321548"
+  },
+  {
+    "date": "2022-09-16",
+    "moonwell_apollo": "41020490",
+    "moonwell_artemis": "19366158",
+    "parallel": "51596798",
+    "starlay": "6067890"
+  },
+  {
+    "date": "2022-09-17",
+    "moonwell_apollo": "40892993",
+    "moonwell_artemis": "19411409",
+    "parallel": "51489281",
+    "starlay": "6172485"
+  },
+  {
+    "date": "2022-09-18",
+    "moonwell_apollo": "41173221",
+    "moonwell_artemis": "19842238",
+    "parallel": "47597443",
+    "starlay": "6202843"
+  },
+  {
+    "date": "2022-09-19",
+    "moonwell_apollo": "40437739",
+    "moonwell_artemis": "19469927",
+    "parallel": "47658562",
+    "starlay": "6158822"
+  },
+  {
+    "date": "2022-09-20",
+    "moonwell_apollo": "41455106",
+    "moonwell_artemis": "19531951",
+    "parallel": "47191096",
+    "starlay": "6046588"
+  },
+  {
+    "date": "2022-09-21",
+    "moonwell_apollo": "41029577",
+    "moonwell_artemis": "19200053",
+    "parallel": "46733489",
+    "starlay": "6072165"
+  },
+  {
+    "date": "2022-09-22",
+    "moonwell_apollo": "40675649",
+    "moonwell_artemis": "18812601",
+    "parallel": "48253399",
+    "starlay": "6418199"
+  },
+  {
+    "date": "2022-09-23",
+    "moonwell_apollo": "41069282",
+    "moonwell_artemis": "19744772",
+    "parallel": "48035400",
+    "starlay": "6765599"
+  },
+  {
+    "date": "2022-09-24",
+    "moonwell_apollo": "39827036",
+    "moonwell_artemis": "19817047",
+    "parallel": "46819500",
+    "starlay": "6738230"
+  },
+  {
+    "date": "2022-09-25",
+    "moonwell_apollo": "39838806",
+    "moonwell_artemis": "19740301",
+    "parallel": "46587505",
+    "starlay": "6890174"
+  },
+  {
+    "date": "2022-09-26",
+    "moonwell_apollo": "39806540",
+    "moonwell_artemis": "19829919",
+    "parallel": "48206510",
+    "starlay": "7052760"
+  },
+  {
+    "date": "2022-09-27",
+    "moonwell_apollo": "39941890",
+    "moonwell_artemis": "20159760",
+    "parallel": "47350573",
+    "starlay": "7117694"
+  },
+  {
+    "date": "2022-09-28",
+    "moonwell_apollo": "40017690",
+    "moonwell_artemis": "20151600",
+    "parallel": "47737410",
+    "starlay": "7085825"
+  },
+  {
+    "date": "2022-09-29",
+    "moonwell_apollo": "40050720",
+    "moonwell_artemis": "20120503",
+    "parallel": "48251738",
+    "starlay": "7048608"
+  },
+  {
+    "date": "2022-09-30",
+    "moonwell_apollo": "39762910",
+    "moonwell_artemis": "20199969",
+    "parallel": "47446573",
+    "starlay": "6882835"
+  }
+]

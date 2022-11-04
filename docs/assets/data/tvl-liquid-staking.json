@@ -1,0 +1,796 @@
+﻿[
+  {
+    "date": "2022-07-01",
+    "lido_moonriver": "1356156",
+    "karura": "8645748",
+    "parallel": "14944504",
+    "bifrost": "4150539"
+  },
+  {
+    "date": "2022-07-02",
+    "lido_moonriver": "1262558",
+    "karura": "8684620",
+    "parallel": "14969734",
+    "bifrost": "4220434"
+  },
+  {
+    "date": "2022-07-03",
+    "lido_moonriver": "1275949",
+    "karura": "8788644",
+    "parallel": "15009200",
+    "bifrost": "4326343"
+  },
+  {
+    "date": "2022-07-04",
+    "lido_moonriver": "1343860",
+    "karura": "8935318",
+    "parallel": "15035997",
+    "bifrost": "4504163"
+  },
+  {
+    "date": "2022-07-05",
+    "lido_moonriver": "1411200",
+    "karura": "9379990",
+    "parallel": "15054173",
+    "bifrost": "4912166"
+  },
+  {
+    "date": "2022-07-06",
+    "lido_moonriver": "1385184",
+    "karura": "9150811",
+    "parallel": "15073264",
+    "bifrost": "4997476"
+  },
+  {
+    "date": "2022-07-07",
+    "lido_moonriver": "1477325",
+    "karura": "9396134",
+    "parallel": "15065329",
+    "bifrost": "5141449"
+  },
+  {
+    "date": "2022-07-08",
+    "lido_moonriver": "1682101",
+    "karura": "9722908",
+    "parallel": "15273873",
+    "bifrost": "5089786"
+  },
+  {
+    "date": "2022-07-09",
+    "lido_moonriver": "1689358",
+    "karura": "9679277",
+    "parallel": "15297883",
+    "bifrost": "5200486"
+  },
+  {
+    "date": "2022-07-10",
+    "lido_moonriver": "1694962",
+    "karura": "9952218",
+    "parallel": "15494657",
+    "bifrost": "4894221"
+  },
+  {
+    "date": "2022-07-11",
+    "lido_moonriver": "1584160",
+    "karura": "9288018",
+    "parallel": "15695287",
+    "bifrost": "4575470"
+  },
+  {
+    "date": "2022-07-12",
+    "lido_moonriver": "1504596",
+    "karura": "9599071",
+    "parallel": "15779326",
+    "bifrost": "4577864"
+  },
+  {
+    "date": "2022-07-13",
+    "lido_moonriver": "1605840",
+    "karura": "9820671",
+    "parallel": "15769766",
+    "bifrost": "4526841"
+  },
+  {
+    "date": "2022-07-14",
+    "lido_moonriver": "1680481",
+    "karura": "10112875",
+    "parallel": "15752130",
+    "bifrost": "4706011",
+    "taiga": "1844288"
+  },
+  {
+    "date": "2022-07-15",
+    "lido_moonriver": "1773605",
+    "karura": "10721694",
+    "parallel": "15775677",
+    "bifrost": "4970575",
+    "taiga": "1899517"
+  },
+  {
+    "date": "2022-07-16",
+    "lido_moonriver": "1898490",
+    "karura": "11332420",
+    "parallel": "15756847",
+    "bifrost": "5457613",
+    "taiga": "1953689"
+  },
+  {
+    "date": "2022-07-17",
+    "lido_moonriver": "1979338",
+    "karura": "11757939",
+    "parallel": "15636922",
+    "bifrost": "5276093",
+    "taiga": "2014203"
+  },
+  {
+    "date": "2022-07-18",
+    "lido_moonriver": "1946815",
+    "karura": "11367769",
+    "parallel": "15721341",
+    "bifrost": "6036805",
+    "taiga": "2227812"
+  },
+  {
+    "date": "2022-07-19",
+    "lido_moonriver": "2267145",
+    "karura": "12868254",
+    "parallel": "15753604",
+    "bifrost": "5967723",
+    "taiga": "2592377"
+  },
+  {
+    "date": "2022-07-20",
+    "lido_moonriver": "2261799",
+    "karura": "12665212",
+    "parallel": "16100045",
+    "bifrost": "5622071",
+    "taiga": "2598808"
+  },
+  {
+    "date": "2022-07-21",
+    "lido_moonbeam": "5685538",
+    "lido_moonriver": "2172058",
+    "karura": "12100705",
+    "parallel": "16100112",
+    "bifrost": "5759487",
+    "taiga": "2598677"
+  },
+  {
+    "date": "2022-07-22",
+    "lido_moonbeam": "5761495",
+    "lido_moonriver": "2217953",
+    "karura": "12377165",
+    "parallel": "15945831",
+    "bifrost": "7931264",
+    "taiga": "2742283"
+  },
+  {
+    "date": "2022-07-23",
+    "lido_moonbeam": "5729505",
+    "lido_moonriver": "2456515",
+    "karura": "13463989",
+    "parallel": "15979801",
+    "bifrost": "9505564",
+    "taiga": "2942062"
+  },
+  {
+    "date": "2022-07-24",
+    "lido_moonbeam": "5783662",
+    "lido_moonriver": "2456980",
+    "karura": "13583493",
+    "parallel": "16079186",
+    "bifrost": "9161982",
+    "taiga": "3027823"
+  },
+  {
+    "date": "2022-07-25",
+    "lido_moonbeam": "5817205",
+    "lido_moonriver": "2366872",
+    "karura": "12911546",
+    "parallel": "16077696",
+    "bifrost": "8308970",
+    "taiga": "3043873"
+  },
+  {
+    "date": "2022-07-26",
+    "lido_moonbeam": "5687316",
+    "lido_moonriver": "2190170",
+    "karura": "12077334",
+    "parallel": "16052564",
+    "bifrost": "8197327",
+    "taiga": "2946491"
+  },
+  {
+    "date": "2022-07-27",
+    "lido_moonbeam": "5389063",
+    "lido_moonriver": "2101148",
+    "karura": "11568029",
+    "parallel": "15831076",
+    "bifrost": "8718787",
+    "taiga": "2925596"
+  },
+  {
+    "date": "2022-07-28",
+    "lido_moonbeam": "6118241",
+    "lido_moonriver": "2305810",
+    "karura": "12315449",
+    "parallel": "16351536",
+    "bifrost": "9221807",
+    "taiga": "2880825"
+  },
+  {
+    "date": "2022-07-29",
+    "lido_moonbeam": "6379260",
+    "lido_moonriver": "2508402",
+    "karura": "13279905",
+    "bifrost": "9025882",
+    "taiga": "3022585"
+  },
+  {
+    "date": "2022-07-30",
+    "lido_moonbeam": "7407819",
+    "lido_moonriver": "2615197",
+    "karura": "13099009",
+    "parallel": "16125575",
+    "bifrost": "8902024",
+    "taiga": "2979662"
+  },
+  {
+    "date": "2022-07-31",
+    "lido_moonbeam": "7520666",
+    "lido_moonriver": "2617100",
+    "karura": "13041509",
+    "parallel": "15994748",
+    "bifrost": "9031564",
+    "taiga": "3016012"
+  },
+  {
+    "date": "2022-08-01",
+    "lido_moonbeam": "8764872",
+    "lido_moonriver": "2642055",
+    "karura": "13046595",
+    "parallel": "15997908",
+    "bifrost": "9093549",
+    "taiga": "3013798"
+  },
+  {
+    "date": "2022-08-02",
+    "lido_moonbeam": "8404786",
+    "lido_moonriver": "2641528",
+    "karura": "13209644",
+    "parallel": "16015170",
+    "bifrost": "8624348",
+    "taiga": "2961233"
+  },
+  {
+    "date": "2022-08-03",
+    "lido_moonbeam": "7937835",
+    "lido_moonriver": "2452983",
+    "karura": "12341556",
+    "parallel": "15993097",
+    "bifrost": "8674986",
+    "taiga": "2992164"
+  },
+  {
+    "date": "2022-08-04",
+    "lido_moonbeam": "8368932",
+    "lido_moonriver": "2562580",
+    "karura": "12700109",
+    "parallel": "15998866",
+    "bifrost": "8632000",
+    "taiga": "3011481"
+  },
+  {
+    "date": "2022-08-05",
+    "lido_moonbeam": "8432576",
+    "lido_moonriver": "2538560",
+    "karura": "12567796",
+    "parallel": "16117496",
+    "bifrost": "8931636",
+    "taiga": "2973415"
+  },
+  {
+    "date": "2022-08-06",
+    "lido_moonbeam": "9156378",
+    "lido_moonriver": "2767823",
+    "karura": "13090899",
+    "parallel": "16135953",
+    "bifrost": "9574570",
+    "taiga": "3015329"
+  },
+  {
+    "date": "2022-08-07",
+    "lido_moonbeam": "8989666",
+    "lido_moonriver": "3089818",
+    "karura": "13784862",
+    "parallel": "16042084",
+    "bifrost": "11685474",
+    "taiga": "3034074"
+  },
+  {
+    "date": "2022-08-08",
+    "lido_moonbeam": "9315878",
+    "lido_moonriver": "3294833",
+    "karura": "13607453",
+    "parallel": "16304178",
+    "bifrost": "11645544",
+    "taiga": "3039642"
+  },
+  {
+    "date": "2022-08-09",
+    "lido_moonbeam": "9968139",
+    "lido_moonriver": "4027760",
+    "karura": "14877430",
+    "parallel": "13352789",
+    "bifrost": "10970793",
+    "taiga": "3147930"
+  },
+  {
+    "date": "2022-08-10",
+    "lido_moonbeam": "9211688",
+    "lido_moonriver": "3673865",
+    "karura": "14892292",
+    "parallel": "13383803",
+    "bifrost": "11671572",
+    "taiga": "3019735"
+  },
+  {
+    "date": "2022-08-11",
+    "lido_moonbeam": "10202057",
+    "lido_moonriver": "4281703",
+    "karura": "14892292",
+    "parallel": "15885508",
+    "bifrost": "11329040",
+    "taiga": "3123919"
+  },
+  {
+    "date": "2022-08-12",
+    "lido_moonbeam": "12125055",
+    "lido_moonriver": "4114529",
+    "karura": "14085096",
+    "parallel": "15910913",
+    "bifrost": "11420861",
+    "taiga": "3102057"
+  },
+  {
+    "date": "2022-08-13",
+    "lido_moonbeam": "12491498",
+    "lido_moonriver": "4143779",
+    "karura": "14180988",
+    "parallel": "15939427",
+    "bifrost": "11405982",
+    "taiga": "3044691"
+  },
+  {
+    "date": "2022-08-14",
+    "lido_moonbeam": "12624811",
+    "lido_moonriver": "4265594",
+    "karura": "14160327",
+    "parallel": "15942381",
+    "bifrost": "10992022",
+    "taiga": "2905936"
+  },
+  {
+    "date": "2022-08-15",
+    "lido_moonbeam": "12196263",
+    "lido_moonriver": "4343811",
+    "karura": "13781310",
+    "parallel": "15946997",
+    "bifrost": "10844390",
+    "taiga": "2187219"
+  },
+  {
+    "date": "2022-08-16",
+    "lido_moonbeam": "11959487",
+    "lido_moonriver": "4250385",
+    "karura": "13312024",
+    "parallel": "15809909",
+    "bifrost": "10528214",
+    "taiga": "2584601"
+  },
+  {
+    "date": "2022-08-17",
+    "lido_moonbeam": "12382371",
+    "lido_moonriver": "4196048",
+    "karura": "13209880",
+    "parallel": "15805972",
+    "bifrost": "10265559",
+    "taiga": "2550899"
+  },
+  {
+    "date": "2022-08-18",
+    "lido_moonbeam": "12563618",
+    "lido_moonriver": "4143522",
+    "karura": "12462439",
+    "parallel": "15728403",
+    "bifrost": "9766693",
+    "taiga": "2041144"
+  },
+  {
+    "date": "2022-08-19",
+    "lido_moonbeam": "11866244",
+    "lido_moonriver": "4092933",
+    "karura": "11793531",
+    "parallel": "15866719",
+    "bifrost": "9216234",
+    "taiga": "2538749"
+  },
+  {
+    "date": "2022-08-20",
+    "lido_moonbeam": "11219179",
+    "lido_moonriver": "4032865",
+    "karura": "11090308",
+    "parallel": "15914597",
+    "bifrost": "9213288",
+    "taiga": "2516776"
+  },
+  {
+    "date": "2022-08-21",
+    "lido_moonbeam": "11062102",
+    "lido_moonriver": "3979057",
+    "karura": "11032057",
+    "parallel": "15916225",
+    "bifrost": "10227904",
+    "taiga": "2496783"
+  },
+  {
+    "date": "2022-08-22",
+    "lido_moonbeam": "11329498",
+    "lido_moonriver": "4176748",
+    "karura": "11444258",
+    "parallel": "15823928",
+    "bifrost": "10160238",
+    "taiga": "2524979"
+  },
+  {
+    "date": "2022-08-23",
+    "lido_moonbeam": "11290197",
+    "lido_moonriver": "4064331",
+    "karura": "11354329",
+    "parallel": "15934031",
+    "bifrost": "9958052",
+    "taiga": "2533752"
+  },
+  {
+    "date": "2022-08-24",
+    "lido_moonbeam": "12260315",
+    "lido_moonriver": "3871862",
+    "karura": "11022545",
+    "parallel": "15936360",
+    "bifrost": "9822199",
+    "taiga": "2560858"
+  },
+  {
+    "date": "2022-08-25",
+    "lido_moonbeam": "12404056",
+    "lido_moonriver": "3959538",
+    "karura": "10863109",
+    "parallel": "15554198",
+    "bifrost": "9748051",
+    "taiga": "2314289"
+  },
+  {
+    "date": "2022-08-26",
+    "lido_moonbeam": "13054465",
+    "lido_moonriver": "3634598",
+    "karura": "10602639",
+    "parallel": "15555028",
+    "bifrost": "8908043",
+    "taiga": "2267523"
+  },
+  {
+    "date": "2022-08-27",
+    "lido_moonbeam": "12016575",
+    "lido_moonriver": "3299282",
+    "karura": "9701539",
+    "parallel": "15552186",
+    "bifrost": "9193399",
+    "taiga": "2492867"
+  },
+  {
+    "date": "2022-08-28",
+    "lido_moonbeam": "12232657",
+    "lido_moonriver": "3413243",
+    "karura": "10185570",
+    "parallel": "15572923",
+    "bifrost": "10056570",
+    "taiga": "2263339"
+  },
+  {
+    "date": "2022-08-29",
+    "lido_moonbeam": "11822992",
+    "lido_moonriver": "3388931",
+    "karura": "10164688",
+    "parallel": "15533218",
+    "bifrost": "10326838",
+    "taiga": "2436257"
+  },
+  {
+    "date": "2022-08-30",
+    "lido_moonbeam": "12467227",
+    "lido_moonriver": "3699254",
+    "karura": "11112011",
+    "parallel": "15557006",
+    "bifrost": "10299734",
+    "taiga": "2396093"
+  },
+  {
+    "date": "2022-08-31",
+    "lido_moonbeam": "12276612",
+    "lido_moonriver": "3602250",
+    "karura": "10590846",
+    "parallel": "15458106",
+    "bifrost": "10329573",
+    "taiga": "2114554"
+  },
+  {
+    "date": "2022-09-01",
+    "lido_moonbeam": "12081577",
+    "lido_moonriver": "3506870",
+    "karura": "10510872",
+    "parallel": "15475320",
+    "bifrost": "10375723",
+    "taiga": "2328191"
+  },
+  {
+    "date": "2022-09-02",
+    "lido_moonbeam": "12422635",
+    "lido_moonriver": "3537353",
+    "karura": "10435032",
+    "parallel": "15095705",
+    "bifrost": "10587204",
+    "taiga": "2438686"
+  },
+  {
+    "date": "2022-09-03",
+    "lido_moonbeam": "12680658",
+    "lido_moonriver": "3633506",
+    "karura": "10511353",
+    "parallel": "15037265",
+    "bifrost": "11001691",
+    "taiga": "2171949"
+  },
+  {
+    "date": "2022-09-04",
+    "lido_moonbeam": "12738422",
+    "lido_moonriver": "3717161",
+    "karura": "10843908",
+    "parallel": "14990196",
+    "bifrost": "11135564",
+    "taiga": "2465346"
+  },
+  {
+    "date": "2022-09-05",
+    "lido_moonbeam": "12952078",
+    "lido_moonriver": "3827592",
+    "karura": "11165398",
+    "parallel": "14970423",
+    "bifrost": "9946508",
+    "taiga": "2495291"
+  },
+  {
+    "date": "2022-09-06",
+    "lido_moonbeam": "13122717",
+    "lido_moonriver": "3972954",
+    "karura": "11177318",
+    "parallel": "14891175",
+    "bifrost": "10535925",
+    "taiga": "2384743"
+  },
+  {
+    "date": "2022-09-07",
+    "lido_moonbeam": "12025202",
+    "lido_moonriver": "3499767",
+    "karura": "9796674",
+    "parallel": "14873341",
+    "bifrost": "10928929",
+    "taiga": "2358848"
+  },
+  {
+    "date": "2022-09-08",
+    "lido_moonbeam": "12536423",
+    "lido_moonriver": "3733408",
+    "karura": "10459385",
+    "parallel": "14869072",
+    "bifrost": "11449052",
+    "taiga": "2274081"
+  },
+  {
+    "date": "2022-09-09",
+    "lido_moonbeam": "12977896",
+    "lido_moonriver": "3865590",
+    "karura": "10853981",
+    "parallel": "14614369",
+    "bifrost": "11411724",
+    "taiga": "2352774"
+  },
+  {
+    "date": "2022-09-10",
+    "lido_moonbeam": "13567862",
+    "lido_moonriver": "4097658",
+    "karura": "11312996",
+    "parallel": "14652647",
+    "bifrost": "11247305",
+    "taiga": "2474062"
+  },
+  {
+    "date": "2022-09-11",
+    "lido_moonbeam": "13609413",
+    "lido_moonriver": "4100048",
+    "karura": "11271427",
+    "parallel": "14507321",
+    "bifrost": "11326306",
+    "taiga": "2476053"
+  },
+  {
+    "date": "2022-09-12",
+    "lido_moonbeam": "13370086",
+    "lido_moonriver": "4019285",
+    "karura": "10944130",
+    "parallel": "14519250",
+    "bifrost": "10113209",
+    "taiga": "2412188"
+  },
+  {
+    "date": "2022-09-13",
+    "lido_moonbeam": "13425664",
+    "lido_moonriver": "4163992",
+    "karura": "10924016",
+    "parallel": "14475136",
+    "bifrost": "10361479",
+    "taiga": "2445522"
+  },
+  {
+    "date": "2022-09-14",
+    "lido_moonbeam": "12464936",
+    "lido_moonriver": "3738204",
+    "karura": "9733649",
+    "parallel": "14429521",
+    "bifrost": "9686996",
+    "taiga": "2339081"
+  },
+  {
+    "date": "2022-09-15",
+    "lido_moonbeam": "12563183",
+    "lido_moonriver": "3752549",
+    "karura": "9942247",
+    "parallel": "14444340",
+    "bifrost": "9567403",
+    "taiga": "2315824"
+  },
+  {
+    "date": "2022-09-16",
+    "lido_moonbeam": "12210497",
+    "lido_moonriver": "3566752",
+    "karura": "9282727",
+    "parallel": "14487162",
+    "bifrost": "9775219",
+    "taiga": "2295469"
+  },
+  {
+    "date": "2022-09-17",
+    "lido_moonbeam": "12348092",
+    "lido_moonriver": "3531423",
+    "karura": "9231599",
+    "parallel": "14474843",
+    "bifrost": "8601403",
+    "taiga": "2274293"
+  },
+  {
+    "date": "2022-09-18",
+    "lido_moonbeam": "12370937",
+    "lido_moonriver": "3553292",
+    "karura": "9322798",
+    "parallel": "12149660",
+    "bifrost": "8745701",
+    "taiga": "2262889"
+  },
+  {
+    "date": "2022-09-19",
+    "lido_moonbeam": "11511846",
+    "lido_moonriver": "3166425",
+    "karura": "8258911",
+    "parallel": "12163806",
+    "bifrost": "8691475",
+    "taiga": "2104121"
+  },
+  {
+    "date": "2022-09-20",
+    "lido_moonbeam": "11258624",
+    "lido_moonriver": "3236492",
+    "karura": "8407203",
+    "parallel": "12172955",
+    "bifrost": "8791466",
+    "taiga": "2199697"
+  },
+  {
+    "date": "2022-09-21",
+    "lido_moonbeam": "11247118",
+    "lido_moonriver": "3262450",
+    "karura": "8371272",
+    "parallel": "12168465",
+    "bifrost": "9087637",
+    "taiga": "2140917"
+  },
+  {
+    "date": "2022-09-22",
+    "lido_moonbeam": "10852846",
+    "lido_moonriver": "3255364",
+    "karura": "8427332",
+    "parallel": "12199356",
+    "bifrost": "9185756",
+    "taiga": "2201103"
+  },
+  {
+    "date": "2022-09-23",
+    "lido_moonbeam": "11565616",
+    "lido_moonriver": "3386563",
+    "karura": "8739972",
+    "parallel": "12059840",
+    "bifrost": "8965280",
+    "taiga": "2191390"
+  },
+  {
+    "date": "2022-09-24",
+    "lido_moonbeam": "11659194",
+    "lido_moonriver": "3434066",
+    "karura": "8869698",
+    "parallel": "12081370",
+    "bifrost": "8795924",
+    "taiga": "2072366"
+  },
+  {
+    "date": "2022-09-25",
+    "lido_moonbeam": "11447181",
+    "lido_moonriver": "3372707",
+    "karura": "8596084",
+    "parallel": "12072558",
+    "bifrost": "9161795",
+    "taiga": "2098199"
+  },
+  {
+    "date": "2022-09-26",
+    "lido_moonbeam": "11328509",
+    "lido_moonriver": "3280450",
+    "karura": "8438709",
+    "parallel": "12058765",
+    "bifrost": "9276048",
+    "taiga": "2097496"
+  },
+  {
+    "date": "2022-09-27",
+    "lido_moonbeam": "12159631",
+    "lido_moonriver": "3488321",
+    "karura": "8746741",
+    "parallel": "12064090",
+    "bifrost": "9625023",
+    "taiga": "2056457"
+  },
+  {
+    "date": "2022-09-28",
+    "lido_moonbeam": "11982092",
+    "lido_moonriver": "3462119",
+    "karura": "8840617",
+    "parallel": "12175714",
+    "bifrost": "9388349",
+    "taiga": "2153871"
+  },
+  {
+    "date": "2022-09-29",
+    "lido_moonbeam": "11976390",
+    "lido_moonriver": "3560583",
+    "karura": "9221692",
+    "parallel": "12230244",
+    "bifrost": "9209334",
+    "taiga": "2109154"
+  },
+  {
+    "date": "2022-09-30",
+    "lido_moonbeam": "12319442",
+    "lido_moonriver": "3495076",
+    "karura": "8907498",
+    "parallel": "12207701",
+    "bifrost": "9209849",
+    "taiga": "2120766"
+  }
+]
