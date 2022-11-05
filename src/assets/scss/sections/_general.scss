@@ -176,6 +176,7 @@
 
 .section-call-to-actions {
 	margin-top: var(--s-callout-top, 60px);
+	text-align: var(--s-callout-align, center);
 }
 
 .section-shapes {
@@ -210,6 +211,10 @@
 	position: absolute;
 	user-select: none;
 	pointer-events: none;
+
+	img {
+		max-width: var(--shape-max-width, 100%);
+	}
 }
 
 .image-group {

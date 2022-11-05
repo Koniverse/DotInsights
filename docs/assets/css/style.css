@@ -1501,14 +1501,14 @@ input[type='search'] {
   animation: zoom-in-zoom-out 5s linear infinite; }
 
 a {
-  color: #a8adc3;
+  color: #66e1b6;
   text-decoration: none; }
   a:hover, a:focus, a:active {
     outline: 0; }
   a:hover, a:focus {
     color: #66e1b6; }
   a.active {
-    color: #a8adc3; }
+    color: #66e1b6; }
   a[href^=tel] {
     text-decoration: none; }
 
@@ -4199,7 +4199,8 @@ body {
   line-height: 1.67; }
 
 .section-call-to-actions {
-  margin-top: var(--s-callout-top, 60px); }
+  margin-top: var(--s-callout-top, 60px);
+  text-align: var(--s-callout-align, center); }
 
 .section-shapes {
   position: absolute;
@@ -4229,6 +4230,8 @@ body {
   position: absolute;
   user-select: none;
   pointer-events: none; }
+  .section-shape img {
+    max-width: var(--shape-max-width, 100%); }
 
 .image-group {
   display: inline-block;

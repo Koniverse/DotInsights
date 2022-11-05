@@ -242,6 +242,12 @@
 						case 'dot-treasury-activity':
 							chartOptions = getChartOptionsDotTreasuryActivity( chartName, jsonData );
 							break;
+						case 'subsocial-daily-activities':
+							chartOptions = getChartOptionsSubsocialDailyActivities( chartName, jsonData );
+							break;
+						case 'joystream-cumulative-activities':
+							chartOptions = getChartOptionsJoystreamCumulativeActivities( chartName, jsonData );
+							break;
 					}
 					chartInstance.hideLoading();
 					chartInstance.setOption( chartOptions );
@@ -2040,6 +2046,79 @@
 			return $.extend( true, {}, baseOptions, responsiveOptions );
 		}
 
+		function getChartOptionsSubsocialDailyActivities( chartName, jsonData ) {
+			var datasets = [
+				    {
+					    name: 'post',
+					    label: locate.postsCreated
+				    }, {
+					    name: 'space',
+					    label: locate.spaceCreated
+				    }
+			    ],
+			    colors   = [
+				    '#004BFF',
+				    '#E9B255'
+			    ];
+
+			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors );
+			var responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
+			return $.extend( true, {}, baseOptions, responsiveOptions );
+		}
+
+		function getChartOptionsJoystreamCumulativeActivities( chartName, jsonData ) {
+			var datasets = [
+				    {
+					    name: 'user',
+					    label: locate.users,
+					    options: {
+						    z: 9,
+						    areaStyle: {
+							    opacity: 1,
+							    color: new echarts.graphic.LinearGradient( 0.5, 0, 0.5, 1, [
+								    {
+									    offset: 0,
+									    color: 'rgba(0,75,255,0.8)'
+								    },
+								    {
+									    offset: 1,
+									    color: 'rgba(0,75,255,0.05)'
+								    }
+							    ] )
+						    }
+					    }
+				    },
+				    {
+					    name: 'video',
+					    label: locate.videos,
+					    options: {
+						    areaStyle: {
+							    opacity: 1,
+							    color: new echarts.graphic.LinearGradient( 0.5, 0, 0.5, 1, [
+								    {
+									    offset: 0,
+									    color: 'rgba(233,178,85,0.42)'
+								    },
+								    {
+									    offset: 1,
+									    color: 'rgba(233,178,85,0.05)'
+								    }
+							    ] )
+						    },
+						    z: 9
+					    }
+				    }
+			    ],
+			    colors   = [
+				    '#004BFF',
+				    '#E9B255'
+			    ];
+
+			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors );
+			var responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
+			return $.extend( true, {}, baseOptions, responsiveOptions );
+		}
+
 		function getChartResponsiveOptionsNftMarketplaceDailyVolume() {
 			var newOptions = {};
 
@@ -2568,6 +2647,8 @@
 
 				if ( dataset.hasOwnProperty( 'options' ) ) {
 					options = $.extend( true, {}, options, dataset.options );
+
+					console.log( options );
 				}
 
 				// Used dateset.options instead of.
@@ -2680,6 +2761,8 @@
 					case 'tvl-lending-borrowing':
 					case 'tvl-liquid-staking':
 					case 'stablecoin-total-issuance':
+					case 'subsocial-daily-activities':
+					case 'joystream-cumulative-activities':
 						newOptions[ 'xAxis' ] = {
 							splitNumber: 5
 						};

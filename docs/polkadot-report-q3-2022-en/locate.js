@@ -24,7 +24,11 @@ var lang = {
 	useFrequently: 'Use frequently',
 	projectCount: 'Project Count',
 	inUSD: 'In (USD)',
-	outUSD: 'Out (USD)'
+	outUSD: 'Out (USD)',
+	postsCreated: 'Posts Created',
+	spaceCreated: 'Space Created',
+	users: 'Users',
+	videos: 'Videos',
 };
 
 window.DotInsights = window.DotInsights || {};
