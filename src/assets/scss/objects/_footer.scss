@@ -94,9 +94,17 @@
 	font-weight: 500;
 	line-height: 30px;
 
-	a,
 	mark {
 		color: #fff;
+	}
+
+	a {
+		color: #fff;
+		text-underline-offset: 2px;
+
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 }
 

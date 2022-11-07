@@ -108,6 +108,7 @@
 }
 
 .modal-content-left {
+	--modal-content-left-h-gutter: 15px;
 	background: $secondary-color;
 	display: flex;
 	position: relative;
@@ -117,15 +118,15 @@
 	text-align: center;
 	width: 232px;
 	flex-shrink: 0;
-	padding: 60px 20px;
+	padding: 60px var(--modal-content-left-h-gutter);
 	z-index: 0;
 	overflow: hidden;
 
 	.modal-copyright-text {
 		position: absolute;
 		bottom: 19px;
-		left: 20px;
-		right: 20px;
+		left: var(--modal-content-left-h-gutter);
+		right: var(--modal-content-left-h-gutter);
 		font-size: 12px;
 		line-height: 19px;
 		font-weight: 500;
@@ -135,6 +136,14 @@
 		mark {
 			font-weight: 700;
 			color: #fff;
+		}
+
+		a {
+			text-underline-offset: 2px;
+
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 
