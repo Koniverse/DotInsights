@@ -1248,7 +1248,7 @@
 				series: [
 					{
 						type: 'bar',
-						data: [ 45, 40, 38, 37, 32, 31, 27, 26, 25, 25 ],
+						data: [ 53, 40, 38, 37, 32, 31, 27, 26, 25, 25 ],
 						name: '',
 						label: {
 							fontFamily: fontFamily,
