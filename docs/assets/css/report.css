@@ -1,7 +1,7 @@
 /**
  * Font Awesome code
  */
-.block-contributor, .block-contributor .avatar:before {
+.bridge-token .bridge-token-icon:before, .block-contributor, .block-contributor .avatar:before {
   transition: all 0.15s cubic-bezier(0.645, 0.045, 0.355, 1); }
 
 .block-table-widget .sorting:before, .block-table-widget .sorting:after {
@@ -193,7 +193,7 @@
   font-size: 17px;
   font-weight: 500;
   line-height: 30px;
-  max-width: 670px;
+  max-width: var(--chart-source-w, 100%);
   margin: 0 10px 0 0; }
   .block-table-source p,
   .block-chart-source p {
@@ -443,48 +443,48 @@
   font-weight: 500;
   line-height: 20px; }
 
-.block-text .row {
-  --bs-gutter-x: 40px; }
-
-.block-text .heading {
-  font-size: 32px;
-  line-height: 1.5;
-  width: var(--heading-width, auto);
-  max-width: 100%;
-  display: inline-block;
-  background: -webkit-linear-gradient(96.41deg, #3ee200 3.81%, #ecff0c 40.3%, #4cf371 96.16%);
-  background: linear-gradient(96.41deg, #3ee200 3.81%, #ecff0c 40.3%, #4cf371 96.16%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
-  /** Fix text gradient cropped **/
-  padding-top: .1785em;
-  margin: 0 0 var(--header-spacing, 29px); }
-
-.block-text .text-wrap {
-  max-width: 100%; }
-
-.block-text .text {
-  font-size: 17px;
-  font-weight: 500;
-  line-height: 30px;
-  width: var(--text-width, 100%);
-  max-width: 100%;
-  color: #ccc; }
-  .block-text .text a {
-    color: #66e1b6;
-    text-underline-offset: 2px; }
-    .block-text .text a:hover {
-      text-decoration: underline; }
-  .block-text .text p {
-    margin: 0 0 var(--text-br-lineheight, 25px); }
-    .block-text .text p:last-child {
-      margin: 0; }
+.block-text {
+  max-width: var(--block-maxw, 100%);
+  margin: var(--block-top-spacing, 0px) 0 var(--block-bottom-spacing, 0px); }
+  .block-text .row {
+    --bs-gutter-x: 40px; }
+  .block-text .heading {
+    font-size: 32px;
+    line-height: 1.5;
+    width: var(--heading-width, auto);
+    max-width: 100%;
+    display: inline-block;
+    background: -webkit-linear-gradient(96.41deg, #3ee200 3.81%, #ecff0c 40.3%, #4cf371 96.16%);
+    background: linear-gradient(96.41deg, #3ee200 3.81%, #ecff0c 40.3%, #4cf371 96.16%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    /** Fix text gradient cropped **/
+    padding-top: .1785em;
+    margin: 0 0 var(--header-spacing, 29px); }
+  .block-text .text-wrap {
+    max-width: 100%; }
+  .block-text .text {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 30px;
+    width: var(--text-width, 100%);
+    max-width: 100%;
+    color: #ccc; }
+    .block-text .text a {
+      color: #66e1b6;
+      text-underline-offset: 2px; }
+      .block-text .text a:hover {
+        text-decoration: underline; }
+    .block-text .text p {
+      margin: 0 0 var(--text-br-lineheight, 25px); }
+      .block-text .text p:last-child {
+        margin: 0; }
 
 .block-text-justify-center {
-  display: flex;
-  justify-content: center; }
+  text-align: center;
+  margin: var(--block-top-spacing, 0px) auto var(--block-bottom-spacing, 0px); }
 
 .section-reports-hero {
   padding: 260px 0 220px;
@@ -593,24 +593,72 @@
     transform: translateY(-130px);
     text-align: center; }
 
+.section-decentralization-security {
+  padding: 0 0 274px; }
+  .section-decentralization-security .shape-grid {
+    bottom: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    --shape-max-width: 90vw; }
+  .section-decentralization-security .shape-cone {
+    bottom: 0;
+    left: 25%;
+    transform: translateY(15%);
+    --shape-max-width: 10vw; }
+  .section-decentralization-security .shape-ring {
+    right: 8%;
+    top: 32%;
+    --shape-max-width: 8vw; }
+  .section-decentralization-security .shape-02 {
+    top: 20%;
+    left: 5%;
+    --shape-max-width: 5vw; }
+
 .section-report-holder-investor {
-  padding: 175px 0 0; }
+  padding: 86px 0 0; }
 
-.section-governance-treasury .shape-radial-circle {
-  top: 0;
-  left: 0;
-  transform: translate(-46%, -25%); }
+.section-parachain {
+  padding: 146px 0 0; }
 
-.section-governance-treasury .shape-blue-blur {
-  top: 50px;
-  right: 0; }
+.section-governance-treasury {
+  padding: 90px 0 217px; }
+  .section-governance-treasury .shape-radial-circle {
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -30%); }
+  .section-governance-treasury .shape-transparent-cube {
+    top: 0;
+    left: 0;
+    transform: translate(-39%, 0); }
+    .section-governance-treasury .shape-transparent-cube img {
+      max-width: 15.4vw; }
 
-.section-governance-treasury .shape-ksm {
-  top: 0;
-  left: 0;
-  transform: translate(-20%, 0); }
-  .section-governance-treasury .shape-ksm img {
-    max-width: 15.4vw; }
+.section-dex-amm {
+  padding: 0 0 380px; }
+  .section-dex-amm .shape-grid {
+    bottom: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    --shape-max-width: 90vw; }
+  .section-dex-amm .shape-cube {
+    bottom: 22%;
+    left: 29%;
+    transform: translateY(15%);
+    --shape-max-width: 10vw; }
+  .section-dex-amm .shape-smooth-ring {
+    right: 28%;
+    bottom: 23%;
+    --shape-max-width: 8vw; }
+  .section-dex-amm .shape-02 {
+    bottom: 45%;
+    left: 10%;
+    --shape-max-width: 5vw; }
+
+.section-lending-and-borrowing {
+  padding: 40px 0 0; }
+
+.section-stablecoin {
+  padding: 131px 0 208px; }
 
 .section-treasury-output {
   overflow: hidden;
@@ -622,54 +670,134 @@
       max-width: 10vw; }
 
 .section-report-nfts {
+  --s-header-width: 100%;
   padding: 26px 0 0; }
-  .section-report-nfts .section-header {
-    margin: 0 0 27px; }
-  .section-report-nfts .section-header-inner {
-    max-width: 100%; }
 
 .section-game-fi {
-  padding: 130px 0 0; }
-  .section-game-fi .row-table-overview {
-    margin-bottom: 100px; }
+  padding: 112px 0 385px; }
 
 .section-report-web3 {
   padding: 20px 0 0; }
   .section-report-web3 .section-header {
     margin: 0 0 99px; }
 
-.section-governance-treasury {
-  padding: 90px 0 0; }
+.section-metaverse {
+  padding: 0 0 390px; }
+  .section-metaverse .shape-grid {
+    bottom: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    --shape-max-width: 90vw; }
+  .section-metaverse .shape-cone {
+    bottom: 0;
+    left: 25%;
+    transform: translateY(15%);
+    --shape-max-width: 10vw; }
+  .section-metaverse .shape-ring {
+    right: 8%;
+    top: 32%;
+    --shape-max-width: 8vw; }
+  .section-metaverse .shape-02 {
+    top: 20%;
+    left: 5%;
+    --shape-max-width: 5vw; }
+
+.section-dao {
+  padding: 40px 0 0;
+  --s-header-width: 970px;
+  --s-header-spacing: 69px;
+  z-index: 1; }
+
+.section-web3 {
+  --s-header-spacing: 350px;
+  padding: 390px 0 0; }
+  .section-web3 .shape-corner-left-bottom {
+    bottom: auto;
+    top: 0; }
+  .section-web3 .shape-corner-left-bottom {
+    bottom: auto;
+    top: 0; }
+  .section-web3 .shape-web3-group {
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%); }
+
+.bridge-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 0 36px; }
+  .bridge-list a {
+    position: relative;
+    margin: 0 var(--item-gutter-x, 20px) var(--item-spacing, 27px);
+    border-bottom: 2px solid transparent;
+    font-family: "Unbounded", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px; }
+    .bridge-list a:after {
+      content: '';
+      width: 0;
+      height: 2px;
+      position: absolute;
+      left: auto;
+      right: 0;
+      bottom: 0;
+      transition: width 0.45s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
+      background: currentColor; }
+    .bridge-list a:not(.current) {
+      color: #555; }
+    .bridge-list a.current:after {
+      width: 100%;
+      left: 0;
+      right: auto; }
+    .bridge-list a:hover {
+      color: #66e1b6; }
+
+.bridge-item {
+  display: none;
+  text-align: center; }
+
+.bridge-token .bridge-token-icon {
+  --outline-size: 2px;
+  position: relative;
+  width: var(--avatar-size);
+  max-width: var(--avatar-max-size);
+  padding: var(--avatar-padding);
+  border-radius: 50%;
+  background: #020722; }
+  .bridge-token .bridge-token-icon img {
+    border-radius: 50%;
+    position: relative;
+    z-index: 1; }
+  .bridge-token .bridge-token-icon:before {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--outline-size));
+    right: calc(-1 * var(--outline-size));
+    bottom: calc(-1 * var(--outline-size));
+    left: calc(-1 * var(--outline-size));
+    border-radius: inherit;
+    background: linear-gradient(-135deg, #4a75ad 0%, rgba(43, 54, 28, 0) 53.57%, #42703d 100%); }
+  .bridge-token .bridge-token-icon:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    border-radius: inherit; }
+
+.bridge--helix-bridge .block-bridge-tokens {
+  display: flex;
+  align-items: center;
+  width: 188px;
+  height: 60px; }
 
 .section-defi-economy {
+  --s-header-spacing: 36px;
   padding: 20px 0 0; }
-  .section-defi-economy .section-header {
-    margin: 0 0 94px; }
-  .section-defi-economy .shape-union {
-    top: 4%;
-    right: 0;
-    transform: translate(26%); }
-    .section-defi-economy .shape-union .shape-dot {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%); }
-      .section-defi-economy .shape-union .shape-dot img {
-        width: 221px;
-        max-width: 12vw;
-        transform: rotate(56.11deg); }
-    .section-defi-economy .shape-union .shape-ksm {
-      bottom: 0;
-      left: 40%; }
-      .section-defi-economy .shape-union .shape-ksm img {
-        width: 152px;
-        max-width: 8vw;
-        transform: rotate(-10deg); }
-    .section-defi-economy .shape-union .shape-diamond {
-      top: 24%;
-      left: 2%; }
-      .section-defi-economy .shape-union .shape-diamond img {
-        width: 112px;
-        max-width: 6vw; }
 
 .grid-contributors {
   display: flex;
@@ -712,10 +840,21 @@
     font-size: 20px;
     line-height: 28px;
     margin: 0 0 14px; }
-  .block-dao p {
+  .block-dao .description {
+    margin: 0;
     font-size: 17px;
     font-weight: 500;
-    line-height: 30px; }
+    line-height: 30px;
+    visibility: visible;
+    overflow: hidden;
+    max-height: 210px; }
+  .block-dao .btn {
+    width: auto !important;
+    display: inline-block !important;
+    color: #fff;
+    padding: 8px 0 0;
+    text-decoration: underline;
+    text-underline-offset: 3px; }
   .block-dao a {
     text-underline-offset: 2px; }
     .block-dao a:hover {
@@ -985,6 +1124,11 @@
     .section-reports-hero .section-title .sub-title {
       font-size: 76px; } }
 
+@media screen and (min-width: 1400px) {
+  .block-dao h3 {
+    font-size: 32px;
+    line-height: 48px; } }
+
 @media screen and (max-width: 1400px) {
   .section-top-title {
     font-size: 48px; }
@@ -1016,7 +1160,7 @@
     --avatar-spacing: 12px; }
     .block-contributor.layout-horizontal .block-content {
       padding: 20px 10px; }
-  .section-game-fi .row-table-overview .block-text {
+  .section-game-fi .row-table-wrap .block-text {
     --text-width: 100% !important;
     margin-bottom: 40px; } }
 
@@ -1056,14 +1200,8 @@
     padding: 90px 0 180px; }
   .row-chart-treasury-output .block-text {
     margin-top: 40px; }
-  .section-defi-economy > .shape-union {
-    display: none; }
-  .section-defi-economy .section-header {
-    margin: 0 0 40px; }
   .section-game-fi {
     padding: 90px 0 0; }
-    .section-game-fi .row-table-overview {
-      margin-bottom: 60px; }
   .grid-contributors {
     --item-width: 50%; }
     .grid-contributors .grid-item-1-3 {

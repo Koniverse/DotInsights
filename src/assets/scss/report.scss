@@ -230,7 +230,7 @@
 	font-size: $body-font-size-small;
 	font-weight: 500;
 	line-height: 30px;
-	max-width: 670px;
+	max-width: var(--chart-source-w, 100%);
 	margin: 0 10px 0 0;
 
 	p {
@@ -603,6 +603,9 @@
 }
 
 .block-text {
+	max-width: var(--block-maxw, 100%);
+	margin: var(--block-top-spacing, 0px) 0 var(--block-bottom-spacing, 0px);
+
 	.row {
 		--bs-gutter-x: 40px;
 	}
@@ -656,8 +659,8 @@
 }
 
 .block-text-justify-center {
-	display: flex;
-	justify-content: center;
+	text-align: center;
+	margin: var(--block-top-spacing, 0px) auto var(--block-bottom-spacing, 0px);
 }
 
 .section-reports-hero {
@@ -815,31 +818,100 @@
 	}
 }
 
+.section-decentralization-security {
+	padding: 0 0 274px;
+
+	.shape-grid {
+		bottom: 36px;
+		left: 50%;
+		transform: translateX(-50%);
+		--shape-max-width: 90vw;
+	}
+
+	.shape-cone {
+		bottom: 0;
+		left: 25%;
+		transform: translateY(15%);
+		--shape-max-width: 10vw;
+	}
+
+	.shape-ring {
+		right: 8%;
+		top: 32%;
+		--shape-max-width: 8vw;
+	}
+
+	.shape-02 {
+		top: 20%;
+		left: 5%;
+		--shape-max-width: 5vw;
+	}
+}
+
 .section-report-holder-investor {
-	padding: 175px 0 0;
+	padding: 86px 0 0;
+}
+
+.section-parachain {
+	padding: 146px 0 0;
 }
 
 .section-governance-treasury {
+	padding: 90px 0 217px;
+
 	.shape-radial-circle {
 		top: 0;
 		left: 0;
-		transform: translate(-46%, -25%);
+		transform: translate(-50%, -30%);
 	}
 
-	.shape-blue-blur {
-		top: 50px;
-		right: 0;
-	}
-
-	.shape-ksm {
+	.shape-transparent-cube {
 		top: 0;
 		left: 0;
-		transform: translate(-20%, 0);
+		transform: translate(-39%, 0);
 
 		img {
 			max-width: 15.4vw;
 		}
 	}
+}
+
+.section-dex-amm {
+	padding: 0 0 380px;
+
+	.shape-grid {
+		bottom: 36px;
+		left: 50%;
+		transform: translateX(-50%);
+		--shape-max-width: 90vw;
+	}
+
+	.shape-cube {
+		bottom: 22%;
+		left: 29%;
+		transform: translateY(15%);
+		--shape-max-width: 10vw;
+	}
+
+	.shape-smooth-ring {
+		right: 28%;
+		bottom: 23%;
+		--shape-max-width: 8vw;
+	}
+
+	.shape-02 {
+		bottom: 45%;
+		left: 10%;
+		--shape-max-width: 5vw;
+	}
+}
+
+.section-lending-and-borrowing {
+	padding: 40px 0 0;
+}
+
+.section-stablecoin {
+	padding: 131px 0 208px;
 }
 
 .section-treasury-output {
@@ -857,23 +929,12 @@
 }
 
 .section-report-nfts {
+	--s-header-width: 100%;
 	padding: 26px 0 0;
-
-	.section-header {
-		margin: 0 0 27px;
-	}
-
-	.section-header-inner {
-		max-width: 100%;
-	}
 }
 
 .section-game-fi {
-	padding: 130px 0 0;
-
-	.row-table-overview {
-		margin-bottom: 100px;
-	}
+	padding: 112px 0 385px;
 }
 
 .section-report-web3 {
@@ -884,55 +945,173 @@
 	}
 }
 
-.section-governance-treasury {
-	padding: 90px 0 0;
+.section-metaverse {
+	padding: 0 0 390px;
+
+	.shape-grid {
+		bottom: 36px;
+		left: 50%;
+		transform: translateX(-50%);
+		--shape-max-width: 90vw;
+	}
+
+	.shape-cone {
+		bottom: 0;
+		left: 25%;
+		transform: translateY(15%);
+		--shape-max-width: 10vw;
+	}
+
+	.shape-ring {
+		right: 8%;
+		top: 32%;
+		--shape-max-width: 8vw;
+	}
+
+	.shape-02 {
+		top: 20%;
+		left: 5%;
+		--shape-max-width: 5vw;
+	}
 }
 
-.section-defi-economy {
-	padding: 20px 0 0;
+.section-dao {
+	padding: 40px 0 0;
+	--s-header-width: 970px;
+	--s-header-spacing: 69px;
+	z-index: 1;
+}
 
-	.section-header {
-		margin: 0 0 94px;
+.section-web3 {
+	--s-header-spacing: 350px;
+	padding: 390px 0 0;
+
+	.shape-corner-left-bottom {
+		bottom: auto;
+		top: 0;
 	}
 
-	.shape-union {
-		top: 4%;
-		right: 0;
-		transform: translate(26%);
+	.shape-corner-left-bottom {
+		bottom: auto;
+		top: 0;
+	}
 
-		.shape-dot {
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
+	.shape-web3-group {
+		top: 50px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
 
-			img {
-				width: 221px;
-				max-width: 12vw;
-				transform: rotate(56.11deg);
-			}
-		}
+.bridge-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 0 36px;
 
-		.shape-ksm {
+	a {
+		position: relative;
+		margin: 0 var(--item-gutter-x, 20px) var(--item-spacing, 27px);
+		border-bottom: 2px solid transparent;
+		font-family: $heading-font-family;
+		font-weight: $heading-font-weight;
+		font-size: $body-font-size-large;
+		line-height: 26px;
+
+		&:after {
+			content: '';
+			width: 0;
+			height: 2px;
+			position: absolute;
+			left: auto;
+			right: 0;
 			bottom: 0;
-			left: 40%;
+			transition: width .45s cubic-bezier(.25, .8, .25, 1) 0s;
+			background: currentColor;
+		}
 
-			img {
-				width: 152px;
-				max-width: 8vw;
-				transform: rotate(-10deg);
+		&:not(.current) {
+			color: #555;
+		}
+
+		&.current {
+			&:after {
+				width: 100%;
+				left: 0;
+				right: auto;
 			}
 		}
 
-		.shape-diamond {
-			top: 24%;
-			left: 2%;
-
-			img {
-				width: 112px;
-				max-width: 6vw;
-			}
+		&:hover {
+			color: $primary-color;
 		}
 	}
+}
+
+.bridge-item {
+	display: none;
+	text-align: center;
+}
+
+.block-bridge-tokens {
+
+}
+
+.bridge-token {
+	.bridge-token-icon {
+		--outline-size: 2px;
+		position: relative;
+		width: var(--avatar-size);
+		max-width: var(--avatar-max-size);
+		padding: var(--avatar-padding);
+		border-radius: 50%;
+		background: #020722;
+
+		img {
+			border-radius: 50%;
+			position: relative;
+			z-index: 1;
+		}
+
+		&:before {
+			@extend %NormalTransition;
+			content: '';
+			position: absolute;
+			top: calc(-1 * var(--outline-size));
+			right: calc(-1 * var(--outline-size));
+			bottom: calc(-1 * var(--outline-size));
+			left: calc(-1 * var(--outline-size));
+			border-radius: inherit;
+			background: linear-gradient(-135deg, #4a75ad 0%, rgba(43, 54, 28, 0) 53.57%, #42703d 100%);
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: inherit;
+			border-radius: inherit;
+		}
+	}
+}
+
+.bridge--helix-bridge {
+	.block-bridge-tokens {
+		display: flex;
+		align-items: center;
+		width: 188px;
+		height: 60px;
+	}
+}
+
+
+
+.section-defi-economy {
+	--s-header-spacing: 36px;
+	padding: 20px 0 0;
 }
 
 .grid-contributors {
@@ -992,10 +1171,23 @@
 		margin: 0 0 14px;
 	}
 
-	p {
+	.description {
+		margin: 0;
 		font-size: 17px;
 		font-weight: 500;
 		line-height: 30px;
+		visibility: visible;
+		overflow: hidden;
+		max-height: 210px; // Line height x lines.
+	}
+
+	.btn {
+		width: auto !important;
+		display: inline-block !important;
+		color: #fff;
+		padding: 8px 0 0;
+		text-decoration: underline;
+		text-underline-offset: 3px;
 	}
 
 	a {
@@ -1377,6 +1569,13 @@
 	}
 }
 
+@media screen and (min-width: 1400px) {
+	.block-dao h3 {
+		font-size: 32px;
+		line-height: 48px;
+	}
+}
+
 @media screen and (max-width: 1400px) {
 	.section-top-title {
 		font-size: 48px;
@@ -1445,7 +1644,7 @@
 	}
 
 	.section-game-fi {
-		.row-table-overview {
+		.row-table-wrap {
 			.block-text {
 				--text-width: 100% !important;
 				margin-bottom: 40px;
@@ -1522,22 +1721,8 @@
 		}
 	}
 
-	.section-defi-economy {
-		> .shape-union {
-			display: none;
-		}
-
-		.section-header {
-			margin: 0 0 40px;
-		}
-	}
-
 	.section-game-fi {
 		padding: 90px 0 0;
-
-		.row-table-overview {
-			margin-bottom: 60px;
-		}
 	}
 
 	.grid-contributors {

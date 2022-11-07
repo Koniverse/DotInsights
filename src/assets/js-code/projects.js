@@ -150,21 +150,21 @@
 			}
 
 			var results = rules.length > 0 ? Helpers.filterByRules( rules, DotInsights.Projects ) : DotInsights.Projects;
-			sortAndGroup( results );
-			buildList();
-		} );
+				sortAndGroup( results );
+				buildList();
+			} );
 
-		$( document.body ).on( 'click', '.filter-item', function( evt ) {
-			evt.preventDefault();
+			$( document.body ).on( 'click', '.filter-item', function( evt ) {
+				evt.preventDefault();
 
-			var $thisButton = $( this );
+				var $thisButton = $( this );
 
-			if ( $thisButton.hasClass( 'current' ) ) {
-				return;
-			}
+				if ( $thisButton.hasClass( 'current' ) ) {
+					return;
+				}
 
-			var cat = $( this ).data( 'cat' );
-			$thisButton.siblings().removeClass( 'current' );
+				var cat = $( this ).data( 'cat' );
+				$thisButton.siblings().removeClass( 'current' );
 			$thisButton.addClass( 'current' );
 
 			$searchForm.find( 'input[name="cat"]' ).val( cat );

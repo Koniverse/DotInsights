@@ -99,6 +99,33 @@
 			} );*/
 
 			initTableOfContents();
+
+			var $readmore = $( '.block-dao .description' );
+
+			new Readmore( $readmore, {
+				moreLink: '<a href="#" class="btn btn-flat btn-small">' + locate.readMore + '</a>',
+				lessLink: '<a href="#" class="btn btn-flat btn-small">' + locate.readLess + '</a>'
+			} );
+
+			var $blockBridge = $( '.block-bridge' );
+
+			$( document.body ).on( 'click', '.bridge-list a', function( evt ) {
+				evt.preventDefault();
+
+				var $thisButton = $( this );
+
+				if ( $thisButton.hasClass( 'current' ) ) {
+					return;
+				}
+
+				$thisButton.siblings().removeClass( 'current' );
+				$thisButton.addClass( 'current' );
+
+				$blockBridge.find( '.bridge-item' ).hide().removeClass( 'animate' );
+				$blockBridge.find( '.bridge--' + $thisButton.data( 'filter' ) ).show( function() {
+					$( this ).addClass( 'animate' );
+				}, 0 );
+			} );
 		} );
 
 		$( window ).on( 'hresize_one', function() {

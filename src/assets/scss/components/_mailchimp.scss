@@ -153,7 +153,9 @@
 }
 
 #mc_embed_signup div#mce-responses {
+	text-align: center;
 	overflow: hidden;
+	margin: 8px 0 0 !important;
 }
 
 #mc_embed_signup div.response {
@@ -212,10 +214,17 @@
 	font-weight: 500 !important;
 	font-size: 14px;
 	color: #e85c41;
-	margin: 0 !important;
+	text-align: center;
+	margin: 3px 0 0 !important;
 	padding: 0 !important;
 }
 
 #mc_embed_signup #mc-embedded-subscribe-form input.mce_inline_error {
 	border-color: #e85c41 !important;
+}
+
+#mc_embed_signup {
+	.brandingLogo {
+		display: none;
+	}
 }

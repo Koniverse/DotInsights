@@ -29,6 +29,8 @@ var lang = {
 	spaceCreated: 'Space Created',
 	users: 'Users',
 	videos: 'Videos',
+	readMore: 'Read more...',
+	readLess: 'Read less...'
 };
 
 window.DotInsights = window.DotInsights || {};
