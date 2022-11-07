@@ -2647,8 +2647,6 @@
 
 				if ( dataset.hasOwnProperty( 'options' ) ) {
 					options = $.extend( true, {}, options, dataset.options );
-
-					console.log( options );
 				}
 
 				// Used dateset.options instead of.

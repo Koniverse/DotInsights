@@ -3223,7 +3223,6 @@ body.rtl .tm-swiper.pagination-style-07 .swiper-pagination-bullet:after {
 
 .dotinsights-modal {
   --modal-rounded: 16px;
-  --modal-width: 450px;
   --modal-spacing: 30px 2rem 40px;
   position: fixed;
   top: 0;
@@ -3252,6 +3251,9 @@ body.rtl .tm-swiper.pagination-style-07 .swiper-pagination-bullet:after {
     background: #000;
     opacity: .9; }
   .dotinsights-modal .button-close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
     font-size: 24px;
     width: 28px;
     height: 28px;
@@ -3265,31 +3267,31 @@ body.rtl .tm-swiper.pagination-style-07 .swiper-pagination-bullet:after {
     position: relative;
     opacity: 0;
     visibility: hidden;
-    width: var(--modal-width);
+    width: var(--modal-width, 570px);
     max-width: calc(100vw - 50px);
     cursor: auto;
     border: 0;
     background: none;
     border-radius: 0; }
   .dotinsights-modal .modal-content-header {
-    position: relative;
-    margin: 0 0 24px;
-    display: flex; }
+    margin: 0 0 var(--modal-header-spacing, 24px); }
+  .dotinsights-modal .modal-shape {
+    position: absolute;
+    pointer-events: none;
+    z-index: -1; }
   .dotinsights-modal .modal-title {
     flex-grow: 1;
-    position: relative;
-    z-index: 1;
     font-size: 20px;
     line-height: 1.4;
     margin: 0; }
   .dotinsights-modal .modal-description {
-    position: relative;
-    z-index: 1;
-    font-size: 15px;
-    line-height: 26px;
-    margin: 10px 0 0; }
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 22px;
+    margin: 13px 0 0; }
   .dotinsights-modal .modal-content-wrap {
     position: relative;
+    display: flex;
     overflow-y: auto;
     border-radius: var(--modal-rounded);
     background: #232323;
@@ -3299,23 +3301,75 @@ body.rtl .tm-swiper.pagination-style-07 .swiper-pagination-bullet:after {
   .dotinsights-modal .modal-content-inner {
     padding: var(--modal-spacing); }
 
-.modal-connect-wallet .button {
-  --mg-button-height: 72px;
-  --mg-button-rounded: 10px;
-  --mg-button-background: #151515;
-  --mg-button-border: #151515;
-  width: 100%;
-  justify-content: space-between;
-  padding: 10px 17px 10px 74px; }
-  .modal-connect-wallet .button:before {
+.modal-content-left {
+  background: #004bff;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 232px;
+  flex-shrink: 0;
+  padding: 60px 20px;
+  z-index: 0;
+  overflow: hidden; }
+  .modal-content-left .modal-copyright-text {
     position: absolute;
-    top: 50%;
-    left: 14px;
-    transform: translateY(-50%);
-    content: '';
-    width: 48px;
-    height: 48px;
-    background: url(../images/sw-logo.png) no-repeat center; }
+    bottom: 19px;
+    left: 20px;
+    right: 20px;
+    font-size: 12px;
+    line-height: 19px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7); }
+    .modal-content-left .modal-copyright-text a,
+    .modal-content-left .modal-copyright-text mark {
+      font-weight: 700;
+      color: #fff; }
+  .modal-content-left .modal-shape-01 {
+    opacity: .1;
+    top: 0;
+    left: 0;
+    transform: translate(-25%, -25%); }
+  .modal-content-left .modal-shape-02 {
+    opacity: .05;
+    bottom: 0;
+    right: 0;
+    transform: translate(25%, 25%); }
+  .modal-content-left .modal-shape-03 {
+    opacity: .3;
+    top: 41px;
+    right: -16px; }
+  .modal-content-left .modal-shape-04 {
+    opacity: .2;
+    bottom: 77px;
+    left: -5px; }
+
+.modal-connect-wallet {
+  --modal-width: 450px; }
+  .modal-connect-wallet .modal-content-header {
+    position: relative;
+    display: flex; }
+  .modal-connect-wallet .button-close-modal {
+    position: static; }
+  .modal-connect-wallet .button {
+    --mg-button-height: 72px;
+    --mg-button-rounded: 10px;
+    --mg-button-background: #151515;
+    --mg-button-border: #151515;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px 17px 10px 74px; }
+    .modal-connect-wallet .button:before {
+      position: absolute;
+      top: 50%;
+      left: 14px;
+      transform: translateY(-50%);
+      content: '';
+      width: 48px;
+      height: 48px;
+      background: url(../images/sw-logo.png) no-repeat center; }
 
 #wallet-account-address {
   margin: 5px 0 0;
@@ -3327,6 +3381,12 @@ body.rtl .tm-swiper.pagination-style-07 .swiper-pagination-bullet:after {
 .btn-logout-subwallet {
   margin: 25px 0 0; }
 
+.modal-subscribe {
+  --modal-header-spacing: 26px;
+  --modal-spacing: 60px 30px; }
+  .modal-subscribe .modal-content-header {
+    text-align: center; }
+
 @media (max-width: 543px) {
   .dotinsights-modal {
     --modal-spacing: 2rem 20px; }
@@ -3334,6 +3394,188 @@ body.rtl .tm-swiper.pagination-style-07 .swiper-pagination-bullet:after {
       margin: 0 0 20px; }
     .dotinsights-modal .modal-title {
       font-size: 22px; } }
+
+/* MailChimp Form Embed Code - Classic - 12/17/2015 v10.7 */
+#mc_embed_signup form {
+  display: block;
+  position: relative; }
+
+#mc_embed_signup h2 {
+  display: none; }
+
+#mc_embed_signup input[type=checkbox] {
+  -webkit-appearance: checkbox; }
+
+#mc_embed_signup input[type=radio] {
+  -webkit-appearance: radio; }
+
+#mc_embed_signup input:focus {
+  border-color: #333; }
+
+#mc_embed_signup .button {
+  width: 100%;
+  margin: 20px 0 0 !important; }
+
+#mc_embed_signup .small-meta {
+  font-size: 11px; }
+
+#mc_embed_signup .nowrap {
+  white-space: nowrap; }
+
+#mc_embed_signup .size1of2 {
+  clear: none;
+  float: left;
+  display: inline-block;
+  width: 46%;
+  margin-right: 4%; }
+
+* html #mc_embed_signup .size1of2 {
+  margin-right: 2%;
+  /* Fix for IE6 double margins. */ }
+
+#mc_embed_signup .mc-field-group label {
+  display: none;
+  margin-bottom: 3px; }
+
+#mc_embed_signup .mc-field-group input {
+  width: 100%;
+  background: #151515; }
+
+#mc_embed_signup .mc-field-group select {
+  display: inline-block;
+  width: 99%;
+  padding: 5px 0;
+  margin-bottom: 2px; }
+
+#mc_embed_signup .mc-address-fields-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 96%;
+  gap: 15px; }
+
+#mc_embed_signup .datefield, #mc_embed_signup .phonefield-us {
+  padding: 5px 0; }
+
+#mc_embed_signup .datefield input, #mc_embed_signup .phonefield-us input {
+  display: inline;
+  width: 60px;
+  margin: 0 2px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 5px 0 2px 0; }
+
+#mc_embed_signup .phonefield-us .phonearea input, #mc_embed_signup .phonefield-us .phonedetail1 input {
+  width: 40px; }
+
+#mc_embed_signup .datefield .monthfield input, #mc_embed_signup .datefield .dayfield input {
+  width: 30px; }
+
+#mc_embed_signup .datefield label, #mc_embed_signup .phonefield-us label {
+  display: none; }
+
+#mc_embed_signup .indicates-required {
+  display: none;
+  text-align: right;
+  font-size: 11px;
+  margin-right: 4%; }
+
+#mc_embed_signup .asterisk {
+  color: #e85c41;
+  font-size: 150%;
+  font-weight: normal;
+  position: relative;
+  top: 5px; }
+
+#mc_embed_signup .clear {
+  clear: both; }
+
+@media screen and (max-width: 400px) {
+  #mc_embed_signup .referralBadge {
+    width: 50%; } }
+
+#mc_embed_signup .brandingLogo {
+  justify-self: right; }
+
+@media screen and (max-width: 400px) {
+  #mc_embed_signup .brandingLogo {
+    justify-self: left; } }
+
+#mc_embed_signup .mc-field-group.input-group ul {
+  margin: 0;
+  padding: 5px 0;
+  list-style: none; }
+
+#mc_embed_signup .mc-field-group.input-group ul li {
+  display: block;
+  padding: 3px 0;
+  margin: 0; }
+
+#mc_embed_signup .mc-field-group.input-group label {
+  display: inline; }
+
+#mc_embed_signup .mc-field-group.input-group input {
+  display: inline;
+  width: auto;
+  border: none; }
+
+#mc_embed_signup div#mce-responses {
+  overflow: hidden; }
+
+#mc_embed_signup div.response {
+  display: block;
+  font-weight: 500 !important;
+  font-size: 14px; }
+
+#mc_embed_signup #mce-error-response {
+  display: none; }
+
+#mc_embed_signup #mce-success-response {
+  color: #529214;
+  display: none; }
+
+#mc_embed_signup label.error {
+  display: block;
+  float: none;
+  width: auto;
+  margin-left: 1.05em;
+  text-align: left;
+  padding: .5em 0; }
+
+#mc_embed_signup .helper_text {
+  display: none;
+  color: #8d8985;
+  margin-top: 2px;
+  /*display: inline-block;*/
+  padding: 3px;
+  background-color: rgba(255, 255, 255, 0.85);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: normal;
+  z-index: 1; }
+
+#mc_embed_signup #num-subscribers {
+  font-size: 1.1em; }
+
+#mc_embed_signup #num-subscribers span {
+  padding: .5em;
+  border: 1px solid #ccc;
+  margin-right: .5em;
+  font-weight: bold; }
+
+#mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
+  background: none !important;
+  display: block;
+  font-weight: 500 !important;
+  font-size: 14px;
+  color: #e85c41;
+  margin: 0 !important;
+  padding: 0 !important; }
+
+#mc_embed_signup #mc-embedded-subscribe-form input.mce_inline_error {
+  border-color: #e85c41 !important; }
 
 .dotinsights-progress-bar {
   background: var(--bar-color, #333);

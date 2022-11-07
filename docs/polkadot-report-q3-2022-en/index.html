@@ -1603,7 +1603,7 @@
 			</div>
 			<div class="section-call-to-actions">
 				<h6>Subscribe for more project features in the next reports!</h6>
-				<a href="" class="button">
+				<a href="#" class="button" data-dotinsights-toggle="modal" data-dotinsights-target="#modal-subscribe">
 					<span class="button-icon">
 						<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M15.75 3.375H2.25C2.10082 3.375 1.95774 3.43426 1.85225 3.53975C1.74676 3.64524 1.6875 3.78832 1.6875 3.9375V13.5C1.6875 13.7984 1.80603 14.0845 2.017 14.2955C2.22798 14.5065 2.51413 14.625 2.8125 14.625H15.1875C15.4859 14.625 15.772 14.5065 15.983 14.2955C16.194 14.0845 16.3125 13.7984 16.3125 13.5V3.9375C16.3125 3.78832 16.2532 3.64524 16.1477 3.53975C16.0423 3.43426 15.8992 3.375 15.75 3.375ZM15.1875 13.5H2.8125V5.21719L8.62031 10.5398C8.72401 10.6347 8.85946 10.6873 9 10.6873C9.14054 10.6873 9.27599 10.6347 9.37969 10.5398L15.1875 5.21719V13.5Z" fill="#fff"></path>
@@ -2058,7 +2058,7 @@
 				</div>
 			</div>
 			<div class="section-call-to-actions button-group">
-				<a href="" class="button button-outline">
+				<a href="#" class="button" data-dotinsights-toggle="modal" data-dotinsights-target="#modal-subscribe">
 					<span class="button-icon">
 						<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M15.75 3.375H2.25C2.10082 3.375 1.95774 3.43426 1.85225 3.53975C1.74676 3.64524 1.6875 3.78832 1.6875 3.9375V13.5C1.6875 13.7984 1.80603 14.0845 2.017 14.2955C2.22798 14.5065 2.51413 14.625 2.8125 14.625H15.1875C15.4859 14.625 15.772 14.5065 15.983 14.2955C16.194 14.0845 16.3125 13.7984 16.3125 13.5V3.9375C16.3125 3.78832 16.2532 3.64524 16.1477 3.53975C16.0423 3.43426 15.8992 3.375 15.75 3.375ZM15.1875 13.5H2.8125V5.21719L8.62031 10.5398C8.72401 10.6347 8.85946 10.6873 9 10.6873C9.14054 10.6873 9.27599 10.6347 9.37969 10.5398L15.1875 5.21719V13.5Z" fill="#fff"></path>
@@ -2106,8 +2106,74 @@
 		</div>
 	</div>
 </div>
+<div class="dotinsights-modal modal-subscribe" id="modal-subscribe">
+	<div class="modal-overlay"></div>
+	<div class="modal-content">
+		<div class="modal-content-wrap">
+			<div class="button-close-modal">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M18.75 5.25L5.25 18.75" stroke="#777777" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					<path d="M18.75 18.75L5.25 5.25" stroke="#777777" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+			</div>
+			<div class="modal-content-left">
+				<div class="modal-shape modal-shape-01">
+					<img loading="lazy" src="../assets/images/logo/simple-logo.png" alt="DotInsights - Polkadot & Kusama Ecosystem Map" width="116" height="123">
+				</div>
+				<div class="modal-shape modal-shape-02">
+					<img loading="lazy" src="../assets/images/logo/simple-logo.png" alt="DotInsights - Polkadot & Kusama Ecosystem Map" width="144" height="153">
+				</div>
+				<div class="modal-shape modal-shape-03">
+					<img loading="lazy" src="../assets/images/logo/simple-stroke-logo.png" alt="DotInsights - Polkadot & Kusama Ecosystem Map" width="59" height="63">
+				</div>
+				<div class="modal-shape modal-shape-04">
+					<img loading="lazy" src="../assets/images/logo/simple-stroke-logo.png" alt="DotInsights - Polkadot & Kusama Ecosystem Map" width="43" height="46">
+				</div>
+				<img loading="lazy" src="../assets/images/logo/vertical-logo.png" alt="DotInsights - Polkadot & Kusama Ecosystem Map" width="137" height="87" />
+				<div class="modal-copyright-text">
+					Made by <mark>SubWallet</mark> with support from <mark>Parity Technologies</mark>
+				</div>
+			</div>
+			<div class="modal-content-inner">
+				<div class="modal-content-header">
+					<h3 class="modal-title">Stay in the loop</h3>
+					<div class="modal-description">Subscribe to our newsletter to get the latest updates on everything Polkadot!</div>
+				</div>
+
+				<div class="modal-content-body">
+					<div id="mc_embed_signup">
+						<form action="https://thememove.us17.list-manage.com/subscribe/post?u=41a2614805aaa171e18239e66&amp;id=adbbe6b7ca&amp;f_id=000a51e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+							<div id="mc_embed_signup_scroll">
+								<h2>Subscribe</h2>
+								<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+								<div class="mc-field-group">
+									<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+									</label>
+									<input type="email" value="" name="EMAIL" placeholder="Your e-mail" class="required email" id="mce-EMAIL" required>
+									<span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+								</div>
+								<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+								<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_41a2614805aaa171e18239e66_adbbe6b7ca" tabindex="-1" value=""></div>
+								<div class="optionalParent">
+									<div class="clear foot">
+										<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+									</div>
+								</div>
+								<div id="mce-responses" class="clear foot">
+									<div class="response" id="mce-error-response" style="display:none"></div>
+									<div class="response" id="mce-success-response" style="display:none"></div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 <script src="../assets/libs/jquery/jquery-3.6.0.min.js"></script>
 <script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 <script src="../assets/libs/firefly/jquery.firefly-0.7.js"></script>
 <script src="../assets/libs/datatable/jquery.dataTables.min.js"></script>
 <script src="../assets/libs/echarts/echarts.min.js"></script>

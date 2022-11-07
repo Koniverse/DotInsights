@@ -116,7 +116,13 @@
 					if ( instance ) { // Already created then trigger method.
 						instance.triggerMethod( args, update );
 					} else { // Create new instance.
-						instance = new DotInsightsModal( $el, args );
+						if ( typeof args === 'string' ) {
+							instance = new DotInsightsModal( $el );
+							instance.triggerMethod( args, update );
+						} else {
+							instance = new DotInsightsModal( $el, args );
+						}
+
 						$.data( this, namespace, instance );
 					}
 				} );

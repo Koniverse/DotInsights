@@ -65,7 +65,6 @@
 		} );
 
 		function initModal() {
-
 			if ( $.fn.DotInsightsModal ) {
 				$body.on( 'click', '[data-dotinsights-toggle="modal"]', function( evt ) {
 					evt.preventDefault();
