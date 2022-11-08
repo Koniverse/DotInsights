@@ -37,12 +37,15 @@ input[type='submit'],
 		box-shadow: none !important;
 	}
 
-	&:focus,
 	&:hover {
 		color: var(--mg-button-hover-text, $button-hover-text);
 		border-color: var(--mg-button-hover-border, $button-hover-border);
 		background-color: var(--mg-button-hover-background, $button-hover-background);
 		box-shadow: 0 0 0 0.2rem var(--mg-button-hover-background, $button-hover-background);
+	}
+
+	&:focus {
+		color: var(--mg-button-text, $button-text);
 	}
 }
 
@@ -130,6 +133,8 @@ input[type='submit'],
 		background-size: cover;
 	}
 
+	.button-icon,
+	.button-text,
 	span {
 		opacity: 0;
 	}

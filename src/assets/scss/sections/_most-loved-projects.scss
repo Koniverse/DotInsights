@@ -119,7 +119,7 @@
 					font-size: $body-font-size-large;
 				}
 
-				.vote-this {
+				.btn-vote {
 					--mg-button-text: #fff;
 					--mg-button-border: #122b68;
 					--mg-button-background: #122b68;
@@ -129,7 +129,7 @@
 			&:not(.row-project-highlight):hover {
 				--table-row-bg: #232323;
 
-				.vote-this {
+				.btn-vote {
 					--mg-button-text: #fff;
 					--mg-button-border: #333;
 					--mg-button-background: #333;
@@ -223,6 +223,9 @@
 	}
 
 	.btn-vote {
+		--mg-button-text: #fff;
+		--mg-button-border: #292929;
+		--mg-button-background: #292929;
 		min-width: 147px;
 		padding: 0 10px;
 
@@ -232,16 +235,10 @@
 		}
 	}
 
-	.vote-this {
-		--mg-button-text: #fff;
-		--mg-button-border: #292929;
-		--mg-button-background: #292929;
-	}
-
 	.unvote-this {
-		--mg-button-text: #fff;
-		--mg-button-border: #{$secondary-color};
-		--mg-button-background: #{$secondary-color};
+		--mg-button-text: #fff !important;
+		--mg-button-border: #{$secondary-color} !important;
+		--mg-button-background: #{$secondary-color} !important;
 	}
 }
 
