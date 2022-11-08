@@ -44,7 +44,7 @@
 			    projectID   = $thisButton.data( 'project-id' );
 
 			if ( DotInsights.Wallet.isConnected ) {
-				const walletInfo = JSON.parse( localStorage.getItem( USER_LS_KEY ) );
+				const walletInfo = getWalletInfo();
 				Helpers.setElementHandling( $thisButton );
 
 				//const signature = getVotingSignature( walletInfo.selectedAccountAddress, projectID );
@@ -99,12 +99,12 @@
 				var newAccount = $( this ).data( 'address' );
 
 				try {
-					var walletInfo = JSON.parse( localStorage.getItem( USER_LS_KEY ) );
+					var walletInfo = getWalletInfo();
 					for ( var i = 0; i < walletInfo.accounts.length; i ++ ) {
 						if ( newAccount === walletInfo.accounts[ i ].address ) {
 							walletInfo.selectedAccountAddress = newAccount;
 							walletInfo.selectedAccount = walletInfo.accounts[ i ];
-							localStorage.setItem( USER_LS_KEY, JSON.stringify( walletInfo ) );
+							setWalletInfo( walletInfo );
 
 							$( this ).siblings().removeClass( 'selected-account' );
 							$( this ).addClass( 'selected-account' );
@@ -149,14 +149,14 @@
 					</a>
 				` );
 			} else { // Render list account.
-				const wallet = JSON.parse( localStorage.getItem( USER_LS_KEY ) );
+				const wallet = getWalletInfo();
 				onSuccessfullyConnect( wallet );
 			}
 		};
 
 		const checkConnectedWallet = () => {
 			try {
-				const walletInfo = JSON.parse( localStorage.getItem( USER_LS_KEY ) );
+				const walletInfo = getWalletInfo();
 
 				if ( ! walletInfo.hasOwnProperty( 'selectedAccount' ) ) {
 					return false;
@@ -169,7 +169,7 @@
 		};
 
 		const onSuccessfullyConnect = ( wallet = null ) => {
-			const walletInfo = wallet || JSON.parse( localStorage.getItem( USER_LS_KEY ) );
+			const walletInfo = wallet || getWalletInfo();
 			var html = '';
 			for ( var i = 0; i < walletInfo.accounts.length; i ++ ) {
 				var thisAccount = walletInfo.accounts[ i ];
@@ -243,7 +243,7 @@
 						selectedAccountAddress: selectedAccountAddress,
 					};
 
-					window.localStorage.setItem( USER_LS_KEY, JSON.stringify( info ) );
+					setWalletInfo( info )
 
 					renderWalletArea();
 				} else {
@@ -255,6 +255,14 @@
 		function logoutSubWallet() {
 			window.localStorage.removeItem( USER_LS_KEY );
 			renderWalletArea();
+		}
+
+		function setWalletInfo( info ) {
+			window.localStorage.setItem( USER_LS_KEY, JSON.stringify( info ) );
+		}
+
+		function getWalletInfo() {
+			return JSON.parse( localStorage.getItem( USER_LS_KEY ) );
 		}
 
 		async function sendPost( url, data ) {
@@ -284,8 +292,21 @@
 		}
 
 		async function getVotingSignature( address, projectID ) {
-			// get signMessage and vote.
-			var signMessage = await getSignMessage( address );
+			const walletInfo = getWalletInfo();
+			var signMessage = '';
+
+			for ( var i = 0; i < walletInfo.accounts.length; i ++ ) {
+				if ( walletInfo.accounts[ i ].address === address ) {
+					if ( walletInfo.accounts[ i ].hasOwnProperty( 'signMessage' ) ) {
+						signMessage = walletInfo.accounts[ i ][ 'signMessage' ];
+					} else {
+						signMessage = await getSignMessage( address );
+						walletInfo.accounts[ i ][ 'signMessage' ] = signMessage;
+						setWalletInfo( walletInfo );
+					}
+					break;
+				}
+			}
 
 			signMessage += '-' + projectID;
 
