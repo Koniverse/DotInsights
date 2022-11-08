@@ -10,7 +10,7 @@
 		DotInsights.VotedProjects = [];
 		var Helpers = DotInsights.Helpers;
 
-		const USER_LS_KEY = 'userAccount';
+		const USER_LS_KEY = 'walletInfo';
 
 		var $modalConnectWallet        = $( '#modal-connect-wallet' ),
 		    $modalConnectWalletContent = $modalConnectWallet.find( '.modal-content-body' );
