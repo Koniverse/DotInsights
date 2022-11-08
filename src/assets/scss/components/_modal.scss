@@ -103,6 +103,7 @@
 	}
 
 	.modal-content-inner {
+		flex-grow: 1;
 		padding: var(--modal-spacing);
 	}
 }
