@@ -13,19 +13,32 @@
 			var projects = jsonData.projects;
 			prepareData( projects );
 
-			// Sort by total vote.
-			projects.sort( DotInsights.ArrayUtil.dynamicSort( 'vote_count' ) );
+			// Get vote count to avoid cache with wrong count.
+			$.ajax( {
+				method: 'GET',
+				url: Helpers.getApiEndpointUrl( 'getVoteCount' ),
+				success: function( voteCountProjects ) {
+					for ( var i = 0; i < projects.length; i ++ ) {
+						if ( voteCountProjects.hasOwnProperty( projects[ i ].project_id ) ) {
+							projects[ i ].vote_count = voteCountProjects[ projects[ i ].project_id ];
+						}
+					}
 
-			// Add rank for project after total likes sorted.
-			for ( var i = 0; i < projects.length; i ++ ) {
-				projects[ i ].rank = i + 1;
-			}
+					// Sort by total vote.
+					projects.sort( DotInsights.ArrayUtil.dynamicSort( 'vote_count' ) );
 
-			$( document.body ).trigger( 'DotInsights/EcosystemMap/Data', [ projects ] );
+					// Add rank for project after total likes sorted.
+					for ( var i = 0; i < projects.length; i ++ ) {
+						projects[ i ].rank = i + 1;
+					}
 
-			DotInsights.Projects = projects;
+					$( document.body ).trigger( 'DotInsights/EcosystemMap/Data', [ projects ] );
 
-			$( document.body ).trigger( 'DotInsights/EcosystemMap/Loaded' );
+					DotInsights.Projects = projects;
+
+					$( document.body ).trigger( 'DotInsights/EcosystemMap/Loaded' );
+				},
+			} );
 		} );
 
 		fetch( Helpers.getApiEndpointUrl( 'chainData/polkadot' ) ).then( function( response ) {

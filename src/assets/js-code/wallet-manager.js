@@ -18,13 +18,21 @@
 		$modalConnectWallet.DotInsightsModal(); // Init modal.
 
 		$( document ).ready( function() {
+			setTimeout( async () => {
+				const wallet = getWallet( 'subwallet-js' );
+				if ( wallet ) {
+					// Connect to the wallet.
+					DotInsights.ActiveWallet = await wallet.enable().catch( () => {
+						alert( 'User cancel or reject connect request' )
+					} );
+				}
+			} );
+			$( document.body ).on( 'click', '.btn-connect-subwallet', function( evt ) {
+				evt.preventDefault();
+
+				connectSubWallet();
+			} );
 			renderWalletArea();
-		} );
-
-		$( document.body ).on( 'click', '.btn-connect-subwallet', function( evt ) {
-			evt.preventDefault();
-
-			connectSubWallet();
 		} );
 
 		$( document.body ).on( 'click', '.btn-logout-subwallet', logoutSubWallet );
@@ -36,58 +44,77 @@
 			    projectID   = $thisButton.data( 'project-id' );
 
 			if ( DotInsights.Wallet.isConnected ) {
-				const wallet = JSON.parse( localStorage.getItem( USER_LS_KEY ) );
+				const walletInfo = JSON.parse( localStorage.getItem( USER_LS_KEY ) );
 
-				$.ajax( {
-					method: 'POST',
-					url: Helpers.getApiEndpointUrl( 'toggleVoteProject' ),
-					data: {
-						project_id: projectID,
-						address: wallet.selectedAccountAddress,
-						signature: wallet.signature
-					},
-					success: function( response ) {
-						DotInsights.Projects = DotInsights.Projects.map( obj =>
-							obj.project_id === projectID ? {
-								...obj,
-								vote_count: response.vote_count
-							} : obj
-						);
+				//const signature = getVotingSignature( walletInfo.selectedAccountAddress, projectID );
+				async function doVote() {
+					var response = await voteProject( walletInfo.selectedAccountAddress, projectID );
 
-						var $theVoteButtons = $( '.btn-vote[data-project-id="' + projectID + '"]' );
-						$theVoteButtons.find( '.button-text' ).text( response.vote_count );
-						if ( response.isVote ) {
-							$theVoteButtons.removeClass( 'vote-this' ).addClass( 'unvote-this' );
+					DotInsights.Projects = DotInsights.Projects.map( obj =>
+						obj.project_id === projectID ? {
+							...obj,
+							vote_count: response.vote_count
+						} : obj
+					);
 
-							if ( DotInsights.VotedProjects.indexOf( projectID ) === - 1 ) {
-								DotInsights.VotedProjects.push( projectID );
-							}
-						} else {
-							$theVoteButtons.removeClass( 'unvote-this' ).addClass( 'vote-this' );
+					var $theVoteButtons = $( '.btn-vote[data-project-id="' + projectID + '"]' );
+					$theVoteButtons.find( '.button-text' ).text( response.vote_count );
+					if ( response.isVote ) {
+						$theVoteButtons.removeClass( 'vote-this' ).addClass( 'unvote-this' );
 
-							var index = DotInsights.VotedProjects.indexOf( projectID );
-							if ( index > - 1 ) {
-								DotInsights.VotedProjects.splice( index, 1 );
-							}
+						// First vote.
+						if ( DotInsights.VotedProjects.length < 1 ) {
+							$( '#modal-first-vote-notice' ).DotInsightsModal( 'open' );
 						}
-					},
-				} );
+
+						if ( DotInsights.VotedProjects.indexOf( projectID ) === - 1 ) {
+							DotInsights.VotedProjects.push( projectID );
+						}
+					} else {
+						$theVoteButtons.removeClass( 'unvote-this' ).addClass( 'vote-this' );
+
+						var index = DotInsights.VotedProjects.indexOf( projectID );
+						if ( index > - 1 ) {
+							DotInsights.VotedProjects.splice( index, 1 );
+						}
+					}
+					/*$.ajax( {
+						method: 'POST',
+						url: Helpers.getApiEndpointUrl( 'toggleVoteProject' ),
+						data: {
+							project_id: projectID,
+							address: wallet.selectedAccountAddress,
+							signature: wallet.signature
+						},
+						success: function( response ) {
+
+						},
+					} );*/
+				}
+
+				doVote();
 			} else {
 				$modalConnectWallet.DotInsightsModal( 'open' );
 			}
 		} );
 
+		// Switch wallet account.
 		$( document.body ).on( 'click', '.wallet-account-address', function( evt ) {
 			evt.preventDefault();
 
 			if ( ! $( this ).hasClass( 'selected-account' ) ) {
-				$( this ).siblings().removeClass( 'selected-account' );
-				$( this ).addClass( 'selected-account' );
+				var newAccount = $( this ).data( 'address' );
 
-				var switchToAccount = $( this ).data( 'address' );
-				var walletInfo = JSON.parse( localStorage.getItem( USER_LS_KEY ) );
-				walletInfo.selectedAccountAddress = switchToAccount;
-				localStorage.setItem( USER_LS_KEY, JSON.stringify( walletInfo ) );
+				try {
+					var walletInfo = JSON.parse( localStorage.getItem( USER_LS_KEY ) );
+					walletInfo.selectedAccountAddress = newAccount;
+					localStorage.setItem( USER_LS_KEY, JSON.stringify( walletInfo ) );
+
+					$( this ).siblings().removeClass( 'selected-account' );
+					$( this ).addClass( 'selected-account' );
+				} catch ( e ) {
+					console.log( e );
+				}
 			}
 		} );
 
@@ -152,7 +179,7 @@
 			$modalConnectWalletContent.html( html );
 
 			// Append status for all projects.
-			/*var votedProjects = await sendPost( Helpers.getApiEndpointUrl( 'getVotedProject' ), {
+			/*var votedProjects = await sendPost( Helpers.getApiEndpointUrl( 'getVoteCount' ), {
 				address: walletInfo.selectedAccountAddress
 			} );*/
 
@@ -164,7 +191,6 @@
 				},
 				success: function( projects ) {
 					DotInsights.VotedProjects = projects;
-
 					$( document.body ).trigger( 'DotInsights/VotedProjects/Refreshed' );
 				},
 			} );
@@ -189,39 +215,20 @@
 			setTimeout( async () => {
 				const wallet = getWallet( 'subwallet-js' );
 				if ( wallet ) {
-					// Connect to the wallet.
-					const activeWallet = await wallet.enable().catch( () => {
-						alert( 'User cancel or reject connect request' )
-					} );
-
 					// Get and select accounts.
-					const accounts = await activeWallet.accounts.get();
-					console.log( activeWallet );
-					console.log( accounts );
+					const accounts = await DotInsights.ActiveWallet.accounts.get();
 					const selectedAccountAddress = accounts[ 0 ][ 'address' ];
-
-					console.log( accounts );
-
-					// get signMessage and vote.
-					const signMessage = await getSignMessage( selectedAccountAddress );
-					console.log( 'SignMessage:', signMessage );
-					const signatureRs = await activeWallet.signer.signRaw( {
-						address: selectedAccountAddress,
-						data: signMessage
-					} );
 
 					var info = {
 						accounts: accounts,
 						selectedAccountAddress: selectedAccountAddress,
-						signature: signatureRs.signature
 					};
 
 					window.localStorage.setItem( USER_LS_KEY, JSON.stringify( info ) );
 
-					console.log( 'Signature:', signatureRs.signature );
 					renderWalletArea();
 				} else {
-					alert( 'SubWallet extension is not installed' )
+					alert( 'SubWallet extension is not installed' );
 				}
 			}, 300 ); // Wait a small amount time to ensure wallet is initialized.
 		}
@@ -257,11 +264,27 @@
 			return rs[ 'message' ];
 		}
 
-		async function voteProject( address, signature, project_id ) {
+		async function getVotingSignature( address, projectID ) {
+			// get signMessage and vote.
+			var signMessage = await getSignMessage( address );
+
+			signMessage += '-' + projectID;
+
+			const signatureRs = await DotInsights.ActiveWallet.signer.signRaw( {
+				address: address,
+				data: signMessage
+			} );
+
+			return signatureRs.signature;
+		}
+
+		async function voteProject( address, project_id ) {
+			const signature = await getVotingSignature( address, project_id );
+
 			return await sendPost( Helpers.getApiEndpointUrl( 'toggleVoteProject' ), {
 				project_id,
 				address,
-				signature,
+				signature
 			} );
 		}
 	}( jQuery )
