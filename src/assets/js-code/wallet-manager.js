@@ -17,8 +17,6 @@
 
 		$modalConnectWallet.DotInsightsModal(); // Init modal.
 
-		console.log( 'Ver 3.0' );
-
 		$( document ).ready( function() {
 			renderWalletArea();
 		} );
@@ -79,6 +77,20 @@
 			}
 		} );
 
+		$( document.body ).on( 'click', '.wallet-account-address', function( evt ) {
+			evt.preventDefault();
+
+			if ( ! $( this ).hasClass( 'selected-account' ) ) {
+				$( this ).siblings().removeClass( 'selected-account' );
+				$( this ).addClass( 'selected-account' );
+
+				var switchToAccount = $( this ).data( 'address' );
+				var walletInfo = JSON.parse( localStorage.getItem( USER_LS_KEY ) );
+				walletInfo.selectedAccountAddress = switchToAccount;
+				localStorage.setItem( USER_LS_KEY, JSON.stringify( walletInfo ) );
+			}
+		} );
+
 		const renderWalletArea = () => {
 			DotInsights.Wallet.isInstalled = Boolean( window.injectedWeb3 && window.SubWallet );
 			DotInsights.Wallet.isConnected = checkConnectedWallet();
@@ -100,12 +112,11 @@
 				` );
 			} else if ( DotInsights.Wallet.isInstalled && ! DotInsights.Wallet.isConnected ) { // Render connect button.
 				$modalConnectWalletContent.empty();
-				$modalConnectWalletContent.html(
-					`
+				$modalConnectWalletContent.html( `
 					<a href="#" target="_blank" class="button button-right-icon btn-connect-subwallet">
 						<span class="button-text">SubWallet</span>
-					</a>`
-				)
+					</a>
+				` );
 			} else { // Render list account.
 				const wallet = JSON.parse( localStorage.getItem( USER_LS_KEY ) );
 				onSuccessfullyConnect( wallet );
@@ -119,15 +130,24 @@
 
 		const onSuccessfullyConnect = ( wallet = null ) => {
 			const walletInfo = wallet || JSON.parse( localStorage.getItem( USER_LS_KEY ) );
-			const html = `<div class="connected-wallet-info-card">
-								<div class="wallet-address-heading">Your address:</div>
-                                <div class="wallet-address">
-                                    <div class="wallet-icon"></div>
-                                    <div id="wallet-account-address"><span>${walletInfo.selectedAccountAddress}</span></div>
-                                    <a href="#" class="button btn-logout-subwallet"><span class="button-text">Log out</span></a>
+			var html = '';
+			for ( var i = 0; i < walletInfo.accounts.length; i ++ ) {
+				var thisAccount = walletInfo.accounts[ i ];
+				var itemClass = 'wallet-account-address';
+				itemClass += thisAccount.address === walletInfo.selectedAccountAddress ? ' selected-account' : '';
+
+				html += `<div class="${itemClass}" data-address="${thisAccount.address}">
+								<div class="wallet-icon"><img src="./assets/images/wallet-icon.png" alt=""></div>
+                                <div id="wallet-info">
+                                    <div class="wallet-name">${thisAccount.name}</div>
+                                    <div class="wallet-address"><span>${thisAccount.address}</span></div>
                                 </div>
 							</div>`;
+			}
+			//html += `<a href="#" class= "class=button btn-confirm-switch-account-address"><span class="button-text">Confirm</span></a>\`;                                                                                                                                                                                                                                                                                                                                                               "button btn-confirm-wallet-account-chain"><span class="button-text">Log out</span></a>`;
+			//html += `<a href="#" class="button btn-logout-subwallet"><span class="button-text">Log out</span></a>`;
 
+			$modalConnectWallet.find( '.modal-title' ).text( 'Choose account' );
 			$modalConnectWalletContent.empty();
 			$modalConnectWalletContent.html( html );
 
@@ -191,6 +211,7 @@
 					} );
 
 					var info = {
+						accounts: accounts,
 						selectedAccountAddress: selectedAccountAddress,
 						signature: signatureRs.signature
 					};
@@ -198,6 +219,7 @@
 					window.localStorage.setItem( USER_LS_KEY, JSON.stringify( info ) );
 
 					console.log( 'Signature:', signatureRs.signature );
+					renderWalletArea();
 				} else {
 					alert( 'SubWallet extension is not installed' )
 				}

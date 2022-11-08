@@ -176,7 +176,8 @@
 }
 
 .modal-connect-wallet {
-	--modal-width: 450px;
+	//--modal-width: 450px;
+	--modal-spacing: 30px 40px 40px;
 
 	.modal-content-header {
 		position: relative;
@@ -209,12 +210,68 @@
 	}
 }
 
-#wallet-account-address {
-	margin: 5px 0 0;
-	font-size: $body-font-size-small;
-	font-weight: 500;
-	color: #fff;
-	word-break: break-all;
+.wallet-account-address {
+	border-radius: 8px;
+	background: #1f1f1f;
+	padding: 10px 48px 10px 19px;
+	min-height: 84px;
+	display: flex;
+	align-items: center;
+	position: relative;
+	cursor: pointer;
+
+	+ .wallet-account-address {
+		margin: 12px 0 0;
+	}
+
+	.wallet-icon {
+		flex-shrink: 0;
+		margin: 0 11px 0 0;
+		padding: 3px;
+		border: 2px solid $secondary-color;
+		border-radius: 50%;
+		width: 36px;
+		height: 36px;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.wallet-info {
+		flex-grow: 1;
+	}
+
+	.wallet-name {
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 28px;
+		color: #fff;
+	}
+
+	.wallet-address {
+		font-size: 12px;
+		line-height: 26px;
+		font-weight: 500;
+		color: #555;
+		word-break: break-all;
+	}
+
+	&.selected-account {
+		background: $background-2;
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			right: 14px;
+			transform: translate(0, -50%);
+			width: 24px;
+			height: 24px;
+			background: url(../svgs/Check.svg) no-repeat center;
+			background-size: cover;
+		}
+	}
 }
 
 .btn-logout-subwallet {
