@@ -753,6 +753,11 @@
 		top: 40%;
 		--shape-max-width: 8vw;
 	}
+
+	.section-description {
+		font-size: $body-font-size-large;
+		line-height: 32px;
+	}
 }
 
 .section-ecosystem-overview {
