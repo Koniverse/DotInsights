@@ -91,7 +91,7 @@
 			}
 		} );
 
-		// Switch wallet account.
+		// Switching wallet account.
 		$( document.body ).on( 'click', '.wallet-account-address', function( evt ) {
 			evt.preventDefault();
 
@@ -100,15 +100,22 @@
 
 				try {
 					var walletInfo = JSON.parse( localStorage.getItem( USER_LS_KEY ) );
-					walletInfo.selectedAccountAddress = newAccount;
-					localStorage.setItem( USER_LS_KEY, JSON.stringify( walletInfo ) );
+					for ( var i = 0; i < walletInfo.accounts.length; i ++ ) {
+						if ( newAccount === walletInfo.accounts[ i ].address ) {
+							walletInfo.selectedAccountAddress = newAccount;
+							walletInfo.selectedAccount = walletInfo.accounts[ i ];
+							localStorage.setItem( USER_LS_KEY, JSON.stringify( walletInfo ) );
 
-					$( this ).siblings().removeClass( 'selected-account' );
-					$( this ).addClass( 'selected-account' );
+							$( this ).siblings().removeClass( 'selected-account' );
+							$( this ).addClass( 'selected-account' );
 
-					$modalConnectWallet.DotInsightsModal( 'close' );
+							$modalConnectWallet.DotInsightsModal( 'close' );
 
-					refreshVoteCount( newAccount );
+							$( '.btn-open-connect-wallet' ).find( '.button-text span' ).text( walletInfo.selectedAccount.name );
+							refreshVoteCount( newAccount );
+							break;
+						}
+					}
 				} catch ( e ) {
 					console.log( e );
 				}
@@ -148,8 +155,17 @@
 		};
 
 		const checkConnectedWallet = () => {
-			const userData = JSON.parse( localStorage.getItem( USER_LS_KEY ) );
-			return ! ! userData;
+			try {
+				const walletInfo = JSON.parse( localStorage.getItem( USER_LS_KEY ) );
+
+				if ( ! walletInfo.hasOwnProperty( 'selectedAccount' ) ) {
+					return false;
+				}
+
+				return ! ! walletInfo;
+			} catch ( e ) {
+				return false;
+			}
 		};
 
 		const onSuccessfullyConnect = ( wallet = null ) => {
@@ -171,6 +187,7 @@
 			//html += `<a href="#" class= "class=button btn-confirm-switch-account-address"><span class="button-text">Confirm</span></a>\`;                                                                                                                                                                                                                                                                                                                                                               "button btn-confirm-wallet-account-chain"><span class="button-text">Log out</span></a>`;
 			//html += `<a href="#" class="button btn-logout-subwallet"><span class="button-text">Log out</span></a>`;
 
+			$( '.btn-open-connect-wallet' ).find( '.button-text span' ).text( walletInfo.selectedAccount.name );
 			$modalConnectWallet.find( '.modal-title' ).text( 'Choose account' );
 			$modalConnectWalletContent.empty();
 			$modalConnectWalletContent.html( html );
@@ -222,6 +239,7 @@
 
 					var info = {
 						accounts: accounts,
+						selectedAccount: accounts[ 0 ],
 						selectedAccountAddress: selectedAccountAddress,
 					};
 

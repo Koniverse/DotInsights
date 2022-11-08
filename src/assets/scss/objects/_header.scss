@@ -54,6 +54,20 @@
 
 	.button {
 		margin: 0 0 0 10px;
+		max-width: 200px;
+		text-align: left;
+
+		.button-text {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box !important;
+			-webkit-line-clamp: 1; /* number of lines to show */
+			-webkit-box-orient: vertical;
+
+			> span {
+				display: inline !important;
+			}
+		}
 	}
 }
 
