@@ -50,6 +50,24 @@
 		text-align: center;
 		cursor: pointer;
 		flex-shrink: 0;
+		color: #777;
+		z-index: 1;
+
+		svg {
+			display: block;
+
+			*[stroke]:not([stroke='none']) {
+				stroke: currentColor;
+			}
+
+			*[fill]:not([fill='none']) {
+				fill: currentColor;
+			}
+		}
+
+		&:hover {
+			color: #fff;
+		}
 	}
 
 	.modal-content {
@@ -73,11 +91,16 @@
 		position: absolute;
 		pointer-events: none;
 		z-index: -1;
+
+		img {
+			transform: var(--shape-transform, none);
+			max-width: var(--shape-max-width, 100%);
+		}
 	}
 
 	.modal-title {
 		flex-grow: 1;
-		font-size: 20px;
+		font-size: var(--modal-title-size, 20px);
 		line-height: 1.4;
 		margin: 0;
 	}
@@ -108,20 +131,27 @@
 	}
 }
 
-.modal-content-left {
-	--modal-content-left-h-gutter: 15px;
-	background: $secondary-color;
-	display: flex;
-	position: relative;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	width: 232px;
-	flex-shrink: 0;
-	padding: 60px var(--modal-content-left-h-gutter);
-	z-index: 0;
-	overflow: hidden;
+.modal-subscribe {
+	.modal-content-left {
+		--modal-content-left-h-gutter: 15px;
+		background: $secondary-color;
+		display: flex;
+		position: relative;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		width: 232px;
+		max-width: 41%;
+		flex-shrink: 0;
+		padding: 60px var(--modal-content-left-h-gutter);
+		z-index: 0;
+		overflow: hidden;
+	}
+
+	.subscribe-logo {
+		transform: translateY(-10px);
+	}
 
 	.modal-copyright-text {
 		position: absolute;
@@ -153,6 +183,7 @@
 		top: 0;
 		left: 0;
 		transform: translate(-25%, -25%);
+		--shape-max-width: 20vw;
 	}
 
 	.modal-shape-02 {
@@ -160,6 +191,7 @@
 		bottom: 0;
 		right: 0;
 		transform: translate(25%, 25%);
+		--shape-max-width: 25vw;
 	}
 
 	.modal-shape-03 {
@@ -334,6 +366,7 @@
 	border-radius: 10px;
 	background: $background-2;
 	font-size: $body-font-size-small;
+	line-height: 30px;
 	font-weight: 500;
 	padding: 23px 20px 27px;
 
@@ -355,13 +388,39 @@
 @include media-breakpoint-down(xs) {
 	.dotinsights-modal {
 		--modal-spacing: 2rem 20px;
+		--modal-header-spacing: 20px;
+		--modal-title-size: 18px;
+	}
 
-		.modal-content-header {
-			margin: 0 0 20px;
+	.modal-subscribe {
+		.modal-content-wrap {
+			flex-direction: column;
 		}
 
+		.button-close-modal {
+			color: #fff;
+		}
+
+		.modal-content-left {
+			width: 100%;
+			max-width: 100%;
+			min-height: 240px;
+		}
+	}
+
+	.modal-first-vote-notice {
 		.modal-title {
-			font-size: 22px;
+			font-size: 28px;
+			line-height: 40px;
 		}
+
+		.modal-sub-title {
+			font-size: 20px;
+			line-height: 30px;
+		}
+	}
+
+	.first-vote-messages {
+		font-size: 16px;
 	}
 }
