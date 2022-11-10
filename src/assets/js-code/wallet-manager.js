@@ -71,7 +71,18 @@
 
 							// First vote.
 							if ( DotInsights.VotedProjects.length < 1 ) {
-								$( '#modal-first-vote-notice' ).DotInsightsModal( 'open' );
+								var $modalFirstVote = $( '#modal-first-vote-notice' ),
+								    $shareButton    = $modalFirstVote.find( '.btn-twitter-share' ),
+								    projectName     = $thisButton.closest( '.row-project' ).find( '.project-name' ).text(),
+								    text            = `I voted for ${projectName} on dotinsights, what about you? Vote for your favorite projects in the @Polkadot and @kusamanetwork ecosystem now`,
+								    url             = 'https://twitter.com/share?text={text}&amp;url={url}';
+
+								url = url.replace( '{text}', text );
+								url = url.replace( '{url}', location.origin );
+
+								$shareButton.attr( 'href', encodeURI( url ) );
+
+								$modalFirstVote.DotInsightsModal( 'open' );
 							}
 
 							if ( DotInsights.VotedProjects.indexOf( projectID ) === - 1 ) {
