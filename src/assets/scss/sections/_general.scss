@@ -247,6 +247,8 @@
 	pointer-events: none;
 
 	img {
+		transform: var(--shape-transform, none);
+		width: var(--shape-width, initial);
 		max-width: var(--shape-max-width, 100%);
 	}
 }

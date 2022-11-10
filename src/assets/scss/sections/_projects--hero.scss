@@ -47,20 +47,14 @@
 	.hero-shape-dot {
 		top: 12%;
 		right: 14%;
-
-		img {
-			width: 194px;
-			max-width: 10vw;
-		}
+		--shape-max-width: 10vw;
+		--shape-width: 194px;
 	}
 
 	.hero-shape-s-circle {
 		right: 12%;
 		bottom: 14%;
-
-		img {
-			max-width: 16.2vw;
-		}
+		--shape-max-width: 16.2vw;
 	}
 
 	.hero-shape-02 {
@@ -71,28 +65,19 @@
 	.hero-shape-03 {
 		left: 12%;
 		top: 8%;
-
-		img {
-			max-width: 11vw;
-		}
+		--shape-max-width: 11vw;
 	}
 
 	.hero-shape-ksm {
 		left: 20%;
 		bottom: 8%;
-
-		img {
-			max-width: 11vw;
-		}
+		--shape-max-width: 11vw;
 	}
 
 	.hero-shape-satellite {
 		left: 16%;
 		bottom: 35%;
-
-		img {
-			max-width: 11vw;
-		}
+		--shape-max-width: 11vw;
 	}
 }
 

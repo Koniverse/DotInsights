@@ -30,21 +30,15 @@
 	.hero-shape-dot {
 		top: 0;
 		right: 22%;
-
-		img {
-			transform: translateY(-30%);
-			width: 172px;
-			max-width: 9.5vw;
-		}
+		--shape-max-width: 9.5vw;
+		--shape-width: 172px;
+		--shape-transform: translateY(-30%);
 	}
 
 	.hero-shape-s-circle {
 		right: 12%;
 		bottom: 14%;
-
-		img {
-			max-width: 16.6vw;
-		}
+		--shape-max-width: 16.6vw;
 	}
 
 	.hero-shape-02 {
@@ -55,30 +49,21 @@
 	.hero-shape-03 {
 		left: 20%;
 		top: 0;
-
-		img {
-			transform: translateY(-50%);
-			width: 230px;
-			max-width: 13vw;
-		}
+		--shape-max-width: 13vw;
+		--shape-width: 230px;
+		--shape-transform: translateY(-50%);
 	}
 
 	.hero-shape-ksm {
 		left: 20%;
 		bottom: 8%;
-
-		img {
-			max-width: 11vw;
-		}
+		--shape-max-width: 11vw;
 	}
 
 	.hero-shape-satellite {
 		left: 50%;
 		bottom: 35%;
-
-		img {
-			width: 20px;
-		}
+		--shape-width: 20px;
 	}
 }
 

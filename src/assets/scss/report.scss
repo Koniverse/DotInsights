@@ -690,28 +690,19 @@
 .hero-shape-03 {
 	top: 80px;
 	left: 10%;
-
-	img {
-		max-width: 13.2vw;
-	}
+	--shape-max-width: 13.2vw;
 }
 
 .hero-shape-dot {
 	top: 18%;
 	right: 15%;
-
-	img {
-		max-width: 13.2vw;
-	}
+	--shape-max-width: 13.2vw;
 }
 
 .hero-shape-ksm {
 	left: 10%;
 	bottom: 9%;
-
-	img {
-		max-width: 19vw;
-	}
+	--shape-max-width: 19vw;
 }
 
 .hero-shape-02 {
@@ -727,10 +718,7 @@
 .hero-shape-s-circle {
 	right: 12%;
 	bottom: 6%;
-
-	img {
-		max-width: 15vw;
-	}
+	--shape-max-width: 15vw;
 }
 
 .section-ecosystem-map {
@@ -783,30 +771,21 @@
 			top: 45%;
 			left: 9%;
 			z-index: 2;
-
-			img {
-				max-width: 7vw;
-			}
+			--shape-max-width: 7vw;
 		}
 
 		.shape-ksm {
 			bottom: 9%;
 			left: 42%;
 			z-index: 2;
-
-			img {
-				max-width: 7.6vw;
-			}
+			--shape-max-width: 7.6vw;
 		}
 
 		.shape-diamond {
 			top: 0;
 			left: 33%;
 			z-index: 2;
-
-			img {
-				max-width: 6vw;
-			}
+			--shape-max-width: 6vw;
 		}
 	}
 }
@@ -1553,10 +1532,7 @@
 		top: 0;
 		left: 0;
 		transform: translate(-50%, 50px);
-
-		img {
-			max-width: 50vw;
-		}
+		--shape-max-width: 50vw;
 	}
 }
 
