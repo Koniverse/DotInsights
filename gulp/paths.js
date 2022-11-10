@@ -20,6 +20,7 @@ module.exports = {
 	bs: {
 		main: [
 			'docs/*.html',
+			'docs/**/*.html',
 			'docs/assets/css/*.css',
 			'docs/assets/js/*.js',
 			'docs/assets/libs/**/**/*.js'
