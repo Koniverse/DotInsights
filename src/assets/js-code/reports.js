@@ -629,7 +629,7 @@
 				},
 				series: [
 					{
-						name: 'Cosmos',
+						name: 'Near',
 						data: data.cosmos,
 						itemStyle: {
 							color: colors[ 0 ]
@@ -681,7 +681,7 @@
 						}
 					},
 					{
-						name: 'Bitcoin',
+						name: 'Polygon',
 						data: data.btc,
 						itemStyle: {
 							color: colors[ 4 ]
