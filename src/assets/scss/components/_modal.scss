@@ -229,7 +229,7 @@
 		justify-content: space-between;
 		padding: 10px 17px 10px 74px;
 
-		&:before {
+		&:after {
 			position: absolute;
 			top: 50%;
 			left: 14px;
@@ -242,6 +242,18 @@
 
 		.button-icon {
 			color: $primary-color;
+		}
+
+		&.updating-icon {
+			&:before {
+				font-size: 24px;
+				left: auto !important;
+				right: 0;
+			}
+
+			span {
+				opacity: 1 !important;
+			}
 		}
 	}
 }

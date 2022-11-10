@@ -3,10 +3,6 @@
 		'use strict';
 
 		window.DotInsights = window.DotInsights || {};
-		DotInsights.Wallet = {
-			isInstalled: false,
-			isConnected: false
-		};
 		DotInsights.VotedProjects = [];
 		var Helpers = DotInsights.Helpers;
 
@@ -18,9 +14,6 @@
 		$modalConnectWallet.DotInsightsModal(); // Init modal.
 
 		$( document ).ready( function() {
-			DotInsights.Wallet.isInstalled = isSubWalletInstalled();
-			DotInsights.Wallet.isConnected = checkConnectedWallet();
-
 			setTimeout( async () => {
 				const wallet = getWallet();
 				if ( wallet ) {
@@ -30,10 +23,11 @@
 					} );
 				}
 			} );
+
 			$( document.body ).on( 'click', '#btn-connect-subwallet', function( evt ) {
 				evt.preventDefault();
 
-				connectSubWallet();
+				connectSubWallet( $( this ) );
 			} );
 
 			renderWalletArea();
@@ -47,7 +41,7 @@
 			var $thisButton = $( this ),
 			    projectID   = $thisButton.data( 'project-id' );
 
-			if ( DotInsights.Wallet.isConnected ) {
+			if ( isSubWalletConnected() ) {
 				const walletInfo = getWalletInfo();
 				Helpers.setElementHandling( $thisButton );
 
@@ -138,8 +132,8 @@
 		} );
 
 		const renderWalletArea = () => {
-			if ( DotInsights.Wallet.isInstalled ) {
-				if ( ! DotInsights.Wallet.isConnected ) { // Render connect button.
+			if ( isSubWalletInstalled() ) {
+				if ( ! isSubWalletConnected() ) { // Render connect button.
 					$modalConnectWalletContent.empty();
 					$modalConnectWalletContent.html( `
 					<a href="#" target="_blank" class="button button-right-icon btn-install-connect-wallet" id="btn-connect-subwallet">
@@ -150,7 +144,7 @@
 					const walletInfo = getWalletInfo();
 					var html = '';
 
-					if ( typeof walletInfo.accounts !== 'undefined' && walletInfo.accounts.length > 0 ) {
+					if ( walletInfo && typeof walletInfo.accounts !== 'undefined' && walletInfo.accounts.length > 0 ) {
 						for ( var i = 0; i < walletInfo.accounts.length; i ++ ) {
 							var thisAccount = walletInfo.accounts[ i ];
 							var itemClass = 'wallet-account-address';
@@ -198,7 +192,7 @@
 			}
 		};
 
-		const checkConnectedWallet = () => {
+		const isSubWalletConnected = () => {
 			try {
 				const walletInfo = getWalletInfo();
 
@@ -245,10 +239,12 @@
 			return typeof window.injectedWeb3 !== 'undefined' && typeof window.injectedWeb3[ 'subwallet-js' ] !== 'undefined';
 		}
 
-		function connectSubWallet() {
-			setTimeout( async () => {
-				const wallet = getWallet();
-				if ( wallet ) {
+		function connectSubWallet( $thisButton ) {
+			const wallet = getWallet();
+			if ( wallet ) {
+				Helpers.setElementHandling( $thisButton );
+
+				setTimeout( async function() {
 					// Get and select accounts.
 					const accounts = await DotInsights.ActiveWallet.accounts.get();
 					const selectedAccountAddress = accounts[ 0 ][ 'address' ];
@@ -259,22 +255,28 @@
 						selectedAccountAddress: selectedAccountAddress,
 					};
 
-					setWalletInfo( info );
+					await setWalletInfo( info );
 
 					renderWalletArea();
-				} else {
-					alert( 'SubWallet extension is not installed' );
-				}
-			}, 300 ); // Wait a small amount time to ensure wallet is initialized.
+				}, 500 );
+			} else {
+				alert( 'SubWallet extension is not installed' );
+			}
 		}
 
-		function logoutSubWallet() {
-			window.localStorage.removeItem( USER_LS_KEY );
+		function logoutSubWallet( evt ) {
+			var $thisButton = $( evt.currentTarget );
+			
+			Helpers.setElementHandling( $thisButton );
 
-			renderWalletArea();
+			setTimeout( async function() {
+				window.localStorage.removeItem( USER_LS_KEY );
+
+				renderWalletArea();
+			}, 500 );
 		}
 
-		function setWalletInfo( info ) {
+		async function setWalletInfo( info ) {
 			window.localStorage.setItem( USER_LS_KEY, JSON.stringify( info ) );
 		}
 

@@ -426,7 +426,7 @@
 	}
 
 	td, th {
-		width: 16%;
+		width: 160px;
 		text-align: center;
 
 		&:first-child {
@@ -797,8 +797,14 @@
 		bottom: 0;
 		left: 0;
 		right: 0;
-		transform: translateY(-130px);
+		transform: translate(-50px, -50px) scale(-1, 1);
 		text-align: center;
+	}
+
+	.shape-galaxy {
+		bottom: 0;
+		left: 50%;
+		transform: translate(-63%, 14%);
 	}
 }
 
