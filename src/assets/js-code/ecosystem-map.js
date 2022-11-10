@@ -2,10 +2,10 @@
 	function( $ ) {
 		'use strict';
 
-		window.DotInsights = window.DotInsights || {};
-		DotInsights.Projects = DotInsights.Projects || {};
-		var Helpers    = window.DotInsights.Helpers,
-		    NumberUtil = window.DotInsights.NumberUtil;
+		window.dotinsights = window.dotinsights || {};
+		dotinsights.Projects = dotinsights.Projects || {};
+		var Helpers    = window.dotinsights.Helpers,
+		    NumberUtil = window.dotinsights.NumberUtil;
 
 		fetch( Helpers.getApiEndpointUrl( 'getProjects' ) ).then( function( response ) {
 			return response.json();
@@ -25,18 +25,18 @@
 					}
 
 					// Sort by total vote.
-					projects.sort( DotInsights.ArrayUtil.dynamicSort( 'vote_count' ) );
+					projects.sort( dotinsights.ArrayUtil.dynamicSort( 'vote_count' ) );
 
 					// Add rank for project after total likes sorted.
 					for ( var i = 0; i < projects.length; i ++ ) {
 						projects[ i ].rank = i + 1;
 					}
 
-					$( document.body ).trigger( 'DotInsights/EcosystemMap/Data', [ projects ] );
+					$( document.body ).trigger( 'dotinsights/EcosystemMap/Data', [ projects ] );
 
-					DotInsights.Projects = projects;
+					dotinsights.Projects = projects;
 
-					$( document.body ).trigger( 'DotInsights/EcosystemMap/Loaded' );
+					$( document.body ).trigger( 'dotinsights/EcosystemMap/Loaded' );
 				},
 			} );
 		} );

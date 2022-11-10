@@ -2,7 +2,7 @@
 	function( $ ) {
 		'use strict';
 
-		var locate = window.DotInsights.Localization;
+		var locate = window.dotinsights.Localization;
 		var baseUrl = location.origin;
 		var partname = location.pathname.split( '/' );
 
@@ -15,7 +15,7 @@
 		var sourceBaseUrl = baseUrl + '/assets/data/';
 		var tokenBaseUrl = baseUrl + '/assets/images/token/';
 
-		var NumberUtil                      = DotInsights.NumberUtil,
+		var NumberUtil                      = dotinsights.NumberUtil,
 		    $allCharts                      = $( '.block-chart' ),
 		    dateFormatter                   = '{dd}/{MM}/{yyyy}',
 		    dateShortFormatter              = '{MM}/{yyyy}',

@@ -2,7 +2,7 @@
 	function( $ ) {
 		'use strict';
 
-		var Helpers = DotInsights.Helpers,
+		var Helpers = dotinsights.Helpers,
 		    $window = $( window ),
 		    $body   = $( document.body ),
 		    wWidth  = window.innerWidth,
@@ -65,16 +65,16 @@
 		} );
 
 		function initModal() {
-			if ( $.fn.DotInsightsModal ) {
+			if ( $.fn.dotinsightsModal ) {
 				$body.on( 'click', '[data-dotinsights-toggle="modal"]', function( evt ) {
 					evt.preventDefault();
 					var $target = $( $( this ).data( 'dotinsights-target' ) );
 
 					if ( $target.length > 0 ) {
 						if ( $( this ).attr( 'data-dotinsights-dismiss' ) === '1' ) {
-							$target.DotInsightsModal( 'close' );
+							$target.dotinsightsModal( 'close' );
 						} else {
-							$target.DotInsightsModal( 'open' );
+							$target.dotinsightsModal( 'open' );
 						}
 					}
 				} );

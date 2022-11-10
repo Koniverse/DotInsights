@@ -2,7 +2,7 @@
 	function( $ ) {
 		'use strict';
 
-		var DotInsightsModal = function( $el, options ) {
+		var dotinsightsModal = function( $el, options ) {
 			this.$el = $el;
 			this.ACTIVE_CLASS = 'open';
 			this.initialized = false;
@@ -55,7 +55,7 @@
 					} );
 
 					plugin.initialized = true;
-					$( document.body ).trigger( 'DotInsightsModalInit', [ $el ] );
+					$( document.body ).trigger( 'dotinsightsModalInit', [ $el ] );
 				}
 			};
 
@@ -68,14 +68,14 @@
 
 				$el.addClass( plugin.ACTIVE_CLASS );
 
-				window.DotInsights.Helpers.setBodyOverflow();
+				window.dotinsights.Helpers.setBodyOverflow();
 
-				if ( this.settings.perfectScrollbar && $.fn.perfectScrollbar && ! window.DotInsights.Helpers.isHandheld() ) {
+				if ( this.settings.perfectScrollbar && $.fn.perfectScrollbar && ! window.dotinsights.Helpers.isHandheld() ) {
 					$el.find( '.modal-content-wrap' ).perfectScrollbar();
 				}
 
-				$( document.body ).trigger( 'DotInsightsModalOpen', [ $el ] );
-				$el.trigger( 'DotInsightsModalOpen' );
+				$( document.body ).trigger( 'dotinsightsModalOpen', [ $el ] );
+				$el.trigger( 'dotinsightsModalOpen' );
 			};
 
 			this.close = function() {
@@ -85,19 +85,19 @@
 
 				$el.removeClass( plugin.ACTIVE_CLASS );
 
-				window.DotInsights.Helpers.unsetBodyOverflow();
+				window.dotinsights.Helpers.unsetBodyOverflow();
 
-				$( document.body ).trigger( 'DotInsightsModalClose', [ $el ] );
-				$el.trigger( 'DotInsightsModalClose' );
+				$( document.body ).trigger( 'dotinsightsModalClose', [ $el ] );
+				$el.trigger( 'dotinsightsModalClose' );
 			};
 
 			this.init();
 		};
 
-		const namespace = 'DotInsightsModal';
+		const namespace = 'dotinsightsModal';
 
 		$.fn.extend( {
-			DotInsightsModal: function( args, update ) {
+			dotinsightsModal: function( args, update ) {
 				// Check if selected element exist.
 				if ( ! this.length ) {
 					return this;
@@ -117,10 +117,10 @@
 						instance.triggerMethod( args, update );
 					} else { // Create new instance.
 						if ( typeof args === 'string' ) {
-							instance = new DotInsightsModal( $el );
+							instance = new dotinsightsModal( $el );
 							instance.triggerMethod( args, update );
 						} else {
-							instance = new DotInsightsModal( $el, args );
+							instance = new dotinsightsModal( $el, args );
 						}
 
 						$.data( this, namespace, instance );
