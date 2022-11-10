@@ -259,7 +259,7 @@
 						selectedAccountAddress: selectedAccountAddress,
 					};
 
-					setWalletInfo( info )
+					setWalletInfo( info );
 
 					renderWalletArea();
 				} else {
