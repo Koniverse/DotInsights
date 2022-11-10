@@ -458,23 +458,36 @@
 		}
 
 		&:nth-child(2) {
-			width: 60%;
+			width: 100%;
 		}
 
 		&:last-child {
 			text-align: right;
-			width: 150px;
+			min-width: 150px;
 		}
 	}
 
 	td:first-child {
 		font-size: 16px;
 	}
+
+	.shape-blur-circle.pink {
+		--size: 408px;
+		top: 50%;
+		left: 0;
+		transform: translate(-7%, -70%);
+	}
+
+	.shape-blur-circle.blue {
+		--size: 408px;
+		bottom: 50%;
+		right: 0;
+		transform: translate(7%, 70%);
+	}
 }
 
 .table-bitcountry-pioneer-app {
 	--tr-radius: 8px;
-	--td-ver-gap: 11px;
 	--td-ver-gap: 17px;
 	--td-hoz-gap: 5px;
 
@@ -525,6 +538,24 @@
 			width: 200px;
 		}
 	}
+
+	.blur-1 {
+		top: 0;
+		right: 0;
+		transform: translate(5%, -5%);
+	}
+
+	.blur-2 {
+		top: 0;
+		left: 0;
+		transform: translate(-5%, -5%);
+	}
+
+	.blur-3 {
+		bottom: 0;
+		right: 0;
+		transform: translate(5%, 5%);
+	}
 }
 
 .table--web3-wallet-compare {
@@ -546,6 +577,8 @@
 
 	th, td {
 		text-align: center;
+		width: 25%;
+		min-width: 200px;
 
 		&:first-child {
 			text-align: start;
@@ -874,6 +907,8 @@
 		right: 8%;
 		top: 32%;
 		--shape-max-width: 8vw;
+		--shape-width: 131px;
+		--shape-transform: scale(1, -1) rotate(-90deg);
 	}
 
 	.shape-02 {
@@ -1054,6 +1089,43 @@
 
 .section-stablecoin {
 	padding: 131px 0 208px;
+
+	.shape-grid {
+		top: 14%;
+		right: 0;
+		transform: translate(18%, 0);
+
+		.shape-radial-circle {
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -60%);
+		}
+
+		.shape-cube {
+			top: 0;
+			left: 25%;
+			transform: translate(-50%, -37%);
+		}
+
+		.shape-satellite-04 {
+			top: -80px;
+			right: 40%;
+			--shape-max-width: 5vw;
+			--shape-width: 34px;
+		}
+
+		.shape-02 {
+			top: 0;
+			left: 0;
+			transform: translate(-50px, -120px);
+		}
+
+		.brand-01 {
+			--size: 22px;
+			top: 40%;
+			left: 12%;
+		}
+	}
 }
 
 .section-treasury-output {
@@ -1073,10 +1145,89 @@
 .section-report-nfts {
 	--s-header-width: 100%;
 	padding: 26px 0 0;
+
+	.shape-galaxy {
+		right: 0;
+		top: 0;
+		transform: translate(25%, -5%);
+
+		.shape-radial-circle {
+			top: 50%;
+			left: 50%;
+			transform: translate(-65%, -55%)
+		}
+
+		.main-image {
+			max-width: 60vw;
+		}
+
+		.shape-ring {
+			bottom: 15%;
+			left: 30%;
+			z-index: 2;
+			--shape-max-width: 13vw;
+			--shape-width: 243px;
+		}
+
+		.shape-cube {
+			top: 25%;
+			right: 38%;
+			z-index: 2;
+			--shape-max-width: 8vw;
+			--shape-width: 72px;
+		}
+
+		.shape-02 {
+			top: 30%;
+			left: 4%;
+			z-index: 2;
+			--shape-max-width: 9vw;
+			--shape-width: 150px;
+		}
+	}
 }
 
 .section-game-fi {
 	padding: 112px 0 385px;
+
+	.shape-grid {
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, 0);
+
+		.shape-radial-circle {
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -60%);
+		}
+
+		.shape-cube {
+			top: 0;
+			left: 20%;
+			transform: translate(0, -10%);
+			--shape-width: 187px;
+			--shape-max-width: 10vw;
+		}
+
+		.shape-satellite-04 {
+			top: 30%;
+			left: -50px;
+			--shape-max-width: 5vw;
+			--shape-width: 34px;
+		}
+
+		.shape-02 {
+			top: 0;
+			left: 0;
+			transform: translate(-50px, -120px);
+		}
+
+		.brand-01 {
+			--size: 22px;
+			top: 45%;
+			left: 12%;
+		}
+	}
 }
 
 .section-report-web3 {
@@ -1452,6 +1603,7 @@
 
 		small {
 			font-size: .9em;
+			font-weight: 400;
 		}
 	}
 
@@ -1600,6 +1752,13 @@
 		}
 	}
 
+	.shape-blur-circle {
+		--blur-size: 50px;
+		right: 0;
+		top: 50%;
+		transform: translate(5%, -50%);
+	}
+
 	.post-info {
 		font-size: $body-font-size-small;
 		line-height: 30px;
@@ -1619,6 +1778,15 @@
 			order: 9;
 			margin: 0 0 0 30px;
 		}
+
+		.shape-blur-circle {
+			--blur-size: 50px;
+			left: 0;
+			top: 0;
+			right: auto;
+			bottom: auto;
+			transform: translate(-10%, -10%);
+		}
 	}
 }
 
@@ -1633,6 +1801,99 @@
 			font-size: 20px;
 			line-height: 28px;
 			margin: 0 0 47px;
+		}
+	}
+
+	.shape-galaxy-1 {
+		left: 0;
+		top: 30%;
+		transform: translate(-25%, 0);
+
+		> img {
+			width: 502px;
+			max-width: 50vw;
+		}
+
+		.shape-radial-circle {
+			top: 50%;
+			left: 50%;
+			transform: translate(-65%, -55%)
+		}
+
+		.shape-ring {
+			bottom: 24%;
+			left: 18%;
+			z-index: 2;
+			--shape-max-width: 8vw;
+			--shape-width: 136px;
+		}
+
+		.shape-cube {
+			top: 25%;
+			right: 38%;
+			z-index: 2;
+			--shape-max-width: 8vw;
+			--shape-width: 72px;
+		}
+
+		.shape-02 {
+			top: 30%;
+			right: 5%;
+			z-index: 2;
+			--shape-max-width: 6vw;
+			--shape-width: 56px;
+		}
+
+		.shape-satellite-04 {
+			right: 40%;
+			top: 15%;
+		}
+	}
+
+	.shape-galaxy-2 {
+		right: 0;
+		bottom: 30%;
+		transform: translate(55%, 0);
+
+		> img {
+			width: 664px;
+			max-width: 50vw;
+		}
+
+		.shape-radial-circle {
+			--size: 770px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-65%, -55%)
+		}
+
+		.shape-cube {
+			top: 36%;
+			left: 24%;
+			z-index: 2;
+			--shape-max-width: 7vw;
+			--shape-width: 80px;
+		}
+
+		.brand-01 {
+			--size: 18px;
+			bottom: 30%;
+			left: 15%;
+			z-index: 2;
+		}
+
+		.shape-02 {
+			top: 5%;
+			left: 10%;
+			z-index: 2;
+			--shape-max-width: 8vw;
+			--shape-width: 136px;
+		}
+
+		.shape-satellite-04 {
+			left: 36%;
+			top: 14%;
+			--shape-width: 28px;
 		}
 	}
 }
