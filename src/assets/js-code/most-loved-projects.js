@@ -2,31 +2,31 @@
 	function( $ ) {
 		'use strict';
 
-		window.DotInsights = window.DotInsights || {};
-		DotInsights.Projects = DotInsights.Projects || {};
-		DotInsights.FilteredProjects = DotInsights.FilteredProjects || {};
-		DotInsights.Query = DotInsights.Query || {
+		window.dotinsights = window.dotinsights || {};
+		dotinsights.Projects = dotinsights.Projects || {};
+		dotinsights.FilteredProjects = dotinsights.FilteredProjects || {};
+		dotinsights.Query = dotinsights.Query || {
 			itemsPerPage: 50,
 			maxNumPages: 1,
 			page: 1,
 			foundItems: 0
 		};
-		DotInsights.Pagination = DotInsights.Pagination || {};
-		DotInsights.FilteredProjects = DotInsights.FilteredProjects || {};
+		dotinsights.Pagination = dotinsights.Pagination || {};
+		dotinsights.FilteredProjects = dotinsights.FilteredProjects || {};
 
 		if ( window.innerWidth < 561 ) {
-			DotInsights.Pagination.midSize = 2;
+			dotinsights.Pagination.midSize = 2;
 		} else {
-			DotInsights.Pagination.midSize = 3;
+			dotinsights.Pagination.midSize = 3;
 		}
 
 		if ( window.innerWidth < 768 ) {
-			DotInsights.Query.itemsPerPage = 10;
+			dotinsights.Query.itemsPerPage = 10;
 		} else {
-			DotInsights.Query.itemsPerPage = 50;
+			dotinsights.Query.itemsPerPage = 50;
 		}
 
-		var Helpers = window.DotInsights.Helpers;
+		var Helpers = window.dotinsights.Helpers;
 
 		var $searchForm      = $( '#project-form-filter' ),
 		    $searchSubmitBtn = $searchForm.find( '.search-submit' ),
@@ -35,13 +35,13 @@
 		    $projectTable    = $( '#most-loved-projects-table tbody' ),
 		    $pagination      = $( '#most-loved-projects-pagination' );
 
-		$( document.body ).on( 'DotInsights/EcosystemMap/Loaded', function() {
-			DotInsights.FilteredProjects = DotInsights.Projects;
-			var foundItems = DotInsights.FilteredProjects.length;
+		$( document.body ).on( 'dotinsights/EcosystemMap/Loaded', function() {
+			dotinsights.FilteredProjects = dotinsights.Projects;
+			var foundItems = dotinsights.FilteredProjects.length;
 
-			DotInsights.Query.page = 1;
-			DotInsights.Query.foundItems = foundItems;
-			DotInsights.Query.maxNumPages = DotInsights.Query.itemsPerPage > 0 ? Math.ceil( foundItems / DotInsights.Query.itemsPerPage ) : 1;
+			dotinsights.Query.page = 1;
+			dotinsights.Query.foundItems = foundItems;
+			dotinsights.Query.maxNumPages = dotinsights.Query.itemsPerPage > 0 ? Math.ceil( foundItems / dotinsights.Query.itemsPerPage ) : 1;
 
 			buildTable();
 			buildPagination();
@@ -54,7 +54,7 @@
 
 				setTimeout( function() {
 					$searchSubmitBtn.removeClass( 'updating-icon' );
-					$( document.body ).trigger( 'DotInsights/EcosystemMap/Searching' );
+					$( document.body ).trigger( 'dotinsights/EcosystemMap/Searching' );
 				}, 300 )
 			}, searchDelay );
 		} );
@@ -62,13 +62,13 @@
 		$searchForm.on( 'submit', function( evt ) {
 			clearTimeout( searching );
 			searching = setTimeout( function() {
-				$( document.body ).trigger( 'DotInsights/EcosystemMap/Searching' );
+				$( document.body ).trigger( 'dotinsights/EcosystemMap/Searching' );
 			}, searchDelay );
 
 			return false;
 		} );
 
-		$( document.body ).on( 'DotInsights/EcosystemMap/Searching', function( evt ) {
+		$( document.body ).on( 'dotinsights/EcosystemMap/Searching', function( evt ) {
 			var searchTerm = $searchForm.find( 'input[name="s"]' ).val();
 
 			var rules = [];
@@ -81,12 +81,12 @@
 				} );
 			}
 
-			DotInsights.FilteredProjects = rules.length > 0 ? Helpers.filterByRules( rules, DotInsights.Projects ) : DotInsights.Projects;
-			var foundItems = DotInsights.FilteredProjects.length;
+			dotinsights.FilteredProjects = rules.length > 0 ? Helpers.filterByRules( rules, dotinsights.Projects ) : dotinsights.Projects;
+			var foundItems = dotinsights.FilteredProjects.length;
 
-			DotInsights.Query.page = 1;
-			DotInsights.Query.foundItems = foundItems;
-			DotInsights.Query.maxNumPages = DotInsights.Query.itemsPerPage > 0 ? Math.ceil( foundItems / DotInsights.Query.itemsPerPage ) : 1;
+			dotinsights.Query.page = 1;
+			dotinsights.Query.foundItems = foundItems;
+			dotinsights.Query.maxNumPages = dotinsights.Query.itemsPerPage > 0 ? Math.ceil( foundItems / dotinsights.Query.itemsPerPage ) : 1;
 			buildTable();
 			buildPagination();
 		} );
@@ -257,15 +257,15 @@
 
 		$( window ).on( 'hresize', function() {
 			if ( window.innerWidth < 561 ) {
-				DotInsights.Pagination.midSize = 2;
+				dotinsights.Pagination.midSize = 2;
 			} else {
-				DotInsights.Pagination.midSize = 3;
+				dotinsights.Pagination.midSize = 3;
 			}
 
 			if ( window.innerWidth < 768 ) {
-				DotInsights.Query.itemsPerPage = 10;
+				dotinsights.Query.itemsPerPage = 10;
 			} else {
-				DotInsights.Query.itemsPerPage = 50;
+				dotinsights.Query.itemsPerPage = 50;
 			}
 		} );
 
@@ -301,7 +301,7 @@
 			$canvas.height( canvasHeight );
 
 			for ( var i = 0; i < numCircles; i ++ ) {
-				var newRadius = DotInsights.NumberUtil.precisionRoundMod( bubbles[ i ].r * radiusRatio, 0 );
+				var newRadius = dotinsights.NumberUtil.precisionRoundMod( bubbles[ i ].r * radiusRatio, 0 );
 				// Make sure bubble not smaller than 80px.
 				bubbles[ i ].displayR = Math.max( newRadius, 40 );
 			}
@@ -310,8 +310,8 @@
 				circle = bubbles[ bubbleIndex ];
 
 				// Make sure circle inside canvas.
-				circle.x = DotInsights.NumberUtil.getRandomInt( circle.displayR, canvasWidth - circle.displayR );
-				circle.y = DotInsights.NumberUtil.getRandomInt( circle.displayR, canvasHeight - circle.displayR );
+				circle.x = dotinsights.NumberUtil.getRandomInt( circle.displayR, canvasWidth - circle.displayR );
+				circle.y = dotinsights.NumberUtil.getRandomInt( circle.displayR, canvasHeight - circle.displayR );
 
 				overlapping = false;
 
@@ -327,7 +327,7 @@
 						break;
 					}*/
 
-					var d = DotInsights.NumberUtil.dist( circle.x, circle.y, existing.x, existing.y );
+					var d = dotinsights.NumberUtil.dist( circle.x, circle.y, existing.x, existing.y );
 					if ( d < circle.displayR + existing.displayR ) {
 						// They are overlapping.
 						overlapping = true;
@@ -354,7 +354,7 @@
 				var thisCircle  = circles[ i ],
 				    circleClass = 'bubble-project bubble-project--' + thisCircle.project_slug;
 				circleClass += i % 2 === 0 ? ' move-vertical' : ' move-vertical-reversed';
-				circleClass += ' ' + moveDurations[ DotInsights.NumberUtil.getRandomInt( 0, 3 ) ];
+				circleClass += ' ' + moveDurations[ dotinsights.NumberUtil.getRandomInt( 0, 3 ) ];
 
 				var html = '<div class="' + circleClass + '">';
 				html += '<img src="./assets/images/bubbles/' + thisCircle.project_slug + '.png" alt="">';
@@ -376,7 +376,7 @@
 
 		$pagination.on( 'click', 'a', function( evt ) {
 			evt.preventDefault();
-			DotInsights.Query.page = $( this ).data( 'page' ); // Next page.
+			dotinsights.Query.page = $( this ).data( 'page' ); // Next page.
 
 			var offset = $projectTable.offset().top - 120; // header height + content spacing.
 			$( 'html, body' ).animate( { scrollTop: offset }, 200 );
@@ -387,15 +387,15 @@
 
 		function buildTable( append = false ) {
 			var offset = (
-				             DotInsights.Query.page - 1
-			             ) * DotInsights.Query.itemsPerPage + 1,
-			    getTo  = offset + DotInsights.Query.itemsPerPage,
+				             dotinsights.Query.page - 1
+			             ) * dotinsights.Query.itemsPerPage + 1,
+			    getTo  = offset + dotinsights.Query.itemsPerPage,
 			    output = '';
 
-			getTo = getTo > DotInsights.Query.foundItems ? DotInsights.Query.foundItems + 1 : getTo;
+			getTo = getTo > dotinsights.Query.foundItems ? dotinsights.Query.foundItems + 1 : getTo;
 
 			for ( var index = offset; index < getTo; index ++ ) {
-				var thisProject = DotInsights.FilteredProjects[ index - 1 ];
+				var thisProject = dotinsights.FilteredProjects[ index - 1 ];
 
 				var itemClass = 'row-project';
 
@@ -446,16 +446,16 @@
 
 		function buildPagination() {
 			var output   = '',
-			    maxPages = DotInsights.Query.maxNumPages;
+			    maxPages = dotinsights.Query.maxNumPages;
 
 			if ( 1 < maxPages ) {
-				var currentPage = DotInsights.Query.page;
+				var currentPage = dotinsights.Query.page;
 				var allItems = [ currentPage ];
 
 				var step = 1;
 				for ( var i = currentPage - 1; i > 0; i -- ) {
 					allItems.unshift( i );
-					if ( step === DotInsights.Pagination.midSize ) {
+					if ( step === dotinsights.Pagination.midSize ) {
 						break;
 					}
 
@@ -465,7 +465,7 @@
 				step = 1;
 				for ( var i = currentPage + 1; i <= maxPages; i ++ ) {
 					allItems.push( i );
-					if ( step === DotInsights.Pagination.midSize ) {
+					if ( step === dotinsights.Pagination.midSize ) {
 						break;
 					}
 
@@ -506,7 +506,7 @@
 			if ( project.twitter && '' !== project.twitter && 'N/A' !== project.twitter ) {
 				var text = project.twitter.replace( 'https://twitter.com/', '@' );
 				text = text.replace( 'https://mobile.twitter.com/', '@', text );
-				text = DotInsights.StringUtil.rtrim( text, '/' );
+				text = dotinsights.StringUtil.rtrim( text, '/' );
 
 				return '<a href="' + project.twitter + '" target="_blank" class="project-link-twitter">' + text + '</a>';
 			}
@@ -523,11 +523,11 @@
 		}
 
 		function getVoteButton( project ) {
-			var isVoted = DotInsights.VotedProjects.includes( project.project_id );
+			var isVoted = dotinsights.VotedProjects.includes( project.project_id );
 			var voteBtnClass = 'button btn-vote';
 			voteBtnClass += isVoted ? ' unvote-this' : ' vote-this';
 
-			return '<a href="#" data-project-id="' + project.project_id + '" class="' + voteBtnClass + '"><svg class="button-icon"><use xlink:href="#symbol-ph-heart-straight"></use></svg><span class="button-text">' + DotInsights.NumberUtil.formatWithCommas( project.vote_count ) + '</span></a>';
+			return '<a href="#" data-project-id="' + project.project_id + '" class="' + voteBtnClass + '"><svg class="button-icon"><use xlink:href="#symbol-ph-heart-straight"></use></svg><span class="button-text">' + dotinsights.NumberUtil.formatWithCommas( project.vote_count ) + '</span></a>';
 		}
 
 		function getHTMLInfoMobile( project, layerHTML, tokenHTML, nativeHTML ) {

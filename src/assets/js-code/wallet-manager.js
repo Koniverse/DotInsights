@@ -2,23 +2,23 @@
 	function( $ ) {
 		'use strict';
 
-		window.DotInsights = window.DotInsights || {};
-		DotInsights.VotedProjects = [];
-		var Helpers = DotInsights.Helpers;
+		window.dotinsights = window.dotinsights || {};
+		dotinsights.VotedProjects = [];
+		var Helpers = dotinsights.Helpers;
 
 		const USER_LS_KEY = 'walletInfo';
 
 		var $modalConnectWallet        = $( '#modal-connect-wallet' ),
 		    $modalConnectWalletContent = $modalConnectWallet.find( '.modal-content-body' );
 
-		$modalConnectWallet.DotInsightsModal(); // Init modal.
+		$modalConnectWallet.dotinsightsModal(); // Init modal.
 
 		$( document ).ready( function() {
 			setTimeout( async () => {
 				const wallet = getWallet();
 				if ( wallet ) {
 					// Connect to the wallet.
-					DotInsights.ActiveWallet = await wallet.enable().catch( () => {
+					dotinsights.ActiveWallet = await wallet.enable().catch( () => {
 						alert( 'User cancel or reject connect request' )
 					} );
 				}
@@ -51,7 +51,7 @@
 						var response = await voteProject( walletInfo.selectedAccountAddress, projectID );
 						Helpers.unsetElementHandling( $thisButton );
 
-						DotInsights.Projects = DotInsights.Projects.map( obj =>
+						dotinsights.Projects = dotinsights.Projects.map( obj =>
 							obj.project_id === projectID ? {
 								...obj,
 								vote_count: response.vote_count
@@ -64,7 +64,7 @@
 							$theVoteButtons.removeClass( 'vote-this' ).addClass( 'unvote-this' );
 
 							// First vote.
-							if ( DotInsights.VotedProjects.length < 1 ) {
+							if ( dotinsights.VotedProjects.length < 1 ) {
 								var $modalFirstVote = $( '#modal-first-vote-notice' ),
 								    $shareButton    = $modalFirstVote.find( '.btn-twitter-share' ),
 								    projectName     = $thisButton.closest( '.row-project' ).find( '.project-name' ).text(),
@@ -76,18 +76,18 @@
 
 								$shareButton.attr( 'href', encodeURI( url ) );
 
-								$modalFirstVote.DotInsightsModal( 'open' );
+								$modalFirstVote.dotinsightsModal( 'open' );
 							}
 
-							if ( DotInsights.VotedProjects.indexOf( projectID ) === - 1 ) {
-								DotInsights.VotedProjects.push( projectID );
+							if ( dotinsights.VotedProjects.indexOf( projectID ) === - 1 ) {
+								dotinsights.VotedProjects.push( projectID );
 							}
 						} else {
 							$theVoteButtons.removeClass( 'unvote-this' ).addClass( 'vote-this' );
 
-							var index = DotInsights.VotedProjects.indexOf( projectID );
+							var index = dotinsights.VotedProjects.indexOf( projectID );
 							if ( index > - 1 ) {
-								DotInsights.VotedProjects.splice( index, 1 );
+								dotinsights.VotedProjects.splice( index, 1 );
 							}
 						}
 					} catch ( e ) {
@@ -96,7 +96,7 @@
 				}
 				doVote();
 			} else {
-				$modalConnectWallet.DotInsightsModal( 'open' );
+				$modalConnectWallet.dotinsightsModal( 'open' );
 			}
 		} );
 
@@ -118,7 +118,7 @@
 							$( this ).siblings().removeClass( 'selected-account' );
 							$( this ).addClass( 'selected-account' );
 
-							$modalConnectWallet.DotInsightsModal( 'close' );
+							$modalConnectWallet.dotinsightsModal( 'close' );
 
 							$( '.btn-open-connect-wallet' ).find( '.button-text span' ).text( walletInfo.selectedAccount.name );
 							refreshVoteCount( newAccount );
@@ -178,7 +178,7 @@
 				// Chrome, Brave, MS Edge.
 				var get_extension_link = 'https://bit.ly/3BGqFt1';
 
-				if ( DotInsights.BrowserUtil.isFirefox ) {
+				if ( dotinsights.BrowserUtil.isFirefox ) {
 					get_extension_link = 'https://mzl.la/3rQ0awW';
 				}
 
@@ -206,12 +206,12 @@
 			}
 		};
 
-		$( document.body ).on( 'DotInsights/VotedProjects/Refreshed', function() {
+		$( document.body ).on( 'dotinsights/VotedProjects/Refreshed', function() {
 			$( '.btn-vote' ).addClass( 'vote-this' ).removeClass( 'unvote-this' );
 
-			if ( DotInsights.VotedProjects.length > 0 ) {
-				for ( var i = 0; i < DotInsights.VotedProjects.length; i ++ ) {
-					var $thisButton = $( '.btn-vote[data-project-id="' + DotInsights.VotedProjects[ i ] + '"]' );
+			if ( dotinsights.VotedProjects.length > 0 ) {
+				for ( var i = 0; i < dotinsights.VotedProjects.length; i ++ ) {
+					var $thisButton = $( '.btn-vote[data-project-id="' + dotinsights.VotedProjects[ i ] + '"]' );
 					$thisButton.removeClass( 'vote-this' ).addClass( 'unvote-this' );
 				}
 			}
@@ -225,8 +225,8 @@
 					address: address
 				},
 				success: function( projects ) {
-					DotInsights.VotedProjects = projects;
-					$( document.body ).trigger( 'DotInsights/VotedProjects/Refreshed' );
+					dotinsights.VotedProjects = projects;
+					$( document.body ).trigger( 'dotinsights/VotedProjects/Refreshed' );
 				},
 			} );
 		}
@@ -246,7 +246,7 @@
 
 				setTimeout( async function() {
 					// Get and select accounts.
-					const accounts = await DotInsights.ActiveWallet.accounts.get();
+					const accounts = await dotinsights.ActiveWallet.accounts.get();
 					const selectedAccountAddress = accounts[ 0 ][ 'address' ];
 
 					var info = {
@@ -329,7 +329,7 @@
 
 			signMessage += '-' + projectID;
 
-			const signatureRs = await DotInsights.ActiveWallet.signer.signRaw( {
+			const signatureRs = await dotinsights.ActiveWallet.signer.signRaw( {
 				address: address,
 				data: signMessage
 			} );

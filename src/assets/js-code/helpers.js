@@ -1,7 +1,7 @@
 (
 	function( window, $ ) {
 		'use strict';
-		window.DotInsights = window.DotInsights || {};
+		window.dotinsights = window.dotinsights || {};
 
 		var $supports_html5_storage = true;
 		try {
@@ -16,7 +16,7 @@
 			$supports_html5_storage = false;
 		}
 
-		DotInsights.StorageUtil = {
+		dotinsights.StorageUtil = {
 			isSupported: $supports_html5_storage,
 			set: function( key, value ) {
 				var settings = JSON.parse( localStorage.getItem( 'dotinsights' ) );
@@ -37,7 +37,7 @@
 			},
 		};
 
-		DotInsights.Helpers = {
+		dotinsights.Helpers = {
 			getApiEndpointUrl: ( endpoint ) => {
 				return 'https://dot-insights-api.subwallet.app/api/%%endpoint%%'.replace( '%%endpoint%%', endpoint );
 			},
@@ -149,7 +149,7 @@
 
 		};
 
-		DotInsights.NumberUtil = {
+		dotinsights.NumberUtil = {
 			formatWithCommas: function( x ) {
 				return x.toString().replace( /\B(?=(\d{3})+(?!\d))/g, "," );
 			},
@@ -222,13 +222,13 @@
 			}
 		};
 
-		DotInsights.StringUtil = {
+		dotinsights.StringUtil = {
 			rtrim: function( str, char ) {
 				return str.replace( new RegExp( char + "*$" ), '' );
 			}
 		};
 
-		DotInsights.ArrayUtil = {
+		dotinsights.ArrayUtil = {
 			dynamicSort: function( property ) {
 				var sortOrder = 1;
 				if ( property[ 0 ] === "-" ) {
@@ -249,7 +249,7 @@
 			}
 		};
 
-		DotInsights.BrowserUtil = {
+		dotinsights.BrowserUtil = {
 			isOpera: false,
 			isChrome: false,
 			isFirefox: false,
@@ -262,25 +262,25 @@
 		const agent = window.navigator.userAgent.toLowerCase();
 		switch ( true ) {
 			case agent.indexOf( 'edge' ) > - 1:
-				DotInsights.BrowserUtil.isEdge = true;
+				dotinsights.BrowserUtil.isEdge = true;
 				break;
 			case agent.indexOf( 'edg/' ) > - 1:
-				DotInsights.BrowserUtil.isEdgeChromium = true;
+				dotinsights.BrowserUtil.isEdgeChromium = true;
 				break;
 			case agent.indexOf( 'opr' ) > - 1 && ! ! window.opr:
-				DotInsights.BrowserUtil.isOpera = true;
+				dotinsights.BrowserUtil.isOpera = true;
 				break;
 			case agent.indexOf( 'chrome' ) > - 1 && ! ! window.chrome:
-				DotInsights.BrowserUtil.isChrome = true;
+				dotinsights.BrowserUtil.isChrome = true;
 				break;
 			case agent.indexOf( 'trident' ) > - 1:
-				DotInsights.BrowserUtil.isIE = true;
+				dotinsights.BrowserUtil.isIE = true;
 				break;
 			case agent.indexOf( 'firefox' ) > - 1:
-				DotInsights.BrowserUtil.isFirefox = true;
+				dotinsights.BrowserUtil.isFirefox = true;
 				break;
 			case agent.indexOf( 'safari' ) > - 1:
-				DotInsights.BrowserUtil.isSafari = true;
+				dotinsights.BrowserUtil.isSafari = true;
 				break;
 		}
 	}( window, jQuery )
