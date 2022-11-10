@@ -151,7 +151,7 @@
 							itemClass += thisAccount.address === walletInfo.selectedAccountAddress ? ' selected-account' : '';
 
 							html += `<div class="${itemClass}" data-address="${thisAccount.address}">
-									<div class="wallet-icon"><img src="./assets/images/wallet-icon.png" alt=""></div>
+									<div class="wallet-icon"></div>
 	                                <div id="wallet-info">
 	                                    <div class="wallet-name">${thisAccount.name}</div>
 	                                    <div class="wallet-address"><span>${thisAccount.address}</span></div>
@@ -266,7 +266,7 @@
 
 		function logoutSubWallet( evt ) {
 			var $thisButton = $( evt.currentTarget );
-			
+
 			Helpers.setElementHandling( $thisButton );
 
 			setTimeout( async function() {
