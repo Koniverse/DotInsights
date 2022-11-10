@@ -27,7 +27,7 @@
 					} );
 				}
 			} );
-			$( document.body ).on( 'click', '.btn-connect-subwallet', function( evt ) {
+			$( document.body ).on( 'click', '#btn-connect-subwallet', function( evt ) {
 				evt.preventDefault();
 
 				connectSubWallet();
@@ -136,7 +136,7 @@
 
 				$modalConnectWalletContent.empty();
 				$modalConnectWalletContent.html( `
-					<a href="${get_extension_link}" target="_blank" class="button button-right-icon btn-install-subwallet">
+					<a href="${get_extension_link}" target="_blank" class="button button-right-icon btn-install-connect-wallet">
 						<span class="button-text">SubWallet</span>
 						<span class="button-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.0625 10.3135L12 14.2499L15.9375 10.3135" stroke="#66E1B6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 3.75V14.2472" stroke="#66E1B6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M20.25 14.25V19.5C20.25 19.6989 20.171 19.8897 20.0303 20.0303C19.8897 20.171 19.6989 20.25 19.5 20.25H4.5C4.30109 20.25 4.11032 20.171 3.96967 20.0303C3.82902 19.8897 3.75 19.6989 3.75 19.5V14.25" stroke="#66E1B6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
 					</a>
@@ -144,13 +144,41 @@
 			} else if ( DotInsights.Wallet.isInstalled && ! DotInsights.Wallet.isConnected ) { // Render connect button.
 				$modalConnectWalletContent.empty();
 				$modalConnectWalletContent.html( `
-					<a href="#" target="_blank" class="button button-right-icon btn-connect-subwallet">
+					<a href="#" target="_blank" class="button button-right-icon btn-install-connect-wallet" id="btn-connect-subwallet">
 						<span class="button-text">SubWallet</span>
 					</a>
 				` );
 			} else { // Render list account.
-				const wallet = getWalletInfo();
-				onSuccessfullyConnect( wallet );
+				const walletInfo = getWalletInfo();
+				var html = '';
+
+				if ( typeof walletInfo.accounts !== 'undefined' && walletInfo.accounts.length > 0 ) {
+					for ( var i = 0; i < walletInfo.accounts.length; i ++ ) {
+						var thisAccount = walletInfo.accounts[ i ];
+						var itemClass = 'wallet-account-address';
+						itemClass += thisAccount.address === walletInfo.selectedAccountAddress ? ' selected-account' : '';
+
+						html += `<div class="${itemClass}" data-address="${thisAccount.address}">
+								<div class="wallet-icon"><img src="./assets/images/wallet-icon.png" alt=""></div>
+                                <div id="wallet-info">
+                                    <div class="wallet-name">${thisAccount.name}</div>
+                                    <div class="wallet-address"><span>${thisAccount.address}</span></div>
+                                </div>
+							</div>`;
+					}
+
+					html += `<div class="button-wrap btn-logout-subwallet-wrap"><a href="#" class="button btn-logout-subwallet"><span class="button-text">Disconnect</span></a></div>`;
+				} else {
+					html = '<div>There is not any accounts found.</div>';
+				}
+
+
+				$( '.btn-open-connect-wallet' ).find( '.button-text span' ).text( walletInfo.selectedAccount.name );
+				$modalConnectWallet.find( '.modal-title' ).text( 'Choose account' );
+				$modalConnectWalletContent.empty();
+				$modalConnectWalletContent.html( html );
+
+				refreshVoteCount( walletInfo.selectedAccountAddress );
 			}
 		};
 
@@ -166,38 +194,6 @@
 			} catch ( e ) {
 				return false;
 			}
-		};
-
-		const onSuccessfullyConnect = ( wallet = null ) => {
-			const walletInfo = wallet || getWalletInfo();
-			var html = '';
-			for ( var i = 0; i < walletInfo.accounts.length; i ++ ) {
-				var thisAccount = walletInfo.accounts[ i ];
-				var itemClass = 'wallet-account-address';
-				itemClass += thisAccount.address === walletInfo.selectedAccountAddress ? ' selected-account' : '';
-
-				html += `<div class="${itemClass}" data-address="${thisAccount.address}">
-								<div class="wallet-icon"><img src="./assets/images/wallet-icon.png" alt=""></div>
-                                <div id="wallet-info">
-                                    <div class="wallet-name">${thisAccount.name}</div>
-                                    <div class="wallet-address"><span>${thisAccount.address}</span></div>
-                                </div>
-							</div>`;
-			}
-			//html += `<a href="#" class= "class=button btn-confirm-switch-account-address"><span class="button-text">Confirm</span></a>\`;                                                                                                                                                                                                                                                                                                                                                               "button btn-confirm-wallet-account-chain"><span class="button-text">Log out</span></a>`;
-			//html += `<a href="#" class="button btn-logout-subwallet"><span class="button-text">Log out</span></a>`;
-
-			$( '.btn-open-connect-wallet' ).find( '.button-text span' ).text( walletInfo.selectedAccount.name );
-			$modalConnectWallet.find( '.modal-title' ).text( 'Choose account' );
-			$modalConnectWalletContent.empty();
-			$modalConnectWalletContent.html( html );
-
-			// Append status for all projects.
-			/*var votedProjects = await sendPost( Helpers.getApiEndpointUrl( 'getVoteCount' ), {
-				address: walletInfo.selectedAccountAddress
-			} );*/
-
-			refreshVoteCount( walletInfo.selectedAccountAddress );
 		};
 
 		$( document.body ).on( 'DotInsights/VotedProjects/Refreshed', function() {
@@ -254,6 +250,7 @@
 
 		function logoutSubWallet() {
 			window.localStorage.removeItem( USER_LS_KEY );
+
 			renderWalletArea();
 		}
 

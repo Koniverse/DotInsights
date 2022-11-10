@@ -188,7 +188,7 @@
 		position: static;
 	}
 
-	.button {
+	.btn-install-connect-wallet {
 		--mg-button-height: 72px;
 		--mg-button-rounded: 10px;
 		--mg-button-background: #151515;
@@ -206,6 +206,10 @@
 			width: 48px;
 			height: 48px;
 			background: url(../images/sw-logo.png) no-repeat center;
+		}
+
+		.button-icon {
+			color: $primary-color;
 		}
 	}
 }
@@ -274,8 +278,13 @@
 	}
 }
 
-.btn-logout-subwallet {
+.btn-logout-subwallet-wrap {
+	text-align: center;
 	margin: 25px 0 0;
+
+	.button {
+		min-width: 160px;
+	}
 }
 
 .modal-subscribe {
