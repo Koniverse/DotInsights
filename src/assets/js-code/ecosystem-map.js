@@ -47,19 +47,16 @@
 			if ( ! polkadot ) {
 				return;
 			}
-			var $dotPrice        = $( '#statistic-dot-price' ),
-			    $dotVolume       = $dotPrice.find( '.statistic-volume .value' ),
-			    $dotMarketCap    = $( '#statistic-dot-marketcap' ),
-			    $dotAccounts     = $( '#statistic-dot-accounts' ),
-			    $dotTransactions = $( '#statistic-dot-transactions' ),
-			    volume24h        = polkadot.volume24h;
+			var $dotFinalizedBlocks  = $( '#statistic-dot-finalized-blocks' ),
+			    $dotSignedExtrinsics = $( '#statistic-dot-signed-extrinsics' ),
+			    $dotAccounts         = $( '#statistic-dot-accounts' ),
+			    $dotTransactions     = $( '#statistic-dot-transactions' );
 
-			$dotPrice.find( '.statistic-amount' ).html( '$' + polkadot.current_price );
-			$dotVolume.html( NumberUtil.precisionRoundMod( volume24h, 1 ) + '%' );
-			volume24h > 0 ? $dotVolume.addClass( 'value-up' ) : $dotVolume.addClass( 'value-down' );
+			$dotFinalizedBlocks.find( '.statistic-amount' ).html( NumberUtil.formatWithCommas( polkadot.finalizedBlockNum ) );
+			$dotFinalizedBlocks.find( '.statistic-volume .value' ).html( NumberUtil.formatWithCommas( '+' + polkadot.volume24h ) );
 
-			$dotMarketCap.find( '.statistic-amount' ).html( '$' + NumberUtil.formatWithCommas( polkadot.market_cap ) );
-			$dotMarketCap.find( '.statistic-volume .value' ).html( '#' + polkadot.market_cap_rank );
+			$dotSignedExtrinsics.find( '.statistic-amount' ).html( NumberUtil.formatWithCommas( polkadot.countSignedExtrinsic ) );
+			$dotSignedExtrinsics.find( '.statistic-volume .value' ).html( NumberUtil.formatWithCommas( '+' + polkadot.volume24h ) );
 
 			$dotAccounts.find( '.statistic-amount' ).html( NumberUtil.formatWithCommas( polkadot.accounts ) );
 			$dotAccounts.find( '.statistic-volume .value' ).html( NumberUtil.formatWithCommas( '+' + polkadot.accounts_change_24h ) );
