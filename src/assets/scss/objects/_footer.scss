@@ -88,6 +88,24 @@
 			text-decoration: underline;
 		}
 	}
+
+	img {
+		vertical-align: middle;
+		margin: 0 0 0 4px;
+	}
+
+	svg {
+		width: 18px;
+		height: 18px;
+
+		.icon {
+			fill: #ccc;
+		}
+	}
+
+	p {
+		margin: 0 0 3px;
+	}
 }
 
 .footer-widget-title {
