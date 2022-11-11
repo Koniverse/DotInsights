@@ -1025,7 +1025,7 @@
 			bottom: 20%;
 			left: 30%;
 			z-index: 2;
-			--shape-max-width: 20vw;
+			--shape-max-width: 15vw;
 		}
 
 		.shape-ball {
@@ -1296,8 +1296,9 @@
 }
 
 .section-web3 {
-	--s-header-spacing: 350px;
-	padding: 390px 0 0;
+	--s-header-width: 100%;
+	--s-header-spacing: 135px;
+	padding: 100px 0 0;
 
 	.shape-corner-left-bottom {
 		bottom: auto;
@@ -1310,9 +1311,14 @@
 	}
 
 	.shape-web3-group {
-		top: 50px;
+		max-width: 70vw;
+	}
+
+	.section-top-title {
+		position: absolute;
 		left: 50%;
-		transform: translateX(-50%);
+		transform: translate(-50%);
+		top: 54%;
 	}
 }
 
@@ -1364,6 +1370,10 @@
 .bridge-item {
 	display: none;
 	text-align: center;
+
+	img {
+		max-width: 80vw;
+	}
 }
 
 .block-bridge-tokens {
@@ -2037,6 +2047,12 @@
 		font-size: 48px;
 	}
 
+	.section-dex-amm {
+		.shape-satellite-02 {
+			display: none;
+		}
+	}
+
 	.section-report-friends {
 		.section-shape-01 {
 			transform: translate(-25%, 8%);
@@ -2048,7 +2064,6 @@
 	.section-top-title {
 		font-size: 40px;
 	}
-
 
 	.block-text .heading {
 		font-size: 34px;
@@ -2089,6 +2104,20 @@
 		}
 	}
 
+	.section-dex-amm {
+		.shape-galaxy {
+			.main-image {
+				max-width: 45vw;
+			}
+
+			transform: translate(25%, -10%);
+		}
+	}
+
+	.section-web3 {
+		--s-header-spacing: 80px;
+	}
+
 	.section-closing-thoughts {
 		.blur-1 {
 			--size: 60vw;
@@ -2113,6 +2142,19 @@
 
 		.section-content {
 			border-radius: 20px;
+		}
+	}
+
+	.section-get-started {
+		.shape-galaxy-1,
+		.shape-galaxy-2 {
+			display: none;
+		}
+	}
+
+	.section-stablecoin {
+		.shape-grid {
+			display: none;
 		}
 	}
 }
@@ -2290,13 +2332,13 @@
 		.blur-3 {
 			--size: 100vw;
 			--blur-size: 100px;
-			transform: translate(0, 35%);
+			transform: translate(25%, 35%);
 		}
 
 		.blur-4 {
 			--size: 100vw;
 			--blur-size: 100px;
-			transform: translate(0, -35%);
+			transform: translate(50%, -35%);
 		}
 
 		.section-content {
@@ -2332,11 +2374,11 @@
 		}
 	}
 
-	.section-stablecoin {
+	/*.section-stablecoin {
 		.shape-grid {
 			top: 5%;
 		}
-	}
+	}*/
 
 	.section-game-fi {
 		padding: 90px 0 220px;
@@ -2352,6 +2394,11 @@
 		padding: 0 0 180px;
 	}
 
+	.section-web3 {
+		padding: 50px 0 0;
+		--s-header-spacing: 50px;
+	}
+
 	.block-dao {
 		img {
 			width: 60px;
@@ -2365,7 +2412,7 @@
 		.description {
 			font-size: 16px;
 			line-height: 26px;
-			max-height: 156px;
+			max-height: 130px;
 		}
 	}
 
@@ -2379,6 +2426,8 @@
 	}
 
 	.section-closing-thoughts {
+		margin: 100px 0 0;
+
 		.section-content {
 			padding: 70px 20px;
 		}
