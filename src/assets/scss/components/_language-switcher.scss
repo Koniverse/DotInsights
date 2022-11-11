@@ -6,7 +6,7 @@
 	border-radius: 10px;
 	margin: 0;
 	padding: 13px 0;
-	background-color: #020722;
+	background-color: #000315;
 	border: 2px solid $primary-color;
 	box-shadow: 0 4px 34px rgba(102, 225, 182, .3);
 	min-width: 200px;
@@ -46,7 +46,6 @@
 		cursor: pointer;
 		display: flex;
 		align-items: center;
-		padding: 0 15px 0 0;
 		min-height: 36px;
 		color: #fff;
 		font-size: 16px;
@@ -56,21 +55,21 @@
 			margin: 0 0 0 6px;
 		}
 
-		&:after {
-			@extend %FontAwesomeRegular;
-			content: '\f107';
-			position: absolute;
-			top: 50%;
-			right: 0;
-			transform: translate(0, -50%);
-			font-size: 16px;
+		.lang-arrow {
+			margin: 0 0 0 6px;
+			width: 16px;
+			height: 16px;
+
+			* {
+				fill: currentColor;
+			}
 		}
 	}
 
 	&.show {
 		.current-lang {
-			&:after {
-				content: '\f106';
+			.lang-arrow {
+				transform: scale(1, -1);
 			}
 		}
 

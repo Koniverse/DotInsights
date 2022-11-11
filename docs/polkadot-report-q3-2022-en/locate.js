@@ -1,6 +1,6 @@
 var lang = {
 	ksmPrice: 'KSM Price',
-	dotPrice: 'Dot Price',
+	dotPrice: 'DOT Price',
 	developmentActivity: 'Development Activity',
 	runtimeModulesChains: 'Runtime Modules/Chains',
 	developmentTools: 'Development Tools',

@@ -1097,6 +1097,10 @@
 		right: 0;
 		transform: translate(18%, 0);
 
+		> img {
+			max-width: 60vw;
+		}
+
 		.shape-radial-circle {
 			top: 50%;
 			left: 50%;
@@ -1224,6 +1228,8 @@
 			top: 0;
 			left: 0;
 			transform: translate(-50px, -120px);
+			--shape-max-width: 9vw;
+			--shape-width: 150px;
 		}
 
 		.brand-01 {
@@ -1719,6 +1725,34 @@
 		width: 123vw;
 		text-align: center;
 	}
+
+	.blur-1 {
+		--size: 42vw;
+		top: 0;
+		left: 0;
+		transform: translate(-25%, -25%);
+	}
+
+	.blur-2 {
+		--size: 30vw;
+		bottom: 0;
+		left: 0;
+		transform: translate(40%, 20%);
+	}
+
+	.blur-3 {
+		--size: 30vw;
+		bottom: 0;
+		right: 0;
+		transform: translate(10%, 30%);
+	}
+
+	.blur-4 {
+		--size: 30vw;
+		top: 0;
+		right: 0;
+		transform: translate(10%, -25%);
+	}
 }
 
 .block-report-post {
@@ -2031,6 +2065,33 @@
 			--text-width: 100% !important;
 		}
 	}
+
+	.section-closing-thoughts {
+		.blur-1 {
+			--size: 60vw;
+			--blur-size: 100px;
+			transform: translate(-25%, -35%);
+		}
+
+		.blur-2 {
+			--size: 60vw;
+			transform: translate(-25%, 35%);
+		}
+
+		.blur-3 {
+			--size: 60vw;
+			transform: translate(25%, 35%);
+		}
+
+		.blur-4 {
+			--size: 60vw;
+			transform: translate(25%, -35%);
+		}
+
+		.section-content {
+			border-radius: 20px;
+		}
+	}
 }
 
 @include media-breakpoint-down(md) {
@@ -2092,10 +2153,6 @@
 		padding: 120px 0 0;
 	}
 
-	.section-ecosystem-overview {
-		padding: 90px 0 0;
-	}
-
 	.section-top-title {
 		font-size: 34px;
 	}
@@ -2121,11 +2178,7 @@
 		--content-h-spacing: 25px;
 		--block-round: 8px;
 		--border-size: -2px;
-		--chart-ratio: 80%;
-
-		&.chart-vc-polkadot {
-			--chart-height: 350px !important;
-		}
+		--chart-ratio: 70%;
 	}
 
 	.block-report-table {
@@ -2137,6 +2190,13 @@
 	.block-table-heading,
 	.block-chart-heading {
 		font-size: 18px;
+		line-height: 30px;
+	}
+
+	.block-table-source,
+	.block-chart-source {
+		font-size: 16px;
+		line-height: 26px;
 	}
 
 	.section-reports-hero {
@@ -2144,14 +2204,89 @@
 	}
 
 	.section-ecosystem-map {
+		padding: 78px 0 90px;
+
 		.section-description {
 			font-size: 18px;
+			line-height: 30px;
+		}
+
+		.section-shape-01 {
+			bottom: 0;
+		}
+
+		.section-shape-02 {
+			top: 30%;
+			right: 5%;
+		}
+	}
+
+	.block-report-table {
+		&.table-style-02 {
+			table {
+				font-size: 16px;
+			}
+		}
+	}
+
+	.section-top-10-networks-dev-act {
+		padding: 0 0 250px;
+
+		.shape-galaxy {
+			bottom: -20px;
+		}
+	}
+
+	.table--electricity-consumption {
+		.token-info {
+			min-height: 0;
 		}
 	}
 
 	.section-ecosystem-overview {
-		.block-chart-dev-act-comparison {
-			--chart-bot-spacing: 50px !important;
+		padding: 90px 0 0;
+		--s-header-spacing: 50px;
+
+		.shape-galaxy {
+			top: 0;
+		}
+	}
+
+	.section-decentralization-security {
+		padding: 0 0 120px;
+
+		.shape-grid {
+			bottom: -20px;
+		}
+	}
+
+	.section-closing-thoughts {
+		.blur-1 {
+			--size: 100vw;
+			--blur-size: 100px;
+			transform: translate(0, -35%);
+		}
+
+		.blur-2 {
+			--size: 100vw;
+			--blur-size: 100px;
+			transform: translate(0, 35%);
+		}
+
+		.blur-3 {
+			--size: 100vw;
+			--blur-size: 100px;
+			transform: translate(0, 35%);
+		}
+
+		.blur-4 {
+			--size: 100vw;
+			--blur-size: 100px;
+			transform: translate(0, -35%);
+		}
+
+		.section-content {
+			border-radius: 10px;
 		}
 	}
 
@@ -2183,8 +2318,41 @@
 		}
 	}
 
+	.section-stablecoin {
+		.shape-grid {
+			top: 5%;
+		}
+	}
+
 	.section-game-fi {
-		padding: 90px 0 0;
+		padding: 90px 0 220px;
+
+		.shape-grid {
+			.shape-02 {
+				transform: translate(-20px, -20px);
+			}
+		}
+	}
+
+	.section-metaverse {
+		padding: 0 0 180px;
+	}
+
+	.block-dao {
+		img {
+			width: 60px;
+			margin: 0 0 20px;
+		}
+
+		h3 {
+			font-size: 18px;
+		}
+
+		.description {
+			font-size: 16px;
+			line-height: 26px;
+			max-height: 156px;
+		}
 	}
 
 	.bridge-list {

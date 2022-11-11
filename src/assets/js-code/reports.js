@@ -167,6 +167,12 @@
 						case 'nft-marketplace-daily-volume':
 							chartOptions = getChartResponsiveOptionsNftMarketplaceDailyVolume( chartName );
 							break;
+						case 'web3-foundation-grants':
+							chartOptions = getChartResponsiveOptionsWeb3FoundationGrants( chartName );
+							break;
+						case 'tvl-by-chain':
+							chartOptions = getChartResponsiveOptionsTvlByChain( chartName );
+							break;
 					}
 
 					if ( chartOptions ) {
@@ -261,7 +267,7 @@
 				if ( thisLang.code === currentLang ) {
 					currentLangOutput = `
 					<img src="../assets/flags/4x3/${thisLang.flag}" alt="${thisLang.name}" width="25" height="19"/>
-					<span class="lang-label">${thisLang.name}</span>`
+					<span class="lang-label">${thisLang.name}</span><svg class="lang-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M360.5 217.5l-152 143.1C203.9 365.8 197.9 368 192 368s-11.88-2.188-16.5-6.562L23.5 217.5C13.87 208.3 13.47 193.1 22.56 183.5C31.69 173.8 46.94 173.5 56.5 182.6L192 310.9l135.5-128.4c9.562-9.094 24.75-8.75 33.94 .9375C370.5 193.1 370.1 208.3 360.5 217.5z"/></svg>`
 				} else {
 					subLangOutput += `
 						<li>
@@ -830,19 +836,15 @@
 		}
 
 		function getChartOptionsNakamotoCoefficient() {
-			var colors = [
+			var colors            = [
 				'#EA3572'
-			];
-
-			var baseOptions = {
+			    ],
+			    baseOptions       = {
 				color: colors,
 				textStyle: {
 					fontFamily: fontFamily,
 					fontWeight: 500
 				},
-				/*tooltip: {
-					show: false
-				},*/
 				legend: {
 					show: false
 				},
@@ -850,6 +852,7 @@
 					left: '3%',
 					right: '3%',
 					top: '3%',
+					bottom: '3%',
 					containLabel: true
 				},
 				xAxis: {
@@ -858,8 +861,6 @@
 					axisTick: {
 						show: false
 					},
-					//boundaryGap: [ '40%', '40%' ],
-					//
 					axisLine: {
 						show: true,
 						lineStyle: {
@@ -892,70 +893,53 @@
 							},
 							Solana: {
 								height: 20,
-								//align: 'center',
 								backgroundColor: {
 									image: getTokenIcon( 'Solana' )
 								}
 							},
 							Avalanche: {
 								height: 20,
-								align: 'center',
 								backgroundColor: {
 									image: getTokenIcon( 'Avax' )
 								}
 							},
 							Polkadot: {
 								height: 20,
-								//align: 'center',
 								backgroundColor: {
 									image: getTokenIcon( 'Polkadot' )
 								}
 							},
 							Cosmos: {
 								height: 20,
-								//align: 'center',
 								backgroundColor: {
 									image: getTokenIcon( 'Cosmos' )
 								}
 							},
 							NEAR: {
 								height: 20,
-								//align: 'center',
 								backgroundColor: {
 									image: getTokenIcon( 'Near' )
 								}
 							},
 							Polygon: {
 								height: 20,
-								//align: 'center',
 								backgroundColor: {
 									image: getTokenIcon( 'Polygon' )
 								}
 							},
 							Fantom: {
 								height: 20,
-								//align: 'center',
 								backgroundColor: {
 									image: getTokenIcon( 'Fantom' )
 								}
 							},
 							BSC: {
 								height: 20,
-								//align: 'center',
 								backgroundColor: {
 									image: getTokenIcon( 'BSC' )
 								}
 							},
 						},
-						/*formatter: function( value ) {
-							return '{icon|' + getTokenIcon( value ) + '}' + value;
-						},
-						rich: {
-							icon: {
-								fontSize: 25,
-								padding: 5
-							}
-						},*/
 						fontFamily: fontFamily,
 						fontSize: 13,
 						fontWeight: 500,
@@ -1012,9 +996,9 @@
 						},
 					}
 				]
-			};
-			var responsiveOptions = getChartResponsiveOptionsNakamotoCoefficient();
-			//var responsiveOptions = {};
+			    },
+			    responsiveOptions = getChartResponsiveOptionsNakamotoCoefficient();
+
 			return $.extend( true, baseOptions, responsiveOptions );
 		}
 
@@ -1090,16 +1074,13 @@
 					    fontWeight: 500
 				    },
 				    tooltip: defaultTooltipSettings,
-				legend: defaultLegendSettings,
+				    legend: defaultLegendSettings,
 				    grid: {
 					    left: '3%',
 					    right: '3%',
 					    top: '3%',
 					    containLabel: true
 				    },
-				/*dataset: {
-					source: data
-				},*/
 				    xAxis: {
 					    type: 'time',
 					    boundaryGap: [ '0%', '0%' ],
@@ -1215,7 +1196,6 @@
 							color: colors[ 1 ]
 						},
 						yAxisIndex: 1,
-
 						type: 'line',
 						smooth: true,
 						showSymbol: false,
@@ -1224,10 +1204,8 @@
 						},
 					},
 				]
-			};
-
-			//responsiveOptions = getChartResponsiveOptionsDotKsmAccOverview();
-			var responsiveOptions = {};
+			    },
+			    responsiveOptions = getChartResponsiveOptionsDotKsmAccOverview();
 
 			return $.extend( true, baseOptions, responsiveOptions );
 		}
@@ -1235,38 +1213,53 @@
 		function getChartResponsiveOptionsDotKsmAccOverview() {
 			var newOptions = {};
 
-			if ( window.innerWidth > 767 ) {
-				newOptions = {
-					yAxis: {
-						axisLabel: {
-							formatter: '{value}'
-						}
-					},
-					xAxis: {
-						splitNumber: 8
-					}
+			if ( window.innerWidth < 460 ) {
+				newOptions[ 'xAxis' ] = {
+					splitNumber: 2
+				};
+			} else if ( window.innerWidth < 768 ) {
+				newOptions[ 'xAxis' ] = {
+					splitNumber: 3
+				};
+
+			} else if ( window.innerWidth < 1024 ) {
+				newOptions[ 'xAxis' ] = {
+					splitNumber: 4
 				};
 			} else {
-				newOptions = {
-					yAxis: {
+				newOptions[ 'xAxis' ] = {
+					splitNumber: 6
+				};
+			}
+
+			if ( window.innerWidth < 768 ) {
+				newOptions[ 'yAxis' ] = [
+					{
 						axisLabel: {
 							formatter: function( value ) {
 								return NumberUtil.formatMoney( value );
 							}
 						}
-					},
-					xAxis: {
-						splitNumber: 4
-					}
-				};
-
-				if ( window.innerWidth < 460 ) {
-					$.extend( newOptions, {
-						xAxis: {
-							splitNumber: 2
+					}, {
+						axisLabel: {
+							formatter: function( value ) {
+								return NumberUtil.formatMoney( value );
+							}
 						}
-					} )
-				}
+					}
+				];
+			} else {
+				newOptions[ 'yAxis' ] = [
+					{
+						axisLabel: {
+							formatter: '{value}'
+						}
+					}, {
+						axisLabel: {
+							formatter: '{value}'
+						}
+					}
+				];
 			}
 
 			return newOptions;
@@ -1275,9 +1268,8 @@
 		function getChartOptionsVCsDotKsm() {
 			var colors = [
 				'#004BFF'
-			];
-
-			var baseOptions = {
+			    ],
+			    baseOptions       = {
 				color: colors,
 				textStyle: {
 					fontFamily: fontFamily,
@@ -1375,16 +1367,44 @@
 						},
 					}
 				]
-			};
+			    },
+			    responsiveOptions = getChartResponsiveOptionsVCsDotKsm();
 
-			var responsiveOptions = getChartResponsiveOptionsVCsDotKsm();
 			return $.extend( true, baseOptions, responsiveOptions );
 		}
 
 		function getChartResponsiveOptionsVCsDotKsm() {
 			var newOptions = {};
 
-			if ( window.innerWidth > 767 ) {
+			if ( window.innerWidth < 460 ) {
+				newOptions = {
+					series: [
+						{
+							label: {
+								fontSize: 12
+							},
+							barMaxWidth: 32,
+							itemStyle: {
+								borderRadius: [ 5, 5, 0, 0 ]
+							}
+						}
+					]
+				};
+			} else if ( window.innerWidth < 768 ) {
+				newOptions = {
+					series: [
+						{
+							label: {
+								fontSize: 14
+							},
+							barMaxWidth: 40,
+							itemStyle: {
+								borderRadius: [ 5, 5, 0, 0 ]
+							}
+						}
+					]
+				};
+			} else {
 				newOptions = {
 					series: [
 						{
@@ -1398,33 +1418,18 @@
 						}
 					]
 				};
-			} else {
-				newOptions = {
-					series: [
-						{
-							label: {
-								fontSize: 15
-							},
-							barMaxWidth: 40,
-							itemStyle: {
-								borderRadius: [ 5, 5, 0, 0 ]
-							}
-						}
-					]
-				};
 			}
 
 			return newOptions;
 		}
 
 		function getChartOptionsXCMTransfers() {
-			var colors = [
+			var colors            = [
 				    '#004BFF',
 				    '#66E1B6',
 			    ],
-			    data   = getChartDataXCMTransfers();
-
-			var baseOptions = {
+			    data              = getChartDataXCMTransfers(),
+			    baseOptions       = {
 				color: colors,
 				textStyle: {
 					fontFamily: fontFamily,
@@ -1580,9 +1585,9 @@
 						},
 					}
 				]
-			};
-			//var responsiveOptions = getChartResponsiveOptionsNakamotoCoefficient();
-			var responsiveOptions = {};
+			    },
+			    responsiveOptions = getChartResponsiveOptionsXCMTransfers();
+
 			return $.extend( true, baseOptions, responsiveOptions );
 		}
 
@@ -1806,26 +1811,23 @@
 		function getChartResponsiveOptionsDotTreasuryActivity() {
 			var newOptions = {};
 
-			if ( window.innerWidth > 767 ) {
-				newOptions = {
-					xAxis: {
-						splitNumber: 8
-					}
+			if ( window.innerWidth < 460 ) {
+				newOptions[ 'xAxis' ] = {
+					splitNumber: 2
 				};
-			} else {
-				newOptions = {
-					xAxis: {
-						splitNumber: 4
-					}
+			} else if ( window.innerWidth < 768 ) {
+				newOptions[ 'xAxis' ] = {
+					splitNumber: 3
 				};
 
-				if ( window.innerWidth < 460 ) {
-					$.extend( true, newOptions, {
-						xAxis: {
-							splitNumber: 2
-						}
-					} );
-				}
+			} else if ( window.innerWidth < 1024 ) {
+				newOptions[ 'xAxis' ] = {
+					splitNumber: 4
+				};
+			} else {
+				newOptions[ 'xAxis' ] = {
+					splitNumber: 6
+				};
 			}
 
 			return newOptions;
@@ -2282,7 +2284,20 @@
 		}
 
 		function getChartOptionsWeb3FoundationGrants( chartName ) {
-			var datasets = [
+			var colors            = [
+				    '#004BFF',
+				    '#66E1B6',
+				    '#9293FF',
+				    '#FD5BDB',
+				    '#F01923',
+				    '#FF7D0A',
+				    '#FFEF5B',
+				    '#F0A08C',
+				    '#C669FF',
+				    '#A9AC24',
+				    '#47D9FA',
+			    ],
+			    datasets          = [
 				    {
 					    name: locate.runtimeModulesChains,
 					    value: 41.5,
@@ -2348,21 +2363,7 @@
 					    value: 4.0
 				    }
 			    ],
-			    colors   = [
-				    '#004BFF',
-				    '#66E1B6',
-				    '#9293FF',
-				    '#FD5BDB',
-				    '#F01923',
-				    '#FF7D0A',
-				    '#FFEF5B',
-				    '#F0A08C',
-				    '#C669FF',
-				    '#A9AC24',
-				    '#47D9FA',
-			    ];
-
-			return {
+			    baseOptions       = {
 				color: colors,
 				tooltip: $.extend( true, {}, defaultTooltipStyle, {
 					trigger: 'item',
@@ -2370,7 +2371,9 @@
 						return value + '%';
 					}
 				} ),
-				//legend: defaultLegendSettings,
+				    legend: $.extend( true, {}, defaultLegendSettings, {
+					    show: false,
+				    } ),
 				grid: {
 					left: '3%',
 					right: '3%',
@@ -2378,29 +2381,17 @@
 					containLabel: true
 				},
 				series: [
-					{ // Center logo.
+					{
 						name: 'Label',
 						type: 'pie',
-						//top: 'top',
 						center: [ '50%', '45%' ],
 						radius: [ '68%', '86%' ],
 						label: {
 							show: true,
 							position: 'center',
 							formatter: '',
-							/*rich: {
-								branding: {
-									width: 252,
-									height: 106,
-									image: baseUrl + '/assets/images/report/web3-foundation-grants.png'
-								}
-							}*/
 							backgroundColor: {
 								image: baseUrl + '/assets/images/report/web3-foundation-grants.png'
-								// It can be URL of a image,
-								// or dataURI,
-								// or HTMLImageElement,
-								// or HTMLCanvasElement.
 							},
 							width: 252,
 							height: 106
@@ -2424,7 +2415,6 @@
 					}, {
 						name: 'Category',
 						type: 'pie',
-						//top: 'top',
 						center: [ '50%', '45%' ],
 						radius: [ '68%', '86%' ],
 						label: {
@@ -2456,7 +2446,6 @@
 										color: '#fff'
 									}
 								] ),
-								//color: '#fff'
 							},
 							maxSurfaceAngle: 80
 
@@ -2482,7 +2471,59 @@
 						data: datasets
 					}
 				]
+			    },
+			    responsiveOptions = getChartResponsiveOptionsWeb3FoundationGrants();
+
+			return $.extend( true, {}, baseOptions, responsiveOptions );
+		}
+
+		function getChartResponsiveOptionsWeb3FoundationGrants() {
+			var newOptions = {
+				series: [ {}, {} ]
 			};
+
+			if ( window.innerWidth < 992 ) {
+				newOptions[ 'legend' ] = defaultLegendSettings;
+				newOptions[ 'series' ][ 1 ] = {
+					label: {
+						show: false
+					}
+				}
+			} else {
+				newOptions[ 'legend' ] = {
+					show: false
+				};
+				newOptions[ 'series' ][ 1 ] = {
+					label: {
+						show: true
+					}
+				}
+			}
+
+			if ( window.innerWidth < 460 ) {
+				newOptions[ 'series' ][ 0 ] = {
+					label: {
+						width: 180,
+						height: 76
+					},
+				}
+			} else if ( window.innerWidth < 768 ) {
+				newOptions[ 'series' ][ 0 ] = {
+					label: {
+						width: 220,
+						height: 93
+					},
+				}
+			} else {
+				newOptions[ 'series' ][ 0 ] = {
+					label: {
+						width: 252,
+						height: 106
+					},
+				}
+			}
+
+			return newOptions;
 		}
 
 		function getChartOptionsTvlByChain( chartName ) {
@@ -2642,9 +2683,8 @@
 						    }
 					    }
 				    }
-			    ];
-
-			return {
+			    ],
+			    baseOptions       = {
 				color: colors,
 				tooltip: $.extend( true, {}, defaultTooltipStyle, {
 					trigger: 'item',
@@ -2652,12 +2692,9 @@
 						return NumberUtil.formatWithCommas( value );
 					}
 				} ),
-				/*title: {
-					text: `Hello`,
-					left: 'center',
-					top: 'center',
-				},*/
-				//legend: defaultLegendSettings,
+				    legend: $.extend( true, {}, defaultLegendSettings, {
+					    show: false,
+				    } ),
 				grid: {
 					left: '3%',
 					right: '3%',
@@ -2669,7 +2706,6 @@
 						startAngle: 80,
 						name: '',
 						type: 'pie',
-						//top: 'top',
 						center: [ '50%', '45%' ],
 						radius: [ '68%', '86%' ],
 						label: {
@@ -2725,7 +2761,49 @@
 						data: datasets
 					}
 				]
+			    },
+			    responsiveOptions = getChartResponsiveOptionsTvlByChain();
+
+			return $.extend( true, {}, baseOptions, responsiveOptions );
+		}
+
+		function getChartResponsiveOptionsTvlByChain() {
+			var newOptions = {
+				series: [ {}, {} ]
 			};
+
+			if ( window.innerWidth < 768 ) {
+				newOptions[ 'legend' ] = defaultLegendSettings;
+				newOptions[ 'series' ][ 0 ] = {
+					label: {
+						fontSize: 11,
+						lineHeight: 24,
+						formatter: function( params ) {
+							return `${params.percent}%`;
+						}
+					},
+					labelLine: {
+						length: 5,
+					}
+				}
+			} else {
+				newOptions[ 'legend' ] = {
+					show: false
+				};
+				newOptions[ 'series' ][ 0 ] = {
+					label: {
+						fontSize: 17,
+						lineHeight: 30,
+						formatter: function( params ) {
+							return `${params.name} ${params.percent}%`;
+						}
+					}
+				}
+			}
+
+			console.log( newOptions );
+
+			return newOptions;
 		}
 
 		function getChartLinesBaseOptions( jsonData, datasets, colors, areaBackground, seriesOptions, chartExtraOptions ) {

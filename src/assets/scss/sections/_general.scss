@@ -68,6 +68,14 @@
 	&.purple {
 		background: #4D3589;
 	}
+
+	&.green {
+		background: #337c86;
+	}
+
+	&.light-blue {
+		background: #0025CE;
+	}
 }
 
 .shape-corner-left-bottom {
@@ -436,10 +444,6 @@
 
 	.section-title {
 		font-size: 26px;
-	}
-
-	.section-description-wrap {
-		margin: 10px 0 0;
 	}
 
 	.section-description {
