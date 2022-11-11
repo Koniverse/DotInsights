@@ -99,6 +99,7 @@
 			} );*/
 
 			initTableOfContents();
+			initLanguageSwitcher();
 
 			var $readmore = $( '.block-dao .description' );
 
@@ -202,6 +203,94 @@
 				e.stopPropagation();
 
 				$tableOfContents.addClass( 'open' );
+			} );
+		}
+
+		function initLanguageSwitcher() {
+			var languages = [
+				{
+					code: 'en',
+					name: 'English',
+					flag: 'us.svg',
+					url: 'polkadot-report-q3-2022-en',
+					isActive: 1,
+				}, {
+					code: 'pt',
+					name: 'Português',
+					flag: 'pt.svg',
+					url: 'polkadot-report-q3-2022-pt',
+					isActive: 1,
+				}, {
+					code: 'vn',
+					name: 'Tiếng Việt',
+					flag: 'vn.svg',
+					url: 'polkadot-report-q3-2022-vi',
+					isActive: 1,
+				}, {
+					code: 'zh',
+					name: '中文',
+					flag: 'cn.svg',
+					url: 'polkadot-report-q3-2022-zh',
+					isActive: 1,
+				}, {
+					code: 'id_ID',
+					name: 'Bahasa Indonesia',
+					flag: 'id.svg',
+					url: 'polkadot-report-q3-2022-id',
+					isActive: 1,
+				}, {
+					code: 'es',
+					name: 'Español',
+					flag: 'es.svg',
+					url: 'polkadot-report-q3-2022-es',
+					isActive: 1,
+				}
+			];
+
+			var currentLang = $( 'html' ).attr( 'lang' );
+
+			var currentLangOutput = '',
+			    subLangOutput     = '';
+			for ( var i = 0; i < languages.length; i ++ ) {
+				var thisLang = languages[ i ];
+
+				if ( ! thisLang.isActive ) {
+					continue;
+				}
+
+				if ( thisLang.code === currentLang ) {
+					currentLangOutput = `
+					<img src="../assets/flags/4x3/${thisLang.flag}" alt="${thisLang.name}" width="25" height="19"/>
+					<span class="lang-label">${thisLang.name}</span>`
+				} else {
+					subLangOutput += `
+						<li>
+							<a href="${thisLang.url}">
+								<img src="../assets/flags/4x3/${thisLang.flag}" alt="${thisLang.name}" width="25" height="19"/>
+								${thisLang.name}
+							</a>
+						</li>
+					`
+				}
+			}
+
+			var $switcher = $( '#language-switcher' ),
+			    output    = `
+				<div class="current-lang">${currentLangOutput}</div>
+				<ul class="language-switcher-list">${subLangOutput}</ul>`;
+
+			$switcher.html( output );
+
+			$switcher.on( 'click', '.current-lang', function( evt ) {
+				evt.preventDefault();
+
+				$switcher.addClass( 'show' );
+			} );
+
+			$( document ).on( 'click', function( e ) {
+				if ( $( e.target ).closest( $switcher ).length === 0 ) {
+					$switcher.removeClass( 'show' );
+				}
 			} );
 		}
 
