@@ -29,7 +29,6 @@
 
 	a {
 		color: $primary-color;
-		font-weight: 700;
 		text-underline-offset: 2px;
 
 		&:hover {
@@ -209,7 +208,7 @@
 .block-table-footer,
 .block-chart-footer {
 	--branding-size: 138px;
-	margin: 26px 0 0;
+	margin: 16px 0 0;
 	position: relative;
 	display: flex;
 	flex-wrap: wrap;
@@ -222,6 +221,7 @@
 		height: 24px;
 		background: url(../images/logo/logo.png) no-repeat left center;
 		background-size: var(--branding-size) auto;
+		margin: 10px 0 0 0;
 	}
 }
 
@@ -231,7 +231,7 @@
 	font-weight: 500;
 	line-height: 30px;
 	max-width: var(--chart-source-w, 100%);
-	margin: 0 10px 0 0;
+	margin: 10px 10px 0 0;
 
 	p {
 		margin: 0 0 4px;
@@ -833,6 +833,7 @@
 		left: 0;
 		top: 52%;
 		transform: translate(-42%, 0);
+		--shape-max-width: 19vw;
 	}
 
 	.shape-radial-circle {
@@ -862,7 +863,7 @@
 	.shape-galaxy {
 		bottom: 0;
 		left: 50%;
-		transform: translate(-78%, 14%);
+		transform: translate(-70%, 4%);
 	}
 
 	.shape-cube {
@@ -1052,6 +1053,7 @@
 			left: 29%;
 			transform: translateY(15%);
 			--shape-max-width: 10vw;
+			--shape-width: 95px;
 		}
 
 		.shape-smooth-ring {
@@ -1105,6 +1107,8 @@
 			top: 0;
 			left: 25%;
 			transform: translate(-50%, -37%);
+			--shape-max-width: 8vw;
+			--shape-width: 131px;
 		}
 
 		.shape-satellite-04 {
@@ -1702,7 +1706,7 @@
 	margin: 135px 0 0;
 
 	.section-content {
-		padding: 120px 0 128px;
+		padding: 120px 30px 128px;
 		background: #000 url(../images/report/closing-thoughts-bg.jpg) no-repeat center;
 		background-size: cover;
 		border-radius: 30px;
@@ -1764,6 +1768,7 @@
 		line-height: 30px;
 		font-weight: 500;
 		width: 520px;
+		max-width: 100%;
 
 		mark {
 			color: $primary-color;
@@ -1909,6 +1914,7 @@
 		margin: 0 0 32px;
 
 		span {
+			vertical-align: middle;
 			margin: 0 24px 0 0;
 		}
 
@@ -1931,7 +1937,7 @@
 
 .section-about-us {
 	.section-content {
-		padding: 122px 0 131px;
+		padding: 122px 30px 131px;
 		background: $secondary-color url(../images/report/about-us-bg.jpg) no-repeat center;
 		background-size: cover;
 		border-radius: 30px;
@@ -2077,14 +2083,9 @@
 }
 
 @include media-breakpoint-down(sm) {
-	.section-reports-hero {
-		padding: 100px 0 120px;
-	}
-
-	.section-ecosystem-map {
-		.section-description {
-			font-size: 18px;
-		}
+	.section-description {
+		font-size: 16px;
+		line-height: 26px;
 	}
 
 	.page-reports .main-content {
@@ -2138,6 +2139,16 @@
 		font-size: 18px;
 	}
 
+	.section-reports-hero {
+		padding: 100px 0 120px;
+	}
+
+	.section-ecosystem-map {
+		.section-description {
+			font-size: 18px;
+		}
+	}
+
 	.section-ecosystem-overview {
 		.block-chart-dev-act-comparison {
 			--chart-bot-spacing: 50px !important;
@@ -2154,8 +2165,75 @@
 		}
 	}
 
+	.section-parachain {
+		.shape-galaxy {
+			top: 3%;
+		}
+	}
+
+	.section-dex-amm {
+		padding: 0 0 180px;
+
+		.shape-satellite-02 {
+			display: none;
+		}
+
+		.shape-grid {
+			bottom: 0;
+		}
+	}
+
 	.section-game-fi {
 		padding: 90px 0 0;
+	}
+
+	.bridge-list {
+		--item-gutter-x: 12px;
+		--item-spacing: 20px;
+
+		a {
+			font-size: 18px;
+		}
+	}
+
+	.section-closing-thoughts {
+		.section-content {
+			padding: 70px 20px;
+		}
+	}
+
+	.section-get-started {
+		--s-header-spacing: 50px;
+	}
+
+	.block-report-post {
+		display: block;
+		margin: 0 0 50px;
+
+		.post-thumbnail {
+			max-width: 100%;
+			margin: 0 0 30px !important;
+		}
+
+		.post-info {
+			font-size: 16px;
+			width: 100%;
+		}
+	}
+
+	.block-about-us h2 {
+		font-size: 22px;
+		margin: 0 0 20px;
+
+		span {
+			margin: 0 15px 0 0;
+		}
+	}
+
+	.section-about-us {
+		.section-content {
+			padding: 70px 20px;
+		}
 	}
 
 	.grid-contributors {
