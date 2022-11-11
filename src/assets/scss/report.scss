@@ -770,14 +770,24 @@
 	--s-desc-line-spacing: 26px;
 
 	.section-shape-01 {
-		left: 15%;
+		left: -100px;
 		bottom: 25%;
+		--shape-max-width: 7vw;
 	}
 
-	.section-shape-02 {
-		right: 13%;
+	.shape-cube {
 		top: 40%;
+		right: -180px;
 		--shape-max-width: 8vw;
+		--shape-width: 109px;
+	}
+
+	.section-header-inner {
+		position: relative;
+
+		.section-shape {
+			z-index: -1;
+		}
 	}
 
 	.section-description {
@@ -2039,8 +2049,21 @@
 		font-size: 40px;
 	}
 
+
 	.block-text .heading {
 		font-size: 34px;
+	}
+
+	.section-ecosystem-map {
+		.section-shape-01 {
+			bottom: -85px;
+			left: 5%;
+		}
+
+		.shape-cube {
+			top: 20%;
+			right: 5%;
+		}
 	}
 
 	.section-report-friends {
@@ -2209,15 +2232,6 @@
 		.section-description {
 			font-size: 18px;
 			line-height: 30px;
-		}
-
-		.section-shape-01 {
-			bottom: 0;
-		}
-
-		.section-shape-02 {
-			top: 30%;
-			right: 5%;
 		}
 	}
 
