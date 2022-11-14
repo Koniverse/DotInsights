@@ -20,18 +20,18 @@
 	background: radial-gradient(70% 70% at 50% 50%, rgba(0, 0, 0, 0) 10.42%, rgba(0, 0, 34, 0.1) 44.27%, #004bff 100%);
 
 	img {
-		max-width: 50%;
+		max-width: 35%;
 	}
 
 	h3 {
 		font-family: $body-font-family;
 		font-weight: 600;
 		color: #fff;
-		font-size: calc(var(--circle-size) / 7);
+		font-size: calc(var(--circle-size) / 8);
 		margin: .3em 0 0;
 	}
 
-	.total-likes {
+	.vote-count {
 		font-size: calc(var(--circle-size) / 10);
 		line-height: 1;
 		color: #fff;

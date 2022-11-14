@@ -43,6 +43,7 @@
 			dotinsights.Query.foundItems = foundItems;
 			dotinsights.Query.maxNumPages = dotinsights.Query.itemsPerPage > 0 ? Math.ceil( foundItems / dotinsights.Query.itemsPerPage ) : 1;
 
+			buildBubbles();
 			buildTable();
 			buildPagination();
 		} );
@@ -91,169 +92,183 @@
 			buildPagination();
 		} );
 
-		var bubbles    = [
-			    {
-				    project_slug: 'polkadot',
-				    name: 'Polkadot',
-				    likes: 7927,
-				    r: 197,
-				    fontSize: 30
-			    }, {
-				    project_slug: 'subwallet',
-				    name: 'SubWallet',
-				    likes: 6827,
-				    r: 144,
-				    fontSize: 20
-			    }, {
-				    project_slug: 'ampnet',
-				    name: 'Ampnet',
-				    likes: 4072,
-				    r: 107,
-				    fontSize: 18
-			    }, {
-				    project_slug: 'acala',
-				    name: 'Acala',
-				    likes: 4072,
-				    r: 88,
-				    fontSize: 16
-			    }, {
-				    project_slug: 'demodyfi',
-				    name: 'Demodyfi',
-				    likes: 5072,
-				    r: 121,
-				    fontSize: 16
-			    }, {
-				    project_slug: 'chainsafe',
-				    name: 'ChainSafe',
-				    likes: 2989,
-				    r: 102,
-				    fontSize: 16
-			    }, {
-				    project_slug: '1beam',
-				    name: '1beam',
-				    likes: 2989,
-				    r: 102,
-				    fontSize: 16
-			    }, {
-				    project_slug: 'unilend',
-				    name: 'Unilend',
-				    likes: 2025,
-				    r: 96,
-				    fontSize: 16
-			    }, {
-				    project_slug: 'metamask',
-				    name: 'MetaMask',
-				    likes: 3325,
-				    r: 76,
-				    fontSize: 16
-			    }, {
-				    project_slug: 'onfinality',
-				    name: 'OnFinality',
-				    likes: 2028,
-				    r: 68,
-				    fontSize: 16
-			    }, {
-				    project_slug: 'nabox',
-				    name: 'Nabox',
-				    likes: 1931,
-				    r: 77,
-				    fontSize: 16
-			    }, {
-				    project_slug: 'anchor',
-				    name: 'Anchor',
-				    likes: 1931,
-				    r: 52,
-				    fontSize: 16
-			    }, {
-				    project_slug: 'athos_finance',
-				    name: 'Athos Finance',
-				    likes: 1092,
-				    r: 64,
-				    fontSize: 16
-			    }, {
-				    project_slug: 'huckleberry',
-				    name: 'Huckleberry',
-				    likes: 821,
-				    r: 39,
-				    fontSize: 16
-			    }, {
-				    project_slug: 'ambire_wallet',
-				    name: 'Ambire Wallet',
-				    likes: 821,
-				    r: 48,
-				    fontSize: 16
-			    }, {
-				    project_slug: 'polkafoundry',
-				    name: 'PolkaFoundry',
-				    likes: 821,
-				    r: 57,
-				    fontSize: 16
-			    }, {
-				    project_slug: 'lido',
-				    name: 'Lido',
-				    likes: 821,
-				    r: 60,
-				    fontSize: 16
-			    }, {
-				    project_slug: 'beyondfi',
-				    name: 'BeyondFi',
-				    likes: 821,
-				    r: 38,
-				    fontSize: 16
-			    }, {
-				    project_slug: 'basilisk',
-				    name: 'Basilisk',
-				    likes: 821,
-				    r: 49,
-				    fontSize: 16
-			    }, {
-				    project_slug: 'avault',
-				    name: 'Avault',
-				    likes: 821,
-				    r: 35,
-				    fontSize: 16
-			    }, {
-				    project_slug: 'curve',
-				    name: 'Curve',
-				    likes: 821,
-				    r: 60,
-				    fontSize: 16
-			    }, {
-				    project_slug: 'linear',
-				    name: 'Linear',
-				    likes: 821,
-				    r: 54,
-				    fontSize: 16
-			    }, {
-				    project_slug: 'prime_protocol',
-				    name: 'Prime Protocol',
-				    likes: 821,
-				    r: 33,
-				    fontSize: 16
-			    }, {
-				    project_slug: 'riodefi',
-				    name: 'RioDeFi',
-				    likes: 821,
-				    r: 57,
-				    fontSize: 16
-			    }, {
-				    project_slug: 'parallel',
-				    name: 'Parallel',
-				    likes: 821,
-				    r: 76,
-				    fontSize: 16
-			    }
-		    ],
-		    numCircles = bubbles.length,
-		    $canvas    = $( '#bubble-projects' ),
-		    // Perimeter of the rectangle.
-		    canvasC    = (
-			                 1400 + 715
-		                 ) * 2;
+		function buildBubbles() {
+			var bubbles    = [
+				    {
+					    r: 197
+				    }, {
+					    r: 144
+				    }, {
+					    r: 107
+				    }, {
+					    r: 88
+				    }, {
+					    r: 121
+				    }, {
+					    r: 102
+				    }, {
+					    r: 102
+				    }, {
+					    r: 96
+				    }, {
+					    r: 76
+				    }, {
+					    r: 68
+				    }, {
+					    r: 77
+				    }, {
+					    r: 52
+				    }, {
+					    r: 64
+				    }, {
+					    r: 39
+				    }, {
+					    r: 48
+				    }, {
+					    r: 57
+				    }, {
+					    r: 60
+				    }, {
+					    r: 38
+				    }, {
+					    r: 49
+				    }, {
+					    r: 35
+				    }, {
+					    r: 60
+				    }, {
+					    r: 54
+				    }, {
+					    r: 33
+				    }, {
+					    r: 57
+				    }, {
+					    r: 76
+				    }
+			    ],
+			    numCircles = bubbles.length,
+			    $canvas    = $( '#bubble-projects' ),
+			    // Perimeter of the rectangle.
+			    canvasC    = (
+				                 1400 + 715
+			                 ) * 2;
 
-		$( document ).ready( function() {
+			// Map bubble settings with top voted project.
+			bubbles = bubbles.map( function( bubble, index ) {
+				return {
+					...bubble,
+					...dotinsights.Projects[ index ]
+				}
+			} );
+
 			drawProjectBubbles();
-		} );
+
+			$( window ).on( 'hresize_one', function() {
+				drawProjectBubbles();
+			} );
+
+			function drawProjectBubbles() {
+				$canvas.empty();
+
+				var canvasWidth = $canvas.width(),
+				    circles     = [],
+				    circle      = {},
+				    overlapping = false,
+				    counter     = 0,
+				    bubbleIndex = 0,
+				    radiusRatio = 1,
+				    protection  = 10000;
+
+				// Reduce size of all bubbles on mobile.
+				if ( window.innerWidth < 768 ) {
+					radiusRatio = 0.5;
+				} else if ( window.innerWidth < 1200 ) {
+					radiusRatio = 0.8;
+				}
+
+				var canvasHeight = (
+					                   canvasC / 2
+				                   ) - window.innerWidth;
+				canvasHeight *= radiusRatio;
+				canvasHeight = Math.max( canvasHeight, 700 );
+
+				$canvas.height( canvasHeight );
+
+				for ( var i = 0; i < numCircles; i ++ ) {
+					var newRadius = dotinsights.NumberUtil.precisionRoundMod( bubbles[ i ].r * radiusRatio, 0 );
+					// Make sure bubble not smaller than 80px.
+					bubbles[ i ].displayR = Math.max( newRadius, 40 );
+				}
+
+				while ( circles.length < numCircles && counter < protection ) {
+					circle = bubbles[ bubbleIndex ];
+
+					// Make sure circle inside canvas.
+					circle.x = dotinsights.NumberUtil.getRandomInt( circle.displayR, canvasWidth - circle.displayR );
+					circle.y = dotinsights.NumberUtil.getRandomInt( circle.displayR, canvasHeight - circle.displayR );
+
+					overlapping = false;
+
+					// check that it is not overlapping with any existing circle
+					// another brute force approach
+					for ( var i = 0; i < circles.length; i ++ ) {
+						var existing = circles[ i ];
+						/*var d = dist( circle.x, circle.y, existing.x, existing.y )
+						if ( d < circle.r + existing.r ) {
+							// They are overlapping
+							overlapping = true;
+							// do not add to array
+							break;
+						}*/
+
+						var d = dotinsights.NumberUtil.dist( circle.x, circle.y, existing.x, existing.y );
+						if ( d < circle.displayR + existing.displayR ) {
+							// They are overlapping.
+							overlapping = true;
+							// do not add to array.
+							break;
+						}
+					}
+
+					// add valid circles to array.
+					if ( ! overlapping ) {
+						circles.push( circle );
+						bubbleIndex ++;
+					}
+
+					counter ++;
+				}
+
+				var moveDurations = [
+					'move-slow',
+					'move-normal',
+					'move-fast',
+				];
+				for ( var i = 0; i < circles.length; i ++ ) {
+					var thisCircle  = circles[ i ],
+					    totalVote   = thisCircle.vote_count ? thisCircle.vote_count : 0,
+					    circleClass = 'bubble-project bubble-project--' + thisCircle.project_slug;
+					circleClass += i % 2 === 0 ? ' move-vertical' : ' move-vertical-reversed';
+					circleClass += ' ' + moveDurations[ dotinsights.NumberUtil.getRandomInt( 0, 3 ) ];
+
+					var html = '<div class="' + circleClass + '">';
+					html += '<img src="./assets/images/projects/' + thisCircle.project_slug + '.png" alt="">';
+					html += '<h3>' + thisCircle.project + '</h3><div class="vote-count"><svg><use xlink:href="#symbol-ph-heart-straight"></use></svg>' + totalVote + '</div>';
+					html += '</div>';
+
+					var $circleObject = $( html );
+					$circleObject.css( {
+						width: thisCircle.displayR * 2,
+						height: thisCircle.displayR * 2,
+						top: thisCircle.y - thisCircle.displayR,
+						left: thisCircle.x - thisCircle.displayR
+					} );
+					$circleObject.css( '--circle-size', thisCircle.displayR * 2 + 'px' );
+
+					$canvas.append( $circleObject );
+				}
+			}
+		}
 
 		$( window ).on( 'hresize', function() {
 			if ( window.innerWidth < 561 ) {
@@ -268,111 +283,6 @@
 				dotinsights.Query.itemsPerPage = 50;
 			}
 		} );
-
-		$( window ).on( 'hresize_one', function() {
-			drawProjectBubbles();
-		} );
-
-		function drawProjectBubbles() {
-			$canvas.empty();
-
-			var canvasWidth = $canvas.width(),
-			    circles     = [],
-			    circle      = {},
-			    overlapping = false,
-			    counter     = 0,
-			    bubbleIndex = 0,
-			    radiusRatio = 1,
-			    protection  = 10000;
-
-			// Reduce size of all bubbles on mobile.
-			if ( window.innerWidth < 768 ) {
-				radiusRatio = 0.5;
-			} else if ( window.innerWidth < 1200 ) {
-				radiusRatio = 0.8;
-			}
-
-			var canvasHeight = (
-				                   canvasC / 2
-			                   ) - window.innerWidth;
-			canvasHeight *= radiusRatio;
-			canvasHeight = Math.max( canvasHeight, 700 );
-
-			$canvas.height( canvasHeight );
-
-			for ( var i = 0; i < numCircles; i ++ ) {
-				var newRadius = dotinsights.NumberUtil.precisionRoundMod( bubbles[ i ].r * radiusRatio, 0 );
-				// Make sure bubble not smaller than 80px.
-				bubbles[ i ].displayR = Math.max( newRadius, 40 );
-			}
-
-			while ( circles.length < numCircles && counter < protection ) {
-				circle = bubbles[ bubbleIndex ];
-
-				// Make sure circle inside canvas.
-				circle.x = dotinsights.NumberUtil.getRandomInt( circle.displayR, canvasWidth - circle.displayR );
-				circle.y = dotinsights.NumberUtil.getRandomInt( circle.displayR, canvasHeight - circle.displayR );
-
-				overlapping = false;
-
-				// check that it is not overlapping with any existing circle
-				// another brute force approach
-				for ( var i = 0; i < circles.length; i ++ ) {
-					var existing = circles[ i ];
-					/*var d = dist( circle.x, circle.y, existing.x, existing.y )
-					if ( d < circle.r + existing.r ) {
-						// They are overlapping
-						overlapping = true;
-						// do not add to array
-						break;
-					}*/
-
-					var d = dotinsights.NumberUtil.dist( circle.x, circle.y, existing.x, existing.y );
-					if ( d < circle.displayR + existing.displayR ) {
-						// They are overlapping.
-						overlapping = true;
-						// do not add to array.
-						break;
-					}
-				}
-
-				// add valid circles to array.
-				if ( ! overlapping ) {
-					circles.push( circle );
-					bubbleIndex ++;
-				}
-
-				counter ++;
-			}
-
-			var moveDurations = [
-				'move-slow',
-				'move-normal',
-				'move-fast',
-			];
-			for ( var i = 0; i < circles.length; i ++ ) {
-				var thisCircle  = circles[ i ],
-				    circleClass = 'bubble-project bubble-project--' + thisCircle.project_slug;
-				circleClass += i % 2 === 0 ? ' move-vertical' : ' move-vertical-reversed';
-				circleClass += ' ' + moveDurations[ dotinsights.NumberUtil.getRandomInt( 0, 3 ) ];
-
-				var html = '<div class="' + circleClass + '">';
-				html += '<img src="./assets/images/bubbles/' + thisCircle.project_slug + '.png" alt="">';
-				html += '<h3>' + thisCircle.name + '</h3><div class="total-likes"><svg><use xlink:href="#symbol-ph-heart-straight"></use></svg>' + thisCircle.likes + '</div>';
-				html += '</div>';
-
-				var $circleObject = $( html );
-				$circleObject.css( {
-					width: thisCircle.displayR * 2,
-					height: thisCircle.displayR * 2,
-					top: thisCircle.y - thisCircle.displayR,
-					left: thisCircle.x - thisCircle.displayR
-				} );
-				$circleObject.css( '--circle-size', thisCircle.displayR * 2 + 'px' );
-
-				$canvas.append( $circleObject );
-			}
-		}
 
 		$pagination.on( 'click', 'a', function( evt ) {
 			evt.preventDefault();
