@@ -51,7 +51,7 @@
 						var response = await voteProject( walletInfo.selectedAccountAddress, projectID );
 						Helpers.unsetElementHandling( $thisButton );
 
-						if ( response.vote_count ) {
+						if ( response.hasOwnProperty( 'vote_count' ) ) {
 							dotinsights.Projects = dotinsights.Projects.map( obj =>
 								obj.project_id === projectID ? {
 									...obj,
