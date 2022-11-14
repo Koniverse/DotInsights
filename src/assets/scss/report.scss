@@ -1374,6 +1374,15 @@
 	img {
 		max-width: 80vw;
 	}
+
+	.bridge-desc {
+		font-size: $body-font-size-small;
+		font-weight: 500;
+		line-height: 30px;
+		margin: 0 auto 33px;
+		width: 630px;
+		max-width: 100%;
+	}
 }
 
 .block-bridge-tokens {
