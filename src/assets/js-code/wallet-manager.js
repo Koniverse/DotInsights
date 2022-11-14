@@ -149,10 +149,12 @@
 				if ( ! isSubWalletConnected() ) { // Render connect button.
 					$modalConnectWalletContent.empty();
 					$modalConnectWalletContent.html( `
-					<a href="#" target="_blank" class="button button-right-icon btn-install-connect-wallet" id="btn-connect-subwallet">
-						<span class="button-text">SubWallet</span>
-					</a>
-				` );
+						<a href="#" target="_blank" class="button button-right-icon btn-install-connect-wallet" id="btn-connect-subwallet">
+							<span class="button-text">SubWallet</span>
+						</a>
+					` );
+					$( '.btn-open-connect-wallet' ).find( '.button-text span' ).text( 'Connect Wallet' );
+					$modalConnectWallet.find( '.modal-title' ).text( 'Connect Your Wallet' );
 				} else { // Render list account.
 					const walletInfo = getWalletInfo();
 					var html = '';
