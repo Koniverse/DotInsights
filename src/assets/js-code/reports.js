@@ -227,7 +227,7 @@
 					url: 'polkadot-report-q3-2022-pt',
 					isActive: 1,
 				}, {
-					code: 'vn',
+					code: 'vi',
 					name: 'Tiếng Việt',
 					flag: 'vn.svg',
 					url: 'polkadot-report-q3-2022-vi',
@@ -249,6 +249,12 @@
 					name: 'Español',
 					flag: 'es.svg',
 					url: 'polkadot-report-q3-2022-es',
+					isActive: 1,
+				}, {
+					code: 'kr',
+					name: '한국어',
+					flag: 'kr.svg',
+					url: 'polkadot-report-q3-2022-kr',
 					isActive: 1,
 				}
 			];
