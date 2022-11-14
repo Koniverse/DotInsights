@@ -1604,12 +1604,14 @@
 				newOptions = {
 					series: [
 						{
-							label: {
-								fontSize: 17
-							},
-							barMaxWidth: 56,
+							barMaxWidth: 24,
 							itemStyle: {
-								borderRadius: [ 8, 8, 0, 0 ]
+								borderRadius: [ 5, 5, 0, 0 ]
+							}
+						}, {
+							barMaxWidth: 24,
+							itemStyle: {
+								borderRadius: [ 5, 5, 0, 0 ]
 							}
 						}
 					]
@@ -1618,12 +1620,14 @@
 				newOptions = {
 					series: [
 						{
-							label: {
-								fontSize: 15
-							},
-							barMaxWidth: 40,
+							barMaxWidth: 12,
 							itemStyle: {
-								borderRadius: [ 5, 5, 0, 0 ]
+								borderRadius: [ 3, 3, 0, 0 ]
+							}
+						}, {
+							barMaxWidth: 12,
+							itemStyle: {
+								borderRadius: [ 3, 3, 0, 0 ]
 							}
 						}
 					]

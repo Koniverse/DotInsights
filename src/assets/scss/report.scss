@@ -2067,6 +2067,12 @@
 			transform: translate(-25%, 8%);
 		}
 	}
+
+	.section-governance-treasury {
+		.shape-transparent-cube {
+			transform: translate(-60%, 0);
+		}
+	}
 }
 
 @include media-breakpoint-down(lg) {
@@ -2120,6 +2126,12 @@
 			}
 
 			transform: translate(25%, -10%);
+		}
+	}
+
+	.section-governance-treasury {
+		.shape-transparent-cube {
+			display: none;
 		}
 	}
 
