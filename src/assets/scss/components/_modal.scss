@@ -407,6 +407,23 @@
 	margin: 19px 0 0;
 }
 
+.modal-vote-error {
+	--modal-width: 450px;
+	--modal-spacing: 30px 2rem;
+	text-align: center;
+
+	.modal-content-wrap {
+		border: 2px solid #f82613;
+	}
+}
+
+.vote-error-message {
+	color: #fff;
+	font-size: 20px;
+	line-height: 32px;
+	margin: 12px 0 0;
+}
+
 @include media-breakpoint-down(xs) {
 	.dotinsights-modal {
 		--modal-spacing: 2rem 20px;

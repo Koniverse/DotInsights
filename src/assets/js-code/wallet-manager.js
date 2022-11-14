@@ -51,44 +51,50 @@
 						var response = await voteProject( walletInfo.selectedAccountAddress, projectID );
 						Helpers.unsetElementHandling( $thisButton );
 
-						dotinsights.Projects = dotinsights.Projects.map( obj =>
-							obj.project_id === projectID ? {
-								...obj,
-								vote_count: response.vote_count
-							} : obj
-						);
+						if ( response.vote_count ) {
+							dotinsights.Projects = dotinsights.Projects.map( obj =>
+								obj.project_id === projectID ? {
+									...obj,
+									vote_count: response.vote_count
+								} : obj
+							);
 
-						var $theVoteButtons = $( '.btn-vote[data-project-id="' + projectID + '"]' );
-						$theVoteButtons.find( '.button-text' ).text( response.vote_count );
-						if ( response.isVote ) {
-							$theVoteButtons.removeClass( 'vote-this' ).addClass( 'unvote-this' );
+							var $theVoteButtons = $( '.btn-vote[data-project-id="' + projectID + '"]' );
+							$theVoteButtons.find( '.button-text' ).text( response.vote_count );
+							if ( response.isVote ) {
+								$theVoteButtons.removeClass( 'vote-this' ).addClass( 'unvote-this' );
 
-							// First vote.
-							if ( dotinsights.VotedProjects.length < 1 ) {
-								var $modalFirstVote = $( '#modal-first-vote-notice' ),
-								    $shareButton    = $modalFirstVote.find( '.btn-twitter-share' ),
-								    projectName     = $thisButton.closest( '.row-project' ).find( '.project-name' ).text(),
-								    text            = `I voted for ${projectName} on dotinsights, what about you? Vote for your favorite projects in the @Polkadot and @kusamanetwork ecosystem now`,
-								    url             = 'https://twitter.com/share?text={text}&amp;url={url}';
+								// First vote.
+								if ( dotinsights.VotedProjects.length < 1 ) {
+									var $modalFirstVote = $( '#modal-first-vote-notice' ),
+									    $shareButton    = $modalFirstVote.find( '.btn-twitter-share' ),
+									    projectName     = $thisButton.closest( '.row-project' ).find( '.project-name' ).text(),
+									    text            = `I voted for ${projectName} on dotinsights, what about you? Vote for your favorite projects in the @Polkadot and @kusamanetwork ecosystem now`,
+									    url             = 'https://twitter.com/share?text={text}&amp;url={url}';
 
-								url = url.replace( '{text}', text );
-								url = url.replace( '{url}', location.origin );
+									url = url.replace( '{text}', text );
+									url = url.replace( '{url}', location.origin );
 
-								$shareButton.attr( 'href', encodeURI( url ) );
+									$shareButton.attr( 'href', encodeURI( url ) );
 
-								$modalFirstVote.dotinsightsModal( 'open' );
-							}
+									$modalFirstVote.dotinsightsModal( 'open' );
+								}
 
-							if ( dotinsights.VotedProjects.indexOf( projectID ) === - 1 ) {
-								dotinsights.VotedProjects.push( projectID );
+								if ( dotinsights.VotedProjects.indexOf( projectID ) === - 1 ) {
+									dotinsights.VotedProjects.push( projectID );
+								}
+							} else {
+								$theVoteButtons.removeClass( 'unvote-this' ).addClass( 'vote-this' );
+
+								var index = dotinsights.VotedProjects.indexOf( projectID );
+								if ( index > - 1 ) {
+									dotinsights.VotedProjects.splice( index, 1 );
+								}
 							}
 						} else {
-							$theVoteButtons.removeClass( 'unvote-this' ).addClass( 'vote-this' );
-
-							var index = dotinsights.VotedProjects.indexOf( projectID );
-							if ( index > - 1 ) {
-								dotinsights.VotedProjects.splice( index, 1 );
-							}
+							var $modalVoteError = $( '#modal-vote-error' );
+							$modalVoteError.find( '.vote-error-message' ).text( response.message );
+							$modalVoteError.dotinsightsModal( 'open' );
 						}
 					} catch ( e ) {
 						Helpers.unsetElementHandling( $thisButton );
