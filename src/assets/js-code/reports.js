@@ -277,7 +277,7 @@
 				} else {
 					subLangOutput += `
 						<li>
-							<a href="${thisLang.url}">
+							<a href="/${thisLang.url}/">
 								<img src="../assets/flags/4x3/${thisLang.flag}" alt="${thisLang.name}" width="25" height="19"/>
 								${thisLang.name}
 							</a>
