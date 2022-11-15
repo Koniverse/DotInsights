@@ -93,7 +93,8 @@
 		} );
 
 		function buildBubbles() {
-			var bubbles    = [
+			var
+				/*bubbles    = [
 				    {
 					    r: 197
 				    }, {
@@ -145,7 +146,110 @@
 				    }, {
 					    r: 76
 				    }
-			    ],
+			    ],*/
+				bubbles    = [
+					{
+						project_slug: 'polkadot',
+						name: 'Polkadot',
+						r: 197
+					}, {
+						project_slug: 'subwallet',
+						name: 'SubWallet',
+						r: 144
+					}, {
+						project_slug: 'ampnet',
+						name: 'Ampnet',
+						r: 107
+					}, {
+						project_slug: 'acala',
+						name: 'Acala',
+						r: 88
+					}, {
+						project_slug: 'demodyfi',
+						name: 'Demodyfi',
+						r: 121
+					}, {
+						project_slug: 'chainsafe',
+						name: 'ChainSafe',
+						r: 102
+					}, {
+						project_slug: '1beam',
+						name: '1beam',
+						r: 102
+					}, {
+						project_slug: 'unilend',
+						name: 'Unilend',
+						r: 96
+					}, {
+						project_slug: 'metamask',
+						name: 'MetaMask',
+						r: 76
+					}, {
+						project_slug: 'onfinality',
+						name: 'OnFinality',
+						r: 68
+					}, {
+						project_slug: 'nabox',
+						name: 'Nabox',
+						r: 77
+					}, {
+						project_slug: 'anchor',
+						name: 'Anchor',
+						r: 52
+					}, {
+						project_slug: 'athos-finance',
+						name: 'Athos Finance',
+						r: 64
+					}, {
+						project_slug: 'huckleberry',
+						name: 'Huckleberry',
+						r: 39
+					}, {
+						project_slug: 'ambire-wallet',
+						name: 'Ambire Wallet',
+						r: 48
+					}, {
+						project_slug: 'kusama',
+						name: 'Kusama',
+						r: 57
+					}, {
+						project_slug: 'lido',
+						name: 'Lido',
+						r: 60
+					}, {
+						project_slug: 'beyondfi',
+						name: 'BeyondFi',
+						r: 38
+					}, {
+						project_slug: 'basilisk',
+						name: 'Basilisk',
+						r: 49
+					}, {
+						project_slug: 'avault',
+						name: 'Avault',
+						r: 35
+					}, {
+						project_slug: 'curve',
+						name: 'Curve',
+						r: 60
+					}, {
+						project_slug: 'linear',
+						name: 'Linear',
+						r: 54
+					}, {
+						project_slug: 'prime-protocol',
+						name: 'Prime Protocol',
+						r: 33
+					}, {
+						project_slug: 'riodefi',
+						name: 'RioDeFi',
+						r: 57
+					}, {
+						project_slug: 'parallel',
+						name: 'Parallel',
+						r: 76
+					}
+				],
 			    numCircles = bubbles.length,
 			    $canvas    = $( '#bubble-projects' ),
 			    // Perimeter of the rectangle.
@@ -154,10 +258,18 @@
 			                 ) * 2;
 
 			// Map bubble settings with top voted project.
-			bubbles = bubbles.map( function( bubble, index ) {
+			/*bubbles = bubbles.map( function( bubble, index ) {
 				return {
 					...bubble,
 					...dotinsights.Projects[ index ]
+				}
+			} );*/
+
+
+			bubbles = bubbles.map( function( bubble, index ) {
+				return {
+					...bubble,
+					project: bubble.name
 				}
 			} );
 
