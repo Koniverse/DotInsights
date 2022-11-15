@@ -153,101 +153,101 @@
 						name: 'Polkadot',
 						r: 197
 					}, {
-						project_slug: 'subwallet',
-						name: 'SubWallet',
+						project_slug: 'kusama',
+						name: 'Kusama',
 						r: 144
 					}, {
-						project_slug: 'ampnet',
-						name: 'Ampnet',
+						project_slug: 'subwallet',
+						name: 'SubWallet',
+						r: 121
+					}, {
+						project_slug: 'moonbeam',
+						name: 'Moonbeam',
 						r: 107
+					}, {
+						project_slug: 'astar-network',
+						name: 'Astar Network',
+						r: 102
+					}, {
+						project_slug: 'bit.country-continuum',
+						name: 'Bit.Country',
+						r: 102
+					}, {
+						project_slug: 'rmrk',
+						name: 'RMRK',
+						r: 96
 					}, {
 						project_slug: 'acala',
 						name: 'Acala',
 						r: 88
 					}, {
-						project_slug: 'demodyfi',
-						name: 'Demodyfi',
-						r: 121
-					}, {
-						project_slug: 'chainsafe',
-						name: 'ChainSafe',
-						r: 102
-					}, {
-						project_slug: '1beam',
-						name: '1beam',
-						r: 102
-					}, {
-						project_slug: 'unilend',
-						name: 'Unilend',
-						r: 96
-					}, {
 						project_slug: 'metamask',
 						name: 'MetaMask',
-						r: 76
-					}, {
-						project_slug: 'onfinality',
-						name: 'OnFinality',
-						r: 68
-					}, {
-						project_slug: 'nabox',
-						name: 'Nabox',
 						r: 77
 					}, {
-						project_slug: 'anchor',
-						name: 'Anchor',
-						r: 52
+						project_slug: 'bifrost-polkadot',
+						name: 'Bifrost Polkadot',
+						r: 76
 					}, {
-						project_slug: 'athos-finance',
-						name: 'Athos Finance',
+						project_slug: 'moonwell-artemis',
+						name: 'Moonwell Artemis',
+						r: 76
+					}, {
+						project_slug: 'phala-network',
+						name: 'Phala Network',
+						r: 68
+					}, {
+						project_slug: 'nftfair',
+						name: 'NFTFair',
 						r: 64
 					}, {
-						project_slug: 'huckleberry',
-						name: 'Huckleberry',
-						r: 39
+						project_slug: 'moonfit',
+						name: 'MoonFit',
+						r: 60
 					}, {
-						project_slug: 'ambire-wallet',
-						name: 'Ambire Wallet',
-						r: 48
+						project_slug: 'gear',
+						name: 'Gear',
+						r: 60
 					}, {
-						project_slug: 'kusama',
-						name: 'Kusama',
+						project_slug: 'web3go',
+						name: 'Web3go',
 						r: 57
 					}, {
-						project_slug: 'lido',
-						name: 'Lido',
-						r: 60
+						project_slug: 'ajuna-network',
+						name: 'Ajuna Network',
+						r: 57
 					}, {
-						project_slug: 'beyondfi',
-						name: 'BeyondFi',
-						r: 38
-					}, {
-						project_slug: 'basilisk',
-						name: 'Basilisk',
-						r: 49
-					}, {
-						project_slug: 'avault',
-						name: 'Avault',
-						r: 35
-					}, {
-						project_slug: 'curve',
-						name: 'Curve',
-						r: 60
-					}, {
-						project_slug: 'linear',
-						name: 'Linear',
+						project_slug: 'stellaswap',
+						name: 'StellaSwap',
 						r: 54
 					}, {
-						project_slug: 'prime-protocol',
-						name: 'Prime Protocol',
-						r: 33
-					}, {
-						project_slug: 'riodefi',
-						name: 'RioDeFi',
-						r: 57
+						project_slug: 'solarbeam',
+						name: 'Solarbeam',
+						r: 52
 					}, {
 						project_slug: 'parallel',
 						name: 'Parallel',
-						r: 76
+						r: 49
+					}, {
+						project_slug: 'karura',
+						name: 'Karura',
+						r: 48
+					}, {
+						project_slug: 'moonriver',
+						name: 'Moonriver',
+						r: 39
+					}, {
+						project_slug: 'arthswap',
+						name: 'ArthSwap',
+						r: 38
+					}, {
+						project_slug: 'zenlink',
+						name: 'Zenlink',
+						r: 35
+					}, {
+						project_slug: 'solarflare',
+						name: 'Solarflare',
+						r: 33
 					}
 				],
 				numCircles = bubbles.length,
