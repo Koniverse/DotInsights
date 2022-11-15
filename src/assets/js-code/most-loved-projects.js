@@ -93,7 +93,8 @@
 		} );
 
 		function buildBubbles() {
-			var bubbles    = [
+			var
+				/*bubbles    = [
 				    {
 					    r: 197
 				    }, {
@@ -145,19 +146,130 @@
 				    }, {
 					    r: 76
 				    }
-			    ],
-			    numCircles = bubbles.length,
-			    $canvas    = $( '#bubble-projects' ),
-			    // Perimeter of the rectangle.
-			    canvasC    = (
-				                 1400 + 715
-			                 ) * 2;
+			    ],*/
+				bubbles    = [
+					{
+						project_slug: 'polkadot',
+						name: 'Polkadot',
+						r: 197
+					}, {
+						project_slug: 'kusama',
+						name: 'Kusama',
+						r: 144
+					}, {
+						project_slug: 'subwallet',
+						name: 'SubWallet',
+						r: 121
+					}, {
+						project_slug: 'moonbeam',
+						name: 'Moonbeam',
+						r: 107
+					}, {
+						project_slug: 'astar-network',
+						name: 'Astar Network',
+						r: 102
+					}, {
+						project_slug: 'bit.country-continuum',
+						name: 'Bit.Country',
+						r: 102
+					}, {
+						project_slug: 'rmrk',
+						name: 'RMRK',
+						r: 96
+					}, {
+						project_slug: 'acala',
+						name: 'Acala',
+						r: 88
+					}, {
+						project_slug: 'metamask',
+						name: 'MetaMask',
+						r: 77
+					}, {
+						project_slug: 'bifrost-polkadot',
+						name: 'Bifrost Polkadot',
+						r: 76
+					}, {
+						project_slug: 'moonwell-artemis',
+						name: 'Moonwell Artemis',
+						r: 76
+					}, {
+						project_slug: 'phala-network',
+						name: 'Phala Network',
+						r: 68
+					}, {
+						project_slug: 'nftfair',
+						name: 'NFTFair',
+						r: 64
+					}, {
+						project_slug: 'moonfit',
+						name: 'MoonFit',
+						r: 60
+					}, {
+						project_slug: 'gear',
+						name: 'Gear',
+						r: 60
+					}, {
+						project_slug: 'web3go',
+						name: 'Web3go',
+						r: 57
+					}, {
+						project_slug: 'ajuna-network',
+						name: 'Ajuna Network',
+						r: 57
+					}, {
+						project_slug: 'stellaswap',
+						name: 'StellaSwap',
+						r: 54
+					}, {
+						project_slug: 'solarbeam',
+						name: 'Solarbeam',
+						r: 52
+					}, {
+						project_slug: 'parallel',
+						name: 'Parallel',
+						r: 49
+					}, {
+						project_slug: 'karura',
+						name: 'Karura',
+						r: 48
+					}, {
+						project_slug: 'moonriver',
+						name: 'Moonriver',
+						r: 39
+					}, {
+						project_slug: 'arthswap',
+						name: 'ArthSwap',
+						r: 38
+					}, {
+						project_slug: 'zenlink',
+						name: 'Zenlink',
+						r: 35
+					}, {
+						project_slug: 'solarflare',
+						name: 'Solarflare',
+						r: 33
+					}
+				],
+				numCircles = bubbles.length,
+				$canvas    = $( '#bubble-projects' ),
+				// Perimeter of the rectangle.
+				canvasC    = (
+					             1400 + 715
+				             ) * 2;
 
 			// Map bubble settings with top voted project.
-			bubbles = bubbles.map( function( bubble, index ) {
+			/*bubbles = bubbles.map( function( bubble, index ) {
 				return {
 					...bubble,
 					...dotinsights.Projects[ index ]
+				}
+			} );*/
+
+
+			bubbles = bubbles.map( function( bubble, index ) {
+				return {
+					...bubble,
+					project: bubble.name
 				}
 			} );
 
