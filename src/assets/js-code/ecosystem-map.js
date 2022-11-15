@@ -53,10 +53,10 @@
 			    $dotTransactions     = $( '#statistic-dot-transactions' );
 
 			$dotFinalizedBlocks.find( '.statistic-amount' ).html( NumberUtil.formatWithCommas( polkadot.finalizedBlockNum ) );
-			$dotFinalizedBlocks.find( '.statistic-volume .value' ).html( NumberUtil.formatWithCommas( '+' + polkadot.volume24h ) );
+			$dotFinalizedBlocks.find( '.statistic-volume .value' ).html( NumberUtil.formatWithCommas( '+' + polkadot.block_change_24h ) );
 
 			$dotSignedExtrinsics.find( '.statistic-amount' ).html( NumberUtil.formatWithCommas( polkadot.countSignedExtrinsic ) );
-			$dotSignedExtrinsics.find( '.statistic-volume .value' ).html( NumberUtil.formatWithCommas( '+' + polkadot.volume24h ) );
+			$dotSignedExtrinsics.find( '.statistic-volume .value' ).html( NumberUtil.formatWithCommas( '+' + polkadot.extrinsicsChange ) );
 
 			$dotAccounts.find( '.statistic-amount' ).html( NumberUtil.formatWithCommas( polkadot.accounts ) );
 			$dotAccounts.find( '.statistic-volume .value' ).html( NumberUtil.formatWithCommas( '+' + polkadot.accounts_change_24h ) );
