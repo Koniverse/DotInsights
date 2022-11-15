@@ -19,12 +19,12 @@ var lang = {
 	projectCount: '프로젝트 수',
 	inUSD: '인 (USD)',
 	outUSD: '아웃 (USD)',
-	postsCreated: 'Posts Created',
-	spaceCreated: 'Space Created',
+	postsCreated: '생성된 게시물',
+	spaceCreated: '공간 생성됨',
 	users: '사용자',
 	videos: '동영상',
-	readMore: 'Read more...',
-	readLess: 'Read less...'
+	readMore: '계속 읽기...',
+	readLess: '적게 읽기...'
 };
 
 window.dotinsights = window.dotinsights || {};
