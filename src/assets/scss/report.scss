@@ -986,12 +986,6 @@
 .section-governance-treasury {
 	padding: 90px 0 217px;
 
-	.shape-radial-circle {
-		top: 0;
-		left: 0;
-		transform: translate(-50%, -30%);
-	}
-
 	.shape-transparent-cube {
 		top: 0;
 		left: 0;
@@ -1000,6 +994,27 @@
 		img {
 			max-width: 15.4vw;
 		}
+
+		.shape-radial-circle {
+			--size: 570px;
+			bottom: 0;
+			left: 0;
+			transform: translate(-15%, -15%);
+		}
+	}
+
+	.shape-corner-blur-1 {
+		--size: 60vw;
+		transform: translate(-30%, 65%);
+	}
+
+	.shape-corner-blur-2 {
+		--size: 60vw;
+		transform: translate(-50%, 65%);
+	}
+
+	.shape-corner-blur-3 {
+		--size: 80vw;
 	}
 }
 
