@@ -279,8 +279,6 @@
 							selectedAccountAddress: selectedAccountAddress,
 						};
 
-						console.log( info );
-
 						setWalletInfo( info );
 
 						renderWalletArea();
