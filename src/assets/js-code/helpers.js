@@ -98,7 +98,7 @@
 				return check;
 			},
 
-			sanitizeKey: function( key ) {
+			sanitizeSlug: function( key ) {
 				if (!key)
 					return '';
 				key = key.replace( / /g, '-' );
@@ -108,9 +108,21 @@
 				return key.toLowerCase();
 			},
 
+			sanitizeKey: function( key, defaultValue = '' ) {
+				if ( ! key ) {
+					return defaultValue;
+				}
+				key = key.replace( / /g, '_' );
+				key = key.replace( /-/g, '_' );
+				key = key.replace( /,/g, '' );
+				key = key.replace( /&/g, '_' );
+
+				return key.toLowerCase();
+			},
+
 			groupByKey: function( xs, key ) {
 				return xs.reduce( function( rv, x ) {
-					var _key = '' !== x[ key ] ? x[ key ] : 'others';
+					var _key = '' !== x[ key ] ? x[ key ] : 'uncategorized';
 
 					(
 						rv[ _key ] = rv[ _key ] || []
@@ -131,15 +143,23 @@
 
 				return array.filter( function( item ) {
 					for ( var i = 0; i < ruleLength; i ++ ) {
-						if ( 'like' === rules[ i ][ 'operator' ] ) {
-							// Convert both side to lower case to ignore case sensitive.
-							if ( ! item[ rules[ i ].key ].toLowerCase().match( rules[ i ].value ) ) {
-								return false;
-							}
-						} else {
-							if ( item[ rules[ i ].key ] !== rules[ i ].value ) {
-								return false;
-							}
+						switch ( rules[ i ][ 'operator' ] ) {
+							case 'like':
+								// Convert both side to lower case to ignore case sensitive.
+								if ( ! item[ rules[ i ].key ].toLowerCase().match( rules[ i ].value ) ) {
+									return false;
+								}
+								break;
+							case '!':
+								if ( item[ rules[ i ].key ] === rules[ i ].value ) {
+									return false;
+								}
+								break;
+							default:
+								if ( item[ rules[ i ].key ] !== rules[ i ].value ) {
+									return false;
+								}
+								break;
 						}
 					}
 
@@ -245,6 +265,15 @@
 						a[ property ] < b[ property ]
 					) ? 1 : 0;
 					return result * sortOrder;
+				}
+			},
+
+			sortByKey: function( array, key, order = 'DESC' ) {
+				switch ( order ) {
+					case 'DESC':
+						return array.sort( ( a, b ) => b[ key ] - a[ key ] );
+					default: // ASC.
+						return array.sort( ( a, b ) => a[ key ] - b[ key ] );
 				}
 			}
 		};
