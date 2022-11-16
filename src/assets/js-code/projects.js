@@ -16,81 +16,33 @@
 		var lastST = 0;
 		var $window = $( window );
 		var projectSortedCategories = {
-			wallet: {
-				name: 'Wallet'
-			},
-			infrastructure: {
-				name: 'Infrastructure'
-			},
-			defi: {
-				name: 'DeFi'
-			},
-			socialfi: {
-				name: 'SocialFi'
-			},
-			privacy: {
-				name: 'Privacy'
-			},
-			aggregator: {
-				name: 'Aggregator'
-			},
-			bridge: {
-				name: 'Bridge'
-			},
-			cold_wallet: {
-				name: 'Cold Wallet'
-			},
-			dao: {
-				name: 'DAO'
-			},
-			data: {
-				name: 'Data'
-			},
-			fintech: {
-				name: 'FinTech'
-			},
-			gaming: {
-				name: 'Gaming'
-			},
-			identity: {
-				name: 'Identity'
-			},
-			nft_collection: {
-				name: 'NFT Collection'
-			},
-			iot: {
-				name: 'IoT'
-			},
-			nft_marketplace: {
-				name: 'NFT Marketplace'
-			},
-			scanner: {
-				name: 'Scanner'
-			},
-			smartcontracts: {
-				name: 'Smart Contract'
-			},
-			storage: {
-				name: 'Storage'
-			},
-			security: {
-				name: 'Security'
-			},
-			launchpad: {
-				name: 'LaunchPad'
-			},
-			metaverse: {
-				name: 'Metaverse'
-			},
-			sustainability: {
-				name: 'Sustainability'
-			},
-			tooling: {
-				name: 'Tooling'
-			},
-			validator: {
-				name: 'Validator'
-			}
+			wallet: 10,
+			infrastructure: 20,
+			defi: 30,
+			socialfi: 40,
+			privacy: 50,
+			aggregator: 60,
+			bridge: 70,
+			cold_wallet: 80,
+			dao: 90,
+			data: 100,
+			fintech: 110,
+			gaming: 120,
+			identity: 130,
+			nft_collection: 140,
+			iot: 150,
+			nft_marketplace: 160,
+			explorer: 170,
+			smart_contract: 180,
+			storage: 190,
+			security: 200,
+			launchpad: 210,
+			metaverse: 220,
+			sustainability: 230,
+			tooling: 240,
+			validator: 250,
+			fiat_on_ramp: 260,
+			uncategorized: 270,
 		};
 
 		var $searchForm            = $( '#project-form-filter' ),
@@ -154,7 +106,7 @@
 				buildList();
 			} );
 
-			$( document.body ).on( 'click', '.filter-item', function( evt ) {
+		$( document.body ).on( 'click', '.filter-item', function( evt ) {
 				evt.preventDefault();
 
 				var $thisButton = $( this );
@@ -229,18 +181,19 @@
 			array = Helpers.groupByKey( array, 'category_slug' );
 			var results = [];
 
-			for ( var catKey in projectSortedCategories ) {
-				if ( ! array.hasOwnProperty( catKey ) ) {
-					continue;
-				}
+			for ( var catKey in array ) {
+				var groupCat = {
+					key: catKey,
+					name: array[ catKey ][ 0 ][ 'category' ],
+					projects: array[ catKey ]
+				};
 
-				var category = projectSortedCategories[ catKey ];
+				groupCat.order = projectSortedCategories.hasOwnProperty( catKey ) ? projectSortedCategories[ catKey ] : 0;
 
-				category.key = catKey;
-				category.projects = array[ catKey ];
-
-				results.push( category );
+				results.push( groupCat );
 			}
+			// Sort by order.
+			results = dotinsights.ArrayUtil.sortByKey( results, 'order', 'ASC' );
 
 			var foundItems = results.length;
 			dotinsights.FilteredProjects = results;
