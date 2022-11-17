@@ -209,7 +209,7 @@
 
 .modal-connect-wallet {
 	//--modal-width: 450px;
-	--modal-spacing: 30px 40px 40px;
+	--modal-spacing: 30px 40px 25px;
 
 	.modal-content-header {
 		position: relative;
@@ -225,9 +225,13 @@
 		--mg-button-rounded: 10px;
 		--mg-button-background: #151515;
 		--mg-button-border: #151515;
+		display: block;
+		position: relative;
 		width: 100%;
 		justify-content: space-between;
 		padding: 10px 17px 10px 74px;
+		margin-bottom: 15px;
+		line-height: 48px;
 
 		&:after {
 			position: absolute;
