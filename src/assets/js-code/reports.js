@@ -2811,8 +2811,6 @@
 				}
 			}
 
-			console.log( newOptions );
-
 			return newOptions;
 		}
 

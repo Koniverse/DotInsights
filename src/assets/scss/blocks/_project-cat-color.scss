@@ -67,7 +67,8 @@
 		color: #00ffe1 !important;
 	}
 
-	&smartcontracts {
+	&smartcontracts, // old
+	&smart_contract {
 		color: #e6fac3 !important;
 	}
 
@@ -87,7 +88,8 @@
 		color: #a9ac24 !important;
 	}
 
-	&scanner {
+	&scanner,
+	&explorer {
 		color: #fa53aa !important;
 	}
 
@@ -97,5 +99,13 @@
 
 	&validator {
 		color: #47995e !important;
+	}
+
+	&fiat_on_ramp {
+		color: #cffd18 !important;
+	}
+
+	&uncategorized {
+		color: #c5c5c5 !important;
 	}
 }

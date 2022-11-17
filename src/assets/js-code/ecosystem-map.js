@@ -11,6 +11,16 @@
 			return response.json();
 		} ).then( function( jsonData ) {
 			var projects = jsonData.projects;
+
+			// Skip project without name.
+			projects = Helpers.filterByRules( [
+				{
+					key: 'project',
+					value: '',
+					operator: '!'
+				}
+			], projects );
+
 			prepareData( projects );
 
 			// Get vote count to avoid cache with wrong count.
@@ -89,8 +99,8 @@
 		 */
 		function prepareData( data ) {
 			for ( var i = data.length - 1; i >= 0; i -- ) {
-				data[ i ].category_slug = Helpers.sanitizeKey( data[ i ].category ); // Using group projects by cat.
-				data[ i ].project_slug = Helpers.sanitizeKey( data[ i ].project ); // Using render on bubbles.
+				data[ i ].category_slug = Helpers.sanitizeKey( data[ i ].category, 'uncategorized' ); // Using group projects by cat.
+				data[ i ].project_slug = Helpers.sanitizeSlug( data[ i ].project ); // Using render on bubbles.
 			}
 		}
 	}( jQuery )
