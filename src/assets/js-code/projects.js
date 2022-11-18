@@ -52,8 +52,8 @@
 		    $projectCategoriesList = $( '#project-categories-list' ),
 		    $buttonLoadmore        = $( '#btn-load-more-projects' );
 
-		$( document.body ).on( 'dotinsights/EcosystemMap/Loaded', function() {
-			sortAndGroup( dotinsights.Projects );
+		$( document.body ).on( 'dotinsights/EcosystemMap/Loaded', async function() {
+			await sortAndGroup( dotinsights.Projects );
 			buildFilters();
 			buildList();
 		} );
@@ -79,32 +79,7 @@
 			return false;
 		} );
 
-		$( document.body ).on( 'dotinsights/EcosystemMap/Searching', function( evt ) {
-			var searchTerm = $searchForm.find( 'input[name="s"]' ).val();
-			var cat = $searchForm.find( 'input[name="cat"]' ).val();
-
-			var rules = [];
-
-			if ( '' !== searchTerm ) {
-				rules.push( {
-					key: 'project',
-					value: searchTerm,
-					operator: 'like'
-				} );
-			}
-
-			if ( '' !== cat ) {
-				rules.push( {
-					key: 'category_slug',
-					value: cat,
-					operator: '='
-				} );
-			}
-
-			var results = rules.length > 0 ? Helpers.filterByRules( rules, dotinsights.Projects ) : dotinsights.Projects;
-				sortAndGroup( results );
-				buildList();
-			} );
+		$( document.body ).on( 'dotinsights/EcosystemMap/Searching', searchingProjects );
 
 		$( document.body ).on( 'click', '.filter-item', function( evt ) {
 				evt.preventDefault();
@@ -177,35 +152,65 @@
 			} );
 		}
 
-		function sortAndGroup( array ) {
-			array = Helpers.groupByKey( array, 'category_slug' );
-			var results = [];
+		async function searchingProjects() {
+			var searchTerm = $searchForm.find( 'input[name="s"]' ).val();
+			var cat = $searchForm.find( 'input[name="cat"]' ).val();
 
-			for ( var catKey in array ) {
-				var groupCat = {
-					key: catKey,
-					name: array[ catKey ][ 0 ][ 'category' ],
-					projects: array[ catKey ]
-				};
+			var rules = [];
 
-				groupCat.order = projectSortedCategories.hasOwnProperty( catKey ) ? projectSortedCategories[ catKey ] : 0;
-
-				results.push( groupCat );
+			if ( '' !== searchTerm ) {
+				rules.push( {
+					key: 'project',
+					value: searchTerm,
+					operator: 'like'
+				} );
 			}
-			// Sort by order.
-			results = dotinsights.ArrayUtil.sortByKey( results, 'order', 'ASC' );
 
-			var foundItems = results.length;
-			dotinsights.FilteredProjects = results;
-			dotinsights.Query.page = 1;
-			dotinsights.Query.foundItems = foundItems;
-			dotinsights.Query.maxNumPages = dotinsights.Query.itemsPerPage > 0 ? Math.ceil( foundItems / dotinsights.Query.itemsPerPage ) : 1;
-
-			if ( dotinsights.Query.maxNumPages > 1 ) {
-				$buttonLoadmore.show();
-			} else {
-				$buttonLoadmore.hide();
+			if ( '' !== cat ) {
+				rules.push( {
+					key: 'category_slug',
+					value: cat,
+					operator: '='
+				} );
 			}
+
+			var results = rules.length > 0 ? Helpers.filterByRules( rules, dotinsights.Projects ) : dotinsights.Projects;
+			await sortAndGroup( results );
+			buildList();
+		}
+
+		async function sortAndGroup( array ) {
+			return new Promise( resolve => { // Sure sort and group completed.
+				array = Helpers.groupByKey( array, 'category_slug' );
+				var results = [];
+
+				for ( var catKey in array ) {
+					var groupCat = {
+						key: catKey,
+						name: array[ catKey ][ 0 ][ 'category' ],
+						projects: array[ catKey ]
+					};
+
+					groupCat.order = projectSortedCategories.hasOwnProperty( catKey ) ? projectSortedCategories[ catKey ] : 0;
+
+					results.push( groupCat );
+				}
+				// Sort by order.
+				results = dotinsights.ArrayUtil.sortByKey( results, 'order', 'ASC' );
+				var foundItems = results.length;
+				dotinsights.FilteredProjects = results;
+				dotinsights.Query.page = 1;
+				dotinsights.Query.foundItems = foundItems;
+				dotinsights.Query.maxNumPages = dotinsights.Query.itemsPerPage > 0 ? Math.ceil( foundItems / dotinsights.Query.itemsPerPage ) : 1;
+
+				if ( dotinsights.Query.maxNumPages > 1 ) {
+					$buttonLoadmore.show();
+				} else {
+					$buttonLoadmore.hide();
+				}
+
+				resolve( 'resolved' );
+			} );
 		}
 
 		function buildFilters() {
