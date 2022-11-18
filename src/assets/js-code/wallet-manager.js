@@ -80,7 +80,7 @@
 									    url             = 'https://twitter.com/share?text={text}&amp;url={url}';
 
 									url = url.replace( '{text}', text );
-									url = url.replace( '{url}', location.origin );
+									url = url.replace( '{url}', location.origin + '/most-loved-projects' );
 
 									$shareButton.attr( 'href', encodeURI( url ) );
 
