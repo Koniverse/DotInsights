@@ -39,7 +39,11 @@
 
 		dotinsights.Helpers = {
 			getApiEndpointUrl: ( endpoint ) => {
-				return 'https://dot-insights-api.subwallet.app/api/%%endpoint%%'.replace( '%%endpoint%%', endpoint );
+				if ( 'dotinsights.subwallet.app' === window.location.host ) {
+					return 'https://dot-insights-api.subwallet.app/api/%%endpoint%%'.replace( '%%endpoint%%', endpoint );
+				}
+
+				return 'https://dotinsights-be-test.subwallet.app/api/%%endpoint%%'.replace( '%%endpoint%%', endpoint );
 			},
 
 			getScrollbarWidth: () => {
