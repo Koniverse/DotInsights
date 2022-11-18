@@ -70,12 +70,12 @@
 									    $shareButton    = $modalFirstVote.find( '.btn-twitter-share' ),
 									    projectName     = $thisButton.closest( '.row-project' ).find( '.project-name' ).text(),
 									    text            = `I love ${projectName} so much I voted for this project on the @Polkadot and @Kusamanetwork Ecosystem Map by @dotinsights_xyz! What about you? Come vote for your favorite projects and earn a free NFT🎉`,
-									    url             = 'https://twitter.com/share?text={text}&amp;url={url}';
+									    url             = 'https://twitter.com/intent/tweet?text={text}&url={url}';
 
-									url = url.replace( '{text}', text );
-									url = url.replace( '{url}', location.origin + '/most-loved-projects' );
+									url = url.replace( '{text}', encodeURI( text ) );
+									url = url.replace( '{url}', encodeURI( location.origin + '/most-loved-projects/' ) );
 
-									$shareButton.attr( 'href', encodeURI( url ) );
+									$shareButton.attr( 'href', url );
 
 									$modalFirstVote.dotinsightsModal( 'open' );
 								}
