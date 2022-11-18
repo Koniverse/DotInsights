@@ -299,7 +299,7 @@
 				$switcher.addClass( 'show' );
 			} );
 
-			$( document ).on( 'click', function( e ) {
+			$( document.body ).on( 'click', function( e ) {
 				if ( $( e.target ).closest( $switcher ).length === 0 ) {
 					$switcher.removeClass( 'show' );
 				}

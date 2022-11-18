@@ -40,7 +40,7 @@
 	<link href="../assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="../assets/libs/swiper/css/swiper.min.css" rel="stylesheet">
 	<link href="../assets/fonts/awesome/css/brands.min.css" rel="stylesheet">
-	<link href="../assets/css/style.css" rel="stylesheet">
+	<link href="../assets/css/style.css?v=1.0" rel="stylesheet">
 	<link href="../assets/css/report.css" rel="stylesheet">
 </head>
 <body tabindex="0" class="page-reports">
@@ -85,6 +85,26 @@
 							<a class="nav-link" href="/polkadot-report-q3-2022-en/">
 								<span class="nav-text">Deep Dive Report</span>
 							</a>
+							<ul class="sub-menu">
+								<li class="nav-item">
+									<a class="nav-link" href="/polkadot-report-q3-2022-en/">
+										<span class="nav-text">Q3 2022</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="https://subwallet.app/polkadot-report-h1-2022-en/" target="_blank">
+										<span class="nav-text">H1 2022</span>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item--mobile-button">
+							<a href="#" class="header-button button btn-open-connect-wallet" data-dotinsights-toggle="modal" data-dotinsights-target="#modal-connect-wallet">
+								<svg class="button-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M20.25 6.75H5.25C5.05109 6.75 4.86032 6.67098 4.71967 6.53033C4.57902 6.38968 4.5 6.19891 4.5 6C4.5 5.80109 4.57902 5.61032 4.71967 5.46967C4.86032 5.32902 5.05109 5.25 5.25 5.25H18C18.1989 5.25 18.3897 5.17098 18.5303 5.03033C18.671 4.88968 18.75 4.69891 18.75 4.5C18.75 4.30109 18.671 4.11032 18.5303 3.96967C18.3897 3.82902 18.1989 3.75 18 3.75H5.25C4.65402 3.75247 4.08316 3.99031 3.66174 4.41174C3.24031 4.83316 3.00247 5.40402 3 6V18C3.00247 18.596 3.24031 19.1668 3.66174 19.5883C4.08316 20.0097 4.65402 20.2475 5.25 20.25H20.25C20.6478 20.25 21.0294 20.092 21.3107 19.8107C21.592 19.5294 21.75 19.1478 21.75 18.75V8.25C21.75 7.85218 21.592 7.47064 21.3107 7.18934C21.0294 6.90804 20.6478 6.75 20.25 6.75ZM16.875 14.625C16.6525 14.625 16.435 14.559 16.25 14.4354C16.065 14.3118 15.9208 14.1361 15.8356 13.9305C15.7505 13.725 15.7282 13.4988 15.7716 13.2805C15.815 13.0623 15.9222 12.8618 16.0795 12.7045C16.2368 12.5472 16.4373 12.44 16.6555 12.3966C16.8738 12.3532 17.1 12.3755 17.3055 12.4606C17.5111 12.5458 17.6868 12.69 17.8104 12.875C17.934 13.06 18 13.2775 18 13.5C18 13.7984 17.8815 14.0845 17.6705 14.2955C17.4595 14.5065 17.1734 14.625 16.875 14.625Z" fill="white"/>
+								</svg>
+								<div class="button-text"><span>Connect Wallet</span></div>
+							</a>
 						</li>
 					</ul>
 				</nav>
@@ -97,38 +117,9 @@
 					</svg>
 					<div class="button-text"><span>Connect Wallet</span></div>
 				</a>
-				<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-				        data-bs-target="#mobile-menu" aria-controls="navbar" aria-expanded="false"
-				        aria-label="Toggle navigation">
+				<button id="navbar-toggler" class="navbar-toggler collapsed" type="button" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<nav id="mobile-menu" class="mobile-menu menu_scr collapse">
-					<ul class="nav">
-						<li class="nav-item">
-							<a class="nav-link" href="/">
-								<span class="nav-text">Most Loved Projects</span>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="/projects/">
-								<span class="nav-text">Projects By Category</span>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="/polkadot-report-q3-2022-en/">
-								<span class="nav-text">Deep Dive Report</span>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="#" class="header-button button btn-open-connect-wallet" data-dotinsights-toggle="modal" data-dotinsights-target="#modal-connect-wallet">
-								<svg class="button-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M20.25 6.75H5.25C5.05109 6.75 4.86032 6.67098 4.71967 6.53033C4.57902 6.38968 4.5 6.19891 4.5 6C4.5 5.80109 4.57902 5.61032 4.71967 5.46967C4.86032 5.32902 5.05109 5.25 5.25 5.25H18C18.1989 5.25 18.3897 5.17098 18.5303 5.03033C18.671 4.88968 18.75 4.69891 18.75 4.5C18.75 4.30109 18.671 4.11032 18.5303 3.96967C18.3897 3.82902 18.1989 3.75 18 3.75H5.25C4.65402 3.75247 4.08316 3.99031 3.66174 4.41174C3.24031 4.83316 3.00247 5.40402 3 6V18C3.00247 18.596 3.24031 19.1668 3.66174 19.5883C4.08316 20.0097 4.65402 20.2475 5.25 20.25H20.25C20.6478 20.25 21.0294 20.092 21.3107 19.8107C21.592 19.5294 21.75 19.1478 21.75 18.75V8.25C21.75 7.85218 21.592 7.47064 21.3107 7.18934C21.0294 6.90804 20.6478 6.75 20.25 6.75ZM16.875 14.625C16.6525 14.625 16.435 14.559 16.25 14.4354C16.065 14.3118 15.9208 14.1361 15.8356 13.9305C15.7505 13.725 15.7282 13.4988 15.7716 13.2805C15.815 13.0623 15.9222 12.8618 16.0795 12.7045C16.2368 12.5472 16.4373 12.44 16.6555 12.3966C16.8738 12.3532 17.1 12.3755 17.3055 12.4606C17.5111 12.5458 17.6868 12.69 17.8104 12.875C17.934 13.06 18 13.2775 18 13.5C18 13.7984 17.8815 14.0845 17.6705 14.2955C17.4595 14.5065 17.1734 14.625 16.875 14.625Z" fill="white"/>
-								</svg>
-								<div class="button-text"><span>Connect Wallet</span></div>
-							</a>
-						</li>
-					</ul>
-				</nav>
 			</div>
 		</div>
 	</div>
@@ -177,20 +168,19 @@
 						<div class="section-shape shape-cube move-vertical-reversed">
 							<img src="../assets/images/report/shapes/shape-cube.png" alt="Shape" loading="lazy" width="109" height="123"/>
 						</div>
-						<h4 class="section-title">Introducing The First Interactive
-							Polkadot & Kusama Ecosystem Map</h4>
+						<h4 class="section-title">第一个交互式的Polkadot & Kusama生态系统图谱</h4>
 						<div class="section-call-to-actions button-group">
 							<a href="/projects/" class="button button-size-lg">
-								<span class="button-text">Explore All Projects</span>
+								<span class="button-text">探索所有的项目</span>
 							</a>
-							<a href="https://bit.ly/dotinsight_projectsubmit" target="_blank" rel="nofollow" class="button button-outline button-size-lg">
-								<span class="button-text">Submit Your Project</span>
+							<a href="https://l3gcvlmvu3b.typeform.com/to/Bezr3dBv" target="_blank" rel="nofollow" class="button button-outline button-size-lg">
+								<span class="button-text">提交您的项目</span>
 							</a>
 						</div>
 						<div class="section-description-wrap">
 							<div class="section-description">
-								<p>What is Polkadot? In Q3 2022, <a href="https://www.coindesk.com/learn/polkadot-101-connecting-the-dots-for-beginners/" target="_blank" rel="nofollow">major media outlets</a>, <a href="https://twitter.com/blockchain/status/1567113242387922946" target="_blank" rel="nofollow">podcasts</a>, and <a href="https://www.forbes.com/advisor/investing/cryptocurrency/polkadot/" target="_blank" rel="nofollow">financial advice platforms</a> were asking this same question. A layer-0 sharded protocol design with Nominated Proof-of-Stake consensus means that Polkadot and Kusama are able to solve the blockchain trilemma: the system is secure, scalable and highly decentralized, allowing a plethora of parachains (layer-1 blockchains) and decentralized apps (DApps) to run without a glitch.</p>
-								<p>With a view to providing a panoramic picture of the ever-expanding Polkadot and Kusama ecosystem, SubWallet has built the first interactive Polkadot & Kusama Ecosystem Map that covers 500+ projects spanning 25 categories with the support of Parity Technologies. From DeFi, SocialFi, Identity, NFT Marketplaces, Metaverse, Gaming to Bridge, Infrastructure, Smart Contract, Tooling, Data and Privacy solutions, in Q3 2022, the Polkadot and Kusama ecosystem was bustling with activities and brimming with promise.</p>
+								<p>什么是Polkadot？这是2022年第三季度，<a href="https://www.coindesk.com/learn/polkadot-101-connecting-the-dots-for-beginners/" target="_blank" rel="nofollow">主流媒体、</a>, <a href="https://twitter.com/blockchain/status/1567113242387922946" target="_blank" rel="nofollow">播客</a>和<a href="https://www.forbes.com/advisor/investing/cryptocurrency/polkadot/" target="_blank" rel="nofollow">金融咨询平台都在</a> 问的问题。Polkadot 是具有提名权益证明（NPoS：Nominated Proof-of-Stake）共识的 layer-0 分片协议设计，也就是说，Polkadot和Kusama能够解决区块链的三难困境：系统是安全、可扩展和高度去中心化的，并允许同时运行大量平行链（layer-1 区块链）和Dapps而不出现故障。</p>
+								<p>为了提供仍在不断扩大的Polkadot和Kusama生态系统全景图，SubWallet与Parity Technologies合作建立了第一个交互的Polkadot和Kusama生态系统图谱，涵盖了500多个项目，跨越25种类别，且包含这个Polkadot深度研究报告系列。从DeFi、SocialFi、Identity、NFT Marketplaces、Metaverse、Gaming、DAO到桥、基础设施、智能合约、工具、数据和隐私解决方案，在2022年第三季度，Polkadot和Kusama生态系统的活动热闹非凡，充满希望。</p>
 							</div>
 						</div>
 					</div>
@@ -223,14 +213,14 @@
 		<div class="section-content">
 			<div class="container">
 				<div class="section-header">
-					<h2 class="section-top-title">Ecosystem Overview</h2>
+					<h2 class="section-top-title">生态系统概览</h2>
 				</div>
 
 				<div id="financial-status-dev-activity" class="block-text" style="--text-width: 750px; --heading-width: 470px;">
-					<h3 class="heading">Financial Status & Development Activity</h3>
+					<h3 class="heading">财务状况和开发活跃度</h3>
 					<div class="text-wrap">
 						<div class="text">
-							<p>The crypto winter continued well into Q3 2022, but DOT got off on the right foot. With an open price of $7.05 on July 1, DOT continued its majorly upward trend and peaked at $9.66 on August 13 with a market cap of $10.28B. However, a zoomed out year-to-date picture would show Q3’s weaker performance compared to the previous two quarters. On September 21, DOT took a dip to $6.00 at $6.89B market cap, a 75.60% loss compared to the beginning of the year.</p>
+							<p>虽然加密寒冬一直持续到了2022年第三季度，但$DOT的发展势头依然良好。其7月1日的开盘价为 $7.05 美元，并在大部分时间延续了上升趋势，于8月13日达到 $9.66 美元的峰值，市值为 $102.8亿美元。然而，从2022整个年度迄今为止的情况来看，与前两个季度相比，第三季度的表现较弱，9月21日，DOT跌至$6.00美元，市值为$68.9亿美元，相比年初相比损失了75.60%。</p>
 						</div>
 					</div>
 				</div>
@@ -241,21 +231,21 @@
 						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-2"/>
 					</div>
 					<div class="block-content">
-						<h3 class="block-chart-heading">Token Price vs. Development Activity</h3>
+						<h3 class="block-chart-heading">代币价格vs.开动活跃度</h3>
 						<div class="block-chart-body">
 							<div class="block-chart" data-chart-name="price-dev-act"></div>
 						</div>
 						<div class="block-chart-footer">
 							<div class="block-chart-source">
-								<span>Source: Santiment</span>
+								<span>来源：Santiment</span>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="block-text">
 					<div class="text">
-						<p>The surge to $10.51B market cap on August 10 pushed Polkadot above Dogecoin in the market cap ranking, but with this dive in the second half of Q3, Polkadot again lost its position to Dogecoin and now ranked 11th in terms of market cap.</p>
-						<p>KSM price reached its peak sooner than DOT’s on July 22 at $69.60, but took a steep slide and went as low as $37.77 on September 19 with a market cap of $339.65M. <a href="https://subwallet.app/polkadot-report-h1-2022-en/" target="_blank" rel="nofollow">Again</a>, KSM price and market cap’s pattern were relatively similar to DOT’s.
+						<p>8月10日，Polkadot市值飙升至$105.1亿美元，市值排名超越了Dogecoin。但随着第三季度后半段的跳水，Polkadot再次失去了其相对于Dogecoin的排名优势，目前市值排名第十一。</p>
+						<p>KSM的价格峰值比DOT的更早到来，7月22日，KSM达到三季度的峰值价格 $69.60 美元，但紧随其后的却是急剧下滑，于9月19日跌至 $37.77 美元，市值为 $3.3965 亿美元。 <a href="https://subwallet.app/polkadot-report-h1-2022-en/" target="_blank" rel="nofollow">KSM</a>的价格和市值模式再次趋同于DOT。
 						</p>
 					</div>
 				</div>
@@ -265,13 +255,13 @@
 						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-2"/>
 					</div>
 					<div class="block-content">
-						<h3 class="block-chart-heading">Development Activity Comparison</h3>
+						<h3 class="block-chart-heading">开发活动比较</h3>
 						<div class="block-chart-body">
 							<div class="block-chart" data-chart-name="dev-act-comparison"></div>
 						</div>
 						<div class="block-chart-footer">
 							<div class="block-chart-source">
-								<span>Source: Santiment</span>
+								<span>来源：Santiment</span>
 							</div>
 						</div>
 					</div>
@@ -301,14 +291,14 @@
 				<div class="col-lg-6 col-xl-5 col-xl-push-1">
 					<div class="block-report-table table--top-10-networks-dev-act" style="--block-top-spacing: 0; --block-bottom-spacing: 0;">
 						<div class="block-content">
-							<h3 class="block-table-heading">Top 10 Networks By 30-Day Development Activity</h3>
+							<h3 class="block-table-heading">根据按30天开发活跃度排名的10大网络</h3>
 							<div class="block-table-body">
 								<table class="block-table-widget js-data-table">
 									<thead>
 									<tr>
 										<th class="col--rank">#</th>
-										<th class="col--project">Project</th>
-										<th class="col--dev-activity">Dev activity</th>
+										<th class="col--project">项目</th>
+										<th class="col--dev-activity">开发活跃度</th>
 									</tr>
 									</thead>
 									<tbody>
@@ -417,8 +407,8 @@
 							</div>
 							<div class="block-table-footer">
 								<div class="block-table-source">
-									<p>Source: Santiment</p>
-									<p>Note: Data as of Oct 2</p>
+									<p>来源：Santiment</p>
+									<p>注：数据截至10月2日。</p>
 								</div>
 							</div>
 						</div>
@@ -427,10 +417,10 @@
 				<div class="col-lg-6 col-lg-first">
 					<div class="block-text" style="--text-width: 530px;">
 						<div class="text">
-							<p>While token prices kept on decreasing, development activities in Polkadot skyrocketed. Satiment measures
-								<a href="https://academy.santiment.net/metrics/development-activity/#development-activity-metric" target="_blank" rel="nofollow">development activity</a> by the number of building-related events that a project generates in its public Github repositories, such as pushing a commit, creating and merging pull requests, and releasing new versions. One can easily see how development activities in Polkadot were significantly and consistently higher in Q3 compared to Q2 and Q1, especially in September. Polkadot easily surpassed Ethereum, Solana, Near and Polygon and only came second to Cardano most of the time.
+              <p>虽然代币价格持续下降，但Polkadot的开发活跃度却在急剧飙升。Satiment通过项目在公共Github存储库中创建的构建相关事件（building-related events）的数量来衡
+								<a href="https://academy.santiment.net/metrics/development-activity/#development-activity-metric" target="_blank" rel="nofollow">量开发活</a> 虽然代币价格持续下降，但Polkadot的开发活跃度却在急剧飙升。Satiment通过项目在公共Github存储库中创建的构建相关事件（building-related events）的数量来衡量开发活跃度，例如推送的提交、创建和合并拉动的请求，以及发布的新版本。由图可见，与第二季度和第一季度相比，Polkadot的开发活跃度在第三季度显著且持续地增长，尤其是9月份。Polkadot轻松地超过了Ethereum、Solana、Near和Polygon，大部分时间里只是排在Cardano之后。
 							</p>
-							<p>Even though Polkadot’s overall development activities were lower than Cardano’s, its pattern was more consistent. From September 01 to September 20, Polkadot took over Cardano’s reign. This is why throughout September, the 30-day Development Activity ranking in Santiment showed Polkadot and Kusama’s persistent lead.</p>
+							<p>尽管Polkadot的整体开发活跃度低于Cardano，但其模式更加具有持续性。9月1日至9月20日，Polkadot甚至取代了Cardano的地位。这就是为什么在整个9月里，Santiment的30天开发活跃度排名显示Polkadot和Kusama持续领先。</p>
 						</div>
 					</div>
 				</div>
@@ -454,12 +444,12 @@
 		</div>
 		<div class="container">
 			<div class="block-text" id="decentralization-security">
-				<h3 class="heading">Decentralization & Security</h3>
+				<h3 class="heading">去中心化与安全</h3>
 				<div class="text-wrap">
 					<div class="text">
 						<div class="row">
-							<div class="col-md-6">A <a href="https://medium.com/coinmonks/why-solana-is-more-decentralized-than-you-think-d3710249a92" target="_blank" rel="nofollow">report</a> exploring the decentralization status of major networks published on July 25 by Ultimate Money revealed that Polkadot’s Nakamoto coefficient outranked the surveyed layer-1’s by a large margin, 3 times higher than Solana and Avalanche and almost 12 times higher than Cosmos, Near and BSC. <a href="https://news.earn.com/quantifying-decentralization-e39db233c28e" target="_blank" rel="nofollow">Coined in 2017</a> by former Coinbase CTO Balaji S. Srinivasan and named after Bitcoin’s founder Satoshi Nakamoto, the <a href="https://learn.bybit.com/blockchain/nakamoto-coefficient-decentralization/" target="_blank" rel="nofollow">Nakamoto coefficient</a> combines <a href="https://www.investopedia.com/terms/g/gini-index.asp" target="_blank" rel="nofollow">Gini coefficient</a> and <a href="https://www.investopedia.com/terms/l/lorenz-curve.asp#:~:text=The%20Lorenz%20curve%20is%20a,higher%20the%20level%20of%20inequality." target="_blank" rel="nofollow">Lorenz curve</a> to measure the minimum threshold required to disrupt a network, with a higher number indicating higher level of decentralization.</div>
-							<div class="col-md-6">Even though Polkadot only has <a href="https://wiki.polkadot.network/docs/learn-validator" target="_blank" rel="nofollow">297 validators</a>, 15.84% and 22.90% as many validators as Solana and Avalanche respectively, the sharded design along with the nominated proof-of-stake consensus mechanism allows better stake distribution, thus increasing decentralization level. Now that <a href="https://wiki.polkadot.network/docs/learn-nomination-pools" target="_blank" rel="nofollow">nomination pools</a> are live on Westend and Kusama and will soon be deployed on Polkadot, the network will be even more decentralized as the minimum stake to earn rewards will be lowered and more token holders are then able to participate. Interaction with the blockchain will likely be in a decentralized and trust-minimized manner thanks to <a href="https://www.parity.io/blog/what-is-a-light-client/" target="_blank" rel="nofollow">light client</a> integration via <a href="https://wiki.polkadot.network/docs/build-substrate" target="_blank" rel="nofollow">Substrate Connect</a>.</div>
+							<div class="col-md-6">Ultimate Money在7月25日发布的一份有关探索主要网络去中心化现状的 <a href="https://medium.com/coinmonks/why-solana-is-more-decentralized-than-you-think-d3710249a92" target="_blank" rel="nofollow">报告</a> 显示，Polkadot的中本聪系数（Nakamoto coefficient）以极大的优势远超被调查的其它layer-1—— 比Solana和Avalanche高3倍，比Cosmos、Near和BSC高出几乎12倍。<a href="https://learn.bybit.com/blockchain/nakamoto-coefficient-decentralization/" target="_blank" rel="nofollow">中本聪系数</a> 由前Coinbase首席技术官Balaji S. Srinivasan<a href="https://news.earn.com/quantifying-decentralization-e39db233c28e" target="_blank" rel="nofollow">在2017年创造，以比特币创始人中本聪的名字命名，</a> 结合了基尼系数 <a href="https://www.investopedia.com/terms/g/gini-index.asp" target="_blank" rel="nofollow">(Gini coefficient）</a> 和洛伦兹曲线 <a href="https://www.investopedia.com/terms/l/lorenz-curve.asp#:~:text=The%20Lorenz%20curve%20is%20a,higher%20the%20level%20of%20inequality." target="_blank" rel="nofollow">(Lorenz curve)</a> 来衡量破坏网络所需的最小阈值，数值越高表示去中心化程度越高。</div>
+							<div class="col-md-6">尽管Polkadot只有 <a href="https://wiki.polkadot.network/docs/learn-validator" target="_blank" rel="nofollow">297个验证者</a>，是Solana和Avalanche的15.84%和22.90%，但其融合了NPoS共识机制的分片设计 可以带来更好的质押分配，从而提高网络的去中心化程度。现在，<a href="https://wiki.polkadot.network/docs/learn-nomination-pools" target="_blank" rel="nofollow">提名池</a> 已经在Westend和Kusama上线，并将很快在Polkadot上部署 —— 这将使网络更加去中心化，因为降低了获得奖励的最低质押要求，使得更多的代币持有者能够参与其中。由于通过 <a href="https://wiki.polkadot.network/docs/build-substrate" target="_blank" rel="nofollow">Substrate Connect</a> t实现了 <a href="https://www.parity.io/blog/what-is-a-light-client/" target="_blank" rel="nofollow">轻客户端</a>集成，所以与区块链的互动可能将以去中心化和信任最小化的方式进行。</div>
 						</div>
 					</div>
 				</div>
@@ -470,14 +460,14 @@
 					<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-2"/>
 				</div>
 				<div class="block-content">
-					<h3 class="block-chart-heading">Nakamoto Coefficient Of Major Networks</h3>
+					<h3 class="block-chart-heading">主要网络的中本聪系数</h3>
 					<div class="block-chart-body">
 						<div class="block-chart" data-chart-name="nakamoto-coefficient" data-chart-source="inline"></div>
 					</div>
 					<div class="block-chart-footer">
 						<div class="block-chart-source">
-							<p>Source: Ultimate Money</p>
-							<p>Note: Data as of July 25</p>
+							<p>来源：Ultimate Money</p>
+							<p>注：数据截至7月25日。</p>
 						</div>
 					</div>
 				</div>
@@ -486,8 +476,8 @@
 				<div class="text-wrap">
 					<div class="text">
 						<div class="row">
-							<div class="col-md-6">Previously, if a user chooses not to run a full node due to its technical challenges and resource consumption, chances are that they have to rely on a third-party-owned node to conveniently interact with the blockchain which presents a centralized single point of failure. <a href="https://www.parity.io/blog/what-is-a-light-client/" target="_blank" rel="nofollow">Light client</a> solves both of these problems: on the one hand, it consumes much less resource by downloading only the block headers not the whole chain; on the other hand, it verifies whether a response a full node provides matches the headers and so does not need to trust the node.</div>
-							<div class="col-md-6">At the time of writing, top wallets in the Polkadot and Kusama ecosystem such as SubWallet, Polkadot {.js} and Nova Wallet have integrated light client to provide users with a smooth experience in the spirit of decentralization. SubWallet and Nova Wallet also extended support for cold wallet Ledger and QR signers Parity Signer and Stylo to add an extra layer of security for end-users following the August incidents. Despite serious challenges caused by the <a href="https://blockworks.co/nomad-token-bridge-raided-for-190m-in-frenzied-free-for-all/" target="_blank" rel="nofollow">Nomad bridge hack</a> on August 1 and <a href="https://cointelegraph.com/news/network-and-token-freeze-after-acala-exploit-raises-questions" target="_blank" rel="nofollow">Acala erroneous aUSD minting</a> on August 14, the Polkadot sharded security stayed strong.</div>
+							<div class="col-md-6">集成，所以与区块链的互动可能将以去中心化和信任最小化的方式进行。<a href="https://www.parity.io/blog/what-is-a-light-client/" target="_blank" rel="nofollow">轻客户端</a> 解决了两个问题：1. 它只下载区块头而不是整条链，因此消耗的资源要少得多；2. 它验证全节点所提供的回应response是否与区块头相匹配，因此无需信任节点。</div>
+							<div class="col-md-6">在撰写本文时，Polkadot和Kusama生态系统中的顶级钱包，如SubWallet、Polkadot {.js} 和Nova Wallet已经集成了轻客户端，本着去中心化的精神为用户提供了流畅的体验。SubWallet和Nova Wallet还扩展了对冷钱包Ledger、QR签名器Parity Signer和Stylo的支持，以便在8月的事件后为终端用户增加额外的安全层。尽管8月1日的<a href="https://blockworks.co/nomad-token-bridge-raided-for-190m-in-frenzied-free-for-all/" target="_blank" rel="nofollow">Nomad桥攻击</a>和8月14日的<a href="https://cointelegraph.com/news/network-and-token-freeze-after-acala-exploit-raises-questions" target="_blank" rel="nofollow">Acala aUSD错误铸造，</a> 造成了严重的挑战，但Polkadot的分片安全仍保持强劲。</div>
 						</div>
 					</div>
 				</div>
@@ -504,20 +494,20 @@
 							<thead>
 							<tr>
 								<th class="col--project">&nbsp;</th>
-								<th class="col--nodes">Nodes
+								<th class="col--nodes">节点
 									<br/>[# total]
 								</th>
-								<th class="col--dev-activity">Transactions
-									<br/>[Tx/year]
+								<th class="col--dev-activity">交易量
+									<br/>[tx/年]
 								</th>
-								<th>Total electricity consumption<br/>[kWh/year]
+								<th>总耗电量<br/>[kWh/年]
 								</th>
-								<th>Electricity per node<br/>[kWh/year]
+								<th>每个节点耗电量<br/>[kWh/年]
 								</th>
-								<th>Electricity per transaction
+								<th>每笔交易耗电量
 									<br/>[Wh/Tx]
 								</th>
-								<th>Total Carbon emissions<br/>
+								<th>碳排放总量<br/>
 									[tCO<sub>2</sub>e/year]
 								</th>
 							</tr>
@@ -614,8 +604,8 @@
 					</div>
 					<div class="block-table-footer">
 						<div class="block-table-source">
-							<p>Source: CCRI</p>
-							<p>Note: Data as of Jan 2022. The green color marks the best value for the respective column.</p>
+							<p>来源：CCRI</p>
+							<p>注：数据截至2022年1月。绿色代表相应列的最佳值。</p>
 						</div>
 					</div>
 				</div>
@@ -623,7 +613,7 @@
 			<div class="block-text">
 				<div class="text-wrap">
 					<div class="text">
-						<p>One might think that the more decentralized a network is, the more electricity the network consumes, as in the case of proof-of-work chains like Bitcoin and Ethereum 1.0. Not necessarily in the case of proof-of-stake systems. According to <a href="https://carbon-ratings.com/dl/pos-report-2022" target="_blank" rel="nofollow">CCRI energy efficiency report</a> published in January 2022, Polkadot consumes the least amount of annual electricity and consequently releases the least amount of yearly carbon emissions. This result has nothing to do with total transactions; to get the total electricity consumption, the CCRI team first calculated the average energy consumption per node for each network based on hardware requirements before multiplying with the total node number. Among the six surveyed blockchains, Polkadot has the lowest number of nodes and the second-lowest electricity consumption per node, thus <a href="https://www.bloomberg.com/news/articles/2022-02-02/polkadot-has-smallest-carbon-footprint-crypto-researcher-says" target="_blank" rel="nofollow">the greenest blockchain</a>.</p>
+						<p>人们可能认为，网络的去中心化程度越高，则网络消耗的电力就越多，就好比比特币和以太坊1.0等Pow链，但在PoS系统中可能并非如此。根据<a href="https://carbon-ratings.com/dl/pos-report-2022" target="_blank" rel="nofollow">CCRI（Crypto Carbon Ratings Institute）</a> 在2022年1月发布的能源效率报告称：Polkadot每年消耗的电量最少，因此每年释放的碳排放量也最少（这一结果与网络的总交易量无关）。为了计算出网络的总耗电量，CCRI团队首先根据硬件需求计算出每个网络的平均能耗，然后再乘以节点总数。在六个被调查的区块链中，Polkadot的节点数量最少，且其每个节点的耗电量第二低，因此是<a href="https://www.bloomberg.com/news/articles/2022-02-02/polkadot-has-smallest-carbon-footprint-crypto-researcher-says" target="_blank" rel="nofollow">最绿色的区块链。</a>.</p>
 					</div>
 				</div>
 			</div>
@@ -634,9 +624,9 @@
 		<div class="section-content">
 			<div class="container">
 				<div class="block-text">
-					<h3 class="heading">Token Holder & Investor</h3>
+					<h3 class="heading">代币持有者和投资者</h3>
 					<div class="text">
-						<p>September 28 witnessed the total number of DOT holders surpassing the 1,000,000 milestone. The market downturn, however, still left its mark. In Q3 2022, there were 1,695 new holders per day on average, 20.61% lower compared to Q2 (2135) and 44.61% lower compared to Q1 (3060). On September 30, for the first time in the year, the daily holder increase was less than 1000 at 824 new holders. Similar to price and marketcap, the KSM holder pattern was also similar to DOT’s.</p>
+						<p>9月28日，$DOT持有者总人数突破100万的里程碑。然而，市场的低迷不可避免地带来了一定影响。2022年第三季度，平均每天有1695个新增持有者，与第二季度（2135个）相比减少了20.61%，与第一季度（3060个）相比减少了44.61%。9月30日，出现了今年以来的首次日新增持有者不足1000人的情况，仅824人。$KSM的持有者模式也与$DOT的趋同。</p>
 					</div>
 				</div>
 				<div class="block-report-chart" style="--chart-height: 350px; --chart-ratio: 41%;">
@@ -645,20 +635,20 @@
 						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-2"/>
 					</div>
 					<div class="block-content">
-						<h3 class="block-chart-heading">Polkadot & Kusama Account Overview</h3>
+						<h3 class="block-chart-heading">Polkadot 和 Kusama 账户概览</h3>
 						<div class="block-chart-body">
 							<div class="block-chart" data-chart-name="dot-ksm-account-overview"></div>
 						</div>
 						<div class="block-chart-footer">
 							<div class="block-chart-source">
-								<p>Source: Web3Go</p>
+								<p>注: Web3Go</p>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="block-text">
 					<div class="text">
-						<p>By October 5, the <a href="https://polkadot.subscan.io/account/16ZL8yLyXv3V3L3z9ofR1ovFLziyXaN1DPq4yffMAZ9czzBD" target="_blank" rel="nofollow">biggest DOT whale</a> was holding 58.61M DOT, approximately $374.80M, in which 47.46% was staked. KSM whales were more modest, with <a href="https://kusama.subscan.io/account/EGP7XztdTosm1EmaATZVMjSWujGEj9nNidhjqA2zZtttkFg" target="_blank" rel="nofollow">the biggest one</a> having only 492,990 KSM, around $21.12M.</p>
+						<p>截止10月5日，<a href="https://polkadot.subscan.io/account/16ZL8yLyXv3V3L3z9ofR1ovFLziyXaN1DPq4yffMAZ9czzBD" target="_blank" rel="nofollow">最大的DOT巨鲸</a>持有5861万枚$DOT， 约 $3.748亿美元，其中47.46% 被质押。KSM的<a href="https://kusama.subscan.io/account/EGP7XztdTosm1EmaATZVMjSWujGEj9nNidhjqA2zZtttkFg" target="_blank" rel="nofollow">最大巨</a>鲸要温和得多，仅持有492,990枚$KSM，约 $2112万美元。</p>
 					</div>
 				</div>
 				<div class="block-report-chart chart-vc-polkadot"
@@ -668,21 +658,21 @@
 						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-2"/>
 					</div>
 					<div class="block-content">
-						<h3 class="block-chart-heading">VCs Investing in Polkadot and Kusama Ecosystem</h3>
+						<h3 class="block-chart-heading">投资Polkadot 和 Kusama生态系统的VC（风险投资机构）</h3>
 						<div class="block-chart-body">
 							<div class="block-chart" data-chart-name="vcs-dot-ksm" data-chart-source="inline"></div>
 						</div>
 						<div class="block-chart-footer">
 							<div class="block-chart-source">
-								<p>Source: SubWallet</p>
-								<p>Note: Data as of Sep 30</p>
+								<p>注: SubWallet</p>
+								<p>注：数据截至9月30日。</p>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="block-text">
 					<div class="text">
-						<p>As for investors, more than 400 venture capitals have invested in the Polkadot and Kusama ecosystem, holding tokens from the relay chain, parachains and DApps. DFG and AU21 were evidently the most fervent believers in the ecosystem, with 45 and 40 projects in their portfolios respectively. NGC Ventures, Hypersphere, Illusionist Group and CMS Holdings all invested in more than 30 projects.</p>
+						<p>至于投资者，有超过400家VCs投资了Polkadot和Kusama生态系统，持有其中继链、平行链和DApps的代币。DFG和AU21显然是该生态系统最狂热的信仰者，他们的投资组合中分别涵盖了45个和40个生态系统项目。NGC Ventures、Hypersphere、Illusionist Group和CMS Holdings分别都投资了30多个生态系统项目。</p>
 					</div>
 				</div>
 			</div>
@@ -707,29 +697,29 @@
 		<div class="section-content">
 			<div class="container">
 				<div class="block-text">
-					<h3 class="heading">Parachain</h3>
+					<h3 class="heading">平行链</h3>
 					<div class="text" style="--text-width: 740px">
-						<p>Q3 2022 concluded with <a href="https://twitter.com/Polkadot/status/1575819373045874689" target="_blank" rel="nofollow">an auction win</a> for OAK Network on September 30, making it the 28th parachain on Polkadot. As for Kusama, 54 auctions were successfully carried out in total to make way for <a href="https://twitter.com/kusamanetwork/status/1546530067718758401" target="_blank" rel="nofollow">41 parachains</a>. Since XCM, a messaging format that allows communication across consensus systems was launched on Kusama way before on Polkadot, 24 chains on Kusama had opened XCM channels with one another, twice as many as chains that had enabled XCM transfer on Polkadot.</p>
+						<p>2022年第三季度结束时，9月30日，OAK Network<a href="https://twitter.com/Polkadot/status/1575819373045874689" target="_blank" rel="nofollow">赢得了拍卖</a>，成为Polkadot的第28个平行链。至于Kusama，总共成功地进行了54次拍卖，<a href="https://twitter.com/kusamanetwork/status/1546530067718758401" target="_blank" rel="nofollow">为41个平行链</a>提供了槽位。XCM是一种允许跨共识系统通信的消息格式，在Kusama上优先启动。目前，Kusama上有24个链相互打开了XCM通道，两倍于Polkadot上启用XCM转账的链。</p>
 					</div>
 				</div>
 				<div class="block-report-chart">
 					<div class="block-content">
-						<h3 class="block-chart-heading">XCM Transfers of Top Polkadot & Kusama Parachains in Q3 2022</h3>
+						<h3 class="block-chart-heading">2022年第三季度Polkadot和Kusama上顶级平行链的XCM转账情况</h3>
 						<div class="block-chart-body">
 							<div class="block-chart" data-chart-name="xcm-transfers" data-chart-source="inline"></div>
 						</div>
 						<div class="block-chart-footer">
 							<div class="block-chart-source">
-								<p>Source: Polkaholic</p>
-								<p>Note: Data as of Sep 30</p>
+								<p>来源: Polkaholic</p>
+								<p>注：数据截至9月30日。</p>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="block-text">
 					<div class="text">
-						<p>In terms of XCM transfer value, the top six positions belonged to three pairs of sister networks: Moonbeam/Moonriver, Acala/Karura and Parallel/Heiko. Despite topping the chart with <a href="https://twitter.com/ParallelFi/status/1569637446752808961" target="_blank" rel="nofollow">$1M worth of assets transferred in</a> within one week of September, Parallel appeared to be trailing after other big six in the longer run. Among those, Moonbeam remained the most active in Q3, accumulating $56.88M in value transferred in with a total of 19,160 transactions and $39.68M in value transferred out with 10,319 transactions. The network also recorded <a href="https://twitter.com/MoonbeamNetwork/status/1567627537890639872" target="_blank" rel="nofollow">10M transactions</a> on September 8 and surpassed <a href="https://moonscan.io/chart/address" target="_blank" rel="nofollow">300,000 unique addresses</a> just four days after.</p>
-						<p>Acala came second at $21.89M value transferred in and $27.05M value transferred out. Clearly, the August incidents that led to a one-month period of activity halting on the network did not have much impact throughout the course of three months. On October 5, Acala officially <a href="https://twitter.com/AcalaNetwork/status/1577472328929116160" target="_blank" rel="nofollow">resumed their operations</a> on all functionalities, promising a remarkable comeback in Q4.</p>
+						<p>XCM转账价值的前六位属于三对姐妹网络：Moonbeam/Moonriver、Acala/Karura和Parallel/Heiko。尽管Parallel在9月的某一个星期内，凭借价值<a href="https://twitter.com/ParallelFi/status/1569637446752808961" target="_blank" rel="nofollow">$100万美元的资产转入而位居榜首</a>，但拉长时间来看，Parallel似乎落后于另外几个网络。Moonbeam在第三季度仍是最活跃的，累计转入价值$5688万美元，共记19160笔交易，转出价值为$3968万美元，共记10319笔交易。该网络在9月8日单日还录得了总价值为<a href="https://twitter.com/MoonbeamNetwork/status/1567627537890639872" target="_blank" rel="nofollow">$1000万美元的交易，</a>仅四天后其独立地<a href="https://moonscan.io/chart/address" target="_blank" rel="nofollow">址便超过30万个</a>。</p>
+						<p>Acala排名第二，转入价值为$2189万美元，转出价值为$2705万美元。显然，8月的事件导致基于该网络的活动被迫停止了一个月，但从三个月的整体时间来看并没有产生太大的影响。Acala在10月5日<a href="https://twitter.com/AcalaNetwork/status/1577472328929116160" target="_blank" rel="nofollow">恢复了所有功能的运行</a>，并有望在第四季度强势回归。</p>
 					</div>
 				</div>
 			</div>
@@ -737,20 +727,22 @@
 	</div>
 
 	<div class="section section-governance-treasury" id="governance-grant">
-		<div class="section-shape shape-radial-circle"></div>
 		<div class="section-shape shape-transparent-cube">
+			<div class="section-shape shape-radial-circle"></div>
 			<img class="move-vertical" loading="lazy" src="../assets/images/report/shapes/shape-transparent-cube.png" alt="Shape" width="352" height="305"/>
 		</div>
-
-		<div class="section-shape section-shape-corners">
-			<img src="../assets/images/report/section-corner-shadow.png" alt="Shape" width="1920" height="160">
+		<div class="section-shapes">
+			<div class="section-shape shape-corner-left-bottom shape-radial-circle red shape-corner-blur-1"></div>
+			<div class="section-shape shape-corner-left-bottom shape-radial-circle blue shape-corner-blur-2"></div>
+			<div class="section-shape shape-corner-right-bottom shape-radial-circle green shape-corner-blur-3"></div>
 		</div>
+		<div class="section-shape section-shape-corners"></div>
 		<div class="section-content">
 			<div class="container">
 				<div class="block-text">
-					<h3 class="heading">Governance & Grant</h3>
+					<h3 class="heading">治理与资助</h3>
 					<div class="text">
-						<p>Following the introduction of <a href="https://www.youtube.com/watch?v=tBvxn8WfcFI" target="_blank" rel="nofollow">Governance 2.0</a> that was discussed in the <a href="https://subwallet.app/polkadot-report-h1-2022-en/" target="_blank" rel="nofollow">Polkadot Deep Dive H1 2022</a> report, Gavin Wood <a href="https://twitter.com/gavofyork/status/1574390238642057216" target="_blank" rel="nofollow">published</a> the first draft of the <a href="https://github.com/polkadot-fellows/manifesto/blob/main/manifesto.pdf" target="_blank" rel="nofollow">Polkadot Fellowship Manifesto</a> on September 26, calling “core developers and protocol technical experts” to apply to be members. In Governance 2.0, the <a href="https://twitter.com/rphmeier/status/1574489596741632000" target="_blank" rel="nofollow">Polkadot Fellowship</a> will replace the current Technical Committee with three main responsibilities: providing technical advisory to the governance system, maintaining and building core protocols, and promoting education on Polkadot technology and philosophy. To guarantee that the Fellowship exists to advance the political decentralization of the network, no decision-making authority against the will of the community is granted to this group of experts.</p>
+						<p>我们在<a href="https://subwallet.app/polkadot-report-h1-2022-en/" target="_blank" rel="nofollow">《首份Polkadot综合季度报告》</a>中讨论过<a href="" target="_blank" rel="nofollow">Governance 2.0</a>，其发布后不久，Gavin Wood于9月26日<a href="https://www.youtube.com/watch?v=tBvxn8WfcFI" target="_blank" rel="nofollow">发表了</a><a href="https://github.com/polkadot-fellows/manifesto/blob/main/manifesto.pdf" target="_blank" rel="nofollow">《Polkadot Fellowship 宣言》</a>的初稿，呼吁 "核心开发者和协议技术专家 "申请成为成员。在Governance 2.0中，<a href="https://twitter.com/rphmeier/status/1574489596741632000" target="_blank" rel="nofollow">Polkadot Fellowship</a> 将取代目前的技术委员会，其主要职责有三：（1）为治理系统提供技术咨询，（2）维护和构建核心协议，（3）促进Polkadot技术和理念的教育。为了保证 Fellowship 的存在是为了推进网络政治的去中心化（政治权力下方），所以不会向这一专家组授予可能违背社区意愿的任何决策权。</p>
 					</div>
 				</div>
 				<div class="block-report-chart">
@@ -765,14 +757,14 @@
 						</div>
 						<div class="block-chart-footer">
 							<div class="block-chart-source">
-								<span>Source: doTreasury</span>
+								<span>来源: doTreasury</span>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="block-text">
 					<div class="text">
-						In this quarter, the DOT treasury received 30 proposals in total, among which 24 were funded a total of 439,757.317 DOT, approximately $2.85M. The KSM treasury also spent a comparable amount of money for 22 awarded proposals, 48,038.944 KSM approximating $2.10M. <a href="https://forum.polkadot.network/t/a-better-treasury-system/291/10" target="_blank" rel="nofollow">Discussions</a> on how to improve the process of treasury governance and spending are on-going in the <a href="https://forum.polkadot.network/" target="_blank" rel="nofollow">Polkadot Forum</a>, a newly introduced platform for constructive conversations around all things Polkadot.
+						本季度，DOT财政库共收到30份提案，其中24份获得了资助，共计439,757.317枚 $DOT，价值约 $285 万美元。KSM财政库也为22个获得资助的提案花费了相当数量的资金，共计 48,038.944 $KSM，价值约$210万美元<a href="https://forum.polkadot.network/" target="_blank" rel="nofollow">Polkadot Forum</a>是一个新推出的平台，用于围绕Polkadot的所有事情进行建设性交流，目前Polkadot Forum上正在<a href="https://forum.polkadot.network/t/a-better-treasury-system/291/10" target="_blank" rel="nofollow">讨论</a>如何改善财政库管理和支出的流程。
 					</div>
 				</div>
 				<div class="block-report-chart">
@@ -783,15 +775,15 @@
 						</div>
 						<div class="block-chart-footer">
 							<div class="block-chart-source">
-								<p>Source: Web3 Foundation</p>
-								<p>Note: Data as of July 28</p>
+								<p>来源: Web3 Foundation</p>
+								<p>注：数据截至7月28日。</p>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="block-text">
 					<div class="text">
-						Beside DOT and KSM treasuries, project teams looking to build on Substrate can apply for the Web3 Foundation Grants Program. On July 28, the Web3 Foundation Team <a href="https://medium.com/web3foundation/web3-foundation-grants-program-reaches-400-projects-milestone-1k-grant-applications-received-93a7d3a5f942" target="_blank" rel="nofollow">announced</a> that they had reached yet another milestone, surpassing 400 projects with a total of 415 accepted applications among 1054 received. 41.5% of funded projects developed runtime modules and chains, making this the dominant category among recipients. UI development and development tools came next, accounting for 13.2% and 11.1% respectively.
+						除了DOT和KSM财政库，希望基于Substrate构建的项目团队也可以申请Web3基金会的资助计划。7月28日，Web3基金会团队<a href="https://medium.com/web3foundation/web3-foundation-grants-program-reaches-400-projects-milestone-1k-grant-applications-received-93a7d3a5f942" target="_blank" rel="nofollow">宣布</a>，他们已经达到了新的里程碑 —— 从收到的1054份申请中挑选出415份给予资助。约41.5%的受资助项目开发了Runtime模块/链，其次是开发用户界面和开发工具的项目，分别占13.2%和11.1%。
 					</div>
 				</div>
 			</div>
@@ -803,11 +795,11 @@
 			<div class="container">
 				<div class="section-header">
 					<div class="section-header-inner">
-						<h3 class="section-top-title">The DeFi Economy</h3>
+						<h3 class="section-top-title">DeFi经济</h3>
 					</div>
 				</div>
 				<div class="block-text">
-					<div class="text">Short for decentralized finance, DeFi was undoubtedly the most buoyant segment with the <a href="https://dotinsights.subwallet.app/" target="_blank" rel="nofollow">highest number of projects</a> in the Polkadot and Kusama ecosystem. The market share in terms of parachains was largely divided among major networks, including Moonriver, Moonbeam, Acala, Parallel, Astar and Karura. The Moonbeam/Moonriver sister networks combined accounted for $126.25M in TVL, which was 44.7% total TVL, more than twice the total of Acala and Karura which was $62.25M, making up 22% of total TVL. Overall, the difference among chains was not significant, meaning that the orders in top 5 can subject to change any time.</div>
+					<div class="text">DeFi是去中心化金融的简称。在Polkadot和Kusama生态系统中，DeFi无疑是最活跃的板块，相应的<a href="https://dotinsights.subwallet.app/" target="_blank" rel="nofollow">项目数量最多。</a>平行链的市场份额大部分都分散在主要的网络之上，包括Moonriver、Moonbeam、Acala、Parallel、Astar和Karura。Moonbeam/Moonriver姐妹网络的TVL总和为 $1.2625 亿美元，占总TVL的44.7%，是Acala和Karura（22%）的两倍多。</div>
 				</div>
 				<div class="block-report-chart">
 					<div class="block-chart-blur">
@@ -821,15 +813,15 @@
 						</div>
 						<div class="block-chart-footer">
 							<div class="block-chart-source">
-								<p>Source: DefiLlama</p>
-								<p>Note: Data on Sep 30</p>
+								<p>来源: DefiLlama</p>
+								<p>注：数据截至7月30日。</p>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="block-text">
 					<div class="text">
-						In the last <a href="https://subwallet.app/polkadot-report-h1-2022-en/" target="_blank" rel="nofollow">Polkadot Deep Dive</a> report, we divided DeFi projects by layer and separated parachain from DApp. This time, we are doing things differently by delving into DeFi products regardless of layer for a more objective comparison. Four main product analyses are DEX (AMM), Lending & Borrowing (Money Market), Liquid Staking and Stablecoin. Note that due to the one-month activity hiatus, we are leaving Acala out of this section.
+						在上一份<a href="https://subwallet.app/polkadot-report-h1-2022-en/" target="_blank" rel="nofollow">Polkadot综合季度报告中</a>，我们按layer分类了DeFi项目，并从DApp中分离出平行链。而这一次，为进行更客观的比较，我们深入研究DeFi产品但再按layer分类。四种主要的产品分析是DEX（AMM），借贷（货币市场），流动性质押和稳定币。请注意，由于Acala有一个月时长的活动终止，所以我们将其排除在本节之外。
 					</div>
 				</div>
 			</div>
@@ -872,8 +864,8 @@
 				<div class="block-text" style="--text-width: 745px" id="dex-amm">
 					<h3 class="heading">DEX (AMM)</h3>
 					<div class="text">
-						<p>In this section, we survey 13 decentralized exchanges (automated market makers) on Polkadot and Kusama, both native and multi-chain. For easy visualization purposes, we separate them into two groups: those whose average total value locked (TVL) in Q3 was higher than $10M, and those lower than $5M.</p>
-						<p>Interestingly, the top five DEX leaders in Q3 were all DApp’s products rather than parachain’s. ArthSwap <a href="https://twitter.com/subwalletapp/status/1559136615033085953" target="_blank" rel="nofollow">continued</a> to be the number one DEX on Astar Network, even with the competition from Zenlink, while Solarbeam was the only representative from Moonriver Network in the chart. Compared to Moonbeam Network’s native DEX StellaSwap and multi-chain DEX Curve Finance, these three projects did not experience much volatility in the surveyed period.</p>
+						<p>在本节中，我们调查了Polkadot和Kusama上的13个去中心化交易所（自动做市商），它们既是链原生的也是多链的。为了便于可视化，我们将它们分为两组：第三季度平均总锁仓价值（TVL）高于$1000万美元的，以及低于$500万美元的。</p>
+						<p>有趣的是，第三季度的前五大DEX领先者都是DApp的产品，而非平行链的。即使有来自于Zenlink的竞争，ArthSwap<a href="https://twitter.com/subwalletapp/status/1559136615033085953" target="_blank" rel="nofollow">仍然</a>是Astar Network上的第一大DEX；而Solarbeam则是Moonriver Network在图表中的唯一代表。与Moonbeam Network的原生DEX StellaSwap和多链DEX Curve Finance相比，这三个项目在调查期间并没有经历太大的波动。</p>
 					</div>
 				</div>
 				<div class="block-report-chart">
@@ -882,21 +874,21 @@
 						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-2"/>
 					</div>
 					<div class="block-content">
-						<h3 class="block-chart-heading">DEX with Average TVL Higher Than $10M</h3>
+						<h3 class="block-chart-heading">平均TVL高于$1000万美元的DEX</h3>
 						<div class="block-chart-body">
 							<div class="block-chart" data-chart-name="dex-with-average-tvl-higher-than-10m" data-chart-source="dex-with-average-tvl"></div>
 						</div>
 						<div class="block-chart-footer">
 							<div class="block-chart-source">
-								<p>Source: DefiLlama, The Graph, Zenlink Team</p>
+								<p>来源: DefiLlama, The Graph, Zenlink Team</p>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="block-text">
 					<div class="text">
-						<p>The impact of the Nomad bridge hack on StellaSwap could not be clearer: within one day from August 1 to August 2, its TVL was divided by three times, plummeting from $31.56M to $11.21M. From that point on, StellaSwap TVL hovered around $8.75M, reaching peak on August 12 at $13.46M and hitting bottom on September 6 at $6.60M. Apparently, the unfortunate incident had pulled StellaSwap far down from the previously unbeatable first to fifth position from mid-August onwards. As part of the rebuilding process, the team submitted <a href="https://github.com/moonbeam-foundation/grants/blob/1efdeeb04d7d3d58350c270e616057252296e99b/level-3/MBGP1.md" target="_blank" rel="nofollow">a level-3 Moonbeam ecosystem grant</a> proposal of 7,833,600 GLMR (about $3.89M) in total to incentivize strategic farms in the course of six months which was <a href="https://twitter.com/MoonbeamNetwork/status/1579101646793371648" target="_blank" rel="nofollow">passed by community vote</a> on October 9.</p>
-						<p>Though also running on Moonbeam as StellaSwap, Curve Finance was not affected by the Nomad bridge hack as it did not rely on wrapped assets as much as on Lido’s liquid staking asset pool (xcDOT/stDOT). In fact, the multi-chain DEX took the opportunity to quickly double its TVL from $4.78M to $9.24M in just the week of July 11 to 18. Curve Finance consistently led the TVL race from August 9, and by the end of Q3 its TVL had grown 499% compared to the quarter’s beginning.</p>
+						<p>Nomad桥攻击对StellaSwap的影响再明显不过了：从8月1日到8月2日的一天之内，其TVL被瓜分了2/3，自$3156万美元骤降到$1121万美元。于那时起，StellaSwap的TVL就在$875万美元左右徘徊，8月12日达到高峰，为$1346万美元，9月6日触底，为$660万美元。显然，8月中旬开始，这一不幸的事件使StellaSwap从之前无可匹敌的第一名跌至第五名。作为重建过程的一部分，该团队提交了<a href="https://github.com/moonbeam-foundation/grants/blob/1efdeeb04d7d3d58350c270e616057252296e99b/level-3/MBGP1.md" target="_blank" rel="nofollow">一个3级Moonbeam生态系统资助提案</a>，总额为7,833,600 枚$GLMR（约$389万美元），以激励六个月内的战略农场。该提案在10月9日经<a href="https://twitter.com/MoonbeamNetwork/status/1579101646793371648" target="_blank" rel="nofollow">社区投票通过</a>。</p>
+						<p>Curve Finance虽然也在Moonbeam上运行，但它并没有受到Nomad桥攻击的影响，因为它对wrapped assets的依赖程度不如对Lido流动性质押资产池（xcDOT/stDOT）的依赖程度。事实上，在7月11日至18日的一周内，这个多链DEX利用此次机会迅速将其TVL从$478万美元翻倍至$924万美元。自8月9日以来，Curve Finance一直在TVL竞赛中领先，到第三季度末，其TVL与本季度初相比增长了499%。</p>
 					</div>
 				</div>
 				<div class="block-report-chart">
@@ -905,22 +897,22 @@
 						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-2"/>
 					</div>
 					<div class="block-content">
-						<h3 class="block-chart-heading">DEX with Average TVL Lower Than $5M</h3>
+						<h3 class="block-chart-heading">平均TVL低于$500万美元的DEX</h3>
 						<div class="block-chart-body">
 							<div class="block-chart" data-chart-name="dex-with-average-tvl-lower-than-5m" data-chart-source="dex-with-average-tvl"></div>
 						</div>
 						<div class="block-chart-footer">
 							<div class="block-chart-source">
-								<p>Source: DefiLlama, The Graph, Zenlink Team</p>
+								<p>来源: DefiLlama, The Graph, Zenlink Team</p>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="block-text">
 					<div class="text">
-						<p>In the lower TVL ranking, Beamswap did not manage to hold its leading position for too long: the steep slide in its TVL meant that Beamswap had to yield to Karura and Beefy on Moonbeam after the first half of July. After <a href="https://twitter.com/Beamswapio/status/1553406366026440705" target="_blank" rel="nofollow">announcing</a> the $1M worth of staked GLINT, Beamswap’s DEX TVL nearly doubled in a day, from $3.59M to $6.51M on July 31 before diving back to $4.08M just three days later. </p>
-						<p>Similar to Beamswap, Beefy on Moonbeam’s TVL also went through a dramatic dip of 35.59% from $3.99M on August 1 to $2.57M on August 2, likely due to the panic withdrawal after the Nomad incident. While the sister Beefy on Moonriver did not see much fluctuation in TVL in Q3, Beefy on Moonbeam’s TVL shot up 258.13% within the span of 8 days, from $2.03M on August 29 to $5.24M on September 6 and remained relatively stable on top of the chart in the remaining period.</p>
-						<p>If Beamswap and Beefy on Moonbeam dominated the first and last third of Q3, then Avault Finance was the star of the middle third. Launched on July 8 with a modest starting TVL of $1.10M, Avault gradually worked its way up before securing an impressive increase of almost two times in two days from $3.07M on August 9 to $6.10M on August 11. It would be interesting to see how the competition among these three DEXes unfold when 2022 comes to an end, as their TVL nearly collided by the end of this quarter.</p>
+						<p>在较低的TVL排名中，Beamswap的领先地位并没有维持太久 —— 其TVL的急剧下滑意味着Beamswap在7月的下半月不得不让位于Moonbeam上的Karura和Beefy。在<a href="https://twitter.com/Beamswapio/status/1553406366026440705" target="_blank" rel="nofollow">宣布</a>获得了价值$100万美元的质押GLINT之后，Beamswap的DEX TVL在一天内几乎翻了一番，7月31日从$359万美元翻倍至$651万美元，而仅三天后又跳水至$408万美元。</p>
+						<p>获得了价值$100万美元的质押GLINT之后，Beamswap的DEX TVL在一天内几乎翻了一番，7月31日从$359万美元翻倍至$651万美元，而仅三天后又跳水至$408万美元。</p>
+						<p>如果说Beamswap和Moonbeam上的Beefy主导了第三季度的前三分之一和后三分之一，那么Avault Finance就是中间三分之一的明星。Avault于7月8日推出，初始TVL为$110万美元，而后逐渐攀升 —— 从8月9日的$307万美元到8月11日的$610万美元 —— 在两天内翻倍确是令人印象深刻。或许2022年结束时再来看看这三个DEX之间的竞争是如何展开的将会是一件非常有趣的事情，因为它们的TVL在本季度结束时几乎是一样的。</p>
 					</div>
 				</div>
 			</div>
@@ -931,10 +923,10 @@
 		<div class="section-content">
 			<div class="container">
 				<div class="block-text">
-					<h3 class="heading">Lending & Borrowing (Money Market)</h3>
+					<h3 class="heading">借贷（货币市场）</h3>
 					<div class="text">
-						<p>Unsurprisingly, Moonwell Artemis suffered the same way StellaSwap did: in three days, its TVL crashed 78.45% from $103.04M on August 1 to $22.20M on August 4, pushing it down from the first to the third position in a four-project ranking. To rebuild the protocol, Moonwell Artemis proposed <a href="https://github.com/moonbeam-foundation/grants/blob/1d785613c1744c2566c24954da834d6088b0b4ad/level-3/MBGP2.md" target="_blank" rel="nofollow">a Moonbeam Foundation Grant</a> valuing at 4,166,400 GLMR (approximately $2.08B) and was <a href="https://twitter.com/MoonbeamNetwork/status/1579101646793371648" target="_blank" rel="nofollow">approved</a> on October 9.</p>
-						<p>Because of this incident, Parallel rose up to lead the lending race in the last two-third of Q3, surpassing $75M in TVL at its peak on August 6. At the bottom of the chart, Starlay had lost 47.79% of its TVL since the quarter started at $13.18M.</p>
+						<p>不出所料，Moonwell Artemis的遭遇与StellaSwap如出一辙：三天内，其TVL下降了78.45%，从8月1日的$1.0304亿美元暴跌至8月4日的$2220万美元，以致于使得其在四个项目的排名中从第一降至第三。为了重建协议，Moonwell Artemis提出了一项价值416.64万枚$GLMR（约$208万美元）<a href="https://github.com/moonbeam-foundation/grants/blob/1d785613c1744c2566c24954da834d6088b0b4ad/level-3/MBGP2.md" target="_blank" rel="nofollow">的Moonbeam Foundation Grant（Moonbeam 基金会资助）</a> ，并在10月9日<a href="https://twitter.com/MoonbeamNetwork/status/1579101646793371648" target="_blank" rel="nofollow">获批</a>。</p>
+						<p>归功于这一事件，Parallel 在第三季度后三分之二时间里的放贷竞赛中脱颖而出，TVL于8月6日达到了$7500万美元的峰值。在图表的底部，自本季度之初，Starlayt的TVL为$1318万美元，现已损失47.79%。</p>
 					</div>
 				</div>
 				<div class="block-report-chart">
@@ -949,17 +941,17 @@
 						</div>
 						<div class="block-chart-footer">
 							<div class="block-chart-source">
-								<p>Source: DefiLlama, Parallel Analytics</p>
+								<p>来源: DefiLlama, Parallel Analytics</p>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="block-text" id="liquid-staking">
-					<h3 class="heading">Liquid Staking</h3>
+					<h3 class="heading">流动性质押</h3>
 					<div class="text">
 						<div class="row">
-							<div class="col-md-6">It is apparent that Parallel’s main products were lending and borrowing (money market) and liquid staking rather than DEX. Throughout Q3, its liquid staking TVL was relatively stable around $15M except for two dips, one down to $13.35M on August 9 and another to $12.15M on September 18. After the second decline, Parallel’s TVL hovered around $12M and converged with Lido on Moonbeam’s.</div>
-							<div class="col-md-6">Bifrost doubled down on liquid staking incentivization campaigns this quarter, running <a href="https://twitter.com/bifrost_finance/status/1542175587980410880" target="_blank" rel="nofollow">Rainbow Boost 2.0</a> from June 29 to July 13 and <a href="https://twitter.com/bifrost_finance/status/1556430756716560384" target="_blank" rel="nofollow">Rainbow Boost 3.0</a> from August 8 to August 23, but that was not enough to compete with Lido on Moonbeam in the second half of Q3. In spite of a late start to the race, Lido on Moonbeam concluded Q3 with a 216.68% rise in TVL compared to $5.69M on launch date. Interestingly, the sharpest rise in Bifrost’s liquid staking TVL occurred outside the campaign timeframe, from $5.76M on July 21 to $9.51M on July 23.</div>
+							<div class="col-md-6">显然，Parallel的主要产品是借贷（货币市场）和流动性质押，而非DEX。在整个第三季度，它的流动质押TVL相对稳定在$1500万美元左右，仅有两次下跌，一次在8月9日跌至$1335万美元，另一次是在9月18日跌至$1215万美元。第二次下跌后，Parallel的TVL徘徊在$1200万美元左右，并与Lido在Moonbeam上的TVL趋同。</div>
+							<div class="col-md-6">Bifrost在本季度加大了流动性质押协议激励活动的力度，6月29日至7月13日运行了<a href="https://twitter.com/bifrost_finance/status/1542175587980410880" target="_blank" rel="nofollow">Rainbow Boost 2.0</a>，8月8日至8月23日运行了<a href="https://twitter.com/bifrost_finance/status/1556430756716560384" target="_blank" rel="nofollow">Rainbow Boost 3.0</a>。但这并不足以在第三季度后半段与Moonbeam上的Lido竞争。尽管Moonbeam上的Lido的起步较晚，但在第三季度末，其TVL比发行时的$569万美元增长了216.68% 。有趣的是，Bifrost的流动性TVL出现了最大幅度的增长（但在本文的竞赛时间范围之外），从7月21日的$576万美元涨至7月23日的$951万美元。</div>
 						</div>
 					</div>
 				</div>
@@ -975,7 +967,7 @@
 						</div>
 						<div class="block-chart-footer">
 							<div class="block-chart-source">
-								<p>Source: DefiLlama, Parallel Analytics, Bifrost Analytics</p>
+								<p>来源: DefiLlama, Parallel Analytics, Bifrost Analytics</p>
 							</div>
 						</div>
 					</div>
@@ -1007,9 +999,9 @@
 		<div class="section-content">
 			<div class="container">
 				<div class="block-text" style="--text-width: 750px">
-					<h3 class="heading">Stablecoin</h3>
+					<h3 class="heading">稳定币</h3>
 					<div class="text">
-						<p>Probably the most terrific news on stablecoin this quarter is <a href="https://twitter.com/Polkadot/status/1573299786266050561" target="_blank" rel="nofollow">Tether’s launch on Polkadot</a> with an initial supply of <a href="https://statemint.statescan.io/asset/1984" target="_blank" rel="nofollow">3M USDT</a> after <a href="https://twitter.com/djhatrang/status/1567063802402979842" target="_blank" rel="nofollow">quietly increasing</a> its supply on Kusama to 3.5M USDT. Right after the launch, Astar Network was <a href="https://twitter.com/AstarNetwork/status/1574407634144219136" target="_blank" rel="nofollow">the very first parachain</a> to open XCM transfers of USDT, and Moonbeam Network <a href="https://twitter.com/MoonbeamNetwork/status/1574764549554769921" target="_blank" rel="nofollow">quickly followed suit</a> by making Polkadot-native USDT available for use on its DApp.</p>
+						<p>本季度稳定币方面最令人震惊的消息可能是<a href="https://twitter.com/Polkadot/status/1573299786266050561" target="_blank" rel="nofollow">Tether在Polkadot上推出</a>，初始供应量为<a href="https://statemint.statescan.io/asset/1984" target="_blank" rel="nofollow">$300万美元，</a> ，且此前其在Kusama上的供应量也已<a href="https://twitter.com/djhatrang/status/1567063802402979842" target="_blank" rel="nofollow">悄然增加</a>至$350万美元。紧接着，Astar Network<a href="https://twitter.com/AstarNetwork/status/1574407634144219136" target="_blank" rel="nofollow">成为第一个</a>开放USDT XCM转账的平行链。Moonbeam Network<a href="https://twitter.com/MoonbeamNetwork/status/1574764549554769921" target="_blank" rel="nofollow">也迅速跟进</a>，在其DApp上供应了Polkadot原生USDT。</p>
 					</div>
 				</div>
 				<div class="block-report-chart">
@@ -1018,20 +1010,20 @@
 						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-2"/>
 					</div>
 					<div class="block-content">
-						<h3 class="block-chart-heading">Stablecoin Total Issuance</h3>
+						<h3 class="block-chart-heading">稳定币总发行量</h3>
 						<div class="block-chart-body">
 							<div class="block-chart" data-chart-name="stablecoin-total-issuance"></div>
 						</div>
 						<div class="block-chart-footer">
 							<div class="block-chart-source">
-								<span>Source: DefiLlama</span>
+								<span>来源: DefiLlama</span>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="block-text">
 					<div class="text">
-						Regardless of the incident with Acala, aUSD issuance on Karura did not fluctuate outside the $3.77M – $4.81M range. The circulation of AstridDAO’s stablecoin BAI, on the contrary, was more volatile. Starting the quarter on July 6 at $5.75M, which was 1.5 times higher than aUSD issuance on Karura, BAI circulation gradually declined and officially fell below its competitor on July 26. In the course of three months, BAI lost almost half of its market cap. As Acala went back to operation and USDC <a href="https://twitter.com/circlepay/status/1575206651530907649?s=20" target="_blank" rel="nofollow">announced its plan</a> to launch on Polkadot, the native stablecoin competition is expected to be harsher than ever by the end of 2022.
+						不管Acala的事件如何发展，Karura上的aUSD发行量都没有超出$377万~$481万美元的范围。相反，AstridDAO的稳定币BAI的发行量则波动较大。本季度初，7月6日，BAI的发行量为$575万美元，比Karura的aUSD发行量高1.5倍，而后BAI发行量逐渐下降，并在7月26日正式低于其竞争对手。三个月的时间里，BAI失去了近乎一半的市值。随着Acala恢复运营，USDC<a href="https://twitter.com/circlepay/status/1575206651530907649?s=20" target="_blank" rel="nofollow">宣布计划</a>在Polkadot上推出，预计到2022年底，原生稳定币的竞争将比以往任何时候都更加激烈。
 					</div>
 				</div>
 			</div>
@@ -1060,9 +1052,9 @@
 					</div>
 				</div>
 				<div class="block-text" style="--text-width: 660px;" id="nft-marketplace">
-					<h3 class="heading">NFT Marketplace</h3>
+					<h3 class="heading">NFT市场</h3>
 					<div class="text">
-						The NFT segment was vibrant this quarter, with activities spanning across NFT marketplaces, GameFi and Metaverse projects. Within one month of launching, the Moonbeam-based NFT marketplace Raresama had broken the record by <a href="https://twitter.com/RaresamaNFT/status/1577305788430880769" target="_blank" rel="nofollow">surpassing</a> 2,000,000 GLMR in volume, approximately $927K. Apart from Raresama, other representatives in the Moonbeam/Moonriver ecosystem including tofuNFT and Moonbeans also reported remarkable sales volume.
+						本季度NFT领域充满活力，各类活动横跨NFT市场、GameFi和Metaverse项目。基于Moonbeam的NFT市场Raresama在推出后的一个月内便打破了记录 —— 交易量<a href="https://twitter.com/RaresamaNFT/status/1577305788430880769" target="_blank" rel="nofollow">超过</a>了200万枚$GLMR，约为$927K美元。除了Raresama，Moonbeam/Moonriver生态系统的其他代表项目包括tofuNFT和Moonbeans也报告了惊人的销售额。
 					</div>
 				</div>
 				<div class="block-report-chart"
@@ -1072,20 +1064,20 @@
 						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-2"/>
 					</div>
 					<div class="block-content">
-						<h3 class="block-chart-heading">NFT Marketplace Daily Volume</h3>
+						<h3 class="block-chart-heading">NFT市场的日销售额</h3>
 						<div class="block-chart-body">
 							<div class="block-chart" data-chart-name="nft-marketplace-daily-volume"
 							     data-chart-source="rmrk-sales"></div>
 						</div>
 						<div class="block-chart-footer">
 							<div class="block-chart-source">
-								<span>Source: Moonbeans Analytics, tofuNFT Analytics, RMRK Team, NFTScan</span>
+								<span>来源: Moonbeans Analytics, tofuNFT Analytics, RMRK Team, NFTScan</span>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="block-text">
-					<div class="text">One can easily see how tofuNFT’s sales volume on Moonbeam Network most frequently topped the daily ranking: out of 93 days in Q3, tofuNFT on Moonbeam recorded the highest volume on 58 days, accounting for 63.37%. In total, there was $86,078 worth of NFT sold on tofuNFT on Moonbeam, more than twice the amount sold on Moonbeans on Moonriver ($41,166) and almost four times higher than Singular’s volume ($22,115).</div>
+					<div class="text">很容易就能看出tofuNFT在Moonbeam Network上的销量是如何频繁登顶日销量排行榜的 —— 于第三季度的93天中，tofuNFT在Moonbeam上有58天录得日最高销售额，占比63.37%。总共有价值$86,078美元的NFT在Moonbeam的tofuNFT上售出，是Moonbeans在Moonriver上的（$41,166美元）的两倍之多，几乎是Singular销售额（$22,115美元）的四倍。</div>
 				</div>
 			</div>
 			<div class="section section-game-fi" id="game-fi">
@@ -1109,8 +1101,8 @@
 							<div class="block-text" style="--text-width: 470px;">
 								<h3 class="heading">GameFi</h3>
 								<div class="text">
-									<p>The first NFT collection ever sold-out on Moonbeam Network <a href="https://www.glmrapes.com/" target="_blank" rel="nofollow">GlimmerApes</a> ranked first in sales volume and overtook the second runner-up <a href="https://www.glmrjungle.com/" target="_blank" rel="nofollow">GLMR Jungle</a> by a large margin of 35K GLMR, approximately $14.8K. However, both collections were created by the GLMR Apes DAO, with the latter being part of <a href="https://twitter.com/GLMRJungle" target="_blank" rel="nofollow">The Great Escape</a>, the first Play-to-Earn Game on Moonbeam Network. Within the first month of launching, the GameFi project had achieved <a href="https://twitter.com/T0__FR/status/1575152270634803209?s=20&t=cLHeylev6hm8GeIeWy5r6w" target="_blank" rel="nofollow">impressive milestones</a>: about 14,500 games had been played by 210 unique players, and 8,800 GLMB collected by the Jungle Bank while 5,600 GLMB had been burned.</p>
-									<p>Two Moonbeam versions of the classic <a href="https://www.larvalabs.com/cryptopunks" target="_blank" rel="nofollow">CryptoPunks</a> and <a href="https://boredapeyachtclub.com/" target="_blank" rel="nofollow">Bored Ape Yacht Club</a> (BAYC) came third and fourth respectively. MoonFit Beast and Beauty, a collection by the fitness and lifestyle GameFi app <a href="https://moonfit.xyz/" target="_blank" rel="nofollow">MoonFit</a> ranked fifth after only a few months of launching. 500 NFTs were <a href="https://twitter.com/MoonFitOfficial/status/1561985933029036033" target="_blank" rel="nofollow">sold out</a> in the first sale round in under 30 minutes at 39,500 GLMR valuation, and 1500 NFTs in the <a href="https://twitter.com/MoonFitOfficial/status/1574319212956303360" target="_blank" rel="nofollow">second sale round</a> at 178,500 GLMR valuation, totalling 218,000 GLMR in primary market sales volume from both rounds. MoonFit Mint Pass, a whitelist free-mint collection also recorded remarkable sales volume of 11,478.18 GLMR in the secondary market.</p>
+									<p>第一个在Moonbeam Network上销售一空的NFT系列<a href="https://www.glmrapes.com/" target="_blank" rel="nofollow">《GlimmerApes》</a>在销售额上排名第一，并以3.5万枚$GLMR（约$14.8万美元）的巨大优势远超亚军<a href="https://www.glmrjungle.com/" target="_blank" rel="nofollow">《GLMR Jungle》</a>。这两个系列都是由GLMR Apes DAO创造的，后者是是Moonbeam Network上的第一款P2E游戏——<a href="https://twitter.com/GLMRJungle" target="_blank" rel="nofollow">《the Great Escape》</a>—— 的一部分。在推出的第一个月内，GameFi<a href="https://twitter.com/T0__FR/status/1575152270634803209?s=20&t=cLHeylev6hm8GeIeWy5r6w" target="_blank" rel="nofollow">项目取得了令人印象深</a>210名独特的玩家玩了大约14,500个游戏，Jungle Bank收集了8800枚$GLMB，销毁了5600枚$GLMB。</p>
+									<p>经典游戏<a href="https://www.larvalabs.com/cryptopunks" target="_blank" rel="nofollow">《CryptoPunks》</a>和<a href="https://boredapeyachtclub.com/" target="_blank" rel="nofollow">《Bored Ape Yacht Club》</a>的Moonbeam 版本分别获得了第三和第四名。MoonFit——一款主打健身和生活方式的GameFi app ——其<a href="https://moonfit.xyz/" target="_blank" rel="nofollow">《MoonFit Beast and Beauty》</a>系列，仅在推出后的几个月内便排名第五。在第一轮销售中，500个NFTs39,500枚 $GLMR的估值在30分钟内<a href="https://twitter.com/MoonFitOfficial/status/1561985933029036033" target="_blank" rel="nofollow">售罄</a>；在第二轮销售中，1500个NFTs以178,500 枚$GLMR的估值售罄。两轮的一级市场销售额共计218,000枚 $GLMR。白名单免费铸造系列《MoonFit Mint Pass》也在<a href="https://twitter.com/MoonFitOfficial/status/1574319212956303360" target="_blank" rel="nofollow">二级市场创</a>下了11478.18 枚$GLMR的惊人销售额。</p>
 								</div>
 							</div>
 						</div>
@@ -1325,8 +1317,8 @@
 									</div>
 									<div class="block-table-footer">
 										<div class="block-table-source">
-											<p>Source: NFTScan</p>
-											<p>Note: Data as of Oct 13</p>
+											<p>来源: NFTScan</p>
+											<p>注：数据截至10月13日。</p>
 										</div>
 									</div>
 								</div>
@@ -1354,11 +1346,11 @@
 		</div>
 		<div class="container">
 			<div class="block-text">
-				<h3 class="heading">Metaverse</h3>
+				<h3 class="heading">元宇宙</h3>
 				<div class="text">
 					<div class="row">
-						<div class="col-md-6">Beside GameFi, another NFT-powered section that showed much promise in Q3 is Metaverse. On July 22, Polkadot’s Metaverse parachain Efinity <a href="https://twitter.com/Polkadot/status/1550171381718999040" target="_blank" rel="nofollow">announced</a> that they would partner with Square Enix to release NFTs for the all-time favorite video game series Final Fantasy. The NFTs will not be purely digital, but will be linked to physical action figures and trading cards based on Final Fantasy VII.</div>
-						<div class="col-md-6">In another move, Bit.Country launched their Alpha Testnet on June 30 and attracted <a href="https://twitter.com/BitDotCountry/status/1547067746474930176" target="_blank" rel="nofollow">almost 3,000 metaverse</a> projects and 2M staked AlphaNEER within the first two weeks. On September 13, Bit.Country Pioneer App <a href="https://twitter.com/BitDotCountry/status/1569504374824775681" target="_blank" rel="nofollow">went live</a> after Bit.Country Pioneer <a href="https://twitter.com/parachains/status/1569155301403930624?s=20&t=So2ht8E_5WVruujxYbRizg" target="_blank" rel="nofollow">won a self-funded auction</a> for the 52th parachain slot on Kusama one day earlier.</div>
+						<div class="col-md-6">除了GameFi，另一个在第三季度显示出巨大前景的以NFT驱动的部分是元宇宙。7月22日，Polkadot的元宇宙平行链Efinity<a href="https://twitter.com/Polkadot/status/1550171381718999040" target="_blank" rel="nofollow">宣布</a>，他们将与Square Enix合作，为一直以来最受欢迎的电子游戏系列《Final Fantasy》发布NFTs。这些NFTs并非是纯粹数字化的，而是能够与《Final Fantasy VII》的实物公仔和交易卡相结合的。</div>
+						<div class="col-md-6">另一个大事件是，Bit.Country于6月30日推出了Alpha 测试网，并在头两周内吸引<a href="https://twitter.com/BitDotCountry/status/1547067746474930176" target="_blank" rel="nofollow">了近3000个元宇宙项目</a>和200万的质押$AlphaNEER。9月13日，Bit.Country Pioneer App<a href="https://twitter.com/BitDotCountry/status/1569504374824775681" target="_blank" rel="nofollow">上线</a>，此前一天，Bit.Country Pioneer<a href="https://twitter.com/parachains/status/1569155301403930624?s=20&t=So2ht8E_5WVruujxYbRizg" target="_blank" rel="nofollow">赢得了</a>Kusama第52个平行链插槽的自筹资金拍卖。</div>
 					</div>
 				</div>
 			</div>
@@ -1444,16 +1436,16 @@
 					</div>
 					<div class="block-table-footer">
 						<div class="block-table-source">
-							<p>Source: Bit.Country Team</p>
-							<p>Note: Data as of Oct 5</p>
+							<p>来源: Bit.Country Team</p>
+							<p>注：数据截至10月5日。</p>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="block-text">
 				<div class="text">
-					<p>The success of the Alpha Testnet campaign constituted a snowball effect for the Pioneer App: within 9 hours of launching, <a href="https://twitter.com/BitDotCountry/status/1569628185599569921" target="_blank" rel="nofollow">1M NEER</a> had been staked, and this number increased to over 3M when the first day ended. By the end of the first week, 136 metaverse projects and 322 NFT collections had been created, with 1,848 minted NFTs, over 3.6M NEER staked and over 100K BIT burned. The team continued with the <a href="https://twitter.com/BitDotCountry/status/1582268401023492096" target="_blank" rel="nofollow">Raw Land Block Sale</a> event, with auctions amounting up to <a href="https://twitter.com/BitDotCountry/status/1585824094993338368?s=20&t=f68GYGLVTgPyIHqJt1KzQw" target="_blank" rel="nofollow">5,150 NEER</a> (approximately $2,060).</p>
-					<p>The more senior metaverse project Skybreach by RMRK also reached a monumental milestone. On October 19, Skybreach <a href="https://twitter.com/SkybreachNFT/status/1582742081927258113" target="_blank" rel="nofollow">reported</a> 14,905 plots in cumulative land sales with a volume of more than 1M xcRMRK.</p>
+					<p>lpha 测试网活动的成功对Pioneer App产生了滚雪球效应：上线后的9个小时内，有<a href="https://twitter.com/BitDotCountry/status/1569628185599569921" target="_blank" rel="nofollow">100万枚$NEER</a>被质押，而在第一天结束时，这一数字已超过了300万。到第一周结束时，已经有136个元宇宙项目和322个NFTs集合被创建，1,848个NFTs被铸造，超过360万枚$NEER被抵押，超过10K万枚 $BIT被销毁。该团队仍在进行的<a href="https://twitter.com/BitDotCountry/status/1582268401023492096" target="_blank" rel="nofollow">"Raw Land Block Sale"</a>活动，截止目前拍卖总额累计高达<a href="https://twitter.com/BitDotCountry/status/1585824094993338368?s=20&t=f68GYGLVTgPyIHqJt1KzQw" target="_blank" rel="nofollow">5,150枚 $NEER</a>（约$2,060美元）。</p>
+					<p>由RMRK发起的更高级的元宇宙项目Skybreach也达到了一个具有纪念意义的里程碑。10月19日，Skybreach<a href="https://twitter.com/SkybreachNFT/status/1582742081927258113" target="_blank" rel="nofollow">称其</a>累计地块出让达到14,905块，成交额超过100万枚 $xcRMRK。</p>
 				</div>
 			</div>
 		</div>
@@ -1466,7 +1458,7 @@
 					<h2 class="section-top-title">DAO</h2>
 					<div class="section-description-wrap">
 						<div class="section-description">
-							Emerging out of the blockchain’s turning away from any kind of central authority, decentralized autonomous organizations (<a href="https://www.investopedia.com/tech/what-dao/" target="_blank" rel="nofollow">DAOs</a>) are entity structures whose decision-making process is governed by collectively voting token holders and whose activities are entirely publicized on a blockchain. As to any other ecosystems, DAOs are indispensable to Polkadot and Kusama.
+							在区块链逐渐脱离任何形式的中央权威的过程中，出现了去中心化自治组织(<a href="https://www.investopedia.com/tech/what-dao/" target="_blank" rel="nofollow">DAOs</a>）。DAOs是实体结构，其决策过程由集体投票的代币持有人管理，他们的活动在区块链上是完全公开的。与其他任何生态系统一样，DAO对于Polkadot和Kusama来说是不可或缺的。
 						</div>
 					</div>
 				</div>
@@ -1478,10 +1470,10 @@
 					<div class="block-dao block-dao--chaos" id="chaosdao">
 						<img src="../assets/images/report/dao/chaos-dao.png" alt="ChaosDAO" loading="lazy" width="100" height="100">
 						<h3>ChaosDAO</h3>
-						<p class="description">One of the earliest and most impactful DAOs in the Polkadot and Kusama ecosystem,
-							<a href="https://chaosdao.org/" target="_blank" rel="nofollow">ChaosDAO</a>, celebrated their
-							<a href="https://twitter.com/ChaosDAO/status/1547252610578763782" target="_blank" rel="nofollow">one-year anniversary</a> on July 13. ChaosDAO has always grown 100% organically with “Quality over Quantity” as its founding principle, and with one goal in mind: bring together and connect the most knowledgeable individuals in the space. The DAO features the NFT collection
-							<a href="https://singular.app/collectibles/kusama/dac5c7f54029d0e73c-HXAI8" target="_blank" rel="nofollow">Chaos-DAO Apes</a> for membership access and governance. By October 24, the collection had recorded close to 4K KSM in trading volume with a floor price of 109 KSM and a top sale of 179 KSM. 23 DAOists, the caretakers of the server, are currently running ChaosDAO, including members from notable projects in the ecosystem.
+						<p class="description">ChaosDAO是Polkadot和Kusama生态系统中，最早且最有影响的DAO之一，
+							<a href="https://chaosdao.org/" target="_blank" rel="nofollow">ChaosDAO</a>于7月13日
+							<a href="https://twitter.com/ChaosDAO/status/1547252610578763782" target="_blank" rel="nofollow">庆祝了其成立一周年。</a>ChaosDAO始终以 "质量高于数量 "为宗旨，以汇集和连接业内最博学的人为目标。DAO将NFT集合
+							<a href="https://singular.app/collectibles/kusama/dac5c7f54029d0e73c-HXAI8" target="_blank" rel="nofollow">《Chaos-DAO Apes》</a> 用于成员访问和治理。截至10月24日，该系列成交额接近4K枚$KSM，地板价价为$109 KSM，最高成交价为179枚$KSM。目前有23位管理人员运行ChaosDAO，其中包括来自Polkadot和Kusama生态系统中其它著名项目的成员。
 						</p>
 					</div>
 				</div>
@@ -1489,10 +1481,10 @@
 					<div class="block-dao block-dao--astar" id="astar-degens">
 						<img src="../assets/images/report/dao/astar-degens.png" alt="Astar Degens" loading="lazy" width="100" height="100">
 						<h3>Astar Degens</h3>
-						<p class="description">As implied by its name,
-							<a href="http://astardegens.com/" target="_blank" rel="nofollow">Astar Degens</a> is a community-based VC DAO that puts focus on the Astar ecosystem. Managed by 10 members in the DAO council, by the end of September 2022, Astar Degens had
-							<a href="https://twitter.com/AstarDegens/status/1579965754484883456/photo/1" target="_blank" rel="nofollow">received</a> more than 1M ASTR in their dApp Staking rewards and over 200K ASTR as NFT royalties on tofuNFT. To gain voting rights in the DAO, one needs to own at least one out of 10,000 Astar Degen Apes NFTs. The
-							<a href="https://tofunft.com/collection/astardegens/items" target="_blank" rel="nofollow">collection</a> had a cumulative trading volume of 9.6M ASTR and a floor price of 1,800 ASTR on October 24.
+						<p class="description">正如它的名字所暗示的，
+							<a href="http://astardegens.com/" target="_blank" rel="nofollow">Astar Degens</a>是一个基于社区的，专注于Astar生态系统的 VC DAO，由DAO理事会的10名成员管理。截止2022年9月底，Astar Degens
+							<a href="https://twitter.com/AstarDegens/status/1579965754484883456/photo/1" target="_blank" rel="nofollow">已经收到</a>了超过100万枚来自dApp 质押奖励的$ASTR，和超过20万枚作为tofuNFT上NFT版税使用的$ASTR。要想获得DAO的投票权，需要至少拥有10000个Astar Degen Apes NFT中的一个,
+							<a href="https://tofunft.com/collection/astardegens/items" target="_blank" rel="nofollow">该系列在</a>10月24日的累计交易额为960万枚$ASTR，地板价为1800枚$ASTR。
 						</p>
 					</div>
 				</div>
@@ -1500,8 +1492,8 @@
 					<div class="block-dao block-dao--glmr-apes" id="glmr-apes">
 						<img src="../assets/images/report/dao/glmr-apes.png" alt="GLMR Apes" loading="lazy" width="100" height="100">
 						<h3>GLMR Apes</h3>
-						<p class="description">Coincidentally, all three DAOs discussed so far use the ape imagery for their governing NFTs. As mentioned above in the GameFi section,
-							<a href="https://www.glmrapes.com/" target="_blank" rel="nofollow">GLMR Apes</a> NFT collection containing 1001 items is the first ever sold out on Moonbeam Network, and is still topping the chart in the secondary market. The governing Jungle Council consists of 10 members with half in the core team and half classified as Wise Apes.
+						<p class="description">10月24日的累计交易额为960万枚$ASTR，地板价为1800枚$ASTR。
+							<a href="https://www.glmrapes.com/" target="_blank" rel="nofollow">《GLMR Apes NFT》</a>系列是Moonbeam Network上第一个售罄的NFT系列，并且仍然霸占二级市场榜首。其治理团队Jungle 委员会由10名成员组成，来自核心团队和Wise Apes的成员各占一半。
 						</p>
 					</div>
 				</div>
@@ -1509,9 +1501,9 @@
 					<div class="block-dao block-dao--tf-alpha" id="tf-alpha">
 						<img src="../assets/images/report/dao/tf-alpha.png" alt="Take Flight Alpha" loading="lazy" width="100" height="100">
 						<h3>Take Flight Alpha</h3>
-						<p class="description">Founded in January 2022, the 30-member
-							<a href="https://tfalpha.xyz/#" target="_blank" rel="nofollow">TFA DAO</a> focuses on running a collator node for Moonbeam Network and building a community of over 600 participants. They are currently retaining approximately 4.5M GLMR in staked value for their collator node which returns a 29% APY to delegators. In May 2022, TFA DAO introduced the
-							<a href="https://moonpets.app/" target="_blank" rel="nofollow">MooonPets NFT</a> collection made up of 5000 items in order to gamify participation. In Q3, the reported retention rate of MoonPets holders was about 60%.
+						<p class="description">
+							<a href="https://tfalpha.xyz/#" target="_blank" rel="nofollow">TFA DAO</a>成立于2022年1月，由30名成员组成，专注于为Moonbeam Network运行一个整理器节点和建立一个由600多名参与者组成的社区。他们目前为其整理器节点保留了大约450万枚质押的$GLMR，以支付代理商29%的APY。2022年5月，TFA DAO推出了包含5000个物件的
+							<a href="https://moonpets.app/" target="_blank" rel="nofollow">MooonPets NFT</a> 系列，以实现参与游戏化。据报道，第三季度，MoonPets持有人的保留率约为60%。
 						</p>
 					</div>
 				</div>
@@ -1535,7 +1527,7 @@
 			<div class="section-content">
 				<div class="block-text" id="web3-wallet">
 					<h3 class="heading">Wallet</h3>
-					<div class="text">The Web3 discussion will be insufficient without non-custodial wallets. Similar to Google or Facebook sign-in to Web2 apps, the Web3 wallet is effectively the gateway and the first touchpoint for users to step into the Web3 world via DApps. In the Polkadot and Kusama ecosystem, wallets can be divided into three types: legacy wallets, multi-chain wallets and native wallets.</div>
+					<div class="text">如果没有非托管钱包，那么对Web3的讨论将是不充足的。与Google或Facebook登录到Web2应用程序类似，Web3钱包实际上是用户通过DApps进入Web3世界的有效网关和第一接触点。在Polkadot和Kusama生态系统中，钱包可以分为三种类型：旧有钱包（Legacy Wallets）、多链钱包和原生钱包。</div>
 				</div>
 				<div class="block-report-table table--web3-wallet-compare">
 					<div class="block-chart-blur">
@@ -1547,21 +1539,21 @@
 							<table class="block-table-widget js-data-table">
 								<thead>
 								<tr>
-									<th>Types</th>
-									<th>Legacy Wallets</th>
-									<th>Multi-chain Wallets</th>
-									<th>Native Wallets</th>
+									<th>类型</th>
+									<th>旧有钱包</th>
+									<th>多链钱包</th>
+									<th>原生钱包</th>
 								</tr>
 								</thead>
 								<tbody>
 								<tr>
-									<td>Examples</td>
+									<td>例子</td>
 									<td>Polkadot {.js}, Fearless Wallet, Polkawallet</td>
 									<td>Enkrypt, Math Wallet, Rabby</td>
 									<td>SubWallet, Nova Wallet, Talisman</td>
 								</tr>
 								<tr>
-									<td>Substrate compatibility</td>
+									<td>Substrate兼容</td>
 									<td>
 										<svg>
 											<use xlink:href="#symbol-circle-check"></use>
@@ -1579,7 +1571,7 @@
 									</td>
 								</tr>
 								<tr>
-									<td>EVM compatibility</td>
+									<td>EVM兼容</td>
 									<td>
 										<svg>
 											<use xlink:href="#symbol-circle-x"></use>
@@ -1597,7 +1589,7 @@
 									</td>
 								</tr>
 								<tr>
-									<td>User-friendly UX/UI</td>
+									<td>用户友好的UI / UX</td>
 									<td>
 										<svg>
 											<use xlink:href="#symbol-circle-x"></use>
@@ -1615,7 +1607,7 @@
 									</td>
 								</tr>
 								<tr>
-									<td>Substrate-specific features</td>
+									<td>Substrate特定特性</td>
 									<td>
 										<svg>
 											<use xlink:href="#symbol-circle-check"></use>
@@ -1638,11 +1630,11 @@
 					</div>
 				</div>
 				<div class="block-text">
-					<div class="text">The comparison table clearly shows how native wallets are outperforming both legacy and multi-chain wallets, especially in terms of user-friendly UX/UI and Substrate-specific features such as crowdloan view, staking, XCM transfers and light clients. The wallet competition in the Polkadot and Kusama ecosystem, therefore, has largely fallen into the hands of SubWallet, Nova Wallet and Talisman. While Nova Wallet operates as a mobile application and Talisman runs a browser extension, SubWallet is the first to launch both browser extension and mobile application.</div>
+					<div class="text">对比表清楚地展示了原生钱包是如何胜过旧有钱包和多链钱包的，特别是在用户友好的UX/UI和Substrate特定性能方面，如众贷视图、质押、XCM转账和轻客户端。因此，Polkadot和Kusama生态系统中的钱包竞争，主要落在了SubWallet、Nova Wallet和Talisman手中。虽然Nova Wallet以移动应用程序的形式运行，Talisman以浏览器扩展的形式运行，但SubWallet第一个同时推出浏览器扩展版本和移动应用程序版本的钱包。</div>
 				</div>
 				<div class="block-text" style="--block-top-spacing: 88px;" id="web3-socialfi">
 					<h3 class="heading">SocialFi</h3>
-					<div class="text">The only decentralized social media platform Subsocial continued to develop in Q3, with a total of 1,474 posts and 395 spaces created in the course of three months. By October 25, there had been cumulatively almost 25K posts and more than 10K spaces created on Subsocial app. To further incentivize users and expand utilities in the Subsocial ecosystem, the team <a href="https://twitter.com/Spacers_NFT/status/1578370733587460096" target="_blank" rel="nofollow">launched Spacers</a>, an NFT collection with 10,000 equippable robots on RMRK. These NFTs act as VIP tickets that will enable premium features on Subsocial, such as free energy on Subsocial, free .spacer Dotsama Domain and increased post visibility.</div>
+					<div class="text">唯一的去中心化社交媒体平台Subsocial在第三季度继续发展，在三个月的时间里共创建了1474个帖子和395个空间。截至10月25日，Subsocial应用程序上累计创建了近2.5万个帖子和超过1万个空间。为进一步激励用户并扩大Subsocial生态系统的效用，该团队推出了<a href="https://twitter.com/Spacers_NFT/status/1578370733587460096" target="_blank" rel="nofollow">《Spacers》 </a>—— 一个在RMRK上有10000个可装备机器人的NFT系列。这些NFTs将作为VIP门票，可开启Subsocial上的高级功能，如Subsocial上的免费能量，免费 Dotsama域名.spacer 和增加帖子知名度。</div>
 				</div>
 				<div class="block-report-chart">
 					<div class="block-chart-blur">
@@ -1656,13 +1648,13 @@
 						</div>
 						<div class="block-chart-footer">
 							<div class="block-chart-source">
-								<span>Source: Subsocial Statistics</span>
+								<span>来源: Subsocial Statistics</span>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="block-text">
-					<div class="text">Q3 2022 also witnessed the emergence of another video-focused SocialFi platform: Joystream. Seemingly the Web3 version of Youtube where each video is an NFT, Joystream recorded slight growth in Q3; the total number of videos increased 7.70% while total users only grew 9.20% compared to the start of the quarter. Projects in the SocialFi segment in the Polkadot and Kusama ecosystem need to boost activities more aggressively or else they will trail behind competitors in other ecosystems.</div>
+					<div class="text">2022年第三季度还出现了另一个专注于视频的SocialFi平台：Joystream，它就像是Youtube的Web3版本，每个视频都是一个NFT。Joystream在第三季度录得轻微增长 —— 视频总数增加了7.7%，而用户总数与本季度初相比只增长了9.20%。Polkadot和Kusama生态系统中SocialFi板块的项目需要更积极地开办活动，否则它们将落后于其他生态系统中的竞争对手。</div>
 				</div>
 				<div class="block-report-chart">
 					<div class="block-chart-blur">
@@ -1670,21 +1662,21 @@
 						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-2"/>
 					</div>
 					<div class="block-content">
-						<h3 class="block-chart-heading">Joystream Cumulative Activities Q3 2022</h3>
+						<h3 class="block-chart-heading">Joystream 2022年第三季度累计活跃度 Cucumulative（左边的单词是不是错了）</h3>
 						<div class="block-chart-body">
 							<div class="block-chart" data-chart-name="joystream-cumulative-activities"></div>
 						</div>
 						<div class="block-chart-footer">
 							<div class="block-chart-source">
-								<span>Source: Joystream Dashboard</span>
+								<span>来源: Joystream Dashboard</span>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="block-text block-text-justify-center" style="--block-maxw:970px; --block-bottom-spacing: 60px;" id="web3-bridge">
-					<h3 class="heading">Bridge</h3>
+					<h3 class="heading">桥</h3>
 					<div class="text-wrap">
-						<div class="text">The rapid expansion of the Web3 universe has led to a booming demand in bridges that allow communication and asset transfer among different blockchains. In the Polkadot and Kusama ecosystem, the <a href="https://wiki.polkadot.network/docs/learn-xcm#cross-consensus-protocols-xcmp-vmp-hrmp" target="_blank" rel="nofollow">XCMP protocol</a> enables seamless interactions among layer-1 chains via XCM format, but a bridge is still needed at the moment if a Polkadot or Kusama parachain wants to reach out to other ecosystems. Below are the list of prominent bridges that have been actively operating in the Polkadot and Kusama ecosystem. Note that all bridges are two-way.</div>
+						<div class="text">Web3宇宙的快速扩张带来了对桥的蓬勃需求，这些桥允许不同区块链之间的通信和资产转移。在Polkadot和Kusama生态系统中，<a href="https://wiki.polkadot.network/docs/learn-xcm#cross-consensus-protocols-xcmp-vmp-hrmp" target="_blank" rel="nofollow">XCMP协议</a> 通过XCM格式实现了Layer-1链之间的无缝交互，但如果Polkadot或Kusama的平行链想要链接到其他生态系统，那么，在现阶段，桥仍被需要。下图罗列了在Polkadot和Kusama生态系统中运行活跃的且有知名度的桥。请注意，所有桥都是双向的。</div>
 					</div>
 				</div>
 				<div class="block-bridge">
@@ -1751,11 +1743,11 @@
 			<div class="section-content">
 				<div class="section-header">
 					<div class="section-header-inner">
-						<h2 class="section-top-title">Closing Thoughts</h2>
+						<h2 class="section-top-title">结束感言</h2>
 						<div class="section-description-wrap">
 							<div class="section-description">
-								<p>On October 22, Polkadot and Parity co-founder Gavin Wood <a href="https://www.parity.io/blog/parity-leadership-update/" target="_blank" rel="nofollow">announced</a> his stepping down from the CEO position of Parity Technologies to take on the title of Chief Architect. In place of him, Parity co-founder and previously Chief Commercial Officer Björn Wagner has become the new CEO.</p>
-								<p>This move signaled a positive and promising change of growth direction for Polkadot, as more attention will be paid to ecosystem development and growth expansion that targets end users. In the next months, more events like <a href="https://www.dotinvietnam.com/" target="_blank" rel="nofollow">DOTinVietnam</a>, the first official Polkadot meetup in Vietnam co-organized by SubWallet and other leading projects in the ecosystem that attracted more than 200 developers and investors, will happen across the globe and on a much larger scale. Polkadot’s explosion, therefore, is only a matter of time.
+								<p>10月22日，Polkadot和Parity联合创始人Gavin Wood<a href="https://www.parity.io/blog/parity-leadership-update/" target="_blank" rel="nofollow">宣布</a>辞去Parity Technologies的首席执行官职务，接任首席架构师一职。取而代之的是Parity联合创始人、前首席商务官Björn Wagner成为新的首席执行官。</p>
+								<p>辞去Parity Technologies的首席执行官职务，接任首席架构师一职。取而代之的是Parity联合创始人、前首席商务官Björn Wagner成为新的首席执行官。<a href="https://www.dotinvietnam.com/" target="_blank" rel="nofollow">DOTinVietnam</a>的活动将在全球范围内举行且规模更大。DOTinVietnam是由SubWallet和该生态系统中的其他领先项目，在越南共同组织的第一次Polkadot官方聚会，吸引了200多名开发者和投资者。因此，Polkadot的爆发只是时间问题。
 								</p>
 							</div>
 						</div>
@@ -1798,7 +1790,7 @@
 		<div class="container">
 			<div class="section-header">
 				<div class="section-header-inner">
-					<h2 class="section-top-title">Get Started With Polkadot</h2>
+					<h2 class="section-top-title">从Polkadot 开始吧</h2>
 				</div>
 			</div>
 			<div class="section-content">
@@ -1807,8 +1799,8 @@
 						<img loading="lazy" src="../assets/images/report/blog/post-subwallet.jpg" alt="SubWallet" width="540" height="345"/>
 					</div>
 					<div class="post-info">
-						<a href="https://subwallet.app/" target="_blank" rel="nofollow"><mark>SubWallet</mark></a>
-						is a user-friendly Web3 Multiverse Gateway for the Polkadot and Kusama ecosystem. Available both as a mobile app and a browser extension, SubWallet allows you to easily send & receive assets, manage your portfolio, handle NFT assets, track crowdloan activities and manage staking rewards. Using SubWallet means that you have the simplest and most secure way to connect to a wide range of blockchain-based applications in the Polkadot and Kusama ecosystem, be it Substrate or EVM-compatible DApps. You can use SubWallet with cold wallets and QR-signers and keep your assets safe.
+						<mark>SubWallet</mark>
+						SubWallet是Polkadot和Kusama生态系统中的用户友好型Web3多元宇宙网关。SubWallet既可作为移动应用程序，也可作为浏览器扩展程序，以允许您轻松地发送和接收资产、管理投资组合、处理NFT资产、跟踪众贷活动和管理质押奖励。使用SubWallet意味着你可以以最简单和最安全的方式，来连接到Polkadot和Kusama生态系统中那些多种多样的基于区块链的应用程序 ——既兼容Substrate兼容也兼容EVM的DApps。你也可以将SubWallet与冷钱包和QR-signers一起使用，以更进一步地保证你的资产安全。
 					</div>
 				</div>
 				<div class="block-report-post">
@@ -1817,8 +1809,8 @@
 						<img loading="lazy" src="../assets/images/report/blog/post-moonbeam.jpg" alt="Moonbeam" width="540" height="345"/>
 					</div>
 					<div class="post-info">
-						<a href="https://moonbeam.network/" target="_blank" rel="nofollow"><mark>Moonbeam</mark></a>
-						is an Ethereum-compatible smart contract platform on the Polkadot network that makes it easy to build natively interoperable applications. This Ethereum compatibility allows developers to deploy existing Solidity smart contracts and DApp frontends to Moonbeam with minimal changes. Following Moonriver’s tremendous success on Kusama as the most active deployment destination for over 80 DApps, Moonbeam benefits from the shared security of the Polkadot relay chain and integrations with other chains that are connected to Polkadot.
+						<mark>Moonbeam</mark>
+						是Polkadot网络上兼容Ethereum的智能合约平台，可以轻松构建原生的可互操作的应用程序。这种以太坊兼容性，使开发人员能够以最小的改动，将现有的Solidity智能合约和DApp前端部署到Moonbeam上面。继Moonriver在Kusama上取得巨大成功，即成为80多个DApps最活跃的部署目的地之后，Moonbeam既受益于Polkadot中继链的共享安全，同时又集成了其他与Polkadot相连的链。
 					</div>
 				</div>
 				<div class="block-report-post">
@@ -1827,13 +1819,13 @@
 						<img loading="lazy" src="../assets/images/report/blog/post-bit-country.jpg" alt="Bit.Country" width="540" height="325"/>
 					</div>
 					<div class="post-info">
-						<a href="https://bit.country/" target="_blank" rel="nofollow"><mark>Bit.Country</mark></a>
-						is a decentralized application that gives users the tools to create a Metaverse project in 12 seconds. Any person, project, brand, business, influencer, or community can easily use Bit.Country to experience or build interactive immersive digital worlds where users are consistently rewarded with tokens or NFTs in marketing campaigns. Digital worlds are built on virtual land that can be subdivided to co-build with a community by placing voxels, 3D assets/NFTs and props. Bit.Country is built on substrate based Metaverse.Network blockchain which is a parachain to Kusama (Polkadot ecosystem). The universal network currency is $NEER while the in-game currency is $BIT.
+						<mark>Bit.Country</mark>
+						是一个去中心化的应用程序，它为用户提供了在12秒内创建Metaverse项目的工具。任何个人、项目、品牌、企业、影响者或社区都可以轻松地使用Bit.Country来体验或建立互动的沉浸式数字世界，用户可在它们的营销活动中持续获得代币或NFT奖励。数字世界建立在虚拟土地上，可以通过放置体素、3D资产/NFTs和道具来与社区共同建设。Bit.Country建立在Kusama（Polkadot生态系统）的一条基于Substrate构建的平行链之上——Metaverse.Network区块链，其通用网络货币是$NEER，而游戏内货币是$BIT。
 					</div>
 				</div>
 			</div>
 			<div class="section-call-to-actions">
-				<h6>Stay tuned for more project features in the next reports!</h6>
+				<h6>请继续关注下一期报告中的更多项目特性!</h6>
 				<a href="https://twitter.com/dotinsights_xyz" target="_blank" rel="nofollow" class="button">
 					<span class="button-icon">
 						<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1855,7 +1847,7 @@
 					</h2>
 					<p>
 						<mark>dotinsights</mark>
-						is a research-focused initiative by SubWallet, the leading non-custodial wallet for Polkadot and Kusama ecosystem. By providing the most comprehensive and up-to-date Polkadot & Kusama Ecosystem Map with the support of Parity Technologies along with data-driven Polkadot Deep Dive reports on a quarterly basis, our vision at <mark>dotinsights</mark> is to become the official and trusted information and research hub of Polkadot.
+						是SubWallet的一项以研究为重点的举措，SubWallet是Polkadot和Kusama生态系统的领先非托管钱包。在Parity Technologies的支持下，SubWallet通过提供数据驱动的Polkadot 深度研报告和最全面、最新的Polkadot & Kusama生态系统图谱，来助力我们基于dotinsights的愿景——成为Polkadot官方的和值得信赖的信息和研究中心。
 					</p>
 				</div>
 			</div>
@@ -1870,7 +1862,7 @@
 			<div class="container">
 				<div class="section-header">
 					<div class="section-header-inner">
-						<h3 class="section-top-title">Contributors</h3>
+						<h3 class="section-top-title">贡献者</h3>
 					</div>
 				</div>
 				<div class="grid-contributors">
@@ -1884,7 +1876,7 @@
 							</div>
 							<div class="info">
 								<h4 class="name">DJ Hà Trang</h4>
-								<div class="position">Lead Researcher</div>
+								<div class="position">首席研究员</div>
 							</div>
 						</div>
 					</div>
@@ -1898,7 +1890,7 @@
 							</div>
 							<div class="info">
 								<h4 class="name">Alex Vu</h4>
-								<div class="position">Data Engineer</div>
+								<div class="position">数据工程师</div>
 							</div>
 						</div>
 					</div>
@@ -1912,7 +1904,7 @@
 							</div>
 							<div class="info">
 								<h4 class="name">Le Bui</h4>
-								<div class="position">Web Designer</div>
+								<div class="position">网页设计师</div>
 							</div>
 						</div>
 					</div>
@@ -1926,7 +1918,7 @@
 							</div>
 							<div class="info">
 								<h4 class="name">Dung Nguyen</h4>
-								<div class="position">Frontend Developer</div>
+								<div class="position">前端开发工程师</div>
 							</div>
 						</div>
 					</div>
@@ -1940,7 +1932,7 @@
 							</div>
 							<div class="info">
 								<h4 class="name">Hieu Dao</h4>
-								<div class="position">Co-founder<br/>& Head of Product
+								<div class="position">联合创始人<br/>兼首席执行官
 								</div>
 							</div>
 						</div>
@@ -1955,7 +1947,7 @@
 							</div>
 							<div class="info">
 								<h4 class="name">Frankie Kao</h4>
-								<div class="position">Co-founder<br/>& Creative Director
+								<div class="position">联合创始人<br/>兼创意总监
 								</div>
 							</div>
 						</div>
@@ -1970,7 +1962,7 @@
 							</div>
 							<div class="info">
 								<h4 class="name">Thony</h4>
-								<div class="position">Co-founder<br/>& Head of Strategy
+								<div class="position">联合创始人<br/>兼战略主管
 								</div>
 							</div>
 						</div>
@@ -1985,8 +1977,8 @@
 							</div>
 							<div class="info">
 								<h4 class="name">Ryan Dinh</h4>
-								<div class="position">Business
-									<br/>Development Manager
+								<div class="position">业务
+									<br/>发展经理
 								</div>
 							</div>
 						</div>
@@ -2001,7 +1993,7 @@
 							</div>
 							<div class="info">
 								<h4 class="name">Kate Ha</h4>
-								<div class="position">Growth Lead</div>
+								<div class="position">增长主管</div>
 							</div>
 						</div>
 					</div>
@@ -2015,7 +2007,7 @@
 							</div>
 							<div class="info">
 								<h4 class="name">Emily Nguyen</h4>
-								<div class="position">Growth Executive | Vietnamese Translator</div>
+								<div class="position">增长执行官</div>
 							</div>
 						</div>
 					</div>
@@ -2029,7 +2021,7 @@
 							</div>
 							<div class="info">
 								<h4 class="name">Mabel Nguyen</h4>
-								<div class="position">BD Executive | Vietnamese Translator</div>
+								<div class="position">业务发展主管</div>
 							</div>
 						</div>
 					</div>
@@ -2045,7 +2037,7 @@
 								<h4 class="name">Marco Da Rocha
 									<small>(Pitcoin)</small>
 								</h4>
-								<div class="position">Portuguese Translator</div>
+								<div class="position">葡萄牙语翻译</div>
 							</div>
 						</div>
 					</div>
@@ -2059,7 +2051,7 @@
 							</div>
 							<div class="info">
 								<h4 class="name">Eunice Feng</h4>
-								<div class="position">Chinese Translator</div>
+								<div class="position">中文翻译</div>
 							</div>
 						</div>
 					</div>
@@ -2073,7 +2065,7 @@
 							</div>
 							<div class="info">
 								<h4 class="name">SrSlayer</h4>
-								<div class="position">Spanish Translator</div>
+								<div class="position">西班牙语翻译</div>
 							</div>
 						</div>
 					</div>
@@ -2087,7 +2079,7 @@
 							</div>
 							<div class="info">
 								<h4 class="name">Rudy Wicaksono</h4>
-								<div class="position">Indonesian Translator</div>
+								<div class="position">印尼语翻译</div>
 							</div>
 						</div>
 					</div>
@@ -2101,7 +2093,7 @@
 							</div>
 							<div class="info">
 								<h4 class="name">Sang-hyun Rhee</h4>
-								<div class="position">Korean Translator</div>
+								<div class="position">韩语翻译</div>
 							</div>
 						</div>
 					</div>
@@ -2117,9 +2109,9 @@
 					<div class="col-lg-4">
 						<div class="section-header section-header-beside">
 							<div class="section-header-inner">
-								<h3 class="section-top-title">Friends</h3>
+								<h3 class="section-top-title">合作方</h3>
 								<div class="section-description-wrap">
-									<div class="section-description">We would like to express our sincere gratitude to friends who have supported us and provided data so that we can complete this report.</div>
+									<div class="section-description">感谢支持我们的朋友，感谢他们提供的数据，让我们能够完成这份报告。</div>
 								</div>
 							</div>
 						</div>
@@ -2296,20 +2288,20 @@
 			<div class="section-description-wrap">
 				<div class="section-description">
 					<p>
-						<mark>Disclaimer:</mark>
-						The views expressed here are those of SubWallet and dotinsights. The data in here are acquired from third-party sources, including data aggregator platforms and team projects. While taken from sources believed to be reliable, SubWallet and dotinsights have not independently verified such information and makes no representations about the enduring accuracy of the information or its appropriateness for a given situation.
+						<mark>免责声明：</mark>
+						本文仅代表SubWallet的观点。这里的数据来源于第三方，包括数据聚合平台和团队项目。虽然这些信息的来源被认为是可靠的，但SubWallet并未独立核实这些信息，也未就这些信息的持久准确性或其特定情况的适当性作出任何陈述。
 					</p>
-					<p>This content is provided for informational purposes only, and should not be relied upon as legal, business, investment, or tax advice. You should consult your own advisers as to those matters.</p>
+					<p>本文仅供参考，不应作为法律、商业、投资或税务建议。关于这些事项，你应该咨询你的顾问。</p>
 				</div>
 			</div>
 			<div class="section-call-to-actions button-group">
-				<a href="https://bit.ly/dotinsight_projectsubmit" target="_blank" rel="nofollow" class="button">
+				<a href="https://l3gcvlmvu3b.typeform.com/to/Bezr3dBv" target="_blank" rel="nofollow" class="button">
 					<span class="button-icon">
 						<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M5.52755 5.98006C5.48498 5.87728 5.47385 5.76418 5.49556 5.65508C5.51727 5.54597 5.57086 5.44575 5.64954 5.36709L8.60266 2.41472C8.70815 2.30927 8.85121 2.25003 9.00037 2.25003C9.14953 2.25003 9.29258 2.30927 9.39807 2.41472L12.3512 5.36709C12.4299 5.44576 12.4835 5.54598 12.5052 5.6551C12.5269 5.76421 12.5157 5.87732 12.4732 5.9801C12.4306 6.08289 12.3585 6.17075 12.266 6.23256C12.1735 6.29437 12.0647 6.32737 11.9535 6.32737H9.56287V10.6875C9.56287 10.8367 9.5036 10.9798 9.39811 11.0852C9.29262 11.1907 9.14955 11.25 9.00037 11.25C8.85118 11.25 8.70811 11.1907 8.60262 11.0852C8.49713 10.9798 8.43787 10.8367 8.43787 10.6875V6.32737H6.04724C5.93598 6.32737 5.82721 6.29438 5.73471 6.23256C5.6422 6.17074 5.57011 6.08287 5.52755 5.98006V5.98006ZM15.1879 10.125C15.0387 10.125 14.8956 10.1843 14.7901 10.2898C14.6846 10.3952 14.6254 10.5383 14.6254 10.6875V14.625H3.37537V10.6875C3.37537 10.5383 3.3161 10.3952 3.21061 10.2898C3.10512 10.1843 2.96205 10.125 2.81287 10.125C2.66368 10.125 2.52061 10.1843 2.41512 10.2898C2.30963 10.3952 2.25037 10.5383 2.25037 10.6875V14.625C2.25071 14.9233 2.36934 15.2092 2.58025 15.4201C2.79115 15.631 3.0771 15.7497 3.37537 15.75H14.6254C14.9236 15.7497 15.2096 15.631 15.4205 15.4201C15.6314 15.2092 15.75 14.9233 15.7504 14.625V10.6875C15.7504 10.5383 15.6911 10.3952 15.5856 10.2898C15.4801 10.1843 15.337 10.125 15.1879 10.125V10.125Z" fill="white"/>
 						</svg>
 					</span>
-					<span class="button-text">Submit Your Project</span>
+					<span class="button-text">提交您的项目</span>
 				</a>
 				<a href="https://twitter.com/dotinsights_xyz" target="_blank" rel="nofollow" class="button">
 					<span class="button-icon">
@@ -2328,7 +2320,7 @@
 					by
 					<a href="https://www.subwallet.app/" target="_blank" rel="nofollow"><img loading="lazy" src="../assets/images/subwallet.png" alt="SubWallet" width="108" height="36"/></a>
 				</p>
-				<p>Ecosystem Map proudly supported by
+				<p>Ecosystem Map supported by
 					<a href="https://www.parity.io/" target="_blank" rel="nofollow"><img loading="lazy" src="../assets/images/parity.png" alt="Parity Technologies" width="82" height="30"/></a>
 				</p>
 			</div>
@@ -2371,36 +2363,36 @@
 					<a href="#ecosystem-map" class="scroll-to">Introducing The First Interactive Polkadot & Kusama Ecosystem Map</a>
 				</li>
 				<li>
-					<a href="#ecosystem-overview" class="scroll-to">Ecosystem Overview</a>
+					<a href="#ecosystem-overview" class="scroll-to">生态系统概览</a>
 					<ul>
 						<li>
-							<a href="#financial-status-dev-activity" class="scroll-to">Financial Status & Development Activity</a>
+							<a href="#financial-status-dev-activity" class="scroll-to">财务状况和开发活跃度</a>
 						</li>
 						<li>
-							<a href="#decentralization-security" class="scroll-to">Decentralization & Security</a>
+							<a href="#decentralization-security" class="scroll-to">去中心化与安全</a>
 						</li>
 						<li>
-							<a href="#parachain" class="scroll-to">Parachain</a>
+							<a href="#parachain" class="scroll-to">平行链</a>
 						</li>
 						<li>
-							<a href="#governance-grant" class="scroll-to">Governance & Grant</a>
+							<a href="#governance-grant" class="scroll-to">治理与资助</a>
 						</li>
 					</ul>
 				</li>
 				<li>
-					<a href="#defi-economy" class="scroll-to">The DeFi Economy</a>
+					<a href="#defi-economy" class="scroll-to">DeFi经济</a>
 					<ul>
 						<li>
 							<a href="#dex-amm" class="scroll-to">DEX (AMM)</a>
 						</li>
 						<li>
-							<a href="#lending-borrowing" class="scroll-to">Lending & Borrowing (Money Market)</a>
+							<a href="#lending-borrowing" class="scroll-to">借贷（货币市场</a>
 						</li>
 						<li>
-							<a href="#liquid-staking" class="scroll-to">Liquid Staking</a>
+							<a href="#liquid-staking" class="scroll-to">流动性质押</a>
 						</li>
 						<li>
-							<a href="#stablecoin" class="scroll-to">Stablecoin</a>
+							<a href="#stablecoin" class="scroll-to">稳定币</a>
 						</li>
 					</ul>
 				</li>
@@ -2408,13 +2400,13 @@
 					<a href="#nft" class="scroll-to">NFT</a>
 					<ul>
 						<li>
-							<a href="#nft-marketplace" class="scroll-to">NFT Marketplace</a>
+							<a href="#nft-marketplace" class="scroll-to">NFT市场</a>
 						</li>
 						<li>
 							<a href="#game-fi" class="scroll-to">GameFi</a>
 						</li>
 						<li>
-							<a href="#metaverse" class="scroll-to">Metaverse</a>
+							<a href="#metaverse" class="scroll-to">元宇宙</a>
 						</li>
 					</ul>
 				</li>
@@ -2439,30 +2431,30 @@
 					<a href="#web3" class="scroll-to">Web3</a>
 					<ul>
 						<li>
-							<a href="#web3-wallet" class="scroll-to">Wallet</a>
+							<a href="#web3-wallet" class="scroll-to">钱包</a>
 						</li>
 						<li>
 							<a href="#web3-socialfi" class="scroll-to">SocialFi</a>
 						</li>
 						<li>
-							<a href="#web3-bridge" class="scroll-to">Bridge</a>
+							<a href="#web3-bridge" class="scroll-to">桥</a>
 						</li>
 					</ul>
 				</li>
 				<li>
-					<a href="#closing-thoughts" class="scroll-to">Closing Thoughts</a>
+					<a href="#closing-thoughts" class="scroll-to">结束感言</a>
 				</li>
 				<li>
-					<a href="#get-started-with-polkadot" class="scroll-to">Get Started With Polkadot</a>
+					<a href="#get-started-with-polkadot" class="scroll-to">从Polkadot 开始吧</a>
 				</li>
 				<li>
 					<a href="#about-dotinsights" class="scroll-to">About dotinsights</a>
 				</li>
 				<li>
-					<a href="#contributors" class="scroll-to">Contributors</a>
+					<a href="#contributors" class="scroll-to">贡献者</a>
 				</li>
 				<li>
-					<a href="#friends" class="scroll-to">Friends</a>
+					<a href="#friends" class="scroll-to">合作方</a>
 				</li>
 			</ul>
 		</div>
@@ -2560,28 +2552,17 @@
 		</div>
 	</div>
 </div>-->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T4R8Y0C0JQ"></script>
-<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag() {
-		dataLayer.push( arguments );
-	}
-	gtag( 'js', new Date() );
-	gtag( 'config', 'G-T4R8Y0C0JQ' );
-</script>
 <script src="../assets/libs/jquery/jquery-3.6.0.min.js"></script>
-<script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!--<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>-->
 <script src="../assets/libs/firefly/jquery.firefly-0.7.js"></script>
 <script src="../assets/libs/datatable/jquery.dataTables.min.js"></script>
 <script src="../assets/libs/echarts/echarts.min.js"></script>
 <script src="../assets/libs/waypoints/jquery.waypoints.min.js"></script>
 <script src="../assets/libs/readmore/readmore.min.js"></script>
-<script src="../assets/js/modal.js"></script>
+<script src="../assets/js/modal.js?v=1.0"></script>
 <script src="./locate.js"></script>
-<script src="../assets/js/frontend.js"></script>
-<script src="../assets/js/reports.js"></script>
-<script src="../assets/js/wallet-manager.js"></script>
+<script src="../assets/js/frontend.js?v=1.0"></script>
+<script src="../assets/js/reports.js?v=1.0"></script>
+<script src="../assets/js/wallet-manager.js?v=1.0"></script>
 </body>
 </html>

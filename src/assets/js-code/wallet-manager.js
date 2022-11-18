@@ -297,7 +297,7 @@
 
 		$( document.body ).on( 'click', '.btn-logout-subwallet', logoutSubWallet );
 
-		var votingAvailableTime = Date.UTC( 2022, 10, 18, 12, 0, 0 );
+		var votingAvailableTime = Date.UTC( 2022, 10, 18, 23, 59, 59 );
 		var modalVoteComing = $( '#modal-vote-coming' );
 		$( document.body ).on( 'click', '.btn-vote', function( evt ) {
 			evt.preventDefault();
@@ -352,7 +352,7 @@
 									    url             = 'https://twitter.com/share?text={text}&amp;url={url}';
 
 									url = url.replace( '{text}', text );
-									url = url.replace( '{url}', location.origin );
+									url = url.replace( '{url}', location.origin + '/most-loved-projects' );
 
 									$shareButton.attr( 'href', encodeURI( url ) );
 

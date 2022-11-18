@@ -44,11 +44,33 @@
 			initSliders();
 			initGrids();
 			initModal();
+			handleNavigation();
 		} );
 
 		$( window ).on( 'load', function() {
 			initSectionEffectSnow();
 		} );
+
+		function handleNavigation() {
+			var $nav        = $( '#primary-menu' ),
+			    $navToggler = $( '#navbar-toggler' );
+
+			$navToggler.on( 'click', function( evt ) {
+				evt.preventDefault();
+
+				$nav.stop().slideToggle();
+			} );
+
+			$( document ).on( 'click', function( e ) {
+				if ( $( e.target ).hasClass( 'navbar-toggler' ) ) {
+					return;
+				}
+
+				if ( $( e.target ).closest( $nav ).length === 0 ) {
+					$nav.stop().slideUp();
+				}
+			} );
+		}
 
 		function initModal() {
 			if ( $.fn.dotinsightsModal ) {

@@ -114,7 +114,6 @@
 
 	.modal-content-wrap {
 		position: relative;
-		display: flex;
 		overflow-y: auto;
 		border-radius: var(--modal-rounded);
 		background: #232323;
@@ -126,24 +125,36 @@
 	}
 
 	.modal-content-inner {
-		flex-grow: 1;
 		padding: var(--modal-spacing);
 	}
 }
 
 .modal-subscribe {
+	--modal-left-content: 232px;
+	--modal-header-spacing: 26px;
+	--modal-spacing: 60px 30px;
+
+	.modal-content-header {
+		text-align: center;
+	}
+
+	.modal-content-inner {
+		margin-left: var(--modal-left-content);
+	}
+
 	.modal-content-left {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
 		--modal-content-left-h-gutter: 15px;
 		background: $secondary-color;
 		display: flex;
-		position: relative;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		text-align: center;
-		width: 232px;
-		max-width: 41%;
-		flex-shrink: 0;
+		width: var(--modal-left-content);
 		padding: 60px var(--modal-content-left-h-gutter);
 		z-index: 0;
 		overflow: hidden;
@@ -345,15 +356,6 @@
 	}
 }
 
-.modal-subscribe {
-	--modal-header-spacing: 26px;
-	--modal-spacing: 60px 30px;
-
-	.modal-content-header {
-		text-align: center;
-	}
-}
-
 .modal-first-vote-notice {
 	--modal-header-spacing: 49px;
 	--modal-spacing: 75px 40px 40px;
@@ -541,9 +543,17 @@
 		}
 
 		.modal-content-left {
+			position: relative;
+			top: auto;
+			left: auto;
+			bottom: auto;
 			width: 100%;
 			max-width: 100%;
 			min-height: 240px;
+		}
+
+		.modal-content-inner {
+			margin: 0;
 		}
 	}
 
