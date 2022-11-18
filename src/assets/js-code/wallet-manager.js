@@ -25,15 +25,8 @@
 
 		$( document.body ).on( 'click', '.btn-logout-subwallet', logoutSubWallet );
 
-		var votingAvailableTime = Date.UTC( 2022, 10, 18, 23, 59, 59 );
-		var modalVoteComing = $( '#modal-vote-coming' );
 		$( document.body ).on( 'click', '.btn-vote', function( evt ) {
 			evt.preventDefault();
-
-			if ( votingAvailableTime > Date.now() ) {
-				modalVoteComing.dotinsightsModal( 'open' );
-				return;
-			}
 
 			var $thisButton = $( this ),
 			    projectID   = $thisButton.data( 'project-id' );
