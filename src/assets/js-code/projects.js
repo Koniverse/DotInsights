@@ -187,7 +187,7 @@
 				for ( var catKey in array ) {
 					var groupCat = {
 						key: catKey,
-						name: array[ catKey ][ 0 ][ 'category' ],
+						name: 'uncategorized' === catKey ? 'Uncategorized' : array[ catKey ][ 0 ][ 'category' ],
 						projects: array[ catKey ]
 					};
 
