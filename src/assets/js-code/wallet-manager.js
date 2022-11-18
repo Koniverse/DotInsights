@@ -69,7 +69,7 @@
 									var $modalFirstVote = $( '#modal-first-vote-notice' ),
 									    $shareButton    = $modalFirstVote.find( '.btn-twitter-share' ),
 									    projectName     = $thisButton.closest( '.row-project' ).find( '.project-name' ).text(),
-									    text            = `I love ${projectName} so much I voted for this project on the @Polkadot and @Kusamanetwork Ecosystem Map by @dotinsights! What about you? Come vote for your favorite projects and earn a free NFT🎉`,
+									    text            = `I love ${projectName} so much I voted for this project on the @Polkadot and @Kusamanetwork Ecosystem Map by @dotinsights_xyz! What about you? Come vote for your favorite projects and earn a free NFT🎉`,
 									    url             = 'https://twitter.com/share?text={text}&amp;url={url}';
 
 									url = url.replace( '{text}', text );
