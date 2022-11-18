@@ -8,7 +8,7 @@
 						<a href="#" target="_blank" class="button button-right-icon btn-install-connect-wallet" id="btn-connect-subwallet">
 							<span class="button-text">SubWallet</span>
 						</a>
-					`),g(".btn-open-connect-wallet").find(".button-text span").text("Connect Wallet"),c.find(".modal-title").text("Connect Your Wallet");else{var a="https://subwallet.app/download.html";dotinsights.BrowserUtil.isFirefox&&(a="https://subwallet.app/download.html"),i.empty(),i.html(`
+					`),g(".btn-open-connect-wallet").find(".button-text span").text("Connect Wallet"),c.find(".modal-title").text("Connect Your Wallet");else{var a="https://bit.ly/3BGqFt1";dotinsights.BrowserUtil.isFirefox&&(a="https://mzl.la/3rQ0awW"),i.empty(),i.html(`
 					<a href="${a}" target="_blank" class="button button-right-icon btn-install-connect-wallet">
 						<span class="button-text">SubWallet</span>
 						<span class="button-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.0625 10.3135L12 14.2499L15.9375 10.3135" stroke="#66E1B6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 3.75V14.2472" stroke="#66E1B6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M20.25 14.25V19.5C20.25 19.6989 20.171 19.8897 20.0303 20.0303C19.8897 20.171 19.6989 20.25 19.5 20.25H4.5C4.30109 20.25 4.11032 20.171 3.96967 20.0303C3.82902 19.8897 3.75 19.6989 3.75 19.5V14.25" stroke="#66E1B6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
