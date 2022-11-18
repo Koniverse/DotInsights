@@ -26,7 +26,7 @@
     },
     {
       "name": "wallet-manager",
-      "bundle": true,
+      "bundle": false,
       "files": [
         "src/assets/js-code/wallet-manager.js"
       ]
