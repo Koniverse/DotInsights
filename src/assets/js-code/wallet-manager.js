@@ -2,7 +2,7 @@
 	function( $ ) {
 		'use strict';
 
-    const isFirefox = dotinsights.BrowserUtil.isFirefox;
+        const isFirefox = dotinsights.BrowserUtil.isFirefox;
 		const WALLETS = {
 			'subwallet': {
 				name: 'SubWallet',
@@ -39,7 +39,7 @@
 			currentAddress: null,
 			currentVoteAbility: false,
 			getSavedState: function() {
-				const savedState = JSON.parse( localStorage.getItem( STORE_STATE_KEY ) ) || {}
+				const savedState = JSON.parse( localStorage.getItem( STORE_STATE_KEY ) ) || {};
 
 				return {
 					currentWalletName: savedState.currentWalletName,
