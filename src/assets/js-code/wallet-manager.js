@@ -10,13 +10,8 @@
         provider: 'subwallet-js',
         logo: '',
         installUrl: isFirefox ? 'https://mzl.la/3rQ0awW' : 'https://bit.ly/3BGqFt1'
-      }, 'polkadot-js': {
-        name: 'Polkadot{.js} Extension',
-        type: 'substrate',
-        provider: 'polkadot-js',
-        logo: '',
-        installUrl: isFirefox ? 'https://mzl.la/3rQ0awW' : 'https://bit.ly/3BGqFt1'
-      }, 'subwallet-evm': {
+      },
+			'subwallet-evm': {
         name: 'SubWallet - EVM',
         type: 'evm',
         provider: 'SubWallet',
@@ -175,7 +170,6 @@
       },
       getSignMessage: async function (address) {
         const {message} = await dotinsights.requestUtils.sendPost(dotinsights.Helpers.getApiEndpointUrl('getMessage'), {address});
-        // Todo: check vote ability here
         walletUtils.saveState({currentSignMessage: message, currentVoteAbility: true})
       },
       signMessage: async function (signMessage) {
@@ -218,38 +212,61 @@
           return false
         }
       },
-      runTest(walletName) {
+			runTestOnLoadPage() {
         setTimeout(async function () {
-
-					// Check installations
-					Object.entries(walletUtils.supportedWallets).forEach(function ([walletKey, wallet]) {
-						console.log(wallet.name, walletUtils.isInstall(walletKey))
-					})
-
 					// Load saved state
           walletUtils.loadSavedState();
-					
+
           try {
+						// Auto connect with wallet is has connected before
             const isConnectedWithWallet = await walletUtils.isConnectedWithWallet();
             if (isConnectedWithWallet) {
               console.log('Enable existed wallet')
-              await walletUtils.enableWallet(walletUtils.currentWalletName);
+              // Connect with wallet
+							await walletUtils.enableWallet(walletUtils.currentWalletName);
 
-              if (walletName !== walletUtils.currentWalletName) {
-                await walletUtils.enableWallet(walletName);
-              }
+							// Get account list
+							await walletUtils.getAccounts();
+
+							// Display current account
+							await walletUtils.currentAddress
             } else {
-              console.log('Enable new wallet')
-              await walletUtils.enableWallet(walletName);
+              console.log('Not connect with wallet')
             }
           } catch (e) {
             console.error('Connect wallet error: ' + e.message)
           }
-
-          console.log(await walletUtils.signMessage('Abcde'))
-
-					console.log(walletUtils.getSavedState())
         }, 500)
+      },
+			runTestSelectWallet: function() {
+        // Open wallet list
+					const walletList = walletUtils.supportedWallets;
+					// Check installations
+					Object.entries(walletUtils.supportedWallets).forEach(function ([walletKey, wallet]) {
+						// Check install status
+						console.log(wallet.name, walletUtils.isInstall(walletKey))
+						// Check connect status
+						console.log(wallet.name, walletKey === walletUtils.currentWalletName)
+					})
+
+					// Select wallet
+					const walletName = 'subwallet';
+					walletUtils.enable(walletName)
+      },
+			runTestSelectAccount: async function() {
+        // Get account list
+				const accountList = await walletUtils.getAccounts();
+
+				// Select account 0
+				walletUtils.enableAccount(accountList[0].address)
+      },
+			runTestVoteProject: async function() {
+				// Select account 0
+				const voteSignature = await walletUtils.signVote('ProjectID')
+
+				// Send vote
+				// Create vote request with signature to the sever
+				console.log(voteSignature)
       }
     }
 
