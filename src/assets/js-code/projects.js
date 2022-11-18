@@ -191,7 +191,7 @@
 						projects: array[ catKey ]
 					};
 
-					groupCat.order = projectSortedCategories.hasOwnProperty( catKey ) ? projectSortedCategories[ catKey ] : 0;
+					groupCat.order = projectSortedCategories.hasOwnProperty( catKey ) ? projectSortedCategories[ catKey ] : 999;
 
 					results.push( groupCat );
 				}
