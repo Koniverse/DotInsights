@@ -3,279 +3,294 @@
 		'use strict';
 
     const isFirefox = dotinsights.BrowserUtil.isFirefox;
-    const WALLETS = {
-      'subwallet': {
-        name: 'SubWallet',
-        type: 'substrate',
-        provider: 'subwallet-js',
-        logo: '',
-        installUrl: isFirefox ? 'https://mzl.la/3rQ0awW' : 'https://bit.ly/3BGqFt1'
-      },
+		const WALLETS = {
+			'subwallet': {
+				name: 'SubWallet',
+				type: 'substrate',
+				provider: 'subwallet-js',
+				logo: '',
+				installUrl: isFirefox ? 'https://mzl.la/3rQ0awW' : 'https://bit.ly/3BGqFt1'
+			},
 			'subwallet-evm': {
-        name: 'SubWallet - EVM',
-        type: 'evm',
-        provider: 'SubWallet',
-        evmDetect: 'isSubWallet',
-        logo: '',
-        installUrl: isFirefox ? 'https://mzl.la/3rQ0awW' : 'https://bit.ly/3BGqFt1'
-      }
-      // , 'metamask': {
-      //   name: 'Metamask',
-      //   type: 'evm',
-      //   provider: 'ethereum',
-      //   evmDetect: 'isMetaMask',
-      //   logo: '',
-      //   installUrl: 'https://metamask.io/download/'
-      // }
-    }
+				name: 'SubWallet - EVM',
+				type: 'evm',
+				provider: 'SubWallet',
+				evmDetect: 'isSubWallet',
+				logo: '',
+				installUrl: isFirefox ? 'https://mzl.la/3rQ0awW' : 'https://bit.ly/3BGqFt1'
+			}
+			// , 'metamask': {
+			//   name: 'Metamask',
+			//   type: 'evm',
+			//   provider: 'ethereum',
+			//   evmDetect: 'isMetaMask',
+			//   logo: '',
+			//   installUrl: 'https://metamask.io/download/'
+			// }
+		};
 
-    const STORE_STATE_KEY = 'walletInfo'
+		const STORE_STATE_KEY = 'walletInfo';
 
+		const walletUtils = {
+			supportedWallets: WALLETS,
+			currentWallet: null,
+			currentWalletName: null,
+			currentWalletType: 'none',
+			currentAddress: null,
+			currentVoteAbility: false,
+			getSavedState: function() {
+				const savedState = JSON.parse( localStorage.getItem( STORE_STATE_KEY ) ) || {}
 
-    const walletUtils = {
-      supportedWallets: WALLETS,
-      currentWallet: null,
-      currentWalletName: null,
-      currentWalletType: 'none',
-      currentAddress: null,
-      currentVoteAbility: false,
-      getSavedState: function () {
-				const savedState = JSON.parse(localStorage.getItem(STORE_STATE_KEY)) || {}
-
-        return {
+				return {
 					currentWalletName: savedState.currentWalletName,
 					currentAddress: savedState.currentAddress,
 					currentSignMessage: savedState.currentSignMessage,
 					currentVoteAbility: savedState.currentVoteAbility,
 				}
-      },
-      saveState: function (newState) {
+			},
+			saveState: function( newState ) {
 				const oldState = walletUtils.getSavedState();
-        // Object.assign(walletUtils, newData); Remove because it not safe
-        if (newState.hasOwnProperty('currentWalletName')) {
-          walletUtils.currentWalletName = newState.currentWalletName;
+				// Object.assign(walletUtils, newData); Remove because it not safe.
+				if ( newState.hasOwnProperty( 'currentWalletName' ) ) {
+					walletUtils.currentWalletName = newState.currentWalletName;
 					oldState.currentWalletName = newState.currentWalletName;
-        }
-        if (newState.hasOwnProperty('currentAddress')) {
-          walletUtils.currentAddress = newState.currentAddress;
-          oldState.currentAddress = newState.currentAddress;
-        }
-        if (newState.hasOwnProperty('currentSignMessage')) {
-          walletUtils.currentSignMessage = newState.currentSignMessage;
-          oldState.currentSignMessage = newState.currentSignMessage;
-        }
-        if (newState.hasOwnProperty('currentVoteAbility')) {
-          walletUtils.currentVoteAbility = newState.currentVoteAbility;
-          oldState.currentVoteAbility = newState.currentVoteAbility;
-        }
-				localStorage.setItem(STORE_STATE_KEY, JSON.stringify(oldState));
-      },
-      loadSavedState: function () {
-        const savedData = walletUtils.getSavedState();
-        Object.assign(walletUtils, savedData);
-      },
-      getCurrentWallet: async function () {
-        walletUtils.loadSavedState()
-        if (walletUtils.currentWalletName && walletUtils.currentAddress) {
-          return await walletUtils.enableWallet(walletUtils.currentWalletName);
-        } else {
-          return undefined;
-        }
-      },
-      isInstall: function (walletName) {
-        return !!walletUtils.getWallet(walletName)
-      },
-      isConnectedWithWallet: async function () {
-        return !!(await dotinsights.walletUtils.getCurrentWallet())
-      },
-      getWallet: function (walletName) {
-        const walletData = walletUtils.supportedWallets[walletName]
-        if (!walletData) {
-          return undefined;
-        }
-        if (walletData.type === 'evm') {
-          if (window[walletData.provider] && window[walletData.provider][walletData.evmDetect]) {
-            return window[walletData.provider]
-          }
-        } else {
-          return window.injectedWeb3 && window.injectedWeb3[walletData.provider];
-        }
-      },
-      enableWallet: async function (walletName) {
-        const walletData = walletUtils.supportedWallets[walletName]
-        if (!walletData) {
-          throw new Error('Wallet is not support');
-        }
-
-        const walletObj = walletUtils.getWallet(walletName)
-
-				if (!walletObj) {
-          throw new Error('Wallet is not install');
-        }
-
-				const enableWallet = async function() {
-					if (walletData.type === 'evm') {
-              return walletObj.request({method: 'eth_requestAccounts'});
-            } else {
-              return walletObj.enable();
-            }
+				}
+				if ( newState.hasOwnProperty( 'currentAddress' ) ) {
+					walletUtils.currentAddress = newState.currentAddress;
+					oldState.currentAddress = newState.currentAddress;
+				}
+				if ( newState.hasOwnProperty( 'currentSignMessage' ) ) {
+					walletUtils.currentSignMessage = newState.currentSignMessage;
+					oldState.currentSignMessage = newState.currentSignMessage;
+				}
+				if ( newState.hasOwnProperty( 'currentVoteAbility' ) ) {
+					walletUtils.currentVoteAbility = newState.currentVoteAbility;
+					oldState.currentVoteAbility = newState.currentVoteAbility;
+				}
+				localStorage.setItem( STORE_STATE_KEY, JSON.stringify( oldState ) );
+			},
+			loadSavedState: function() {
+				const savedData = walletUtils.getSavedState();
+				Object.assign( walletUtils, savedData );
+			},
+			getCurrentWallet: async function() {
+				walletUtils.loadSavedState()
+				if ( walletUtils.currentWalletName && walletUtils.currentAddress ) {
+					return await walletUtils.enableWallet( walletUtils.currentWalletName );
+				} else {
+					return undefined;
+				}
+			},
+			isInstall: function( walletName ) {
+				return ! ! walletUtils.getWallet( walletName )
+			},
+			isConnectedWithWallet: async function() {
+				return ! ! (
+					await dotinsights.walletUtils.getCurrentWallet()
+				)
+			},
+			getWallet: function( walletName ) {
+				const walletData = walletUtils.supportedWallets[ walletName ]
+				if ( ! walletData ) {
+					return undefined;
+				}
+				if ( walletData.type === 'evm' ) {
+					if ( window[ walletData.provider ] && window[ walletData.provider ][ walletData.evmDetect ] ) {
+						return window[ walletData.provider ]
+					}
+				} else {
+					return window.injectedWeb3 && window.injectedWeb3[ walletData.provider ];
+				}
+			},
+			enableWallet: async function( walletName ) {
+				const walletData = walletUtils.supportedWallets[ walletName ];
+				if ( ! walletData ) {
+					throw new Error( 'Wallet is not support' );
 				}
 
-        return new Promise(function (resolve, reject) {
-					enableWallet()
-          .then(async (wallet) => {
-            walletUtils.currentWalletType = walletData.type;
-            if (walletData.type === 'evm') {
-              walletUtils.currentWallet = walletObj;
-            } else {
-              walletUtils.currentWallet = wallet;
-            }
+				const walletObj = walletUtils.getWallet( walletName );
+
+				if ( ! walletObj ) {
+					throw new Error( 'Wallet is not install' );
+				}
+
+				const enableWallet = async function() {
+					if ( walletData.type === 'evm' ) {
+						return walletObj.request( { method: 'eth_requestAccounts' } );
+					} else {
+						return walletObj.enable();
+					}
+				};
+
+				return new Promise( function( resolve, reject ) {
+					enableWallet().then( async ( wallet ) => {
+						walletUtils.currentWalletType = walletData.type;
+						if ( walletData.type === 'evm' ) {
+							walletUtils.currentWallet = walletObj;
+						} else {
+							walletUtils.currentWallet = wallet;
+						}
 
 						// Reset saved data
-            if (walletUtils.currentWalletName !== walletName) {
-              walletUtils.saveState({currentWalletName: walletName, currentAddress: undefined, currentSignMessage: undefined, currentVoteAbility: false})
-            }
+						if ( walletUtils.currentWalletName !== walletName ) {
+							walletUtils.saveState( {
+								currentWalletName: walletName,
+								currentAddress: undefined,
+								currentSignMessage: undefined,
+								currentVoteAbility: false
+							} )
+						}
 
 
-            const accounts = await walletUtils.getAccounts()
-            const addresses = accounts.map(a => a.address)
-            if (addresses.indexOf(walletUtils.currentAddress) < 0 && accounts[0] && accounts[0]['address']) {
-              walletUtils.enableAccount(accounts[0]['address'])
-              walletUtils.saveState({currentAddress: accounts[0]['address']})
-            }
+						const accounts = await walletUtils.getAccounts()
+						const addresses = accounts.map( a => a.address )
+						if ( addresses.indexOf( walletUtils.currentAddress ) < 0 && accounts[ 0 ] && accounts[ 0 ][ 'address' ] ) {
+							walletUtils.enableAccount( accounts[ 0 ][ 'address' ] )
+							walletUtils.saveState( { currentAddress: accounts[ 0 ][ 'address' ] } )
+						}
 
-            resolve(walletUtils.currentWallet);
-          })
-          .catch(() => {
-            alert('User cancel or reject connect to the wallet');
-						reject(new Error('User cancel or reject connect to the wallet'))
-          })
-				});
-      },
-      getAccounts: async function () {
-        if (!walletUtils.currentWallet) {
-          await walletUtils.getCurrentWallet();
-        }
-        if (walletUtils.currentWalletType === 'evm') {
-          const accounts = await walletUtils.currentWallet.request({method: 'eth_accounts'})
-          return accounts.map(account => ({address: account, name: account}))
-        } else {
-          return await walletUtils.currentWallet.accounts.get()
-        }
-      },
-      enableAccount: function (address) {
-        if (walletUtils.currentAddress !== address) {
-          walletUtils.saveState({currentAddress: address, currentSignMessage: undefined, currentVoteAbility: false})
-        }
-      },
-      getSignMessage: async function (address) {
-        const {message} = await dotinsights.requestUtils.sendPost(dotinsights.Helpers.getApiEndpointUrl('getMessage'), {address});
-        walletUtils.saveState({currentSignMessage: message, currentVoteAbility: true})
-      },
-      signMessage: async function (signMessage) {
-        if (!walletUtils.currentWallet && !walletUtils.currentAddress) {
-          throw new Error('Unable get current wallet or current account to sign message');
-        }
+						resolve( walletUtils.currentWallet );
+					} ).catch( () => {
+						alert( 'User cancel or reject connect to the wallet' );
+						reject( new Error( 'User cancel or reject connect to the wallet' ) )
+					} )
+				} );
+			},
+			getAccounts: async function() {
+				if ( ! walletUtils.currentWallet ) {
+					await walletUtils.getCurrentWallet();
+				}
+				if ( walletUtils.currentWalletType === 'evm' ) {
+					const accounts = await walletUtils.currentWallet.request( { method: 'eth_accounts' } )
+					return accounts.map( account => (
+						{
+							address: account,
+							name: account
+						}
+					) )
+				} else {
+					return await walletUtils.currentWallet.accounts.get()
+				}
+			},
+			enableAccount: function( address ) {
+				if ( walletUtils.currentAddress !== address ) {
+					walletUtils.saveState( {
+						currentAddress: address,
+						currentSignMessage: undefined,
+						currentVoteAbility: false
+					} )
+				}
+			},
+			getSignMessage: async function( address ) {
+				const { message } = await dotinsights.requestUtils.sendPost( dotinsights.Helpers.getApiEndpointUrl( 'getMessage' ), { address } );
+				walletUtils.saveState( {
+					currentSignMessage: message,
+					currentVoteAbility: true
+				} )
+			},
+			signMessage: async function( signMessage ) {
+				if ( ! walletUtils.currentWallet && ! walletUtils.currentAddress ) {
+					throw new Error( 'Unable get current wallet or current account to sign message' );
+				}
 
-        if (walletUtils.currentWalletType === 'evm') {
-          // Todo: Support this for MetaMask
-          // var Buffer = require('buffer/').Buffer; https://github.com/feross/buffer
-          // signMessage = `0x${Buffer.from(signMessage, 'utf8').toString('hex')}`
-          return await walletUtils.currentWallet.request({
-            method: 'personal_sign',
-            params: [signMessage, walletUtils.currentAddress]
-          })
-        } else {
-          return await walletUtils.currentWallet.signer.signRaw({
-            address: walletUtils.currentAddress,
-            data: signMessage
-          })
-        }
-      },
-      signVote: async function (projectID) {
-        try {
-          if (!walletUtils.currentWallet) {
-            await walletUtils.getCurrentWallet();
-          }
-          if (!walletUtils.currentSignMessage ||! walletUtils.currentVoteAbility) {
-            await walletUtils.getSignMessage(walletUtils.currentAddress);
-          }
+				if ( walletUtils.currentWalletType === 'evm' ) {
+					// Todo: Support this for MetaMask
+					// var Buffer = require('buffer/').Buffer; https://github.com/feross/buffer
+					// signMessage = `0x${Buffer.from(signMessage, 'utf8').toString('hex')}`
+					return await walletUtils.currentWallet.request( {
+						method: 'personal_sign',
+						params: [ signMessage, walletUtils.currentAddress ]
+					} )
+				} else {
+					return await walletUtils.currentWallet.signer.signRaw( {
+						address: walletUtils.currentAddress,
+						data: signMessage
+					} )
+				}
+			},
+			signVote: async function( projectID ) {
+				try {
+					if ( ! walletUtils.currentWallet ) {
+						await walletUtils.getCurrentWallet();
+					}
+					if ( ! walletUtils.currentSignMessage || ! walletUtils.currentVoteAbility ) {
+						await walletUtils.getSignMessage( walletUtils.currentAddress );
+					}
 
-          if (!walletUtils.currentVoteAbility) {
-            throw new Error('Unable to vote, required has balance on at least one chain in ecosystem');
-          }
+					if ( ! walletUtils.currentVoteAbility ) {
+						throw new Error( 'Unable to vote, required has balance on at least one chain in ecosystem' );
+					}
 
-          const signRs = await walletUtils.signMessage(walletUtils.currentSignMessage + '-' + projectID)
-          return signRs.signature
-        } catch (e) {
-          console.error(e);
-          return false
-        }
-      },
+					const signRs = await walletUtils.signMessage( walletUtils.currentSignMessage + '-' + projectID )
+					return signRs.signature
+				} catch ( e ) {
+					console.error( e );
+					return false
+				}
+			},
 			runTestOnLoadPage() {
-        setTimeout(async function () {
-					// Load saved state
-          walletUtils.loadSavedState();
+				setTimeout( async function() {
+					// Load saved state.
+					walletUtils.loadSavedState();
 
-          try {
-						// Auto connect with wallet is has connected before
-            const isConnectedWithWallet = await walletUtils.isConnectedWithWallet();
-            if (isConnectedWithWallet) {
-              console.log('Enable existed wallet')
-              // Connect with wallet
-							await walletUtils.enableWallet(walletUtils.currentWalletName);
+					try {
+						// Auto connect with wallet is has connected before.
+						const isConnectedWithWallet = await walletUtils.isConnectedWithWallet();
+						if ( isConnectedWithWallet ) {
+							console.log( 'Enable existed wallet' )
+							// Connect with wallet
+							await walletUtils.enableWallet( walletUtils.currentWalletName );
 
-							// Get account list
+							// Get account list.
 							await walletUtils.getAccounts();
 
-							// Display current account
+							// Display current account.
 							await walletUtils.currentAddress
-            } else {
-              console.log('Not connect with wallet')
-            }
-          } catch (e) {
-            console.error('Connect wallet error: ' + e.message)
-          }
-        }, 500)
-      },
+						} else {
+							console.log( 'Not connect with wallet' )
+						}
+					} catch ( e ) {
+						console.error( 'Connect wallet error: ' + e.message )
+					}
+				}, 500 )
+			},
 			runTestSelectWallet: function() {
-        // Open wallet list
-					const walletList = walletUtils.supportedWallets;
-					// Check installations
-					Object.entries(walletUtils.supportedWallets).forEach(function ([walletKey, wallet]) {
-						// Check install status
-						console.log(wallet.name, walletUtils.isInstall(walletKey))
-						// Check connect status
-						console.log(wallet.name, walletKey === walletUtils.currentWalletName)
-					})
+				// Open wallet list.
+				const walletList = walletUtils.supportedWallets;
+				// Check installations.
+				Object.entries( walletUtils.supportedWallets ).forEach( function( [ walletKey, wallet ] ) {
+					// Check install status.
+					console.log( wallet.name, walletUtils.isInstall( walletKey ) )
+					// Check connect status.
+					console.log( wallet.name, walletKey === walletUtils.currentWalletName )
+				} )
 
-					// Select wallet
-					const walletName = 'subwallet';
-					walletUtils.enable(walletName)
-      },
+				// Select wallet
+				const walletName = 'subwallet';
+				walletUtils.enable( walletName )
+			},
 			runTestSelectAccount: async function() {
-        // Get account list
+				// Get account list.
 				const accountList = await walletUtils.getAccounts();
 
 				// Select account 0
-				walletUtils.enableAccount(accountList[0].address)
-      },
+				walletUtils.enableAccount( accountList[ 0 ].address )
+			},
 			runTestVoteProject: async function() {
-				// Select account 0
-				const voteSignature = await walletUtils.signVote('ProjectID')
+				// Select account 0.
+				const voteSignature = await walletUtils.signVote( 'ProjectID' )
 
 				// Send vote
 				// Create vote request with signature to the sever
-				console.log(voteSignature)
-      }
-    }
-
+				console.log( voteSignature )
+			}
+		};
 
 		window.dotinsights = window.dotinsights || {};
-    dotinsights.walletUtils = walletUtils;
-    // dotinsights.walletUtils.runTest('subwallet-evm');
+		dotinsights.walletUtils = walletUtils;
+		// dotinsights.walletUtils.runTest('subwallet-evm');
 
-    dotinsights.VotedProjects = [];
+		dotinsights.VotedProjects = [];
 		var Helpers = dotinsights.Helpers;
 
 		const USER_LS_KEY = 'walletInfo';

@@ -317,27 +317,27 @@
 				break;
 		}
 
-    dotinsights.requestUtils = {
-			sendPost: async function (url, data) {
-        return new Promise((resolve, reject) => {
-          const xhr = new XMLHttpRequest();
-          xhr.open("POST", url);
+		dotinsights.requestUtils = {
+			sendPost: async function( url, data ) {
+				return new Promise( ( resolve, reject ) => {
+					const xhr = new XMLHttpRequest();
+					xhr.open( "POST", url );
 
-          xhr.setRequestHeader("Accept", "application/json");
-          xhr.setRequestHeader("Content-Type", "application/json");
+					xhr.setRequestHeader( "Accept", "application/json" );
+					xhr.setRequestHeader( "Content-Type", "application/json" );
 
-          xhr.onload = () => {
-            resolve(JSON.parse(xhr.responseText))
-          };
+					xhr.onload = () => {
+						resolve( JSON.parse( xhr.responseText ) )
+					};
 
-          try {
-            xhr.send(JSON.stringify(data));
-          } catch (e) {
-            console.error(e);
-            reject(e);
-          }
-        })
-      }
+					try {
+						xhr.send( JSON.stringify( data ) );
+					} catch ( e ) {
+						console.error( e );
+						reject( e );
+					}
+				} )
+			}
 		};
 	}( window, jQuery )
 );
