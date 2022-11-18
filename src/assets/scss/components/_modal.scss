@@ -231,13 +231,7 @@
 		position: static;
 	}
 
-	.button {
-		+ .button {
-			margin: 15px 0 0;
-		}
-	}
-
-	.btn-install-connect-wallet {
+	.button--wallet {
 		--mg-button-height: 72px;
 		--mg-button-rounded: 10px;
 		--mg-button-background: #151515;
@@ -254,7 +248,20 @@
 			content: '';
 			width: 48px;
 			height: 48px;
-			background: url(../images/sw-logo.png) no-repeat center;
+			background-size: cover !important;
+		}
+
+		&.wallet--subwallet,
+		&.wallet--subwallet-evm {
+			&:after {
+				background: url(../images/projects/subwallet.png) no-repeat center;
+			}
+		}
+
+		&.wallet--metamask {
+			&:after {
+				background: url(../images/projects/metamask.png) no-repeat center;
+			}
 		}
 
 		.button-icon {
@@ -271,6 +278,10 @@
 			span {
 				opacity: 1 !important;
 			}
+		}
+
+		+ .button--wallet {
+			margin: 15px 0 0;
 		}
 	}
 }
@@ -349,11 +360,13 @@
 	}
 }
 
-.btn-logout-subwallet-wrap {
+.btn-disconnect-wallet-wrap {
 	text-align: center;
 	margin: 25px 0 0;
 
 	.button {
+		--mg-button-background: #{$error-color};
+		--mg-button-border: #{$error-color};
 		min-width: 160px;
 	}
 }
@@ -421,7 +434,7 @@
 	text-align: center;
 
 	.modal-content-wrap {
-		border: 2px solid #f82613;
+		border: 2px solid $error-color;
 	}
 }
 
