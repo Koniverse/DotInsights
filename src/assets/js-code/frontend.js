@@ -49,6 +49,16 @@
 
 		$( window ).on( 'load', function() {
 			initSectionEffectSnow();
+
+			$body.addClass( 'loaded' );
+
+			setTimeout( function() {
+				var $loader = $( '#page-preloader' );
+
+				if ( $loader.length > 0 ) {
+					$loader.remove();
+				}
+			}, 2000 );
 		} );
 
 		function handleNavigation() {
