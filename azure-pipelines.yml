@@ -45,8 +45,6 @@ jobs:
         inline: |
           cd /home/ubuntu/DotInsights-FE-TEST
           git pull > /dev/null 2>&1
-          nvm use 12 > /dev/null 2>&1
-          git pull > /dev/null 2>&1
           yarn gulp production > /dev/null 2>&1
         readyTimeout: '20000'
     - task: PythonScript@0
