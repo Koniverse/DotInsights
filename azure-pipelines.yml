@@ -46,7 +46,7 @@ jobs:
           cd /home/ubuntu/DotInsights-FE-TEST/
           git reset --hard > /dev/null 2>&1
           git pull > /dev/null 2>&1
-          yarn gulp production > /dev/null 2>&1
+          yarn gulp production > /dev/null
         readyTimeout: '20000'
     - task: PythonScript@0
       inputs:
