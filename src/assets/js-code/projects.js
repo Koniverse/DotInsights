@@ -42,7 +42,7 @@
 			tooling: 240,
 			validator: 250,
 			fiat_on_ramp: 260,
-			uncategorized: 270,
+			uncategorized: 9999,
 		};
 
 		var $searchForm            = $( '#project-form-filter' ),

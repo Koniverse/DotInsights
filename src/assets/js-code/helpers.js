@@ -40,7 +40,7 @@
 		dotinsights.Helpers = {
 			getApiEndpointUrl: ( endpoint ) => {
 				if ( 'dotinsights.subwallet.app' === window.location.host ) {
-					return 'https://dot-insights-api.subwallet.app/api/%%endpoint%%'.replace( '%%endpoint%%', endpoint );
+					return 'https://dotinsights-be.subwallet.app/api/%%endpoint%%'.replace( '%%endpoint%%', endpoint );
 				}
 
 				return 'https://dotinsights-be-test.subwallet.app/api/%%endpoint%%'.replace( '%%endpoint%%', endpoint );
@@ -316,5 +316,28 @@
 				dotinsights.BrowserUtil.isSafari = true;
 				break;
 		}
+
+		dotinsights.requestUtils = {
+			sendPost: async function( url, data ) {
+				return new Promise( ( resolve, reject ) => {
+					const xhr = new XMLHttpRequest();
+					xhr.open( "POST", url );
+
+					xhr.setRequestHeader( "Accept", "application/json" );
+					xhr.setRequestHeader( "Content-Type", "application/json" );
+
+					xhr.onload = () => {
+						resolve( JSON.parse( xhr.responseText ) )
+					};
+
+					try {
+						xhr.send( JSON.stringify( data ) );
+					} catch ( e ) {
+						console.error( e );
+						reject( e );
+					}
+				} )
+			}
+		};
 	}( window, jQuery )
 );

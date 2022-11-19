@@ -119,6 +119,20 @@
 	}
 }
 
+.text-1-row {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 1; /* number of lines to show */
+	-webkit-box-orient: vertical;
+	word-break: break-all;
+
+	span,
+	a {
+		display: inline !important;
+	}
+}
+
 @include media-breakpoint-up(md) {
 	.hide-md-up {
 		display: none;

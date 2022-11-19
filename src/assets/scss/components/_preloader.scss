@@ -1,0 +1,32 @@
+.page-loading {
+	--preloader-color: #{$heading-color};
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 999999;
+	overflow: hidden;
+	transition: opacity .3s;
+	background: $background-1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&:after {
+		content: '';
+		display: block;
+		width: 80px;
+		height: 80px;
+		background: url('../images/logo/simple-logo.png') no-repeat center;
+		background-size: auto 100%;
+		animation: rotating 1s linear infinite !important;
+	}
+}
+
+body.loaded {
+	.page-loading {
+		opacity: 0;
+		pointer-events: none;
+	}
+}
