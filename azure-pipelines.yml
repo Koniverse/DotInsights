@@ -1,0 +1,77 @@
+# Starter pipeline
+
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- dotinsights-dev
+
+pool:
+  name: "demo"
+jobs:
+  - job: Job_1
+    displayName: Agent 1
+    pool: "demo"
+    steps:
+    - task: PythonScript@0
+      inputs:
+        scriptSource: 'inline'
+        pythonInterpreter: /Library/Frameworks/Python.framework/Versions/3.7/bin/python3
+        script: |
+          import requests #dependency
+          
+          url = "https://discord.com/api/webhooks/1043378904515235890/jblsnPli7C08ZLaxr-FabTZpXaOgSbKn-rQC2CUMsV3X8J1Y1Yy2nzyEAERsl8BpejnK"
+          data = {
+              "content" : ":computer::computer::computer: Build dotinsights frontend in dev",
+              "username" : "Dotinsights-Bot"
+          }
+          data["embeds"] = [
+              {
+                  "description" : "Build Frontend Start in Branch Dev ",
+              }
+          ]
+          
+          result = requests.post(url, json = data)
+          
+          try:
+              result.raise_for_status()
+          except requests.exceptions.HTTPError as err:
+              print(err)
+    - task: SSH@0
+      inputs:
+        sshEndpoint: 'SSH Stage'
+        runOptions: 'inline'
+        inline: |
+          cd /home/ubuntu/DotInsights-FE-TEST
+          git pull > /dev/null 2>&1
+          nvm use 12 > /dev/null 2>&1
+          git pull > /dev/null 2>&1
+          yarn gulp production > /dev/null 2>&1
+        readyTimeout: '20000'
+    - task: PythonScript@0
+      inputs:
+        scriptSource: 'inline'
+        pythonInterpreter: /Library/Frameworks/Python.framework/Versions/3.7/bin/python3
+        script: |
+          import requests #dependency
+          url = "https://discord.com/api/webhooks/1043378904515235890/jblsnPli7C08ZLaxr-FabTZpXaOgSbKn-rQC2CUMsV3X8J1Y1Yy2nzyEAERsl8BpejnK"
+          data = {
+              "content" : ":white_check_mark::white_check_mark::white_check_mark: Build dotinsights in dev",
+              "username" : "Dotinsights-Bot"
+          }
+          data["embeds"] = [
+              {
+                  "description" : "Build Frontend Succeeded",
+              }
+          ]
+
+          result = requests.post(url, json = data)
+
+          try:
+              result.raise_for_status()
+          except requests.exceptions.HTTPError as err:
+              print(err)
+
+    
+            
