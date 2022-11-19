@@ -43,7 +43,7 @@ jobs:
         sshEndpoint: 'SSH Stage'
         runOptions: 'inline'
         inline: |
-          cd /home/ubuntu/DotInsights-FE-TEST
+          cd /home/ubuntu/DotInsights-FE-TEST/
           git pull > /dev/null 2>&1
           yarn gulp production > /dev/null 2>&1
         readyTimeout: '20000'
