@@ -188,7 +188,9 @@
 				// Chrome, Brave, MS Edge.
 				var get_extension_link = 'https://bit.ly/3BGqFt1';
 
-				if ( dotinsights.BrowserUtil.isFirefox ) {
+				if ( Helpers.isHandheld() ) {
+					get_extension_link = 'https://mobile.subwallet.app';
+				} else if ( dotinsights.BrowserUtil.isFirefox ) {
 					get_extension_link = 'https://mzl.la/3rQ0awW';
 				}
 
