@@ -2,14 +2,21 @@
 	function( $ ) {
 		'use strict';
 
-        const isFirefox = dotinsights.BrowserUtil.isFirefox;
+		// Generate install URL
+		var subWalletInstallUrl = 'https://bit.ly/3BGqFt1';
+		if ( Helpers.isHandheld() ) {
+			subWalletInstallUrl = 'https://mobile.subwallet.app';
+		} else if ( dotinsights.BrowserUtil.isFirefox ) {
+			subWalletInstallUrl = 'https://mzl.la/3rQ0awW';
+		}
+
 		const WALLETS = {
 			'subwallet': {
 				name: 'SubWallet',
 				type: 'substrate',
 				provider: 'subwallet-js',
 				logo: '',
-				installUrl: isFirefox ? 'https://mzl.la/3rQ0awW' : 'https://bit.ly/3BGqFt1'
+				installUrl: subWalletInstallUrl
 			},
 			'subwallet-evm': {
 				name: 'SubWallet - EVM',
@@ -17,7 +24,7 @@
 				provider: 'SubWallet',
 				evmDetect: 'isSubWallet',
 				logo: '',
-				installUrl: isFirefox ? 'https://mzl.la/3rQ0awW' : 'https://bit.ly/3BGqFt1'
+				installUrl: subWalletInstallUrl
 			}
 			/*,
 			'metamask': {
@@ -363,7 +370,7 @@
 
 				async function doVote() {
 					try {
-						const voteSignature = await walletUtils.signVote( projectID );
+						const signature = await getVotingSignature( walletInfo.selectedAccountAddress, projectID );
 
 						const response = await dotinsights.requestUtils.sendPost( Helpers.getApiEndpointUrl( 'toggleVoteProject' ), {
 							project_id: projectID,
@@ -391,13 +398,13 @@
 									var $modalFirstVote = $( '#modal-first-vote-notice' ),
 									    $shareButton    = $modalFirstVote.find( '.btn-twitter-share' ),
 									    projectName     = $thisButton.closest( '.row-project' ).find( '.project-name' ).text(),
-									    text            = `I love ${projectName} so much I voted for this project on the @Polkadot and @Kusamanetwork Ecosystem Map by @dotinsights! What about you? Come vote for your favorite projects and earn a free NFT🎉`,
-									    url             = 'https://twitter.com/share?text={text}&amp;url={url}';
+									    text            = `I love ${projectName} so much I voted for this project on the @Polkadot and @Kusamanetwork Ecosystem Map by @dotinsights_xyz! What about you? Come vote for your favorite projects and earn a free NFT🎉`,
+									    url             = 'https://twitter.com/intent/tweet?text={text}&url={url}';
 
-									url = url.replace( '{text}', text );
-									url = url.replace( '{url}', location.origin + '/most-loved-projects' );
+									url = url.replace( '{text}', encodeURI( text ) );
+									url = url.replace( '{url}', encodeURI( location.origin + '/most-loved-projects/' ) );
 
-									$shareButton.attr( 'href', encodeURI( url ) );
+									$shareButton.attr( 'href', url );
 
 									$modalFirstVote.dotinsightsModal( 'open' );
 								}
