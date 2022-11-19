@@ -52,17 +52,20 @@
 		margin: 0 0 0 10px;
 		max-width: 200px;
 		text-align: left;
+	}
+}
 
-		.button-text {
-			overflow: hidden;
-			text-overflow: ellipsis;
-			display: -webkit-box !important;
-			-webkit-line-clamp: 1; /* number of lines to show */
-			-webkit-box-orient: vertical;
+.btn-open-connect-wallet {
+	.button-text {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 1; /* number of lines to show */
+		-webkit-box-orient: vertical;
+		word-break: break-all;
 
-			> span {
-				display: inline !important;
-			}
+		> span {
+			display: inline !important;
 		}
 	}
 }

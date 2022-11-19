@@ -3,13 +3,20 @@
 		'use strict';
 
         const isFirefox = dotinsights.BrowserUtil.isFirefox;
+		const isHandheld = dotinsights.Helpers.isHandheld();
 		const WALLETS = {
 			'subwallet': {
 				name: 'SubWallet',
 				type: 'substrate',
 				provider: 'subwallet-js',
 				logo: '',
-				installUrl: isFirefox ? 'https://mzl.la/3rQ0awW' : 'https://bit.ly/3BGqFt1'
+				getInstallUrl: function() {
+					if ( isHandheld ) {
+						return 'https://mobile.subwallet.app';
+					} else {
+						return isFirefox ? 'https://mzl.la/3rQ0awW' : 'https://bit.ly/3BGqFt1'
+					}
+				}
 			},
 			'subwallet-evm': {
 				name: 'SubWallet - EVM',
@@ -17,7 +24,13 @@
 				provider: 'SubWallet',
 				evmDetect: 'isSubWallet',
 				logo: '',
-				installUrl: isFirefox ? 'https://mzl.la/3rQ0awW' : 'https://bit.ly/3BGqFt1'
+				getInstallUrl: function() {
+					if ( isHandheld ) {
+						return 'https://mobile.subwallet.app';
+					} else {
+						return isFirefox ? 'https://mzl.la/3rQ0awW' : 'https://bit.ly/3BGqFt1'
+					}
+				}
 			}
 			/*,
 			'metamask': {
@@ -26,12 +39,14 @@
 				provider: 'ethereum',
 				evmDetect: 'isMetaMask',
 				logo: '',
-				installUrl: 'https://metamask.io/download/'
+				getInstallUrl: function() {
+					return 'https://metamask.io/download/';
+				}
 			}
 			*/
 		};
 
-		const STORE_STATE_KEY = 'walletInfo';
+		const STORE_STATE_KEY = 'dotinsightsWalletInfo';
 
 		const walletUtils = {
 			supportedWallets: WALLETS,
@@ -84,7 +99,7 @@
 				Object.assign( walletUtils, savedData );
 			},
 			getCurrentWallet: async function() {
-				walletUtils.loadSavedState()
+				walletUtils.loadSavedState();
 				if ( walletUtils.currentWalletName && walletUtils.currentAddress ) {
 					return await walletUtils.enableWallet( walletUtils.currentWalletName );
 				} else {
@@ -345,15 +360,8 @@
 			renderWalletArea();
 		} );
 
-		var votingAvailableTime = Date.UTC( 2022, 10, 18, 23, 59, 59 );
-		var modalVoteComing = $( '#modal-vote-coming' );
 		$( document.body ).on( 'click', '.btn-vote', function( evt ) {
 			evt.preventDefault();
-
-			if ( votingAvailableTime > Date.now() ) {
-				modalVoteComing.dotinsightsModal( 'open' );
-				return;
-			}
 
 			var $thisButton = $( this ),
 			    projectID   = $thisButton.data( 'project-id' );
@@ -503,8 +511,8 @@
 							output += `<div class="${itemClass}" data-address="${thisAccount.address}">
 									<div class="wallet-icon"></div>
 	                                <div id="wallet-info">
-	                                    <div class="wallet-name">${thisAccount.name}</div>
-	                                    <div class="wallet-address"><span>${thisAccount.address}</span></div>
+	                                    <div class="wallet-name text-1-row"><span>${thisAccount.name}</span></div>
+	                                    <div class="wallet-address text-1-row"><span>${thisAccount.address}</span></div>
 	                                </div>
 								</div>`;
 						}
@@ -523,7 +531,7 @@
 						for ( var walletKey in walletUtils.supportedWallets ) {
 							var wallet        = walletUtils.supportedWallets[ walletKey ],
 							    isInstalled   = walletUtils.isInstall( walletKey ),
-							    btnUrl        = isInstalled ? '#' : wallet.installUrl,
+							    btnUrl        = isInstalled ? '#' : wallet.getInstallUrl(),
 							    btnAttributes = isInstalled ? '' : ' target="_blank"',
 							    btnIcon       = isInstalled ? '' : '<span class="button-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.0625 10.3135L12 14.2499L15.9375 10.3135" stroke="#66E1B6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 3.75V14.2472" stroke="#66E1B6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M20.25 14.25V19.5C20.25 19.6989 20.171 19.8897 20.0303 20.0303C19.8897 20.171 19.6989 20.25 19.5 20.25H4.5C4.30109 20.25 4.11032 20.171 3.96967 20.0303C3.82902 19.8897 3.75 19.6989 3.75 19.5V14.25" stroke="#66E1B6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>',
 							    btnCssClass   = 'button button--wallet wallet--' + walletKey;
