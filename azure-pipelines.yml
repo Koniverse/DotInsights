@@ -44,9 +44,7 @@ jobs:
         runOptions: 'inline'
         inline: |
           cd /home/ubuntu/DotInsights-FE-TEST/
-          touch xx.txt
-          git pull
-          yarn gulp production > /dev/null 2>&1
+          touch x1x.txt
         readyTimeout: '20000'
     - task: PythonScript@0
       inputs:
