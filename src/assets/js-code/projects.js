@@ -168,27 +168,45 @@
 
 			if ( '' !== cat ) {
 				rules.push( {
-					key: 'category_slug',
+					key: 'category_slugs',
 					value: cat,
-					operator: '='
+					operator: 'in'
 				} );
 			}
 
 			var results = rules.length > 0 ? Helpers.filterByRules( rules, dotinsights.Projects ) : dotinsights.Projects;
-			await sortAndGroup( results );
+			if ('' !== cat) {
+				await sortAndGroup( results , cat );
+			} else {
+				await sortAndGroup( results );
+			}
 			buildList();
 		}
 
-		async function sortAndGroup( array ) {
+		async function sortAndGroup( projects, forceGroupKey = undefined ) {
+			function findCatLabel(catKey, fullCatLabel) {
+				var catLabel = 'Uncategorized'
+				fullCatLabel.split(',').map(x => x.trim()).forEach((label) => {
+					if (Helpers.sanitizeKey(label) === catKey) {
+						catLabel = label;
+					}
+				})
+
+				return catLabel
+			}
+
 			return new Promise( resolve => { // Sure sort and group completed.
-				array = Helpers.groupByKey( array, 'category_slug' );
+				var projectCategories = Helpers.groupByKeys( projects, 'category_slugs' );
+				if (forceGroupKey) {
+					projectCategories = {[forceGroupKey]: projectCategories[forceGroupKey]}
+				}
 				var results = [];
 
-				for ( var catKey in array ) {
+				for ( var catKey in projectCategories ) {
 					var groupCat = {
 						key: catKey,
-						name: 'uncategorized' === catKey ? 'Uncategorized' : array[ catKey ][ 0 ][ 'category' ],
-						projects: array[ catKey ]
+						name: 'uncategorized' === catKey ? 'Uncategorized' : findCatLabel(catKey, projectCategories[ catKey ][ 0 ][ 'category' ]),
+						projects: projectCategories[ catKey ]
 					};
 
 					groupCat.order = projectSortedCategories.hasOwnProperty( catKey ) ? projectSortedCategories[ catKey ] : 999;

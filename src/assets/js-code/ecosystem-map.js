@@ -99,7 +99,8 @@
 		 */
 		function prepareData( data ) {
 			for ( var i = data.length - 1; i >= 0; i -- ) {
-				data[ i ].category_slug = Helpers.sanitizeKey( data[ i ].category, 'uncategorized' ); // Using group projects by cat.
+				var categories = (data[ i ].category || '').trim().split( ',')
+				data[ i ].category_slugs = categories.map(cat => Helpers.sanitizeKey( cat.trim(), 'uncategorized')); // Using group projects by cat.
 				data[ i ].project_slug = Helpers.sanitizeSlug( data[ i ].project ); // Using render on bubbles.
 			}
 		}

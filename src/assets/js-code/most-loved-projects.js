@@ -322,7 +322,7 @@
 				var native = true === thisProject.native ? ' checked' : '';
 				var nativeHTML = '<input type="checkbox" readonly disabled class="project-is-native"' + native + ' />'
 
-				var itemCatClass = 'project-category project-cat-color--' + thisProject.category_slug;
+				var itemCatClass = 'project-category project-cat-color--' + thisProject.category_slugs[0];
 				var thumbnailUrl = './assets/images/projects/' + thisProject.project_slug + '.png';
 
 				/*if ( ! imageExists( thumbnailUrl ) ) {

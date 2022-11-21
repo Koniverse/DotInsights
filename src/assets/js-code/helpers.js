@@ -124,13 +124,13 @@
 				return key.toLowerCase();
 			},
 
-			groupByKey: function( xs, key ) {
+			groupByKeys: function( xs, keys ) {
 				return xs.reduce( function( rv, x ) {
-					var _key = '' !== x[ key ] ? x[ key ] : 'uncategorized';
+					var _keys = '' !== x[ keys ] ? x[ keys ] : ['uncategorized'];
 
-					(
-						rv[ _key ] = rv[ _key ] || []
-					).push( x );
+					_keys.forEach(_key => {
+						(rv[ _key ] = rv[ _key ] || []).push( x );
+					})
 					return rv;
 				}, {} );
 			},
@@ -154,6 +154,8 @@
 									return false;
 								}
 								break;
+							case 'in':
+								return item[ rules[ i ].key ].indexOf(rules[ i ].value) > -1
 							case '!':
 								if ( item[ rules[ i ].key ] === rules[ i ].value ) {
 									return false;
