@@ -528,29 +528,34 @@
 
 						refreshVoteCount( currentAddress );
 					} else {
-						var output = '';
-
-						for ( var walletKey in walletUtils.supportedWallets ) {
-							var wallet        = walletUtils.supportedWallets[ walletKey ],
-							    isInstalled   = walletUtils.isInstall( walletKey ),
-							    btnUrl        = isInstalled ? '#' : wallet.getInstallUrl(),
-							    btnAttributes = isInstalled ? '' : ' target="_blank"',
-							    btnIcon       = isInstalled ? '' : '<span class="button-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.0625 10.3135L12 14.2499L15.9375 10.3135" stroke="#66E1B6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 3.75V14.2472" stroke="#66E1B6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M20.25 14.25V19.5C20.25 19.6989 20.171 19.8897 20.0303 20.0303C19.8897 20.171 19.6989 20.25 19.5 20.25H4.5C4.30109 20.25 4.11032 20.171 3.96967 20.0303C3.82902 19.8897 3.75 19.6989 3.75 19.5V14.25" stroke="#66E1B6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>',
-							    btnCssClass   = 'button button--wallet wallet--' + walletKey;
-
-							btnCssClass += isInstalled ? ' btn-connect-wallet' : ' button-right-icon btn-install-wallet';
-
-							output += `<a data-wallet="${walletKey}" href="${btnUrl}" class="${btnCssClass}" ${btnAttributes}><span class="button-text">${wallet.name}</span>${btnIcon}</a>`
-						}
-
-						$( '.btn-open-connect-wallet' ).find( '.button-text span' ).text( 'Connect Wallet' );
-						$modalConnectWalletContent.empty().html( output );
-						$modalConnectWallet.find( '.modal-title' ).text( 'Connect Your Wallet' );
+						renderWalletWhenNotConnected();
 					}
 				} catch ( e ) {
 					console.error( 'Connect wallet error: ' + e.message );
+					renderWalletWhenNotConnected();
 				}
 			}, 500 );
+		}
+
+		function renderWalletWhenNotConnected() {
+			var output = '';
+
+			for ( var walletKey in walletUtils.supportedWallets ) {
+				var wallet        = walletUtils.supportedWallets[ walletKey ],
+				    isInstalled   = walletUtils.isInstall( walletKey ),
+				    btnUrl        = isInstalled ? '#' : wallet.getInstallUrl(),
+				    btnAttributes = isInstalled ? '' : ' target="_blank"',
+				    btnIcon       = isInstalled ? '' : '<span class="button-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.0625 10.3135L12 14.2499L15.9375 10.3135" stroke="#66E1B6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 3.75V14.2472" stroke="#66E1B6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M20.25 14.25V19.5C20.25 19.6989 20.171 19.8897 20.0303 20.0303C19.8897 20.171 19.6989 20.25 19.5 20.25H4.5C4.30109 20.25 4.11032 20.171 3.96967 20.0303C3.82902 19.8897 3.75 19.6989 3.75 19.5V14.25" stroke="#66E1B6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>',
+				    btnCssClass   = 'button button--wallet wallet--' + walletKey;
+
+				btnCssClass += isInstalled ? ' btn-connect-wallet' : ' button-right-icon btn-install-wallet';
+
+				output += `<a data-wallet="${walletKey}" href="${btnUrl}" class="${btnCssClass}" ${btnAttributes}><span class="button-text">${wallet.name}</span>${btnIcon}</a>`
+			}
+
+			$( '.btn-open-connect-wallet' ).find( '.button-text span' ).text( 'Connect Wallet' );
+			$modalConnectWalletContent.empty().html( output );
+			$modalConnectWallet.find( '.modal-title' ).text( 'Connect Your Wallet' );
 		}
 
 		function refreshVoteCount( address ) {
