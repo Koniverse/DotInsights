@@ -16,7 +16,6 @@
 	text-align: center;
 	position: absolute;
 	border-radius: 50%;
-	//transform: translate(-50%, -50%);
 	background: radial-gradient(70% 70% at 50% 50%, rgba(0, 0, 0, 0) 10.42%, rgba(0, 0, 34, 0.1) 44.27%, #004bff 100%);
 
 	img {
@@ -52,10 +51,6 @@
 				fill: #fff;
 			}
 		}
-	}
-
-	&.bubble-project--subwallet {
-		background: radial-gradient(70% 70% at 50% 50%, rgba(0, 0, 0, 0) 10.42%, rgba(0, 0, 34, 0.1) 44.27%, #66e1b6 100%);
 	}
 }
 
