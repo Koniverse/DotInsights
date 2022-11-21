@@ -157,9 +157,10 @@
 			var cat = $searchForm.find( 'input[name="cat"]' ).val();
 
 			var rules = [];
+			var terms = [];
 
 			if ( '' !== searchTerm ) {
-				rules.push( {
+				terms.push( {
 					key: 'project',
 					value: searchTerm,
 					operator: 'like'
@@ -167,10 +168,17 @@
 			}
 
 			if ( '' !== cat ) {
-				rules.push( {
+				terms.push( {
 					key: 'category_slugs',
 					value: cat,
 					operator: 'in'
+				} );
+			}
+
+			if ( terms.length > 0 ) {
+				rules.push( {
+					relation: 'and',
+					terms: terms
 				} );
 			}
 
@@ -190,29 +198,34 @@
 					if (Helpers.sanitizeKey(label) === catKey) {
 						catLabel = label;
 					}
-				})
+				} );
 
 				return catLabel
 			}
 
 			return new Promise( resolve => { // Sure sort and group completed.
-				var projectCategories = Helpers.groupByKeys( projects, 'category_slugs' );
-				if (forceGroupKey) {
-					projectCategories = {[forceGroupKey]: projectCategories[forceGroupKey]}
-				}
 				var results = [];
 
-				for ( var catKey in projectCategories ) {
-					var groupCat = {
-						key: catKey,
-						name: 'uncategorized' === catKey ? 'Uncategorized' : findCatLabel(catKey, projectCategories[ catKey ][ 0 ][ 'category' ]),
-						projects: projectCategories[ catKey ]
-					};
+				if ( projects.length > 0 ) {
+					var projectCategories = Helpers.groupByKeys( projects, 'category_slugs' );
 
-					groupCat.order = projectSortedCategories.hasOwnProperty( catKey ) ? projectSortedCategories[ catKey ] : 999;
+					if ( forceGroupKey ) {
+						projectCategories = { [ forceGroupKey ]: projectCategories[ forceGroupKey ] }
+					}
 
-					results.push( groupCat );
+					for ( var catKey in projectCategories ) {
+						var groupCat = {
+							key: catKey,
+							name: 'uncategorized' === catKey ? 'Uncategorized' : findCatLabel( catKey, projectCategories[ catKey ][ 0 ][ 'category' ] ),
+							projects: projectCategories[ catKey ]
+						};
+
+						groupCat.order = projectSortedCategories.hasOwnProperty( catKey ) ? projectSortedCategories[ catKey ] : 999;
+
+						results.push( groupCat );
+					}
 				}
+
 				// Sort by order.
 				results = dotinsights.ArrayUtil.sortByKey( results, 'order', 'ASC' );
 				var foundItems = results.length;

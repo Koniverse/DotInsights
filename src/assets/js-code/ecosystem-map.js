@@ -15,9 +15,15 @@
 			// Skip project without name.
 			projects = Helpers.filterByRules( [
 				{
-					key: 'project',
-					value: '',
-					operator: '!'
+					relation: 'and',
+					terms: [
+						{
+							key: 'project',
+							value: '',
+							operator: '!'
+
+						}
+					]
 				}
 			], projects );
 

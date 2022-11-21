@@ -135,41 +135,60 @@
 				}, {} );
 			},
 
+			compareValues: function( value1, value2, operation ) {
+				switch ( operation ) {
+					case 'like':
+						// Convert both side to lower case to ignore case sensitive.
+						if ( typeof value1 === 'string' && value1.toLowerCase().match( value2.toLowerCase() ) ) {
+							return true;
+						}
+						break;
+					case 'in':
+						return value1.indexOf( value2 ) > - 1;
+					case '!':
+						if ( value1 !== value2 ) {
+							return true;
+						}
+						break;
+					default:
+						if ( value1 === value2 ) {
+							return true;
+						}
+						break;
+				}
+
+				return false;
+			},
+
 			filterByRules: function( rules, array ) {
 				var ruleLength = rules.length;
 
-				// Convert search term for operator LIKE.
-				for ( var i = 0; i < ruleLength; i ++ ) {
-					if ( 'like' === rules[ i ].operator ) {
-						rules[ i ].value = rules[ i ].value.toLowerCase();
-					}
-				}
-
 				return array.filter( function( item ) {
 					for ( var i = 0; i < ruleLength; i ++ ) {
-						switch ( rules[ i ][ 'operator' ] ) {
-							case 'like':
-								// Convert both side to lower case to ignore case sensitive.
-								if ( ! item[ rules[ i ].key ].toLowerCase().match( rules[ i ].value ) ) {
+						var relation = typeof rules[ i ].relation === 'string' && 'or' === rules[ i ].relation ? 'or' : 'and';
+						var terms = rules[ i ].terms;
+
+						if ( 'or' === relation ) {
+							for ( var termIndex = 0; termIndex < terms.length; termIndex ++ ) {
+								var thisTerm = terms[ termIndex ];
+
+								if ( dotinsights.Helpers.compareValues( item[ thisTerm.key ], thisTerm.value, thisTerm.operator ) ) { // Any rules matched.
+									return true;
+								}
+							}
+						} else {
+							for ( var termIndex = 0; termIndex < terms.length; termIndex ++ ) {
+								var thisTerm = terms[ termIndex ];
+								if ( ! dotinsights.Helpers.compareValues( item[ thisTerm.key ], thisTerm.value, thisTerm.operator ) ) { // Any rules not matched
 									return false;
 								}
-								break;
-							case 'in':
-								return item[ rules[ i ].key ].indexOf(rules[ i ].value) > -1
-							case '!':
-								if ( item[ rules[ i ].key ] === rules[ i ].value ) {
-									return false;
-								}
-								break;
-							default:
-								if ( item[ rules[ i ].key ] !== rules[ i ].value ) {
-									return false;
-								}
-								break;
+							}
+
+							return true;
 						}
 					}
 
-					return true;
+					return false;
 				} );
 			}
 

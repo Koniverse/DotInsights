@@ -76,9 +76,26 @@
 
 			if ( '' !== searchTerm ) {
 				rules.push( {
-					key: 'project',
-					value: searchTerm,
-					operator: 'like'
+					relation: 'or',
+					terms: [
+						{
+							key: 'project',
+							value: searchTerm,
+							operator: 'like'
+						}, {
+							key: 'category',
+							value: searchTerm,
+							operator: 'like'
+						}, {
+							key: 'layer',
+							value: searchTerm,
+							operator: 'like'
+						}, {
+							key: 'token',
+							value: searchTerm,
+							operator: 'like'
+						}
+					]
 				} );
 			}
 
