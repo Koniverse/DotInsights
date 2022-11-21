@@ -82,16 +82,16 @@
 		$( document.body ).on( 'dotinsights/EcosystemMap/Searching', searchingProjects );
 
 		$( document.body ).on( 'click', '.filter-item', function( evt ) {
-				evt.preventDefault();
+			evt.preventDefault();
 
-				var $thisButton = $( this );
+			var $thisButton = $( this );
 
-				if ( $thisButton.hasClass( 'current' ) ) {
-					return;
-				}
+			if ( $thisButton.hasClass( 'current' ) ) {
+				return;
+			}
 
-				var cat = $( this ).data( 'cat' );
-				$thisButton.siblings().removeClass( 'current' );
+			var cat = $( this ).data( 'cat' );
+			$thisButton.siblings().removeClass( 'current' );
 			$thisButton.addClass( 'current' );
 
 			$searchForm.find( 'input[name="cat"]' ).val( cat );
