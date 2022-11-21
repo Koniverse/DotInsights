@@ -321,9 +321,15 @@
 				var tokenHTML = '' !== thisProject.token ? thisProject.token : '<span class="text-placeholder">--</span>';
 				var native = true === thisProject.native ? ' checked' : '';
 				var nativeHTML = '<input type="checkbox" readonly disabled class="project-is-native"' + native + ' />'
-
-				var itemCatClass = 'project-category project-cat-color--' + thisProject.category_slugs[0];
 				var thumbnailUrl = './assets/images/projects/' + thisProject.project_slug + '.png';
+				var catHTML = '';
+
+				thisProject.categories.map( function( cat, index ) {
+					catHTML += index > 0 ? ', ' : '';
+					catHTML += '<span class="project-cat-color--' + cat.slug + '">' + cat.name + '</span>';
+				} );
+
+				catHTML = '<p class="project-category">' + catHTML + '</p>';
 
 				/*if ( ! imageExists( thumbnailUrl ) ) {
 					console.log( thisProject.project_slug );
@@ -336,8 +342,7 @@
 				          '<div class="project-rank">' + rankHTML + '</div>' +
 				          '<div class="project-thumbnail"><img src="' + thumbnailUrl + '" alt="' + thisProject.project + '" width="80" height="80"/></div>' +
 				          '<div class="project-details">' +
-				          '<h3 class="project-name">' + thisProject.project + '</h3>' +
-				          '<p class="' + itemCatClass + '">' + thisProject.category + '</p>' +
+				          '<h3 class="project-name">' + thisProject.project + '</h3>' + catHTML +
 				          '</div>' +
 				          '</a>' +
 				          '</td>';

@@ -99,8 +99,21 @@
 		 */
 		function prepareData( data ) {
 			for ( var i = data.length - 1; i >= 0; i -- ) {
-				var categories = (data[ i ].category || '').trim().split( ',')
-				data[ i ].category_slugs = categories.map(cat => Helpers.sanitizeKey( cat.trim(), 'uncategorized')); // Using group projects by cat.
+				var categoryStringToArray = (
+					data[ i ].category || ''
+				).trim().split( ',' );
+
+				var categories = [];
+
+				categoryStringToArray.map( function( cat, index ) {
+					categories.push( {
+						name: cat.trim(),
+						slug: Helpers.sanitizeKey( cat.trim(), 'uncategorized' )
+					} );
+				} );
+
+				data[ i ].categories = categories;
+				data[ i ].category_slugs = categories.map( cat => cat.slug ); // Using group projects by cat.
 				data[ i ].project_slug = Helpers.sanitizeSlug( data[ i ].project ); // Using render on bubbles.
 			}
 		}
