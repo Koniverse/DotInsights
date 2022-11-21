@@ -166,7 +166,6 @@
 							} )
 						}
 
-
 						const accounts = await walletUtils.getAccounts()
 						const addresses = accounts.map( a => a.address )
 						if ( addresses.indexOf( walletUtils.currentAddress ) < 0 && accounts[ 0 ] && accounts[ 0 ][ 'address' ] ) {
@@ -186,7 +185,8 @@
 					await walletUtils.getCurrentWallet();
 				}
 				if ( walletUtils.currentWalletType === 'evm' ) {
-					const accounts = await walletUtils.currentWallet.request( { method: 'eth_accounts' } )
+					const accounts = await walletUtils.currentWallet.request( { method: 'eth_accounts' } );
+
 					return accounts.map( account => (
 						{
 							address: account,
@@ -246,8 +246,14 @@
 						throw new Error( 'Unable to vote, required has balance on at least one chain in ecosystem' );
 					}
 
-					const signRs = await walletUtils.signMessage( walletUtils.currentSignMessage + '-' + projectID )
-					return signRs.signature
+					const signRs = await walletUtils.signMessage( walletUtils.currentSignMessage + '-' + projectID );
+					var signature = typeof signRs === 'object' ? signRs.signature : signRs; // EVM return signature as string. Others return as object.
+
+					if ( typeof signature !== 'string' ) {
+						throw new Error( 'Invalid signature' );
+					}
+
+					return signature;
 				} catch ( e ) {
 					console.error( e );
 					return false
@@ -331,7 +337,6 @@
 
 				setTimeout( async function() {
 					var walletName = $thisButton.data( 'wallet' );
-					console.log( walletName );
 
 					try {
 						await walletUtils.enableWallet( walletName );
@@ -372,6 +377,10 @@
 
 				try {
 					const voteSignature = await walletUtils.signVote( projectID );
+
+					if ( ! voteSignature ) {
+						throw 'Invalid Signature';
+					}
 
 					const response = await dotinsights.requestUtils.sendPost( Helpers.getApiEndpointUrl( 'toggleVoteProject' ), {
 						project_id: projectID,
@@ -482,7 +491,6 @@
 					// Auto connect with wallet is has connected before.
 					const isConnectedWithWallet = await walletUtils.isConnectedWithWallet();
 					if ( isConnectedWithWallet ) {
-						console.log( 'Enable existed wallet' )
 						// Connect with wallet
 						await walletUtils.enableWallet( walletUtils.currentWalletName );
 
@@ -492,11 +500,8 @@
 						// Display current account.
 						var currentAddress = await walletUtils.currentAddress;
 						var currentAccount = null;
-
 						var output = '';
 
-						console.log( accounts );
-						console.log( currentAddress );
 						for ( var i = 0; i < accounts.length; i ++ ) {
 							var thisAccount = accounts[ i ],
 							    itemClass   = 'wallet-account-address';
@@ -523,7 +528,6 @@
 
 						refreshVoteCount( currentAddress );
 					} else {
-						console.log( 'Not connect with wallet' );
 						var output = '';
 
 						for ( var walletKey in walletUtils.supportedWallets ) {
