@@ -238,6 +238,7 @@
 					if ( ! walletUtils.currentWallet ) {
 						await walletUtils.getCurrentWallet();
 					}
+
 					if ( ! walletUtils.currentSignMessage || ! walletUtils.currentVoteAbility ) {
 						await walletUtils.getSignMessage( walletUtils.currentAddress );
 					}
@@ -407,7 +408,11 @@
 
 						if ( 'evm' === walletUtils.currentWalletType ) {
 							walletUtils.currentWallet.on( 'accountsChanged', ( accounts ) => {
-								walletUtils.currentAddress = accounts[ 0 ];
+								if ( accounts.length === 1 || (
+									accounts.length > 1 && ! accounts.includes( walletUtils.currentAddress )
+								) ) {
+									walletUtils.enableAccount( accounts[ 0 ] );
+								}
 								renderWalletWhenConnected();
 							} );
 						}
