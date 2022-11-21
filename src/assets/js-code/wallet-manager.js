@@ -405,39 +405,14 @@
 						// Connect with wallet
 						await walletUtils.enableWallet( walletUtils.currentWalletName );
 
-						// Get account list.
-						var accounts = await walletUtils.getAccounts();
-
-						// Display current account.
-						var currentAddress = await walletUtils.currentAddress;
-						var currentAccount = null;
-						var output = '';
-
-						for ( var i = 0; i < accounts.length; i ++ ) {
-							var thisAccount = accounts[ i ],
-							    itemClass   = 'wallet-account-address';
-
-							if ( thisAccount.address === currentAddress ) {
-								itemClass += ' selected-account';
-								currentAccount = thisAccount;
-							}
-
-							output += `<div class="${itemClass}" data-address="${thisAccount.address}">
-									<div class="wallet-icon"></div>
-	                                <div id="wallet-info">
-	                                    <div class="wallet-name text-1-row"><span>${thisAccount.name}</span></div>
-	                                    <div class="wallet-address text-1-row"><span>${thisAccount.address}</span></div>
-	                                </div>
-								</div>`;
+						if ( 'evm' === walletUtils.currentWalletType ) {
+							walletUtils.currentWallet.on( 'accountsChanged', ( accounts ) => {
+								walletUtils.currentAddress = accounts[ 0 ];
+								renderWalletWhenConnected();
+							} );
 						}
 
-						output += `<div class="button-wrap btn-disconnect-wallet-wrap"><a href="#" class="button btn-disconnect-wallet"><span class="button-text">Disconnect</span></a></div>`;
-
-						$( '.btn-open-connect-wallet' ).find( '.button-text span' ).text( currentAccount.name );
-						$modalConnectWallet.find( '.modal-title' ).text( 'Choose account' );
-						$modalConnectWalletContent.empty().html( output );
-
-						refreshVoteCount( currentAddress );
+						renderWalletWhenConnected();
 					} else {
 						renderWalletWhenNotConnected();
 					}
@@ -467,6 +442,42 @@
 			$( '.btn-open-connect-wallet' ).find( '.button-text span' ).text( 'Connect Wallet' );
 			$modalConnectWalletContent.empty().html( output );
 			$modalConnectWallet.find( '.modal-title' ).text( 'Connect Your Wallet' );
+		}
+
+		async function renderWalletWhenConnected() {
+			// Get account list.
+			var accounts = await walletUtils.getAccounts();
+
+			// Display current account.
+			var currentAddress = await walletUtils.currentAddress;
+			var currentAccount = null;
+			var output = '';
+
+			for ( var i = 0; i < accounts.length; i ++ ) {
+				var thisAccount = accounts[ i ],
+				    itemClass   = 'wallet-account-address';
+
+				if ( thisAccount.address === currentAddress ) {
+					itemClass += ' selected-account';
+					currentAccount = thisAccount;
+				}
+
+				output += `<div class="${itemClass}" data-address="${thisAccount.address}">
+								<div class="wallet-icon"></div>
+                                <div id="wallet-info">
+                                    <div class="wallet-name text-1-row"><span>${thisAccount.name}</span></div>
+                                    <div class="wallet-address text-1-row"><span>${thisAccount.address}</span></div>
+                                </div>
+							</div>`;
+			}
+
+			output += `<div class="button-wrap btn-disconnect-wallet-wrap"><a href="#" class="button btn-disconnect-wallet"><span class="button-text">Disconnect</span></a></div>`;
+
+			$( '.btn-open-connect-wallet' ).find( '.button-text span' ).text( currentAccount.name );
+			$modalConnectWallet.find( '.modal-title' ).text( 'Choose account' );
+			$modalConnectWalletContent.empty().html( output );
+
+			refreshVoteCount( currentAddress );
 		}
 
 		function refreshVoteCount( address ) {
