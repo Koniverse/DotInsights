@@ -362,113 +362,116 @@
 				}, 500 );
 			} );
 
-			renderWalletArea();
-		} );
+			$( document.body ).on( 'click', '.btn-vote', async function( evt ) {
+				evt.preventDefault();
+				evt.stopPropagation();
 
-		$( document.body ).on( 'click', '.btn-vote', async function( evt ) {
-			evt.preventDefault();
+				alert( 'Vote Clicked' );
 
-			var $thisButton = $( this ),
-			    projectID   = $thisButton.data( 'project-id' );
+				var $thisButton = $( this ),
+				    projectID   = $thisButton.data( 'project-id' );
 
-			const isConnectedWithWallet = await walletUtils.isConnectedWithWallet();
-			if ( isConnectedWithWallet ) {
-				Helpers.setElementHandling( $thisButton );
+				const isConnectedWithWallet = await walletUtils.isConnectedWithWallet();
+				if ( isConnectedWithWallet ) {
+					Helpers.setElementHandling( $thisButton );
 
-				try {
-					const voteSignature = await walletUtils.signVote( projectID );
+					try {
+						const voteSignature = await walletUtils.signVote( projectID );
 
-					if ( ! voteSignature ) {
-						throw 'Invalid Signature';
-					}
+						if ( ! voteSignature ) {
+							throw 'Invalid Signature';
+						}
 
-					const response = await dotinsights.requestUtils.sendPost( Helpers.getApiEndpointUrl( 'toggleVoteProject' ), {
-						project_id: projectID,
-						address: walletUtils.currentAddress,
-						signature: voteSignature
-					} );
+						const response = await dotinsights.requestUtils.sendPost( Helpers.getApiEndpointUrl( 'toggleVoteProject' ), {
+							project_id: projectID,
+							address: walletUtils.currentAddress,
+							signature: voteSignature
+						} );
 
-					Helpers.unsetElementHandling( $thisButton );
+						Helpers.unsetElementHandling( $thisButton );
 
-					if ( response.hasOwnProperty( 'vote_count' ) ) {
-						dotinsights.Projects = dotinsights.Projects.map( obj =>
-							obj.project_id === projectID ? {
-								...obj,
-								vote_count: response.vote_count
-							} : obj
-						);
+						if ( response.hasOwnProperty( 'vote_count' ) ) {
+							dotinsights.Projects = dotinsights.Projects.map( obj =>
+								obj.project_id === projectID ? {
+									...obj,
+									vote_count: response.vote_count
+								} : obj
+							);
 
-						var $theVoteButtons = $( '.btn-vote[data-project-id="' + projectID + '"]' );
-						$theVoteButtons.find( '.button-text' ).text( response.vote_count );
-						if ( response.isVote ) {
-							$theVoteButtons.removeClass( 'vote-this' ).addClass( 'unvote-this' );
+							var $theVoteButtons = $( '.btn-vote[data-project-id="' + projectID + '"]' );
+							$theVoteButtons.find( '.button-text' ).text( response.vote_count );
+							if ( response.isVote ) {
+								$theVoteButtons.removeClass( 'vote-this' ).addClass( 'unvote-this' );
 
-							// First vote.
-							if ( dotinsights.VotedProjects.length < 1 ) {
-								var $modalFirstVote = $( '#modal-first-vote-notice' ),
-								    $shareButton    = $modalFirstVote.find( '.btn-twitter-share' ),
-								    projectName     = $thisButton.closest( '.row-project' ).find( '.project-name' ).text(),
-								    text            = `I love ${projectName} so much I voted for this project on the @Polkadot and @Kusamanetwork Ecosystem Map by @dotinsights_xyz! What about you? Come vote for your favorite projects and earn a free NFT🎉`,
-								    url             = 'https://twitter.com/intent/tweet?text={text}&url={url}';
+								// First vote.
+								if ( dotinsights.VotedProjects.length < 1 ) {
+									var $modalFirstVote = $( '#modal-first-vote-notice' ),
+									    $shareButton    = $modalFirstVote.find( '.btn-twitter-share' ),
+									    projectName     = $thisButton.closest( '.row-project' ).find( '.project-name' ).text(),
+									    text            = `I love ${projectName} so much I voted for this project on the @Polkadot and @Kusamanetwork Ecosystem Map by @dotinsights_xyz! What about you? Come vote for your favorite projects and earn a free NFT🎉`,
+									    url             = 'https://twitter.com/intent/tweet?text={text}&url={url}';
 
-								url = url.replace( '{text}', encodeURI( text ) );
-								url = url.replace( '{url}', encodeURI( location.origin + '/most-loved-projects/' ) );
+									url = url.replace( '{text}', encodeURI( text ) );
+									url = url.replace( '{url}', encodeURI( location.origin + '/most-loved-projects/' ) );
 
-								$shareButton.attr( 'href', url );
+									$shareButton.attr( 'href', url );
 
-								$modalFirstVote.dotinsightsModal( 'open' );
-							}
+									$modalFirstVote.dotinsightsModal( 'open' );
+								}
 
-							if ( dotinsights.VotedProjects.indexOf( projectID ) === - 1 ) {
-								dotinsights.VotedProjects.push( projectID );
+								if ( dotinsights.VotedProjects.indexOf( projectID ) === - 1 ) {
+									dotinsights.VotedProjects.push( projectID );
+								}
+							} else {
+								$theVoteButtons.removeClass( 'unvote-this' ).addClass( 'vote-this' );
+
+								var index = dotinsights.VotedProjects.indexOf( projectID );
+								if ( index > - 1 ) {
+									dotinsights.VotedProjects.splice( index, 1 );
+								}
 							}
 						} else {
-							$theVoteButtons.removeClass( 'unvote-this' ).addClass( 'vote-this' );
+							var $modalVoteError = $( '#modal-vote-error' ),
+							    errorMessages   = response.message ? response.message : 'Something went wrong!';
 
-							var index = dotinsights.VotedProjects.indexOf( projectID );
-							if ( index > - 1 ) {
-								dotinsights.VotedProjects.splice( index, 1 );
-							}
+							$modalVoteError.find( '.vote-error-message' ).text( errorMessages );
+							$modalVoteError.dotinsightsModal( 'open' );
 						}
-					} else {
-						var $modalVoteError = $( '#modal-vote-error' ),
-						    errorMessages   = response.message ? response.message : 'Something went wrong!';
-
-						$modalVoteError.find( '.vote-error-message' ).text( errorMessages );
-						$modalVoteError.dotinsightsModal( 'open' );
+					} catch ( e ) {
+						Helpers.unsetElementHandling( $thisButton );
 					}
-				} catch ( e ) {
-					Helpers.unsetElementHandling( $thisButton );
+				} else {
+					$modalConnectWallet.dotinsightsModal( 'open' );
 				}
-			} else {
-				$modalConnectWallet.dotinsightsModal( 'open' );
-			}
-		} );
+			} );
 
-		// Switching wallet account.
-		$( document.body ).on( 'click', '.wallet-account-address', async function( evt ) {
-			evt.preventDefault();
+			// Switching wallet account.
+			$( document.body ).on( 'click', '.wallet-account-address', async function( evt ) {
+				evt.preventDefault();
 
-			if ( ! $( this ).hasClass( 'selected-account' ) ) {
-				// Get account list.
-				const accountList = await walletUtils.getAccounts();
-				var newAccount = $( this ).data( 'address' );
+				if ( ! $( this ).hasClass( 'selected-account' ) ) {
+					// Get account list.
+					const accountList = await walletUtils.getAccounts();
+					var newAccount = $( this ).data( 'address' );
 
-				for ( var i = 0; i < accountList.length; i ++ ) {
-					if ( newAccount === accountList[ i ].address ) {
-						walletUtils.enableAccount( newAccount );
+					for ( var i = 0; i < accountList.length; i ++ ) {
+						if ( newAccount === accountList[ i ].address ) {
+							walletUtils.enableAccount( newAccount );
 
-						$( this ).siblings().removeClass( 'selected-account' );
-						$( this ).addClass( 'selected-account' );
+							$( this ).siblings().removeClass( 'selected-account' );
+							$( this ).addClass( 'selected-account' );
 
-						$( '.btn-open-connect-wallet' ).find( '.button-text span' ).text( accountList[ i ].name );
-						refreshVoteCount( newAccount );
-						$modalConnectWallet.dotinsightsModal( 'close' );
+							$( '.btn-open-connect-wallet' ).find( '.button-text span' ).text( accountList[ i ].name );
+							refreshVoteCount( newAccount );
+							$modalConnectWallet.dotinsightsModal( 'close' );
 
-						break;
+							break;
+						}
 					}
 				}
-			}
+			} );
+
+			renderWalletArea();
 		} );
 
 		$( document.body ).on( 'dotinsights/VotedProjects/Refreshed', function() {
