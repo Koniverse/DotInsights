@@ -175,7 +175,7 @@
 
 						resolve( walletUtils.currentWallet );
 					} ).catch( () => {
-						alert( 'User cancel or reject connect to the wallet' );
+						showModalError( 'User cancel or reject connect to the wallet' );
 						reject( new Error( 'User cancel or reject connect to the wallet' ) )
 					} )
 				} );
@@ -325,6 +325,7 @@
 		var Helpers = dotinsights.Helpers;
 
 		var $modalConnectWallet        = $( '#modal-connect-wallet' ),
+		    $modalError                = $( '#modal-show-error' ),
 		    $modalConnectWalletContent = $modalConnectWallet.find( '.modal-content-body' );
 
 		$modalConnectWallet.dotinsightsModal(); // Init modal.
@@ -584,11 +585,8 @@
 							}
 						}
 					} else {
-						var $modalVoteError = $( '#modal-vote-error' ),
-						    errorMessages   = response.message ? response.message : 'Something went wrong!';
-
-						$modalVoteError.find( '.vote-error-message' ).text( errorMessages );
-						$modalVoteError.dotinsightsModal( 'open' );
+						var errorMessages = response.message ? response.message : 'Something went wrong!';
+						showModalError( errorMessages );
 					}
 				} catch ( e ) {
 					Helpers.unsetElementHandling( $thisButton );
@@ -596,6 +594,11 @@
 			} else {
 				$modalConnectWallet.dotinsightsModal( 'open' );
 			}
+		}
+
+		function showModalError( messages ) {
+			$modalError.find( '.modal-error-message' ).text( messages );
+			$modalError.dotinsightsModal( 'open' );
 		}
 	}( jQuery )
 );
