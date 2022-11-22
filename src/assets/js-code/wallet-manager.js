@@ -175,7 +175,7 @@
 
 						resolve( walletUtils.currentWallet );
 					} ).catch( () => {
-						showModalError( 'User cancel or reject connect to the wallet' );
+						showModalError( '<p>Unable to connect.<br />User rejects wallet connection.</p>' );
 						reject( new Error( 'User cancel or reject connect to the wallet' ) )
 					} )
 				} );
@@ -597,7 +597,7 @@
 		}
 
 		function showModalError( messages ) {
-			$modalError.find( '.modal-error-message' ).text( messages );
+			$modalError.find( '.modal-error-message' ).html( messages );
 			$modalError.dotinsightsModal( 'open' );
 		}
 	}( jQuery )
