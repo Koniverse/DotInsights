@@ -369,7 +369,7 @@
 				output += '<td class="col-project-github">' + getGithubLink( thisProject ) + '</td>';
 				output += '<td class="col-project-twitter">' + getTwitterLink( thisProject ) + '</td>';
 				output += '<td class="col-mobile-project-info">' + getHTMLInfoMobile( thisProject, layerHTML, tokenHTML, nativeHTML ) + '</td>';
-				output += '<td class="col-project-love">' + getVoteButton( thisProject ) + '</td>';
+				output += '<td class="col-project-votes">' + getVoteButton( thisProject ) + '</td>';
 				output += '</tr>';
 			}
 
@@ -440,7 +440,7 @@
 				text = text.replace( 'https://mobile.twitter.com/', '@', text );
 				text = dotinsights.StringUtil.rtrim( text, '/' );
 
-				return '<a href="' + project.twitter + '" target="_blank" class="project-link-twitter">' + text + '</a>';
+				return '<a href="' + project.twitter + '" target="_blank" class="project-link-twitter text-1-row"><span>' + text + '</span></a>';
 			}
 
 			return '<span class="text-placeholder">--</span>';
