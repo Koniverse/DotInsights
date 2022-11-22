@@ -702,9 +702,9 @@
 }
 
 .section-reports-hero {
-	padding: 260px 0 220px;
-	background: url(../images/report/hero-bg.png) no-repeat bottom center;
-	background-size: cover;
+	padding: 260px 0 280px;
+	background: url(../images/report/hero-bg.png) no-repeat center bottom -20px;
+	background-size: 100% auto;
 	--s-header-spacing: 0;
 
 	.section-title {
@@ -760,7 +760,7 @@
 }
 
 .section-ecosystem-map {
-	padding: 78px 0 141px;
+	padding: 18px 0 141px;
 	background: url(../images/report/grid-border.png) no-repeat bottom center;
 	background-size: 100% auto;
 	--s-header-width: 970px;
@@ -2091,6 +2091,11 @@
 }
 
 @include media-breakpoint-down(lg) {
+	.section-reports-hero {
+		padding: 260px 0 200px;
+		background-position: center bottom;
+	}
+
 	.section-top-title {
 		font-size: 40px;
 	}
@@ -2305,7 +2310,7 @@
 	}
 
 	.section-ecosystem-map {
-		padding: 78px 0 90px;
+		padding: 18px 0 90px;
 
 		.section-description {
 			font-size: 18px;
