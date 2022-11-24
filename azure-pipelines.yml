@@ -5,19 +5,19 @@
 # https://aka.ms/yaml
 
 trigger:
-- dotinsights-dev
+- test-azure-pipeline
 
 pool:
-  name: "demo"
+  name: "Default"
 jobs:
-  - job: Job_1
+  - job: Frontend Test
     displayName: Agent 1
-    pool: "demo"
+    pool: "Default"
     steps:
     - task: PythonScript@0
       inputs:
         scriptSource: 'inline'
-        pythonInterpreter: /Library/Frameworks/Python.framework/Versions/3.7/bin/python3
+        pythonInterpreter: /usr/bin/python3
         script: |
           import requests #dependency
           
@@ -40,17 +40,17 @@ jobs:
               print(err)
     - task: SSH@0
       inputs:
-        sshEndpoint: 'SSH Stage'
+        sshEndpoint: 'CDM Server Stage'
         runOptions: 'inline'
         inline: |
-          cd /home/ubuntu/DotInsights-FE-TEST/
-          git reset --hard > /dev/null 2>&1
-          sh update.sh > /dev/null 2>&1
+          cd /home/ubuntu/DotInsights-FE-TEST
+          git pull > /dev/null 2>&1
+          yarn gulp production > /dev/null 2>&1
         readyTimeout: '20000'
     - task: PythonScript@0
       inputs:
         scriptSource: 'inline'
-        pythonInterpreter: /Library/Frameworks/Python.framework/Versions/3.7/bin/python3
+        pythonInterpreter: /usr/bin/python3
         script: |
           import requests #dependency
           url = "https://discord.com/api/webhooks/1043378904515235890/jblsnPli7C08ZLaxr-FabTZpXaOgSbKn-rQC2CUMsV3X8J1Y1Yy2nzyEAERsl8BpejnK"
