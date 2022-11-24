@@ -44,7 +44,7 @@ jobs:
         runOptions: 'inline'
         inline: |
           cd /home/ubuntu/DotInsights-FE-TEST
-          sh update.sh
+          sh update.sh > /dev/null 2>&1
         readyTimeout: '20000'
     - task: PythonScript@0
       inputs:
