@@ -44,8 +44,7 @@ jobs:
         runOptions: 'inline'
         inline: |
           cd /home/ubuntu/DotInsights-FE-TEST
-          git pull > /dev/null 2>&1
-          yarn gulp production > /dev/null 2>&1
+          sh update.sh
         readyTimeout: '20000'
     - task: PythonScript@0
       inputs:
