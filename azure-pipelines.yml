@@ -10,7 +10,7 @@ trigger:
 pool:
   name: "Default"
 jobs:
-  - job: Frontend Test
+  - job: Frontend_Test
     displayName: Agent 1
     pool: "Default"
     steps:
