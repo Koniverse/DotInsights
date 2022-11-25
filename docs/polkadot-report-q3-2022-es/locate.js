@@ -1,7 +1,7 @@
 var lang = {
-	ksmPrice: 'KSM Price',
-	dotPrice: 'DOT Price',
-	developmentActivity: 'Development Activity',
+	ksmPrice: 'Precio KSM',
+	dotPrice: 'Precio DOT',
+	developmentActivity: 'Actividad de Desarrollo',
 	runtimeModulesChains: 'Runtime Modules/Chains',
 	developmentTools: 'Development Tools',
 	wallets: 'Wallets',
@@ -19,9 +19,9 @@ var lang = {
 	projectCount: 'Project Count',
 	inUSD: 'In (USD)',
 	outUSD: 'Out (USD)',
-	postsCreated: 'Posts Created',
-	spaceCreated: 'Space Created',
-	users: 'Users',
+	postsCreated: 'Publicación creada',
+	spaceCreated: 'Espacio creado',
+	users: 'Usuarios',
 	videos: 'Videos',
 	readMore: 'Read more...',
 	readLess: 'Read less...'
