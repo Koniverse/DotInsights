@@ -52,10 +52,8 @@
 		    $projectCategoriesList = $( '#project-categories-list' ),
 		    $buttonLoadmore        = $( '#btn-load-more-projects' );
 
-		$( document.body ).on( 'dotinsights/EcosystemMap/Loaded', async function() {
-			await sortAndGroup( dotinsights.Projects );
-			buildFilters();
-			buildList();
+		$( document.body ).on( 'dotinsights/EcosystemMap/Loaded', function() {
+			initProjects();
 		} );
 
 		$searchForm.on( 'keyup', '.search-field', function() {
@@ -79,7 +77,9 @@
 			return false;
 		} );
 
-		$( document.body ).on( 'dotinsights/EcosystemMap/Searching', searchingProjects );
+		$( document.body ).on( 'dotinsights/EcosystemMap/Searching', function() {
+			searchingProjects();
+		} );
 
 		$( document.body ).on( 'click', '.filter-item', function( evt ) {
 			evt.preventDefault();
@@ -150,6 +150,12 @@
 			}, {
 				offset: '100%' // triggerOnce: true
 			} );
+		}
+
+		async function initProjects() {
+			await sortAndGroup( dotinsights.Projects );
+			buildFilters();
+			buildList();
 		}
 
 		async function searchingProjects() {
