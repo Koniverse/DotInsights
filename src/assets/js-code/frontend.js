@@ -68,7 +68,7 @@
 			$navToggler.on( 'click', function( evt ) {
 				evt.preventDefault();
 
-				$nav.stop().slideToggle();
+				$nav.toggleClass( 'opened' );
 			} );
 
 			$( document ).on( 'click', function( e ) {
@@ -77,7 +77,7 @@
 				}
 
 				if ( $( e.target ).closest( $nav ).length === 0 ) {
-					$nav.stop().slideUp();
+					$nav.removeClass( 'opened' );
 				}
 			} );
 		}

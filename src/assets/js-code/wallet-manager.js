@@ -12,7 +12,7 @@
 				logo: '',
 				getInstallUrl: function() {
 					if ( isHandheld ) {
-						return 'https://mobile.subwallet.app';
+						return 'https://mobile.subwallet.app/?url=https%3A%2F%2Fdotinsights.subwallet.app%2F';
 					} else {
 						return isFirefox ? 'https://mzl.la/3rQ0awW' : 'https://bit.ly/3BGqFt1'
 					}
@@ -26,7 +26,7 @@
 				logo: '',
 				getInstallUrl: function() {
 					if ( isHandheld ) {
-						return 'https://mobile.subwallet.app';
+						return 'https://mobile.subwallet.app/?url=https%3A%2F%2Fdotinsights.subwallet.app%2F';
 					} else {
 						return isFirefox ? 'https://mzl.la/3rQ0awW' : 'https://bit.ly/3BGqFt1'
 					}
