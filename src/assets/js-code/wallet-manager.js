@@ -31,6 +31,25 @@
 						return isFirefox ? 'https://mzl.la/3rQ0awW' : 'https://bit.ly/3BGqFt1'
 					}
 				}
+			},
+			talisman: {
+				name: 'Talisman',
+				type: 'substrate',
+				provider: 'talisman',
+				logo: '',
+				getInstallUrl: function() {
+					return 'https://talisman.xyz/download'
+				}
+			},
+			"talisman-evm": {
+				name: 'Talisman - EVM',
+				type: 'evm',
+				provider: 'talismanEth',
+				evmDetect: 'isTalisman',
+				logo: '',
+				getInstallUrl: function() {
+					return 'https://talisman.xyz/download'
+				}
 			}
 			/*,
 			'metamask': {

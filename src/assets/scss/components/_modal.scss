@@ -258,6 +258,13 @@
 			}
 		}
 
+		&.wallet--talisman,
+		&.wallet--talisman-evm {
+			&:after {
+				background: url(../images/projects/talisman.png) no-repeat center;
+			}
+		}
+
 		&.wallet--metamask {
 			&:after {
 				background: url(../images/projects/metamask.png) no-repeat center;
