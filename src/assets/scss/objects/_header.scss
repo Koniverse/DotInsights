@@ -352,11 +352,13 @@
 		transform: translateY(20px);
 		opacity: 0;
 		visibility: hidden;
+		pointer-events: none;
 
 		&.opened {
 			transform: none;
 			opacity: 1;
 			visibility: visible;
+			pointer-events: auto;
 		}
 
 		.nav-link {
