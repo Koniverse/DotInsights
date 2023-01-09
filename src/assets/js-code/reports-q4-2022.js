@@ -150,6 +150,9 @@
 						case 'dev-act-comparison':
 							chartOptions = getChartResponsiveOptionsDevActComparison();
 							break;
+						case 'nomination-pool-staking':
+							chartOptions = getChartResponsiveOptionsNominationPoolStaking();
+							break;
 						case 'vcs-dot-ksm':
 							chartOptions = getChartResponsiveOptionsVCsDotKsm();
 							break;
@@ -361,6 +364,9 @@
 						case 'dev-act-comparison':
 							chartOptions = getChartOptionsDevActComparison( chartName, jsonData );
 							break;
+						case 'nomination-pool-staking':
+							chartOptions = getChartOptionsNominationPoolStaking( chartName, jsonData );
+							break;
 						case 'dot-ksm-account-overview':
 							chartOptions = getChartOptionsDotKsmAccOverview( chartName, jsonData );
 							break;
@@ -404,9 +410,6 @@
 						break;
 					case 'tvl-by-chain':
 						chartOptions = getChartOptionsTvlByChain( chartName );
-						break;
-					case 'nakamoto-coefficient':
-						chartOptions = getChartOptionsNakamotoCoefficient( chartName );
 						break;
 					case 'vcs-dot-ksm':
 						chartOptions = getChartOptionsVCsDotKsm( chartName );
@@ -992,209 +995,6 @@
 			return newOptions;
 		}
 
-		function getChartOptionsNakamotoCoefficient() {
-			var colors            = [
-				    '#EA3572'
-			    ],
-			    baseOptions       = {
-				    color: colors,
-				    textStyle: {
-					    fontFamily: fontFamily,
-					    fontWeight: 500
-				    },
-				    legend: {
-					    show: false
-				    },
-				    grid: {
-					    left: '3%',
-					    right: '3%',
-					    top: '3%',
-					    bottom: '3%',
-					    containLabel: true
-				    },
-				    xAxis: {
-					    type: 'category',
-					    data: [ 'Solana', 'Avalanche', 'Polkadot', 'Cosmos', 'NEAR', 'Polygon', 'Fantom', 'BSC' ],
-					    axisTick: {
-						    show: false
-					    },
-					    axisLine: {
-						    show: true,
-						    lineStyle: {
-							    type: [ 4, 4 ],
-							    color: '#262626'
-						    }
-					    },
-					    splitLine: {
-						    lineStyle: {
-							    type: [ 4, 4 ],
-							    color: [ '#262626' ]
-						    }
-					    },
-					    axisLabel: {
-						    hideOverlap: false,
-						    rotate: 45,
-						    showMaxLabel: true,
-						    overflow: 'breakAll',
-						    formatter: function( value ) {
-							    return '{' + value + '|}{spacing|}{value|' + value + '}';
-						    },
-						    align: 'right',
-						    rich: {
-							    value: {
-								    lineHeight: 30,
-								    align: 'center'
-							    },
-							    spacing: {
-								    width: 7,
-							    },
-							    Solana: {
-								    height: 20,
-								    backgroundColor: {
-									    image: getTokenIcon( 'Solana' )
-								    }
-							    },
-							    Avalanche: {
-								    height: 20,
-								    backgroundColor: {
-									    image: getTokenIcon( 'Avax' )
-								    }
-							    },
-							    Polkadot: {
-								    height: 20,
-								    backgroundColor: {
-									    image: getTokenIcon( 'Polkadot' )
-								    }
-							    },
-							    Cosmos: {
-								    height: 20,
-								    backgroundColor: {
-									    image: getTokenIcon( 'Cosmos' )
-								    }
-							    },
-							    NEAR: {
-								    height: 20,
-								    backgroundColor: {
-									    image: getTokenIcon( 'Near' )
-								    }
-							    },
-							    Polygon: {
-								    height: 20,
-								    backgroundColor: {
-									    image: getTokenIcon( 'Polygon' )
-								    }
-							    },
-							    Fantom: {
-								    height: 20,
-								    backgroundColor: {
-									    image: getTokenIcon( 'Fantom' )
-								    }
-							    },
-							    BSC: {
-								    height: 20,
-								    backgroundColor: {
-									    image: getTokenIcon( 'BSC' )
-								    }
-							    },
-						    },
-						    fontFamily: fontFamily,
-						    fontSize: 13,
-						    fontWeight: 500,
-						    color: '#FFFFFF'
-					    }
-				    },
-				    yAxis: {
-					    type: 'value',
-					    max: 100,
-					    splitNumber: 4,
-					    maxInterval: 25,
-					    axisLine: {
-						    show: false
-					    },
-					    splitLine: {
-						    lineStyle: {
-							    type: [ 4, 4 ],
-							    color: [ '#262626' ]
-						    }
-					    },
-					    axisLabel: {
-						    fontFamily: fontFamily,
-						    fontSize: 12,
-						    fontWeight: 500,
-						    color: '#ccc'
-					    }
-				    },
-				    series: [
-					    {
-						    type: 'bar',
-						    data: [ 27, 28, 82, 7, 7, 3, 3, 7 ],
-						    name: '',
-						    label: {
-							    fontFamily: fontFamily,
-							    fontSize: 13,
-							    fontWeight: 500,
-							    color: '#EA3572',
-							    show: true,
-							    position: 'top'
-						    },
-						    //barMaxWidth: 56,
-						    itemStyle: {
-							    color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
-								    {
-									    offset: 0,
-									    color: '#B82DA7'
-								    },
-								    {
-									    offset: 1,
-									    color: '#EB3571'
-								    }
-							    ] ),
-							    borderRadius: [ 8, 8, 0, 0 ]
-						    },
-					    }
-				    ]
-			    },
-			    responsiveOptions = getChartResponsiveOptionsNakamotoCoefficient();
-
-			return $.extend( true, baseOptions, responsiveOptions );
-		}
-
-		function getChartResponsiveOptionsNakamotoCoefficient() {
-			var newOptions = {};
-
-			if ( window.innerWidth > 767 ) {
-				newOptions = {
-					series: [
-						{
-							label: {
-								fontSize: 17
-							},
-							barMaxWidth: 56,
-							itemStyle: {
-								borderRadius: [ 8, 8, 0, 0 ]
-							}
-						}
-					]
-				};
-			} else {
-				newOptions = {
-					series: [
-						{
-							label: {
-								fontSize: 15
-							},
-							barMaxWidth: 40,
-							itemStyle: {
-								borderRadius: [ 5, 5, 0, 0 ]
-							}
-						}
-					]
-				};
-			}
-
-			return newOptions;
-		}
-
 		function getChartOptionsDotKsmAccOverview( chartName, jsonData ) {
 			var datasets   = [
 				    {
@@ -1417,6 +1217,213 @@
 						}
 					}
 				];
+			}
+
+			return newOptions;
+		}
+
+		function getChartOptionsNominationPoolStaking( chartName, jsonData ) {
+			var totalItems = jsonData.length,
+			    data       = {
+				    total_members: [],
+				    total_stake: [],
+			    },
+			    colors     = [
+				    '#004BFF',
+				    '#E6007A'
+			    ];
+
+			for ( var i = 0; i < totalItems; i ++ ) {
+				data.total_members.push( [ jsonData[ i ].date, jsonData[ i ].total_members ] );
+				data.total_stake.push( [ jsonData[ i ].date, jsonData[ i ].total_stake ] );
+			}
+
+			var baseOptions = {
+				color: colors,
+				textStyle: {
+					fontFamily: fontFamily,
+					fontWeight: 500
+				},
+				tooltip: defaultTooltipSettings,
+				legend: defaultLegendSettings,
+				grid: {
+					top: '3%',
+					left: '25px',
+					right: '25px',
+					containLabel: true
+				},
+				xAxis: {
+					type: 'time',
+					boundaryGap: false,
+					splitLine: {
+						show: false,
+						lineStyle: {
+							type: [ 4, 4 ],
+							color: [ '#262626' ]
+						}
+					},
+					axisTick: {
+						show: false
+					},
+					axisLine: {
+						lineStyle: {
+							color: '#262626'
+						}
+					},
+					axisPointer: defaultAxisPointerLabelSettings,
+					axisLabel: {
+						align: 'left',
+						formatter: dateFormatter,
+						color: '#ccc'
+					}
+				},
+				yAxis: [
+					{
+						type: 'value',
+						name: locate.totalPoolsStake,
+						nameTextStyle: {
+							fontSize: 0
+						},
+						alignTicks: true,
+						axisLine: {
+							show: false,
+						},
+						min: 0,
+						max: 1000000,
+						interval: 250000,
+						splitLine: {
+							lineStyle: {
+								type: [ 4, 4 ],
+								color: [ '#262626' ]
+							}
+						},
+						axisPointer: {
+							label: {
+								color: '#fff',
+								backgroundColor: colors[ 1 ]
+							}
+						},
+						axisLabel: {
+							color: '#ccc'
+						}
+					},
+					{
+						type: 'value',
+						name: locate.totalPoolsMembers,
+						nameTextStyle: {
+							fontSize: 0
+						},
+						position: 'right',
+						alignTicks: true,
+						axisLine: {
+							show: false,
+						},
+						min: 0,
+						max: 4000,
+						interval: 1000,
+						splitLine: {
+							lineStyle: {
+								type: [ 4, 4 ],
+								color: [ '#262626' ]
+							}
+						},
+						axisPointer: {
+							label: {
+								color: '#fff',
+								backgroundColor: colors[ 0 ]
+							}
+						},
+						axisLabel: {
+							color: '#ccc'
+						}
+					}
+				],
+				series: [
+					{
+						name: locate.totalPoolsMembers,
+						data: data.total_members,
+						type: 'bar',
+						smooth: true,
+						yAxisIndex: 1,
+						showSymbol: false,
+						emphasis: {
+							focus: 'series'
+						}
+					},
+					{
+						name: locate.totalPoolsStake,
+						data: data.total_stake,
+						type: 'line',
+						smooth: true,
+						showSymbol: false,
+						emphasis: {
+							focus: 'series'
+						}
+					}
+				]
+			};
+			var responsiveOptions = getChartResponsiveOptionsNominationPoolStaking();
+
+			$.extend( true, baseOptions, responsiveOptions );
+
+			return baseOptions;
+		}
+
+		function getChartResponsiveOptionsNominationPoolStaking() {
+			var newOptions = {};
+
+			if ( window.innerWidth > 767 ) {
+				newOptions = {
+					yAxis: [
+						{
+							axisLabel: {
+								formatter: '{value}'
+							}
+						}, {
+							axisLabel: {
+								formatter: '{value}'
+							}
+						}
+					],
+					xAxis: {
+						splitNumber: 3,
+						axisLabel: {
+							formatter: dateFormatter
+						}
+					}
+				};
+			} else {
+				newOptions = {
+					yAxis: [
+						{
+							axisLabel: {
+								formatter: function( value ) {
+									return NumberUtil.formatMoney( value );
+								}
+							}
+						}, {
+							axisLabel: {
+								formatter: function( value ) {
+									return NumberUtil.formatMoney( value );
+								}
+							}
+						}
+					],
+					xAxis: {
+						splitNumber: 3,
+						axisLabel: {
+							formatter: dateShortFormatter
+						}
+					}
+				};
+
+				if ( window.innerWidth < 460 ) {
+					$.extend( newOptions, {
+						xAxis: {
+							splitNumber: 2
+						}
+					} )
+				}
 			}
 
 			return newOptions;

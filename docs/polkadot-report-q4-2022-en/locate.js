@@ -3,6 +3,8 @@ var lang = {
 	dotPrice: 'DOT Price',
 	activeDevelopers: 'Active developers',
 	codeCommits: 'Code commits',
+	totalPoolsMembers: 'Total Pools Members',
+	totalPoolsStake: 'Total Pools Stake (DOT)',
 	developmentActivity: 'Development Activity',
 	runtimeModulesChains: 'Runtime Modules/Chains',
 	developmentTools: 'Development Tools',
