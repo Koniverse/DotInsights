@@ -2809,7 +2809,7 @@
 		function getChartOptionsTotalPlotsSaleSkybreach( chartName, jsonData ) {
 			var totalItems = jsonData.length,
 			    data       = {
-				    cumulative_plot_count: [],
+				    cumulative_plot: [],
 				    cumulative_volume: [],
 			    },
 			    colors     = [
@@ -2818,7 +2818,7 @@
 			    ];
 
 			for ( var i = 0; i < totalItems; i ++ ) {
-				data.cumulative_plot_count.push( [ jsonData[ i ].date, jsonData[ i ].cumulative_plot_count ] );
+				data.cumulative_plot.push( [ jsonData[ i ].date, jsonData[ i ].cumulative_plot ] );
 				data.cumulative_volume.push( [ jsonData[ i ].date, jsonData[ i ].cumulative_volume ] );
 			}
 
@@ -2912,7 +2912,7 @@
 				series: [
 					{
 						name: locate.cumulativePlotCount,
-						data: data.cumulative_plot_count,
+						data: data.cumulative_plot,
 						type: 'line',
 						smooth: true,
 						showSymbol: false,
