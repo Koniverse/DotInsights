@@ -21,6 +21,64 @@
 		    dateShortFormatter              = '{MM}/{yyyy}',
 		    fontFamily                      = 'Plus Jakarta Sans',
 		    echarts                         = window.echarts,
+		    defaultDataZoom                 = {
+			    type: 'slider',
+			    backgroundColor: '#232323',
+			    borderColor: '#232323',
+			    dataBackground: {
+				    lineStyle: {
+					    color: '#777'
+				    },
+				    areaStyle: {
+					    opacity: 0.6,
+					    color: new echarts.graphic.LinearGradient( 0.5, 0, 0.5, 1, [
+						    {
+							    offset: 0,
+							    color: 'rgba(88, 88, 88,0)'
+						    },
+						    {
+							    offset: 1,
+							    color: 'rgba(140, 140, 140,1)'
+						    }
+					    ] )
+				    }
+			    },
+			    selectedDataBackground: {
+				    lineStyle: {
+					    color: '#777'
+				    },
+				    areaStyle: {
+					    opacity: 0.6,
+					    color: new echarts.graphic.LinearGradient( 0.5, 0, 0.5, 1, [
+						    {
+							    offset: 0,
+							    color: 'rgba(88, 88, 88,0)'
+						    },
+						    {
+							    offset: 1,
+							    color: 'rgba(140, 140, 140,1)'
+						    }
+					    ] )
+				    }
+			    },
+			    fillerColor: 'rgba(0, 75, 255, 0.38)',
+			    textStyle: {
+				    color: '#ccc'
+			    },
+			    handleStyle: {
+				    borderWidth: 0,
+				    borderCap: 'round',
+				    color: '#3C72FF'
+			    },
+			    moveHandleStyle: {
+				    borderWidth: 0,
+				    color: '#3C72FF',
+			    },
+			    start: 0,
+			    end: 10,
+			    height: 32,
+			    bottom: 45
+		    },
 		    defaultTooltipStyle             = {
 			    padding: [ 15, 20 ],
 			    backgroundColor: '#000',
@@ -74,8 +132,8 @@
 		    },
 		    defaultAxisPointerLabelSettings = {
 			    label: {
-				    color: '#fff',
-				    backgroundColor: '#004bff'
+				    color: '#000',
+				    backgroundColor: '#ccc'
 			    }
 		    };
 
@@ -153,18 +211,28 @@
 						case 'nomination-pool-staking':
 							chartOptions = getChartResponsiveOptionsNominationPoolStaking();
 							break;
-						case 'vcs-dot-ksm':
-							chartOptions = getChartResponsiveOptionsVCsDotKsm();
+						case 'total-dot-raised-parachain':
+						case 'total-ksm-raised-parachain':
+							chartOptions = getChartResponsiveOptionsTotalTokenRaisedParachain();
 							break;
-						case 'dot-ksm-account-overview':
-							chartOptions = getChartResponsiveOptionsDotKsmAccOverview();
+						case 'xcm-transfers':
+							chartOptions = getChartResponsiveOptionsXCMTransfers();
 							break;
-						case 'dot-treasury-activity':
-							chartOptions = getChartResponsiveOptionsDotTreasuryActivity();
+						case 'xcm-total-amount-received':
+							chartOptions = getChartResponsiveOptionsXCMTotalAmountReceived();
 							break;
-						case 'dex-with-average-tvl':
-						case 'tvl-lending-borrowing':
-						case 'stablecoin-total-issuance':
+						case 'twitter-followers':
+						case 'tvl-defi-parachain':
+						case 'tvl-dot-dex':
+						case 'tvl-ksm-dex':
+						case 'tvl-dot-lending':
+						case 'tvl-ksm-lending':
+						case 'tvl-dot-liquid-staking':
+						case 'tvl-ksm-liquid-staking':
+						case 'tvl-liquid-crowdloan':
+						case 'stablecoin-issuance':
+						case 'total-bridge-tvl':
+						case 'mf-daily-active-user':
 							chartOptions = getChartLinesBaseResponsiveOptions( chartName );
 							break;
 						case 'nft-marketplace-daily-volume':
@@ -173,8 +241,11 @@
 						case 'web3-foundation-grants':
 							chartOptions = getChartResponsiveOptionsWeb3FoundationGrants( chartName );
 							break;
-						case 'tvl-by-chain':
-							chartOptions = getChartResponsiveOptionsTvlByChain( chartName );
+						case 'total-plots-sale-skybreach':
+							chartOptions = getChartResponsiveOptionsTotalPlotsSaleSkybreach( chartName );
+							break;
+						case 'the-great-escape-users':
+							chartOptions = getChartResponsiveOptionsTheGreatEscapeUsers();
 							break;
 					}
 
@@ -221,55 +292,55 @@
 					code: 'en',
 					name: 'English',
 					flag: 'us.svg',
-					url: 'polkadot-report-q3-2022-en',
+					url: 'polkadot-report-q4-2022-en',
 					isActive: 1,
 				}, {
 					code: 'pt',
 					name: 'Português',
 					flag: 'pt.svg',
-					url: 'polkadot-report-q3-2022-pt',
+					url: 'polkadot-report-q4-2022-pt',
 					isActive: 1,
 				}, {
 					code: 'vi',
 					name: 'Tiếng Việt',
 					flag: 'vn.svg',
-					url: 'polkadot-report-q3-2022-vi',
+					url: 'polkadot-report-q4-2022-vi',
 					isActive: 1,
 				}, {
 					code: 'zh',
 					name: '中文',
 					flag: 'cn.svg',
-					url: 'polkadot-report-q3-2022-zh',
+					url: 'polkadot-report-q4-2022-zh',
 					isActive: 1,
 				}, {
 					code: 'id_ID',
 					name: 'Bahasa Indonesia',
 					flag: 'id.svg',
-					url: 'polkadot-report-q3-2022-id',
+					url: 'polkadot-report-q4-2022-id',
 					isActive: 1,
 				}, {
 					code: 'es',
 					name: 'Español',
 					flag: 'es.svg',
-					url: 'polkadot-report-q3-2022-es',
+					url: 'polkadot-report-q4-2022-es',
 					isActive: 1,
 				}, {
 					code: 'kr',
 					name: '한국어',
 					flag: 'kr.svg',
-					url: 'polkadot-report-q3-2022-kr',
+					url: 'polkadot-report-q4-2022-kr',
 					isActive: 1,
 				}, {
 					code: 'ja',
 					name: '日本語',
 					flag: 'jp.svg',
-					url: 'polkadot-report-q3-2022-ja',
+					url: 'polkadot-report-q4-2022-ja',
 					isActive: 1,
 				}, {
 					code: 'fr',
 					name: 'Français',
 					flag: 'fr.svg',
-					url: 'polkadot-report-q3-2022-fr',
+					url: 'polkadot-report-q4-2022-fr',
 					isActive: 1,
 				}
 			];
@@ -330,7 +401,8 @@
 				text: 'loading',
 				color: '#004bff',
 				textColor: '#004bff',
-				maskColor: '#151515',
+				//maskColor: '#151515',
+				maskColor: 'rgba(0,0,0,0)',
 				zlevel: 0,
 				fontSize: 18,
 				showSpinner: true,
@@ -367,30 +439,60 @@
 						case 'nomination-pool-staking':
 							chartOptions = getChartOptionsNominationPoolStaking( chartName, jsonData );
 							break;
-						case 'dot-ksm-account-overview':
-							chartOptions = getChartOptionsDotKsmAccOverview( chartName, jsonData );
+						case 'staking-ratio':
+							chartOptions = getChartOptionsStakingRatio( chartName, jsonData );
 							break;
-						case 'tvl-lending-borrowing':
-							chartOptions = getChartOptionsTvlLendingBorrowing( chartName, jsonData );
+						case 'dot-active-and-new-acc':
+						case 'ksm-active-and-new-acc':
+							chartOptions = getChartOptionsActiveAndNewAccount( chartName, jsonData );
 							break;
-						case 'tvl-liquid-staking':
-							chartOptions = getChartOptionsTvlLiquidStaking( chartName, jsonData );
+						case 'total-dot-raised-parachain':
+						case 'total-ksm-raised-parachain':
+							chartOptions = getChartOptionsTotalTokenRaisedParachain( chartName, jsonData );
 							break;
-						case 'dex-with-average-tvl-higher-than-10m':
-							chartOptions = getChartOptionsDexWithAverageTvlHigherThan10M( chartName, jsonData );
+						case 'twitter-followers':
+							chartOptions = getChartOptionsTwitterFollowers( chartName, jsonData );
 							break;
-						case 'dex-with-average-tvl-lower-than-5m':
-							chartOptions = getChartOptionsDexWithAverageTvlLowerThan5M( chartName, jsonData );
+						case 'tvl-defi-parachain':
+							chartOptions = getChartOptionsDefiParachain( chartName, jsonData );
 							break;
-						case 'stablecoin-total-issuance':
-							chartOptions = getChartOptionsStablecoinTotalIssuance( chartName, jsonData );
+						case 'tvl-dot-dex':
+							chartOptions = getChartOptionsTvlDotDex( chartName, jsonData );
+							break;
+						case 'tvl-ksm-dex':
+							chartOptions = getChartOptionsTvlKsmDex( chartName, jsonData );
+							break;
+						case 'tvl-dot-lending':
+							chartOptions = getChartOptionsTvlDotLending( chartName, jsonData );
+							break;
+						case 'tvl-ksm-lending':
+							chartOptions = getChartOptionsTvlKsmLending( chartName, jsonData );
+							break;
+						case 'tvl-dot-liquid-staking':
+							chartOptions = getChartOptionsTvlDotLiquidStaking( chartName, jsonData );
+							break;
+						case 'tvl-ksm-liquid-staking':
+							chartOptions = getChartOptionsTvlKsmLiquidStaking( chartName, jsonData );
+							break;
+						case 'tvl-liquid-crowdloan':
+							chartOptions = getChartOptionsTvlLiquidCrowdloan( chartName, jsonData );
+							break;
+						case 'stablecoin-issuance':
+							chartOptions = getChartOptionsStablecoinIssuance( chartName, jsonData );
+							break;
+						case 'total-bridge-tvl':
+							chartOptions = getChartOptionsTotalBridgeTvl( chartName, jsonData );
 							break;
 						case 'nft-marketplace-daily-volume':
 							chartOptions = getChartOptionsNftMarketplaceDailyVolume( chartName, jsonData );
 							break;
-						case 'dot-treasury-activity':
-							chartOptions = getChartOptionsDotTreasuryActivity( chartName, jsonData );
+						case 'mf-daily-active-user':
+							chartOptions = getChartOptionsMoonfitDailyActiveUser( chartName, jsonData );
 							break;
+						case 'total-plots-sale-skybreach':
+							chartOptions = getChartOptionsTotalPlotsSaleSkybreach( chartName, jsonData );
+							break;
+
 						case 'subsocial-daily-activities':
 							chartOptions = getChartOptionsSubsocialDailyActivities( chartName, jsonData );
 							break;
@@ -408,14 +510,14 @@
 					case 'web3-foundation-grants':
 						chartOptions = getChartOptionsWeb3FoundationGrants( chartName );
 						break;
-					case 'tvl-by-chain':
-						chartOptions = getChartOptionsTvlByChain( chartName );
-						break;
-					case 'vcs-dot-ksm':
-						chartOptions = getChartOptionsVCsDotKsm( chartName );
-						break;
 					case 'xcm-transfers':
 						chartOptions = getChartOptionsXCMTransfers( chartName );
+						break;
+					case 'xcm-total-amount-received':
+						chartOptions = getChartOptionsXCMTotalAmountReceived( chartName );
+						break;
+					case 'the-great-escape-users':
+						chartOptions = getChartOptionsTheGreatEscapeUsers( chartName );
 						break;
 				}
 				chartInstance.hideLoading();
@@ -444,6 +546,7 @@
 
 			var baseOptions = {
 				color: colors,
+				//dataZoom: defaultDataZoom,
 				textStyle: {
 					fontFamily: fontFamily,
 					fontWeight: 500
@@ -454,6 +557,7 @@
 					left: '4px',
 					right: 95,
 					top: '3%',
+					//bottom: 100, // DataZoom + Legend.
 					containLabel: true
 				},
 				xAxis: {
@@ -476,6 +580,7 @@
 					},
 					axisPointer: defaultAxisPointerLabelSettings,
 					axisLabel: {
+						margin: 12,
 						align: 'left',
 						formatter: dateFormatter,
 						color: '#ccc'
@@ -572,7 +677,6 @@
 						type: 'line',
 						smooth: true,
 						showSymbol: false,
-						//stack: 'Total',
 						emphasis: {
 							focus: 'series'
 						}
@@ -587,7 +691,6 @@
 						smooth: true,
 						showSymbol: false,
 						yAxisIndex: 1,
-						//stack: 'Total',
 						emphasis: {
 							focus: 'series'
 						}
@@ -614,7 +717,6 @@
 						smooth: true,
 						showSymbol: false,
 						yAxisIndex: 2,
-						//stack: 'Total',
 						emphasis: {
 							focus: 'series'
 						}
@@ -634,7 +736,7 @@
 			if ( window.innerWidth > 767 ) {
 				newOptions = {
 					xAxis: {
-						splitNumber: 8
+						splitNumber: 5
 					}
 				};
 			} else {
@@ -734,7 +836,7 @@
 						axisPointer: {
 							label: {
 								color: '#020722',
-								backgroundColor: '#66E1B6'
+								backgroundColor: colors[ 0 ]
 							}
 						},
 						axisLabel: {
@@ -757,6 +859,12 @@
 							lineStyle: {
 								type: [ 4, 4 ],
 								color: [ '#262626' ]
+							}
+						},
+						axisPointer: {
+							label: {
+								color: '#fff',
+								backgroundColor: colors[ 1 ]
 							}
 						},
 						axisLabel: {
@@ -995,233 +1103,6 @@
 			return newOptions;
 		}
 
-		function getChartOptionsDotKsmAccOverview( chartName, jsonData ) {
-			var datasets   = [
-				    {
-					    name: 'dot_cumulative',
-					    label: 'DOT'
-				    }, {
-					    name: 'ksm_cumulative',
-					    label: 'KSM'
-				    }
-			    ],
-			    colors     = [
-				    '#E6007A',
-				    '#004BFF',
-			    ],
-
-			    totalItems = jsonData.length,
-			    data       = [];
-
-			datasets.forEach( function( dataset ) {
-				data[ dataset.name ] = [];
-			} );
-
-			for ( var i = 0; i < totalItems; i ++ ) {
-				datasets.forEach( function( dataset ) {
-					var value = jsonData[ i ][ dataset.name ] ? NumberUtil.validate( jsonData[ i ][ dataset.name ] ) : '';
-					data[ dataset.name ].push( [ jsonData[ i ].date, value ] );
-				} );
-			}
-
-			var baseOptions       = {
-				    color: colors,
-				    textStyle: {
-					    fontFamily: fontFamily,
-					    fontWeight: 500
-				    },
-				    tooltip: defaultTooltipSettings,
-				    legend: defaultLegendSettings,
-				    grid: {
-					    left: '3%',
-					    right: '3%',
-					    top: '3%',
-					    containLabel: true
-				    },
-				    xAxis: {
-					    type: 'time',
-					    boundaryGap: [ '0%', '0%' ],
-					    splitLine: {
-						    show: true,
-						    lineStyle: {
-							    type: [ 4, 4 ],
-							    color: [ '#262626' ]
-						    }
-					    },
-					    axisTick: {
-						    show: false
-					    },
-					    axisLine: {
-						    show: true,
-						    lineStyle: {
-							    color: '#262626'
-						    }
-					    },
-					    axisPointer: defaultAxisPointerLabelSettings,
-					    axisLabel: {
-						    formatter: dateFormatter,
-						    color: '#ccc'
-					    }
-				    },
-				    yAxis: [
-					    {
-						    name: 'DOT',
-						    type: 'value',
-						    position: 'left',
-						    splitLine: {
-							    lineStyle: {
-								    type: [ 4, 4 ],
-								    color: [ '#262626' ]
-							    }
-						    },
-						    axisLine: {
-							    show: false,
-							    lineStyle: {
-								    type: [ 4, 4 ],
-								    color: '#262626'
-							    }
-						    },
-						    axisPointer: defaultAxisPointerLabelSettings,
-						    axisLabel: {
-							    color: '#ccc'
-						    }
-					    }, {
-						    name: 'KSM',
-						    type: 'value',
-						    position: 'right',
-						    splitLine: {
-							    lineStyle: {
-								    type: [ 4, 4 ],
-								    color: [ '#262626' ]
-							    }
-						    },
-						    axisLine: {
-							    show: false,
-							    lineStyle: {
-								    type: [ 4, 4 ],
-								    color: '#262626'
-							    }
-						    },
-						    axisPointer: defaultAxisPointerLabelSettings,
-						    axisLabel: {
-							    color: '#ccc'
-						    }
-					    }
-				    ],
-				    series: [
-					    {
-						    name: 'DOT',
-						    data: data.dot_cumulative,
-						    areaStyle: {
-							    color: new echarts.graphic.LinearGradient( 0.5, 0.5, 1, 1, [
-								    {
-									    offset: 0.6,
-									    color: 'rgba(93,25,110,0.6)'
-								    },
-								    {
-									    offset: 1,
-									    color: 'rgba(93,25,110,0)'
-								    }
-							    ] )
-						    },
-						    itemStyle: {
-							    color: colors[ 0 ]
-						    },
-						    type: 'line',
-						    z: 9,
-						    smooth: true,
-						    showSymbol: false,
-						    emphasis: {
-							    focus: 'series'
-						    },
-					    }, {
-						    name: 'KSM',
-						    data: data.ksm_cumulative,
-						    areaStyle: {
-							    color: new echarts.graphic.LinearGradient( 0.5, 0.5, 1, 1, [
-								    {
-									    offset: 0.6,
-									    color: 'rgba(14,40,104,0.6)'
-								    },
-								    {
-									    offset: 1,
-									    color: 'rgba(14,40,104,0)'
-								    }
-							    ] )
-						    },
-						    itemStyle: {
-							    color: colors[ 1 ]
-						    },
-						    yAxisIndex: 1,
-						    type: 'line',
-						    smooth: true,
-						    showSymbol: false,
-						    emphasis: {
-							    focus: 'series'
-						    },
-					    },
-				    ]
-			    },
-			    responsiveOptions = getChartResponsiveOptionsDotKsmAccOverview();
-
-			return $.extend( true, baseOptions, responsiveOptions );
-		}
-
-		function getChartResponsiveOptionsDotKsmAccOverview() {
-			var newOptions = {};
-
-			if ( window.innerWidth < 460 ) {
-				newOptions[ 'xAxis' ] = {
-					splitNumber: 2
-				};
-			} else if ( window.innerWidth < 768 ) {
-				newOptions[ 'xAxis' ] = {
-					splitNumber: 3
-				};
-
-			} else if ( window.innerWidth < 1024 ) {
-				newOptions[ 'xAxis' ] = {
-					splitNumber: 4
-				};
-			} else {
-				newOptions[ 'xAxis' ] = {
-					splitNumber: 6
-				};
-			}
-
-			if ( window.innerWidth < 768 ) {
-				newOptions[ 'yAxis' ] = [
-					{
-						axisLabel: {
-							formatter: function( value ) {
-								return NumberUtil.formatMoney( value );
-							}
-						}
-					}, {
-						axisLabel: {
-							formatter: function( value ) {
-								return NumberUtil.formatMoney( value );
-							}
-						}
-					}
-				];
-			} else {
-				newOptions[ 'yAxis' ] = [
-					{
-						axisLabel: {
-							formatter: '{value}'
-						}
-					}, {
-						axisLabel: {
-							formatter: '{value}'
-						}
-					}
-				];
-			}
-
-			return newOptions;
-		}
-
 		function getChartOptionsNominationPoolStaking( chartName, jsonData ) {
 			var totalItems = jsonData.length,
 			    data       = {
@@ -1288,8 +1169,6 @@
 						axisLine: {
 							show: false,
 						},
-						min: 0,
-						max: 1000000,
 						interval: 250000,
 						splitLine: {
 							lineStyle: {
@@ -1318,9 +1197,6 @@
 						axisLine: {
 							show: false,
 						},
-						min: 0,
-						max: 4000,
-						interval: 1000,
 						splitLine: {
 							lineStyle: {
 								type: [ 4, 4 ],
@@ -1429,18 +1305,231 @@
 			return newOptions;
 		}
 
-		function getChartOptionsVCsDotKsm() {
-			var colors            = [
-				    '#004BFF'
+		function getChartOptionsStakingRatio( chartName, jsonData ) {
+			var datasets          = [
+				    {
+					    name: 'ratio',
+					    label: 'Ratio',
+					    options: {
+						    lineStyle: {
+							    width: 4
+						    }
+					    }
+				    }
 			    ],
-			    baseOptions       = {
+			    colors            = [
+				    '#E6007A'
+			    ],
+			    chartExtraOptions = {
+				    legend: {
+					    show: false,
+				    },
+				    grid: {
+					    bottom: '3%'
+				    },
+				    yAxis: {
+					    min: 0,
+					    max: 100,
+					    interval: 25,
+					    axisLabel: {
+						    formatter: '{value}%'
+					    }
+				    },
+				    xAxis: {
+					    axisLine: {
+						    show: false,
+					    },
+					    splitLine: {
+						    show: true,
+						    lineStyle: {
+							    type: [ 4, 4 ],
+							    color: [ '#262626' ]
+						    }
+					    }
+				    },
+				    tooltip: {
+					    valueFormatter: function( value ) {
+						    return value + '%';
+					    }
+				    }
+			    };
+
+			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors, null, null, chartExtraOptions );
+			var responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
+			return $.extend( true, {}, baseOptions, responsiveOptions );
+		}
+
+		function getChartOptionsActiveAndNewAccount( chartName, jsonData ) {
+			var totalItems = jsonData.length,
+			    data       = {
+				    active: [],
+				    new: [],
+			    },
+			    colors     = [
+				    '#004BFF',
+				    '#E6007A'
+			    ];
+
+			for ( var i = 0; i < totalItems; i ++ ) {
+				data.active.push( [ jsonData[ i ].date, jsonData[ i ].active ] );
+				data.new.push( [ jsonData[ i ].date, jsonData[ i ].new ] );
+			}
+
+			var baseOptions = {
+				color: colors,
+				textStyle: {
+					fontFamily: fontFamily,
+					fontWeight: 500
+				},
+				tooltip: defaultTooltipSettings,
+				legend: defaultLegendSettings,
+				grid: {
+					top: '3%',
+					left: '3%',
+					right: '3%',
+					containLabel: true
+				},
+				xAxis: {
+					type: 'time',
+					boundaryGap: false,
+					splitLine: {
+						show: true,
+						lineStyle: {
+							type: [ 4, 4 ],
+							color: [ '#262626' ]
+						}
+					},
+					axisTick: {
+						show: false
+					},
+					axisLine: {
+						lineStyle: {
+							color: '#262626'
+						}
+					},
+					axisPointer: defaultAxisPointerLabelSettings,
+					axisLabel: {
+						align: 'left',
+						formatter: dateFormatter,
+						color: '#ccc'
+					}
+				},
+				yAxis: {
+					type: 'value',
+					alignTicks: true,
+					axisLine: {
+						show: false,
+					},
+					splitNumber: 4,
+					splitLine: {
+						lineStyle: {
+							type: [ 4, 4 ],
+							color: [ '#262626' ]
+						}
+					},
+					axisPointer: defaultAxisPointerLabelSettings,
+					axisLabel: {
+						color: '#ccc'
+					}
+				},
+				series: [
+					{
+						name: locate.activeAccount,
+						data: data.active,
+						type: 'line',
+						smooth: true,
+						showSymbol: false,
+						emphasis: {
+							focus: 'series'
+						}
+					},
+					{
+						name: locate.newAccount,
+						data: data.new,
+						type: 'line',
+						smooth: true,
+						showSymbol: false,
+						emphasis: {
+							focus: 'series'
+						}
+					}
+				]
+			};
+			var responsiveOptions = getChartResponsiveOptionsActiveAndNewAccount();
+
+			$.extend( true, baseOptions, responsiveOptions );
+
+			return baseOptions;
+		}
+
+		function getChartResponsiveOptionsActiveAndNewAccount() {
+			var newOptions = {};
+
+			if ( window.innerWidth > 767 ) {
+				newOptions = {
+					yAxis: {
+						axisLabel: {
+							formatter: '{value}'
+						}
+					},
+					xAxis: {
+						splitNumber: 3,
+						axisLabel: {
+							formatter: dateFormatter
+						}
+					}
+				};
+			} else {
+				newOptions = {
+					yAxis: {
+						axisLabel: {
+							formatter: function( value ) {
+								return NumberUtil.formatMoney( value );
+							}
+						}
+					},
+					xAxis: {
+						splitNumber: 3,
+						axisLabel: {
+							formatter: dateShortFormatter
+						}
+					}
+				};
+
+				if ( window.innerWidth < 460 ) {
+					$.extend( newOptions, {
+						xAxis: {
+							splitNumber: 2
+						}
+					} )
+				}
+			}
+
+			return newOptions;
+		}
+
+		function getChartOptionsTotalTokenRaisedParachain( chartName, jsonData ) {
+			var totalItems = jsonData.length,
+			    data       = [],
+			    cats       = [],
+			    colors     = [
+				    '#004BFF'
+			    ];
+
+			for ( var i = 0; i < totalItems; i ++ ) {
+				cats.push( jsonData[ i ].project );
+				data.push( NumberUtil.validate( jsonData[ i ].funds_raised ) );
+			}
+
+			var baseOptions       = {
 				    color: colors,
+				    tooltip: defaultTooltipSettings,
 				    textStyle: {
 					    fontFamily: fontFamily,
 					    fontWeight: 500
 				    },
 				    grid: {
-					    left: 65,
+					    left: '3%',
 					    right: '3%',
 					    top: '3%',
 					    bottom: '3%',
@@ -1448,18 +1537,7 @@
 				    },
 				    xAxis: {
 					    type: 'category',
-					    data: [
-						    'DFG',
-						    'Au21 Capital',
-						    'NGC Ventures',
-						    'Hypersphere',
-						    'Illusionist Group',
-						    'CMS Holdings',
-						    'Waterdrip Cap',
-						    'KR1',
-						    'LD Capital',
-						    'Signum Capital'
-					    ],
+					    data: cats,
 					    axisTick: {
 						    show: false
 					    },
@@ -1476,6 +1554,7 @@
 							    color: [ '#262626' ]
 						    }
 					    },
+					    axisPointer: defaultAxisPointerLabelSettings,
 					    axisLabel: {
 						    hideOverlap: false,
 						    showMaxLabel: true,
@@ -1483,24 +1562,14 @@
 						    rotate: 45,
 						    align: 'right',
 						    fontFamily: fontFamily,
-						    fontSize: 12,
+						    fontSize: 10,
 						    fontWeight: 500,
-						    color: '#FFFFFF'
+						    color: '#ccc'
 					    }
 				    },
 				    yAxis: {
 					    type: 'value',
 					    name: locate.projectCount,
-					    nameLocation: 'middle',
-					    nameGap: 62,
-					    nameTextStyle: {
-						    fontFamily: fontFamily,
-						    fontWeight: '500',
-						    fontSize: 17,
-						    color: '#ccc'
-					    },
-					    splitNumber: 4,
-					    maxInterval: 25,
 					    axisLine: {
 						    show: false
 					    },
@@ -1510,6 +1579,8 @@
 							    color: [ '#262626' ]
 						    }
 					    },
+					    splitNumber: 3,
+					    axisPointer: defaultAxisPointerLabelSettings,
 					    axisLabel: {
 						    fontFamily: fontFamily,
 						    fontSize: 12,
@@ -1520,79 +1591,145 @@
 				    series: [
 					    {
 						    type: 'bar',
-						    data: [ 53, 40, 38, 37, 32, 31, 27, 26, 25, 25 ],
+						    data: data,
 						    name: '',
 						    label: {
-							    fontFamily: fontFamily,
-							    fontWeight: 700,
-							    show: true,
-							    position: 'insideTop',
-							    padding: [ 7, 0, 0, 0 ]
+							    show: false,
 						    },
+						    barMaxWidth: 15,
+						    itemStyle: {
+							    borderRadius: [ 2, 2, 0, 0 ]
+						    }
 					    }
 				    ]
 			    },
-			    responsiveOptions = getChartResponsiveOptionsVCsDotKsm();
+			    responsiveOptions = getChartResponsiveOptionsTotalTokenRaisedParachain();
 
 			return $.extend( true, baseOptions, responsiveOptions );
 		}
 
-		function getChartResponsiveOptionsVCsDotKsm() {
+		function getChartResponsiveOptionsTotalTokenRaisedParachain() {
 			var newOptions = {};
 
-			if ( window.innerWidth < 460 ) {
-				newOptions = {
-					series: [
-						{
-							label: {
-								fontSize: 12
-							},
-							barMaxWidth: 32,
-							itemStyle: {
-								borderRadius: [ 5, 5, 0, 0 ]
-							}
-						}
-					]
-				};
-			} else if ( window.innerWidth < 768 ) {
-				newOptions = {
-					series: [
-						{
-							label: {
-								fontSize: 14
-							},
-							barMaxWidth: 40,
-							itemStyle: {
-								borderRadius: [ 5, 5, 0, 0 ]
-							}
-						}
-					]
+			if ( window.innerWidth > 767 ) {
+				newOptions[ 'yAxis' ] = {
+					axisLabel: {
+						formatter: "{value}"
+					}
 				};
 			} else {
-				newOptions = {
-					series: [
-						{
-							label: {
-								fontSize: 16
-							},
-							barMaxWidth: 50,
-							itemStyle: {
-								borderRadius: [ 8, 8, 0, 0 ]
-							}
+				newOptions[ 'yAxis' ] = {
+					axisLabel: {
+						formatter: function( value ) {
+							return NumberUtil.formatMoney( value );
 						}
-					]
+					}
 				};
 			}
 
 			return newOptions;
 		}
 
+		function getChartOptionsTwitterFollowers( chartName, jsonData ) {
+			var datasets          = [
+				    {
+					    name: 'count',
+					    label: 'Followers',
+					    options: {
+						    areaStyle: {
+							    color: new echarts.graphic.LinearGradient( 0.45, 0, 0.5, 1, [
+								    {
+									    offset: 0,
+									    color: 'rgba(28, 135, 236, 0.7)'
+								    },
+								    {
+									    offset: 1,
+									    color: 'rgba(28, 135, 236, 0)'
+								    }
+							    ] )
+						    }
+					    }
+				    }
+			    ],
+			    colors            = [
+				    '#1C87EC'
+			    ],
+			    chartExtraOptions = {
+				    legend: {
+					    show: false
+				    },
+				    grid: {
+					    bottom: '3%'
+				    },
+				    xAxis: {
+					    splitLine: {
+						    show: true,
+						    lineStyle: {
+							    type: [ 4, 4 ],
+							    color: [ '#262626' ]
+						    }
+					    },
+				    },
+				    yAxis: {
+					    min: 1000000,
+					    max: 1400000,
+				    }
+			    };
+
+			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors, null, null, chartExtraOptions );
+			var responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
+			return $.extend( true, {}, baseOptions, responsiveOptions );
+		}
+
 		function getChartOptionsXCMTransfers() {
 			var colors            = [
 				    '#004BFF',
-				    '#66E1B6',
+				    '#E6007A',
 			    ],
-			    data              = getChartDataXCMTransfers(),
+			    data              = [
+				    [
+					    'Jan',
+					    'Feb',
+					    'Mar',
+					    'Apr',
+					    'May',
+					    'Jun',
+					    'Jul',
+					    'Aug',
+					    'Sep',
+					    'Oct',
+					    'Nov',
+					    'Dec'
+				    ],
+				    [
+					    9060,
+					    6138,
+					    10528,
+					    13905,
+					    20645,
+					    17680,
+					    18577,
+					    17827,
+					    11276,
+					    14094,
+					    17159,
+					    12307
+				    ],
+				    [
+					    '',
+					    '',
+					    '',
+					    '',
+					    23239,
+					    17298,
+					    21232,
+					    26912,
+					    14027,
+					    23220,
+					    20159,
+					    14621
+				    ],
+			    ],
 			    baseOptions       = {
 				    color: colors,
 				    textStyle: {
@@ -1600,7 +1737,11 @@
 					    fontWeight: 500
 				    },
 				    tooltip: defaultTooltipSettings,
-				    legend: defaultLegendSettings,
+				    legend: $.extend( true, {}, defaultLegendSettings, {
+					    formatter: function( name ) {
+						    return locate.transferOn + ' ' + name;
+					    }
+				    } ),
 				    grid: {
 					    left: '3%',
 					    right: '3%',
@@ -1626,89 +1767,10 @@
 							    color: [ '#262626' ]
 						    }
 					    },
+					    axisPointer: defaultAxisPointerLabelSettings,
 					    axisLabel: {
-						    hideOverlap: false,
-						    rotate: 45,
-						    showMaxLabel: true,
-						    overflow: 'breakAll',
-						    formatter: function( value ) {
-							    var iconKey = value.replace( / /g, '' );
-							    return '{' + iconKey + '|}{spacing|}{value|' + value + '}';
-						    },
-						    align: 'right',
-						    rich: {
-							    value: {
-								    lineHeight: 30,
-								    align: 'center'
-							    },
-							    spacing: {
-								    width: 7,
-							    },
-							    Moonbeam: {
-								    height: 20,
-								    backgroundColor: {
-									    image: getTokenIcon( 'Moonbeam' )
-								    }
-							    },
-							    Acala: {
-								    height: 20,
-								    backgroundColor: {
-									    image: getTokenIcon( 'Acala' )
-								    }
-							    },
-							    Moonriver: {
-								    height: 20,
-								    backgroundColor: {
-									    image: getTokenIcon( 'Moonriver' )
-								    }
-							    },
-							    Parallel: {
-								    height: 20,
-								    backgroundColor: {
-									    image: getTokenIcon( 'Parallel' )
-								    }
-							    },
-							    Karura: {
-								    height: 20,
-								    backgroundColor: {
-									    image: getTokenIcon( 'Karura' )
-								    }
-							    },
-							    ParallelHeiko: {
-								    height: 20,
-								    backgroundColor: {
-									    image: getTokenIcon( 'ParallelHeiko' )
-								    }
-							    },
-							    Interlay: {
-								    height: 20,
-								    backgroundColor: {
-									    image: getTokenIcon( 'Interlay' )
-								    }
-							    },
-							    BifrostKusama: {
-								    height: 20,
-								    backgroundColor: {
-									    image: getTokenIcon( 'Bifrost' )
-								    }
-							    },
-							    Astar: {
-								    height: 20,
-								    backgroundColor: {
-									    image: getTokenIcon( 'Astar' )
-								    }
-							    },
-							    Kintsugi: {
-								    height: 20,
-								    backgroundColor: {
-									    image: getTokenIcon( 'Kintsugi' )
-								    }
-							    },
-						    },
-						    fontFamily: fontFamily,
-						    fontSize: 13,
-						    fontWeight: 500,
-						    color: '#FFFFFF'
+						    margin: 12,
+						    color: '#ccc'
 					    }
 				    },
 				    yAxis: {
@@ -1723,6 +1785,7 @@
 							    color: [ '#262626' ]
 						    }
 					    },
+					    axisPointer: defaultAxisPointerLabelSettings,
 					    axisLabel: {
 						    fontFamily: fontFamily,
 						    fontSize: 12,
@@ -1734,16 +1797,16 @@
 					    {
 						    type: 'bar',
 						    data: data[ 1 ],
-						    name: locate.inUSD,
-						    barMaxWidth: 24,
+						    name: 'Kusama',
+						    barMaxWidth: 8,
 						    itemStyle: {
 							    borderRadius: [ 5, 5, 0, 0 ]
 						    },
 					    }, {
 						    type: 'bar',
 						    data: data[ 2 ],
-						    name: locate.outUSD,
-						    barMaxWidth: 24,
+						    name: 'Polkadot',
+						    barMaxWidth: 8,
 						    itemStyle: {
 							    borderRadius: [ 5, 5, 0, 0 ]
 						    },
@@ -1760,81 +1823,88 @@
 
 			if ( window.innerWidth > 767 ) {
 				newOptions = {
-					series: [
-						{
-							barMaxWidth: 24,
-							itemStyle: {
-								borderRadius: [ 5, 5, 0, 0 ]
-							}
-						}, {
-							barMaxWidth: 24,
-							itemStyle: {
-								borderRadius: [ 5, 5, 0, 0 ]
-							}
+					yAxis: {
+						axisLabel: {
+							formatter: '{value}'
 						}
-					]
+					}
 				};
 			} else {
 				newOptions = {
-					series: [
-						{
-							barMaxWidth: 12,
-							itemStyle: {
-								borderRadius: [ 3, 3, 0, 0 ]
-							}
-						}, {
-							barMaxWidth: 12,
-							itemStyle: {
-								borderRadius: [ 3, 3, 0, 0 ]
+					yAxis: {
+						axisLabel: {
+							formatter: function( value ) {
+								return value ? NumberUtil.formatMoney( value ) : '-';
 							}
 						}
-					]
+					}
 				};
 			}
 
 			return newOptions;
 		}
 
-		function getChartOptionsDotTreasuryActivity( chartName, jsonData ) {
-			var datasets   = [
-				    {
-					    name: 'income',
-					    label: locate.income
-				    }, {
-					    name: 'output',
-					    label: locate.output
-				    }, {
-					    name: 'treasury',
-					    label: locate.treasury
-				    }
+		function getChartOptionsXCMTotalAmountReceived() {
+			var colors            = [
+				    '#004BFF',
+				    '#E6007A',
 			    ],
-			    colors     = [
-				    '#66E1B6',
-				    '#9D3BEA',
-				    '#004BFF'
+			    data              = [
+				    [
+					    'Jan',
+					    'Feb',
+					    'Mar',
+					    'Apr',
+					    'May',
+					    'Jun',
+					    'Jul',
+					    'Aug',
+					    'Sep',
+					    'Oct',
+					    'Nov',
+					    'Dec'
+				    ],
+				    [
+					    33512223,
+					    53943045,
+					    77477509,
+					    124099450,
+					    193957834,
+					    225645603,
+					    254666571,
+					    301123152,
+					    316118330,
+					    331628007,
+					    345425245,
+					    354319177
+				    ],
+				    [
+					    '',
+					    '',
+					    '',
+					    '',
+					    209950885.1,
+					    271907681.4,
+					    336682142.2,
+					    426150086.3,
+					    463966505.9,
+					    519121685.8,
+					    578522490,
+					    605642350.7
+				    ],
 			    ],
-			    totalItems = jsonData.length,
-			    data       = [];
-
-			datasets.forEach( function( dataset ) {
-				data[ dataset.name ] = [];
-			} );
-
-			for ( var i = 0; i < totalItems; i ++ ) {
-				datasets.forEach( function( dataset ) {
-					var value = jsonData[ i ][ dataset.name ] ? NumberUtil.validate( jsonData[ i ][ dataset.name ] ) : '';
-					data[ dataset.name ].push( [ jsonData[ i ].date, value ] );
-				} );
-			}
-
-			var baseOptions       = {
+			    baseOptions       = {
 				    color: colors,
 				    textStyle: {
 					    fontFamily: fontFamily,
 					    fontWeight: 500
 				    },
 				    tooltip: defaultTooltipSettings,
-				    legend: defaultLegendSettings,
+				    legend: $.extend( true, {}, defaultLegendSettings, {
+					    formatter: function( name ) {
+						    return locate.amountReceivedOn + ' ' + name;
+					    }
+				    } ),
 				    grid: {
 					    left: '3%',
 					    right: '3%',
@@ -1842,18 +1912,20 @@
 					    containLabel: true
 				    },
 				    xAxis: {
-					    type: 'time',
+					    type: 'category',
 					    boundaryGap: false,
+					    data: data[ 0 ],
 					    axisTick: {
 						    show: false
 					    },
 					    axisLine: {
+						    show: true,
 						    lineStyle: {
+							    type: [ 4, 4 ],
 							    color: '#262626'
 						    }
 					    },
 					    splitLine: {
-						    show: false,
 						    lineStyle: {
 							    type: [ 4, 4 ],
 							    color: [ '#262626' ]
@@ -1861,13 +1933,13 @@
 					    },
 					    axisPointer: defaultAxisPointerLabelSettings,
 					    axisLabel: {
-						    formatter: dateFormatter,
+						    margin: 12,
 						    color: '#ccc'
 					    }
 				    },
 				    yAxis: {
 					    type: 'value',
-					    position: 'right',
+					    splitNumber: 3,
 					    axisLine: {
 						    show: false
 					    },
@@ -1877,91 +1949,53 @@
 							    color: [ '#262626' ]
 						    }
 					    },
-					    axisPointer: $.extend( true, {}, defaultAxisPointerLabelSettings, {
-						    label: {
-							    formatter: function( params ) {
-								    return NumberUtil.formatWithCommas( parseInt( params.value ) );
-							    }
-						    }
-					    } ),
+					    axisPointer: defaultAxisPointerLabelSettings,
 					    axisLabel: {
-						    formatter: function( value ) {
-							    return NumberUtil.formatMoney( value );
-						    },
+						    fontFamily: fontFamily,
+						    fontSize: 12,
+						    fontWeight: 500,
 						    color: '#ccc'
 					    }
 				    },
 				    series: [
 					    {
-						    name: locate.income,
-						    data: data.income,
-						    areaStyle: {
-							    opacity: 0.2
-						    },
-						    itemStyle: {
-							    color: colors[ 0 ]
-						    },
 						    type: 'line',
+						    data: data[ 1 ],
+						    name: 'Kusama',
+						    areaStyle: {
+							    color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
+								    {
+									    offset: 0,
+									    color: 'rgba(0, 75, 255,0.5)'
+								    },
+								    {
+									    offset: 1,
+									    color: 'rgba(0, 75, 255,0)'
+								    }
+							    ] )
+						    },
 						    smooth: true,
 						    showSymbol: false,
 						    connectNulls: true,
 						    emphasis: {
 							    focus: 'series'
-						    }
-					    },
-					    {
-						    name: locate.output,
-						    data: data.output,
-						    z: 9,
+						    },
+					    }, {
+						    type: 'line',
+						    data: data[ 2 ],
+						    name: 'Polkadot',
 						    areaStyle: {
-							    opacity: 1,
-							    color: new echarts.graphic.LinearGradient( 0, 0, 0, 1, [
+							    color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
 								    {
 									    offset: 0,
-									    color: 'rgba(80,38,114,1)'
+									    color: 'rgba(230, 0, 122,0.5)'
 								    },
 								    {
 									    offset: 1,
-									    color: 'rgba(80,38,114,0.5)'
-								    }
-							    ] )
-
-						    },
-						    itemStyle: {
-							    color: colors[ 1 ]
-						    },
-						    type: 'line',
-						    smooth: true,
-						    showSymbol: false,
-						    connectNulls: true,
-						    emphasis: {
-							    focus: 'series'
-						    }
-					    },
-					    {
-						    name: locate.treasury,
-						    data: data.treasury,
-						    areaStyle: {
-							    opacity: 1,
-							    color: new echarts.graphic.LinearGradient( 0, 0, 0, 1, [
-								    {
-									    offset: 0,
-									    color: 'rgba(14,65,125,1)'
-								    },
-								    {
-									    offset: 0.6,
-									    color: 'rgba(14,65,125,0.5)'
-								    },
-								    {
-									    offset: 1,
-									    color: 'rgba(21,21,21,1)'
+									    color: 'rgba(230, 0, 122,0)'
 								    }
 							    ] )
 						    },
-						    itemStyle: {
-							    color: colors[ 2 ]
-						    },
-						    type: 'line',
 						    smooth: true,
 						    showSymbol: false,
 						    connectNulls: true,
@@ -1971,85 +2005,129 @@
 					    }
 				    ]
 			    },
-			    responsiveOptions = getChartResponsiveOptionsDotTreasuryActivity();
+			    responsiveOptions = getChartResponsiveOptionsXCMTotalAmountReceived();
 
 			return $.extend( true, baseOptions, responsiveOptions );
 		}
 
-		function getChartResponsiveOptionsDotTreasuryActivity() {
+		function getChartResponsiveOptionsXCMTotalAmountReceived() {
 			var newOptions = {};
 
-			if ( window.innerWidth < 460 ) {
-				newOptions[ 'xAxis' ] = {
-					splitNumber: 2
-				};
-			} else if ( window.innerWidth < 768 ) {
-				newOptions[ 'xAxis' ] = {
-					splitNumber: 3
-				};
-
-			} else if ( window.innerWidth < 1024 ) {
-				newOptions[ 'xAxis' ] = {
-					splitNumber: 4
+			if ( window.innerWidth > 767 ) {
+				newOptions = {
+					yAxis: {
+						axisLabel: {
+							formatter: '${value}'
+						}
+					}
 				};
 			} else {
-				newOptions[ 'xAxis' ] = {
-					splitNumber: 6
+				newOptions = {
+					yAxis: {
+						axisLabel: {
+							formatter: function( value ) {
+								return value ? '$' + NumberUtil.formatMoney( value ) : '-';
+							}
+						}
+					}
 				};
 			}
 
 			return newOptions;
 		}
 
-		function getChartOptionsDexWithAverageTvlHigherThan10M( chartName, jsonData ) {
+		function getChartOptionsDefiParachain( chartName, jsonData ) {
+			var datasets          = [
+				    {
+					    options: {
+						    stack: 'Total'
+					    },
+					    name: 'others',
+					    label: locate.others
+				    }, {
+					    options: {
+						    stack: 'Total'
+					    },
+					    name: 'parallel',
+					    label: 'Parallel'
+				    }, {
+					    options: {
+						    stack: 'Total'
+					    },
+					    name: 'astar',
+					    label: 'Astar'
+				    }, {
+					    options: {
+						    stack: 'Total'
+					    },
+					    name: 'karura',
+					    label: 'Karura'
+				    }, {
+					    options: {
+						    stack: 'Total'
+					    },
+					    name: 'acala',
+					    label: 'Acala'
+				    }, {
+					    options: {
+						    stack: 'Total'
+					    },
+					    name: 'moonriver',
+					    label: 'Moonriver'
+				    }, {
+					    options: {
+						    stack: 'Total'
+					    },
+					    name: 'moonbeam',
+					    label: 'Moonbeam'
+				    }
+			    ],
+			    colors            = [
+				    '#D251FD',
+				    '#22BFFE',
+				    '#1B6AE0',
+				    '#DA4520',
+				    '#D81356',
+				    '#FFA800',
+				    '#4CCBC9'
+			    ],
+			    chartExtraOptions = {
+				    yAxis: {
+					    interval: 250000000,
+				    }
+			    };
+
+			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors, null, null, chartExtraOptions );
+			var responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
+			return $.extend( true, {}, baseOptions, responsiveOptions );
+		}
+
+		function getChartOptionsTvlDotDex( chartName, jsonData ) {
 			var datasets = [
 				    {
 					    name: 'arthswap',
 					    label: 'ArthSwap'
 				    }, {
-					    name: 'curve_glmr',
-					    label: 'Curve Finance on Moonbeam'
-				    }, {
-					    name: 'solarbeam',
-					    label: 'Solarbeam'
+					    name: 'curve_moonbeam',
+					    label: 'Curve on Moonbeam'
 				    }, {
 					    name: 'stellaswap',
 					    label: 'StellaSwap'
 				    }, {
-					    name: 'zenlink',
-					    label: 'Zenlink'
-				    },
-			    ],
-			    colors   = [
-				    '#66E1B6',
-				    '#C30D00',
-				    '#F7A21B',
-				    '#9D3BEA',
-				    '#89C900'
-			    ];
-
-			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors );
-			var responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
-			return $.extend( true, {}, baseOptions, responsiveOptions );
-		}
-
-		function getChartOptionsDexWithAverageTvlLowerThan5M( chartName, jsonData ) {
-			var datasets = [
-				    {
+					    name: 'zenlink_astar',
+					    label: 'Zenlink on Astar'
+				    }, {
+					    name: 'zenlink_moonbeam',
+					    label: 'Zenlink Moonbeam'
+				    }, {
 					    name: 'avault',
 					    label: 'Avault'
 				    }, {
 					    name: 'beamswap',
 					    label: 'Beamswap'
 				    }, {
-					    name: 'beefy_glmr',
+					    name: 'beefy_moonbeam',
 					    label: 'Beefy on Moonbeam'
-				    }, {
-					    name: 'beefy_movr',
-					    label: 'Beefy on Moonriver'
-				    }, {
-					    name: 'bifrost',
-					    label: 'Bifrost'
 				    }, {
 					    name: 'solarflare',
 					    label: 'Solarflare'
@@ -2057,18 +2135,113 @@
 					    name: 'parallel',
 					    label: 'Parallel'
 				    }, {
+					    name: 'acala',
+					    label: 'Acala'
+				    }
+			    ],
+			    colors   = [
+				    '#66E1B6',
+				    '#C30D00',
+				    '#774EED',
+				    '#E4560A',
+				    '#89C900',
+				    '#D251FD',
+				    '#22BFFE',
+				    '#FFB800',
+				    '#FF806C',
+				    '#2A42F1',
+				    '#D81356'
+			    ];
+
+			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors );
+			var responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
+			return $.extend( true, {}, baseOptions, responsiveOptions );
+		}
+
+		function getChartOptionsTvlKsmDex( chartName, jsonData ) {
+			var datasets = [
+				    {
+					    name: 'solarbeam',
+					    label: 'Solarbeam'
+				    }, {
 					    name: 'karura',
 					    label: 'Karura'
+				    }, {
+					    name: 'zenlink_moonriver',
+					    label: 'Zenlink on Moonriver'
+				    }, {
+					    name: 'beefy_moonriver',
+					    label: 'Beefy on Moonriver'
+				    }, {
+					    name: 'polkaswap',
+					    label: 'Polkaswap'
+				    }, {
+					    name: 'heiko',
+					    label: 'Heiko'
+				    }, {
+					    name: 'bifrost',
+					    label: 'Bifrost Kusama'
 				    },
 			    ],
 			    colors   = [
-				    '#D251FD',
-				    '#774EED',
+				    '#FF806C',
+				    '#C30D00',
+				    '#E4A30D',
 				    '#66E1B6',
-				    '#FFA800',
-				    '#0049F1',
-				    '#89C900',
 				    '#22BFFE',
+				    '#B1B1B1',
+				    '#0049F1'
+			    ];
+
+			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors );
+			var responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
+			return $.extend( true, {}, baseOptions, responsiveOptions );
+		}
+
+		function getChartOptionsTvlDotLending( chartName, jsonData ) {
+			var datasets = [
+				    {
+					    name: 'starlay',
+					    label: 'Starlay'
+				    }, {
+					    name: 'acala',
+					    label: 'Acala (aUSD)'
+				    }, {
+					    name: 'moonwell_artemis',
+					    label: 'Moonwell Artemis'
+				    }, {
+					    name: 'astriddao',
+					    label: 'AstridDAO (BAI)'
+				    }, {
+					    name: 'parallel',
+					    label: 'Parallel'
+				    }
+			    ],
+			    colors   = [
+				    '#ED148B',
+				    '#D81356',
+				    '#B8E94A',
+				    '#66E1B6',
+				    '#2A42F1'
+			    ];
+
+			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors );
+			var responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
+			return $.extend( true, {}, baseOptions, responsiveOptions );
+		}
+
+		function getChartOptionsTvlKsmLending( chartName, jsonData ) {
+			var datasets = [
+				    {
+					    name: 'moonwell_apollo',
+					    label: 'Moonwell Apollo'
+				    }, {
+					    name: 'karura',
+					    label: 'Karura (aUSD)'
+				    },
+			    ],
+			    colors   = [
+				    '#5C42FB',
 				    '#C30D00'
 			    ];
 
@@ -2077,27 +2250,31 @@
 			return $.extend( true, {}, baseOptions, responsiveOptions );
 		}
 
-		function getChartOptionsTvlLendingBorrowing( chartName, jsonData ) {
+		function getChartOptionsTvlDotLiquidStaking( chartName, jsonData ) {
 			var datasets = [
 				    {
-					    name: 'moonwell_apollo',
-					    label: 'Moonwell Apollo'
+					    name: 'lido_moonbeam',
+					    label: 'Lido on Moonbeam'
 				    }, {
-					    name: 'moonwell_artemis',
-					    label: 'Moonwell Artemis'
+					    name: 'acala',
+					    label: 'Acala'
+				    }, {
+					    name: 'bifrost_dot',
+					    label: 'Bifrost Polkadot'
 				    }, {
 					    name: 'parallel',
 					    label: 'Parallel'
 				    }, {
-					    name: 'starlay',
-					    label: 'Starlay'
+					    name: 'tapio',
+					    label: 'Tapio'
 				    }
 			    ],
 			    colors   = [
-				    '#5C42FB',
-				    '#B8E94A',
-				    '#22BFFE',
-				    '#D50075'
+				    '#118AF5',
+				    '#D81356',
+				    '#FFB800',
+				    '#2A42F1',
+				    '#25DF96'
 			    ];
 
 			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors );
@@ -2105,35 +2282,31 @@
 			return $.extend( true, {}, baseOptions, responsiveOptions );
 		}
 
-		function getChartOptionsTvlLiquidStaking( chartName, jsonData ) {
+		function getChartOptionsTvlKsmLiquidStaking( chartName, jsonData ) {
 			var datasets = [
 				    {
-					    name: 'lido_moonbeam',
-					    label: 'Lido on Moonbeam (DOT)'
-				    }, {
 					    name: 'lido_moonriver',
-					    label: 'Lido Moonriver (KSM)'
+					    label: 'Lido on Moonriver'
 				    }, {
 					    name: 'karura',
-					    label: 'Karura (KSM)'
+					    label: 'Karura'
 				    }, {
-					    name: 'parallel',
-					    label: 'Parallel (DOT)'
+					    name: 'bifrost_ksm',
+					    label: 'Bifrost Kusama'
 				    }, {
-					    name: 'bifrost',
-					    label: 'Bifrost (KSM)'
+					    name: 'heiko',
+					    label: 'Heiko'
 				    }, {
 					    name: 'taiga',
-					    label: 'Taiga (KSM)'
+					    label: 'Taiga'
 				    }
 			    ],
 			    colors   = [
-				    '#E6007A',
-				    '#66E1B6',
+				    '#118AF5',
 				    '#C30D00',
-				    '#22BFFE',
-				    '#0049F1',
-				    '#A23CC8'
+				    '#FFB800',
+				    '#EA5474',
+				    '#960DB9'
 			    ];
 
 			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors );
@@ -2141,38 +2314,95 @@
 			return $.extend( true, {}, baseOptions, responsiveOptions );
 		}
 
-		function getChartOptionsStablecoinTotalIssuance( chartName, jsonData ) {
+		function getChartOptionsTvlLiquidCrowdloan( chartName, jsonData ) {
+			var datasets          = [
+				    {
+					    name: 'bifrost_dot',
+					    label: 'Bifrost Polkadot'
+				    }, {
+					    name: 'bifrost_ksm',
+					    label: 'Bifrost Kusama'
+				    }, {
+					    name: 'acala',
+					    label: 'Acala'
+				    }, {
+					    name: 'parallel',
+					    label: 'Parallel'
+				    }
+			    ],
+			    colors            = [
+				    '#E6007A',
+				    '#0049F1',
+				    '#F82613',
+				    '#22BFFE'
+			    ],
+			    chartExtraOptions = {
+				    yAxis: {
+					    splitNumber: 3
+				    }
+			    };
+
+			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors, null, null, chartExtraOptions );
+			var responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
+			return $.extend( true, {}, baseOptions, responsiveOptions );
+		}
+
+		function getChartOptionsStablecoinIssuance( chartName, jsonData ) {
 			var datasets = [
 				    {
-					    name: 'karura',
-					    label: 'aUSD (Karura)',
+					    name: 'karura_ausd',
+					    label: 'Karura aUSD',
 					    options: {
 						    areaStyle: {
 							    color: new echarts.graphic.LinearGradient( 0.5, 0, 0.5, 1, [
 								    {
 									    offset: 0,
-									    color: 'rgba(203,47,90,0.42)'
+									    color: 'rgba(0,75,255,0.7)'
 								    },
 								    {
 									    offset: 1,
-									    color: 'rgba(203,47,90,0.05)'
+									    color: 'rgba(0,75,255,0)'
 								    }
 							    ] )
 						    }
 					    }
 				    }, {
-					    name: 'bai',
-					    label: 'BAI (AstridDAO)',
+					    name: 'acala_ausd',
+					    label: 'Acala Ausd',
 					    options: {
+						    z: 9,
 						    areaStyle: {
-							    color: new echarts.graphic.LinearGradient( 0.5, 0, 0.5, 1, [
+							    opacity: 1,
+							    color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
 								    {
 									    offset: 0,
-									    color: 'rgba(233,178,8,0.42)'
+									    color: 'rgba(195,13,0,1)'
+								    },
+								    {
+									    offset: 0.5,
+									    color: 'rgba(195,13,0,0.3)'
 								    },
 								    {
 									    offset: 1,
-									    color: 'rgba(233,178,8,0.05)'
+									    color: 'rgba(195,13,0,0)'
+								    }
+							    ] )
+						    }
+					    }
+				    }, {
+					    name: 'astriddao_bai',
+					    label: 'AstridDAO BAI',
+					    options: {
+						    areaStyle: {
+							    opacity: 1,
+							    color: new echarts.graphic.LinearGradient( 0.5, 0, 0.5, 1, [
+								    {
+									    offset: 0,
+									    color: 'rgba(255,184,0,0.9)'
+								    },
+								    {
+									    offset: 1,
+									    color: 'rgba(255,184,0,0)'
 								    }
 							    ] )
 						    }
@@ -2180,8 +2410,9 @@
 				    }
 			    ],
 			    colors   = [
-				    '#CB2F5A',
-				    '#E9B255'
+				    '#004BFF',
+				    '#C30D00',
+				    '#FFB800'
 			    ];
 
 			var baseOptions       = getChartLinesBaseOptions( jsonData, datasets, colors ),
@@ -2189,55 +2420,102 @@
 			return $.extend( true, {}, baseOptions, responsiveOptions );
 		}
 
+		function getChartOptionsTotalBridgeTvl( chartName, jsonData ) {
+			var datasets          = [
+				    {
+					    name: 'interlay',
+					    label: 'Interlay',
+					    options: {
+						    z: 9,
+						    opacity: 1,
+						    areaStyle: {
+							    color: new echarts.graphic.LinearGradient( 0.5, 0, 0.5, 1, [
+								    {
+									    offset: 0,
+									    color: 'rgba(0,75,255,0.5)'
+								    },
+								    {
+									    offset: 1,
+									    color: 'rgba(0,75,255,0)'
+								    }
+							    ] )
+						    }
+					    }
+				    }, {
+					    name: 'kintsugi',
+					    label: 'Kintsugi',
+					    options: {
+						    areaStyle: {
+							    opacity: 1,
+							    color: new echarts.graphic.LinearGradient( 0.5, 0, 0.5, 1, [
+								    {
+									    offset: 0,
+									    color: 'rgba(142,52,6,0.9)'
+								    }, {
+									    offset: 1,
+									    color: 'rgba(255,184,0,0)'
+								    }
+							    ] )
+						    }
+					    }
+				    }
+			    ],
+			    colors            = [
+				    '#004BFF',
+				    '#E4560A'
+			    ],
+			    chartExtraOptions = {
+				    yAxis: {
+					    splitNumber: 3
+				    }
+			    };
+
+			var baseOptions       = getChartLinesBaseOptions( jsonData, datasets, colors, null, null, chartExtraOptions ),
+			    responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
+			return $.extend( true, {}, baseOptions, responsiveOptions );
+		}
+
 		function getChartOptionsNftMarketplaceDailyVolume( chartName, jsonData ) {
 			var datasets    = [
 				    {
+					    name: 'raresama',
+					    label: 'Raresama'
+				    }, {
 					    name: 'singular',
 					    label: 'Singular'
-				    },
-				    {
-					    name: 'tofu_glmr',
-					    label: 'tofu GLMR'
-				    },
-				    {
-					    name: 'tofu_movr',
-					    label: 'tofu MOVR'
-				    },
-				    {
-					    name: 'tofu_astr',
-					    label: 'tofu ASTR'
-				    },
-				    {
-					    name: 'tofu_sdn',
-					    label: 'tofu SDN'
-				    },
-				    {
-					    name: 'moonbeans_glmr',
-					    label: 'MoonBeans GLMR'
-				    },
-				    {
+				    }, {
+					    name: 'nftrade_moonbeam',
+					    label: 'NFTrade Moonbeam'
+				    }, {
 					    name: 'moonbeans_movr',
 					    label: 'Moonbeans MOVR'
-				    },
-				    {
-					    name: 'nft_trades',
-					    label: 'NFTTrades'
-				    },
-				    {
-					    name: 'mintverse',
-					    label: 'Mintverse'
+				    }, {
+					    name: 'moonbeans_glmr',
+					    label: 'MoonBeans GLMR'
+				    }, {
+					    name: 'tofu_sdn',
+					    label: 'tofu SDN'
+				    }, {
+					    name: 'tofu_astr',
+					    label: 'tofu ASTR'
+				    }, {
+					    name: 'tofu_movr',
+					    label: 'tofu MOVR'
+				    }, {
+					    name: 'tofu_glmr',
+					    label: 'tofu GLMR'
 				    }
 			    ],
 			    colors      = [
+				    '#6B49B5',
 				    '#E6007A',
-				    '#FFB800',
-				    '#004BFF',
-				    '#FF6B00',
-				    '#F0A08C',
-				    '#4CCBC9',
-				    '#9EE542',
 				    '#429DF4',
-				    '#BB3E24'
+				    '#9EE542',
+				    '#4CCBC9',
+				    '#F0A08C',
+				    '#FF6B00',
+				    '#004BFF',
+				    '#FFB800'
 			    ],
 			    totalItems  = jsonData.length,
 			    data        = [],
@@ -2255,18 +2533,24 @@
 			}
 
 			datasets.forEach( function( dataset, index ) {
-				chartSeries.push( {
+				var dataSetOptions = {
 					name: dataset.label,
 					data: data[ dataset.name ],
 					itemStyle: {
 						color: colors[ index ]
 					},
 					type: 'bar',
-					stack: 'total',
+					//stack: 'total',
 					emphasis: {
 						focus: 'series'
 					}
-				} );
+				};
+
+				if ( dataset.hasOwnProperty( 'options' ) ) {
+					$.extend( true, dataSetOptions, dataset.options );
+				}
+
+				chartSeries.push( dataSetOptions );
 			} );
 
 			var baseOptions       = {
@@ -2290,22 +2574,16 @@
 						    show: false
 					    },
 					    axisLine: {
-						    show: false,
-						    lineStyle: {
-							    color: '#262626'
-						    }
+						    show: false
 					    },
 					    splitLine: {
-						    show: true,
-						    lineStyle: {
-							    type: [ 4, 4 ],
-							    color: [ '#262626' ]
-						    }
+						    show: false
 					    },
 					    axisPointer: defaultAxisPointerLabelSettings,
 					    axisLabel: {
-						    formatter: dateFormatter,
-						    color: '#ccc'
+						    margin: 12,
+						    color: '#ccc',
+						    formatter: dateFormatter
 					    }
 				    },
 				    yAxis: {
@@ -2313,6 +2591,7 @@
 					    axisLine: {
 						    show: false
 					    },
+					    splitNumber: 4,
 					    splitLine: {
 						    show: true,
 						    lineStyle: {
@@ -2330,6 +2609,402 @@
 			    responsiveOptions = getChartResponsiveOptionsNftMarketplaceDailyVolume( chartName );
 
 			return $.extend( true, {}, baseOptions, responsiveOptions );
+		}
+
+		function getChartOptionsTheGreatEscapeUsers( chartName ) {
+			var colors            = [
+				    '#004BFF'
+			    ],
+			    data              = [
+				    [
+					    'October\n W1',
+					    'October\n W2',
+					    'October\n W3',
+					    'October\n W4',
+					    'November\n W1',
+					    'November\n W2',
+					    'November\n W3',
+					    'November\n W4',
+					    'December\n W1',
+					    'December\n W2',
+					    'December\n W3',
+					    'December\n W4'
+				    ], [
+					    1466,
+					    1304,
+					    1633,
+					    996,
+					    1806,
+					    1226,
+					    1897,
+					    1281,
+					    1943,
+					    1699,
+					    3782,
+					    2919
+				    ]
+			    ],
+			    baseOptions       = {
+				    color: colors,
+				    textStyle: {
+					    fontFamily: fontFamily,
+					    fontWeight: 500
+				    },
+				    grid: {
+					    left: '3%',
+					    right: '3%',
+					    top: '3%',
+					    bottom: '3%',
+					    containLabel: true
+				    },
+				    xAxis: {
+					    type: 'category',
+					    data: data[ 0 ],
+					    axisTick: {
+						    show: false
+					    },
+					    axisLine: {
+						    show: false
+					    },
+					    splitLine: {
+						    lineStyle: {
+							    type: [ 4, 4 ],
+							    color: [ '#262626' ]
+						    }
+					    },
+					    axisPointer: defaultAxisPointerLabelSettings,
+					    axisLabel: {
+						    lineHeight: 16,
+						    margin: 12,
+						    color: '#ccc'
+					    }
+				    },
+				    yAxis: {
+					    type: 'value',
+					    splitNumber: 3,
+					    axisLine: {
+						    show: false
+					    },
+					    splitLine: {
+						    lineStyle: {
+							    type: [ 4, 4 ],
+							    color: [ '#262626' ]
+						    }
+					    },
+					    axisPointer: defaultAxisPointerLabelSettings,
+					    axisLabel: {
+						    fontFamily: fontFamily,
+						    fontSize: 12,
+						    fontWeight: 500,
+						    color: '#ccc'
+					    }
+				    },
+				    series: {
+					    type: 'bar',
+					    data: data[ 1 ],
+					    name: 'Game Sessions Played',
+					    barMaxWidth: 50,
+					    itemStyle: {
+						    borderRadius: [ 8, 8, 0, 0 ]
+					    },
+					    label: {
+						    show: true,
+						    fontFamily: fontFamily,
+						    fontSize: 16,
+						    fontWeight: 700,
+						    color: '#66E1B6',
+						    position: 'top'
+					    },
+				    }
+			    },
+			    responsiveOptions = getChartResponsiveOptionsTheGreatEscapeUsers();
+
+			return $.extend( true, baseOptions, responsiveOptions );
+		}
+
+		function getChartResponsiveOptionsTheGreatEscapeUsers() {
+			var newOptions = {};
+
+			if ( window.innerWidth > 767 ) {
+				newOptions = {
+					xAxis: {
+						axisLabel: {
+							hideOverlap: false,
+							showMaxLabel: true,
+							rotate: 0,
+							align: 'center'
+						}
+					},
+					series: {
+						barMaxWidth: 50,
+						itemStyle: {
+							borderRadius: [ 8, 8, 0, 0 ]
+						},
+						label: {
+							fontSize: 16,
+						}
+					}
+				};
+			} else {
+				newOptions = {
+					xAxis: {
+						axisLabel: {
+							hideOverlap: true,
+							showMaxLabel: false,
+							rotate: 45,
+							lineHeight: 12,
+							align: 'right'
+						}
+					},
+					series: {
+						barMaxWidth: 20,
+						itemStyle: {
+							borderRadius: [ 3, 3, 0, 0 ]
+						},
+						label: {
+							fontSize: 12,
+						}
+					}
+				};
+
+				if ( window.innerWidth < 460 ) {
+					$.extend( true, newOptions, {
+						series: {
+							barMaxWidth: 10,
+							itemStyle: {
+								borderRadius: [ 3, 3, 0, 0 ]
+							},
+							label: {
+								fontSize: 10,
+							}
+						}
+					} )
+				}
+			}
+
+			return newOptions;
+		}
+
+		function getChartOptionsMoonfitDailyActiveUser( chartName, jsonData ) {
+			var datasets          = [
+				    {
+					    name: 'users',
+					    label: 'Active users'
+				    }
+			    ],
+			    colors            = [
+				    '#FD2E9C'
+			    ],
+			    chartExtraOptions = {
+				    yAxis: {
+					    splitNumber: 3
+				    }
+			    };
+
+			var baseOptions       = getChartLinesBaseOptions( jsonData, datasets, colors ),
+			    responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
+			return $.extend( true, {}, baseOptions, responsiveOptions );
+		}
+
+		function getChartOptionsTotalPlotsSaleSkybreach( chartName, jsonData ) {
+			var totalItems = jsonData.length,
+			    data       = {
+				    cumulative_plot_count: [],
+				    cumulative_volume: [],
+			    },
+			    colors     = [
+				    '#004BFF',
+				    '#E6007A'
+			    ];
+
+			for ( var i = 0; i < totalItems; i ++ ) {
+				data.cumulative_plot_count.push( [ jsonData[ i ].date, jsonData[ i ].cumulative_plot_count ] );
+				data.cumulative_volume.push( [ jsonData[ i ].date, jsonData[ i ].cumulative_volume ] );
+			}
+
+			var baseOptions = {
+				color: colors,
+				textStyle: {
+					fontFamily: fontFamily,
+					fontWeight: 500
+				},
+				tooltip: defaultTooltipSettings,
+				legend: defaultLegendSettings,
+				grid: {
+					top: '3%',
+					left: '25px',
+					right: '25px',
+					containLabel: true
+				},
+				xAxis: {
+					type: 'time',
+					boundaryGap: false,
+					splitLine: {
+						show: true,
+						lineStyle: {
+							type: [ 4, 4 ],
+							color: [ '#262626' ]
+						}
+					},
+					axisTick: {
+						show: false
+					},
+					axisLine: {
+						show: false
+					},
+					axisPointer: defaultAxisPointerLabelSettings,
+					axisLabel: {
+						align: 'left',
+						formatter: dateFormatter,
+						color: '#ccc'
+					}
+				},
+				yAxis: [
+					{
+						type: 'value',
+						position: 'right',
+						alignTicks: true,
+						axisLine: {
+							show: false,
+						},
+						splitLine: {
+							lineStyle: {
+								type: [ 4, 4 ],
+								color: [ '#262626' ]
+							}
+						},
+						axisPointer: {
+							label: {
+								color: '#fff',
+								backgroundColor: colors[ 0 ]
+							}
+						},
+						axisLabel: {
+							color: '#ccc'
+						}
+					},
+					{
+						type: 'value',
+						position: 'left',
+						alignTicks: true,
+						axisLine: {
+							show: false,
+						},
+						interval: 250000,
+						max: 1250000,
+						splitLine: {
+							lineStyle: {
+								type: [ 4, 4 ],
+								color: [ '#262626' ]
+							}
+						},
+						axisPointer: {
+							label: {
+								color: '#fff',
+								backgroundColor: colors[ 1 ]
+							}
+						},
+						axisLabel: {
+							color: '#ccc'
+						}
+					}
+				],
+				series: [
+					{
+						name: locate.cumulativePlotCount,
+						data: data.cumulative_plot_count,
+						type: 'line',
+						smooth: true,
+						showSymbol: false,
+						emphasis: {
+							focus: 'series'
+						}
+					}, {
+						name: locate.cumulativeVolume + ' (xcRMRK)',
+						data: data.cumulative_volume,
+						type: 'line',
+						yAxisIndex: 1,
+						smooth: true,
+						showSymbol: false,
+						emphasis: {
+							focus: 'series'
+						}
+					}
+				]
+			};
+			var responsiveOptions = getChartResponsiveOptionsTotalPlotsSaleSkybreach();
+
+			$.extend( true, baseOptions, responsiveOptions );
+
+			return baseOptions;
+		}
+
+		function getChartResponsiveOptionsTotalPlotsSaleSkybreach() {
+			var newOptions = {};
+
+			if ( window.innerWidth > 767 ) {
+				newOptions = {
+					grid: {
+						left: '25px',
+						right: '25px',
+					},
+					xAxis: {
+						splitNumber: 3,
+						axisLabel: {
+							formatter: dateFormatter
+						}
+					},
+					yAxis: [
+						{
+							axisLabel: {
+								formatter: '{value}'
+							}
+						}, {
+							axisLabel: {
+								formatter: '{value}'
+							}
+						}
+					]
+				};
+			} else {
+				newOptions = {
+					grid: {
+						left: '15px',
+						right: '15px',
+					},
+					xAxis: {
+						splitNumber: 3,
+						axisLabel: {
+							formatter: dateShortFormatter
+						}
+					},
+					yAxis: [
+						{
+							axisLabel: {
+								formatter: function( value ) {
+									return value ? NumberUtil.formatMoney( value ) : '-';
+								}
+							}
+						}, {
+							axisLabel: {
+								formatter: function( value ) {
+									return value ? NumberUtil.formatMoney( value ) : '-';
+								}
+							}
+						}
+					]
+				};
+
+				if ( window.innerWidth < 460 ) {
+					$.extend( true, newOptions, {
+						xAxis: {
+							splitNumber: 2
+						}
+					} )
+				}
+			}
+
+			return newOptions;
 		}
 
 		function getChartOptionsSubsocialDailyActivities( chartName, jsonData ) {
@@ -2454,189 +3129,104 @@
 		function getChartOptionsWeb3FoundationGrants( chartName ) {
 			var colors            = [
 				    '#004BFF',
-				    '#66E1B6',
-				    '#9293FF',
-				    '#FD5BDB',
-				    '#F01923',
-				    '#FF7D0A',
-				    '#FFEF5B',
-				    '#F0A08C',
-				    '#C669FF',
-				    '#A9AC24',
-				    '#47D9FA',
+				    '#E6007A'
 			    ],
-			    datasets          = [
-				    {
-					    name: locate.runtimeModulesChains,
-					    value: 41.5,
-					    labelLine: {
-						    lineStyle: {
-							    color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
-								    {
-									    offset: 0,
-									    color: '#fff'
-
-								    },
-								    {
-									    offset: 1,
-									    color: 'rgba(255,255,255,0)'
-								    }
-							    ] )
-						    }
-					    }
-				    }, {
-					    name: locate.developmentTools,
-					    value: 11.1,
-					    labelLine: {
-						    lineStyle: {
-							    color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
-								    {
-									    offset: 0,
-									    color: '#fff'
-
-								    },
-								    {
-									    offset: 1,
-									    color: 'rgba(255,255,255,0)'
-								    }
-							    ] )
-						    }
-					    }
-				    }, {
-					    name: locate.wallets,
-					    value: 8.5
-				    }, {
-					    name: locate.uiDevelopment,
-					    value: 13.2
-				    }, {
-					    name: locate.deploymentTooling,
-					    value: 5.6
-				    }, {
-					    name: locate.runtimeEnvironment,
-					    value: 2.6
-				    }, {
-					    name: locate.languageDevelopment,
-					    value: 2.1
-				    }, {
-					    name: locate.apis,
-					    value: 4.5
-				    }, {
-					    name: locate.bridges,
-					    value: 2.4
-				    }, {
-					    name: locate.cryptography,
-					    value: 3.0
-				    }, {
-					    name: locate.smartContracts,
-					    value: 4.0
-				    }
+			    data              = [
+				    [ '2019', '2020', '2021', '2022' ],
+				    [ 62, 144, 124, 146 ],
+				    [ 62, 206, 330, 476 ],
 			    ],
 			    baseOptions       = {
 				    color: colors,
-				    tooltip: $.extend( true, {}, defaultTooltipStyle, {
-					    trigger: 'item',
-					    valueFormatter: function( value ) {
-						    return value + '%';
-					    }
-				    } ),
-				    legend: $.extend( true, {}, defaultLegendSettings, {
-					    show: false,
-				    } ),
+				    textStyle: {
+					    fontFamily: fontFamily,
+					    fontWeight: 500
+				    },
+				    tooltip: defaultTooltipSettings,
+				    legend: defaultLegendSettings,
 				    grid: {
+					    top: '5%',
 					    left: '3%',
 					    right: '3%',
-					    top: '0',
 					    containLabel: true
+				    },
+				    xAxis: {
+					    type: 'category',
+					    data: data[ 0 ],
+					    splitLine: {
+						    show: false,
+						    lineStyle: {
+							    type: [ 4, 4 ],
+							    color: [ '#262626' ]
+						    }
+					    },
+					    axisTick: {
+						    show: false
+					    },
+					    axisLine: {
+						    show: false,
+					    },
+					    axisPointer: defaultAxisPointerLabelSettings,
+					    axisLabel: {
+						    margin: 12,
+						    color: '#ccc'
+					    }
+				    },
+				    yAxis: {
+					    type: 'value',
+					    alignTicks: true,
+					    axisLine: {
+						    show: false,
+					    },
+					    splitLine: {
+						    lineStyle: {
+							    type: [ 4, 4 ],
+							    color: [ '#262626' ]
+						    }
+					    },
+					    axisPointer: defaultAxisPointerLabelSettings,
+					    axisLabel: {
+						    color: '#ccc'
+					    }
 				    },
 				    series: [
 					    {
-						    name: 'Label',
-						    type: 'pie',
-						    center: [ '50%', '45%' ],
-						    radius: [ '68%', '86%' ],
+						    name: locate.grantsEachYear,
+						    data: data[ 1 ],
+						    type: 'bar',
 						    label: {
 							    show: true,
-							    position: 'center',
-							    formatter: '',
-							    backgroundColor: {
-								    image: baseUrl + '/assets/images/report/web3-foundation-grants.png'
-							    },
-							    width: 252,
-							    height: 106
-						    },
-						    itemStyle: {
-							    color: '#151515'
-						    },
-						    silent: true,
-						    labelLine: {
-							    show: false
-						    },
-						    emphasis: {
-							    scaleSize: 5
-						    },
-						    data: [
-							    {
-								    name: '',
-								    value: 100
-							    }
-						    ]
-					    }, {
-						    name: 'Category',
-						    type: 'pie',
-						    center: [ '50%', '45%' ],
-						    radius: [ '68%', '86%' ],
-						    label: {
-							    alignTo: 'edge',
-							    minMargin: 5,
-							    edgeDistance: 10,
-							    color: '#fff',
 							    fontFamily: fontFamily,
-							    fontWeight: 500,
-							    fontSize: 17,
-							    lineHeight: 30,
-							    formatter: function( params ) {
-								    return `${params.name} ${params.value}%`;
-							    }
+							    fontWeight: 700,
+							    fontSize: 16,
+							    position: 'insideTop',
+							    padding: [ 7, 0, 0, 0 ]
 						    },
-						    labelLine: {
-							    showAbove: false,
-							    length: 30,
-							    length2: 0,
-							    lineStyle: {
-								    color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
-									    {
-										    offset: 0,
-										    color: 'rgba(255,255,255,0)'
-
-									    },
-									    {
-										    offset: 1,
-										    color: '#fff'
-									    }
-								    ] ),
-							    },
-							    maxSurfaceAngle: 80
-
-						    },
-						    /*labelLayout: function( params ) {
-								const isLeft = params.labelRect.x < 570;
-								const points = params.labelLinePoints;
-								// Update the end point.
-								points[ 2 ][ 0 ] = isLeft
-									? params.labelRect.x
-									: params.labelRect.x + params.labelRect.width;
-								return {
-									labelLinePoints: points
-								};
-							},*/
+						    barMaxWidth: 102,
 						    itemStyle: {
-							    borderColor: '#151515',
-							    borderWidth: 5
+							    borderRadius: [ 8, 8, 0, 0 ]
+						    }
+					    },
+					    {
+						    name: locate.grantsCumulative,
+						    data: data[ 2 ],
+						    type: 'line',
+						    label: {
+							    show: true,
+							    fontFamily: fontFamily,
+							    fontWeight: 700,
+							    fontSize: 16,
+							    position: 'top',
+							    color: colors[ 1 ],
 						    },
+						    smooth: false,
+						    showSymbol: true,
+						    symbolSize: 16,
+						    //symbol: 'path://M11 8C11 9.65685 9.65685 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5C9.65685 5 11 6.34315 11 8 M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM8 11C9.65685 11 11 9.65685 11 8C11 6.34315 9.65685 5 8 5C6.34315 5 5 6.34315 5 8C5 9.65685 6.34315 11 8 11Z',
+						    symbol: 'image://data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFzSURBVHgBpVMxS8NAGH13uTSgtkhrCwpqVXCyix100cFMSpzFSRdH166li0N/g4OTg2ulTl10EIdOnUTQ0kGhbVwqQtMm511ECdeisT744PLue++Sl+8IFDSQm9GgpzVg3gOPfrLEJoDN0KsmUewE+8nX4gHHRgyTqy7cDH6ABq2WAq0SFJxvAykeR8wCeAKhQOxpsJI0ofJRnhxeLMETTXhZ36qFXLQHto8RoAMl1ocunPjAZrx8sGuYS1ty3btr3LY3Ty/UHhFymgrpwKvHr4/2jO1lCxFtTJa+sWDGy4eW2tcHTdNh326sza4PcOaiqXJE/GaKf4JSkI5KOpXHisp1RQ5D5G1K4NVV2t45u+zePFXguO+yulf3pdchIRK4NpGjy8AsjAAG/ZzOofisgdfwR0hNCoU3P8QUIlU5nmHFruht+ZrAZeLIR5pwsmIz89vJUrwSvExBNJGfcIURB58SKfszQuF1+iB1Q1QSJy/B/g/pm3cqp4f8DgAAAABJRU5ErkJggg==',
 						    emphasis: {
-							    scaleSize: 5
-						    },
-						    data: datasets
+							    focus: 'series'
+						    }
 					    }
 				    ]
 			    },
@@ -2646,333 +3236,48 @@
 		}
 
 		function getChartResponsiveOptionsWeb3FoundationGrants() {
-			var newOptions = {
-				series: [ {}, {} ]
-			};
-
-			if ( window.innerWidth < 992 ) {
-				newOptions[ 'legend' ] = defaultLegendSettings;
-				newOptions[ 'series' ][ 1 ] = {
-					label: {
-						show: false
-					}
-				}
-			} else {
-				newOptions[ 'legend' ] = {
-					show: false
-				};
-				newOptions[ 'series' ][ 1 ] = {
-					label: {
-						show: true
-					}
-				}
-			}
-
-			if ( window.innerWidth < 460 ) {
-				newOptions[ 'series' ][ 0 ] = {
-					label: {
-						width: 180,
-						height: 76
-					},
-				}
-			} else if ( window.innerWidth < 768 ) {
-				newOptions[ 'series' ][ 0 ] = {
-					label: {
-						width: 220,
-						height: 93
-					},
-				}
-			} else {
-				newOptions[ 'series' ][ 0 ] = {
-					label: {
-						width: 252,
-						height: 106
-					},
-				}
-			}
-
-			return newOptions;
-		}
-
-		function getChartOptionsTvlByChain( chartName ) {
-			var colors            = [
-				    '#E4A30D',
-				    '#66E1B6',
-				    '#D81356',
-				    '#22BFFE',
-				    '#1B6AE0',
-				    '#F42F44',
-				    '#B1B1B1',
-				    '#C669FF',
-				    '#EC7430',
-				    '#9871EB',
-				    '#89E469'
-			    ],
-			    datasets          = [
-				    {
-					    value: 66609820.48,
-					    name: 'Moonriver',
-					    label: {
-						    color: colors[ 0 ]
-					    },
-					    labelLine: {
-						    lineStyle: {
-							    color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
-								    {
-									    offset: 0,
-									    color: '#fff'
-
-								    },
-								    {
-									    offset: 1,
-									    color: 'rgba(255,255,255,0)'
-								    }
-							    ] )
-						    }
-					    }
-				    }, {
-					    value: 59641462.91,
-					    name: 'Moonbeam',
-					    label: {
-						    color: colors[ 1 ]
-					    },
-					    labelLine: {
-						    lineStyle: {
-							    color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
-								    {
-									    offset: 0,
-									    color: '#fff'
-
-								    },
-								    {
-									    offset: 1,
-									    color: 'rgba(255,255,255,0)'
-								    }
-							    ] )
-						    }
-					    }
-				    }, {
-					    value: 47800887.19,
-					    name: 'Acala',
-					    label: {
-						    color: colors[ 2 ]
-					    },
-				    }, {
-					    value: 40774324.99,
-					    name: 'Parallel',
-					    label: {
-						    color: colors[ 3 ]
-					    },
-				    }, {
-					    value: 36916163.3,
-					    name: 'Astar',
-					    label: {
-						    color: colors[ 4 ]
-					    },
-				    }, {
-					    value: 14488857.47,
-					    name: 'Karura',
-					    label: {
-						    color: colors[ 5 ]
-					    },
-				    }, {
-					    value: 5290490.04,
-					    name: 'Heiko',
-					    label: {
-						    color: colors[ 6 ]
-					    },
-				    }, {
-					    value: 4172517.9,
-					    name: 'Interlay',
-					    label: {
-						    color: colors[ 7 ]
-					    },
-				    }, {
-					    value: 2825232.73,
-					    name: 'Bifrost',
-					    label: {
-						    color: colors[ 8 ]
-					    },
-					    labelLine: {
-						    lineStyle: {
-							    color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
-								    {
-									    offset: 0,
-									    color: '#fff'
-
-								    },
-								    {
-									    offset: 1,
-									    color: 'rgba(255,255,255,0)'
-								    }
-							    ] )
-						    }
-					    }
-				    }, {
-					    value: 1827688.62,
-					    name: 'Kintsugi',
-					    label: {
-						    color: colors[ 9 ]
-					    },
-					    labelLine: {
-						    lineStyle: {
-							    color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
-								    {
-									    offset: 0,
-									    color: '#fff'
-
-								    },
-								    {
-									    offset: 1,
-									    color: 'rgba(255,255,255,0)'
-								    }
-							    ] )
-						    }
-					    }
-				    }, {
-					    value: 2453873.6,
-					    name: 'Others',
-					    label: {
-						    color: colors[ 10 ]
-					    },
-					    labelLine: {
-						    lineStyle: {
-							    color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
-								    {
-									    offset: 0,
-									    color: '#fff'
-
-								    },
-								    {
-									    offset: 1,
-									    color: 'rgba(255,255,255,0)'
-								    }
-							    ] )
-						    }
-					    }
-				    }
-			    ],
-			    baseOptions       = {
-				    color: colors,
-				    tooltip: $.extend( true, {}, defaultTooltipStyle, {
-					    trigger: 'item',
-					    valueFormatter: function( value ) {
-						    return NumberUtil.formatWithCommas( value );
-					    }
-				    } ),
-				    legend: $.extend( true, {}, defaultLegendSettings, {
-					    show: false,
-				    } ),
-				    grid: {
-					    left: '3%',
-					    right: '3%',
-					    top: '0',
-					    containLabel: true
-				    },
-				    series: [
-					    {
-						    startAngle: 80,
-						    name: '',
-						    type: 'pie',
-						    center: [ '50%', '45%' ],
-						    radius: [ '68%', '86%' ],
-						    label: {
-							    alignTo: 'edge',
-							    minMargin: 5,
-							    edgeDistance: 10,
-							    color: '#fff',
-							    fontFamily: fontFamily,
-							    fontWeight: 500,
-							    fontSize: 17,
-							    lineHeight: 30,
-							    formatter: function( params ) {
-								    return `${params.name} ${params.percent}%`;
-							    }
-						    },
-						    labelLine: {
-							    showAbove: false,
-							    length: 30,
-							    length2: 0,
-							    lineStyle: {
-								    color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
-									    {
-										    offset: 0,
-										    color: 'rgba(255,255,255,0)'
-
-									    },
-									    {
-										    offset: 1,
-										    color: '#fff'
-									    }
-								    ] )
-							    },
-							    maxSurfaceAngle: 80
-						    },
-						    /*labelLayout: function( params ) {
-								const isLeft = params.labelRect.x < 570;
-								const points = params.labelLinePoints;
-								// Update the end point.
-								points[ 2 ][ 0 ] = isLeft
-									? params.labelRect.x
-									: params.labelRect.x + params.labelRect.width;
-								return {
-									labelLinePoints: points
-								};
-							},*/
-						    itemStyle: {
-							    borderColor: '#151515',
-							    borderWidth: 2
-						    },
-						    emphasis: {
-							    scaleSize: 5
-						    },
-						    data: datasets
-					    }
-				    ]
-			    },
-			    responsiveOptions = getChartResponsiveOptionsTvlByChain();
-
-			return $.extend( true, {}, baseOptions, responsiveOptions );
-		}
-
-		function getChartResponsiveOptionsTvlByChain() {
-			var newOptions = {
-				series: [ {}, {} ]
-			};
+			var newOptions = {};
 
 			if ( window.innerWidth < 768 ) {
-				newOptions[ 'legend' ] = defaultLegendSettings;
-				newOptions[ 'series' ][ 0 ] = {
-					label: {
-						fontSize: 11,
-						lineHeight: 24,
-						formatter: function( params ) {
-							return `${params.percent}%`;
-						}
-					},
-					labelLine: {
-						length: 5,
+				newOptions[ 'series' ] = [
+					{
+						label: {
+							fontSize: 12,
+						},
+					}, {
+						label: {
+							fontSize: 12,
+						},
 					}
-				}
+				]
 			} else {
-				newOptions[ 'legend' ] = {
-					show: false
-				};
-				newOptions[ 'series' ][ 0 ] = {
-					label: {
-						fontSize: 17,
-						lineHeight: 30,
-						formatter: function( params ) {
-							return `${params.name} ${params.percent}%`;
-						}
+				newOptions[ 'series' ] = [
+					{
+						label: {
+							fontSize: 16,
+						},
+					}, {
+						label: {
+							fontSize: 16,
+						},
 					}
-				}
+				]
 			}
 
 			return newOptions;
 		}
 
 		function getChartLinesBaseOptions( jsonData, datasets, colors, areaBackground, seriesOptions, chartExtraOptions ) {
+			/*if( null === areaBackground) {
+				console.log( typeof areaBackground );
+				console.log( areaBackground );
+			}
+
+			if( null === seriesOptions) {
+				console.log( typeof seriesOptions );
+				console.log( seriesOptions );
+			}*/
+
 			var totalItems = jsonData.length,
 			    data       = [];
 
@@ -3078,6 +3383,7 @@
 					},
 					axisPointer: defaultAxisPointerLabelSettings,
 					axisLabel: {
+						margin: 12,
 						formatter: dateFormatter,
 						color: '#ccc'
 					}
@@ -3114,17 +3420,32 @@
 
 			if ( window.innerWidth > 767 ) {
 				switch ( chartName ) {
-					case 'dex-with-average-tvl-higher-than-10m':
-					case 'dex-with-average-tvl-lower-than-5m':
-					case 'tvl-lending-borrowing':
-					case 'tvl-liquid-staking':
-					case 'stablecoin-total-issuance':
+					case 'staking-ratio':
+					case 'twitter-followers':
+					case 'tvl-defi-parachain':
+					case 'tvl-dot-dex':
+					case 'tvl-ksm-dex':
+					case 'tvl-dot-lending':
+					case 'tvl-ksm-lending':
+					case 'tvl-dot-liquid-staking':
+					case 'tvl-ksm-liquid-staking':
+					case 'tvl-liquid-crowdloan':
+					case 'stablecoin-issuance':
+					case 'total-bridge-tvl':
+
 					case 'subsocial-daily-activities':
 					case 'joystream-cumulative-activities':
 						newOptions[ 'xAxis' ] = {
 							splitNumber: 5
 						};
 						break;
+
+					case 'mf-daily-active-user':
+						newOptions[ 'xAxis' ] = {
+							splitNumber: 4
+						};
+						break;
+
 					default:
 						newOptions[ 'xAxis' ] = {
 							splitNumber: 8
@@ -3133,23 +3454,33 @@
 				}
 			} else {
 				newOptions[ 'xAxis' ] = {
-					splitNumber: 3
+					splitNumber: 3,
+					axisLabel: {
+						formatter: dateShortFormatter
+					}
 				};
 
 				if ( window.innerWidth < 460 ) {
-					newOptions[ 'xAxis' ] = {
-						splitNumber: 2
-					};
+					$.extend( true, newOptions, {
+						xAxis: {
+							splitNumber: 2
+						}
+					} )
 				}
 			}
 
 			var yAxis = {};
 			switch ( chartName ) {
-				case 'dex-with-average-tvl-higher-than-10m':
-				case 'dex-with-average-tvl-lower-than-5m':
-				case 'tvl-lending-borrowing':
-				case 'tvl-liquid-staking':
-				case 'stablecoin-total-issuance':
+				case 'tvl-defi-parachain':
+				case 'tvl-dot-dex':
+				case 'tvl-ksm-dex':
+				case 'tvl-dot-lending':
+				case 'tvl-ksm-lending':
+				case 'tvl-dot-liquid-staking':
+				case 'tvl-ksm-liquid-staking':
+				case 'tvl-liquid-crowdloan':
+				case 'stablecoin-issuance':
+				case 'total-bridge-tvl':
 					newOptions.tooltip = {
 						valueFormatter: function( value ) {
 							return value ? '$' + NumberUtil.formatWithCommas( value ) : '-';
@@ -3187,25 +3518,6 @@
 			}
 
 			return newOptions;
-		}
-
-		function getChartDataXCMTransfers() {
-			return [
-				[
-					'Moonbeam',
-					'Acala',
-					'Moonriver',
-					'Parallel',
-					'Karura',
-					'Parallel Heiko',
-					'Interlay',
-					'Bifrost Kusama',
-					'Astar',
-					'Kintsugi'
-				],
-				[ 56878947, 21890482, 18066626, 17998162, 15076004, 12107783, 6417391, 5148441, 3876451, 1699308 ],
-				[ 39684136, 27054801, 11053411, 19805052, 18723873, 8756901, 1443603, 2449835, 8005710, 856864 ],
-			]
 		}
 
 		function getTokenIcon( name ) {

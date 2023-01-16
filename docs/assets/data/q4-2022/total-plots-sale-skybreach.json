@@ -1,0 +1,1248 @@
+﻿[
+    {
+        "date": "2022-06-17",
+        "total_volume": "244642.5",
+        "plot_count": "2158",
+        "cumulative_plot_count": "2158",
+        "cumulative_volume": "244642.5"
+    },
+    {
+        "date": "2022-06-18",
+        "total_volume": "70245",
+        "plot_count": "805",
+        "cumulative_plot_count": "2963",
+        "cumulative_volume": "314887.5"
+    },
+    {
+        "date": "2022-06-19",
+        "total_volume": "71325",
+        "plot_count": "751",
+        "cumulative_plot_count": "3714",
+        "cumulative_volume": "386212.5"
+    },
+    {
+        "date": "2022-06-20",
+        "total_volume": "47015",
+        "plot_count": "671",
+        "cumulative_plot_count": "4385",
+        "cumulative_volume": "433227.5"
+    },
+    {
+        "date": "2022-06-21",
+        "total_volume": "34957.5",
+        "plot_count": "389",
+        "cumulative_plot_count": "4774",
+        "cumulative_volume": "468185"
+    },
+    {
+        "date": "2022-06-22",
+        "total_volume": "30200",
+        "plot_count": "362",
+        "cumulative_plot_count": "5136",
+        "cumulative_volume": "498385"
+    },
+    {
+        "date": "2022-06-23",
+        "total_volume": "24300",
+        "plot_count": "305",
+        "cumulative_plot_count": "5441",
+        "cumulative_volume": "522685"
+    },
+    {
+        "date": "2022-06-24",
+        "total_volume": "263107.5",
+        "plot_count": "5780",
+        "cumulative_plot_count": "11221",
+        "cumulative_volume": "785792.5"
+    },
+    {
+        "date": "2022-06-25",
+        "total_volume": "53102.5",
+        "plot_count": "930",
+        "cumulative_plot_count": "12151",
+        "cumulative_volume": "838895"
+    },
+    {
+        "date": "2022-06-26",
+        "total_volume": "25837.5",
+        "plot_count": "493",
+        "cumulative_plot_count": "12644",
+        "cumulative_volume": "864732.5"
+    },
+    {
+        "date": "2022-06-27",
+        "total_volume": "26057.5",
+        "plot_count": "482",
+        "cumulative_plot_count": "13126",
+        "cumulative_volume": "890790"
+    },
+    {
+        "date": "2022-06-28",
+        "total_volume": "4850",
+        "plot_count": "98",
+        "cumulative_plot_count": "13224",
+        "cumulative_volume": "895640"
+    },
+    {
+        "date": "2022-06-29",
+        "total_volume": "1947.5",
+        "plot_count": "49",
+        "cumulative_plot_count": "13273",
+        "cumulative_volume": "897587.5"
+    },
+    {
+        "date": "2022-06-30",
+        "total_volume": "18315",
+        "plot_count": "238",
+        "cumulative_plot_count": "13511",
+        "cumulative_volume": "915902.5"
+    },
+    {
+        "date": "2022-07-01",
+        "total_volume": "3440",
+        "plot_count": "56",
+        "cumulative_plot_count": "13567",
+        "cumulative_volume": "919342.5"
+    },
+    {
+        "date": "2022-07-02",
+        "total_volume": "2400",
+        "plot_count": "49",
+        "cumulative_plot_count": "13616",
+        "cumulative_volume": "921742.5"
+    },
+    {
+        "date": "2022-07-03",
+        "total_volume": "2277.5",
+        "plot_count": "38",
+        "cumulative_plot_count": "13654",
+        "cumulative_volume": "924020"
+    },
+    {
+        "date": "2022-07-04",
+        "total_volume": "3150",
+        "plot_count": "45",
+        "cumulative_plot_count": "13699",
+        "cumulative_volume": "927170"
+    },
+    {
+        "date": "2022-07-05",
+        "total_volume": "2750",
+        "plot_count": "42",
+        "cumulative_plot_count": "13741",
+        "cumulative_volume": "929920"
+    },
+    {
+        "date": "2022-07-06",
+        "total_volume": "1092.5",
+        "plot_count": "36",
+        "cumulative_plot_count": "13777",
+        "cumulative_volume": "931012.5"
+    },
+    {
+        "date": "2022-07-07",
+        "total_volume": "2241.31155",
+        "plot_count": "85",
+        "cumulative_plot_count": "13862",
+        "cumulative_volume": "933253.8116"
+    },
+    {
+        "date": "2022-07-08",
+        "total_volume": "1839.290425",
+        "plot_count": "32",
+        "cumulative_plot_count": "13894",
+        "cumulative_volume": "935093.102"
+    },
+    {
+        "date": "2022-07-09",
+        "total_volume": "2128.9625",
+        "plot_count": "38",
+        "cumulative_plot_count": "13932",
+        "cumulative_volume": "937222.0645"
+    },
+    {
+        "date": "2022-07-10",
+        "total_volume": "2316.2005",
+        "plot_count": "44",
+        "cumulative_plot_count": "13976",
+        "cumulative_volume": "939538.265"
+    },
+    {
+        "date": "2022-07-11",
+        "total_volume": "1715.5255",
+        "plot_count": "41",
+        "cumulative_plot_count": "14017",
+        "cumulative_volume": "941253.7905"
+    },
+    {
+        "date": "2022-07-12",
+        "total_volume": "2419.28445",
+        "plot_count": "45",
+        "cumulative_plot_count": "14062",
+        "cumulative_volume": "943673.0749"
+    },
+    {
+        "date": "2022-07-13",
+        "total_volume": "1169.4671",
+        "plot_count": "14",
+        "cumulative_plot_count": "14076",
+        "cumulative_volume": "944842.542"
+    },
+    {
+        "date": "2022-07-14",
+        "total_volume": "1352.255",
+        "plot_count": "30",
+        "cumulative_plot_count": "14106",
+        "cumulative_volume": "946194.797"
+    },
+    {
+        "date": "2022-07-15",
+        "total_volume": "1297.6465",
+        "plot_count": "18",
+        "cumulative_plot_count": "14124",
+        "cumulative_volume": "947492.4435"
+    },
+    {
+        "date": "2022-07-16",
+        "total_volume": "861.0795",
+        "plot_count": "15",
+        "cumulative_plot_count": "14139",
+        "cumulative_volume": "948353.523"
+    },
+    {
+        "date": "2022-07-17",
+        "total_volume": "2926.5795",
+        "plot_count": "39",
+        "cumulative_plot_count": "14178",
+        "cumulative_volume": "951280.1025"
+    },
+    {
+        "date": "2022-07-18",
+        "total_volume": "1133.1435",
+        "plot_count": "20",
+        "cumulative_plot_count": "14198",
+        "cumulative_volume": "952413.246"
+    },
+    {
+        "date": "2022-07-19",
+        "total_volume": "1310.463",
+        "plot_count": "15",
+        "cumulative_plot_count": "14213",
+        "cumulative_volume": "953723.709"
+    },
+    {
+        "date": "2022-07-20",
+        "total_volume": "2816.6905",
+        "plot_count": "45",
+        "cumulative_plot_count": "14258",
+        "cumulative_volume": "956540.3995"
+    },
+    {
+        "date": "2022-07-21",
+        "total_volume": "3585.431",
+        "plot_count": "36",
+        "cumulative_plot_count": "14294",
+        "cumulative_volume": "960125.8305"
+    },
+    {
+        "date": "2022-07-22",
+        "total_volume": "2415.6475",
+        "plot_count": "43",
+        "cumulative_plot_count": "14337",
+        "cumulative_volume": "962541.478"
+    },
+    {
+        "date": "2022-07-23",
+        "total_volume": "872.699",
+        "plot_count": "10",
+        "cumulative_plot_count": "14347",
+        "cumulative_volume": "963414.177"
+    },
+    {
+        "date": "2022-07-24",
+        "total_volume": "2262.866",
+        "plot_count": "15",
+        "cumulative_plot_count": "14362",
+        "cumulative_volume": "965677.043"
+    },
+    {
+        "date": "2022-07-25",
+        "total_volume": "4532.2525",
+        "plot_count": "71",
+        "cumulative_plot_count": "14433",
+        "cumulative_volume": "970209.2955"
+    },
+    {
+        "date": "2022-07-26",
+        "total_volume": "817.6325",
+        "plot_count": "9",
+        "cumulative_plot_count": "14442",
+        "cumulative_volume": "971026.928"
+    },
+    {
+        "date": "2022-07-27",
+        "total_volume": "889.588",
+        "plot_count": "4",
+        "cumulative_plot_count": "14446",
+        "cumulative_volume": "971916.516"
+    },
+    {
+        "date": "2022-07-28",
+        "total_volume": "89.4115",
+        "plot_count": "4",
+        "cumulative_plot_count": "14450",
+        "cumulative_volume": "972005.9275"
+    },
+    {
+        "date": "2022-07-29",
+        "total_volume": "138.9165",
+        "plot_count": "2",
+        "cumulative_plot_count": "14452",
+        "cumulative_volume": "972144.844"
+    },
+    {
+        "date": "2022-07-30",
+        "total_volume": "753.327",
+        "plot_count": "4",
+        "cumulative_plot_count": "14456",
+        "cumulative_volume": "972898.171"
+    },
+    {
+        "date": "2022-07-31",
+        "total_volume": "2548.8305",
+        "plot_count": "21",
+        "cumulative_plot_count": "14477",
+        "cumulative_volume": "975447.0015"
+    },
+    {
+        "date": "2022-08-01",
+        "total_volume": "1987.214",
+        "plot_count": "20",
+        "cumulative_plot_count": "14497",
+        "cumulative_volume": "977434.2155"
+    },
+    {
+        "date": "2022-08-02",
+        "total_volume": "720.679",
+        "plot_count": "7",
+        "cumulative_plot_count": "14504",
+        "cumulative_volume": "978154.8945"
+    },
+    {
+        "date": "2022-08-03",
+        "total_volume": "520",
+        "plot_count": "5",
+        "cumulative_plot_count": "14509",
+        "cumulative_volume": "978674.8945"
+    },
+    {
+        "date": "2022-08-04",
+        "total_volume": "85.9375",
+        "plot_count": "3",
+        "cumulative_plot_count": "14512",
+        "cumulative_volume": "978760.832"
+    },
+    {
+        "date": "2022-08-05",
+        "total_volume": "550",
+        "plot_count": "2",
+        "cumulative_plot_count": "14514",
+        "cumulative_volume": "979310.832"
+    },
+    {
+        "date": "2022-08-06",
+        "total_volume": "42.3185",
+        "plot_count": "1",
+        "cumulative_plot_count": "14515",
+        "cumulative_volume": "979353.1505"
+    },
+    {
+        "date": "2022-08-07",
+        "total_volume": "1405",
+        "plot_count": "4",
+        "cumulative_plot_count": "14519",
+        "cumulative_volume": "980758.1505"
+    },
+    {
+        "date": "2022-08-08",
+        "total_volume": "2202.2175",
+        "plot_count": "11",
+        "cumulative_plot_count": "14530",
+        "cumulative_volume": "982960.368"
+    },
+    {
+        "date": "2022-08-09",
+        "total_volume": "0",
+        "plot_count": "1",
+        "cumulative_plot_count": "14531",
+        "cumulative_volume": "982960.368"
+    },
+    {
+        "date": "2022-08-10",
+        "total_volume": "1461.892",
+        "plot_count": "25",
+        "cumulative_plot_count": "14556",
+        "cumulative_volume": "984422.26"
+    },
+    {
+        "date": "2022-08-11",
+        "total_volume": "1247.0665",
+        "plot_count": "15",
+        "cumulative_plot_count": "14571",
+        "cumulative_volume": "985669.3265"
+    },
+    {
+        "date": "2022-08-12",
+        "total_volume": "531.6815",
+        "plot_count": "13",
+        "cumulative_plot_count": "14584",
+        "cumulative_volume": "986201.008"
+    },
+    {
+        "date": "2022-08-13",
+        "total_volume": "588.742",
+        "plot_count": "8",
+        "cumulative_plot_count": "14592",
+        "cumulative_volume": "986789.75"
+    },
+    {
+        "date": "2022-08-14",
+        "total_volume": "968.115",
+        "plot_count": "19",
+        "cumulative_plot_count": "14611",
+        "cumulative_volume": "987757.865"
+    },
+    {
+        "date": "2022-08-15",
+        "total_volume": "430.111",
+        "plot_count": "2",
+        "cumulative_plot_count": "14613",
+        "cumulative_volume": "988187.976"
+    },
+    {
+        "date": "2022-08-16",
+        "total_volume": "557.287",
+        "plot_count": "15",
+        "cumulative_plot_count": "14628",
+        "cumulative_volume": "988745.263"
+    },
+    {
+        "date": "2022-08-17",
+        "total_volume": "954.81625",
+        "plot_count": "11",
+        "cumulative_plot_count": "14639",
+        "cumulative_volume": "989700.0793"
+    },
+    {
+        "date": "2022-08-18",
+        "total_volume": "418.634",
+        "plot_count": "3",
+        "cumulative_plot_count": "14642",
+        "cumulative_volume": "990118.7133"
+    },
+    {
+        "date": "2022-08-19",
+        "total_volume": "156.386",
+        "plot_count": "2",
+        "cumulative_plot_count": "14644",
+        "cumulative_volume": "990275.0993"
+    },
+    {
+        "date": "2022-08-20",
+        "total_volume": "141.574",
+        "plot_count": "4",
+        "cumulative_plot_count": "14648",
+        "cumulative_volume": "990416.6733"
+    },
+    {
+        "date": "2022-08-21",
+        "total_volume": "508.262",
+        "plot_count": "13",
+        "cumulative_plot_count": "14661",
+        "cumulative_volume": "990924.9353"
+    },
+    {
+        "date": "2022-08-22",
+        "total_volume": "25",
+        "plot_count": "2",
+        "cumulative_plot_count": "14663",
+        "cumulative_volume": "990949.9353"
+    },
+    {
+        "date": "2022-08-23",
+        "total_volume": "190.2805",
+        "plot_count": "3",
+        "cumulative_plot_count": "14666",
+        "cumulative_volume": "991140.2158"
+    },
+    {
+        "date": "2022-08-24",
+        "total_volume": "78.8275",
+        "plot_count": "3",
+        "cumulative_plot_count": "14669",
+        "cumulative_volume": "991219.0433"
+    },
+    {
+        "date": "2022-08-26",
+        "total_volume": "118.557",
+        "plot_count": "4",
+        "cumulative_plot_count": "14673",
+        "cumulative_volume": "991337.6003"
+    },
+    {
+        "date": "2022-08-27",
+        "total_volume": "148.2365",
+        "plot_count": "2",
+        "cumulative_plot_count": "14675",
+        "cumulative_volume": "991485.8368"
+    },
+    {
+        "date": "2022-08-28",
+        "total_volume": "184.291",
+        "plot_count": "6",
+        "cumulative_plot_count": "14681",
+        "cumulative_volume": "991670.1278"
+    },
+    {
+        "date": "2022-08-29",
+        "total_volume": "328.7025",
+        "plot_count": "9",
+        "cumulative_plot_count": "14690",
+        "cumulative_volume": "991998.8303"
+    },
+    {
+        "date": "2022-08-30",
+        "total_volume": "326.0025",
+        "plot_count": "9",
+        "cumulative_plot_count": "14699",
+        "cumulative_volume": "992324.8328"
+    },
+    {
+        "date": "2022-09-01",
+        "total_volume": "107.6775",
+        "plot_count": "1",
+        "cumulative_plot_count": "14700",
+        "cumulative_volume": "992432.5103"
+    },
+    {
+        "date": "2022-09-03",
+        "total_volume": "35.3885",
+        "plot_count": "1",
+        "cumulative_plot_count": "14701",
+        "cumulative_volume": "992467.8988"
+    },
+    {
+        "date": "2022-09-04",
+        "total_volume": "685.715",
+        "plot_count": "20",
+        "cumulative_plot_count": "14721",
+        "cumulative_volume": "993153.6138"
+    },
+    {
+        "date": "2022-09-08",
+        "total_volume": "162.181",
+        "plot_count": "3",
+        "cumulative_plot_count": "14724",
+        "cumulative_volume": "993315.7948"
+    },
+    {
+        "date": "2022-09-09",
+        "total_volume": "33.755",
+        "plot_count": "2",
+        "cumulative_plot_count": "14726",
+        "cumulative_volume": "993349.5498"
+    },
+    {
+        "date": "2022-09-10",
+        "total_volume": "335.9165",
+        "plot_count": "6",
+        "cumulative_plot_count": "14732",
+        "cumulative_volume": "993685.4663"
+    },
+    {
+        "date": "2022-09-11",
+        "total_volume": "166.705",
+        "plot_count": "3",
+        "cumulative_plot_count": "14735",
+        "cumulative_volume": "993852.1713"
+    },
+    {
+        "date": "2022-09-12",
+        "total_volume": "20",
+        "plot_count": "1",
+        "cumulative_plot_count": "14736",
+        "cumulative_volume": "993872.1713"
+    },
+    {
+        "date": "2022-09-14",
+        "total_volume": "150.115",
+        "plot_count": "5",
+        "cumulative_plot_count": "14741",
+        "cumulative_volume": "994022.2863"
+    },
+    {
+        "date": "2022-09-15",
+        "total_volume": "32.2295",
+        "plot_count": "1",
+        "cumulative_plot_count": "14742",
+        "cumulative_volume": "994054.5158"
+    },
+    {
+        "date": "2022-09-16",
+        "total_volume": "447.478",
+        "plot_count": "9",
+        "cumulative_plot_count": "14751",
+        "cumulative_volume": "994501.9938"
+    },
+    {
+        "date": "2022-09-17",
+        "total_volume": "636.2515",
+        "plot_count": "16",
+        "cumulative_plot_count": "14767",
+        "cumulative_volume": "995138.2453"
+    },
+    {
+        "date": "2022-09-18",
+        "total_volume": "157.8805",
+        "plot_count": "3",
+        "cumulative_plot_count": "14770",
+        "cumulative_volume": "995296.1258"
+    },
+    {
+        "date": "2022-09-19",
+        "total_volume": "565.8985",
+        "plot_count": "13",
+        "cumulative_plot_count": "14783",
+        "cumulative_volume": "995862.0243"
+    },
+    {
+        "date": "2022-09-21",
+        "total_volume": "61.534",
+        "plot_count": "2",
+        "cumulative_plot_count": "14785",
+        "cumulative_volume": "995923.5583"
+    },
+    {
+        "date": "2022-09-24",
+        "total_volume": "29.939",
+        "plot_count": "1",
+        "cumulative_plot_count": "14786",
+        "cumulative_volume": "995953.4973"
+    },
+    {
+        "date": "2022-09-25",
+        "total_volume": "334.304",
+        "plot_count": "2",
+        "cumulative_plot_count": "14788",
+        "cumulative_volume": "996287.8013"
+    },
+    {
+        "date": "2022-09-27",
+        "total_volume": "1416.6585",
+        "plot_count": "18",
+        "cumulative_plot_count": "14806",
+        "cumulative_volume": "997704.4598"
+    },
+    {
+        "date": "2022-09-30",
+        "total_volume": "397.474",
+        "plot_count": "14",
+        "cumulative_plot_count": "14820",
+        "cumulative_volume": "998101.9338"
+    },
+    {
+        "date": "2022-10-02",
+        "total_volume": "55.738",
+        "plot_count": "2",
+        "cumulative_plot_count": "14822",
+        "cumulative_volume": "998157.6718"
+    },
+    {
+        "date": "2022-10-03",
+        "total_volume": "82.9995",
+        "plot_count": "1",
+        "cumulative_plot_count": "14823",
+        "cumulative_volume": "998240.6713"
+    },
+    {
+        "date": "2022-10-05",
+        "total_volume": "27.203",
+        "plot_count": "1",
+        "cumulative_plot_count": "14824",
+        "cumulative_volume": "998267.8743"
+    },
+    {
+        "date": "2022-10-10",
+        "total_volume": "0",
+        "plot_count": "2",
+        "cumulative_plot_count": "14826",
+        "cumulative_volume": "998267.8743"
+    },
+    {
+        "date": "2022-10-13",
+        "total_volume": "701.151",
+        "plot_count": "18",
+        "cumulative_plot_count": "14844",
+        "cumulative_volume": "998969.0253"
+    },
+    {
+        "date": "2022-10-14",
+        "total_volume": "164.853",
+        "plot_count": "4",
+        "cumulative_plot_count": "14848",
+        "cumulative_volume": "999133.8783"
+    },
+    {
+        "date": "2022-10-18",
+        "total_volume": "95.798",
+        "plot_count": "4",
+        "cumulative_plot_count": "14852",
+        "cumulative_volume": "999229.6763"
+    },
+    {
+        "date": "2022-10-20",
+        "total_volume": "1194.1905",
+        "plot_count": "26",
+        "cumulative_plot_count": "14878",
+        "cumulative_volume": "1000423.867"
+    },
+    {
+        "date": "2022-10-21",
+        "total_volume": "69.324",
+        "plot_count": "1",
+        "cumulative_plot_count": "14879",
+        "cumulative_volume": "1000493.191"
+    },
+    {
+        "date": "2022-10-22",
+        "total_volume": "251.9965",
+        "plot_count": "8",
+        "cumulative_plot_count": "14887",
+        "cumulative_volume": "1000745.187"
+    },
+    {
+        "date": "2022-10-23",
+        "total_volume": "22.64",
+        "plot_count": "1",
+        "cumulative_plot_count": "14888",
+        "cumulative_volume": "1000767.827"
+    },
+    {
+        "date": "2022-10-24",
+        "total_volume": "80",
+        "plot_count": "1",
+        "cumulative_plot_count": "14889",
+        "cumulative_volume": "1000847.827"
+    },
+    {
+        "date": "2022-10-26",
+        "total_volume": "109.456",
+        "plot_count": "5",
+        "cumulative_plot_count": "14894",
+        "cumulative_volume": "1000957.283"
+    },
+    {
+        "date": "2022-10-27",
+        "total_volume": "21.722",
+        "plot_count": "1",
+        "cumulative_plot_count": "14895",
+        "cumulative_volume": "1000979.005"
+    },
+    {
+        "date": "2022-10-28",
+        "total_volume": "342.3725",
+        "plot_count": "16",
+        "cumulative_plot_count": "14911",
+        "cumulative_volume": "1001321.378"
+    },
+    {
+        "date": "2022-10-29",
+        "total_volume": "232.4215",
+        "plot_count": "9",
+        "cumulative_plot_count": "14920",
+        "cumulative_volume": "1001553.799"
+    },
+    {
+        "date": "2022-10-30",
+        "total_volume": "20.8445",
+        "plot_count": "1",
+        "cumulative_plot_count": "14921",
+        "cumulative_volume": "1001574.644"
+    },
+    {
+        "date": "2022-10-31",
+        "total_volume": "2021.377",
+        "plot_count": "78",
+        "cumulative_plot_count": "14999",
+        "cumulative_volume": "1003596.021"
+    },
+    {
+        "date": "2022-11-01",
+        "total_volume": "607.7",
+        "plot_count": "10",
+        "cumulative_plot_count": "15009",
+        "cumulative_volume": "1004203.721"
+    },
+    {
+        "date": "2022-11-02",
+        "total_volume": "1163.4365",
+        "plot_count": "44",
+        "cumulative_plot_count": "15053",
+        "cumulative_volume": "1005367.157"
+    },
+    {
+        "date": "2022-11-03",
+        "total_volume": "338.674",
+        "plot_count": "9",
+        "cumulative_plot_count": "15062",
+        "cumulative_volume": "1005705.831"
+    },
+    {
+        "date": "2022-11-04",
+        "total_volume": "78.068",
+        "plot_count": "4",
+        "cumulative_plot_count": "15066",
+        "cumulative_volume": "1005783.899"
+    },
+    {
+        "date": "2022-11-05",
+        "total_volume": "38.665",
+        "plot_count": "2",
+        "cumulative_plot_count": "15068",
+        "cumulative_volume": "1005822.564"
+    },
+    {
+        "date": "2022-11-06",
+        "total_volume": "19.112",
+        "plot_count": "1",
+        "cumulative_plot_count": "15069",
+        "cumulative_volume": "1005841.676"
+    },
+    {
+        "date": "2022-11-07",
+        "total_volume": "131.237",
+        "plot_count": "7",
+        "cumulative_plot_count": "15076",
+        "cumulative_volume": "1005972.913"
+    },
+    {
+        "date": "2022-11-11",
+        "total_volume": "160.7355",
+        "plot_count": "7",
+        "cumulative_plot_count": "15083",
+        "cumulative_volume": "1006133.649"
+    },
+    {
+        "date": "2022-11-12",
+        "total_volume": "52.665",
+        "plot_count": "1",
+        "cumulative_plot_count": "15084",
+        "cumulative_volume": "1006186.314"
+    },
+    {
+        "date": "2022-11-14",
+        "total_volume": "629.0465",
+        "plot_count": "17",
+        "cumulative_plot_count": "15101",
+        "cumulative_volume": "1006815.36"
+    },
+    {
+        "date": "2022-11-15",
+        "total_volume": "787.596",
+        "plot_count": "10",
+        "cumulative_plot_count": "15111",
+        "cumulative_volume": "1007602.956"
+    },
+    {
+        "date": "2022-11-16",
+        "total_volume": "331.3045",
+        "plot_count": "8",
+        "cumulative_plot_count": "15119",
+        "cumulative_volume": "1007934.261"
+    },
+    {
+        "date": "2022-11-17",
+        "total_volume": "95.288",
+        "plot_count": "3",
+        "cumulative_plot_count": "15122",
+        "cumulative_volume": "1008029.549"
+    },
+    {
+        "date": "2022-11-18",
+        "total_volume": "350.5165",
+        "plot_count": "4",
+        "cumulative_plot_count": "15126",
+        "cumulative_volume": "1008380.065"
+    },
+    {
+        "date": "2022-11-19",
+        "total_volume": "31.402",
+        "plot_count": "2",
+        "cumulative_plot_count": "15128",
+        "cumulative_volume": "1008411.467"
+    },
+    {
+        "date": "2022-11-20",
+        "total_volume": "108.9485",
+        "plot_count": "7",
+        "cumulative_plot_count": "15135",
+        "cumulative_volume": "1008520.416"
+    },
+    {
+        "date": "2022-11-21",
+        "total_volume": "502.095",
+        "plot_count": "11",
+        "cumulative_plot_count": "15146",
+        "cumulative_volume": "1009022.511"
+    },
+    {
+        "date": "2022-11-22",
+        "total_volume": "164.359",
+        "plot_count": "5",
+        "cumulative_plot_count": "15151",
+        "cumulative_volume": "1009186.87"
+    },
+    {
+        "date": "2022-11-23",
+        "total_volume": "144.3895",
+        "plot_count": "2",
+        "cumulative_plot_count": "15153",
+        "cumulative_volume": "1009331.259"
+    },
+    {
+        "date": "2022-11-24",
+        "total_volume": "14",
+        "plot_count": "1",
+        "cumulative_plot_count": "15154",
+        "cumulative_volume": "1009345.259"
+    },
+    {
+        "date": "2022-11-26",
+        "total_volume": "111.091",
+        "plot_count": "6",
+        "cumulative_plot_count": "15160",
+        "cumulative_volume": "1009456.35"
+    },
+    {
+        "date": "2022-11-27",
+        "total_volume": "27.3745",
+        "plot_count": "2",
+        "cumulative_plot_count": "15162",
+        "cumulative_volume": "1009483.725"
+    },
+    {
+        "date": "2022-11-28",
+        "total_volume": "383.2875",
+        "plot_count": "13",
+        "cumulative_plot_count": "15175",
+        "cumulative_volume": "1009867.012"
+    },
+    {
+        "date": "2022-11-29",
+        "total_volume": "81.2515",
+        "plot_count": "4",
+        "cumulative_plot_count": "15179",
+        "cumulative_volume": "1009948.264"
+    },
+    {
+        "date": "2022-11-30",
+        "total_volume": "117.54",
+        "plot_count": "7",
+        "cumulative_plot_count": "15186",
+        "cumulative_volume": "1010065.804"
+    },
+    {
+        "date": "2022-12-01",
+        "total_volume": "38.436",
+        "plot_count": "1",
+        "cumulative_plot_count": "15187",
+        "cumulative_volume": "1010104.24"
+    },
+    {
+        "date": "2022-12-02",
+        "total_volume": "1045.9185",
+        "plot_count": "46",
+        "cumulative_plot_count": "15233",
+        "cumulative_volume": "1011150.158"
+    },
+    {
+        "date": "2022-12-03",
+        "total_volume": "183.7695",
+        "plot_count": "9",
+        "cumulative_plot_count": "15242",
+        "cumulative_volume": "1011333.928"
+    },
+    {
+        "date": "2022-12-04",
+        "total_volume": "1078.08",
+        "plot_count": "62",
+        "cumulative_plot_count": "15304",
+        "cumulative_volume": "1012412.008"
+    },
+    {
+        "date": "2022-12-05",
+        "total_volume": "1382.2655",
+        "plot_count": "64",
+        "cumulative_plot_count": "15368",
+        "cumulative_volume": "1013794.273"
+    },
+    {
+        "date": "2022-12-06",
+        "total_volume": "5067.021",
+        "plot_count": "238",
+        "cumulative_plot_count": "15606",
+        "cumulative_volume": "1018861.294"
+    },
+    {
+        "date": "2022-12-07",
+        "total_volume": "2963.9495",
+        "plot_count": "161",
+        "cumulative_plot_count": "15767",
+        "cumulative_volume": "1021825.244"
+    },
+    {
+        "date": "2022-12-08",
+        "total_volume": "261.183",
+        "plot_count": "22",
+        "cumulative_plot_count": "15789",
+        "cumulative_volume": "1022086.427"
+    },
+    {
+        "date": "2022-12-09",
+        "total_volume": "63.9525",
+        "plot_count": "6",
+        "cumulative_plot_count": "15795",
+        "cumulative_volume": "1022150.379"
+    },
+    {
+        "date": "2022-12-10",
+        "total_volume": "613.053",
+        "plot_count": "18",
+        "cumulative_plot_count": "15813",
+        "cumulative_volume": "1022763.432"
+    },
+    {
+        "date": "2022-12-11",
+        "total_volume": "375.647",
+        "plot_count": "27",
+        "cumulative_plot_count": "15840",
+        "cumulative_volume": "1023139.079"
+    },
+    {
+        "date": "2022-12-12",
+        "total_volume": "287.776",
+        "plot_count": "21",
+        "cumulative_plot_count": "15861",
+        "cumulative_volume": "1023426.855"
+    },
+    {
+        "date": "2022-12-13",
+        "total_volume": "107.0875",
+        "plot_count": "6",
+        "cumulative_plot_count": "15867",
+        "cumulative_volume": "1023533.943"
+    },
+    {
+        "date": "2022-12-14",
+        "total_volume": "1945.330825",
+        "plot_count": "115",
+        "cumulative_plot_count": "15982",
+        "cumulative_volume": "1025479.274"
+    },
+    {
+        "date": "2022-12-15",
+        "total_volume": "539.9755",
+        "plot_count": "36",
+        "cumulative_plot_count": "16018",
+        "cumulative_volume": "1026019.249"
+    },
+    {
+        "date": "2022-12-16",
+        "total_volume": "1396.84",
+        "plot_count": "50",
+        "cumulative_plot_count": "16068",
+        "cumulative_volume": "1027416.089"
+    },
+    {
+        "date": "2022-12-17",
+        "total_volume": "821.55",
+        "plot_count": "28",
+        "cumulative_plot_count": "16096",
+        "cumulative_volume": "1028237.639"
+    },
+    {
+        "date": "2022-12-18",
+        "total_volume": "409.3265",
+        "plot_count": "39",
+        "cumulative_plot_count": "16135",
+        "cumulative_volume": "1028646.966"
+    },
+    {
+        "date": "2022-12-19",
+        "total_volume": "8987.053",
+        "plot_count": "664",
+        "cumulative_plot_count": "16799",
+        "cumulative_volume": "1037634.019"
+    },
+    {
+        "date": "2022-12-20",
+        "total_volume": "5749.0965",
+        "plot_count": "475",
+        "cumulative_plot_count": "17274",
+        "cumulative_volume": "1043383.115"
+    },
+    {
+        "date": "2022-12-21",
+        "total_volume": "5750.6212",
+        "plot_count": "455",
+        "cumulative_plot_count": "17729",
+        "cumulative_volume": "1049133.736"
+    },
+    {
+        "date": "2022-12-22",
+        "total_volume": "5573.9151",
+        "plot_count": "428",
+        "cumulative_plot_count": "18157",
+        "cumulative_volume": "1054707.651"
+    },
+    {
+        "date": "2022-12-23",
+        "total_volume": "3683.4585",
+        "plot_count": "234",
+        "cumulative_plot_count": "18391",
+        "cumulative_volume": "1058391.11"
+    },
+    {
+        "date": "2022-12-24",
+        "total_volume": "900.025",
+        "plot_count": "81",
+        "cumulative_plot_count": "18472",
+        "cumulative_volume": "1059291.135"
+    },
+    {
+        "date": "2022-12-25",
+        "total_volume": "628.657",
+        "plot_count": "47",
+        "cumulative_plot_count": "18519",
+        "cumulative_volume": "1059919.792"
+    },
+    {
+        "date": "2022-12-26",
+        "total_volume": "10231.5059",
+        "plot_count": "1284",
+        "cumulative_plot_count": "19803",
+        "cumulative_volume": "1070151.298"
+    },
+    {
+        "date": "2022-12-27",
+        "total_volume": "17021.13428",
+        "plot_count": "1611",
+        "cumulative_plot_count": "21414",
+        "cumulative_volume": "1087172.432"
+    },
+    {
+        "date": "2022-12-28",
+        "total_volume": "4573.2515",
+        "plot_count": "418",
+        "cumulative_plot_count": "21832",
+        "cumulative_volume": "1091745.684"
+    },
+    {
+        "date": "2022-12-29",
+        "total_volume": "739",
+        "plot_count": "20",
+        "cumulative_plot_count": "21852",
+        "cumulative_volume": "1092484.684"
+    },
+    {
+        "date": "2022-12-30",
+        "total_volume": "475.5",
+        "plot_count": "21",
+        "cumulative_plot_count": "21873",
+        "cumulative_volume": "1092960.184"
+    },
+    {
+        "date": "2022-12-31",
+        "total_volume": "104",
+        "plot_count": "9",
+        "cumulative_plot_count": "21882",
+        "cumulative_volume": "1093064.184"
+    },
+    {
+        "date": "2023-01-01",
+        "total_volume": "1684",
+        "plot_count": "16",
+        "cumulative_plot_count": "21898",
+        "cumulative_volume": "1094748.184"
+    },
+    {
+        "date": "2023-01-02",
+        "total_volume": "1242",
+        "plot_count": "26",
+        "cumulative_plot_count": "21924",
+        "cumulative_volume": "1095990.184"
+    },
+    {
+        "date": "2023-01-03",
+        "total_volume": "754.5",
+        "plot_count": "16",
+        "cumulative_plot_count": "21940",
+        "cumulative_volume": "1096744.684"
+    },
+    {
+        "date": "2023-01-04",
+        "total_volume": "13.5",
+        "plot_count": "1",
+        "cumulative_plot_count": "21941",
+        "cumulative_volume": "1096758.184"
+    },
+    {
+        "date": "2023-01-05",
+        "total_volume": "316",
+        "plot_count": "5",
+        "cumulative_plot_count": "21946",
+        "cumulative_volume": "1097074.184"
+    },
+    {
+        "date": "2023-01-06",
+        "total_volume": "10",
+        "plot_count": "1",
+        "cumulative_plot_count": "21947",
+        "cumulative_volume": "1097084.184"
+    },
+    {
+        "date": "2023-01-07",
+        "total_volume": "2283",
+        "plot_count": "33",
+        "cumulative_plot_count": "21980",
+        "cumulative_volume": "1099367.184"
+    },
+    {
+        "date": "2023-01-08",
+        "total_volume": "2743.5",
+        "plot_count": "32",
+        "cumulative_plot_count": "22012",
+        "cumulative_volume": "1102110.684"
+    },
+    {
+        "date": "2023-01-09",
+        "total_volume": "15",
+        "plot_count": "1",
+        "cumulative_plot_count": "22013",
+        "cumulative_volume": "1102125.684"
+    },
+    {
+        "date": "2023-01-10",
+        "total_volume": "445",
+        "plot_count": "2",
+        "cumulative_plot_count": "22015",
+        "cumulative_volume": "1102570.684"
+    },
+    {
+        "date": "2023-01-11",
+        "total_volume": "690",
+        "plot_count": "2",
+        "cumulative_plot_count": "22017",
+        "cumulative_volume": "1103260.684"
+    }
+]

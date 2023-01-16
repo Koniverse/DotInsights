@@ -1346,6 +1346,7 @@
 
 	}
 
+	a,
 	mark {
 		color: #fff;
 		font-weight: 700;
@@ -1495,44 +1496,6 @@
 }
 
 @include media-breakpoint-down(md) {
-	.section-report-friends {
-		.section-header {
-			margin: 0 auto 40px;
-			text-align: center;
-			--s-header-width: 670px;
-
-			.section-header-inner {
-				margin: 0 auto;
-			}
-		}
-
-		.section-shape-01 {
-			display: none;
-		}
-	}
-
-	.grid-contributors {
-		.grid-item-1-3 {
-			--item-width: 50%;
-		}
-	}
-
-	.block-contributor {
-		//--avatar-max-size: 50%;
-
-		.name {
-			font-size: 18px;
-		}
-
-		&.layout-horizontal {
-			--avatar-spacing: 12px;
-
-			.block-content {
-				padding: 20px 10px;
-			}
-		}
-	}
-
 	.section-game-fi {
 		.row-table-wrap {
 			.block-text {
@@ -1589,6 +1552,12 @@
 	}
 
 	.section-closing-thoughts {
+		margin: 100px 0 0;
+
+		.section-content {
+			padding: 70px 20px;
+		}
+
 		.blur-1 {
 			--size: 100vw;
 			--blur-size: 100px;
@@ -1688,14 +1657,6 @@
 
 		a {
 			font-size: 18px;
-		}
-	}
-
-	.section-closing-thoughts {
-		margin: 100px 0 0;
-
-		.section-content {
-			padding: 70px 20px;
 		}
 	}
 
