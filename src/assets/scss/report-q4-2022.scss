@@ -1179,8 +1179,10 @@
 	--content-bottom-spacing: 26px;
 	--content-h-spacing: 26px;
 
-	flex: 0 0 540px;
-	max-width: calc(50% - 15px);
+	flex: 1 1 480px;
+	max-width: 100%;
+	margin-right: 30px;
+	//max-width: calc(50% - 15px);
 
 	.block-table-widget {
 		font-size: 15px;
@@ -1311,6 +1313,7 @@
 			padding: 70px 20px;
 		}
 
+
 		.blur-1 {
 			--size: 100vw;
 			--blur-size: 100px;
@@ -1339,4 +1342,47 @@
 			border-radius: 10px;
 		}
 	}
+
+
+	.section-parachain {
+		padding: 104px 0 240px;
+	}
+	.section-governance-grant {
+		padding: 0 0 220px;
+	}
+	.section-ecosystem-overview {
+		padding: 142px 0 160px;
+	}
+	.section-defi-economy {
+		padding: 120px 0 0;
+	}
+	.section-moonfit-active-users {
+		padding-bottom: 60px;
+
+		.block-report-chart {
+			margin-top: 60px;
+		}
+
+		.section-shape {
+			display: none;
+		}
+	}
+
+    .block-report-post {
+        margin-bottom: 60px;
+        flex-wrap: wrap;
+    }
+
+    .block-report-post .post-thumbnail {
+        flex: 1 1 360px;
+        margin-right: 0;
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .block-report-post:nth-child(2n) .post-thumbnail {
+      order: 0;
+      margin-left: 0;
+      margin-bottom: 40px;
+    }
 }
