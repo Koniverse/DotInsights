@@ -1,0 +1,1696 @@
+@import "settings/all";
+@import "tools/all";
+
+.table--top-10-networks-dev-act {
+	td, th {
+		width: 22%;
+
+		&:first-child {
+			width: 40px;
+			text-align: start;
+		}
+
+		&:nth-child(2) {
+			width: 100%;
+		}
+
+		&:last-child {
+			text-align: right;
+			min-width: 150px;
+			font-weight: 700;
+		}
+	}
+}
+
+.table--electricity-consumption {
+	--block-round: 20px;
+	--token-icon-size: 28px;
+
+	table {
+		table-layout: fixed;
+	}
+
+	td, th {
+		width: 160px;
+		text-align: center;
+
+		&:first-child {
+			width: 150px;
+		}
+	}
+
+	.token-info {
+		min-height: 42px;
+	}
+}
+
+.table-top-10-nft-collections {
+	--tr-spacing: 8px;
+	--td-bg: #151515;
+	--block-bg: #000;
+
+	td, th {
+		width: 22%;
+
+		&:first-child {
+			width: 40px;
+			text-align: start;
+		}
+
+		&:nth-child(2) {
+			width: 100%;
+		}
+
+		&:last-child {
+			text-align: right;
+			min-width: 150px;
+		}
+	}
+
+	td:first-child {
+		font-size: 16px;
+	}
+
+	.shape-blur-circle.pink {
+		--size: 408px;
+		top: 50%;
+		left: 0;
+		transform: translate(-7%, -70%);
+	}
+
+	.shape-blur-circle.blue {
+		--size: 408px;
+		bottom: 50%;
+		right: 0;
+		transform: translate(7%, 70%);
+	}
+}
+
+.table-bitcountry-pioneer-app {
+	--tr-radius: 8px;
+	--td-ver-gap: 17px;
+	--td-hoz-gap: 5px;
+
+	table {
+		font-size: 16px !important;
+		line-height: 30px;
+		font-weight: 400;
+		table-layout: fixed;
+	}
+
+	.th-label-group {
+		display: flex;
+		align-items: center;
+
+		.category {
+			color: $primary-color;
+		}
+
+		.separator {
+			width: 25px;
+			height: 100%;
+			position: relative;
+
+			&:before {
+				content: '';
+				top: 50%;
+				left: 50%;
+				position: absolute;
+				width: 48px;
+				height: 1px;
+				background: #fff;
+				transform: translateX(-25%) rotate(60deg);
+			}
+		}
+
+		.day {
+			text-align: right;
+		}
+	}
+
+	td, th {
+		width: 130px;
+		text-align: right;
+
+		&:first-child {
+			color: $primary-color;
+			text-align: start;
+			width: 200px;
+		}
+	}
+
+	.blur-1 {
+		top: 0;
+		right: 0;
+		transform: translate(5%, -5%);
+	}
+
+	.blur-2 {
+		top: 0;
+		left: 0;
+		transform: translate(-5%, -5%);
+	}
+
+	.blur-3 {
+		bottom: 0;
+		right: 0;
+		transform: translate(5%, 5%);
+	}
+}
+
+.table--web3-wallet-compare {
+	--block-bg: #000;
+	--td-spacing: 4px;
+	--tr-spacing: 4px;
+	--td-ver-gap: 14px;
+
+	svg {
+		width: 32px;
+		height: 32px;
+	}
+
+	tr {
+		&:before {
+			display: none;
+		}
+	}
+
+	th, td {
+		text-align: center;
+		width: 25%;
+		min-width: 200px;
+
+		&:first-child {
+			text-align: start;
+		}
+	}
+
+	th {
+		border-radius: var(--tr-radius, 5px);
+		background: var(--th-bg, $secondary-color);
+	}
+
+	td {
+		border-radius: var(--tr-radius, 5px);
+		background: var(--td-bg, #151515);
+		font-size: 15px;
+		font-weight: 500;
+		min-height: 100px;
+	}
+}
+
+.nft-collection--volume {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	font-size: 15px;
+	font-weight: 600;
+	color: #fff;
+	margin: 0 0 7px;
+
+	img {
+		vertical-align: middle;
+		margin: 0 4px 0 0 !important;
+	}
+}
+
+.nft-collection {
+	display: flex;
+	align-items: center;
+}
+
+.nft-collection--thumbnail {
+	width: 44px;
+	flex-shrink: 0;
+	margin: 0 9px 0 0;
+}
+
+.nft-collection--name {
+	font-family: $body-font-family;
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 22px;
+	color: #fff;
+	margin: 0 0 2px;
+}
+
+.nft-collection--details {
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 20px;
+}
+
+.section-reports-hero {
+	padding: 260px 0 280px;
+	background: url(../images/report/hero-bg.png) no-repeat center bottom -20px;
+	background-size: 100% auto;
+	--s-header-spacing: 0;
+
+	.section-title {
+		font-size: 7.250vw;
+		line-height: 1.1;
+
+		.sub-title {
+			margin: 5px 0 0;
+			display: block;
+			font-size: 0.666667em;
+		}
+	}
+
+	.section-sub-title {
+		font-size: 32px;
+		line-height: 1.5;
+		margin: 27px 0 0;
+	}
+}
+
+.hero-shape-03 {
+	top: 80px;
+	left: 10%;
+	--shape-max-width: 13.2vw;
+}
+
+.hero-shape-dot {
+	top: 18%;
+	right: 15%;
+	--shape-max-width: 13.2vw;
+}
+
+.hero-shape-ksm {
+	left: 10%;
+	bottom: 9%;
+	--shape-max-width: 19vw;
+}
+
+.hero-shape-02 {
+	top: 40%;
+	right: 5%;
+}
+
+.hero-shape-satellite {
+	bottom: 33%;
+	left: 29%;
+}
+
+.hero-shape-s-circle {
+	right: 12%;
+	bottom: 6%;
+	--shape-max-width: 15vw;
+}
+
+.section-ecosystem-map {
+	padding: 18px 0 141px;
+	background: url(../images/report/grid-border.png) no-repeat bottom center;
+	background-size: 100% auto;
+	--s-header-width: 970px;
+	--s-header-spacing: 0;
+	--s-callout-top: 39px;
+	--s-desc-top: 70px;
+	--s-desc-line-spacing: 26px;
+
+	.section-shape-01 {
+		left: -100px;
+		bottom: 25%;
+		--shape-max-width: 7vw;
+	}
+
+	.shape-cube {
+		top: 40%;
+		right: -180px;
+		--shape-max-width: 8vw;
+		--shape-width: 109px;
+	}
+
+	.section-header-inner {
+		position: relative;
+
+		.section-shape {
+			z-index: -1;
+		}
+	}
+
+	.section-description {
+		font-size: $body-font-size-large;
+		line-height: 32px;
+	}
+}
+
+.section-ecosystem-overview {
+	padding: 134px 0 0;
+	--s-header-spacing: 99px;
+
+	.shape-galaxy {
+		right: 0;
+		top: 2%;
+		transform: translate(50%, 0);
+
+		.shape-radial-circle {
+			top: 50%;
+			left: 50%;
+			transform: translate(-60%, -60%)
+		}
+
+		.main-image {
+			max-width: 60vw;
+		}
+
+		.shape-02 {
+			top: 10%;
+			left: 25%;
+			z-index: 2;
+			--shape-max-width: 8vw;
+			--shape-width: 135px;
+		}
+
+		.shape-satellite {
+			bottom: 0%;
+			left: 20%;
+			z-index: 2;
+			--shape-max-width: 20vw;
+		}
+
+		.shape-ball {
+			bottom: 20%;
+			left: 0;
+			z-index: 2;
+			--shape-max-width: 8vw;
+			transform: translateX(-40%);
+		}
+	}
+
+	.shape-transparent-cube {
+		left: 0;
+		top: 52%;
+		transform: translate(-42%, 0);
+		--shape-max-width: 19vw;
+	}
+
+	.shape-radial-circle {
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.row-table-overview {
+	.block-text {
+		padding: 70px 0 0;
+	}
+}
+
+.section-top-10-networks-dev-act {
+	padding: 0 0 320px;
+
+	.section-shape-blur {
+		bottom: 0;
+		left: 0;
+		right: 0;
+		transform: translate(-50px, -50px) scale(-1, 1);
+		text-align: center;
+	}
+
+	.shape-galaxy {
+		bottom: 0;
+		left: 50%;
+		transform: translate(-70%, 4%);
+	}
+
+	.shape-cube {
+		top: 35%;
+		right: 30%;
+		--shape-max-width: 6vw;
+		--shape-width: 72px;
+	}
+
+	.shape-polygon {
+		bottom: 12%;
+		left: 25%;
+		--shape-max-width: 20vw;
+	}
+
+	.shape-02 {
+		top: 35%;
+		left: 5%;
+		--shape-max-width: 9vw;
+		--shape-width: 150px;
+	}
+}
+
+.section-decentralization-security {
+	padding: 0 0 274px;
+
+	.shape-grid {
+		bottom: 36px;
+		left: 50%;
+		transform: translateX(-50%);
+		--shape-max-width: 90vw;
+	}
+
+	.shape-cone {
+		bottom: 0;
+		left: 25%;
+		transform: translateY(15%);
+		--shape-max-width: 10vw;
+	}
+
+	.shape-ring {
+		right: 8%;
+		top: 32%;
+		--shape-max-width: 8vw;
+		--shape-width: 131px;
+		--shape-transform: scale(1, -1) rotate(-90deg);
+	}
+
+	.shape-02 {
+		top: 20%;
+		left: 5%;
+		--shape-max-width: 9vw;
+		--shape-width: 142px;
+	}
+}
+
+.section-report-holder-investor {
+	padding: 86px 0 0;
+}
+
+.section-parachain {
+	padding: 146px 0 0;
+
+	.shape-galaxy {
+		right: 5%;
+		top: 10%;
+		--shape-max-width: 25vw;
+	}
+
+	.shape-main {
+		z-index: 0;
+	}
+
+	.shape-radial-circle.purple {
+		--size: 510px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: -1;
+	}
+
+	.shape-radial-circle.blue {
+		--size: 510px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-25%, -25%);
+		z-index: -1;
+	}
+
+	.shape-cube {
+		left: 50%;
+		top: 0;
+		transform: translate(-70%, -30%);
+		--shape-max-width: 9vw;
+		--shape-width: 148px;
+	}
+
+	.shape-02 {
+		left: 0;
+		top: 10%;
+		transform: translate(-90%, 0);
+	}
+
+	.shape-satellite-04 {
+		top: 0;
+		right: 5%;
+	}
+}
+
+.section-governance-treasury {
+	padding: 90px 0 217px;
+
+	.shape-transparent-cube {
+		top: 0;
+		left: 0;
+		transform: translate(-39%, 0);
+
+		img {
+			max-width: 15.4vw;
+		}
+
+		.shape-radial-circle {
+			--size: 570px;
+			bottom: 0;
+			left: 0;
+			transform: translate(-15%, 15%);
+		}
+	}
+
+	.shape-corner-blur-1 {
+		--size: 60vw;
+		transform: translate(-30%, 65%);
+	}
+
+	.shape-corner-blur-2 {
+		--size: 60vw;
+		transform: translate(-50%, 65%);
+	}
+
+	.shape-corner-blur-3 {
+		--size: 80vw;
+	}
+}
+
+.section-dex-amm {
+	padding: 0 0 380px;
+
+	.shape-galaxy {
+		right: 0;
+		top: 0;
+		transform: translate(20%, 0);
+
+		.shape-radial-circle {
+			top: 50%;
+			left: 50%;
+			transform: translate(-65%, -55%)
+		}
+
+		.main-image {
+			max-width: 60vw;
+		}
+
+		.shape-bolts {
+			bottom: 20%;
+			left: 30%;
+			z-index: 2;
+			--shape-max-width: 15vw;
+		}
+
+		.shape-ball {
+			bottom: 10%;
+			right: 15%;
+			z-index: 2;
+			--shape-max-width: 8vw;
+			transform: translateX(-40%);
+		}
+
+		.shape-02 {
+			top: 11%;
+			left: 10%;
+			z-index: 2;
+			--shape-max-width: 9vw;
+			--shape-width: 150px;
+		}
+	}
+
+	.shape-grid {
+		bottom: 36px;
+		left: 50%;
+		transform: translateX(-50%);
+		--shape-max-width: 90vw;
+
+		.shape-02 {
+			bottom: 40%;
+			left: 7%;
+			--shape-max-width: 9vw;
+			--width: 142px;
+		}
+
+		.shape-cube {
+			bottom: 22%;
+			left: 29%;
+			transform: translateY(15%);
+			--shape-max-width: 10vw;
+			--shape-width: 95px;
+		}
+
+		.shape-smooth-ring {
+			right: 28%;
+			bottom: 23%;
+			--shape-max-width: 8vw;
+		}
+	}
+
+	.shape-satellite-02 {
+		top: 45%;
+		left: 0;
+		transform: translate(-34%, 0);
+		--shape-max-width: 16vw;
+		--shape-width: 310px;
+
+		.shape-radial-circle {
+			top: 50%;
+			left: 50%;
+
+			&.blue {
+				transform: translate(-50%, -60%);
+			}
+
+			&.purple {
+				transform: translate(-50%, -40%);
+			}
+		}
+	}
+}
+
+.section-lending-and-borrowing {
+	padding: 40px 0 0;
+}
+
+.section-stablecoin {
+	padding: 131px 0 208px;
+
+	.shape-grid {
+		top: 14%;
+		right: 0;
+		transform: translate(18%, 0);
+
+		> img {
+			max-width: 60vw;
+		}
+
+		.shape-radial-circle {
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -60%);
+		}
+
+		.shape-cube {
+			top: 0;
+			left: 25%;
+			transform: translate(-50%, -37%);
+			--shape-max-width: 8vw;
+			--shape-width: 131px;
+		}
+
+		.shape-satellite-04 {
+			top: -80px;
+			right: 40%;
+			--shape-max-width: 5vw;
+			--shape-width: 34px;
+		}
+
+		.shape-02 {
+			top: 0;
+			left: 0;
+			transform: translate(-50px, -120px);
+		}
+
+		.brand-01 {
+			--size: 22px;
+			top: 40%;
+			left: 12%;
+		}
+	}
+}
+
+.section-treasury-output {
+	overflow: hidden;
+	padding: 106px 0 250px;
+
+	.shape-dot {
+		bottom: 250px;
+		left: 5%;
+
+		img {
+			max-width: 10vw;
+		}
+	}
+}
+
+.section-report-nfts {
+	--s-header-width: 100%;
+	padding: 26px 0 0;
+
+	.shape-galaxy {
+		right: 0;
+		top: 0;
+		transform: translate(25%, -5%);
+
+		.shape-radial-circle {
+			top: 50%;
+			left: 50%;
+			transform: translate(-65%, -55%)
+		}
+
+		.main-image {
+			max-width: 60vw;
+		}
+
+		.shape-ring {
+			bottom: 15%;
+			left: 30%;
+			z-index: 2;
+			--shape-max-width: 13vw;
+			--shape-width: 243px;
+		}
+
+		.shape-cube {
+			top: 25%;
+			right: 38%;
+			z-index: 2;
+			--shape-max-width: 8vw;
+			--shape-width: 72px;
+		}
+
+		.shape-02 {
+			top: 30%;
+			left: 4%;
+			z-index: 2;
+			--shape-max-width: 9vw;
+			--shape-width: 150px;
+		}
+	}
+}
+
+.section-game-fi {
+	padding: 112px 0 385px;
+
+	.shape-grid {
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, 0);
+
+		.shape-radial-circle {
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -60%);
+		}
+
+		.shape-cube {
+			top: 0;
+			left: 20%;
+			transform: translate(0, -10%);
+			--shape-width: 187px;
+			--shape-max-width: 10vw;
+		}
+
+		.shape-satellite-04 {
+			top: 30%;
+			left: -50px;
+			--shape-max-width: 5vw;
+			--shape-width: 34px;
+		}
+
+		.shape-02 {
+			top: 0;
+			left: 0;
+			transform: translate(-50px, -120px);
+			--shape-max-width: 9vw;
+			--shape-width: 150px;
+		}
+
+		.brand-01 {
+			--size: 22px;
+			top: 45%;
+			left: 12%;
+		}
+	}
+}
+
+.section-report-web3 {
+	padding: 20px 0 0;
+
+	.section-header {
+		margin: 0 0 99px;
+	}
+}
+
+.section-metaverse {
+	padding: 0 0 390px;
+
+	.shape-grid {
+		bottom: 36px;
+		left: 50%;
+		transform: translateX(-50%);
+		--shape-max-width: 90vw;
+	}
+
+	.shape-cone {
+		bottom: 0;
+		left: 25%;
+		transform: translateY(15%);
+		--shape-max-width: 10vw;
+	}
+
+	.shape-ring {
+		right: 8%;
+		top: 32%;
+		--shape-max-width: 8vw;
+	}
+
+	.shape-02 {
+		top: 20%;
+		left: 5%;
+		--shape-max-width: 5vw;
+	}
+}
+
+.section-dao {
+	padding: 40px 0 0;
+	--s-header-width: 970px;
+	--s-header-spacing: 69px;
+	z-index: 1;
+}
+
+.section-web3 {
+	--s-header-width: 100%;
+	--s-header-spacing: 135px;
+	padding: 100px 0 0;
+
+	.shape-corner-left-bottom {
+		bottom: auto;
+		top: 0;
+	}
+
+	.shape-corner-left-bottom {
+		bottom: auto;
+		top: 0;
+	}
+
+	.shape-web3-group {
+		max-width: 70vw;
+	}
+
+	.section-top-title {
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%);
+		top: 54%;
+	}
+}
+
+.bridge-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 0 36px;
+
+	a {
+		position: relative;
+		margin: 0 var(--item-gutter-x, 20px) var(--item-spacing, 27px);
+		border-bottom: 2px solid transparent;
+		font-family: $heading-font-family;
+		font-weight: $heading-font-weight;
+		font-size: $body-font-size-large;
+		line-height: 26px;
+
+		&:after {
+			content: '';
+			width: 0;
+			height: 2px;
+			position: absolute;
+			left: auto;
+			right: 0;
+			bottom: 0;
+			transition: width .45s cubic-bezier(.25, .8, .25, 1) 0s;
+			background: currentColor;
+		}
+
+		&:not(.current) {
+			color: #555;
+		}
+
+		&.current {
+			&:after {
+				width: 100%;
+				left: 0;
+				right: auto;
+			}
+		}
+
+		&:hover {
+			color: $primary-color;
+		}
+	}
+}
+
+.bridge-item {
+	display: none;
+	text-align: center;
+
+	img {
+		max-width: 80vw;
+	}
+
+	.bridge-desc {
+		font-size: $body-font-size-small;
+		font-weight: 500;
+		line-height: 30px;
+		margin: 0 auto 33px;
+		width: 630px;
+		max-width: 100%;
+	}
+}
+
+.block-bridge-tokens {
+
+}
+
+.bridge-token {
+	.bridge-token-icon {
+		--outline-size: 2px;
+		position: relative;
+		width: var(--avatar-size);
+		max-width: var(--avatar-max-size);
+		padding: var(--avatar-padding);
+		border-radius: 50%;
+		background: #020722;
+
+		img {
+			border-radius: 50%;
+			position: relative;
+			z-index: 1;
+		}
+
+		&:before {
+			@extend %NormalTransition;
+			content: '';
+			position: absolute;
+			top: calc(-1 * var(--outline-size));
+			right: calc(-1 * var(--outline-size));
+			bottom: calc(-1 * var(--outline-size));
+			left: calc(-1 * var(--outline-size));
+			border-radius: inherit;
+			background: linear-gradient(-135deg, #4a75ad 0%, rgba(43, 54, 28, 0) 53.57%, #42703d 100%);
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: inherit;
+			border-radius: inherit;
+		}
+	}
+}
+
+.bridge--helix-bridge {
+	.block-bridge-tokens {
+		display: flex;
+		align-items: center;
+		width: 188px;
+		height: 60px;
+	}
+}
+
+.section-defi-economy {
+	--s-header-spacing: 36px;
+	padding: 20px 0 0;
+}
+
+.section-dao {
+	.col-dao {
+		margin: 0 0 30px;
+	}
+}
+
+.block-dao {
+	--block-rounded: 16px;
+	position: relative;
+	z-index: 0;
+	display: block;
+	height: 100%;
+	padding: 30px;
+
+	&:before {
+		transition: all .35s cubic-bezier(.2, .75, .5, 1);
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: #151515;
+		border-radius: var(--block-rounded);
+		z-index: -1;
+	}
+
+	&:hover {
+		&:before {
+			background-color: #232323;
+			transform: scale(1.05, 1.05);
+		}
+	}
+
+	img {
+		width: 100px;
+		margin: 0 0 30px;
+	}
+
+	h3 {
+		font-size: 20px;
+		line-height: 28px;
+		margin: 0 0 14px;
+	}
+
+	.description {
+		margin: 0;
+		font-size: 17px;
+		font-weight: 500;
+		line-height: 30px;
+		visibility: visible;
+		overflow: hidden;
+		max-height: 210px; // Line height x lines.
+	}
+
+	.btn {
+		width: auto !important;
+		display: inline-block !important;
+		color: #fff;
+		padding: 8px 0 0;
+		text-decoration: underline;
+		text-underline-offset: 3px;
+	}
+
+	a {
+		text-underline-offset: 2px;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.block-dao--chaos h3 {
+	color: #b56bec;
+}
+
+.block-dao--astar h3 {
+	color: #2c6fd0;
+}
+
+.block-dao--glmr-apes h3 {
+	color: #8abf5a;
+}
+
+.block-dao--tf-alpha h3 {
+	color: #fca504;
+}
+
+.section-closing-thoughts {
+	--s-header-width: 970px;
+	--s-header-spacing: 0;
+	--s-desc-line-spacing: 26px;
+	--s-desc-top: 36px;
+	margin: 135px 0 0;
+
+	.section-content {
+		padding: 120px 30px 128px;
+		background: #000 url(../images/report/closing-thoughts-bg.jpg) no-repeat center;
+		background-size: cover;
+		border-radius: 30px;
+	}
+
+	.section-shape-shadow {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -48%);
+		width: 123vw;
+		text-align: center;
+	}
+
+	.blur-1 {
+		--size: 42vw;
+		top: 0;
+		left: 0;
+		transform: translate(-25%, -25%);
+	}
+
+	.blur-2 {
+		--size: 30vw;
+		bottom: 0;
+		left: 0;
+		transform: translate(40%, 20%);
+	}
+
+	.blur-3 {
+		--size: 30vw;
+		bottom: 0;
+		right: 0;
+		transform: translate(10%, 30%);
+	}
+
+	.blur-4 {
+		--size: 30vw;
+		top: 0;
+		right: 0;
+		transform: translate(10%, -25%);
+	}
+}
+
+.block-report-post {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	margin: 0 0 100px;
+
+	.post-thumbnail {
+		flex: 0 0 46.2%;
+		max-width: 46.2%;
+		margin: 0 30px 0 0;
+		--border-size: -2px;
+		position: relative;
+		line-height: 0;
+		z-index: 0;
+		border-radius: var(--block-round, 12px);
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: var(--border-size);
+			right: var(--border-size);
+			bottom: var(--border-size);
+			left: var(--border-size);
+			border-radius: inherit;
+			background: linear-gradient(135deg, rgba(226, 226, 226, 0) 0%, #393939 53.57%, rgba(226, 226, 226, 0) 100%);
+			z-index: -2;
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			border-radius: inherit;
+		}
+	}
+
+	.shape-blur-circle {
+		--blur-size: 50px;
+		right: 0;
+		top: 50%;
+		transform: translate(5%, -50%);
+	}
+
+	.post-info {
+		font-size: $body-font-size-small;
+		line-height: 30px;
+		font-weight: 500;
+		width: 520px;
+		max-width: 100%;
+
+		mark {
+			color: $primary-color;
+			font-weight: 700;
+		}
+	}
+}
+
+.block-report-post {
+	&:nth-child(2n) {
+		.post-thumbnail {
+			order: 9;
+			margin: 0 0 0 30px;
+		}
+
+		.shape-blur-circle {
+			--blur-size: 50px;
+			left: 0;
+			top: 0;
+			right: auto;
+			bottom: auto;
+			transform: translate(-10%, -10%);
+		}
+	}
+}
+
+.section-get-started {
+	--s-header-width: 100%;
+	--s-header-spacing: 100px;
+	--s-callout-top: 89px;
+	padding: 120px 0 100px;
+
+	.section-call-to-actions {
+		h6 {
+			font-size: 20px;
+			line-height: 28px;
+			margin: 0 0 47px;
+		}
+	}
+
+	.shape-galaxy-1 {
+		left: 0;
+		top: 30%;
+		transform: translate(-25%, 0);
+
+		> img {
+			width: 502px;
+			max-width: 50vw;
+		}
+
+		.shape-radial-circle {
+			top: 50%;
+			left: 50%;
+			transform: translate(-65%, -55%)
+		}
+
+		.shape-ring {
+			bottom: 24%;
+			left: 18%;
+			z-index: 2;
+			--shape-max-width: 8vw;
+			--shape-width: 136px;
+		}
+
+		.shape-cube {
+			top: 25%;
+			right: 38%;
+			z-index: 2;
+			--shape-max-width: 8vw;
+			--shape-width: 72px;
+		}
+
+		.shape-02 {
+			top: 30%;
+			right: 5%;
+			z-index: 2;
+			--shape-max-width: 6vw;
+			--shape-width: 56px;
+		}
+
+		.shape-satellite-04 {
+			right: 40%;
+			top: 15%;
+		}
+	}
+
+	.shape-galaxy-2 {
+		right: 0;
+		bottom: 30%;
+		transform: translate(55%, 0);
+
+		> img {
+			width: 664px;
+			max-width: 50vw;
+		}
+
+		.shape-radial-circle {
+			--size: 770px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-65%, -55%)
+		}
+
+		.shape-cube {
+			top: 36%;
+			left: 24%;
+			z-index: 2;
+			--shape-max-width: 7vw;
+			--shape-width: 80px;
+		}
+
+		.brand-01 {
+			--size: 18px;
+			bottom: 30%;
+			left: 15%;
+			z-index: 2;
+		}
+
+		.shape-02 {
+			top: 5%;
+			left: 10%;
+			z-index: 2;
+			--shape-max-width: 8vw;
+			--shape-width: 136px;
+		}
+
+		.shape-satellite-04 {
+			left: 36%;
+			top: 14%;
+			--shape-width: 28px;
+		}
+	}
+}
+
+.block-about-us {
+	width: 970px;
+	max-width: 90%;
+	margin: 0 auto;
+	text-align: center;
+	color: #fff;
+
+	h2 {
+		margin: 0 0 32px;
+
+		span {
+			vertical-align: middle;
+			margin: 0 24px 0 0;
+		}
+
+		img {
+			vertical-align: middle;
+			max-width: 25vw;
+			min-width: 180px;
+		}
+	}
+
+	p {
+
+	}
+
+	a,
+	mark {
+		color: #fff;
+		font-weight: 700;
+	}
+}
+
+.section-about-us {
+	.section-content {
+		padding: 122px 30px 131px;
+		background: $secondary-color url(../images/report/about-us-bg.jpg) no-repeat center;
+		background-size: cover;
+		border-radius: 30px;
+	}
+}
+
+@media screen and (min-width: 1600px) {
+	.section-reports-hero .section-title {
+		font-size: 116px;
+
+		.sub-title {
+			font-size: 76px;
+		}
+	}
+}
+
+@media screen and (min-width: 1400px) {
+	.block-dao h3 {
+		font-size: 32px;
+		line-height: 48px;
+	}
+}
+
+@media screen and (max-width: 1400px) {
+	.section-dex-amm {
+		.shape-satellite-02 {
+			display: none;
+		}
+	}
+
+	.section-governance-treasury {
+		.shape-transparent-cube {
+			transform: translate(-60%, 0);
+		}
+	}
+}
+
+@include media-breakpoint-down(lg) {
+	.section-reports-hero {
+		padding: 260px 0 200px;
+		background-position: center bottom;
+	}
+
+	.section-ecosystem-map {
+		.section-shape-01 {
+			bottom: -85px;
+			left: 5%;
+		}
+
+		.shape-cube {
+			top: 20%;
+			right: 5%;
+		}
+	}
+
+	.section-report-friends {
+		.section-shape-01 {
+			transform: translate(-20%, 18%);
+		}
+	}
+
+	.section-top-10-networks-dev-act {
+		.shape-galaxy {
+			transform: translate(-50%, 0%)
+		}
+
+		.shape-polygon {
+			--shape-max-width: 15vw;
+		}
+	}
+
+	.row-table-overview {
+		.block-text {
+			padding: 50px 0 0;
+			--text-width: 100% !important;
+		}
+	}
+
+	.section-dex-amm {
+		.shape-galaxy {
+			.main-image {
+				max-width: 45vw;
+			}
+
+			transform: translate(25%, -10%);
+		}
+	}
+
+	.section-governance-treasury {
+		.shape-transparent-cube {
+			display: none;
+		}
+	}
+
+	.section-web3 {
+		--s-header-spacing: 80px;
+	}
+
+	.section-closing-thoughts {
+		.blur-1 {
+			--size: 60vw;
+			--blur-size: 100px;
+			transform: translate(-25%, -35%);
+		}
+
+		.blur-2 {
+			--size: 60vw;
+			transform: translate(-25%, 35%);
+		}
+
+		.blur-3 {
+			--size: 60vw;
+			transform: translate(25%, 35%);
+		}
+
+		.blur-4 {
+			--size: 60vw;
+			transform: translate(25%, -35%);
+		}
+
+		.section-content {
+			border-radius: 20px;
+		}
+	}
+
+	.section-get-started {
+		.shape-galaxy-1,
+		.shape-galaxy-2 {
+			display: none;
+		}
+	}
+
+	.section-stablecoin {
+		.shape-grid {
+			display: none;
+		}
+	}
+}
+
+@include media-breakpoint-down(md) {
+	.section-game-fi {
+		.row-table-wrap {
+			.block-text {
+				--text-width: 100% !important;
+				margin-bottom: 40px;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	.section-reports-hero {
+		padding: 100px 0 120px;
+	}
+
+	.section-ecosystem-map {
+		padding: 18px 0 90px;
+
+		.section-description {
+			font-size: 18px;
+			line-height: 30px;
+		}
+	}
+
+	.section-top-10-networks-dev-act {
+		padding: 0 0 250px;
+
+		.shape-galaxy {
+			bottom: -20px;
+		}
+	}
+
+	.table--electricity-consumption {
+		.token-info {
+			min-height: 0;
+		}
+	}
+
+	.section-ecosystem-overview {
+		padding: 90px 0 0;
+		--s-header-spacing: 50px;
+
+		.shape-galaxy {
+			top: 0;
+		}
+	}
+
+	.section-decentralization-security {
+		padding: 0 0 120px;
+
+		.shape-grid {
+			bottom: -20px;
+		}
+	}
+
+	.section-closing-thoughts {
+		margin: 100px 0 0;
+
+		.section-content {
+			padding: 70px 20px;
+		}
+
+		.blur-1 {
+			--size: 100vw;
+			--blur-size: 100px;
+			transform: translate(0, -35%);
+		}
+
+		.blur-2 {
+			--size: 100vw;
+			--blur-size: 100px;
+			transform: translate(0, 35%);
+		}
+
+		.blur-3 {
+			--size: 100vw;
+			--blur-size: 100px;
+			transform: translate(25%, 35%);
+		}
+
+		.blur-4 {
+			--size: 100vw;
+			--blur-size: 100px;
+			transform: translate(50%, -35%);
+		}
+
+		.section-content {
+			border-radius: 10px;
+		}
+	}
+
+	.section-treasury-output {
+		padding: 90px 0 180px;
+	}
+
+	.row-chart-treasury-output {
+		.block-text {
+			margin-top: 40px;
+		}
+	}
+
+	.section-parachain {
+		.shape-galaxy {
+			top: 3%;
+		}
+	}
+
+	.section-dex-amm {
+		padding: 0 0 180px;
+
+		.shape-satellite-02 {
+			display: none;
+		}
+
+		.shape-grid {
+			bottom: 0;
+		}
+	}
+
+	.section-game-fi {
+		padding: 90px 0 220px;
+
+		.shape-grid {
+			.shape-02 {
+				transform: translate(-20px, -20px);
+			}
+		}
+	}
+
+	.section-metaverse {
+		padding: 0 0 180px;
+	}
+
+	.section-web3 {
+		padding: 50px 0 0;
+		--s-header-spacing: 50px;
+	}
+
+	.block-dao {
+		img {
+			width: 60px;
+			margin: 0 0 20px;
+		}
+
+		h3 {
+			font-size: 18px;
+		}
+
+		.description {
+			font-size: 16px;
+			line-height: 26px;
+			max-height: 130px;
+		}
+	}
+
+	.bridge-list {
+		--item-gutter-x: 12px;
+		--item-spacing: 20px;
+
+		a {
+			font-size: 18px;
+		}
+	}
+
+	.section-get-started {
+		--s-header-spacing: 50px;
+	}
+
+	.block-report-post {
+		display: block;
+		margin: 0 0 50px;
+
+		.post-thumbnail {
+			max-width: 100%;
+			margin: 0 0 30px !important;
+		}
+
+		.post-info {
+			font-size: 16px;
+			width: 100%;
+		}
+	}
+
+	.block-about-us h2 {
+		font-size: 22px;
+		margin: 0 0 20px;
+
+		span {
+			margin: 0 15px 0 0;
+		}
+	}
+
+	.section-about-us {
+		.section-content {
+			padding: 70px 20px;
+		}
+	}
+}
