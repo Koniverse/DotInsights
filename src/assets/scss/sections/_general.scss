@@ -32,7 +32,6 @@
 		background: radial-gradient(50% 50% at 50% 50%, rgba(225, 102, 161, 0.5) 0%, rgba(225, 102, 161, 0) 100%);
 	}
 
-
 	&.purple {
 		background: radial-gradient(50% 50% at 50% 50%, rgba(77, 53, 137, 1) 0%, rgba(77, 53, 137, 0) 100%);
 	}
@@ -184,6 +183,16 @@
 			top: 0;
 			bottom: auto;
 			border-radius: 0 0 var(--corner-rounded) var(--corner-rounded);
+		}
+	}
+
+	&.on-top {
+		top: 0;
+		bottom: auto;
+
+		&:after {
+			top: 0;
+			bottom: auto;
 		}
 	}
 }
