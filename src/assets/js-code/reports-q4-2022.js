@@ -492,12 +492,8 @@
 						case 'total-plots-sale-skybreach':
 							chartOptions = getChartOptionsTotalPlotsSaleSkybreach( chartName, jsonData );
 							break;
-
-						case 'subsocial-daily-activities':
-							chartOptions = getChartOptionsSubsocialDailyActivities( chartName, jsonData );
-							break;
-						case 'joystream-cumulative-activities':
-							chartOptions = getChartOptionsJoystreamCumulativeActivities( chartName, jsonData );
+						case 'manta-trusted-setup-contributions':
+							chartOptions = getChartOptionsMantaTrustedSetupContributions( chartName, jsonData );
 							break;
 					}
 					chartInstance.hideLoading();
@@ -3007,72 +3003,23 @@
 			return newOptions;
 		}
 
-		function getChartOptionsSubsocialDailyActivities( chartName, jsonData ) {
+		function getChartOptionsMantaTrustedSetupContributions( chartName, jsonData ) {
 			var datasets = [
 				    {
-					    name: 'post',
-					    label: locate.postsCreated
+					    name: 'contributed',
+					    label: locate.contributed
 				    }, {
-					    name: 'space',
-					    label: locate.spaceCreated
+					    name: 'contributed_in_queue',
+					    label: locate.contributionsInQueue
+				    }, {
+					    name: 'current_record',
+					    label: locate.currentRecord
 				    }
 			    ],
 			    colors   = [
-				    '#004BFF',
-				    '#E9B255'
-			    ];
-
-			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors );
-			var responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
-			return $.extend( true, {}, baseOptions, responsiveOptions );
-		}
-
-		function getChartOptionsJoystreamCumulativeActivities( chartName, jsonData ) {
-			var datasets = [
-				    {
-					    name: 'user',
-					    label: locate.users,
-					    options: {
-						    z: 9,
-						    areaStyle: {
-							    opacity: 1,
-							    color: new echarts.graphic.LinearGradient( 0.5, 0, 0.5, 1, [
-								    {
-									    offset: 0,
-									    color: 'rgba(0,75,255,0.8)'
-								    },
-								    {
-									    offset: 1,
-									    color: 'rgba(0,75,255,0.05)'
-								    }
-							    ] )
-						    }
-					    }
-				    },
-				    {
-					    name: 'video',
-					    label: locate.videos,
-					    options: {
-						    areaStyle: {
-							    opacity: 1,
-							    color: new echarts.graphic.LinearGradient( 0.5, 0, 0.5, 1, [
-								    {
-									    offset: 0,
-									    color: 'rgba(233,178,85,0.42)'
-								    },
-								    {
-									    offset: 1,
-									    color: 'rgba(233,178,85,0.05)'
-								    }
-							    ] )
-						    },
-						    z: 9
-					    }
-				    }
-			    ],
-			    colors   = [
-				    '#004BFF',
-				    '#E9B255'
+				    '#1A9FFF',
+				    '#F82613',
+				    '#FFB800'
 			    ];
 
 			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors );
@@ -3314,7 +3261,7 @@
 					options = $.extend( true, {}, options, dataset.options );
 				}
 
-				// Used dateset.options instead of.
+				// Used dataset.options instead of.
 				if ( areaBackground && areaBackground[ index ] ) {
 					options.areaStyle = {
 						color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
@@ -3420,35 +3367,14 @@
 
 			if ( window.innerWidth > 767 ) {
 				switch ( chartName ) {
-					case 'staking-ratio':
-					case 'twitter-followers':
-					case 'tvl-defi-parachain':
-					case 'tvl-dot-dex':
-					case 'tvl-ksm-dex':
-					case 'tvl-dot-lending':
-					case 'tvl-ksm-lending':
-					case 'tvl-dot-liquid-staking':
-					case 'tvl-ksm-liquid-staking':
-					case 'tvl-liquid-crowdloan':
-					case 'stablecoin-issuance':
-					case 'total-bridge-tvl':
-
-					case 'subsocial-daily-activities':
-					case 'joystream-cumulative-activities':
-						newOptions[ 'xAxis' ] = {
-							splitNumber: 5
-						};
-						break;
-
 					case 'mf-daily-active-user':
 						newOptions[ 'xAxis' ] = {
 							splitNumber: 4
 						};
 						break;
-
 					default:
 						newOptions[ 'xAxis' ] = {
-							splitNumber: 8
+							splitNumber: 5
 						};
 						break;
 				}
