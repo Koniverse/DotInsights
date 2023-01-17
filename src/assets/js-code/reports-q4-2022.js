@@ -1125,27 +1125,21 @@
 				legend: defaultLegendSettings,
 				grid: {
 					top: '3%',
-					left: '25px',
-					right: '25px',
+					left: '40px',
+					right: '40px',
 					containLabel: true
 				},
 				xAxis: {
 					type: 'time',
-					boundaryGap: false,
 					splitLine: {
 						show: false,
-						lineStyle: {
-							type: [ 4, 4 ],
-							color: [ '#262626' ]
-						}
 					},
+
 					axisTick: {
 						show: false
 					},
 					axisLine: {
-						lineStyle: {
-							color: '#262626'
-						}
+						show: false
 					},
 					axisPointer: defaultAxisPointerLabelSettings,
 					axisLabel: {
@@ -1161,6 +1155,7 @@
 						nameTextStyle: {
 							fontSize: 0
 						},
+						offset: 20,
 						alignTicks: true,
 						axisLine: {
 							show: false,
@@ -1189,6 +1184,7 @@
 							fontSize: 0
 						},
 						position: 'right',
+						offset: 20,
 						alignTicks: true,
 						axisLine: {
 							show: false,
@@ -1246,12 +1242,18 @@
 
 			if ( window.innerWidth > 767 ) {
 				newOptions = {
+					grid: {
+						left: '40px',
+						right: '40px',
+					},
 					yAxis: [
 						{
+							offset: 20,
 							axisLabel: {
 								formatter: '{value}'
 							}
 						}, {
+							offset: 20,
 							axisLabel: {
 								formatter: '{value}'
 							}
@@ -1266,14 +1268,20 @@
 				};
 			} else {
 				newOptions = {
+					grid: {
+						left: '20px',
+						right: '20px',
+					},
 					yAxis: [
 						{
+							offset: 5,
 							axisLabel: {
 								formatter: function( value ) {
 									return NumberUtil.formatMoney( value );
 								}
 							}
 						}, {
+							offset: 5,
 							axisLabel: {
 								formatter: function( value ) {
 									return NumberUtil.formatMoney( value );
@@ -2180,11 +2188,7 @@
 			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors, null, null, chartExtraOptions );
 			var responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
 
-
-
-			var a =  $.extend( true, {}, baseOptions, responsiveOptions );
-			console.log(a);
-			return a;
+			return $.extend( true, {}, baseOptions, responsiveOptions );
 		}
 
 		function getChartOptionsTvlDotDex( chartName, jsonData ) {
@@ -3304,16 +3308,6 @@
 		}
 
 		function getChartLinesBaseOptions( jsonData, datasets, colors, areaBackground, seriesOptions, chartExtraOptions ) {
-			/*if( null === areaBackground) {
-				console.log( typeof areaBackground );
-				console.log( areaBackground );
-			}
-
-			if( null === seriesOptions) {
-				console.log( typeof seriesOptions );
-				console.log( seriesOptions );
-			}*/
-
 			var totalItems = jsonData.length,
 			    data       = [];
 
