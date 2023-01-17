@@ -550,7 +550,7 @@
 				tooltip: defaultTooltipSettings,
 				legend: defaultLegendSettings,
 				grid: {
-					left: '4px',
+					left: '3%',
 					right: 95,
 					top: '3%',
 					//bottom: 100, // DataZoom + Legend.
@@ -577,7 +577,6 @@
 					axisPointer: defaultAxisPointerLabelSettings,
 					axisLabel: {
 						margin: 12,
-						align: 'left',
 						formatter: dateFormatter,
 						color: '#ccc'
 					}
@@ -806,7 +805,7 @@
 					},
 					axisPointer: defaultAxisPointerLabelSettings,
 					axisLabel: {
-						align: 'left',
+						margin: 12,
 						formatter: dateFormatter,
 						color: '#ccc'
 					}
@@ -936,7 +935,7 @@
 				tooltip: defaultTooltipSettings,
 				legend: defaultLegendSettings,
 				grid: {
-					left: '4px',
+					left: '3%',
 					right: '3%',
 					top: '3%',
 					containLabel: true
@@ -961,7 +960,6 @@
 					},
 					axisPointer: defaultAxisPointerLabelSettings,
 					axisLabel: {
-						align: 'left',
 						formatter: dateFormatter,
 						color: '#ccc'
 					}
@@ -1143,7 +1141,7 @@
 					},
 					axisPointer: defaultAxisPointerLabelSettings,
 					axisLabel: {
-						align: 'left',
+						margin: 15,
 						formatter: dateFormatter,
 						color: '#ccc'
 					}
@@ -1413,7 +1411,7 @@
 					},
 					axisPointer: defaultAxisPointerLabelSettings,
 					axisLabel: {
-						align: 'left',
+						margin: 12,
 						formatter: dateFormatter,
 						color: '#ccc'
 					}
@@ -1773,6 +1771,8 @@
 					    },
 					    axisPointer: defaultAxisPointerLabelSettings,
 					    axisLabel: {
+						    fontFamily: fontFamily,
+						    fontWeight: 500,
 						    margin: 12,
 						    color: '#ccc'
 					    }
@@ -2943,7 +2943,6 @@
 					},
 					axisPointer: defaultAxisPointerLabelSettings,
 					axisLabel: {
-						align: 'left',
 						formatter: dateFormatter,
 						color: '#ccc'
 					}
