@@ -62,10 +62,8 @@
 	}
 }
 
-.section-ecosystem-map {
-	padding: 18px 0 141px;
-	background: url(../images/report/grid-border.png) no-repeat bottom center;
-	background-size: 100% auto;
+.section-look-back-polkadot-2022 {
+	padding: 18px 0 0;
 	--s-header-width: 970px;
 	--s-header-spacing: 0;
 	--s-callout-top: 39px;
@@ -99,13 +97,48 @@
 }
 
 .section-ecosystem-overview {
-	padding: 134px 0 284px;
+	padding: 142px 0 284px;
 	--s-header-spacing: 99px;
+
+	.section-header {
+		min-height: 144px;
+	}
+
+	.section-top-title {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.shape-group-box-grid {
+		.shape-ball {
+			top: 18%;
+			left: 11%;
+		}
+
+		.shape-cone {
+			bottom: 5%;
+			right: 5%;
+		}
+
+		.shape-dot {
+			bottom: 60%;
+			right: 28%;
+			--shape-width: 148px;
+			--shape-max-width: 9vw;
+		}
+
+		.shape-satellite-04 {
+			bottom: 11%;
+			left: 39%;
+		}
+	}
 
 	.shape-group-galaxy {
 		right: 0;
-		top: 2%;
-		transform: translate(55%, 0);
+		top: 35%;
+		transform: translate(65%, 0);
 
 		.shape-blur-circle {
 			top: 50%;
@@ -118,18 +151,19 @@
 		}
 
 		.shape-02 {
-			top: 10%;
-			left: 25%;
+			top: 18%;
+			left: 13%;
 			z-index: 2;
 			--shape-max-width: 8vw;
-			--shape-width: 135px;
+			--shape-width: 84px;
 		}
 
 		.shape-hollow-cube {
-			bottom: 0%;
+			bottom: 8%;
 			left: 12%;
 			z-index: 2;
-			--shape-max-width: 20vw;
+			--shape-width: 277px;
+			--shape-max-width: 15vw;
 		}
 
 		.shape-cube {
@@ -185,7 +219,7 @@
 	}
 }
 
-.section-decentralization-security {
+.section-decentralization-staking {
 	.shape-group-transparent-cube {
 		right: 0;
 		top: 52%;
@@ -555,7 +589,21 @@
 }
 
 .section-metaverse {
-	padding: 88px 0 0;
+	padding: 88px 0 30px;
+}
+
+.section-web3 {
+	padding: 274px 0 0;
+
+	.shape-corner-blur-1 {
+		--size: 60vw;
+		transform: translate(-50%, -50%);
+	}
+
+	.shape-corner-blur-2 {
+		--size: 60vw;
+		transform: translate(50%, -50%);
+	}
 }
 
 .section-closing-thoughts {
