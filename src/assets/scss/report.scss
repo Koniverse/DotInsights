@@ -41,6 +41,7 @@
 .block-report-chart {
 	--border-size: -3px;
 	position: relative;
+	z-index: 1;
 	padding: var(--content-top-spacing, 31px) var(--content-h-spacing, 30px) var(--content-bottom-spacing, 33px);
 	border-radius: var(--block-round, 10px);
 

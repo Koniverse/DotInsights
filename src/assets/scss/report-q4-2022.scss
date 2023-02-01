@@ -147,7 +147,7 @@
 		}
 
 		.main-image {
-			max-width: 60vw;
+			max-width: 50vw;
 		}
 
 		.shape-02 {
@@ -681,6 +681,12 @@
 	}
 
 	.shape-group-box-grid {
+		.main-image {
+			> img {
+				max-width: 60vw;
+			}
+		}
+
 		.shape-ksm {
 			top: 18%;
 			left: 11%;
@@ -713,7 +719,7 @@
 
 .section-report-nfts {
 	.section-header {
-		margin-top: -100px;
+		margin-top: calc(-1 * var(--corner-size));
 	}
 
 	.section-top-title {
@@ -810,6 +816,12 @@
 	}
 
 	.shape-group-box-grid {
+		.main-image {
+			img {
+				max-width: 50vw;
+			}
+		}
+
 		.shape-ksm {
 			top: -30px;
 			right: 10%;
@@ -1260,13 +1272,39 @@
 }
 
 @media screen and (max-width: 1400px) {
+	.section-reports-hero {
+		background-size: 80% auto;
+	}
 
+	.section-ecosystem-overview {
+		.shape-group-galaxy {
+			display: none;
+		}
+	}
 }
 
 @include media-breakpoint-down(lg) {
 	.section-reports-hero {
 		padding: 260px 0 200px;
 		background-position: center bottom;
+	}
+
+	.section-parachain {
+		.shape-group-galaxy {
+			display: none;
+		}
+	}
+
+	.section-liquid-staking {
+		.shape-group-smooth-grid {
+			display: none;
+		}
+	}
+
+	.section-stablecoin {
+		.shape-group-transparent-cube {
+			display: none;
+		}
 	}
 
 	.section-closing-thoughts {
@@ -1295,6 +1333,12 @@
 			border-radius: 20px;
 		}
 	}
+
+	.section-get-started {
+		.shape-galaxy-1 {
+			display: none;
+		}
+	}
 }
 
 @include media-breakpoint-down(md) {
@@ -1302,6 +1346,10 @@
 }
 
 @include media-breakpoint-down(sm) {
+	.section-reports-hero {
+		background-size: 90% auto;
+	}
+
 	.section-reports-hero {
 		padding: 100px 0 120px;
 	}
@@ -1343,19 +1391,34 @@
 		}
 	}
 
-
 	.section-parachain {
 		padding: 104px 0 240px;
 	}
+
 	.section-governance-grant {
 		padding: 0 0 220px;
 	}
+
 	.section-ecosystem-overview {
 		padding: 142px 0 160px;
 	}
+
 	.section-defi-economy {
 		padding: 120px 0 0;
 	}
+
+	.section-dex-amm {
+		.shape-group-galaxy {
+			display: none;
+		}
+	}
+
+	.section-game-fi {
+		.shape-group-galaxy {
+			display: none;
+		}
+	}
+
 	.section-moonfit-active-users {
 		padding-bottom: 60px;
 
@@ -1364,6 +1427,12 @@
 		}
 
 		.section-shape {
+			display: none;
+		}
+	}
+
+	.section-get-started {
+		.shape-galaxy-2 {
 			display: none;
 		}
 	}

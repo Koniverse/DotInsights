@@ -1,5 +1,7 @@
 .section {
 	position: relative;
+	--corner-size: 10vw;
+	--corner-rounded: 10vw;
 }
 
 .section-shape {
@@ -158,8 +160,6 @@
 }
 
 .section-shape-corners {
-	--corner-size: 10vw;
-	--corner-rounded: 10vw;
 	bottom: -1px;
 	left: 0;
 	right: 0;
@@ -381,7 +381,7 @@
 }
 
 @media screen and (min-width: 1600px) {
-	.section-shape-corners {
+	.section {
 		--corner-size: 100px;
 		--corner-rounded: 100px;
 	}
