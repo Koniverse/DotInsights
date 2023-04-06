@@ -25,6 +25,12 @@
       ]
     },
     {
+      "name": "reports-q1-2023",
+      "files": [
+        "src/assets/js-code/reports-q1-2023.js"
+      ]
+    },
+    {
       "name": "ecosystem-map",
       "files": [
         "src/assets/js-code/ecosystem-map.js"

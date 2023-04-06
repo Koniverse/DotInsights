@@ -44,29 +44,6 @@
     right: 18%;
     --shape-max-width: 36px; }
 
-.section-look-back-polkadot-2022 {
-  padding: 18px 0 0;
-  --s-header-width: 970px;
-  --s-header-spacing: 0;
-  --s-callout-top: 39px;
-  --s-desc-line-spacing: 26px; }
-  .section-look-back-polkadot-2022 .shape-ball {
-    left: -170px;
-    bottom: 25%;
-    --shape-max-width: 7vw; }
-  .section-look-back-polkadot-2022 .shape-cone {
-    bottom: -60px;
-    right: -180px;
-    --shape-max-width: 8vw;
-    --shape-width: 190px; }
-  .section-look-back-polkadot-2022 .section-header-inner {
-    position: relative; }
-    .section-look-back-polkadot-2022 .section-header-inner .section-shape {
-      z-index: -1; }
-  .section-look-back-polkadot-2022 .section-description {
-    font-size: 20px;
-    line-height: 32px; }
-
 .section-ecosystem-overview {
   padding: 142px 0 284px;
   --s-header-spacing: 99px; }
@@ -932,4 +909,4 @@
     margin-left: 0;
     margin-bottom: 40px; } }
 
-/*# sourceMappingURL=sourcemap/report-q4-2022.css.map */
+/*# sourceMappingURL=sourcemap/report-q1-2023.css.map */
