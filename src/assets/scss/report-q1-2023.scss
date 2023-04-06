@@ -78,6 +78,62 @@
     }
 }
 
+.section-key-takeaways {
+    .section-content {
+        position: relative;
+        z-index: 1;
+    }
+    .section-content-inner {
+        --border-size: -3px;
+        position: relative;
+        background-color: $background-2;
+        padding: 60px 50px 40px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: var(--border-size);
+            right: var(--border-size);
+            bottom: var(--border-size);
+            left: var(--border-size);
+            border-radius: inherit;
+            background: linear-gradient(120deg, rgba(226, 226, 226, 0) 0%, #393939 53.57%, rgba(226, 226, 226, 0) 100%);
+            z-index: -1;
+        }
+    }
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .key-takeaways-list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0 -15px;
+        padding: 0;
+
+        li {
+            display: flex;
+            align-items: baseline;
+            width: 50%;
+            padding: 0 15px;
+            margin: 0 0 20px 0;
+
+            i {
+                color: $primary-color;
+                margin-right: 10px;
+                flex-shrink: 0;
+            }
+        }
+    }
+}
+
+
 .section-ecosystem-overview {
     padding: 142px 0 284px;
     --s-header-spacing: 99px;
@@ -1233,6 +1289,13 @@
 
 }
 
+@media screen and (min-width: 1200px) {
+    .section-key-takeaways .section-title {
+        font-size: 50px;
+        margin-bottom: 50px;
+    }
+}
+
 @media screen and(min-width: 768px) {
     .section-community-development .table--dot-forum-statistics {
         tbody {
@@ -1292,6 +1355,16 @@
         .section-description {
             font-size: 16px;
             line-height: 1.667;
+        }
+    }
+
+    .section-key-takeaways {
+        .key-takeaways-list {
+            display: block;
+
+            li {
+                width: 100%;
+            }
         }
     }
 
