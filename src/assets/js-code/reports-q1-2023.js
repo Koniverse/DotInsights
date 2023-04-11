@@ -214,6 +214,9 @@
 						case 'pol-net-alloca':
 							chartOptions = getChartResponsiveOptionsPolNetAlloca();
 							break;
+						case 'nomination-pool-staking':
+							chartOptions = getChartResponsiveOptionsNominationPoolStaking();
+							break;
 					}
 
 					if ( chartOptions ) {
@@ -405,6 +408,9 @@
 							break;
 						case 'staking-ratio':
 							chartOptions = getChartOptionsStakingRatio( chartName, jsonData );
+							break;
+						case 'nomination-pool-staking':
+							chartOptions = getChartOptionsNominationPoolStaking( chartName, jsonData );
 							break;
 					}
 					chartInstance.hideLoading();
@@ -1447,6 +1453,214 @@
 			return $.extend( true, {}, baseOptions, responsiveOptions );
 		}
 
+		function getChartOptionsNominationPoolStaking( chartName, jsonData ) {
+			var totalItems = jsonData.length,
+				data       = {
+					total_members: [],
+					total_stake: [],
+				},
+				colors     = [
+					'#004BFF',
+					'#E6007A'
+				];
+
+			for ( var i = 0; i < totalItems; i ++ ) {
+				data.total_members.push( [ jsonData[ i ].date, jsonData[ i ].total_members ] );
+				data.total_stake.push( [ jsonData[ i ].date, jsonData[ i ].total_stake ] );
+			}
+
+			var baseOptions = {
+				color: colors,
+				textStyle: {
+					fontFamily: fontFamily,
+					fontWeight: 500
+				},
+				tooltip: defaultTooltipSettings,
+				legend: defaultLegendSettings,
+				grid: {
+					top: '3%',
+					left: '40px',
+					right: '40px',
+					containLabel: true
+				},
+				xAxis: {
+					type: 'time',
+					splitLine: {
+						show: false,
+					},
+
+					axisTick: {
+						show: false
+					},
+					axisLine: {
+						show: false
+					},
+					axisPointer: defaultAxisPointerLabelSettings,
+					axisLabel: {
+						margin: 15,
+						formatter: dateFormatter,
+						color: '#ccc'
+					}
+				},
+				yAxis: [
+					{
+						type: 'value',
+						name: locate.totalPoolsStake,
+						nameTextStyle: {
+							fontSize: 0
+						},
+						offset: 20,
+						alignTicks: true,
+						axisLine: {
+							show: false,
+						},
+						interval: 250000,
+						splitLine: {
+							lineStyle: {
+								type: [ 4, 4 ],
+								color: [ '#262626' ]
+							}
+						},
+						axisPointer: {
+							label: {
+								color: '#fff',
+								backgroundColor: colors[ 1 ]
+							}
+						},
+						axisLabel: {
+							color: '#ccc'
+						}
+					},
+					{
+						type: 'value',
+						name: locate.totalPoolsMembers,
+						nameTextStyle: {
+							fontSize: 0
+						},
+						position: 'right',
+						offset: 20,
+						alignTicks: true,
+						axisLine: {
+							show: false,
+						},
+						splitLine: {
+							lineStyle: {
+								type: [ 4, 4 ],
+								color: [ '#262626' ]
+							}
+						},
+						axisPointer: {
+							label: {
+								color: '#fff',
+								backgroundColor: colors[ 0 ]
+							}
+						},
+						axisLabel: {
+							color: '#ccc'
+						}
+					}
+				],
+				series: [
+					{
+						name: locate.totalPoolsMembers,
+						data: data.total_members,
+						type: 'bar',
+						smooth: true,
+						yAxisIndex: 1,
+						showSymbol: false,
+						emphasis: {
+							focus: 'series'
+						}
+					},
+					{
+						name: locate.totalPoolsStake,
+						data: data.total_stake,
+						type: 'line',
+						smooth: true,
+						showSymbol: false,
+						emphasis: {
+							focus: 'series'
+						}
+					}
+				]
+			};
+			var responsiveOptions = getChartResponsiveOptionsNominationPoolStaking();
+
+			$.extend( true, baseOptions, responsiveOptions );
+
+			return baseOptions;
+		}
+		function getChartResponsiveOptionsNominationPoolStaking() {
+			var newOptions = {};
+
+			if ( window.innerWidth > 767 ) {
+				newOptions = {
+					grid: {
+						left: '40px',
+						right: '40px',
+					},
+					yAxis: [
+						{
+							offset: 20,
+							axisLabel: {
+								formatter: '{value}'
+							}
+						}, {
+							offset: 20,
+							axisLabel: {
+								formatter: '{value}'
+							}
+						}
+					],
+					xAxis: {
+						splitNumber: 3,
+						axisLabel: {
+							formatter: dateFormatter
+						}
+					}
+				};
+			} else {
+				newOptions = {
+					grid: {
+						left: '20px',
+						right: '20px',
+					},
+					yAxis: [
+						{
+							offset: 5,
+							axisLabel: {
+								formatter: function( value ) {
+									return NumberUtil.formatMoney( value );
+								}
+							}
+						}, {
+							offset: 5,
+							axisLabel: {
+								formatter: function( value ) {
+									return NumberUtil.formatMoney( value );
+								}
+							}
+						}
+					],
+					xAxis: {
+						splitNumber: 3,
+						axisLabel: {
+							formatter: dateShortFormatter
+						}
+					}
+				};
+
+				if ( window.innerWidth < 460 ) {
+					$.extend( newOptions, {
+						xAxis: {
+							splitNumber: 2
+						}
+					} )
+				}
+			}
+
+			return newOptions;
+		}
 
 		function getChartLinesBaseOptions( jsonData, datasets, colors, areaBackground, seriesOptions, chartExtraOptions ) {
 			var totalItems = jsonData.length,
