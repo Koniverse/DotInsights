@@ -403,6 +403,9 @@
 						case 'newly-created-repo':
 							chartOptions = getChartOptionsNewlyCreatedRepo( chartName, jsonData );
 							break;
+						case 'staking-ratio':
+							chartOptions = getChartOptionsStakingRatio( chartName, jsonData );
+							break;
 					}
 					chartInstance.hideLoading();
 					chartInstance.setOption( chartOptions );
@@ -1386,8 +1389,286 @@
 			return newOptions;
 		}
 
+		function getChartOptionsStakingRatio( chartName, jsonData ) {
+			var datasets = [
+					{
+						name: 'inflation_ratio',
+						label: 'Inflation Ratio'
+					}, {
+						name: 'rewards_ratio',
+						label: 'Rewards Ratio'
+					},
+					{
+						name: 'staking_ratio',
+						label: 'Staking Ratio'
+					},
+				],
+				colors   = [
+					'#004BFF',
+					'#E12C29',
+					'#F8B00C'
+				],
+				chartExtraOptions = {
+					legend: {
+						show: false,
+					},
+					grid: {
+						bottom: '3%'
+					},
+					yAxis: {
+						min: 0,
+						max: 50,
+						interval: 10,
+						axisLabel: {
+							formatter: '{value}%'
+						}
+					},
+					xAxis: {
+						axisLine: {
+							show: false,
+						},
+						splitLine: {
+							show: true,
+							lineStyle: {
+								type: [ 4, 4 ],
+								color: [ '#262626' ]
+							}
+						}
+					},
+					tooltip: {
+						valueFormatter: function( value ) {
+							return value + '%';
+						}
+					}
+				};
+
+			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors, null, null, chartExtraOptions );
+			var responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
+			return $.extend( true, {}, baseOptions, responsiveOptions );
+		}
 
 
+		function getChartLinesBaseOptions( jsonData, datasets, colors, areaBackground, seriesOptions, chartExtraOptions ) {
+			var totalItems = jsonData.length,
+				data       = [];
+
+			datasets.forEach( function( dataset ) {
+				data[ dataset.name ] = [];
+			} );
+
+			for ( var i = 0; i < totalItems; i ++ ) {
+				datasets.forEach( function( dataset ) {
+					var value = jsonData[ i ][ dataset.name ] ? NumberUtil.validate( jsonData[ i ][ dataset.name ] ) : '';
+					data[ dataset.name ].push( [ jsonData[ i ].date, value ] );
+				} );
+			}
+
+			var chartSeries = [];
+
+			datasets.forEach( function( dataset, index ) {
+				var options = {
+					name: dataset.label,
+					data: data[ dataset.name ],
+					itemStyle: {
+						color: colors[ index ]
+					},
+					type: 'line',
+					smooth: true,
+					showSymbol: false,
+					connectNulls: true, // used for dotsama dex.
+					emphasis: {
+						focus: 'series'
+					}
+				};
+
+				if ( dataset.hasOwnProperty( 'options' ) ) {
+					options = $.extend( true, {}, options, dataset.options );
+				}
+
+				// Used dataset.options instead of.
+				if ( areaBackground && areaBackground[ index ] ) {
+					options.areaStyle = {
+						color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
+							{
+								offset: 0,
+								color: areaBackground[ index ][ 0 ]
+							},
+							{
+								offset: 1,
+								color: areaBackground[ index ][ 1 ]
+							}
+						] )
+					};
+				}
+
+				if ( typeof seriesOptions !== 'undefined' ) {
+					options = $.extend( true, {}, options, seriesOptions );
+				}
+
+				chartSeries.push( options );
+			} );
+
+			var chartOptions = {
+				color: colors,
+				textStyle: {
+					fontFamily: fontFamily,
+					fontWeight: 500
+				},
+				tooltip: $.extend( true, {}, defaultTooltipStyle, {
+					trigger: 'axis',
+					axisPointer: {
+						type: 'cross',
+						crossStyle: {
+							color: 'rgba(255,255,255,0.3)'
+						},
+						lineStyle: {
+							type: [ 4, 4 ],
+							color: 'rgba(255,255,255,0.3)'
+						}
+					}
+				} ),
+				legend: defaultLegendSettings,
+				grid: {
+					left: '3%',
+					right: '3%',
+					top: '3%',
+					containLabel: true
+				},
+				xAxis: {
+					type: 'time',
+					boundaryGap: false,
+					axisTick: {
+						show: false
+					},
+					axisLine: {
+						lineStyle: {
+							color: '#262626'
+						}
+					},
+					splitLine: {
+						show: false,
+						lineStyle: {
+							type: [ 4, 4 ],
+							color: [ '#262626' ]
+						}
+					},
+					axisPointer: defaultAxisPointerLabelSettings,
+					axisLabel: {
+						margin: 12,
+						formatter: dateFormatter,
+						color: '#ccc'
+					}
+				},
+				yAxis: {
+					type: 'value',
+					axisLine: {
+						show: false
+					},
+					splitNumber: 4,
+					splitLine: {
+						lineStyle: {
+							type: [ 4, 4 ],
+							color: [ '#262626' ]
+						}
+					},
+					axisPointer: defaultAxisPointerLabelSettings,
+					axisLabel: {
+						color: '#ccc'
+					}
+				},
+				series: chartSeries
+			};
+
+			if ( chartExtraOptions ) {
+				return $.extend( true, {}, chartOptions, chartExtraOptions );
+			}
+
+			return chartOptions;
+		}
+
+		function getChartLinesBaseResponsiveOptions( chartName ) {
+			var newOptions = {};
+
+			if ( window.innerWidth > 767 ) {
+				switch ( chartName ) {
+					case 'mf-daily-active-user':
+						newOptions[ 'xAxis' ] = {
+							splitNumber: 4
+						};
+						break;
+					default:
+						newOptions[ 'xAxis' ] = {
+							splitNumber: 5
+						};
+						break;
+				}
+			} else {
+				newOptions[ 'xAxis' ] = {
+					splitNumber: 3,
+					axisLabel: {
+						formatter: dateShortFormatter
+					}
+				};
+
+				if ( window.innerWidth < 460 ) {
+					$.extend( true, newOptions, {
+						xAxis: {
+							splitNumber: 2
+						}
+					} )
+				}
+			}
+
+			var yAxis = {};
+			switch ( chartName ) {
+				case 'tvl-defi-parachain':
+				case 'tvl-dot-dex':
+				case 'tvl-ksm-dex':
+				case 'tvl-dot-lending':
+				case 'tvl-ksm-lending':
+				case 'tvl-dot-liquid-staking':
+				case 'tvl-ksm-liquid-staking':
+				case 'tvl-liquid-crowdloan':
+				case 'stablecoin-issuance':
+				case 'total-bridge-tvl':
+					newOptions.tooltip = {
+						valueFormatter: function( value ) {
+							return value ? '$' + NumberUtil.formatWithCommas( value ) : '-';
+						}
+					};
+
+					if ( window.innerWidth > 767 ) {
+						yAxis = {
+							axisPointer: {
+								label: {
+									formatter: "${value}"
+								}
+							},
+							axisLabel: {
+								formatter: "${value}"
+							}
+						};
+					} else {
+						yAxis = {
+							axisPointer: {
+								label: {
+									formatter: "${value}"
+								}
+							},
+							axisLabel: {
+								formatter: function( value ) {
+									return value ? '$' + NumberUtil.formatMoney( value ) : '-';
+								}
+							}
+						};
+					}
+					newOptions.yAxis = yAxis;
+
+					break;
+			}
+
+			return newOptions;
+		}
 
 		function getTokenIcon( name ) {
 			var icon = '';
