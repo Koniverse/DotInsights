@@ -1,8 +1,10 @@
 var lang = {
 	ksmPrice: 'KSM Price',
 	dotPrice: 'DOT Price',
+	developmentActivity: 'Development Activity',
 	activeDevelopers: 'Active developers',
 	codeCommits: 'Code commits',
+
 	totalPoolsMembers: 'Total Pools Members',
 	totalPoolsStake: 'Total Pools Stake (DOT)',
 	activeAccount: 'Active Account',
@@ -17,7 +19,6 @@ var lang = {
 	contributionsInQueue: 'Contributions in queue',
 	currentRecord: 'Current record',
 	others: 'Others',
-	developmentActivity: 'Development Activity',
 	runtimeModulesChains: 'Runtime Modules/Chains',
 	developmentTools: 'Development Tools',
 	wallets: 'Wallets',

@@ -4,7 +4,7 @@
 /* Bottom line waving */
 .section-reports-hero {
   padding: 260px 0 280px;
-  background: url(../images/report/q4-2022/hero-bg.png) no-repeat center center;
+  background: url(../images/report/q1-2023/hero-bg.png) no-repeat top center;
   background-size: auto;
   --s-header-spacing: 0; }
   .section-reports-hero .section-title {
@@ -19,22 +19,22 @@
     line-height: 1.5;
     margin: 27px 0 0; }
   .section-reports-hero .hero-shape-dotinsights {
-    right: 19%;
+    right: 22%;
     bottom: 12%;
-    --shape-max-width: 15vw; }
+    --shape-max-width: 12vw; }
   .section-reports-hero .hero-shape-dot {
     top: 18%;
     right: 15%;
     --shape-max-width: 13.2vw; }
   .section-reports-hero .hero-shape-ksm {
-    left: 10%;
+    left: 22%;
     bottom: 9%;
     --shape-width: 226px;
     --shape-max-width: 15vw; }
   .section-reports-hero .hero-shape-sw {
     top: 80px;
-    left: 10%;
-    --shape-max-width: 13.2vw; }
+    left: 16%;
+    --shape-max-width: 10vw; }
   .section-reports-hero .hero-shape-ring {
     left: 40%;
     top: 18%;
@@ -181,301 +181,86 @@
       --shape-max-width: 9vw;
       --shape-width: 142px; }
 
-.section-decentralization-staking .shape-group-transparent-cube {
-  right: 0;
-  top: 52%;
-  transform: translate(58%, 0);
-  --shape-max-width: 19vw; }
-  .section-decentralization-staking .shape-group-transparent-cube .shape-radial-circle {
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%); }
-
-.section-parachain {
+.section-governance-grant {
+  position: relative;
   padding: 104px 0 440px; }
-  .section-parachain .shape-group-galaxy {
-    top: 0;
-    right: 0;
-    transform: translate(30%, -28%);
-    z-index: -1; }
-    .section-parachain .shape-group-galaxy .section-shape-blur {
-      bottom: 0;
-      left: 0;
-      right: 0;
-      transform: translate(-50px, -50px) scale(-1, 1);
-      text-align: center; }
-    .section-parachain .shape-group-galaxy .shape-cube {
-      bottom: 50%;
-      left: 50%;
-      --shape-max-width: 6vw;
-      --shape-width: 65px; }
-    .section-parachain .shape-group-galaxy .shape-polygon {
-      bottom: 15%;
-      left: 20%;
-      --shape-width: 448px;
-      --shape-max-width: 18vw; }
-    .section-parachain .shape-group-galaxy .shape-02 {
-      top: 35%;
-      left: 10%;
-      --shape-max-width: 9vw;
-      --shape-width: 150px; }
-  .section-parachain .shape-group-grid {
+  .section-governance-grant .shape-group-grid {
     bottom: 76px;
     left: 50%;
     transform: translateX(-50%);
     --shape-max-width: 90vw; }
-    .section-parachain .shape-group-grid .shape-02 {
-      bottom: 40%;
-      left: 7%;
+    .section-governance-grant .shape-group-grid .shape-02 {
+      bottom: 30%;
+      left: 18%;
       --shape-max-width: 9vw;
       --width: 142px; }
-    .section-parachain .shape-group-grid .shape-cube {
-      bottom: 22%;
-      left: 29%;
+    .section-governance-grant .shape-group-grid .shape-cube {
+      bottom: 15%;
+      left: 44%;
       transform: translateY(15%);
       --shape-max-width: 10vw;
       --shape-width: 95px; }
-    .section-parachain .shape-group-grid .shape-smooth-ring {
-      right: 28%;
+    .section-governance-grant .shape-group-grid .shape-smooth-ring {
+      right: 20%;
       bottom: 23%;
       --shape-max-width: 8vw; }
 
-.section-governance-grant {
-  padding: 0 0 380px; }
-  .section-governance-grant .shape-group-grid {
-    bottom: 90px;
-    left: 50%;
-    transform: translateX(-50%);
-    --shape-max-width: 90vw; }
-    .section-governance-grant .shape-group-grid .shape-polygon {
-      bottom: 0;
-      left: 25%;
-      --shape-max-width: 14vw; }
-    .section-governance-grant .shape-group-grid .shape-ring {
-      right: 0;
-      top: 32%;
-      --shape-max-width: 8vw;
-      --shape-width: 131px;
-      --shape-transform: scaleY(-1) rotate(-90deg); }
-    .section-governance-grant .shape-group-grid .shape-02 {
-      top: 20%;
-      left: 5%;
-      --shape-max-width: 5vw; }
-  .section-governance-grant .shape-group-ksm {
-    top: 18%;
-    left: 0; }
-    .section-governance-grant .shape-group-ksm .shape-dots {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%); }
-    .section-governance-grant .shape-group-ksm .shape-blur-1 {
-      opacity: .3;
-      top: 50%;
-      left: 50%;
-      transform: translate(-55%, -55%); }
-    .section-governance-grant .shape-group-ksm .shape-blur-2 {
-      opacity: .3;
-      top: 50%;
-      left: 50%;
-      transform: translate(-45%, -45%); }
-    .section-governance-grant .shape-group-ksm .shape-dots {
-      top: 50%;
-      left: 50%;
-      width: 570px;
-      transform: translate(-50%, -50%); }
-    .section-governance-grant .shape-group-ksm > img {
-      --shape-width: 250px; }
-  .section-governance-grant .shape-group-dot {
-    top: 30%;
-    right: 0; }
-    .section-governance-grant .shape-group-dot .shape-dots {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%); }
-    .section-governance-grant .shape-group-dot .shape-blur-1 {
-      opacity: .3;
-      top: 50%;
-      left: 50%;
-      transform: translate(-45%, -35%); }
-    .section-governance-grant .shape-group-dot .shape-blur-2 {
-      opacity: .3;
-      top: 50%;
-      left: 50%;
-      transform: translate(-55%, -65%); }
-    .section-governance-grant .shape-group-dot .shape-dots {
-      top: 50%;
-      left: 50%;
-      width: 570px;
-      transform: translate(-50%, -50%); }
-    .section-governance-grant .shape-group-dot > img {
-      --shape-width: 270px; }
-  .section-governance-grant .table--governance-grant-dot .shape-blur-2 {
-    top: 25%; }
+.section-closing-thoughts {
+  --s-header-width: 1150px; }
 
-.section-community-development {
-  padding: 0 0 5px; }
-  .section-community-development .shape-group-smooth-ring {
-    left: 0;
-    top: 38%;
-    transform: translate(-35%, 0); }
-    .section-community-development .shape-group-smooth-ring > img {
-      --shape-width: 290px;
-      --shape-max-width: 18vw; }
-    .section-community-development .shape-group-smooth-ring .shape-radial-circle {
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%); }
-    .section-community-development .shape-group-smooth-ring .shape-diamond {
-      top: -50px;
-      right: -35px; }
-    .section-community-development .shape-group-smooth-ring .shape-ball {
-      top: 40%;
-      right: -85px;
-      --shape-width: 80px;
-      --shape-max-width: 7vw; }
-  .section-community-development .table--dot-forum-statistics {
-    --tr-spacing: 4px; }
-    .section-community-development .table--dot-forum-statistics table {
-      font-size: 16px;
-      font-weight: 500; }
-    .section-community-development .table--dot-forum-statistics th,
-    .section-community-development .table--dot-forum-statistics td {
-      width: 14.2%; }
-      .section-community-development .table--dot-forum-statistics th:not(:first-child),
-      .section-community-development .table--dot-forum-statistics td:not(:first-child) {
-        text-align: end; }
-    .section-community-development .table--dot-forum-statistics td:first-child {
-      color: #66e1b6; }
+.table-top-10-xcm-channels-transfer-count.block-report-table {
+  padding: 0; }
 
-.section-dex-amm {
-  padding: 104px 0 0; }
-  .section-dex-amm .shape-group-galaxy {
-    right: 10%;
-    top: 5%; }
-    .section-dex-amm .shape-group-galaxy > img {
-      --shape-width: 280px;
-      --shape-max-width: 20vw; }
-    .section-dex-amm .shape-group-galaxy .shape-main {
-      z-index: 0; }
-    .section-dex-amm .shape-group-galaxy .shape-radial-circle.purple {
-      --size: 510px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: -1; }
-    .section-dex-amm .shape-group-galaxy .shape-radial-circle.blue {
-      --size: 510px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-25%, -25%);
-      z-index: -1; }
-    .section-dex-amm .shape-group-galaxy .shape-cube {
-      left: 50%;
-      top: 0;
-      transform: translate(-70%, -15%);
-      --shape-max-width: 9vw;
-      --shape-width: 112px; }
-    .section-dex-amm .shape-group-galaxy .shape-02 {
-      left: 5%;
-      top: -60px;
-      --shape-max-width: 7vw;
-      transform: translate(-90%, 0); }
-    .section-dex-amm .shape-group-galaxy .shape-satellite-04 {
-      top: -60px;
-      right: 15%;
-      --shape-width: 20px; }
+.table-top-10-xcm-channels-transfer-count .block-table-widget {
+  min-width: 500px; }
 
-.section-lending-and-borrowing {
-  padding: 100px 0 0; }
+.table-top-10-xcm-channels-transfer-count .block-table-heading {
+  padding: 25px 30px; }
 
-.section-liquid-staking {
-  padding: 117px 0 0; }
-  .section-liquid-staking .shape-group-smooth-grid {
-    top: 5%;
-    right: 0;
-    transform: translate(32%, 0); }
-    .section-liquid-staking .shape-group-smooth-grid .shape-radial-circle {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -60%); }
-    .section-liquid-staking .shape-group-smooth-grid .shape-cube {
-      top: 0;
-      left: 20%;
-      transform: translate(0, -10%);
-      --shape-width: 187px;
-      --shape-max-width: 10vw; }
-    .section-liquid-staking .shape-group-smooth-grid .shape-satellite-04 {
-      top: 30%;
-      left: -50px;
-      --shape-max-width: 5vw;
-      --shape-width: 34px; }
-    .section-liquid-staking .shape-group-smooth-grid .shape-02 {
-      top: 0;
-      left: 0;
-      transform: translate(-50px, -120px);
-      --shape-max-width: 9vw;
-      --shape-width: 150px; }
-    .section-liquid-staking .shape-group-smooth-grid .brand-01 {
-      --size: 22px;
-      top: 45%;
-      left: 12%; }
+.table-top-10-xcm-channels-transfer-count .block-table-body {
+  padding: 0 25px;
+  overflow-x: auto; }
 
-.section-moonfit-active-users {
-  position: relative;
-  padding: 0 0 292px; }
-  .section-moonfit-active-users .shape-group-smooth-grid {
-    bottom: 60px;
-    left: 0;
-    transform: translate(25%, 0); }
-    .section-moonfit-active-users .shape-group-smooth-grid .shape-radial-circle {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -60%); }
-    .section-moonfit-active-users .shape-group-smooth-grid .shape-moonfit-mfr {
-      top: 0;
-      left: 20%;
-      transform: translate(0, -10%);
-      --shape-width: 171px;
-      --shape-max-width: 10vw; }
-    .section-moonfit-active-users .shape-group-smooth-grid .shape-cube {
-      bottom: 40%;
-      left: 45%;
-      --shape-max-width: 5vw;
-      --shape-width: 53px; }
-    .section-moonfit-active-users .shape-group-smooth-grid .shape-ball {
-      top: 0;
-      left: 5%;
-      transform: translate(0, -50px);
-      --shape-max-width: 9vw;
-      --shape-width: 90px; }
-    .section-moonfit-active-users .shape-group-smooth-grid .brand-01 {
-      --size: 22px;
-      top: 45%;
-      left: 12%; }
-  .section-moonfit-active-users .block-text--moonfit-users {
-    padding: 40px 0 0; }
+.table-top-10-xcm-channels-transfer-count .block-table-footer {
+  padding: 0 25px 30px; }
 
-.section-stablecoin .shape-group-transparent-cube {
-  right: 0;
-  top: 20%;
-  transform: translate(42%, 0);
-  --shape-max-width: 19vw; }
-  .section-stablecoin .shape-group-transparent-cube .shape-radial-circle {
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%); }
+.table-top-10-xcm-channels-transfer-count thead tr:before {
+  background-color: transparent; }
 
-.section-bridge {
-  padding: 0 0 145px; }
-  .section-bridge .shape-corner-blur-1 {
-    --size: 60vw;
-    transform: translate(-35%, 50%); }
-  .section-bridge .shape-corner-blur-2 {
-    --size: 60vw;
-    transform: translate(40%, 60%); }
+.table-top-10-xcm-channels-transfer-count thead tr th {
+  font-size: 15px;
+  font-weight: 500; }
 
-.section-metaverse {
-  padding: 88px 0 30px; }
+.table-top-10-xcm-channels-transfer-count thead tr .th-chain {
+  display: flex;
+  justify-content: space-between; }
+
+.table-top-10-xcm-channels-transfer-count thead tr .th-count {
+  text-align: right; }
+
+.table-top-10-xcm-channels-transfer-count .xcm-channel {
+  display: flex;
+  align-items: center; }
+  .table-top-10-xcm-channels-transfer-count .xcm-channel--thumbnail {
+    flex-shrink: 0;
+    margin: 0; }
+  .table-top-10-xcm-channels-transfer-count .xcm-channel--info {
+    flex-grow: 1;
+    margin: 0 10px; }
+  .table-top-10-xcm-channels-transfer-count .xcm-channel--name {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px; }
+  .table-top-10-xcm-channels-transfer-count .xcm-channel--line {
+    width: 100%;
+    height: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px; }
+  .table-top-10-xcm-channels-transfer-count .xcm-channel--count {
+    text-align: right; }
 
 .section-defi-economy {
   padding: 150px 0 0; }
@@ -515,6 +300,15 @@
     --shape-width: 118px;
     --shape-max-width: 7vw; }
 
+.section-lending-and-borrowing {
+  padding-top: 100px; }
+
+.section-liquid-staking {
+  padding-top: 100px; }
+
+.section-stablecoin {
+  padding: 0 0 200px; }
+
 .section-report-nfts .section-header {
   margin-top: -100px; }
 
@@ -548,36 +342,6 @@
   left: 17%;
   --shape-width: 118px;
   --shape-max-width: 7vw; }
-
-.section-game-fi .shape-group-galaxy {
-  right: 0;
-  top: 0;
-  transform: translate(50%, -30%); }
-  .section-game-fi .shape-group-galaxy .shape-blur-circle {
-    top: 50%;
-    left: 0;
-    transform: translate(0, -50%); }
-  .section-game-fi .shape-group-galaxy .main-image {
-    max-width: 60vw; }
-  .section-game-fi .shape-group-galaxy .shape-02 {
-    top: 30%;
-    left: -3%;
-    z-index: 2;
-    --shape-max-width: 8vw;
-    --shape-width: 150px; }
-  .section-game-fi .shape-group-galaxy .shape-cube {
-    top: 45%;
-    left: 12%;
-    z-index: 2;
-    --shape-width: 125px;
-    --shape-max-width: 9vw; }
-  .section-game-fi .shape-group-galaxy .brand-01 {
-    --size: 28px;
-    top: 76%;
-    left: 40%; }
-  .section-game-fi .shape-group-galaxy .shape-satellite-04 {
-    top: 10%;
-    left: 30%; }
 
 .section-web3 {
   padding: 200px 0 0; }
@@ -618,9 +382,15 @@
   .section-web3 .shape-corner-blur-2 {
     --size: 60vw;
     transform: translate(50%, -50%); }
+  .section-web3 .table--wasm-ink th, .section-web3 .table--wasm-ink td {
+    text-align: right; }
+    .section-web3 .table--wasm-ink th:first-child, .section-web3 .table--wasm-ink td:first-child {
+      text-align: left; }
+  .section-web3 .table--wasm-ink td:first-child {
+    color: #66e1b6; }
 
 .section-closing-thoughts {
-  --s-header-width: 970px;
+  --s-header-width: 1150px;
   --s-header-spacing: 0;
   --s-desc-line-spacing: 26px;
   --s-desc-top: 36px;
@@ -656,61 +426,6 @@
     top: 0;
     right: 0;
     transform: translate(10%, -25%); }
-
-.block-report-post {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin: 0 0 100px; }
-  .block-report-post .post-thumbnail {
-    flex: 0 0 46.2%;
-    max-width: 46.2%;
-    margin: 0 30px 0 0;
-    --border-size: -2px;
-    position: relative;
-    line-height: 0;
-    z-index: 0;
-    border-radius: var(--block-round, 12px); }
-    .block-report-post .post-thumbnail:before {
-      content: '';
-      position: absolute;
-      top: var(--border-size);
-      right: var(--border-size);
-      bottom: var(--border-size);
-      left: var(--border-size);
-      border-radius: inherit;
-      background: linear-gradient(135deg, rgba(226, 226, 226, 0) 0%, #393939 53.57%, rgba(226, 226, 226, 0) 100%);
-      z-index: -2; }
-    .block-report-post .post-thumbnail img {
-      display: block;
-      width: 100%;
-      border-radius: inherit; }
-  .block-report-post .shape-blur-circle {
-    --blur-size: 50px;
-    right: 0;
-    top: 50%;
-    transform: translate(5%, -50%); }
-  .block-report-post .post-info {
-    font-size: 17px;
-    line-height: 30px;
-    font-weight: 500;
-    width: 520px;
-    max-width: 100%; }
-    .block-report-post .post-info mark {
-      color: #66e1b6;
-      font-weight: 700; }
-
-.block-report-post:nth-child(2n) .post-thumbnail {
-  order: 9;
-  margin: 0 0 0 30px; }
-
-.block-report-post:nth-child(2n) .shape-blur-circle {
-  --blur-size: 50px;
-  left: 0;
-  top: 0;
-  right: auto;
-  bottom: auto;
-  transform: translate(-10%, -10%); }
 
 .section-get-started {
   --s-header-width: 100%;
@@ -787,6 +502,67 @@
       top: 14%;
       --shape-width: 28px; }
 
+.block-report-post {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0 0 100px; }
+  .block-report-post .post-thumbnail {
+    flex: 0 0 46.2%;
+    max-width: 46.2%;
+    margin: 0 30px 0 0;
+    --border-size: -2px;
+    position: relative;
+    line-height: 0;
+    z-index: 0;
+    border-radius: var(--block-round, 12px); }
+    .block-report-post .post-thumbnail:before {
+      content: '';
+      position: absolute;
+      top: var(--border-size);
+      right: var(--border-size);
+      bottom: var(--border-size);
+      left: var(--border-size);
+      border-radius: inherit;
+      background: linear-gradient(135deg, rgba(226, 226, 226, 0) 0%, #393939 53.57%, rgba(226, 226, 226, 0) 100%);
+      z-index: -2; }
+    .block-report-post .post-thumbnail img {
+      display: block;
+      width: 100%;
+      border-radius: inherit; }
+  .block-report-post .shape-blur-circle {
+    --blur-size: 50px;
+    right: 0;
+    top: 50%;
+    transform: translate(5%, -50%); }
+  .block-report-post .post-info {
+    font-size: 17px;
+    line-height: 30px;
+    font-weight: 500;
+    width: 520px;
+    max-width: 100%; }
+    .block-report-post .post-info mark {
+      color: #66e1b6;
+      font-weight: 700; }
+
+.block-report-post:nth-child(2n) .post-thumbnail {
+  order: 9;
+  margin: 0 0 0 30px; }
+
+.block-report-post:nth-child(2n) .shape-blur-circle {
+  --blur-size: 50px;
+  left: 0;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  transform: translate(-10%, -10%); }
+
+.section-about-us .section-content {
+  padding: 122px 30px 131px;
+  background: #004bff url(../images/report/about-us-bg.jpg) no-repeat center;
+  background-size: cover;
+  border-radius: 30px; }
+
 .block-about-us {
   width: 970px;
   max-width: 90%;
@@ -807,93 +583,40 @@
     color: #fff;
     font-weight: 700; }
 
-.section-about-us .section-content {
-  padding: 122px 30px 131px;
-  background: #004bff url(../images/report/about-us-bg.jpg) no-repeat center;
-  background-size: cover;
-  border-radius: 30px; }
+.block-table-heading, .block-chart-heading {
+  text-transform: capitalize; }
 
-.custom-table-source {
-  font-size: 17px;
-  font-weight: 700; }
-  .custom-table-source p {
-    margin: 24px 0 0; }
+.block-table-source, .block-chart-source {
+  width: calc(100% - 180px); }
 
-.table--token-holder {
-  --block-top-spacing: 0;
-  --td-spacing: 4px;
-  --td-hoz-gap: 20px;
-  --td-beside-gap: 20px;
-  --tr-spacing: 4px; }
-  .table--token-holder table {
-    font-size: 15px;
-    line-height: 24px; }
-  .table--token-holder thead {
-    --td-ver-gap: 16px; }
-  .table--token-holder tbody {
-    --td-ver-gap: 16px; }
-  .table--token-holder th,
-  .table--token-holder td {
-    width: 16.666667%; }
-  .table--token-holder td:first-child {
-    color: #fff; }
-
-.table--governance-grant {
-  --block-top-spacing: 0;
-  --td-spacing: 4px;
-  --td-ver-gap: 16px;
-  --tr-spacing: 4px;
-  --content-bottom-spacing: 26px;
-  --content-h-spacing: 26px;
-  flex: 1 1 480px;
-  max-width: 100%;
-  margin-right: 30px; }
-  .table--governance-grant .block-table-widget {
-    font-size: 15px;
-    font-weight: 600; }
-  .table--governance-grant thead {
-    --td-ver-gap: 10px; }
-  .table--governance-grant th,
-  .table--governance-grant td {
-    width: 50%; }
-  .table--governance-grant td {
-    min-height: 100px; }
-  .table--governance-grant .cell-beneficiary {
-    color: #fff;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 30px;
-    margin: 0 0 2px; }
-  .table--governance-grant .cell-proposer {
-    font-size: 17px;
-    font-weight: 500;
-    color: #66e1b6; }
-    .table--governance-grant .cell-proposer a:hover {
-      text-decoration: underline; }
-  .table--governance-grant .cell-value {
-    font-size: 15px; }
-  .table--governance-grant .cell-value-in-usd {
-    font-size: 17px;
-    font-weight: 600;
-    color: #66e1b6; }
-
-.section-closing-thoughts {
-  --s-header-width: 1150px; }
-
-@media screen and (min-width: 1600px) {
-  .section-reports-hero .section-title {
-    font-size: 116px; }
-    .section-reports-hero .section-title .sub-title {
-      font-size: 76px; } }
+@media screen and (min-width: 768px) {
+  .section-community-development .table--dot-forum-statistics tbody {
+    --td-ver-gap: 17px; } }
 
 @media screen and (min-width: 1200px) {
   .section-key-takeaways .section-title {
     font-size: 50px;
     margin-bottom: 50px; } }
 
-@media screen and (min-width: 768px) {
-  .section-community-development .table--dot-forum-statistics tbody {
-    --td-ver-gap: 17px; } }
+@media screen and (min-width: 1400px) {
+  .row-table-top-10-xcm {
+    margin-left: -25px;
+    margin-right: -25px; }
+    .row-table-top-10-xcm .col-lg-6 {
+      padding-left: 25px;
+      padding-right: 25px; } }
+
+@media screen and (min-width: 1600px) {
+  .section-reports-hero .section-title {
+    font-size: 116px; }
+    .section-reports-hero .section-title .sub-title {
+      font-size: 76px; }
+  .row-table-top-10-xcm {
+    margin-left: -35px;
+    margin-right: -35px; }
+    .row-table-top-10-xcm .col-lg-6 {
+      padding-left: 35px;
+      padding-right: 35px; } }
 
 @media (max-width: 1199px) {
   .section-reports-hero {
@@ -925,6 +648,14 @@
     display: block; }
     .section-key-takeaways .key-takeaways-list li {
       width: 100%; }
+  .section-ecosystem-overview {
+    padding: 142px 0 160px; }
+  .section-governance-grant {
+    padding: 104px 0 240px; }
+  .section-defi-economy {
+    padding: 120px 0 0; }
+  .section-stablecoin {
+    padding: 0 0 150px; }
   .section-closing-thoughts {
     margin: 100px 0 0; }
     .section-closing-thoughts .section-content {
@@ -947,20 +678,6 @@
       transform: translate(50%, -35%); }
     .section-closing-thoughts .section-content {
       border-radius: 10px; }
-  .section-parachain {
-    padding: 104px 0 240px; }
-  .section-governance-grant {
-    padding: 0 0 220px; }
-  .section-ecosystem-overview {
-    padding: 142px 0 160px; }
-  .section-defi-economy {
-    padding: 120px 0 0; }
-  .section-moonfit-active-users {
-    padding-bottom: 60px; }
-    .section-moonfit-active-users .block-report-chart {
-      margin-top: 60px; }
-    .section-moonfit-active-users .section-shape {
-      display: none; }
   .block-report-post {
     margin-bottom: 60px;
     flex-wrap: wrap; }
@@ -972,6 +689,8 @@
   .block-report-post:nth-child(2n) .post-thumbnail {
     order: 0;
     margin-left: 0;
-    margin-bottom: 40px; } }
+    margin-bottom: 40px; }
+  .block-table-source, .block-chart-source {
+    width: 100%; } }
 
 /*# sourceMappingURL=sourcemap/report-q1-2023.css.map */

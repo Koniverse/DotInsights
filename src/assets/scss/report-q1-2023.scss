@@ -3,7 +3,7 @@
 
 .section-reports-hero {
     padding: 260px 0 280px;
-    background: url(../images/report/q4-2022/hero-bg.png) no-repeat center center;
+    background: url(../images/report/q1-2023/hero-bg.png) no-repeat top center;
     background-size: auto;
     --s-header-spacing: 0;
 
@@ -25,9 +25,9 @@
     }
 
     .hero-shape-dotinsights {
-        right: 19%;
+        right: 22%;
         bottom: 12%;
-        --shape-max-width: 15vw;
+        --shape-max-width: 12vw;
     }
 
     .hero-shape-dot {
@@ -37,7 +37,7 @@
     }
 
     .hero-shape-ksm {
-        left: 10%;
+        left: 22%;
         bottom: 9%;
         --shape-width: 226px;
         --shape-max-width: 15vw;
@@ -45,8 +45,8 @@
 
     .hero-shape-sw {
         top: 80px;
-        left: 10%;
-        --shape-max-width: 13.2vw;
+        left: 16%;
+        --shape-max-width: 10vw;
     }
 
     .hero-shape-ring {
@@ -83,6 +83,7 @@
         position: relative;
         z-index: 1;
     }
+
     .section-content-inner {
         --border-size: -3px;
         position: relative;
@@ -132,7 +133,6 @@
         }
     }
 }
-
 
 .section-ecosystem-overview {
     padding: 142px 0 284px;
@@ -257,59 +257,9 @@
     }
 }
 
-.section-decentralization-staking {
-    .shape-group-transparent-cube {
-        right: 0;
-        top: 52%;
-        transform: translate(58%, 0);
-        --shape-max-width: 19vw;
-
-        .shape-radial-circle {
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-        }
-    }
-}
-
-.section-parachain {
+.section-governance-grant {
+    position: relative;
     padding: 104px 0 440px;
-
-    .shape-group-galaxy {
-        top: 0;
-        right: 0;
-        transform: translate(30%, -28%);
-        z-index: -1;
-
-        .section-shape-blur {
-            bottom: 0;
-            left: 0;
-            right: 0;
-            transform: translate(-50px, -50px) scale(-1, 1);
-            text-align: center;
-        }
-
-        .shape-cube {
-            bottom: 50%;
-            left: 50%;
-            --shape-max-width: 6vw;
-            --shape-width: 65px;
-        }
-
-        .shape-polygon {
-            bottom: 15%;
-            left: 20%;
-            --shape-width: 448px;
-            --shape-max-width: 18vw;
-        }
-
-        .shape-02 {
-            top: 35%;
-            left: 10%;
-            --shape-max-width: 9vw;
-            --shape-width: 150px;
-        }
-    }
 
     .shape-group-grid {
         bottom: 76px;
@@ -318,379 +268,112 @@
         --shape-max-width: 90vw;
 
         .shape-02 {
-            bottom: 40%;
-            left: 7%;
+            bottom: 30%;
+            left: 18%;
             --shape-max-width: 9vw;
             --width: 142px;
         }
 
         .shape-cube {
-            bottom: 22%;
-            left: 29%;
+            bottom: 15%;
+            left: 44%;
             transform: translateY(15%);
             --shape-max-width: 10vw;
             --shape-width: 95px;
         }
 
         .shape-smooth-ring {
-            right: 28%;
+            right: 20%;
             bottom: 23%;
             --shape-max-width: 8vw;
         }
     }
 }
 
-.section-governance-grant {
-    padding: 0 0 380px;
-
-    .shape-group-grid {
-        bottom: 90px;
-        left: 50%;
-        transform: translateX(-50%);
-        --shape-max-width: 90vw;
-
-        .shape-polygon {
-            bottom: 0;
-            left: 25%;
-            --shape-max-width: 14vw;
-        }
-
-        .shape-ring {
-            right: 0;
-            top: 32%;
-            --shape-max-width: 8vw;
-            --shape-width: 131px;
-            --shape-transform: scaleY(-1) rotate(-90deg);
-        }
-
-        .shape-02 {
-            top: 20%;
-            left: 5%;
-            --shape-max-width: 5vw;
-        }
-    }
-
-    .shape-group-ksm {
-        top: 18%;
-        left: 0;
-
-        .shape-dots {
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .shape-blur-1 {
-            opacity: .3;
-            top: 50%;
-            left: 50%;
-            transform: translate(-55%, -55%);
-        }
-
-        .shape-blur-2 {
-            opacity: .3;
-            top: 50%;
-            left: 50%;
-            transform: translate(-45%, -45%);
-        }
-
-        .shape-dots {
-            top: 50%;
-            left: 50%;
-            width: 570px;
-            transform: translate(-50%, -50%);
-        }
-
-        > img {
-            --shape-width: 250px;
-        }
-    }
-
-    .shape-group-dot {
-        top: 30%;
-        right: 0;
-
-        .shape-dots {
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .shape-blur-1 {
-            opacity: .3;
-            top: 50%;
-            left: 50%;
-            transform: translate(-45%, -35%);
-        }
-
-        .shape-blur-2 {
-            opacity: .3;
-            top: 50%;
-            left: 50%;
-            transform: translate(-55%, -65%);
-        }
-
-        .shape-dots {
-            top: 50%;
-            left: 50%;
-            width: 570px;
-            transform: translate(-50%, -50%);
-        }
-
-        > img {
-            --shape-width: 270px;
-        }
-    }
-
-    .table--governance-grant-dot {
-        .shape-blur-2 {
-            top: 25%;
-        }
-    }
+.section-closing-thoughts {
+    --s-header-width: 1150px;
 }
 
-.section-community-development {
-    padding: 0 0 5px;
+.table-top-10-xcm-channels-transfer-count {
+    &.block-report-table {
+        padding: 0;
+    }
 
-    .shape-group-smooth-ring {
-        left: 0;
-        top: 38%;
-        transform: translate(-35%, 0);
+    .block-table-widget {
+        min-width: 500px;
+    }
 
-        > img {
-            --shape-width: 290px;
-            --shape-max-width: 18vw;
-        }
+    .block-table-heading {
+        padding: 25px 30px;
+    }
 
-        .shape-radial-circle {
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-        }
+    .block-table-body {
+        padding: 0 25px;
+        overflow-x: auto;
+    }
 
-        .shape-diamond {
-            top: -50px;
-            right: -35px;
-        }
+    .block-table-footer {
+        padding: 0 25px 30px;
+    }
 
-        .shape-ball {
-            top: 40%;
-            right: -85px;
-            --shape-width: 80px;
-            --shape-max-width: 7vw;
+    thead {
+        tr {
+            &:before {
+                background-color: transparent;
+            }
+
+            th {
+                font-size: 15px;
+                font-weight: 500;
+            }
+
+            .th-chain {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .th-count {
+                text-align: right;
+            }
         }
     }
 
-    .table--dot-forum-statistics {
-        --tr-spacing: 4px;
+    .xcm-channel {
+        display: flex;
+        align-items: center;
 
-        table {
+        &--thumbnail {
+            flex-shrink: 0;
+            margin: 0;
+        }
+
+        &--info {
+            flex-grow: 1;
+            margin: 0 10px;
+        }
+
+        &--name {
+            display: flex;
+            justify-content: space-between;
             font-size: 16px;
-            font-weight: 500;
+            font-weight: 700;
+            margin-bottom: 10px;
         }
 
-        th,
-        td {
-            width: 14.2%;
+        &--line {
+            width: 100%;
+            height: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
 
-            &:not(:first-child) {
-                text-align: end;
-            }
+
         }
 
-        td {
-            &:first-child {
-                color: $primary-color;
-            }
-        }
-    }
-}
-
-.section-dex-amm {
-    padding: 104px 0 0;
-
-    .shape-group-galaxy {
-        right: 10%;
-        top: 5%;
-
-        > img {
-            --shape-width: 280px;
-            --shape-max-width: 20vw;
-        }
-
-        .shape-main {
-            z-index: 0;
-        }
-
-        .shape-radial-circle.purple {
-            --size: 510px;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: -1;
-        }
-
-        .shape-radial-circle.blue {
-            --size: 510px;
-            top: 50%;
-            left: 50%;
-            transform: translate(-25%, -25%);
-            z-index: -1;
-        }
-
-        .shape-cube {
-            left: 50%;
-            top: 0;
-            transform: translate(-70%, -15%);
-            --shape-max-width: 9vw;
-            --shape-width: 112px;
-        }
-
-        .shape-02 {
-            left: 5%;
-            top: -60px;
-            --shape-max-width: 7vw;
-            transform: translate(-90%, 0);
-        }
-
-        .shape-satellite-04 {
-            top: -60px;
-            right: 15%;
-            --shape-width: 20px;
+        &--count {
+            text-align: right;
         }
     }
-}
-
-.section-lending-and-borrowing {
-    padding: 100px 0 0;
-}
-
-.section-liquid-staking {
-    padding: 117px 0 0;
-
-    .shape-group-smooth-grid {
-        top: 5%;
-        right: 0;
-        transform: translate(32%, 0);
-
-        .shape-radial-circle {
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -60%);
-        }
-
-        .shape-cube {
-            top: 0;
-            left: 20%;
-            transform: translate(0, -10%);
-            --shape-width: 187px;
-            --shape-max-width: 10vw;
-        }
-
-        .shape-satellite-04 {
-            top: 30%;
-            left: -50px;
-            --shape-max-width: 5vw;
-            --shape-width: 34px;
-        }
-
-        .shape-02 {
-            top: 0;
-            left: 0;
-            transform: translate(-50px, -120px);
-            --shape-max-width: 9vw;
-            --shape-width: 150px;
-        }
-
-        .brand-01 {
-            --size: 22px;
-            top: 45%;
-            left: 12%;
-        }
-    }
-}
-
-.section-moonfit-active-users {
-    position: relative;
-    padding: 0 0 292px;
-
-    .shape-group-smooth-grid {
-        bottom: 60px;
-        left: 0;
-        transform: translate(25%, 0);
-
-        .shape-radial-circle {
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -60%);
-        }
-
-        .shape-moonfit-mfr {
-            top: 0;
-            left: 20%;
-            transform: translate(0, -10%);
-            --shape-width: 171px;
-            --shape-max-width: 10vw;
-        }
-
-        .shape-cube {
-            bottom: 40%;
-            left: 45%;
-            --shape-max-width: 5vw;
-            --shape-width: 53px;
-        }
-
-        .shape-ball {
-            top: 0;
-            left: 5%;
-            transform: translate(0, -50px);
-            --shape-max-width: 9vw;
-            --shape-width: 90px;
-        }
-
-        .brand-01 {
-            --size: 22px;
-            top: 45%;
-            left: 12%;
-        }
-    }
-
-    .block-text--moonfit-users {
-        padding: 40px 0 0;
-    }
-}
-
-.section-stablecoin {
-    .shape-group-transparent-cube {
-        right: 0;
-        top: 20%;
-        transform: translate(42%, 0);
-        --shape-max-width: 19vw;
-
-        .shape-radial-circle {
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-        }
-    }
-}
-
-.section-bridge {
-    padding: 0 0 145px;
-
-    .shape-corner-blur-1 {
-        --size: 60vw;
-        transform: translate(-35%, 50%);
-    }
-
-    .shape-corner-blur-2 {
-        --size: 60vw;
-        transform: translate(40%, 60%);
-    }
-}
-
-.section-metaverse {
-    padding: 88px 0 30px;
 }
 
 .section-defi-economy {
@@ -749,6 +432,18 @@
     }
 }
 
+.section-lending-and-borrowing {
+    padding-top: 100px;
+}
+
+.section-liquid-staking {
+    padding-top: 100px;
+}
+
+.section-stablecoin {
+    padding: 0 0 200px;
+}
+
 .section-report-nfts {
     .section-header {
         margin-top: -100px;
@@ -788,51 +483,6 @@
             left: 17%;
             --shape-width: 118px;
             --shape-max-width: 7vw;
-        }
-    }
-}
-
-.section-game-fi {
-    .shape-group-galaxy {
-        right: 0;
-        top: 0;
-        transform: translate(50%, -30%);
-
-        .shape-blur-circle {
-            top: 50%;
-            left: 0;
-            transform: translate(0, -50%)
-        }
-
-        .main-image {
-            max-width: 60vw;
-        }
-
-        .shape-02 {
-            top: 30%;
-            left: -3%;
-            z-index: 2;
-            --shape-max-width: 8vw;
-            --shape-width: 150px;
-        }
-
-        .shape-cube {
-            top: 45%;
-            left: 12%;
-            z-index: 2;
-            --shape-width: 125px;
-            --shape-max-width: 9vw;
-        }
-
-        .brand-01 {
-            --size: 28px;
-            top: 76%;
-            left: 40%;
-        }
-
-        .shape-satellite-04 {
-            top: 10%;
-            left: 30%;
         }
     }
 }
@@ -893,10 +543,26 @@
         --size: 60vw;
         transform: translate(50%, -50%);
     }
+
+    .table--wasm-ink {
+        th, td {
+            text-align: right;
+
+            &:first-child {
+                text-align: left;
+            }
+        }
+
+        td {
+            &:first-child {
+                color: $primary-color;
+            }
+        }
+    }
 }
 
 .section-closing-thoughts {
-    --s-header-width: 970px;
+    --s-header-width: 1150px;
     --s-header-spacing: 0;
     --s-desc-line-spacing: 26px;
     --s-desc-top: 36px;
@@ -943,80 +609,6 @@
         top: 0;
         right: 0;
         transform: translate(10%, -25%);
-    }
-}
-
-.block-report-post {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin: 0 0 100px;
-
-    .post-thumbnail {
-        flex: 0 0 46.2%;
-        max-width: 46.2%;
-        margin: 0 30px 0 0;
-        --border-size: -2px;
-        position: relative;
-        line-height: 0;
-        z-index: 0;
-        border-radius: var(--block-round, 12px);
-
-        &:before {
-            content: '';
-            position: absolute;
-            top: var(--border-size);
-            right: var(--border-size);
-            bottom: var(--border-size);
-            left: var(--border-size);
-            border-radius: inherit;
-            background: linear-gradient(135deg, rgba(226, 226, 226, 0) 0%, #393939 53.57%, rgba(226, 226, 226, 0) 100%);
-            z-index: -2;
-        }
-
-        img {
-            display: block;
-            width: 100%;
-            border-radius: inherit;
-        }
-    }
-
-    .shape-blur-circle {
-        --blur-size: 50px;
-        right: 0;
-        top: 50%;
-        transform: translate(5%, -50%);
-    }
-
-    .post-info {
-        font-size: $body-font-size-small;
-        line-height: 30px;
-        font-weight: 500;
-        width: 520px;
-        max-width: 100%;
-
-        mark {
-            color: $primary-color;
-            font-weight: 700;
-        }
-    }
-}
-
-.block-report-post {
-    &:nth-child(2n) {
-        .post-thumbnail {
-            order: 9;
-            margin: 0 0 0 30px;
-        }
-
-        .shape-blur-circle {
-            --blur-size: 50px;
-            left: 0;
-            top: 0;
-            right: auto;
-            bottom: auto;
-            transform: translate(-10%, -10%);
-        }
     }
 }
 
@@ -1128,6 +720,89 @@
     }
 }
 
+.block-report-post {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0 0 100px;
+
+    .post-thumbnail {
+        flex: 0 0 46.2%;
+        max-width: 46.2%;
+        margin: 0 30px 0 0;
+        --border-size: -2px;
+        position: relative;
+        line-height: 0;
+        z-index: 0;
+        border-radius: var(--block-round, 12px);
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: var(--border-size);
+            right: var(--border-size);
+            bottom: var(--border-size);
+            left: var(--border-size);
+            border-radius: inherit;
+            background: linear-gradient(135deg, rgba(226, 226, 226, 0) 0%, #393939 53.57%, rgba(226, 226, 226, 0) 100%);
+            z-index: -2;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            border-radius: inherit;
+        }
+    }
+
+    .shape-blur-circle {
+        --blur-size: 50px;
+        right: 0;
+        top: 50%;
+        transform: translate(5%, -50%);
+    }
+
+    .post-info {
+        font-size: $body-font-size-small;
+        line-height: 30px;
+        font-weight: 500;
+        width: 520px;
+        max-width: 100%;
+
+        mark {
+            color: $primary-color;
+            font-weight: 700;
+        }
+    }
+}
+
+.block-report-post {
+    &:nth-child(2n) {
+        .post-thumbnail {
+            order: 9;
+            margin: 0 0 0 30px;
+        }
+
+        .shape-blur-circle {
+            --blur-size: 50px;
+            left: 0;
+            top: 0;
+            right: auto;
+            bottom: auto;
+            transform: translate(-10%, -10%);
+        }
+    }
+}
+
+.section-about-us {
+    .section-content {
+        padding: 122px 30px 131px;
+        background: $secondary-color url(../images/report/about-us-bg.jpg) no-repeat center;
+        background-size: cover;
+        border-radius: 30px;
+    }
+}
+
 .block-about-us {
     width: 970px;
     max-width: 90%;
@@ -1161,118 +836,39 @@
     }
 }
 
-.section-about-us {
-    .section-content {
-        padding: 122px 30px 131px;
-        background: $secondary-color url(../images/report/about-us-bg.jpg) no-repeat center;
-        background-size: cover;
-        border-radius: 30px;
-    }
+.block-table-heading, .block-chart-heading {
+    text-transform: capitalize;
 }
 
-.custom-table-source {
-    font-size: 17px;
-    font-weight: 700;
-
-    p {
-        margin: 24px 0 0;
-    }
+.block-table-source, .block-chart-source {
+    width: calc(100% - 180px);
 }
 
-.table--token-holder {
-    --block-top-spacing: 0;
-    --td-spacing: 4px;
-    --td-hoz-gap: 20px;
-    --td-beside-gap: 20px;
-    --tr-spacing: 4px;
-
-    table {
-        font-size: 15px;
-        line-height: 24px;
-    }
-
-    thead {
-        --td-ver-gap: 16px;
-    }
-
-    tbody {
-        --td-ver-gap: 16px;
-    }
-
-    th,
-    td {
-        width: 16.666667%;
-    }
-
-    td:first-child {
-        color: #fff;
-    }
-}
-
-.table--governance-grant {
-    --block-top-spacing: 0;
-    --td-spacing: 4px;
-    --td-ver-gap: 16px;
-    --tr-spacing: 4px;
-    --content-bottom-spacing: 26px;
-    --content-h-spacing: 26px;
-
-    flex: 1 1 480px;
-    max-width: 100%;
-    margin-right: 30px;
-    //max-width: calc(50% - 15px);
-
-    .block-table-widget {
-        font-size: 15px;
-        font-weight: 600;
-    }
-
-    thead {
-        --td-ver-gap: 10px;
-    }
-
-    th,
-    td {
-        width: 50%;
-    }
-
-    td {
-        min-height: 100px;
-    }
-
-    .cell-beneficiary {
-        color: #fff;
-        font-size: 18px;
-        font-weight: 700;
-        line-height: 30px;
-        margin: 0 0 2px;
-    }
-
-    .cell-proposer {
-        font-size: 17px;
-        font-weight: 500;
-        color: $primary-color;
-
-        a {
-            &:hover {
-                text-decoration: underline;
-            }
+@media screen and(min-width: 768px) {
+    .section-community-development .table--dot-forum-statistics {
+        tbody {
+            --td-ver-gap: 17px;
         }
     }
+}
 
-    .cell-value {
-        font-size: 15px;
-    }
-
-    .cell-value-in-usd {
-        font-size: 17px;
-        font-weight: 600;
-        color: $primary-color;
+@media screen and (min-width: 1200px) {
+    .section-key-takeaways .section-title {
+        font-size: 50px;
+        margin-bottom: 50px;
     }
 }
 
-.section-closing-thoughts {
-    --s-header-width: 1150px;
+@media screen and (min-width: 1400px) {
+    .row-table-top-10-xcm {
+        margin-left: -25px;
+        margin-right: -25px;
+
+        .col-lg-6 {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+    }
 }
 
 @media screen and (min-width: 1600px) {
@@ -1283,23 +879,14 @@
             font-size: 76px;
         }
     }
-}
 
-@media screen and (min-width: 1400px) {
+    .row-table-top-10-xcm {
+        margin-left: -35px;
+        margin-right: -35px;
 
-}
-
-@media screen and (min-width: 1200px) {
-    .section-key-takeaways .section-title {
-        font-size: 50px;
-        margin-bottom: 50px;
-    }
-}
-
-@media screen and(min-width: 768px) {
-    .section-community-development .table--dot-forum-statistics {
-        tbody {
-            --td-ver-gap: 17px;
+        .col-lg-6 {
+            padding-left: 35px;
+            padding-right: 35px;
         }
     }
 }
@@ -1368,6 +955,22 @@
         }
     }
 
+    .section-ecosystem-overview {
+        padding: 142px 0 160px;
+    }
+
+    .section-governance-grant {
+        padding: 104px 0 240px;
+    }
+
+    .section-defi-economy {
+        padding: 120px 0 0;
+    }
+
+    .section-stablecoin {
+        padding: 0 0 150px;
+    }
+
     .section-closing-thoughts {
         margin: 100px 0 0;
 
@@ -1404,42 +1007,26 @@
             border-radius: 10px;
         }
     }
-    .section-parachain {
-        padding: 104px 0 240px;
-    }
-    .section-governance-grant {
-        padding: 0 0 220px;
-    }
-    .section-ecosystem-overview {
-        padding: 142px 0 160px;
-    }
-    .section-defi-economy {
-        padding: 120px 0 0;
-    }
-    .section-moonfit-active-users {
-        padding-bottom: 60px;
 
-        .block-report-chart {
-            margin-top: 60px;
-        }
-
-        .section-shape {
-            display: none;
-        }
-    }
     .block-report-post {
         margin-bottom: 60px;
         flex-wrap: wrap;
     }
+
     .block-report-post .post-thumbnail {
         flex: 1 1 360px;
         margin-right: 0;
         max-width: 100%;
         margin-bottom: 40px;
     }
+
     .block-report-post:nth-child(2n) .post-thumbnail {
         order: 0;
         margin-left: 0;
         margin-bottom: 40px;
+    }
+
+    .block-table-source, .block-chart-source {
+        width: 100%;
     }
 }
