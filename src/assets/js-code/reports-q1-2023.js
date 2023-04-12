@@ -217,6 +217,9 @@
 						case 'nomination-pool-staking':
 							chartOptions = getChartResponsiveOptionsNominationPoolStaking();
 							break;
+						case 'spending-dominated-kusama':
+							chartOptions = getChartResponsiveOptionsSpendingDominatedKusama();
+							break;
 					}
 
 					if ( chartOptions ) {
@@ -425,6 +428,9 @@
 						break;
 					case 'pol-net-alloca':
 						chartOptions = getChartOptionsPolNetAlloca( chartName );
+						break;
+					case 'spending-dominated-kusama':
+						chartOptions = getChartOptionsSpendingDominatedKusama( chartName );
 						break;
 				}
 				chartInstance.hideLoading();
@@ -1662,6 +1668,154 @@
 			return newOptions;
 		}
 
+		function getChartOptionsSpendingDominatedKusama( chartName ) {
+			var colors = [
+					'#004BFF',
+					'#E12C29',
+					'#F8B00C'
+				],
+				data = [
+					[
+						'lease_admin',
+					  'general_admin',
+					  'staking_admin',
+					  'big_tipper',
+					  'auction_admin',
+					  'referendum_canceller',
+					  'root',
+					  'small_spender',
+					  'small_tipper',
+					  'treasurer',
+					  'whitelisted_caller',
+					  'big_spender',
+					  'medium_spender'
+					],
+					[ 1, 0, 2, 2, 5, 6, 4, 3, 7, 8, 19, 14, 22 ],
+					[ 0, 2, 0, 1, 0, 0, 4, 4, 3, 2, 7, 11, 6 ],
+					[ 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 1, 4, 4 ]
+				],
+				baseOptions       = {
+					color: colors,
+					textStyle: {
+						fontFamily: fontFamily,
+						fontWeight: 500
+					},
+					tooltip: defaultTooltipSettings,
+					legend: defaultLegendSettings,
+					grid: {
+						top: '5%',
+						left: '3%',
+						right: '3%',
+						containLabel: true
+					},
+					xAxis: {
+						type: 'category',
+						data: data[ 0 ],
+						splitLine: {
+							show: false,
+							lineStyle: {
+								type: [ 4, 4 ],
+								color: [ '#262626' ]
+							}
+						},
+						axisTick: {
+							show: false
+						},
+						axisLine: {
+							show: false,
+						},
+						axisPointer: defaultAxisPointerLabelSettings,
+						axisLabel: {
+							hideOverlap: false,
+							showMaxLabel: true,
+							overflow: 'breakAll',
+							rotate: 45,
+							align: 'right',
+							fontFamily: fontFamily,
+							fontSize: 10,
+							fontWeight: 500,
+							color: '#ccc'
+						}
+					},
+					yAxis: {
+						type: 'value',
+						alignTicks: true,
+						axisLine: {
+							show: false,
+						},
+						splitLine: {
+							lineStyle: {
+								type: [ 4, 4 ],
+								color: [ '#262626' ]
+							}
+						},
+						axisPointer: defaultAxisPointerLabelSettings,
+						axisLabel: {
+							color: '#ccc'
+						}
+					},
+					series: [
+						{
+							name: locate.Approved,
+							data: data[ 1 ],
+							type: 'bar',
+							stack: 'Total',
+							barMaxWidth: 40
+						},
+						{
+							name: locate.notApproved,
+							data: data[ 2 ],
+							type: 'bar',
+							stack: 'Total',
+							barMaxWidth: 40
+						},
+						{
+							name: locate.pending,
+							data: data[ 3 ],
+							type: 'bar',
+							stack: 'Total',
+							barMaxWidth: 40
+						}
+					]
+				},
+				responsiveOptions = getChartResponsiveOptionsSpendingDominatedKusama();
+
+			return $.extend( true, {}, baseOptions, responsiveOptions );
+		}
+		function getChartResponsiveOptionsSpendingDominatedKusama() {
+			var newOptions = {};
+
+			if ( window.innerWidth < 768 ) {
+				newOptions[ 'series' ] = [
+					{
+						label: {
+							fontSize: 12,
+						},
+					}, {
+						label: {
+							fontSize: 12,
+						},
+					}
+				]
+			} else {
+				newOptions[ 'series' ] = [
+					{
+						label: {
+							fontSize: 16,
+						},
+					}, {
+						label: {
+							fontSize: 16,
+						},
+					}
+				]
+			}
+
+			return newOptions;
+		}
+
+
+
 		function getChartLinesBaseOptions( jsonData, datasets, colors, areaBackground, seriesOptions, chartExtraOptions ) {
 			var totalItems = jsonData.length,
 				data       = [];
@@ -1799,7 +1953,6 @@
 
 			return chartOptions;
 		}
-
 		function getChartLinesBaseResponsiveOptions( chartName ) {
 			var newOptions = {};
 

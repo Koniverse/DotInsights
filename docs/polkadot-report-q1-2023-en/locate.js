@@ -4,9 +4,12 @@ var lang = {
 	developmentActivity: 'Development Activity',
 	activeDevelopers: 'Active developers',
 	codeCommits: 'Code commits',
-
 	totalPoolsMembers: 'Total Pools Members',
 	totalPoolsStake: 'Total Pools Stake (DOT)',
+	pending: 'Pending',
+	notApproved: 'Not Approved',
+	Approved: 'Approved',
+
 	activeAccount: 'Active Account',
 	newAccount: 'New Account',
 	transferOn: 'Transfer on',
