@@ -226,6 +226,9 @@
 						case 'web3-foundation-grants':
 							chartOptions = getChartResponsiveOptionsWeb3FoundationGrants( chartName );
 							break;
+						case 'chain-with-more-token-holders':
+							chartOptions = getChartResponsiveOptionsChainWithMoreTokenHolders( chartName );
+							break;
 					}
 
 					if ( chartOptions ) {
@@ -420,6 +423,9 @@
 							break;
 						case 'nomination-pool-staking':
 							chartOptions = getChartOptionsNominationPoolStaking( chartName, jsonData );
+							break;
+						case 'chain-with-more-token-holders':
+							chartOptions = getChartOptionsChainWithMoreTokenHolders( chartName, jsonData );
 							break;
 					}
 					chartInstance.hideLoading();
@@ -2168,6 +2174,147 @@
 			return newOptions;
 		}
 
+		function getChartOptionsChainWithMoreTokenHolders( chartName ) {
+			var colors = [
+					'#E6007A',
+					'#736161'
+				],
+				data = [
+					[ 'Polkadot', 'Moonbeam', 'Nodle', 'Shiden', 'Astar', 'Kusama', 'Moonriver', 'Acala', 'Bifrost Kusama', 'Karura', 'Quartz', 'Statemine', 'Parallel', 'Centrifuge', 'Calamari', 'Altair', 'Pioneer', 'Parallel Heiko', 'Unique', 'Hydradx', 'Khala', 'Spiritnet', 'Basilisk', 'Efinity', 'Kintsugi', 'Zeitgeist', 'Integritee', 'Interlay', 'Equilibrium', 'Turing', 'Bajun', 'Snow', 'Crab', 'Bifrost', 'Datahighway', 'Origintrail', 'Shadow', 'Phala', 'Robonomics', 'Picasso', 'Clv', 'Mangatax', 'Crust Parachain', 'Statemint', 'Encointer', 'Darwinia Parachain', 'Composable' ],
+					[ '1091399', '1083071', '741542', '0', '499310', '0', '0', '157403', '0', '0', '0', '0', '46926', '45041', '0', '0', '0', '0', '24007', '23112', '0', '18288', '0', '16207', '0', '15634', '0', '11241', '9522', '0', '0', '0', '0', '3968', '0', '3538', '0', '3193', '0', '0', '2209', '0', '996', '617', '0', '22', '7' ],
+					[ '0', '0', '0', '633785', '0', '287580', '247236', '0', '84579', '83918', '80111', '49325', '0', '0', '36565', '29563', '24839', '24060', '0', '0', '21391', '0', '16990', '0', '16016', '0', '13003', '0', '0', '7617', '6106', '5924', '5192', '0', '3746', '0', '3202', '0', '2978', '2841', '0', '1597', '0', '0', '65', '0', '0' ]
+				],
+				baseOptions       = {
+					color: colors,
+					textStyle: {
+						fontFamily: fontFamily,
+						fontWeight: 500
+					},
+					tooltip: defaultTooltipSettings,
+					legend: defaultLegendSettings,
+					grid: {
+						top: '5%',
+						left: '3%',
+						right: '3%',
+						containLabel: true
+					},
+					xAxis: {
+						type: 'category',
+						data: data[ 0 ],
+						splitLine: {
+							show: false,
+							lineStyle: {
+								type: [ 4, 4 ],
+								color: [ '#262626' ]
+							}
+						},
+						axisTick: {
+							show: false
+						},
+						axisLine: {
+							show: false,
+						},
+						axisPointer: defaultAxisPointerLabelSettings,
+						axisLabel: {
+							hideOverlap: false,
+							showMaxLabel: true,
+							overflow: 'breakAll',
+							rotate: 45,
+							align: 'right',
+							fontFamily: fontFamily,
+							fontSize: 10,
+							fontWeight: 500,
+							color: '#ccc'
+						}
+					},
+					yAxis: {
+						type: 'value',
+						alignTicks: true,
+						axisLine: {
+							show: false,
+						},
+						interval: 250000,
+						splitLine: {
+							lineStyle: {
+								type: [ 4, 4 ],
+								color: [ '#262626' ]
+							}
+						},
+						axisPointer: defaultAxisPointerLabelSettings,
+						axisLabel: {
+							color: '#ccc'
+						}
+					},
+					series: [
+						{
+							name: locate.polkadotChain,
+							data: data[ 1 ],
+							type: 'bar',
+							stack: 'Total',
+							barMaxWidth: 20,
+							itemStyle: {
+								borderRadius: [ 2, 2, 0, 0 ]
+							}
+						},
+						{
+							name: locate.kusamaChain,
+							data: data[ 2 ],
+							type: 'bar',
+							stack: 'Total',
+							barMaxWidth: 20,
+							itemStyle: {
+								borderRadius: [ 2, 2, 0, 0 ]
+							}
+						}
+					]
+				},
+				responsiveOptions = getChartResponsiveOptionsChainWithMoreTokenHolders();
+
+			return $.extend( true, {}, baseOptions, responsiveOptions );
+		}
+		function getChartResponsiveOptionsChainWithMoreTokenHolders() {
+			var newOptions = {};
+
+			if ( window.innerWidth < 768 ) {
+				newOptions[ 'series' ] = [
+					{
+						label: {
+							fontSize: 12,
+						},
+					},
+					{
+						label: {
+							fontSize: 12,
+						},
+					},
+					{
+						label: {
+							fontSize: 12,
+						},
+					}
+				]
+			} else {
+				newOptions[ 'series' ] = [
+					{
+						label: {
+							fontSize: 16,
+						},
+					},
+					{
+						label: {
+							fontSize: 16,
+						},
+					},
+					{
+						label: {
+							fontSize: 16,
+						},
+					}
+				]
+			}
+
+			return newOptions;
+		}
 
 
 		function getChartLinesBaseOptions( jsonData, datasets, colors, areaBackground, seriesOptions, chartExtraOptions ) {

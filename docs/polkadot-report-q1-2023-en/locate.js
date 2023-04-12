@@ -10,6 +10,8 @@ var lang = {
 	notApproved: 'Not Approved',
 	grantsEachWave: 'Grants Each Wave (Quater)',
 	grantsCumulative: 'Grants Cumulative',
+	polkadotChain: 'Polkadot Chain',
+	kusamaChain: 'Kusama Chain',
 
 	Approved: 'Approved',
 	activeAccount: 'Active Account',
