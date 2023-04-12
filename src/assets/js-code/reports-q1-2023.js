@@ -229,6 +229,9 @@
 						case 'chain-with-more-token-holders':
 							chartOptions = getChartResponsiveOptionsChainWithMoreTokenHolders( chartName );
 							break;
+						case 'top-dot-ksm-chain-fees':
+							chartOptions = getChartResponsiveOptionsTopDotKsmChainFees( chartName );
+							break;
 					}
 
 					if ( chartOptions ) {
@@ -449,6 +452,9 @@
 						break;
 					case 'chain-with-more-token-holders':
 						chartOptions = getChartOptionsChainWithMoreTokenHolders( chartName );
+						break;
+					case 'top-dot-ksm-chain-fees':
+						chartOptions = getChartOptionsTopDotKsmChainFees( chartName );
 						break;
 				}
 				chartInstance.hideLoading();
@@ -2311,6 +2317,350 @@
 						},
 					}
 				]
+			}
+
+			return newOptions;
+		}
+
+		function getChartOptionsTopDotKsmChainFees( chartName ) {
+			var colors   = [
+					'#03FFFF',
+					'#1B6AE0',
+					'#FE0096',
+					'#F42F44',
+					'#22BFFE',
+					'#F93F42',
+					'#B1B1B1',
+					'#40BAF8',
+					'#53CBC9',
+					'#F2B705'
+				],
+				dataName = [ 'Khala', 'Astar', 'Bit.Country Pioneer', 'Acala', 'Parallel', 'Karura', 'Heiko', 'Unique', 'Moonbeam', 'Moonriver' ],
+				dataFee = [ '7669.36', '3780.87', '3134.86', '1431.81', '507.61', '231.68', '216.15', '143.68', '134.58', '99.04' ],
+				datasets = [
+					{
+						value: dataFee[0],
+						name: dataName[0],
+						label: {
+							color: colors[ 0 ],
+							formatter: '{b} ${c}'
+						},
+						labelLine: {
+							lineStyle: {
+								color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
+									{
+										offset: 0,
+										color: '#fff'
+									},
+									{
+										offset: 1,
+										color: 'rgba(255,255,255,0)'
+									}
+								] )
+							}
+						}
+					}, {
+						value: dataFee[1],
+						name: dataName[1],
+						label: {
+							color: colors[ 1 ],
+							formatter: '{b} ${c}'
+						},
+						labelLine: {
+							lineStyle: {
+								color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
+									{
+										offset: 0,
+										color: 'rgba(255,255,255,0)'
+									},
+									{
+										offset: 1,
+										color: 'rgba(255,255,255,1)'
+									}
+								] )
+							}
+						}
+					}, {
+						value: dataFee[2],
+						name: dataName[2],
+						label: {
+							color: colors[ 2 ],
+							formatter: '{b} ${c}'
+						},
+						labelLine: {
+							lineStyle: {
+								color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
+									{
+										offset: 0,
+										color: 'rgba(255,255,255,0)'
+									},
+									{
+										offset: 1,
+										color: 'rgba(255,255,255,1)'
+									}
+								] )
+							}
+						}
+					}, {
+						value: dataFee[3],
+						name: dataName[3],
+						label: {
+							color: colors[ 3 ],
+							formatter: '{b} ${c}'
+						},
+						labelLine: {
+							lineStyle: {
+								color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
+									{
+										offset: 0,
+										color: 'rgba(255,255,255,0)'
+									},
+									{
+										offset: 1,
+										color: 'rgba(255,255,255,1)'
+									}
+								] )
+							}
+						}
+					}, {
+						value: dataFee[4],
+						name: dataName[4],
+						label: {
+							color: colors[ 4 ],
+							formatter: '{b} ${c}'
+						},
+						labelLine: {
+							lineStyle: {
+								color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
+									{
+										offset: 0,
+										color: 'rgba(255,255,255,0)'
+									},
+									{
+										offset: 1,
+										color: 'rgba(255,255,255,1)'
+									}
+								] )
+							}
+						}
+					}, {
+						value: dataFee[5],
+						name: dataName[5],
+						label: {
+							color: colors[ 5 ],
+							formatter: '{b} ${c}'
+						},
+						labelLine: {
+							lineStyle: {
+								color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
+									{
+										offset: 0,
+										color: 'rgba(255,255,255,0)'
+									},
+									{
+										offset: 1,
+										color: 'rgba(255,255,255,1)'
+									}
+								] )
+							}
+						}
+					}, {
+						value: dataFee[6],
+						name: dataName[6],
+						label: {
+							color: colors[ 6 ],
+							formatter: '{b} ${c}'
+						},
+						labelLine: {
+							lineStyle: {
+								color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
+									{
+										offset: 0,
+										color: 'rgba(255,255,255,0)'
+									},
+									{
+										offset: 1,
+										color: 'rgba(255,255,255,1)'
+									}
+								] )
+							}
+						}
+					}, {
+						value: dataFee[7],
+						name: dataName[7],
+						label: {
+							color: colors[ 7 ],
+							formatter: '{b} ${c}'
+						},
+						labelLine: {
+							lineStyle: {
+								color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
+									{
+										offset: 0,
+										color: '#fff'
+									},
+									{
+										offset: 1,
+										color: 'rgba(255,255,255,0)'
+									}
+								] )
+							}
+						}
+					}, {
+						value: dataFee[8],
+						name: dataName[8],
+						label: {
+							color: colors[ 8 ],
+							formatter: '{b} ${c}'
+						},
+						labelLine: {
+							lineStyle: {
+								color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
+									{
+										offset: 0,
+										color: '#fff'
+									},
+									{
+										offset: 1,
+										color: 'rgba(255,255,255,0)'
+									}
+								] )
+							}
+						}
+					}, {
+						value: dataFee[9],
+						name: dataName[9],
+						label: {
+							color: colors[ 9 ],
+							formatter: '{b} ${c}'
+						},
+						labelLine: {
+							lineStyle: {
+								color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
+									{
+										offset: 0,
+										color: '#fff'
+									},
+									{
+										offset: 1,
+										color: 'rgba(255,255,255,0)'
+									}
+								] )
+							}
+						}
+					}
+				],
+				baseOptions       = {
+					color: colors,
+					tooltip: $.extend( true, {}, defaultTooltipStyle, {
+						trigger: 'item',
+						valueFormatter: function( value ) {
+							return '$' + NumberUtil.formatWithCommas( value );
+						}
+					} ),
+					legend: $.extend( true, {}, defaultLegendSettings, {
+						show: false,
+					} ),
+					grid: {
+						left: '3%',
+						right: '3%',
+						top: '0',
+						containLabel: true
+					},
+					series: [
+						{
+							startAngle: 80,
+							name: '',
+							type: 'pie',
+							center: [ '50%', '45%' ],
+							radius: [ '40%', '60%' ],
+							label: {
+								alignTo: 'edge',
+								minMargin: 5,
+								edgeDistance: 10,
+								color: '#fff',
+								fontFamily: fontFamily,
+								fontWeight: 500,
+								fontSize: 17,
+								lineHeight: 30,
+								formatter: '{b} ${c}'
+							},
+							labelLine: {
+								showAbove: false,
+								length: 30,
+								length2: 0,
+								lineStyle: {
+									color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
+										{
+											offset: 0,
+											color: 'rgba(255,255,255,0)'
+										},
+										{
+											offset: 1,
+											color: '#fff'
+										}
+									] )
+								},
+								maxSurfaceAngle: 80
+							},
+							/*labelLayout: function( params ) {
+								const isLeft = params.labelRect.x < 570;
+								const points = params.labelLinePoints;
+								// Update the end point.
+								points[ 2 ][ 0 ] = isLeft
+									? params.labelRect.x
+									: params.labelRect.x + params.labelRect.width;
+								return {
+									labelLinePoints: points
+								};
+							},*/
+							itemStyle: {
+								borderColor: '#151515',
+								borderWidth: 2
+							},
+							emphasis: {
+								scaleSize: 5
+							},
+							data: datasets
+						}
+					]
+				},
+				responsiveOptions = getChartResponsiveOptionsTopDotKsmChainFees();
+
+			return $.extend( true, {}, baseOptions, responsiveOptions );
+		}
+		function getChartResponsiveOptionsTopDotKsmChainFees() {
+			var newOptions = {
+				series: [ {}, {} ]
+			};
+
+			if ( window.innerWidth < 768 ) {
+				newOptions[ 'legend' ] = defaultLegendSettings;
+				newOptions[ 'series' ][ 0 ] = {
+					label: {
+						fontSize: 11,
+						lineHeight: 24,
+						formatter: function( params ) {
+							return `${params.percent}%`;
+						}
+					},
+					labelLine: {
+						length: 5,
+					}
+				}
+			} else {
+				newOptions[ 'legend' ] = {
+					show: false
+				};
+				newOptions[ 'series' ][ 0 ] = {
+					label: {
+						fontSize: 17,
+						lineHeight: 30,
+						formatter: function( params ) {
+							return `${params.name} ${params.percent}%`;
+						}
+					}
+				}
 			}
 
 			return newOptions;
