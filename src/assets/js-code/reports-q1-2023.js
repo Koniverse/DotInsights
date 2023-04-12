@@ -424,9 +424,6 @@
 						case 'nomination-pool-staking':
 							chartOptions = getChartOptionsNominationPoolStaking( chartName, jsonData );
 							break;
-						case 'chain-with-more-token-holders':
-							chartOptions = getChartOptionsChainWithMoreTokenHolders( chartName, jsonData );
-							break;
 					}
 					chartInstance.hideLoading();
 					chartInstance.setOption( chartOptions );
@@ -449,6 +446,9 @@
 						break;
 					case 'web3-foundation-grants':
 						chartOptions = getChartOptionsWeb3FoundationGrants( chartName );
+						break;
+					case 'chain-with-more-token-holders':
+						chartOptions = getChartOptionsChainWithMoreTokenHolders( chartName );
 						break;
 				}
 				chartInstance.hideLoading();
