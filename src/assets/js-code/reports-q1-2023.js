@@ -203,22 +203,28 @@
 
 					switch ( chartName ) {
 						case 'price-dev-act':
-							chartOptions = getChartResponsiveOptionsPriceDevAct();
+							chartOptions = getChartResponsiveOptionsPriceDevAct( chartName );
 							break;
 						case 'newly-created-repo':
-							chartOptions = getChartResponsiveOptionsNewlyCreatedRepo();
+							chartOptions = getChartResponsiveOptionsNewlyCreatedRepo( chartName );
 							break;
 						case 'ku-net-alloca':
-							chartOptions = getChartResponsiveOptionsKuNetAlloca();
+							chartOptions = getChartResponsiveOptionsKuNetAlloca( chartName );
 							break;
 						case 'pol-net-alloca':
-							chartOptions = getChartResponsiveOptionsPolNetAlloca();
+							chartOptions = getChartResponsiveOptionsPolNetAlloca( chartName );
 							break;
 						case 'nomination-pool-staking':
-							chartOptions = getChartResponsiveOptionsNominationPoolStaking();
+							chartOptions = getChartResponsiveOptionsNominationPoolStaking( chartName );
 							break;
 						case 'spending-dominated-kusama':
-							chartOptions = getChartResponsiveOptionsSpendingDominatedKusama();
+							chartOptions = getChartResponsiveOptionsSpendingDominatedKusama( chartName );
+							break;
+						case 'open-gov-average-turnout':
+							chartOptions = getChartResponsiveOptionsOpenGovAverageTurnout( chartName );
+							break;
+						case 'web3-foundation-grants':
+							chartOptions = getChartResponsiveOptionsWeb3FoundationGrants( chartName );
 							break;
 					}
 
@@ -431,6 +437,12 @@
 						break;
 					case 'spending-dominated-kusama':
 						chartOptions = getChartOptionsSpendingDominatedKusama( chartName );
+						break;
+					case 'open-gov-average-turnout':
+						chartOptions = getChartOptionsOpenGovAverageTurnout( chartName );
+						break;
+					case 'web3-foundation-grants':
+						chartOptions = getChartOptionsWeb3FoundationGrants( chartName );
 						break;
 				}
 				chartInstance.hideLoading();
@@ -1783,6 +1795,348 @@
 			return $.extend( true, {}, baseOptions, responsiveOptions );
 		}
 		function getChartResponsiveOptionsSpendingDominatedKusama() {
+			var newOptions = {};
+
+			if ( window.innerWidth < 768 ) {
+				newOptions[ 'series' ] = [
+					{
+						label: {
+							fontSize: 12,
+						},
+					},
+					{
+						label: {
+							fontSize: 12,
+						},
+					},
+					{
+						label: {
+							fontSize: 12,
+						},
+					}
+				]
+			} else {
+				newOptions[ 'series' ] = [
+					{
+						label: {
+							fontSize: 16,
+						},
+					},
+					{
+						label: {
+							fontSize: 16,
+						},
+					},
+					{
+						label: {
+							fontSize: 16,
+						},
+					}
+				]
+			}
+
+			return newOptions;
+		}
+
+		function getChartOptionsOpenGovAverageTurnout( chartName ) {
+			var colors = [
+					'#FB560A'
+				],
+				data = [
+					[
+						'lease_admin',
+						'general_admin',
+						'staking_admin',
+						'big_tipper',
+						'auction_admin',
+						'referendum_canceller',
+						'root',
+						'small_spender',
+						'small_tipper',
+						'treasurer',
+						'whitelisted_caller',
+						'big_spender',
+						'medium_spender'
+					],
+					[ 0.16, 1.26, 0.17, 0.06, 0.78, 0.33, 0.18, 0.75, 0.30, 0.08, 0.33, 0.19, 0.18 ]
+				],
+				baseOptions       = {
+					color: colors,
+					textStyle: {
+						fontFamily: fontFamily,
+						fontWeight: 500
+					},
+					tooltip: defaultTooltipSettings,
+					legend: defaultLegendSettings,
+					grid: {
+						top: '5%',
+						left: '3%',
+						right: '3%',
+						containLabel: true
+					},
+					xAxis: {
+						type: 'category',
+						data: data[ 0 ],
+						splitLine: {
+							show: false,
+							lineStyle: {
+								type: [ 4, 4 ],
+								color: [ '#262626' ]
+							}
+						},
+						axisTick: {
+							show: false
+						},
+						axisLine: {
+							show: false,
+						},
+						axisPointer: defaultAxisPointerLabelSettings,
+						axisLabel: {
+							hideOverlap: false,
+							showMaxLabel: true,
+							overflow: 'breakAll',
+							rotate: 45,
+							align: 'right',
+							fontFamily: fontFamily,
+							fontSize: 10,
+							fontWeight: 500,
+							color: '#ccc'
+						}
+					},
+					yAxis: {
+						type: 'value',
+						alignTicks: true,
+						axisLine: {
+							show: false,
+						},
+						splitLine: {
+							lineStyle: {
+								type: [ 4, 4 ],
+								color: [ '#262626' ]
+							}
+						},
+						axisPointer: defaultAxisPointerLabelSettings,
+						axisLabel: {
+							color: '#ccc'
+						}
+					},
+					series: [
+						{
+							type: 'bar',
+							data: data[1],
+							name: '',
+							label: {
+								show: true,
+								position: 'top',
+								fontFamily: fontFamily,
+								fontSize: 16,
+								fontWeight: 700,
+								color: '#FB560A',
+								formatter: '{c}%'
+							},
+							barMaxWidth: 40,
+							itemStyle: {
+								borderRadius: [ 2, 2, 0, 0 ]
+							}
+						}
+					],
+				},
+				responsiveOptions = getChartResponsiveOptionsOpenGovAverageTurnout();
+
+			return $.extend( true, {}, baseOptions, responsiveOptions );
+		}
+		function getChartResponsiveOptionsOpenGovAverageTurnout() {
+			var newOptions = {};
+
+			if ( window.innerWidth < 768 ) {
+				newOptions[ 'series' ] = [
+					{
+						label: {
+							fontSize: 12,
+						},
+					},
+					{
+						label: {
+							fontSize: 12,
+						},
+					},
+					{
+						label: {
+							fontSize: 12,
+						},
+					}
+				]
+			} else {
+				newOptions[ 'series' ] = [
+					{
+						label: {
+							fontSize: 16,
+						},
+					},
+					{
+						label: {
+							fontSize: 16,
+						},
+					},
+					{
+						label: {
+							fontSize: 16,
+						},
+					}
+				]
+			}
+
+			return newOptions;
+		}
+
+		function getChartOptionsWeb3FoundationGrants( chartName ) {
+			var colors            = [
+					'#004BFF',
+					'#E6007A'
+				],
+				data              = [
+					[ '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '14', '14', '15', '16', '17' ],
+					[ '10', '12', '14', '26', '37', '33', '31', '43', '48', '29', '26', '21', '32', '36', '39', '39', '46' ],
+					[ '10', '22', '36', '62', '99', '132', '163', '206', '254', '283', '309', '330', '362', '398', '437', '476', '522' ]
+				],
+				baseOptions       = {
+					color: colors,
+					textStyle: {
+						fontFamily: fontFamily,
+						fontWeight: 500
+					},
+					tooltip: defaultTooltipSettings,
+					legend: defaultLegendSettings,
+					grid: {
+						top: '5%',
+						left: '3%',
+						right: '3%',
+						containLabel: true
+					},
+					xAxis: {
+						type: 'category',
+						data: data[ 0 ],
+						splitLine: {
+							show: false,
+							lineStyle: {
+								type: [ 4, 4 ],
+								color: [ '#262626' ]
+							}
+						},
+						axisTick: {
+							show: false
+						},
+						axisLine: {
+							show: false,
+						},
+						axisPointer: defaultAxisPointerLabelSettings,
+						axisLabel: {
+							margin: 12,
+							color: '#ccc'
+						}
+					},
+					yAxis: [
+						{
+							type: 'value',
+							name: locate.grantsEachWave,
+							nameTextStyle: {
+								fontSize: 0
+							},
+							offset: 20,
+							position: 'right',
+							alignTicks: true,
+							axisLine: {
+								show: false,
+							},
+							interval: 200,
+							splitLine: {
+								lineStyle: {
+									type: [ 4, 4 ],
+									color: [ '#262626' ]
+								}
+							},
+							axisPointer: {
+								label: {
+									color: '#fff',
+									backgroundColor: colors[ 1 ]
+								}
+							},
+							axisLabel: {
+								color: '#ccc'
+							}
+						},
+						{
+							type: 'value',
+							name: locate.grantsCumulative,
+							nameTextStyle: {
+								fontSize: 0
+							},
+							offset: 20,
+							alignTicks: true,
+							axisLine: {
+								show: false,
+							},
+							interval: 10,
+							splitLine: {
+								lineStyle: {
+									type: [ 4, 4 ],
+									color: [ '#262626' ]
+								}
+							},
+							axisPointer: {
+								label: {
+									color: '#fff',
+									backgroundColor: colors[ 0 ]
+								}
+							},
+							axisLabel: {
+								color: '#ccc'
+							}
+						}
+
+					],
+					series: [
+						{
+							name: locate.grantsEachWave,
+							data: data[ 1 ],
+							type: 'bar',
+							yAxisIndex: 1,
+							label: {
+								show: false,
+							},
+							barMaxWidth: 102,
+							itemStyle: {
+								borderRadius: [ 8, 8, 0, 0 ]
+							}
+						},
+						{
+							name: locate.grantsCumulative,
+							data: data[ 2 ],
+							type: 'line',
+							label: {
+								show: true,
+								fontFamily: fontFamily,
+								fontWeight: 700,
+								fontSize: 16,
+								position: 'top',
+								color: colors[ 1 ],
+							},
+							smooth: false,
+							showSymbol: true,
+							symbolSize: 16,
+							//symbol: 'path://M11 8C11 9.65685 9.65685 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5C9.65685 5 11 6.34315 11 8 M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM8 11C9.65685 11 11 9.65685 11 8C11 6.34315 9.65685 5 8 5C6.34315 5 5 6.34315 5 8C5 9.65685 6.34315 11 8 11Z',
+							symbol: 'image://data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFzSURBVHgBpVMxS8NAGH13uTSgtkhrCwpqVXCyix100cFMSpzFSRdH166li0N/g4OTg2ulTl10EIdOnUTQ0kGhbVwqQtMm511ECdeisT744PLue++Sl+8IFDSQm9GgpzVg3gOPfrLEJoDN0KsmUewE+8nX4gHHRgyTqy7cDH6ABq2WAq0SFJxvAykeR8wCeAKhQOxpsJI0ofJRnhxeLMETTXhZ36qFXLQHto8RoAMl1ocunPjAZrx8sGuYS1ty3btr3LY3Ty/UHhFymgrpwKvHr4/2jO1lCxFtTJa+sWDGy4eW2tcHTdNh326sza4PcOaiqXJE/GaKf4JSkI5KOpXHisp1RQ5D5G1K4NVV2t45u+zePFXguO+yulf3pdchIRK4NpGjy8AsjAAG/ZzOofisgdfwR0hNCoU3P8QUIlU5nmHFruht+ZrAZeLIR5pwsmIz89vJUrwSvExBNJGfcIURB58SKfszQuF1+iB1Q1QSJy/B/g/pm3cqp4f8DgAAAABJRU5ErkJggg==',
+							emphasis: {
+								focus: 'series'
+							}
+						}
+					]
+				},
+				responsiveOptions = getChartResponsiveOptionsWeb3FoundationGrants();
+
+			return $.extend( true, {}, baseOptions, responsiveOptions );
+		}
+		function getChartResponsiveOptionsWeb3FoundationGrants() {
 			var newOptions = {};
 
 			if ( window.innerWidth < 768 ) {
