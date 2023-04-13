@@ -239,6 +239,10 @@
 						case 'tvl-ksm-liquid-staking':
 							chartOptions = getChartLinesBaseResponsiveOptions( chartName );
 							break;
+						case 'usdt-on-statemine-ksm':
+						case 'usdt-on-statemine-dot':
+							chartOptions = getChartResponsiveOptionsUsdtOnStatemine( chartName );
+							break;
 					}
 
 					if ( chartOptions ) {
@@ -448,6 +452,12 @@
 							break;
 						case 'tvl-ksm-liquid-staking':
 							chartOptions = getChartOptionsTvlKsmLiquidStaking( chartName, jsonData );
+							break;
+						case 'usdt-on-statemine-ksm':
+							chartOptions = getChartOptionsUsdtOnStatemineKsm( chartName, jsonData );
+							break;
+						case 'usdt-on-statemine-dot':
+							chartOptions = getChartOptionsUsdtOnStatemineDot( chartName, jsonData );
 							break;
 					}
 					chartInstance.hideLoading();
@@ -2890,6 +2900,377 @@
 			return $.extend( true, {}, baseOptions, responsiveOptions );
 		}
 
+		function getChartOptionsUsdtOnStatemineKsm( chartName, jsonData ) {
+			var totalItems = jsonData.length,
+				data       = {
+					transferCount: [],
+					amount: [],
+					holderCount: []
+				},
+				colors     = [
+					'#004BFF',
+					'#E12C29',
+					'#FFB800'
+				];
+
+			for ( var i = 0; i < totalItems; i ++ ) {
+				data.transferCount.push( [ jsonData[ i ].date, jsonData[ i ].transfer_count ] );
+				data.amount.push( [ jsonData[ i ].date, jsonData[ i ].amount ] );
+				data.holderCount.push( [ jsonData[ i ].date, jsonData[ i ].holder_count ] );
+			}
+
+			var baseOptions = {
+				color: colors,
+				textStyle: {
+					fontFamily: fontFamily,
+					fontWeight: 500
+				},
+				tooltip: defaultTooltipSettings,
+				legend: defaultLegendSettings,
+				grid: {
+					left: '3%',
+					right: '3%',
+					top: '3%',
+					//bottom: 100, // DataZoom + Legend.
+					containLabel: true
+				},
+				xAxis: {
+					type: 'time',
+					boundaryGap: false,
+					axisTick: {
+						show: false
+					},
+					axisLine: {
+						lineStyle: {
+							color: '#262626'
+						}
+					},
+					splitLine: {
+						show: true,
+						lineStyle: {
+							type: [ 4, 4 ],
+							color: [ '#262626' ]
+						}
+					},
+					axisPointer: defaultAxisPointerLabelSettings,
+					axisLabel: {
+						hideOverlap: false,
+						showMaxLabel: true,
+						overflow: 'breakAll',
+//						rotate: 45,
+						align: 'center',
+						fontFamily: fontFamily,
+						fontSize: 10,
+						fontWeight: 500,
+						formatter: dateFormatter,
+						color: '#ccc',
+					}
+				},
+				yAxis: [
+					{
+						type: 'value',
+						name: locate.transferAmount,
+						position: 'left',
+						axisLine: {
+							show: false
+						},
+						splitNumber: 4,
+						splitLine: {
+							lineStyle: {
+								type: [ 4, 4 ],
+								color: [ '#262626' ]
+							}
+						},
+						axisPointer: {
+							label: {
+								color: '#000',
+								backgroundColor: '#ccc',
+								formatter: "${value}"
+							}
+						},
+						axisLabel: {
+							formatter: "${value}",
+							color: '#ccc'
+						}
+					},
+					{
+						type: 'value',
+						name: locate.count,
+						position: 'right',
+						axisLine: {
+							show: false
+						},
+						splitNumber: 4,
+						splitLine: {
+							lineStyle: {
+								type: [ 4, 4 ],
+								color: [ '#262626' ]
+							}
+						},
+						axisPointer: defaultAxisPointerLabelSettings,
+						axisLabel: {
+							color: '#ccc'
+						}
+					}
+				],
+				series: [
+					{
+						name: locate.transferCount,
+						data: data.transferCount,
+						itemStyle: {
+							color: colors[ 0 ]
+						},
+						type: 'line',
+						smooth: true,
+						showSymbol: false,
+						yAxisIndex: 1,
+						emphasis: {
+							focus: 'series'
+						}
+					},
+					{
+						name: locate.transferAmount,
+						data: data.amount,
+						itemStyle: {
+							color: colors[ 1 ]
+						},
+						type: 'line',
+						smooth: true,
+						showSymbol: false,
+						emphasis: {
+							focus: 'series'
+						}
+					},
+					{
+						name: locate.holderCount,
+						data: data.holderCount,
+						itemStyle: {
+							color: colors[ 2 ]
+						},
+						type: 'line',
+						smooth: true,
+						showSymbol: false,
+						yAxisIndex: 1,
+						emphasis: {
+							focus: 'series'
+						}
+					}
+				]
+			};
+			var responsiveOptions = getChartResponsiveOptionsUsdtOnStatemine();
+
+			$.extend( true, baseOptions, responsiveOptions );
+
+			return baseOptions;
+		}
+
+		function getChartOptionsUsdtOnStatemineDot( chartName, jsonData ) {
+			var totalItems = jsonData.length,
+				data       = {
+					transferCount: [],
+					amount: [],
+					holderCount: []
+				},
+				colors     = [
+					'#004BFF',
+					'#E12C29',
+					'#FFB800'
+				];
+
+			for ( var i = 0; i < totalItems; i ++ ) {
+				data.transferCount.push( [ jsonData[ i ].date, jsonData[ i ].transfer_count ] );
+				data.amount.push( [ jsonData[ i ].date, jsonData[ i ].amount ] );
+				data.holderCount.push( [ jsonData[ i ].date, jsonData[ i ].holder_count ] );
+			}
+
+			var baseOptions = {
+				color: colors,
+				textStyle: {
+					fontFamily: fontFamily,
+					fontWeight: 500
+				},
+				tooltip: defaultTooltipSettings,
+				legend: defaultLegendSettings,
+				grid: {
+					left: '3%',
+					right: '3%',
+					top: '3%',
+					//bottom: 100, // DataZoom + Legend.
+					containLabel: true
+				},
+				xAxis: {
+					type: 'time',
+					boundaryGap: false,
+					axisTick: {
+						show: false
+					},
+					axisLine: {
+						lineStyle: {
+							color: '#262626'
+						}
+					},
+					splitLine: {
+						show: true,
+						lineStyle: {
+							type: [ 4, 4 ],
+							color: [ '#262626' ]
+						}
+					},
+					axisPointer: defaultAxisPointerLabelSettings,
+					axisLabel: {
+						hideOverlap: false,
+						showMaxLabel: true,
+						overflow: 'breakAll',
+						//						rotate: 45,
+						align: 'center',
+						fontFamily: fontFamily,
+						fontSize: 10,
+						fontWeight: 500,
+						formatter: dateFormatter,
+						color: '#ccc',
+					}
+				},
+				yAxis: [
+					{
+						type: 'value',
+						name: locate.transferAmount,
+						position: 'left',
+						axisLine: {
+							show: false
+						},
+						splitNumber: 4,
+						splitLine: {
+							lineStyle: {
+								type: [ 4, 4 ],
+								color: [ '#262626' ]
+							}
+						},
+						axisPointer: {
+							label: {
+								color: '#000',
+								backgroundColor: '#ccc',
+								formatter: "${value}"
+							}
+						},
+						axisLabel: {
+							formatter: "${value}",
+							color: '#ccc'
+						}
+					},
+					{
+						type: 'value',
+						name: locate.count,
+						position: 'right',
+						axisLine: {
+							show: false
+						},
+						splitNumber: 4,
+						splitLine: {
+							lineStyle: {
+								type: [ 4, 4 ],
+								color: [ '#262626' ]
+							}
+						},
+						axisPointer: defaultAxisPointerLabelSettings,
+						axisLabel: {
+							color: '#ccc'
+						}
+					}
+				],
+				series: [
+					{
+						name: locate.transferCount,
+						data: data.transferCount,
+						itemStyle: {
+							color: colors[ 0 ]
+						},
+						type: 'line',
+						smooth: true,
+						showSymbol: false,
+						yAxisIndex: 1,
+						emphasis: {
+							focus: 'series'
+						}
+					},
+					{
+						name: locate.transferAmount,
+						data: data.amount,
+						itemStyle: {
+							color: colors[ 1 ]
+						},
+						type: 'line',
+						smooth: true,
+						showSymbol: false,
+						emphasis: {
+							focus: 'series'
+						}
+					},
+					{
+						name: locate.holderCount,
+						data: data.holderCount,
+						itemStyle: {
+							color: colors[ 2 ]
+						},
+						type: 'line',
+						smooth: true,
+						showSymbol: false,
+						yAxisIndex: 1,
+						emphasis: {
+							focus: 'series'
+						}
+					}
+				]
+			};
+			var responsiveOptions = getChartResponsiveOptionsUsdtOnStatemine();
+
+			$.extend( true, baseOptions, responsiveOptions );
+
+			return baseOptions;
+		}
+
+		function getChartResponsiveOptionsUsdtOnStatemine() {
+			var newOptions = {};
+
+			if ( window.innerWidth > 767 ) {
+				newOptions = {
+					xAxis: {
+						splitNumber: 3
+					}
+				};
+			} else {
+				newOptions = {
+					tooltip: {
+						trigger: 'axis'
+					},
+					xAxis: {
+						splitNumber: 2
+					}
+				};
+
+				if ( window.innerWidth < 460 ) {
+					$.extend( newOptions, {
+						xAxis: {
+							splitNumber: 2
+						},
+						yAxis: {
+							axisPointer: {
+								label: {
+									formatter: "${value}"
+								}
+							},
+							axisLabel: {
+								formatter: function( value ) {
+									return value ? '$' + NumberUtil.formatMoney( value ) : '-';
+								}
+							}
+						}
+					} )
+				}
+			}
+
+			return newOptions;
+		}
+
 
 		function getChartLinesBaseOptions( jsonData, datasets, colors, areaBackground, seriesOptions, chartExtraOptions ) {
 			var totalItems = jsonData.length,
@@ -3028,6 +3409,7 @@
 
 			return chartOptions;
 		}
+
 		function getChartLinesBaseResponsiveOptions( chartName ) {
 			var newOptions = {};
 
@@ -3066,8 +3448,6 @@
 				case 'tvl-defi-parachain':
 				case 'tvl-dot-dex':
 				case 'tvl-ksm-dex':
-				case 'tvl-dot-lending':
-				case 'tvl-ksm-lending':
 				case 'tvl-dot-liquid-staking':
 				case 'tvl-ksm-liquid-staking':
 				case 'tvl-liquid-crowdloan':

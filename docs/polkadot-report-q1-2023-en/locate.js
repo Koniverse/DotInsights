@@ -12,6 +12,10 @@ var lang = {
 	grantsCumulative: 'Grants Cumulative',
 	polkadotChain: 'Polkadot Chain',
 	others: 'Others',
+	transferCount: 'Transfer Count',
+	holderCount: 'Holder Count',
+	transferAmount: 'Transfer Amount',
+	count: 'Count',
 
 	kusamaChain: 'Kusama Chain',
 	Approved: 'Approved',
