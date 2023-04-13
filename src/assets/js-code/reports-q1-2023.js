@@ -232,6 +232,9 @@
 						case 'top-dot-ksm-chain-fees':
 							chartOptions = getChartResponsiveOptionsTopDotKsmChainFees( chartName );
 							break;
+						case 'tvl-defi-parachain':
+							chartOptions = getChartLinesBaseResponsiveOptions( chartName );
+							break;
 					}
 
 					if ( chartOptions ) {
@@ -426,6 +429,9 @@
 							break;
 						case 'nomination-pool-staking':
 							chartOptions = getChartOptionsNominationPoolStaking( chartName, jsonData );
+							break;
+						case 'tvl-defi-parachain':
+							chartOptions = getChartOptionsDefiParachain( chartName, jsonData );
 							break;
 					}
 					chartInstance.hideLoading();
@@ -2664,6 +2670,157 @@
 			}
 
 			return newOptions;
+		}
+
+		function getChartOptionsDefiParachain( chartName, jsonData ) {
+			var datasets          = [
+					{
+						options: {
+							areaStyle: {
+								color: new echarts.graphic.LinearGradient( 0.5, 0, 0.5, 1, [
+									{
+										offset: 0,
+										color: 'rgba(216,19,86,0.7)'
+									},
+									{
+										offset: 1,
+										color: 'rgba(216,19,86,0.1)'
+									}
+								] )
+							},
+							stack: 'Total'
+						},
+						name: 'acala',
+						label: 'Acala'
+					}, {
+						options: {
+							areaStyle: {
+								color: new echarts.graphic.LinearGradient( 0.5, 0, 0.5, 1, [
+									{
+										offset: 0,
+										color: 'rgba(34,191,254,0.7)'
+									},
+									{
+										offset: 1,
+										color: 'rgba(34,191,254,0.1)'
+									}
+								] )
+							},
+							stack: 'Total'
+						},
+						name: 'parallel',
+						label: 'Parallel'
+					}, {
+						options: {
+							areaStyle: {
+								color: new echarts.graphic.LinearGradient( 0.5, 0, 0.5, 1, [
+									{
+										offset: 0,
+										color: 'rgba(76,203,201,0.7)'
+									},
+									{
+										offset: 1,
+										color: 'rgba(76,203,201,0.1)'
+									}
+								] )
+							},
+							stack: 'Total'
+						},
+						name: 'moonbeam',
+						label: 'Moonbeam'
+					}, {
+						options: {
+							areaStyle: {
+								color: new echarts.graphic.LinearGradient( 0.5, 0, 0.5, 1, [
+									{
+										offset: 0,
+										color: 'rgba(27,106,224,0.7)'
+									},
+									{
+										offset: 1,
+										color: 'rgba(27,106,224,0.1)'
+									}
+								] )
+							},
+							stack: 'Total'
+						},
+						name: 'astar',
+						label: 'Astar'
+					}, {
+						options: {
+							areaStyle: {
+								color: new echarts.graphic.LinearGradient( 0.5, 0, 0.5, 1, [
+									{
+										offset: 0,
+										color: 'rgba(255,168,0,0.7)'
+									},
+									{
+										offset: 1,
+										color: 'rgba(255,168,0,0.1)'
+									}
+								] )
+							},
+							stack: 'Total'
+						},
+						name: 'moonriver',
+						label: 'Moonriver'
+					}, {
+						options: {
+							areaStyle: {
+								color: new echarts.graphic.LinearGradient( 0.5, 0, 0.5, 1, [
+									{
+										offset: 0,
+										color: 'rgba(218,69,32,0.7)'
+									},
+									{
+										offset: 1,
+										color: 'rgba(218,69,32,0.1)'
+									}
+								] )
+							},
+							stack: 'Total'
+						},
+						name: 'karura',
+						label: 'Karura'
+					}, {
+						options: {
+							areaStyle: {
+								color: new echarts.graphic.LinearGradient( 0.5, 0, 0.5, 1, [
+									{
+										offset: 0,
+										color: 'rgba(210,81,253,0.7)'
+									},
+									{
+										offset: 1,
+										color: 'rgba(210,81,253,0.1)'
+									}
+								] )
+							},
+							stack: 'Total'
+						},
+						name: 'others',
+						label: locate.others
+					}
+				],
+				colors            = [
+					'#D81356',
+					'#22BFFE',
+					'#4CCBC9',
+					'#1B6AE0',
+					'#FFA800',
+					'#DA4520',
+					'#D251FD',
+				],
+				chartExtraOptions = {
+					yAxis: {
+						interval: 50000000,
+					}
+				};
+
+			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors, null, null, chartExtraOptions );
+			var responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
+
+			return $.extend( true, {}, baseOptions, responsiveOptions );
 		}
 
 
