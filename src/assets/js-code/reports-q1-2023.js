@@ -249,6 +249,9 @@
 						case 'usdt-on-statemine-dot':
 							chartOptions = getChartResponsiveOptionsUsdtOnStatemine( chartName );
 							break;
+						case 'nft-marketplace':
+							chartOptions = getChartResponsiveOptionsNftMarketplace( chartName );
+							break;
 					}
 
 					if ( chartOptions ) {
@@ -464,6 +467,9 @@
 							break;
 						case 'usdt-on-statemine-dot':
 							chartOptions = getChartOptionsUsdtOnStatemineDot( chartName, jsonData );
+							break;
+						case 'nft-marketplace':
+							chartOptions = getChartOptionsNftMarketplace( chartName, jsonData );
 							break;
 					}
 					chartInstance.hideLoading();
@@ -3627,6 +3633,187 @@
 									return value ? '$' + NumberUtil.formatMoney( value ) : '-';
 								}
 							}
+						}
+					} )
+				}
+			}
+
+			return newOptions;
+		}
+
+		function getChartOptionsNftMarketplace( chartName, jsonData ) {
+			var datasets    = [
+					{
+						name: 'raresama',
+						label: 'Raresama'
+					}, {
+						name: 'singular_ksm',
+						label: 'Singular KSM'
+					}, {
+						name: 'nft_trade_glmr',
+						label: 'NFTrade GLMR'
+					}, {
+						name: 'moonbeans_movr',
+						label: 'Moonbeans MOVR'
+					}, {
+						name: 'moonbeans_glmr',
+						label: 'MoonBeans GLMR'
+					}, {
+						name: 'tofu_sdn',
+						label: 'tofu SDN'
+					}, {
+						name: 'tofu_astr',
+						label: 'tofu ASTR'
+					}, {
+						name: 'tofu_movr',
+						label: 'tofu MOVR'
+					}, {
+						name: 'tofu_glmr',
+						label: 'tofu GLMR'
+					}
+				],
+				colors      = [
+					'#6B49B5',
+					'#E6007A',
+					'#429DF4',
+					'#9EE542',
+					'#4CCBC9',
+					'#F0A08C',
+					'#FF6B00',
+					'#004BFF',
+					'#FFB800'
+				],
+				totalItems  = jsonData.length,
+				data        = [],
+				chartSeries = [];
+
+			datasets.forEach( function( dataset ) {
+				data[ dataset.name ] = [];
+			} );
+
+			for ( var i = 0; i < totalItems; i ++ ) {
+				datasets.forEach( function( dataset ) {
+					var value = jsonData[ i ][ dataset.name ] ? NumberUtil.validate( jsonData[ i ][ dataset.name ] ) : '';
+					data[ dataset.name ].push( [ jsonData[ i ].date, value ] );
+				} );
+			}
+
+			datasets.forEach( function( dataset, index ) {
+				var dataSetOptions = {
+					name: dataset.label,
+					data: data[ dataset.name ],
+					itemStyle: {
+						color: colors[ index ]
+					},
+					type: 'bar',
+					stack: 'total',
+					emphasis: {
+						focus: 'series'
+					}
+				};
+
+				if ( dataset.hasOwnProperty( 'options' ) ) {
+					$.extend( true, dataSetOptions, dataset.options );
+				}
+
+				chartSeries.push( dataSetOptions );
+			} );
+
+			var baseOptions       = {
+					color: colors,
+					textStyle: {
+						fontFamily: fontFamily,
+						fontWeight: 500
+					},
+					tooltip: defaultTooltipSettings,
+					legend: defaultLegendSettings,
+					grid: {
+						left: '3%',
+						right: '3%',
+						top: '3%',
+						containLabel: true
+					},
+					xAxis: {
+						type: 'time',
+						boundaryGap: false,
+						axisTick: {
+							show: false
+						},
+						axisLine: {
+							show: false
+						},
+						splitLine: {
+							show: false
+						},
+						axisPointer: defaultAxisPointerLabelSettings,
+						axisLabel: {
+							margin: 12,
+							color: '#ccc',
+							formatter: dateFormatter
+						}
+					},
+					yAxis: {
+						type: 'value',
+						axisLine: {
+							show: false
+						},
+						splitNumber: 4,
+						splitLine: {
+							show: true,
+							lineStyle: {
+								type: [ 4, 4 ],
+								color: [ '#262626' ]
+							}
+						},
+						axisPointer: defaultAxisPointerLabelSettings,
+						axisLabel: {
+							color: '#ccc'
+						}
+					},
+					series: chartSeries
+				},
+				responsiveOptions = getChartResponsiveOptionsNftMarketplace( chartName );
+
+			return $.extend( true, {}, baseOptions, responsiveOptions );
+		}
+		function getChartResponsiveOptionsNftMarketplace() {
+			var newOptions = {};
+
+			if ( window.innerWidth > 767 ) {
+				newOptions = {
+					yAxis: {
+						axisLabel: {
+							formatter: '${value}'
+						}
+					},
+					xAxis: {
+						splitNumber: 5,
+						axisLabel: {
+							formatter: dateFormatter
+						}
+					}
+				};
+			} else {
+				newOptions = {
+					yAxis: {
+						axisLabel: {
+							formatter: function( value ) {
+								return '$' + NumberUtil.formatWithCommas( value );
+							}
+						}
+					},
+					xAxis: {
+						splitNumber: 3,
+						axisLabel: {
+							formatter: dateShortFormatter
+						}
+					}
+				};
+
+				if ( window.innerWidth < 460 ) {
+					$.extend( newOptions, {
+						xAxis: {
+							splitNumber: 3
 						}
 					} )
 				}
