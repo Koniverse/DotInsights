@@ -11,8 +11,9 @@ var lang = {
 	grantsEachWave: 'Grants Each Wave (Quater)',
 	grantsCumulative: 'Grants Cumulative',
 	polkadotChain: 'Polkadot Chain',
-	kusamaChain: 'Kusama Chain',
+	others: 'Others',
 
+	kusamaChain: 'Kusama Chain',
 	Approved: 'Approved',
 	activeAccount: 'Active Account',
 	newAccount: 'New Account',
@@ -23,7 +24,6 @@ var lang = {
 	contributed: 'Contributed',
 	contributionsInQueue: 'Contributions in queue',
 	currentRecord: 'Current record',
-	others: 'Others',
 	runtimeModulesChains: 'Runtime Modules/Chains',
 	developmentTools: 'Development Tools',
 	wallets: 'Wallets',
