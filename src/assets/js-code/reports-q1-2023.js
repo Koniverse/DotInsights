@@ -1005,7 +1005,7 @@
 
 		function getChartOptionsDotHolderDistribution( chartName ) {
 			var colors   = [
-					'#D0C6E3',
+					'#F8B00C',
 					'#CA93AF',
 					'#18234E',
 					'#E10266'
@@ -1181,10 +1181,10 @@
 
 		function getChartOptionsKsmHolderDistribution( chartName ) {
 			var colors   = [
-					'#D0C6E3',
-					'#CA93AF',
+					'#F8B00C',
+					'#E10266',
 					'#18234E',
-					'#E10266'
+					'#A1A1A1'
 				],
 				datasets = [
 					{
