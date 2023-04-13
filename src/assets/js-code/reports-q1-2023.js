@@ -235,6 +235,8 @@
 						case 'tvl-defi-parachain':
 						case 'tvl-dot-dex':
 						case 'tvl-ksm-dex':
+						case 'tvl-dot-liquid-staking':
+						case 'tvl-ksm-liquid-staking':
 							chartOptions = getChartLinesBaseResponsiveOptions( chartName );
 							break;
 					}
@@ -440,6 +442,12 @@
 							break;
 						case 'tvl-ksm-dex':
 							chartOptions = getChartOptionsTvlKsmDex( chartName, jsonData );
+							break;
+						case 'tvl-dot-liquid-staking':
+							chartOptions = getChartOptionsTvlDotLiquidStaking( chartName, jsonData );
+							break;
+						case 'tvl-ksm-liquid-staking':
+							chartOptions = getChartOptionsTvlKsmLiquidStaking( chartName, jsonData );
 							break;
 					}
 					chartInstance.hideLoading();
@@ -2811,6 +2819,70 @@
 					'#22BFFE',
 					'#B1B1B1',
 					'#0049F1'
+				];
+
+			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors );
+			var responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
+			return $.extend( true, {}, baseOptions, responsiveOptions );
+		}
+
+		function getChartOptionsTvlDotLiquidStaking( chartName, jsonData ) {
+			var datasets = [
+					{
+						name: 'lido_moonbeam',
+						label: 'Lido on Moonbeam'
+					}, {
+						name: 'acala',
+						label: 'Acala'
+					}, {
+						name: 'bifrost_dot',
+						label: 'Bifrost Polkadot'
+					}, {
+						name: 'parallel',
+						label: 'Parallel'
+					}, {
+						name: 'tapio',
+						label: 'Tapio'
+					}
+				],
+				colors   = [
+					'#118AF5',
+					'#D81356',
+					'#FFB800',
+					'#2A42F1',
+					'#25DF96'
+				];
+
+			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors );
+			var responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
+			return $.extend( true, {}, baseOptions, responsiveOptions );
+		}
+
+		function getChartOptionsTvlKsmLiquidStaking( chartName, jsonData ) {
+			var datasets = [
+					{
+						name: 'lido_moonriver',
+						label: 'Lido on Moonriver'
+					}, {
+						name: 'karura',
+						label: 'Karura'
+					}, {
+						name: 'bifrost_ksm',
+						label: 'Bifrost Kusama'
+					}, {
+						name: 'heiko',
+						label: 'Heiko'
+					}, {
+						name: 'taiga',
+						label: 'Taiga'
+					}
+				],
+				colors   = [
+					'#118AF5',
+					'#C30D00',
+					'#FFB800',
+					'#EA5474',
+					'#960DB9'
 				];
 
 			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors );
