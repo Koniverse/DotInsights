@@ -234,6 +234,7 @@
 							break;
 						case 'tvl-defi-parachain':
 						case 'tvl-dot-dex':
+						case 'tvl-ksm-dex':
 							chartOptions = getChartLinesBaseResponsiveOptions( chartName );
 							break;
 					}
@@ -436,6 +437,9 @@
 							break;
 						case 'tvl-dot-dex':
 							chartOptions = getChartOptionsTvlDotDex( chartName, jsonData );
+							break;
+						case 'tvl-ksm-dex':
+							chartOptions = getChartOptionsTvlKsmDex( chartName, jsonData );
 							break;
 					}
 					chartInstance.hideLoading();
@@ -2767,6 +2771,46 @@
 					'#FFB800',
 					'#FF806C',
 					'#2A42F1'
+				];
+
+			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors );
+			var responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
+			return $.extend( true, {}, baseOptions, responsiveOptions );
+		}
+
+		function getChartOptionsTvlKsmDex( chartName, jsonData ) {
+			var datasets = [
+					{
+						name: 'solarbeam',
+						label: 'Solarbeam'
+					}, {
+						name: 'karura',
+						label: 'Karura'
+					}, {
+						name: 'zenlink_moonriver',
+						label: 'Zenlink on Moonriver'
+					}, {
+						name: 'beefy_moonriver',
+						label: 'Beefy on Moonriver'
+					}, {
+						name: 'polkaswap',
+						label: 'Polkaswap'
+					}, {
+						name: 'heiko',
+						label: 'Heiko'
+					}, {
+						name: 'bifrost',
+						label: 'Bifrost Kusama'
+					},
+				],
+				colors   = [
+					'#FF806C',
+					'#C30D00',
+					'#E4A30D',
+					'#66E1B6',
+					'#22BFFE',
+					'#B1B1B1',
+					'#0049F1'
 				];
 
 			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors );
