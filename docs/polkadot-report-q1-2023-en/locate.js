@@ -16,6 +16,9 @@ var lang = {
 	holderCount: 'Holder Count',
 	transferAmount: 'Transfer Amount',
 	count: 'Count',
+	transferIn: 'Transfer in',
+	transferOut: 'Transfer Out',
+	xcmChannelCount: 'XCM channel count',
 
 	kusamaChain: 'Kusama Chain',
 	Approved: 'Approved',
