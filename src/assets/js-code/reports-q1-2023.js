@@ -2494,7 +2494,12 @@
 						fontFamily: fontFamily,
 						fontWeight: 500
 					},
-					tooltip: defaultTooltipSettings,
+					tooltip: $.extend( true, {}, defaultTooltipStyle, {
+						trigger: 'item',
+						valueFormatter: function ( value ) {
+							return value + '%';
+						}
+					} ),
 					legend: defaultLegendSettings,
 					grid: {
 						top: '5%',
@@ -2848,6 +2853,12 @@
 			var newOptions = {};
 
 			if ( window.innerWidth < 768 ) {
+				newOptions['grid'] = {
+					top: '5%',
+					left: '10%',
+					right: '10%',
+					containLabel: true
+				};
 				newOptions['series'] = [
 					{
 						label: {
@@ -2861,6 +2872,12 @@
 					}
 				]
 			} else {
+				newOptions['grid'] = {
+					top: '5%',
+					left: '3%',
+					right: '3%',
+					containLabel: true
+				};
 				newOptions['series'] = [
 					{
 						label: {
@@ -3141,6 +3158,18 @@
 			var newOptions = {};
 
 			if ( window.innerWidth < 768 ) {
+				newOptions['yAxis'] = {
+					axisPointer: {
+						label: {
+							formatter: "{value}"
+						}
+					},
+					axisLabel: {
+						formatter: function ( value ) {
+							return value ? NumberUtil.formatMoney( value ) : '-';
+						}
+					}
+				};
 				newOptions['series'] = [
 					{
 						label: {
@@ -3159,6 +3188,16 @@
 					}
 				]
 			} else {
+				newOptions['yAxis'] = {
+					axisPointer: {
+						label: {
+							formatter: "{value}"
+						}
+					},
+					axisLabel: {
+						formatter: "{value}"
+					}
+				};
 				newOptions['series'] = [
 					{
 						label: {
@@ -4095,7 +4134,7 @@
 						fontSize: 10,
 						fontWeight: 500,
 						formatter: dateFormatter,
-						color: '#ccc',
+						color: '#cccccc',
 					}
 				},
 				yAxis: [
@@ -4242,12 +4281,12 @@
 							{
 								axisPointer: {
 									label: {
-										formatter: "${value}"
+										formatter: "{value}"
 									}
 								},
 								axisLabel: {
 									formatter: function ( value ) {
-										return value ? '$' + NumberUtil.formatMoney( value ) : '-';
+										return value ? NumberUtil.formatMoney( value ) : '-';
 									}
 								}
 							}
@@ -4354,7 +4393,25 @@
 						fontFamily: fontFamily,
 						fontWeight: 500
 					},
-					tooltip: defaultTooltipSettings,
+					tooltip: {
+						trigger: 'axis',
+						axisPointer: {
+							type: 'cross',
+							crossStyle: {
+								color: 'rgba(255,255,255,0.3)'
+							},
+							lineStyle: {
+								type: [
+									4,
+									4
+								],
+								color: 'rgba(255,255,255,0.3)'
+							}
+						},
+						valueFormatter: function ( value ) {
+							return '$' + value;
+						}
+					},
 					legend: defaultLegendSettings,
 					grid: {
 						left: '3%',
@@ -5593,7 +5650,7 @@
 					axisLabel: {
 						margin: 12,
 						formatter: dateFormatter,
-						color: '#ccc'
+						color: '#cccccc'
 					}
 				},
 				yAxis: {
@@ -5667,7 +5724,7 @@
 				case 'tvl-dot-liquid-staking':
 				case 'tvl-ksm-liquid-staking':
 				case 'stablecoin-issuance':
-				case 'total-bridge-tvl':
+				case 'tvl-dot-lending':
 					newOptions.tooltip = {
 						valueFormatter: function ( value ) {
 							return value ? '$' + NumberUtil.formatWithCommas( value ) : '-';
