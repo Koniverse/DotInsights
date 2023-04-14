@@ -644,6 +644,8 @@
   .section-proudly-stepping-into .section-description {
     font-size: 16px;
     line-height: 1.667; }
+  .section-key-takeaways .section-content-inner {
+    padding: 50px 20px 40px; }
   .section-key-takeaways .key-takeaways-list {
     display: block; }
     .section-key-takeaways .key-takeaways-list li {

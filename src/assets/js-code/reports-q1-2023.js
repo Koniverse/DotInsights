@@ -220,10 +220,8 @@
 							chartOptions = getChartResponsiveOptionsNewlyCreatedRepo( chartName );
 							break;
 						case 'dot-holder-distribution':
-							chartOptions = getChartResponsiveOptionsDotHolderDistribution( chartName );
-							break;
 						case 'ksm-holder-distribution':
-							chartOptions = getChartResponsiveOptionsKsmHolderDistribution( chartName );
+							chartOptions = getChartResponsiveOptionsHolderDistribution( chartName );
 							break;
 						case 'ku-net-alloca':
 							chartOptions = getChartResponsiveOptionsKuNetAlloca( chartName );
@@ -1136,7 +1134,7 @@
 						show: true,
 						orient: 'vertical',
 						top: '20%',
-						right: '0',
+						right: '10%',
 						align: 'left',
 						textStyle: {
 							fontFamily: fontFamily,
@@ -1238,64 +1236,9 @@
 						}
 					]
 				},
-				responsiveOptions = getChartResponsiveOptionsDotHolderDistribution();
+				responsiveOptions = getChartResponsiveOptionsHolderDistribution();
 
 			return $.extend( true, {}, baseOptions, responsiveOptions );
-		}
-
-		function getChartResponsiveOptionsDotHolderDistribution() {
-			var newOptions = {
-				series: [
-					{},
-					{}
-				]
-			};
-
-			if ( window.innerWidth < 768 ) {
-				newOptions['series'][0] = {
-					radius: [
-						'50%',
-						'70%'
-					],
-					label: {
-						fontSize: 11,
-						lineHeight: 24,
-						formatter: function ( params ) {
-							return `${params.percent}%`;
-						}
-					},
-					labelLine: {
-						length: 5,
-					},
-					emphasis: {
-						label: {
-							rich: {
-								per: {
-									fontSize: 30
-								},
-								b: {
-									fontSize: 15,
-								},
-								c: {
-									fontSize: 14,
-								}
-							}
-						}
-					},
-				}
-			} else {
-				newOptions['series'][0] = {
-					label: {
-						fontSize: 17,
-						lineHeight: 30,
-						formatter: function ( params ) {
-							return `${params.name} ${params.percent}%`;
-						}
-					}
-				}
-			}
-
-			return newOptions;
 		}
 
 		function getChartOptionsKsmHolderDistribution( chartName ) {
@@ -1335,7 +1278,7 @@
 						show: true,
 						orient: 'vertical',
 						top: '20%',
-						right: '0',
+						right: '10%',
 						align: 'left',
 						textStyle: {
 							fontFamily: fontFamily,
@@ -1437,12 +1380,12 @@
 						}
 					]
 				},
-				responsiveOptions = getChartResponsiveOptionsKsmHolderDistribution();
+				responsiveOptions = getChartResponsiveOptionsHolderDistribution();
 
 			return $.extend( true, {}, baseOptions, responsiveOptions );
 		}
 
-		function getChartResponsiveOptionsKsmHolderDistribution() {
+		function getChartResponsiveOptionsHolderDistribution() {
 			var newOptions = {
 				series: [
 					{},
@@ -1452,6 +1395,10 @@
 
 			if ( window.innerWidth < 768 ) {
 				newOptions['series'][0] = {
+					center: [
+						'35%',
+						'50%'
+					],
 					radius: [
 						'50%',
 						'70%'
@@ -1480,6 +1427,21 @@
 								}
 							}
 						}
+					},
+				};
+				newOptions['legend'] = {
+					top: 0,
+					right: 0,
+					textStyle: {
+						fontSize: 11,
+						itemWidth: 15,
+						itemHeight: 15,
+						margin: [
+							0,
+							0,
+							0,
+							0
+						]
 					},
 				}
 			} else {
@@ -3976,14 +3938,14 @@
 						},
 						axisPointer: {
 							label: {
-								color: '#000',
+								color: '#000000',
 								backgroundColor: '#cccccc',
 								formatter: "${value}"
 							}
 						},
 						axisLabel: {
 							formatter: "${value}",
-							color: '#ccc'
+							color: '#cccccc'
 						}
 					},
 					{
@@ -4156,7 +4118,7 @@
 						},
 						axisPointer: {
 							label: {
-								color: '#000',
+								color: '#000000',
 								backgroundColor: '#cccccc',
 								formatter: "${value}"
 							}
@@ -5361,7 +5323,7 @@
 								}
 							},
 							axisLabel: {
-								color: '#ccc'
+								color: '#cccccc'
 							}
 						}
 					],
