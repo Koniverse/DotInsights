@@ -474,6 +474,9 @@
 						case 'ajuna-season-1-stats':
 							chartOptions = getChartOptionsAjunaSeason1Stats( chartName, jsonData );
 							break;
+						case 'total-tnkr-staked-in-tinkernet-ocif':
+							chartOptions = getChartOptionsTotalTnkrStakedInTinkernetOcif( chartName, jsonData );
+							break;
 					}
 					chartInstance.hideLoading();
 					chartInstance.setOption( chartOptions );
@@ -3880,6 +3883,104 @@
 					tooltip: {
 						valueFormatter: function( value ) {
 							return value + '%';
+						}
+					}
+				};
+
+			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors, null, null, chartExtraOptions );
+			var responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
+			return $.extend( true, {}, baseOptions, responsiveOptions );
+		}
+
+		function getChartOptionsTotalTnkrStakedInTinkernetOcif( chartName, jsonData ) {
+			var datasets = [
+					{
+						name: 'youdle_dao',
+						label: 'YoudleDAO',
+						options: {
+							areaStyle: {
+								color: new echarts.graphic.LinearGradient( 0.5, 0, 0.5, 1, [
+									{
+										offset: 0,
+										color: 'rgba(0,75,255,0.6)'
+									},
+									{
+										offset: 1,
+										color: 'rgba(0,75,255,0)'
+									}
+								] )
+							}
+						}
+					},
+					{
+						name: 'wag_media',
+						label: 'WAGmedia',
+						options: {
+							z: 9,
+							areaStyle: {
+								opacity: 1,
+								color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
+									{
+										offset: 0,
+										color: 'rgba(195,13,0,1)'
+									},
+									{
+										offset: 0.5,
+										color: 'rgba(195,13,0,0.3)'
+									},
+									{
+										offset: 1,
+										color: 'rgba(195,13,0,0)'
+									}
+								] )
+							}
+						}
+					},
+					{
+						name: 'chaos_dao',
+						label: 'ChaosDAO',
+						options: {
+							areaStyle: {
+								opacity: 1,
+								color: new echarts.graphic.LinearGradient( 0.5, 0, 0.5, 1, [
+									{
+										offset: 0,
+										color: 'rgba(255,184,0,0.8)'
+									},
+									{
+										offset: 1,
+										color: 'rgba(255,184,0,0)'
+									}
+								] )
+							}
+						}
+					}
+				],
+				colors   = [
+					'#004BFF',
+					'#E12C29',
+					'#F8B00C'
+				],
+				chartExtraOptions = {
+					legend: {
+						show: true,
+					},
+					grid: {
+						bottom: '13%'
+					},
+					yAxis: {
+						interval: 100000
+					},
+					xAxis: {
+						axisLine: {
+							show: false,
+						},
+						splitLine: {
+							show: true,
+							lineStyle: {
+								type: [ 4, 4 ],
+								color: [ '#262626' ]
+							}
 						}
 					}
 				};
