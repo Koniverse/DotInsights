@@ -252,6 +252,9 @@
 						case 'nft-marketplace':
 							chartOptions = getChartResponsiveOptionsNftMarketplace( chartName );
 							break;
+						case 'daily-new-smart-contracts':
+							chartOptions = getChartResponsiveOptionsDailyNewSmartContracts( chartName );
+							break;
 					}
 
 					if ( chartOptions ) {
@@ -476,6 +479,9 @@
 							break;
 						case 'total-tnkr-staked-in-tinkernet-ocif':
 							chartOptions = getChartOptionsTotalTnkrStakedInTinkernetOcif( chartName, jsonData );
+							break;
+						case 'daily-new-smart-contracts':
+							chartOptions = getChartOptionsDailyNewSmartContracts( chartName, jsonData );
 							break;
 					}
 					chartInstance.hideLoading();
@@ -3988,6 +3994,122 @@
 			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors, null, null, chartExtraOptions );
 			var responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
 			return $.extend( true, {}, baseOptions, responsiveOptions );
+		}
+
+		function getChartOptionsDailyNewSmartContracts( chartName, jsonData ) {
+			var totalItems = jsonData.length,
+				data       = [],
+				cats       = [],
+				colors     = [
+					'#004BFF'
+				];
+
+			for ( var i = 0; i < totalItems; i ++ ) {
+				cats.push( jsonData[ i ].date );
+				data.push( NumberUtil.validate( jsonData[ i ].number_contracts ) );
+			}
+
+			var baseOptions       = {
+					color: colors,
+					tooltip: defaultTooltipSettings,
+					textStyle: {
+						fontFamily: fontFamily,
+						fontWeight: 500
+					},
+					grid: {
+						left: '3%',
+						right: '3%',
+						top: '3%',
+						bottom: '5%',
+						containLabel: true
+					},
+					xAxis: {
+						type: 'category',
+						data: cats,
+						axisTick: {
+							show: false
+						},
+						axisLine: {
+							show: true,
+							lineStyle: {
+								type: [ 4, 4 ],
+								color: '#262626'
+							}
+						},
+						splitLine: {
+							lineStyle: {
+								type: [ 4, 4 ],
+								color: [ '#262626' ]
+							}
+						},
+						axisPointer: defaultAxisPointerLabelSettings,
+						axisLabel: {
+							fontFamily: fontFamily,
+							fontSize: 10,
+							fontWeight: 500,
+							color: '#ccc'
+						}
+					},
+					yAxis: {
+						type: 'value',
+						name: locate.projectCount,
+						axisLine: {
+							show: false
+						},
+						splitLine: {
+							lineStyle: {
+								type: [ 4, 4 ],
+								color: [ '#262626' ]
+							}
+						},
+						splitNumber: 3,
+						axisPointer: defaultAxisPointerLabelSettings,
+						axisLabel: {
+							fontFamily: fontFamily,
+							fontSize: 12,
+							fontWeight: 500,
+							color: '#ccc'
+						},
+					},
+					series: [
+						{
+							type: 'bar',
+							data: data,
+							name: '',
+							label: {
+								show: false,
+							},
+							barMaxWidth: 60,
+							itemStyle: {
+								borderRadius: [ 5, 5, 0, 0 ]
+							}
+						}
+					]
+				},
+				responsiveOptions = getChartResponsiveOptionsDailyNewSmartContracts();
+
+			return $.extend( true, baseOptions, responsiveOptions );
+		}
+		function getChartResponsiveOptionsDailyNewSmartContracts() {
+			var newOptions = {};
+
+			if ( window.innerWidth > 767 ) {
+				newOptions[ 'yAxis' ] = {
+					axisLabel: {
+						formatter: "{value}"
+					}
+				};
+			} else {
+				newOptions[ 'yAxis' ] = {
+					axisLabel: {
+						formatter: function( value ) {
+							return NumberUtil.formatMoney( value );
+						}
+					}
+				};
+			}
+
+			return newOptions;
 		}
 
 
