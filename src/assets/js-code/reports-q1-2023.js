@@ -465,6 +465,9 @@
 						case 'tvl-ksm-liquid-staking':
 							chartOptions = getChartOptionsTvlKsmLiquidStaking( chartName, jsonData );
 							break;
+						case 'tvl-dot-lending':
+							chartOptions = getChartOptionsTvlDotLending( chartName, jsonData );
+							break;
 						case 'usdt-on-statemine-ksm':
 							chartOptions = getChartOptionsUsdtOnStatemineKsm( chartName, jsonData );
 							break;
@@ -3282,6 +3285,52 @@
 			return $.extend( true, {}, baseOptions, responsiveOptions );
 		}
 
+		function getChartOptionsTvlDotLending( chartName, jsonData ) {
+			var datasets = [
+					{
+						name: 'acala',
+						label: 'Acala (aUSD)'
+					},
+					{
+						name: 'moonwell_apollo',
+						label: 'Moonwell Apollo'
+					},
+					{
+						name: 'astriddao',
+						label: 'AstridDAO (BAI)'
+					},
+					{
+						name: 'moonwell_artemis',
+						label: 'Moonwell Artemis'
+					},
+					{
+						name: 'parallel',
+						label: 'Parallel'
+					},
+					{
+						name: 'starlay_finance',
+						label: 'Starlay'
+					},
+					{
+						name: 'karura',
+						label: 'Karura (aUSD)'
+					}
+				],
+				colors   = [
+					'#D81356',
+					'#5C42FB',
+					'#66E1B6',
+					'#B8E94A',
+					'#2A42F1',
+					'#ED148B',
+					'#C30D00'
+				];
+
+			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors );
+			var responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
+			return $.extend( true, {}, baseOptions, responsiveOptions );
+		}
+
 		function getChartOptionsUsdtOnStatemineKsm( chartName, jsonData ) {
 			var totalItems = jsonData.length,
 				data       = {
@@ -4291,7 +4340,6 @@
 				case 'tvl-ksm-dex':
 				case 'tvl-dot-liquid-staking':
 				case 'tvl-ksm-liquid-staking':
-				case 'tvl-liquid-crowdloan':
 				case 'stablecoin-issuance':
 				case 'total-bridge-tvl':
 					newOptions.tooltip = {
