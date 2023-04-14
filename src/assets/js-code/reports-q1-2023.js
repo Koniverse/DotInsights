@@ -471,6 +471,9 @@
 						case 'nft-marketplace':
 							chartOptions = getChartOptionsNftMarketplace( chartName, jsonData );
 							break;
+						case 'ajuna-season-1-stats':
+							chartOptions = getChartOptionsAjunaSeason1Stats( chartName, jsonData );
+							break;
 					}
 					chartInstance.hideLoading();
 					chartInstance.setOption( chartOptions );
@@ -1848,10 +1851,10 @@
 				],
 				chartExtraOptions = {
 					legend: {
-						show: false,
+						show: true,
 					},
 					grid: {
-						bottom: '3%'
+						bottom: '13%'
 					},
 					yAxis: {
 						min: 0,
@@ -3820,6 +3823,70 @@
 			}
 
 			return newOptions;
+		}
+
+		function getChartOptionsAjunaSeason1Stats( chartName, jsonData ) {
+			var datasets = [
+					{
+						name: 'forged',
+						label: 'Forged'
+					},
+					{
+						name: 'minted',
+						label: 'Minted'
+					},
+					{
+						name: 'player',
+						label: 'Player'
+					},
+					{
+						name: 'trades',
+						label: 'Trades'
+					},
+					{
+						name: 'avatars',
+						label: 'Avatars'
+					}
+				],
+				colors   = [
+					'#004BFF',
+					'#E12C29',
+					'#F8B00C',
+					'#6CE542',
+					'#FF6B00'
+				],
+				chartExtraOptions = {
+					legend: {
+						show: true,
+					},
+					grid: {
+						bottom: '13%'
+					},
+					yAxis: {
+						interval: 100000
+					},
+					xAxis: {
+						axisLine: {
+							show: false,
+						},
+						splitLine: {
+							show: true,
+							lineStyle: {
+								type: [ 4, 4 ],
+								color: [ '#262626' ]
+							}
+						}
+					},
+					tooltip: {
+						valueFormatter: function( value ) {
+							return value + '%';
+						}
+					}
+				};
+
+			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors, null, null, chartExtraOptions );
+			var responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
+			return $.extend( true, {}, baseOptions, responsiveOptions );
 		}
 
 
