@@ -19,6 +19,10 @@ var lang = {
 	transferIn: 'Transfer in',
 	transferOut: 'Transfer Out',
 	xcmChannelCount: 'XCM channel count',
+	weeklyNewUsersBeta: 'Weekly New Users (Beta)',
+	weeklyNewUsersIncentivized: 'Weekly New Users (Incentivized)',
+	totalUsersBeta: 'Total Users (Beta)',
+	totalUsersIncentivized: 'Total Users (Incentivized) ',
 
 	kusamaChain: 'Kusama Chain',
 	Approved: 'Approved',

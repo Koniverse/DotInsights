@@ -542,6 +542,9 @@
 					case 'top-dot-ksm-chain-fees':
 						chartOptions = getChartOptionsTopDotKsmChainFees( chartName );
 						break;
+					case 'moonfit-new-users':
+						chartOptions = getChartOptionsMoonFitNewUsers( chartName );
+						break;
 				}
 				chartInstance.hideLoading();
 				chartInstance.setOption( chartOptions );
@@ -5047,6 +5050,374 @@
 		}
 
 		function getChartResponsiveOptionsXcmActivitiesOnParachains() {
+			var newOptions = {};
+
+			if ( window.innerWidth < 768 ) {
+				newOptions['series'] = [
+					{
+						label: {
+							fontSize: 12,
+						},
+					},
+					{
+						label: {
+							fontSize: 12,
+						},
+					},
+					{
+						label: {
+							fontSize: 12,
+						},
+					}
+				];
+				newOptions['yAxis'] = [
+					{
+						axisLabel: {
+							formatter: function ( value ) {
+								return NumberUtil.formatMoney( value );
+							}
+						}
+					},
+					{
+						axisLabel: {
+							formatter: function ( value ) {
+								return NumberUtil.formatMoney( value );
+							}
+						}
+					}
+				];
+				newOptions['grid'] = {
+					top: '7%',
+					left: '7%',
+					right: '7%',
+					containLabel: true
+				};
+			} else {
+				newOptions['series'] = [
+					{
+						label: {
+							fontSize: 16,
+						},
+					},
+					{
+						label: {
+							fontSize: 16,
+						},
+					},
+					{
+						label: {
+							fontSize: 16,
+						},
+					}
+				];
+				newOptions['yAxis'] = [
+					{
+						axisLabel: {
+							formatter: '{value}'
+						}
+					},
+					{
+						axisLabel: {
+							formatter: '{value}'
+						}
+					}
+				];
+				newOptions['grid'] = {
+					top: '5%',
+					left: '3%',
+					right: '3%',
+					containLabel: true
+				};
+			}
+
+			return newOptions;
+		}
+
+		function getChartOptionsMoonFitNewUsers( chartName ) {
+			var colors = [
+					'#004bff',
+					'#f8b00c',
+					'#e12c29',
+					'#6CE542'
+				],
+				data = [
+					[
+						'Dec W1',
+						'Dec W2',
+						'Dec W3',
+						'Dec W4',
+						'Jan W1',
+						'Jan W2',
+						'Jan W3',
+						'Jan W4',
+						'Jan W5',
+						'Feb W1',
+						'Feb W2',
+						'Feb W3',
+						'Feb W4',
+						'Mar W1',
+						'Mar W2',
+						'Mar W3',
+						'Mar W4',
+						'Apr W1'
+					],
+					[
+						'184',
+						'172',
+						'105',
+						'68',
+						'57',
+						'78',
+						'39',
+						'23',
+						'36',
+						'36',
+						'51',
+						'134',
+						'76',
+						'77',
+						'40',
+						'27',
+						'54',
+						'10'
+					],
+					[
+						'345',
+						'96',
+						'68',
+						'185',
+						'187',
+						'140',
+						'75',
+						'47',
+						'44',
+						'52',
+						'60',
+						'136',
+						'72',
+						'58',
+						'42',
+						'28',
+						'49',
+						'7'
+					],
+					[
+						'6179',
+						'6351',
+						'6456',
+						'6524',
+						'6581',
+						'6659',
+						'6698',
+						'6721',
+						'6757',
+						'6793',
+						'6844',
+						'6978',
+						'7054',
+						'7131',
+						'7171',
+						'7198',
+						'7252',
+						'7262'
+					],
+					[
+						'350',
+						'446',
+						'514',
+						'699',
+						'886',
+						'1026',
+						'1101',
+						'1148',
+						'1192',
+						'1244',
+						'1304',
+						'1440',
+						'1512',
+						'1570',
+						'1612',
+						'1640',
+						'1689',
+						'1696'
+					]
+				],
+				baseOptions = {
+					color: colors,
+					textStyle: {
+						fontFamily: fontFamily,
+						fontWeight: 500
+					},
+					tooltip: defaultTooltipSettings,
+					legend: defaultLegendSettings,
+					grid: {
+						top: '5%',
+						left: '3%',
+						right: '3%',
+						containLabel: true
+					},
+					xAxis: {
+						type: 'category',
+						data: data[0],
+						splitLine: {
+							show: false,
+							lineStyle: {
+								type: [
+									4,
+									4
+								],
+								color: ['#262626']
+							}
+						},
+						axisTick: {
+							show: false
+						},
+						axisLine: {
+							show: false,
+						},
+						axisPointer: defaultAxisPointerLabelSettings,
+						axisLabel: {
+							hideOverlap: false,
+							showMaxLabel: true,
+							overflow: 'breakAll',
+							rotate: 45,
+							align: 'right',
+							fontFamily: fontFamily,
+							fontSize: 11,
+							fontWeight: 500,
+							color: '#ccc'
+						}
+					},
+					yAxis: [
+						{
+							type: 'value',
+							name: 'Total Users',
+							nameTextStyle: {
+								fontSize: 0
+							},
+							offset: 20,
+							position: 'right',
+							alignTicks: true,
+							axisLine: {
+								show: false,
+							},
+							interval: 2000,
+							splitLine: {
+								lineStyle: {
+									type: [
+										4,
+										4
+									],
+									color: ['#262626']
+								}
+							},
+							axisPointer: {
+								label: {
+									color: '#fff',
+									backgroundColor: colors[1]
+								}
+							},
+							axisLabel: {
+								color: '#ccc'
+							}
+						},
+						{
+							type: 'value',
+							name: 'New Users',
+							nameTextStyle: {
+								fontSize: 0
+							},
+							offset: 20,
+							alignTicks: true,
+							axisLine: {
+								show: false,
+							},
+							interval: 100,
+							splitLine: {
+								lineStyle: {
+									type: [
+										4,
+										4
+									],
+									color: ['#262626']
+								}
+							},
+							axisPointer: {
+								label: {
+									color: '#fff',
+									backgroundColor: colors[0]
+								}
+							},
+							axisLabel: {
+								color: '#ccc'
+							}
+						}
+					],
+					series: [
+						{
+							name: locate.weeklyNewUsersBeta,
+							data: data[1],
+							type: 'bar',
+							yAxisIndex: 1,
+							label: {
+								show: false,
+							},
+							barMaxWidth: 102,
+							itemStyle: {
+								borderRadius: [
+									2,
+									2,
+									0,
+									0
+								]
+							}
+						},
+						{
+							name: locate.weeklyNewUsersIncentivized,
+							data: data[2],
+							type: 'bar',
+							yAxisIndex: 1,
+							label: {
+								show: false,
+							},
+							barMaxWidth: 102,
+							itemStyle: {
+								borderRadius: [
+									2,
+									2,
+									0,
+									0
+								]
+							}
+						},
+						{
+							name: locate.totalUsersBeta,
+							data: data[3],
+							type: 'line',
+							smooth: true,
+							showSymbol: false,
+							emphasis: {
+								focus: 'series'
+							}
+						},
+						{
+							name: locate.totalUsersIncentivized,
+							data: data[4],
+							type: 'line',
+							smooth: true,
+							showSymbol: false,
+							emphasis: {
+								focus: 'series'
+							}
+						}
+					]
+				},
+				responsiveOptions = getChartResponsiveOptionsMoonFitNewUsers();
+
+			return $.extend( true, {}, baseOptions, responsiveOptions );
+		}
+
+		function getChartResponsiveOptionsMoonFitNewUsers() {
 			var newOptions = {};
 
 			if ( window.innerWidth < 768 ) {
