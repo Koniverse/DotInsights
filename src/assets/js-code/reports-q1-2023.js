@@ -3113,7 +3113,7 @@
 							fontFamily: fontFamily,
 							fontSize: 10,
 							fontWeight: 500,
-							color: '#ccc'
+							color: '#cccccc'
 						}
 					},
 					yAxis: {
@@ -3445,7 +3445,7 @@
 								color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
 									{
 										offset: 0,
-										color: '#fff'
+										color: '#ffffff'
 									},
 									{
 										offset: 1,
@@ -3512,7 +3512,7 @@
 								alignTo: 'edge',
 								minMargin: 5,
 								edgeDistance: 10,
-								color: '#fff',
+								color: '#ffffff',
 								fontFamily: fontFamily,
 								fontWeight: 500,
 								fontSize: 17,
@@ -4163,7 +4163,7 @@
 						},
 						axisLabel: {
 							formatter: "${value}",
-							color: '#ccc'
+							color: '#cccccc'
 						}
 					},
 					{
@@ -4264,18 +4264,32 @@
 						xAxis: {
 							splitNumber: 2
 						},
-						yAxis: {
-							axisPointer: {
-								label: {
-									formatter: "${value}"
+						yAxis: [
+							{
+								axisPointer: {
+									label: {
+										formatter: "${value}"
+									}
+								},
+								axisLabel: {
+									formatter: function ( value ) {
+										return value ? '$' + NumberUtil.formatMoney( value ) : '-';
+									}
 								}
 							},
-							axisLabel: {
-								formatter: function ( value ) {
-									return value ? '$' + NumberUtil.formatMoney( value ) : '-';
+							{
+								axisPointer: {
+									label: {
+										formatter: "${value}"
+									}
+								},
+								axisLabel: {
+									formatter: function ( value ) {
+										return value ? '$' + NumberUtil.formatMoney( value ) : '-';
+									}
 								}
 							}
-						}
+						]
 					} )
 				}
 			}
@@ -4440,7 +4454,9 @@
 				newOptions = {
 					yAxis: {
 						axisLabel: {
-							formatter: '${value}'
+							formatter: function ( value ) {
+								return '$' + NumberUtil.formatWithCommas( value );
+							}
 						}
 					},
 					xAxis: {
@@ -4455,7 +4471,7 @@
 					yAxis: {
 						axisLabel: {
 							formatter: function ( value ) {
-								return '$' + NumberUtil.formatWithCommas( value );
+								return '$' + NumberUtil.formatMoney( value );
 							}
 						}
 					},
@@ -5138,28 +5154,28 @@
 					'#004bff',
 					'#f8b00c',
 					'#e12c29',
-					'#6CE542'
+					'#6ce542'
 				],
 				data = [
 					[
-						'Dec W1',
-						'Dec W2',
-						'Dec W3',
-						'Dec W4',
-						'Jan W1',
-						'Jan W2',
-						'Jan W3',
-						'Jan W4',
-						'Jan W5',
-						'Feb W1',
-						'Feb W2',
-						'Feb W3',
-						'Feb W4',
-						'Mar W1',
-						'Mar W2',
-						'Mar W3',
-						'Mar W4',
-						'Apr W1'
+						'Dec\nW1',
+						'Dec\nW2',
+						'Dec\nW3',
+						'Dec\nW4',
+						'Jan\nW1',
+						'Jan\nW2',
+						'Jan\nW3',
+						'Jan\nW4',
+						'Jan\nW5',
+						'Feb\nW1',
+						'Feb\nW2',
+						'Feb\nW3',
+						'Feb\nW4',
+						'Mar\nW1',
+						'Mar\nW2',
+						'Mar\nW3',
+						'Mar\nW4',
+						'Apr\nW1'
 					],
 					[
 						'184',
@@ -5277,15 +5293,11 @@
 						},
 						axisPointer: defaultAxisPointerLabelSettings,
 						axisLabel: {
-							hideOverlap: false,
-							showMaxLabel: true,
-							overflow: 'breakAll',
-							rotate: 45,
-							align: 'right',
 							fontFamily: fontFamily,
 							fontSize: 11,
 							fontWeight: 500,
-							color: '#ccc'
+							lineHeight: 15,
+							color: '#cccccc'
 						}
 					},
 					yAxis: [
@@ -5313,12 +5325,12 @@
 							},
 							axisPointer: {
 								label: {
-									color: '#fff',
+									color: '#ffffff',
 									backgroundColor: colors[1]
 								}
 							},
 							axisLabel: {
-								color: '#ccc'
+								color: '#cccccc'
 							}
 						},
 						{
@@ -5344,7 +5356,7 @@
 							},
 							axisPointer: {
 								label: {
-									color: '#fff',
+									color: '#ffffff',
 									backgroundColor: colors[0]
 								}
 							},
@@ -5721,6 +5733,42 @@
 							axisLabel: {
 								formatter: function ( value ) {
 									return value ? '$' + NumberUtil.formatMoney( value ) : '-';
+								}
+							}
+						};
+					}
+					newOptions.yAxis = yAxis;
+
+					break;
+				case 'ajuna-season-1-stats':
+				case 'total-tnkr-staked-in-tinkernet-ocif':
+					newOptions.tooltip = {
+						valueFormatter: function ( value ) {
+							return value ? NumberUtil.formatWithCommas( value ) : '-';
+						}
+					};
+
+					if ( window.innerWidth > 767 ) {
+						yAxis = {
+							axisPointer: {
+								label: {
+									formatter: "{value}"
+								}
+							},
+							axisLabel: {
+								formatter: "{value}"
+							}
+						};
+					} else {
+						yAxis = {
+							axisPointer: {
+								label: {
+									formatter: "{value}"
+								}
+							},
+							axisLabel: {
+								formatter: function ( value ) {
+									return value ? NumberUtil.formatMoney( value ) : '-';
 								}
 							}
 						};
