@@ -444,6 +444,94 @@
     padding: 0 0 200px;
 }
 
+.section-metaverse {
+    .shape-group-smooth-grid {
+        bottom: 0;
+        left: 10%;
+        transform: translate(32%, 0);
+
+        .shape-radial-circle {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -60%);
+        }
+
+        .shape-cube {
+            top: 0;
+            left: 20%;
+            transform: translate(0, -10%);
+            --shape-width: 187px;
+            --shape-max-width: 10vw;
+        }
+
+        .shape-satellite-04 {
+            top: 30%;
+            left: -50px;
+            --shape-max-width: 5vw;
+            --shape-width: 34px;
+        }
+
+        .shape-02 {
+            top: 0;
+            left: 0;
+            transform: translate(-50px, -120px);
+            --shape-max-width: 9vw;
+            --shape-width: 150px;
+        }
+
+        .brand-01 {
+            --size: 22px;
+            top: 45%;
+            left: 12%;
+        }
+    }
+
+    .table--metaverse {
+        --block-bg: #000;
+
+        .table-heading {
+            font-size: 18px;
+            font-weight: 700;
+            font-family: inherit;
+            padding-left: 20px;
+        }
+
+        table {
+            --td-ver-gap: 15px;
+            --td-hoz-gap: 20px;
+            margin: 0 -5px 30px;
+            border-collapse: separate!important;
+            border-spacing: 5px !important;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            tr:before {
+                display: none;
+            }
+
+            th {
+                font-weight: 500;
+                color: $primary-color !important;
+                width: 60%;
+            }
+
+            th, td {
+                border-radius: 5px;
+                background: #151515;
+                font-size: 15px;
+                font-weight: 500;
+                min-height: 100px;
+
+                &:before {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
 .section-report-nfts {
     .section-header {
         margin-top: -100px;
