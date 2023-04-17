@@ -939,6 +939,59 @@
     padding: 15px;
 }
 
+.block-chart-legend {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+        display: flex;
+        align-items: center;
+
+        img {
+            flex-shrink: 0;
+        }
+
+        .acc-info {
+            margin-left: 12px;
+            flex-grow: 1;
+        }
+
+        .acc-name {
+            font-size: 15px;
+            font-weight: 500;
+
+            span {
+                line-height: 1;
+                margin-left: 6px;
+            }
+        }
+
+        .acc-count {
+            font-size: 17px;
+            font-weight: 700;
+        }
+
+        + li {
+            margin-top: 30px;
+        }
+    }
+}
+
+.section-decentralization-staking {
+    .block-chart-body {
+        display: flex;
+
+        .block-chart {
+            width: 60%;
+        }
+
+        .block-chart-legend {
+            width: 40%;
+        }
+    }
+}
+
 @media screen and(min-width: 768px) {
     .section-community-development .table--dot-forum-statistics {
         tbody {
@@ -1127,5 +1180,23 @@
 
     .block-table-source, .block-chart-source {
         width: 100%;
+    }
+
+    .section-decentralization-staking {
+        .block-chart-body {
+            display: block;
+
+            .block-chart {
+                width: 100%;
+            }
+
+            .block-chart-legend {
+                width: 100%;
+
+                li + li {
+                    margin-top: 20px;
+                }
+            }
+        }
     }
 }
