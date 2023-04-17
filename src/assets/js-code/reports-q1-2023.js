@@ -637,7 +637,7 @@
 					type: 'time',
 					boundaryGap: false,
 					splitLine: {
-						show: true,
+						show: false,
 						lineStyle: {
 							type: [
 								4,
@@ -1919,11 +1919,13 @@
 					'#f8b00c'
 				],
 				chartExtraOptions = {
-					legend: {
-						show: true,
-					},
+					legend: defaultLegendSettings,
 					grid: {
-						bottom: '13%'
+						top: '5%',
+						left: '3%',
+						right: '3%',
+						containLabel: true,
+						height: '82%'
 					},
 					yAxis: {
 						min: 0,
@@ -2027,7 +2029,7 @@
 						axisLine: {
 							show: false,
 						},
-						interval: 250000,
+						interval: 500000,
 						splitLine: {
 							lineStyle: {
 								type: [
