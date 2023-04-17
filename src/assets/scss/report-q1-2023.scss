@@ -500,7 +500,7 @@
             --td-ver-gap: 15px;
             --td-hoz-gap: 20px;
             margin: 0 -5px 30px;
-            border-collapse: separate!important;
+            border-collapse: separate !important;
             border-spacing: 5px !important;
 
             &:last-child {
@@ -930,6 +930,13 @@
 
 .block-table-source, .block-chart-source {
     width: calc(100% - 180px);
+}
+
+[class*="hint--"]:after {
+    font-size: 13px;
+    font-family: var(--bs-font-sans-serif);
+    line-height: 21px;
+    padding: 15px;
 }
 
 @media screen and(min-width: 768px) {
