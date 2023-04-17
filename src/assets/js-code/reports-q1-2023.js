@@ -2134,27 +2134,14 @@
 
 		function getChartOptionsSpendingDominatedKusama( chartName ) {
 			var colors = [
-					'#004bff',
-					'#e12c29',
-					'#f8b00c'
-				],
-				data = [
-					[
-						'lease_admin',
-						'general_admin',
-						'staking_admin',
-						'big_tipper',
-						'auction_admin',
-						'referendum_canceller',
-						'root',
-						'small_spender',
-						'small_tipper',
-						'treasurer',
-						'whitelisted_caller',
-						'big_spender',
-						'medium_spender'
-					],
-					[
+				'#004bff',
+				'#e12c29',
+				'#f8b00c'
+			];
+			var series = [
+				{
+					name: locate.Approved,
+					data: [
 						1,
 						0,
 						2,
@@ -2168,8 +2155,11 @@
 						19,
 						14,
 						22
-					],
-					[
+					]
+				},
+				{
+					name: locate.notApproved,
+					data: [
 						0,
 						2,
 						0,
@@ -2183,8 +2173,11 @@
 						7,
 						11,
 						6
-					],
-					[
+					]
+				},
+				{
+					name: locate.pending,
+					data: [
 						0,
 						0,
 						0,
@@ -2199,8 +2192,24 @@
 						4,
 						4
 					]
-				],
-				baseOptions = {
+				}
+			];
+
+			function genFormatter( series ) {
+				return ( param ) => {
+					let sum = 0;
+					series.forEach( item => {
+						sum += item.data[param.dataIndex];
+					} );
+					return sum
+				}
+			}
+
+			function isLastSeries( index ) {
+				return index === series.length - 1
+			}
+
+			var baseOptions = {
 					color: colors,
 					textStyle: {
 						fontFamily: fontFamily,
@@ -2216,7 +2225,21 @@
 					},
 					xAxis: {
 						type: 'category',
-						data: data[0],
+						data: [
+							'lease_admin',
+							'general_admin',
+							'staking_admin',
+							'big_tipper',
+							'auction_admin',
+							'referendum_canceller',
+							'root',
+							'small_spender',
+							'small_tipper',
+							'treasurer',
+							'whitelisted_caller',
+							'big_spender',
+							'medium_spender'
+						],
 						splitLine: {
 							show: false,
 							lineStyle: {
@@ -2266,29 +2289,18 @@
 							color: '#cccccc'
 						}
 					},
-					series: [
-						{
-							name: locate.Approved,
-							data: data[1],
-							type: 'bar',
-							stack: 'Total',
-							barMaxWidth: 40
+					series: series.map( ( item, index ) => Object.assign( item, {
+						type: 'bar',
+						stack: true,
+						label: {
+							show: isLastSeries(index) ? true : false,
+							formatter: genFormatter( series ),
+							fontSize: 16,
+							color: '#ffffff',
+							position: 'top'
 						},
-						{
-							name: locate.notApproved,
-							data: data[2],
-							type: 'bar',
-							stack: 'Total',
-							barMaxWidth: 40
-						},
-						{
-							name: locate.pending,
-							data: data[3],
-							type: 'bar',
-							stack: 'Total',
-							barMaxWidth: 40
-						}
-					]
+						barMaxWidth: 40
+					} ) )
 				},
 				responsiveOptions = getChartResponsiveOptionsSpendingDominatedKusama();
 
