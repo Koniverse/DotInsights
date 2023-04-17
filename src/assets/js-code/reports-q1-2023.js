@@ -1414,9 +1414,6 @@
 					{
 						value: 31.0,
 						name: 'Infrastructure deployment and continued operation',
-						label: {
-							color: colors[0]
-						},
 						labelLine: {
 							lineStyle: {
 								color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
@@ -1436,9 +1433,6 @@
 					{
 						value: 12.2,
 						name: 'Software development (wallets and wallet integration, clients and client upgrades)',
-						label: {
-							color: colors[1]
-						},
 						labelLine: {
 							lineStyle: {
 								color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
@@ -1457,52 +1451,31 @@
 					},
 					{
 						value: 8.5,
-						name: 'Community events and outreach (meetups, hackerspaces).',
-						label: {
-							color: colors[2]
-						},
+						name: 'Community events and outreach (meetups, hackerspaces).'
 					},
 					{
 						value: 8.5,
-						name: 'Marketing activities (advertising, paid features, collaborations)',
-						label: {
-							color: colors[3]
-						},
+						name: 'Marketing activities (advertising, paid features, collaborations)'
 					},
 					{
 						value: 9.4,
 						name: 'Bounties',
-						label: {
-							color: colors[4]
-						},
 					},
 					{
 						value: 13.0,
-						name: 'Others',
-						label: {
-							color: colors[5]
-						},
+						name: 'Others'
 					},
 					{
 						value: 13.5,
-						name: 'Liquidity provision ',
-						label: {
-							color: colors[6]
-						},
+						name: 'Liquidity provision '
 					},
 					{
 						value: 2.1,
-						name: 'Network security operations (monitoring services, anti-scam activities, continuous auditing).',
-						label: {
-							color: colors[7]
-						},
+						name: 'Network security operations (monitoring services, anti-scam activities, continuous auditing).'
 					},
 					{
 						value: 1.8,
 						name: 'Ecosystem provisions (collaborations with friendly chains).',
-						label: {
-							color: colors[8]
-						},
 						labelLine: {
 							lineStyle: {
 								color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
@@ -1525,7 +1498,7 @@
 					tooltip: $.extend( true, {}, defaultTooltipStyle, {
 						trigger: 'item',
 						valueFormatter: function ( value ) {
-							return NumberUtil.formatWithCommas( value );
+							return NumberUtil.formatWithCommas( value ) + '%';
 						}
 					} ),
 					legend: $.extend( true, {}, defaultLegendSettings, {
@@ -1547,8 +1520,8 @@
 								'45%'
 							],
 							radius: [
-								'40%',
-								'60%'
+								'45%',
+								'65%'
 							],
 							label: {
 								alignTo: 'edge',
@@ -1557,8 +1530,8 @@
 								color: '#ffffff',
 								fontFamily: fontFamily,
 								fontWeight: 500,
-								fontSize: 17,
-								lineHeight: 30,
+								fontSize: 13,
+								lineHeight: 28,
 								formatter: function ( params ) {
 									return `${params.name} ${params.percent}%`;
 								}
@@ -1636,7 +1609,7 @@
 				};
 				newOptions['series'][0] = {
 					label: {
-						fontSize: 17,
+						fontSize: 13,
 						lineHeight: 30,
 						formatter: function ( params ) {
 							return `${params.name} ${params.percent}%`;
@@ -1664,9 +1637,6 @@
 					{
 						value: 10.8,
 						name: 'Public infrastructure deployment and continued operation',
-						label: {
-							color: colors[0]
-						},
 						labelLine: {
 							lineStyle: {
 								color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
@@ -1686,9 +1656,6 @@
 					{
 						value: 0.5,
 						name: 'Software development (wallets and wallet integration, clients and client upgrades)',
-						label: {
-							color: colors[1]
-						},
 						labelLine: {
 							lineStyle: {
 								color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
@@ -1707,52 +1674,31 @@
 					},
 					{
 						value: 4.0,
-						name: 'Community events and outreach (meetups, hackerspaces).',
-						label: {
-							color: colors[2]
-						},
+						name: 'Community events and outreach (meetups, hackerspaces).'
 					},
 					{
 						value: 2.0,
-						name: 'Marketing activities (advertising, paid features, collaborations)',
-						label: {
-							color: colors[3]
-						},
+						name: 'Marketing activities (advertising, paid features, collaborations)'
 					},
 					{
 						value: 73.2,
-						name: 'Bounties',
-						label: {
-							color: colors[4]
-						},
+						name: 'Bounties'
 					},
 					{
 						value: 0.9,
-						name: 'Others',
-						label: {
-							color: colors[5]
-						},
+						name: 'Others'
 					},
 					{
 						value: 0.0,
-						name: 'Liquidity provision ',
-						label: {
-							color: colors[6]
-						},
+						name: 'Liquidity provision '
 					},
 					{
 						value: 7.3,
-						name: 'Network security operations (monitoring services, anti-scam activities, continuous auditing).',
-						label: {
-							color: colors[7]
-						},
+						name: 'Network security operations (monitoring services, anti-scam activities, continuous auditing).'
 					},
 					{
 						value: 1.4,
 						name: 'Ecosystem provisions (collaborations with friendly chains).',
-						label: {
-							color: colors[8]
-						},
 						labelLine: {
 							lineStyle: {
 								color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
@@ -1775,7 +1721,7 @@
 					tooltip: $.extend( true, {}, defaultTooltipStyle, {
 						trigger: 'item',
 						valueFormatter: function ( value ) {
-							return NumberUtil.formatWithCommas( value );
+							return NumberUtil.formatWithCommas( value ) + '%';
 						}
 					} ),
 					legend: $.extend( true, {}, defaultLegendSettings, {
@@ -1797,8 +1743,8 @@
 								'45%'
 							],
 							radius: [
-								'40%',
-								'60%'
+								'45%',
+								'65%'
 							],
 							label: {
 								alignTo: 'edge',
@@ -1807,7 +1753,7 @@
 								color: '#ffffff',
 								fontFamily: fontFamily,
 								fontWeight: 500,
-								fontSize: 17,
+								fontSize: 13,
 								lineHeight: 30,
 								formatter: function ( params ) {
 									return `${params.name} ${params.percent}%`;
@@ -1886,8 +1832,8 @@
 				};
 				newOptions['series'][0] = {
 					label: {
-						fontSize: 17,
-						lineHeight: 30,
+						fontSize: 13,
+						lineHeight: 28,
 						formatter: function ( params ) {
 							return `${params.name} ${params.percent}%`;
 						}
