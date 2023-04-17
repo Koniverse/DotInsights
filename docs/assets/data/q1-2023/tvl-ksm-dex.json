@@ -1,0 +1,907 @@
+﻿[
+  {
+    "date": "2023-01-01",
+    "solarbeam": "15451049.67",
+    "karura": "10056551.09",
+    "zenlink_moonriver": "2889876.34",
+    "beefy_moonriver": "2872678.66",
+    "bifrost": "2073301.21",
+    "polkaswap": "3532143.97",
+    "heiko": "593289.68"
+  },
+  {
+    "date": "2023-01-02",
+    "solarbeam": "15301357.35",
+    "karura": "9358225.82",
+    "zenlink_moonriver": "2895123.77",
+    "beefy_moonriver": "2786262.56",
+    "bifrost": "2012643.08",
+    "polkaswap": "3528615.35",
+    "heiko": "564545.36"
+  },
+  {
+    "date": "2023-01-03",
+    "solarbeam": "15484948.79",
+    "karura": "9613913.16",
+    "zenlink_moonriver": "2926072.24",
+    "beefy_moonriver": "2871621.83",
+    "bifrost": "2075769.63",
+    "polkaswap": "3528615.35",
+    "heiko": "583670.04"
+  },
+  {
+    "date": "2023-01-04",
+    "solarbeam": "15693333.97",
+    "karura": "9753365.24",
+    "zenlink_moonriver": "2925059.31",
+    "beefy_moonriver": "2908927.93",
+    "bifrost": "2124177.77",
+    "polkaswap": "3528615.35",
+    "heiko": "598098.64"
+  },
+  {
+    "date": "2023-01-05",
+    "solarbeam": "15276999.32",
+    "karura": "10053136.91",
+    "zenlink_moonriver": "3034194.26",
+    "beefy_moonriver": "3053193.64",
+    "bifrost": "2201661.45",
+    "polkaswap": "3532143.97",
+    "heiko": "623291.71"
+  },
+  {
+    "date": "2023-01-06",
+    "solarbeam": "15404364.11",
+    "karura": "9986199.68",
+    "zenlink_moonriver": "3021128.09",
+    "beefy_moonriver": "3077464.62",
+    "bifrost": "2205402.55",
+    "polkaswap": "3528615.35",
+    "heiko": "637691.76"
+  },
+  {
+    "date": "2023-01-07",
+    "solarbeam": "15527470.81",
+    "karura": "10014295.17",
+    "zenlink_moonriver": "3062262.62",
+    "beefy_moonriver": "3125573.68",
+    "bifrost": "2229161.07",
+    "polkaswap": "3528615.35",
+    "heiko": "640922.22"
+  },
+  {
+    "date": "2023-01-08",
+    "solarbeam": "15379646.84",
+    "karura": "9764266.74",
+    "zenlink_moonriver": "3021271.97",
+    "beefy_moonriver": "3080292.46",
+    "bifrost": "2157937.79",
+    "polkaswap": "3532143.97",
+    "heiko": "629527.50"
+  },
+  {
+    "date": "2023-01-09",
+    "solarbeam": "15717622.23",
+    "karura": "10014143.81",
+    "zenlink_moonriver": "3091646.17",
+    "beefy_moonriver": "3164944.05",
+    "bifrost": "2271109.98",
+    "polkaswap": "3526360.56",
+    "heiko": "652963.68"
+  },
+  {
+    "date": "2023-01-10",
+    "solarbeam": "15587327.14",
+    "karura": "10317345.03",
+    "zenlink_moonriver": "3238012.23",
+    "beefy_moonriver": "2929837.56",
+    "bifrost": "2347136.11",
+    "polkaswap": "3528615.35",
+    "heiko": "675839.83"
+  },
+  {
+    "date": "2023-01-11",
+    "solarbeam": "15600007.29",
+    "karura": "10369614.21",
+    "zenlink_moonriver": "3229812.25",
+    "beefy_moonriver": "2858876.07",
+    "bifrost": "2377128.14",
+    "polkaswap": "3526829.87",
+    "heiko": "683892.94"
+  },
+  {
+    "date": "2023-01-12",
+    "solarbeam": "15798160.85",
+    "karura": "10361280.61",
+    "zenlink_moonriver": "3367605.72",
+    "beefy_moonriver": "2993601.64",
+    "bifrost": "2467690.97",
+    "polkaswap": "3535672.58",
+    "heiko": "696653.60"
+  },
+  {
+    "date": "2023-01-13",
+    "solarbeam": "15685801.11",
+    "karura": "10559228.58",
+    "zenlink_moonriver": "3381645.22",
+    "beefy_moonriver": "3044798.61",
+    "bifrost": "2512048.37",
+    "polkaswap": "3528470.68",
+    "heiko": "694936.73"
+  },
+  {
+    "date": "2023-01-14",
+    "solarbeam": "16161077.60",
+    "karura": "11069423.69",
+    "zenlink_moonriver": "3677691.14",
+    "beefy_moonriver": "3210492.64",
+    "bifrost": "2657869.17",
+    "polkaswap": "3539201.20",
+    "heiko": "721426.87"
+  },
+  {
+    "date": "2023-01-15",
+    "solarbeam": "16155544.61",
+    "karura": "11427993.62",
+    "zenlink_moonriver": "3694852.23",
+    "beefy_moonriver": "3030269.99",
+    "bifrost": "2725389.52",
+    "polkaswap": "3532143.97",
+    "heiko": "748154.84"
+  },
+  {
+    "date": "2023-01-16",
+    "solarbeam": "16376600.97",
+    "karura": "11579782.76",
+    "zenlink_moonriver": "849618.51",
+    "beefy_moonriver": "3107469.95",
+    "bifrost": "2795983.46",
+    "polkaswap": "3539201.20",
+    "heiko": "781374.20"
+  },
+  {
+    "date": "2023-01-17",
+    "solarbeam": "16504697.91",
+    "karura": "11638697.89",
+    "zenlink_moonriver": "836629.67",
+    "beefy_moonriver": "3125964.52",
+    "bifrost": "2753708.67",
+    "polkaswap": "3522475.56",
+    "heiko": "778350.99"
+  },
+  {
+    "date": "2023-01-18",
+    "solarbeam": "16954655.43",
+    "karura": "12246963.81",
+    "zenlink_moonriver": "844485.78",
+    "beefy_moonriver": "3311404.51",
+    "bifrost": "3049945.77",
+    "polkaswap": "3528153.10",
+    "heiko": "827724.07"
+  },
+  {
+    "date": "2023-01-19",
+    "solarbeam": "16696851.33",
+    "karura": "11884257.57",
+    "zenlink_moonriver": "816386.75",
+    "beefy_moonriver": "3215684.32",
+    "bifrost": "3040051.30",
+    "polkaswap": "3528068.41",
+    "heiko": "770171.02"
+  },
+  {
+    "date": "2023-01-20",
+    "solarbeam": "16601089.16",
+    "karura": "11716104.64",
+    "zenlink_moonriver": "831625.13",
+    "beefy_moonriver": "3048720.23",
+    "bifrost": "3117602.88",
+    "polkaswap": "3528615.35",
+    "heiko": "719051.11"
+  },
+  {
+    "date": "2023-01-21",
+    "solarbeam": "15356295.15",
+    "karura": "12362454.53",
+    "zenlink_moonriver": "887092.52",
+    "beefy_moonriver": "3238974.38",
+    "bifrost": "3340245.58",
+    "polkaswap": "3527076.87",
+    "heiko": "753677.51"
+  },
+  {
+    "date": "2023-01-22",
+    "solarbeam": "15049366.71",
+    "karura": "12256581.82",
+    "zenlink_moonriver": "884967.98",
+    "beefy_moonriver": "3017560.58",
+    "bifrost": "3302844.64",
+    "polkaswap": "3535672.58",
+    "heiko": "740867.30"
+  },
+  {
+    "date": "2023-01-23",
+    "solarbeam": "15094481.64",
+    "karura": "12393862.62",
+    "zenlink_moonriver": "890145.46",
+    "beefy_moonriver": "3118979.80",
+    "bifrost": "3329849.27",
+    "polkaswap": "3532143.97",
+    "heiko": "749453.49"
+  },
+  {
+    "date": "2023-01-24",
+    "solarbeam": "15231153.95",
+    "karura": "12518294.54",
+    "zenlink_moonriver": "916952.69",
+    "beefy_moonriver": "3215465.91",
+    "bifrost": "3477413.79",
+    "polkaswap": "3528558.89",
+    "heiko": "761186.19"
+  },
+  {
+    "date": "2023-01-25",
+    "solarbeam": "14609827.35",
+    "karura": "11706636.99",
+    "zenlink_moonriver": "895632.07",
+    "beefy_moonriver": "3056478.73",
+    "bifrost": "3271534.06",
+    "polkaswap": "3528615.35",
+    "heiko": "715078.09"
+  },
+  {
+    "date": "2023-01-26",
+    "solarbeam": "15016628.92",
+    "karura": "12151203.96",
+    "zenlink_moonriver": "914607.90",
+    "beefy_moonriver": "2987712.27",
+    "bifrost": "3509493.10",
+    "polkaswap": "3525323.15",
+    "heiko": "754132.67"
+  },
+  {
+    "date": "2023-01-27",
+    "solarbeam": "15104307.01",
+    "karura": "12201302.67",
+    "zenlink_moonriver": "959928.36",
+    "beefy_moonriver": "2924302.69",
+    "bifrost": "3585652.79",
+    "polkaswap": "3532143.97",
+    "heiko": "739786.08"
+  },
+  {
+    "date": "2023-01-28",
+    "solarbeam": "15612532.33",
+    "karura": "12965693.60",
+    "zenlink_moonriver": "984032.06",
+    "beefy_moonriver": "2986342.01",
+    "bifrost": "3834887.59",
+    "polkaswap": "3528615.35",
+    "heiko": "786763.31"
+  },
+  {
+    "date": "2023-01-29",
+    "solarbeam": "15536265.07",
+    "karura": "12790615.33",
+    "zenlink_moonriver": "957868.65",
+    "beefy_moonriver": "3040069.18",
+    "bifrost": "3731170.79",
+    "polkaswap": "3535672.58",
+    "heiko": "771399.28"
+  },
+  {
+    "date": "2023-01-30",
+    "solarbeam": "15893647.78",
+    "karura": "13148423.76",
+    "zenlink_moonriver": "993269.20",
+    "beefy_moonriver": "3152508.07",
+    "bifrost": "3851198.87",
+    "polkaswap": "3525414.90",
+    "heiko": "770491.83"
+  },
+  {
+    "date": "2023-01-31",
+    "solarbeam": "14420452.69",
+    "karura": "12164661.14",
+    "zenlink_moonriver": "915397.54",
+    "beefy_moonriver": "2909778.27",
+    "bifrost": "3665987.98",
+    "polkaswap": "3527916.68",
+    "heiko": "726345.35"
+  },
+  {
+    "date": "2023-02-01",
+    "solarbeam": "14702665.03",
+    "karura": "12575920.18",
+    "zenlink_moonriver": "924973.29",
+    "beefy_moonriver": "2968173.10",
+    "bifrost": "3781072.53",
+    "polkaswap": "3532143.97",
+    "heiko": "742069.81"
+  },
+  {
+    "date": "2023-02-02",
+    "solarbeam": "15166719.71",
+    "karura": "13201285.57",
+    "zenlink_moonriver": "967056.90",
+    "beefy_moonriver": "3055903.77",
+    "bifrost": "3921155.43",
+    "polkaswap": "3535672.58",
+    "heiko": "735013.71"
+  },
+  {
+    "date": "2023-02-03",
+    "solarbeam": "15048822.77",
+    "karura": "14142627.94",
+    "zenlink_moonriver": "938758.17",
+    "beefy_moonriver": "3091338.90",
+    "bifrost": "3915527.70",
+    "polkaswap": "3535672.58",
+    "heiko": "690739.57"
+  },
+  {
+    "date": "2023-02-04",
+    "solarbeam": "15062262.77",
+    "karura": "14855684.83",
+    "zenlink_moonriver": "806959.83",
+    "beefy_moonriver": "3136580.85",
+    "bifrost": "3942554.17",
+    "polkaswap": "3528615.35",
+    "heiko": "679632.00"
+  },
+  {
+    "date": "2023-02-05",
+    "solarbeam": "14825894.96",
+    "karura": "14444088.16",
+    "zenlink_moonriver": "781816.07",
+    "beefy_moonriver": "3086111.86",
+    "bifrost": "4084488.69",
+    "polkaswap": "3526734.60",
+    "heiko": "666149.35"
+  },
+  {
+    "date": "2023-02-06",
+    "solarbeam": "13718091.84",
+    "karura": "13546351.86",
+    "zenlink_moonriver": "666615.11",
+    "beefy_moonriver": "2242849.26",
+    "bifrost": "3991717.07",
+    "polkaswap": "3532143.97",
+    "heiko": "647625.29"
+  },
+  {
+    "date": "2023-02-07",
+    "solarbeam": "12751269.61",
+    "karura": "13479306.25",
+    "zenlink_moonriver": "663508.06",
+    "beefy_moonriver": "1951553.71",
+    "bifrost": "4097924.57",
+    "polkaswap": "3532143.97",
+    "heiko": "632653.28"
+  },
+  {
+    "date": "2023-02-08",
+    "solarbeam": "12315751.04",
+    "karura": "13929514.61",
+    "zenlink_moonriver": "703270.41",
+    "beefy_moonriver": "1477564.72",
+    "bifrost": "4489921.37",
+    "polkaswap": "3525478.41",
+    "heiko": "613082.82"
+  },
+  {
+    "date": "2023-02-09",
+    "solarbeam": "12149964.86",
+    "karura": "13530556.06",
+    "zenlink_moonriver": "708446.24",
+    "beefy_moonriver": "1398420.01",
+    "bifrost": "4482790.65",
+    "polkaswap": "3528615.35",
+    "heiko": "542614.60"
+  },
+  {
+    "date": "2023-02-10",
+    "solarbeam": "11179157.79",
+    "karura": "12725183.11",
+    "zenlink_moonriver": "648490.32",
+    "beefy_moonriver": "1285559.92",
+    "bifrost": "4031877.56",
+    "polkaswap": "3528615.35",
+    "heiko": "476952.58"
+  },
+  {
+    "date": "2023-02-11",
+    "solarbeam": "10840848.11",
+    "karura": "12699479.01",
+    "zenlink_moonriver": "643344.80",
+    "beefy_moonriver": "1242086.05",
+    "bifrost": "3962218.47",
+    "polkaswap": "3535672.58",
+    "heiko": "457509.64"
+  },
+  {
+    "date": "2023-02-12",
+    "solarbeam": "11025494.03",
+    "karura": "12716561.57",
+    "zenlink_moonriver": "657555.17",
+    "beefy_moonriver": "1276084.88",
+    "bifrost": "4008339.40",
+    "polkaswap": "3528615.35",
+    "heiko": "450593.95"
+  },
+  {
+    "date": "2023-02-13",
+    "solarbeam": "10431040.23",
+    "karura": "12743818.91",
+    "zenlink_moonriver": "568905.70",
+    "beefy_moonriver": "1217956.76",
+    "bifrost": "4005080.81",
+    "polkaswap": "3522927.22",
+    "heiko": "439932.53"
+  },
+  {
+    "date": "2023-02-14",
+    "solarbeam": "10155397.48",
+    "karura": "12657672.17",
+    "zenlink_moonriver": "563986.91",
+    "beefy_moonriver": "906904.51",
+    "bifrost": "3974889.15",
+    "polkaswap": "3528615.35",
+    "heiko": "440112.69"
+  },
+  {
+    "date": "2023-02-15",
+    "solarbeam": "9815050.25",
+    "karura": "12370788.78",
+    "zenlink_moonriver": "574795.96",
+    "beefy_moonriver": "890355.03",
+    "bifrost": "4123286.38",
+    "polkaswap": "3532143.97",
+    "heiko": "456000.12"
+  },
+  {
+    "date": "2023-02-16",
+    "solarbeam": "10302779.82",
+    "karura": "12812899.15",
+    "zenlink_moonriver": "603028.58",
+    "beefy_moonriver": "951810.97",
+    "bifrost": "4462430.27",
+    "polkaswap": "3528520.08",
+    "heiko": "491752.26"
+  },
+  {
+    "date": "2023-02-17",
+    "solarbeam": "10300363.47",
+    "karura": "12783546.52",
+    "zenlink_moonriver": "595481.55",
+    "beefy_moonriver": "949302.95",
+    "bifrost": "4543503.74",
+    "polkaswap": "3526875.74",
+    "heiko": "431395.60"
+  },
+  {
+    "date": "2023-02-18",
+    "solarbeam": "11600929.47",
+    "karura": "13969837.46",
+    "zenlink_moonriver": "730490.82",
+    "beefy_moonriver": "1042901.51",
+    "bifrost": "5038979.57",
+    "polkaswap": "3528004.90",
+    "heiko": "470834.28"
+  },
+  {
+    "date": "2023-02-19",
+    "solarbeam": "11165607.42",
+    "karura": "14718654.27",
+    "zenlink_moonriver": "687784.80",
+    "beefy_moonriver": "984182.36",
+    "bifrost": "4959313.81",
+    "polkaswap": "3527821.41",
+    "heiko": "444005.83"
+  },
+  {
+    "date": "2023-02-20",
+    "solarbeam": "11090617.19",
+    "karura": "14786766.88",
+    "zenlink_moonriver": "679974.00",
+    "beefy_moonriver": "932399.83",
+    "bifrost": "5163318.58",
+    "polkaswap": "3523791.73",
+    "heiko": "462496.45"
+  },
+  {
+    "date": "2023-02-21",
+    "solarbeam": "11301596.72",
+    "karura": "13888859.52",
+    "zenlink_moonriver": "690214.79",
+    "beefy_moonriver": "932054.00",
+    "bifrost": "5102124.37",
+    "polkaswap": "3526829.87",
+    "heiko": "444454.41"
+  },
+  {
+    "date": "2023-02-22",
+    "solarbeam": "10800471.09",
+    "karura": "13616134.82",
+    "zenlink_moonriver": "646757.89",
+    "beefy_moonriver": "907263.11",
+    "bifrost": "4898705.08",
+    "polkaswap": "3535672.58",
+    "heiko": "429142.31"
+  },
+  {
+    "date": "2023-02-23",
+    "solarbeam": "10551366.77",
+    "karura": "13027628.68",
+    "zenlink_moonriver": "635781.22",
+    "beefy_moonriver": "877530.99",
+    "bifrost": "4717001.77",
+    "polkaswap": "3526042.99",
+    "heiko": "409448.60"
+  },
+  {
+    "date": "2023-02-24",
+    "solarbeam": "10683900.04",
+    "karura": "13409019.20",
+    "zenlink_moonriver": "659636.34",
+    "beefy_moonriver": "869334.38",
+    "bifrost": "4812230.88",
+    "polkaswap": "3527648.51",
+    "heiko": "416012.30"
+  },
+  {
+    "date": "2023-02-25",
+    "solarbeam": "8941931.80",
+    "karura": "12501254.58",
+    "zenlink_moonriver": "570700.56",
+    "beefy_moonriver": "820192.21",
+    "bifrost": "4400105.14",
+    "polkaswap": "3527246.25",
+    "heiko": "380337.91"
+  },
+  {
+    "date": "2023-02-26",
+    "solarbeam": "8822036.79",
+    "karura": "12118992.17",
+    "zenlink_moonriver": "555810.93",
+    "beefy_moonriver": "823275.08",
+    "bifrost": "4343170.33",
+    "polkaswap": "3526801.64",
+    "heiko": "374084.85"
+  },
+  {
+    "date": "2023-02-27",
+    "solarbeam": "9109148.27",
+    "karura": "12265600.93",
+    "zenlink_moonriver": "579997.77",
+    "beefy_moonriver": "856765.72",
+    "bifrost": "4493391.03",
+    "polkaswap": "3532143.97",
+    "heiko": "382355.97"
+  },
+  {
+    "date": "2023-02-28",
+    "solarbeam": "9077473.68",
+    "karura": "12195243.39",
+    "zenlink_moonriver": "569840.21",
+    "beefy_moonriver": "855768.94",
+    "bifrost": "4497751.23",
+    "polkaswap": "3528615.35",
+    "heiko": "381272.69"
+  },
+  {
+    "date": "2023-03-01",
+    "solarbeam": "8714522.96",
+    "karura": "11705711.36",
+    "zenlink_moonriver": "548692.92",
+    "beefy_moonriver": "824392.62",
+    "bifrost": "4263873.38",
+    "polkaswap": "3535672.58",
+    "heiko": "352871.85"
+  },
+  {
+    "date": "2023-03-02",
+    "solarbeam": "9036713.07",
+    "karura": "12144806.13",
+    "zenlink_moonriver": "571167.96",
+    "beefy_moonriver": "848977.40",
+    "bifrost": "4426782.86",
+    "polkaswap": "3528615.35",
+    "heiko": "364051.75"
+  },
+  {
+    "date": "2023-03-03",
+    "solarbeam": "8734374.13",
+    "karura": "11556100.78",
+    "zenlink_moonriver": "550702.28",
+    "beefy_moonriver": "825606.11",
+    "bifrost": "4241974.02",
+    "polkaswap": "3532143.97",
+    "heiko": "346690.28"
+  },
+  {
+    "date": "2023-03-04",
+    "solarbeam": "8373673.78",
+    "karura": "10999884.54",
+    "zenlink_moonriver": "527302.56",
+    "beefy_moonriver": "788912.54",
+    "bifrost": "4034819.56",
+    "polkaswap": "3532143.97",
+    "heiko": "332340.54"
+  },
+  {
+    "date": "2023-03-05",
+    "solarbeam": "8403571.58",
+    "karura": "10924892.83",
+    "zenlink_moonriver": "526588.83",
+    "beefy_moonriver": "788639.72",
+    "bifrost": "4028749.62",
+    "polkaswap": "3532143.97",
+    "heiko": "329939.18"
+  },
+  {
+    "date": "2023-03-06",
+    "solarbeam": "8417746.33",
+    "karura": "11099807.20",
+    "zenlink_moonriver": "528107.63",
+    "beefy_moonriver": "795613.61",
+    "bifrost": "4044493.21",
+    "polkaswap": "3526995.72",
+    "heiko": "332060.62"
+  },
+  {
+    "date": "2023-03-07",
+    "solarbeam": "8296017.73",
+    "karura": "11079509.59",
+    "zenlink_moonriver": "518101.16",
+    "beefy_moonriver": "794533.36",
+    "bifrost": "4102171.88",
+    "polkaswap": "3532143.97",
+    "heiko": "332820.73"
+  },
+  {
+    "date": "2023-03-08",
+    "solarbeam": "8185244.50",
+    "karura": "10691529.26",
+    "zenlink_moonriver": "515363.24",
+    "beefy_moonriver": "770005.44",
+    "bifrost": "3906050.46",
+    "polkaswap": "3535672.58",
+    "heiko": "322016.94"
+  },
+  {
+    "date": "2023-03-09",
+    "solarbeam": "7836212.44",
+    "karura": "10413697.32",
+    "zenlink_moonriver": "486690.69",
+    "beefy_moonriver": "750149.85",
+    "bifrost": "3634171.20",
+    "polkaswap": "3527507.36",
+    "heiko": "305461.33"
+  },
+  {
+    "date": "2023-03-10",
+    "solarbeam": "7541612.40",
+    "karura": "10412429.36",
+    "zenlink_moonriver": "463898.07",
+    "beefy_moonriver": "728020.25",
+    "bifrost": "3491222.18",
+    "polkaswap": "3528615.35",
+    "heiko": "304102.60"
+  },
+  {
+    "date": "2023-03-11",
+    "solarbeam": "7578594.38",
+    "karura": "10312900.89",
+    "zenlink_moonriver": "445342.82",
+    "beefy_moonriver": "744165.58",
+    "bifrost": "3562137.19",
+    "polkaswap": "3532143.97",
+    "heiko": "304308.19"
+  },
+  {
+    "date": "2023-03-12",
+    "solarbeam": "6830091.78",
+    "karura": "9658781.14",
+    "zenlink_moonriver": "424696.56",
+    "beefy_moonriver": "682201.02",
+    "bifrost": "3409774.98",
+    "polkaswap": "3535672.58",
+    "heiko": "287055.84"
+  },
+  {
+    "date": "2023-03-13",
+    "solarbeam": "7461970.39",
+    "karura": "10433352.83",
+    "zenlink_moonriver": "470157.73",
+    "beefy_moonriver": "746827.19",
+    "bifrost": "3749033.79",
+    "polkaswap": "3546258.43",
+    "heiko": "304104.72"
+  },
+  {
+    "date": "2023-03-14",
+    "solarbeam": "7806808.83",
+    "karura": "10553542.57",
+    "zenlink_moonriver": "486658.29",
+    "beefy_moonriver": "778254.86",
+    "bifrost": "3899763.59",
+    "polkaswap": "3546258.43",
+    "heiko": "308804.08"
+  },
+  {
+    "date": "2023-03-15",
+    "solarbeam": "8003795.47",
+    "karura": "10968078.74",
+    "zenlink_moonriver": "495189.82",
+    "beefy_moonriver": "788583.47",
+    "bifrost": "4111333.44",
+    "polkaswap": "3542729.81",
+    "heiko": "322334.26"
+  },
+  {
+    "date": "2023-03-16",
+    "solarbeam": "7518059.68",
+    "karura": "10353089.34",
+    "zenlink_moonriver": "465814.04",
+    "beefy_moonriver": "757259.52",
+    "bifrost": "3736673.36",
+    "polkaswap": "3553315.66",
+    "heiko": "300188.08"
+  },
+  {
+    "date": "2023-03-17",
+    "solarbeam": "7634699.92",
+    "karura": "10277306.89",
+    "zenlink_moonriver": "485627.79",
+    "beefy_moonriver": "730793.07",
+    "bifrost": "3762274.31",
+    "polkaswap": "3549787.04",
+    "heiko": "298251.73"
+  },
+  {
+    "date": "2023-03-18",
+    "solarbeam": "8142319.82",
+    "karura": "11145824.39",
+    "zenlink_moonriver": "519168.06",
+    "beefy_moonriver": "775037.74",
+    "bifrost": "4185150.20",
+    "polkaswap": "3549787.04",
+    "heiko": "331029.68"
+  },
+  {
+    "date": "2023-03-19",
+    "solarbeam": "8073227.29",
+    "karura": "10909984.56",
+    "zenlink_moonriver": "507889.03",
+    "beefy_moonriver": "773716.75",
+    "bifrost": "4152065.22",
+    "polkaswap": "3553315.66",
+    "heiko": "328353.93"
+  },
+  {
+    "date": "2023-03-20",
+    "solarbeam": "8038883.93",
+    "karura": "10794738.08",
+    "zenlink_moonriver": "506821.92",
+    "beefy_moonriver": "771689.42",
+    "bifrost": "4114182.30",
+    "polkaswap": "3542729.81",
+    "heiko": "325307.59"
+  },
+  {
+    "date": "2023-03-21",
+    "solarbeam": "7815808.19",
+    "karura": "10375649.91",
+    "zenlink_moonriver": "492701.25",
+    "beefy_moonriver": "760452.09",
+    "bifrost": "3874508.22",
+    "polkaswap": "3560372.89",
+    "heiko": "302282.50"
+  },
+  {
+    "date": "2023-03-22",
+    "solarbeam": "7889147.49",
+    "karura": "10449783.64",
+    "zenlink_moonriver": "494932.99",
+    "beefy_moonriver": "765148.10",
+    "bifrost": "3808487.64",
+    "polkaswap": "3553315.66",
+    "heiko": "305961.02"
+  },
+  {
+    "date": "2023-03-22",
+    "solarbeam": "7889147.49",
+    "karura": "10449783.64",
+    "zenlink_moonriver": "494932.99",
+    "beefy_moonriver": "765148.10",
+    "bifrost": "3913386.35",
+    "polkaswap": "3553315.66",
+    "heiko": "305961.02"
+  },
+  {
+    "date": "2023-03-23",
+    "solarbeam": "7697287.31",
+    "karura": "10487952.27",
+    "zenlink_moonriver": "479779.06",
+    "beefy_moonriver": "755890.28",
+    "polkaswap": "3553315.66",
+    "heiko": "294834.11"
+  },
+  {
+    "date": "2023-03-24",
+    "solarbeam": "7881356.21",
+    "karura": "10492863.44",
+    "zenlink_moonriver": "490027.88",
+    "beefy_moonriver": "774372.15",
+    "polkaswap": "3546258.43",
+    "heiko": "272822.10"
+  },
+  {
+    "date": "2023-03-25",
+    "solarbeam": "7642678.95",
+    "karura": "9897843.82",
+    "zenlink_moonriver": "472305.07",
+    "beefy_moonriver": "751264.75",
+    "polkaswap": "3553315.66",
+    "heiko": "261801.91"
+  },
+  {
+    "date": "2023-03-26",
+    "solarbeam": "7549048.01",
+    "karura": "9717285.39",
+    "zenlink_moonriver": "469084.04",
+    "beefy_moonriver": "715681.62",
+    "polkaswap": "3563901.50",
+    "heiko": "253985.09"
+  },
+  {
+    "date": "2023-03-27",
+    "solarbeam": "7637983.10",
+    "karura": "10021864.54",
+    "zenlink_moonriver": "472183.24",
+    "beefy_moonriver": "711229.30",
+    "polkaswap": "3532143.97",
+    "heiko": "256618.11"
+  },
+  {
+    "date": "2023-03-28",
+    "solarbeam": "6814686.95",
+    "karura": "9546117.99",
+    "zenlink_moonriver": "458792.00",
+    "beefy_moonriver": "689692.10",
+    "bifrost": "3707507.15",
+    "polkaswap": "3528615.35",
+    "heiko": "238923.76"
+  },
+  {
+    "date": "2023-03-29",
+    "solarbeam": "6944727.88",
+    "karura": "9902017.92",
+    "zenlink_moonriver": "467509.92",
+    "beefy_moonriver": "714328.52",
+    "bifrost": "3771064.90",
+    "polkaswap": "3535672.58",
+    "heiko": "241689.02"
+  },
+  {
+    "date": "2023-03-30",
+    "solarbeam": "7077539.62",
+    "karura": "10066865.76",
+    "zenlink_moonriver": "476804.15",
+    "beefy_moonriver": "728289.48",
+    "bifrost": "4038283.19",
+    "polkaswap": "3528347.18",
+    "heiko": "241536.67"
+  },
+  {
+    "date": "2023-03-31",
+    "solarbeam": "6994974.44",
+    "karura": "9920996",
+    "zenlink_moonriver": "470307.2",
+    "beefy_moonriver": "719038.04",
+    "bifrost": "4034174.05",
+    "polkaswap": "3535672.58",
+    "heiko": "239061.22"
+  }
+]

@@ -1,0 +1,566 @@
+﻿[
+  {
+    "date": "2023-04-04",
+    "inflation_ratio": "7.23",
+    "rewards_ratio": "15.29",
+    "staking_ratio": "47.26"
+  },
+  {
+    "date": "2023-04-03",
+    "inflation_ratio": "7.23",
+    "rewards_ratio": "15.29",
+    "staking_ratio": "47.26"
+  },
+  {
+    "date": "2023-04-02",
+    "inflation_ratio": "7.22",
+    "rewards_ratio": "15.29",
+    "staking_ratio": "47.24"
+  },
+  {
+    "date": "2023-04-01",
+    "inflation_ratio": "7.22",
+    "rewards_ratio": "15.29",
+    "staking_ratio": "47.23"
+  },
+  {
+    "date": "2023-03-31",
+    "inflation_ratio": "7.23",
+    "rewards_ratio": "15.29",
+    "staking_ratio": "47.28"
+  },
+  {
+    "date": "2023-03-30",
+    "inflation_ratio": "7.23",
+    "rewards_ratio": "15.28",
+    "staking_ratio": "47.30"
+  },
+  {
+    "date": "2023-03-29",
+    "inflation_ratio": "7.23",
+    "rewards_ratio": "15.29",
+    "staking_ratio": "47.30"
+  },
+  {
+    "date": "2023-03-28",
+    "inflation_ratio": "7.23",
+    "rewards_ratio": "15.29",
+    "staking_ratio": "47.26"
+  },
+  {
+    "date": "2023-03-27",
+    "inflation_ratio": "7.22",
+    "rewards_ratio": "15.30",
+    "staking_ratio": "47.19"
+  },
+  {
+    "date": "2023-03-26",
+    "inflation_ratio": "7.22",
+    "rewards_ratio": "15.29",
+    "staking_ratio": "47.24"
+  },
+  {
+    "date": "2023-03-25",
+    "inflation_ratio": "7.23",
+    "rewards_ratio": "15.29",
+    "staking_ratio": "47.27"
+  },
+  {
+    "date": "2023-03-24",
+    "inflation_ratio": "7.23",
+    "rewards_ratio": "15.28",
+    "staking_ratio": "47.31"
+  },
+  {
+    "date": "2023-03-23",
+    "inflation_ratio": "7.23",
+    "rewards_ratio": "15.29",
+    "staking_ratio": "47.30"
+  },
+  {
+    "date": "2023-03-22",
+    "inflation_ratio": "7.23",
+    "rewards_ratio": "15.28",
+    "staking_ratio": "47.33"
+  },
+  {
+    "date": "2023-03-21",
+    "inflation_ratio": "7.22",
+    "rewards_ratio": "15.29",
+    "staking_ratio": "47.22"
+  },
+  {
+    "date": "2023-03-20",
+    "inflation_ratio": "7.23",
+    "rewards_ratio": "15.28",
+    "staking_ratio": "47.35"
+  },
+  {
+    "date": "2023-03-19",
+    "inflation_ratio": "7.22",
+    "rewards_ratio": "15.29",
+    "staking_ratio": "47.22"
+  },
+  {
+    "date": "2023-03-18",
+    "inflation_ratio": "7.41",
+    "rewards_ratio": "15.09",
+    "staking_ratio": "49.11"
+  },
+  {
+    "date": "2023-03-17",
+    "inflation_ratio": "7.43",
+    "rewards_ratio": "15.07",
+    "staking_ratio": "49.33"
+  },
+  {
+    "date": "2023-03-16",
+    "inflation_ratio": "7.42",
+    "rewards_ratio": "15.08",
+    "staking_ratio": "49.19"
+  },
+  {
+    "date": "2023-03-15",
+    "inflation_ratio": "7.42",
+    "rewards_ratio": "15.08",
+    "staking_ratio": "49.18"
+  },
+  {
+    "date": "2023-03-14",
+    "inflation_ratio": "7.42",
+    "rewards_ratio": "15.08",
+    "staking_ratio": "49.24"
+  },
+  {
+    "date": "2023-03-13",
+    "inflation_ratio": "7.43",
+    "rewards_ratio": "15.08",
+    "staking_ratio": "49.26"
+  },
+  {
+    "date": "2023-03-12",
+    "inflation_ratio": "7.43",
+    "rewards_ratio": "15.08",
+    "staking_ratio": "49.25"
+  },
+  {
+    "date": "2023-03-11",
+    "inflation_ratio": "7.42",
+    "rewards_ratio": "15.08",
+    "staking_ratio": "49.24"
+  },
+  {
+    "date": "2023-03-10",
+    "inflation_ratio": "7.42",
+    "rewards_ratio": "15.08",
+    "staking_ratio": "49.22"
+  },
+  {
+    "date": "2023-03-09",
+    "inflation_ratio": "7.44",
+    "rewards_ratio": "15.06",
+    "staking_ratio": "49.39"
+  },
+  {
+    "date": "2023-03-08",
+    "inflation_ratio": "7.44",
+    "rewards_ratio": "15.06",
+    "staking_ratio": "49.36"
+  },
+  {
+    "date": "2023-03-07",
+    "inflation_ratio": "7.43",
+    "rewards_ratio": "15.07",
+    "staking_ratio": "49.32"
+  },
+  {
+    "date": "2023-03-06",
+    "inflation_ratio": "7.43",
+    "rewards_ratio": "15.07",
+    "staking_ratio": "49.34"
+  },
+  {
+    "date": "2023-03-05",
+    "inflation_ratio": "7.44",
+    "rewards_ratio": "15.06",
+    "staking_ratio": "49.36"
+  },
+  {
+    "date": "2023-03-04",
+    "inflation_ratio": "7.42",
+    "rewards_ratio": "15.08",
+    "staking_ratio": "49.24"
+  },
+  {
+    "date": "2023-03-03",
+    "inflation_ratio": "7.43",
+    "rewards_ratio": "15.07",
+    "staking_ratio": "49.32"
+  },
+  {
+    "date": "2023-03-02",
+    "inflation_ratio": "7.40",
+    "rewards_ratio": "15.10",
+    "staking_ratio": "49.05"
+  },
+  {
+    "date": "2023-03-01",
+    "inflation_ratio": "7.36",
+    "rewards_ratio": "15.14",
+    "staking_ratio": "48.63"
+  },
+  {
+    "date": "2023-02-28",
+    "inflation_ratio": "7.41",
+    "rewards_ratio": "15.09",
+    "staking_ratio": "49.07"
+  },
+  {
+    "date": "2023-02-27",
+    "inflation_ratio": "7.26",
+    "rewards_ratio": "15.25",
+    "staking_ratio": "47.65"
+  },
+  {
+    "date": "2023-02-26",
+    "inflation_ratio": "7.27",
+    "rewards_ratio": "15.24",
+    "staking_ratio": "47.71"
+  },
+  {
+    "date": "2023-02-25",
+    "inflation_ratio": "7.27",
+    "rewards_ratio": "15.24",
+    "staking_ratio": "47.71"
+  },
+  {
+    "date": "2023-02-24",
+    "inflation_ratio": "7.27",
+    "rewards_ratio": "15.24",
+    "staking_ratio": "47.68"
+  },
+  {
+    "date": "2023-02-23",
+    "inflation_ratio": "7.27",
+    "rewards_ratio": "15.24",
+    "staking_ratio": "47.70"
+  },
+  {
+    "date": "2023-02-22",
+    "inflation_ratio": "7.26",
+    "rewards_ratio": "15.25",
+    "staking_ratio": "47.58"
+  },
+  {
+    "date": "2023-02-21",
+    "inflation_ratio": "7.26",
+    "rewards_ratio": "15.25",
+    "staking_ratio": "47.62"
+  },
+  {
+    "date": "2023-02-20",
+    "inflation_ratio": "7.25",
+    "rewards_ratio": "15.26",
+    "staking_ratio": "47.53"
+  },
+  {
+    "date": "2023-02-19",
+    "inflation_ratio": "7.26",
+    "rewards_ratio": "15.26",
+    "staking_ratio": "47.57"
+  },
+  {
+    "date": "2023-02-18",
+    "inflation_ratio": "7.26",
+    "rewards_ratio": "15.25",
+    "staking_ratio": "47.61"
+  },
+  {
+    "date": "2023-02-17",
+    "inflation_ratio": "7.26",
+    "rewards_ratio": "15.25",
+    "staking_ratio": "47.62"
+  },
+  {
+    "date": "2023-02-16",
+    "inflation_ratio": "7.25",
+    "rewards_ratio": "15.26",
+    "staking_ratio": "47.55"
+  },
+  {
+    "date": "2023-02-15",
+    "inflation_ratio": "7.22",
+    "rewards_ratio": "15.29",
+    "staking_ratio": "47.23"
+  },
+  {
+    "date": "2023-02-14",
+    "inflation_ratio": "7.23",
+    "rewards_ratio": "15.28",
+    "staking_ratio": "47.33"
+  },
+  {
+    "date": "2023-02-13",
+    "inflation_ratio": "7.17",
+    "rewards_ratio": "15.36",
+    "staking_ratio": "46.66"
+  },
+  {
+    "date": "2023-02-12",
+    "inflation_ratio": "7.17",
+    "rewards_ratio": "15.36",
+    "staking_ratio": "46.66"
+  },
+  {
+    "date": "2023-02-11",
+    "inflation_ratio": "7.17",
+    "rewards_ratio": "15.36",
+    "staking_ratio": "46.66"
+  },
+  {
+    "date": "2023-02-10",
+    "inflation_ratio": "7.15",
+    "rewards_ratio": "15.37",
+    "staking_ratio": "46.54"
+  },
+  {
+    "date": "2023-02-09",
+    "inflation_ratio": "7.14",
+    "rewards_ratio": "15.39",
+    "staking_ratio": "46.38"
+  },
+  {
+    "date": "2023-02-08",
+    "inflation_ratio": "7.13",
+    "rewards_ratio": "15.39",
+    "staking_ratio": "46.35"
+  },
+  {
+    "date": "2023-02-07",
+    "inflation_ratio": "7.14",
+    "rewards_ratio": "15.39",
+    "staking_ratio": "46.38"
+  },
+  {
+    "date": "2023-02-06",
+    "inflation_ratio": "7.12",
+    "rewards_ratio": "15.41",
+    "staking_ratio": "46.18"
+  },
+  {
+    "date": "2023-02-05",
+    "inflation_ratio": "7.11",
+    "rewards_ratio": "15.42",
+    "staking_ratio": "46.13"
+  },
+  {
+    "date": "2023-02-04",
+    "inflation_ratio": "7.12",
+    "rewards_ratio": "15.42",
+    "staking_ratio": "46.16"
+  },
+  {
+    "date": "2023-02-03",
+    "inflation_ratio": "7.12",
+    "rewards_ratio": "15.41",
+    "staking_ratio": "46.19"
+  },
+  {
+    "date": "2023-02-02",
+    "inflation_ratio": "7.12",
+    "rewards_ratio": "15.41",
+    "staking_ratio": "46.18"
+  },
+  {
+    "date": "2023-02-01",
+    "inflation_ratio": "7.10",
+    "rewards_ratio": "15.43",
+    "staking_ratio": "46.01"
+  },
+  {
+    "date": "2023-01-31",
+    "inflation_ratio": "7.10",
+    "rewards_ratio": "15.44",
+    "staking_ratio": "45.98"
+  },
+  {
+    "date": "2023-01-30",
+    "inflation_ratio": "7.07",
+    "rewards_ratio": "15.47",
+    "staking_ratio": "45.68"
+  },
+  {
+    "date": "2023-01-29",
+    "inflation_ratio": "7.07",
+    "rewards_ratio": "15.47",
+    "staking_ratio": "45.69"
+  },
+  {
+    "date": "2023-01-28",
+    "inflation_ratio": "7.07",
+    "rewards_ratio": "15.47",
+    "staking_ratio": "45.69"
+  },
+  {
+    "date": "2023-01-27",
+    "inflation_ratio": "7.07",
+    "rewards_ratio": "15.47",
+    "staking_ratio": "45.69"
+  },
+  {
+    "date": "2023-01-26",
+    "inflation_ratio": "7.08",
+    "rewards_ratio": "15.46",
+    "staking_ratio": "45.78"
+  },
+  {
+    "date": "2023-01-25",
+    "inflation_ratio": "7.08",
+    "rewards_ratio": "15.46",
+    "staking_ratio": "45.79"
+  },
+  {
+    "date": "2023-01-24",
+    "inflation_ratio": "7.29",
+    "rewards_ratio": "15.21",
+    "staking_ratio": "47.95"
+  },
+  {
+    "date": "2023-01-23",
+    "inflation_ratio": "7.05",
+    "rewards_ratio": "15.49",
+    "staking_ratio": "45.51"
+  },
+  {
+    "date": "2023-01-22",
+    "inflation_ratio": "7.06",
+    "rewards_ratio": "15.48",
+    "staking_ratio": "45.65"
+  },
+  {
+    "date": "2023-01-21",
+    "inflation_ratio": "7.06",
+    "rewards_ratio": "15.48",
+    "staking_ratio": "45.64"
+  },
+  {
+    "date": "2023-01-20",
+    "inflation_ratio": "7.07",
+    "rewards_ratio": "15.48",
+    "staking_ratio": "45.65"
+  },
+  {
+    "date": "2023-01-19",
+    "inflation_ratio": "7.06",
+    "rewards_ratio": "15.48",
+    "staking_ratio": "45.63"
+  },
+  {
+    "date": "2023-01-18",
+    "inflation_ratio": "7.06",
+    "rewards_ratio": "15.48",
+    "staking_ratio": "45.65"
+  },
+  {
+    "date": "2023-01-17",
+    "inflation_ratio": "7.01",
+    "rewards_ratio": "15.54",
+    "staking_ratio": "45.14"
+  },
+  {
+    "date": "2023-01-16",
+    "inflation_ratio": "7.00",
+    "rewards_ratio": "15.55",
+    "staking_ratio": "45.03"
+  },
+  {
+    "date": "2023-01-15",
+    "inflation_ratio": "7.00",
+    "rewards_ratio": "15.56",
+    "staking_ratio": "44.97"
+  },
+  {
+    "date": "2023-01-14",
+    "inflation_ratio": "7.00",
+    "rewards_ratio": "15.56",
+    "staking_ratio": "45.00"
+  },
+  {
+    "date": "2023-01-13",
+    "inflation_ratio": "7.01",
+    "rewards_ratio": "15.55",
+    "staking_ratio": "45.06"
+  },
+  {
+    "date": "2023-01-12",
+    "inflation_ratio": "7.00",
+    "rewards_ratio": "15.55",
+    "staking_ratio": "45.03"
+  },
+  {
+    "date": "2023-01-11",
+    "inflation_ratio": "7.00",
+    "rewards_ratio": "15.55",
+    "staking_ratio": "45.02"
+  },
+  {
+    "date": "2023-01-10",
+    "inflation_ratio": "7.00",
+    "rewards_ratio": "15.55",
+    "staking_ratio": "45.03"
+  },
+  {
+    "date": "2023-01-09",
+    "inflation_ratio": "7.00",
+    "rewards_ratio": "15.56",
+    "staking_ratio": "44.98"
+  },
+  {
+    "date": "2023-01-08",
+    "inflation_ratio": "7.00",
+    "rewards_ratio": "15.56",
+    "staking_ratio": "44.99"
+  },
+  {
+    "date": "2023-01-07",
+    "inflation_ratio": "6.99",
+    "rewards_ratio": "15.56",
+    "staking_ratio": "44.95"
+  },
+  {
+    "date": "2023-01-06",
+    "inflation_ratio": "6.99",
+    "rewards_ratio": "15.57",
+    "staking_ratio": "44.89"
+  },
+  {
+    "date": "2023-01-05",
+    "inflation_ratio": "6.95",
+    "rewards_ratio": "15.61",
+    "staking_ratio": "44.55"
+  },
+  {
+    "date": "2023-01-04",
+    "inflation_ratio": "6.95",
+    "rewards_ratio": "15.62",
+    "staking_ratio": "44.51"
+  },
+  {
+    "date": "2023-01-03",
+    "inflation_ratio": "6.94",
+    "rewards_ratio": "15.63",
+    "staking_ratio": "44.44"
+  },
+  {
+    "date": "2023-01-02",
+    "inflation_ratio": "6.94",
+    "rewards_ratio": "15.63",
+    "staking_ratio": "44.38"
+  },
+  {
+    "date": "2023-01-01",
+    "inflation_ratio": "6.93",
+    "rewards_ratio": "15.65",
+    "staking_ratio": "44.25"
+  }
+]
