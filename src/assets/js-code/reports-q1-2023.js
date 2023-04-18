@@ -650,6 +650,7 @@
 						show: false
 					},
 					axisLine: {
+						show: false,
 						lineStyle: {
 							color: '#262626'
 						}
@@ -2293,7 +2294,7 @@
 						type: 'bar',
 						stack: true,
 						label: {
-							show: isLastSeries(index) ? true : false,
+							show: isLastSeries( index ) ? true : false,
 							formatter: genFormatter( series ),
 							fontSize: 16,
 							color: '#ffffff',
@@ -2536,7 +2537,7 @@
 		function getChartOptionsWeb3FoundationGrants( chartName ) {
 			var colors = [
 					'#004bff',
-					'#E12C29'
+					'#e12c29'
 				],
 				data = [
 					[
@@ -3324,11 +3325,11 @@
 							type: 'pie',
 							center: [
 								'50%',
-								'45%'
+								'50%'
 							],
 							radius: [
-								'40%',
-								'60%'
+								'55%',
+								'70%'
 							],
 							label: {
 								alignTo: 'edge',
@@ -3467,7 +3468,7 @@
 				],
 				chartExtraOptions = {
 					yAxis: {
-						interval: 50000000,
+						interval: 25000000,
 					}
 				};
 
@@ -4122,10 +4123,6 @@
 		function getChartOptionsNftMarketplace( chartName, jsonData ) {
 			var datasets = [
 					{
-						name: 'raresama',
-						label: 'Raresama'
-					},
-					{
 						name: 'singular_ksm',
 						label: 'Singular KSM'
 					},
@@ -4159,7 +4156,6 @@
 					}
 				],
 				colors = [
-					'#6b49b5',
 					'#e6007a',
 					'#429df4',
 					'#9ee542',
@@ -4290,23 +4286,7 @@
 		function getChartResponsiveOptionsNftMarketplace() {
 			var newOptions = {};
 
-			if ( window.innerWidth > 767 ) {
-				newOptions = {
-					yAxis: {
-						axisLabel: {
-							formatter: function ( value ) {
-								return '$' + NumberUtil.formatWithCommas( value );
-							}
-						}
-					},
-					xAxis: {
-						splitNumber: 5,
-						axisLabel: {
-							formatter: dateFormatter
-						}
-					}
-				};
-			} else {
+			if ( window.innerWidth < 767 ) {
 				newOptions = {
 					yAxis: {
 						axisLabel: {
@@ -4322,14 +4302,22 @@
 						}
 					}
 				};
-
-				if ( window.innerWidth < 460 ) {
-					$.extend( newOptions, {
-						xAxis: {
-							splitNumber: 3
+			} else {
+				newOptions = {
+					yAxis: {
+						axisLabel: {
+							formatter: function ( value ) {
+								return '$' + NumberUtil.formatWithCommas( value );
+							}
 						}
-					} )
-				}
+					},
+					xAxis: {
+						splitNumber: 5,
+						axisLabel: {
+							formatter: dateFormatter
+						}
+					}
+				};
 			}
 
 			return newOptions;
