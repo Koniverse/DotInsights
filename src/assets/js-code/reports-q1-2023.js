@@ -624,8 +624,23 @@
 				textStyle: {
 					fontFamily: fontFamily,
 					fontWeight: 500
-				},
-				tooltip: defaultTooltipSettings,
+				}, //				tooltip: defaultTooltipSettings,
+				tooltip: $.extend( true, {}, defaultTooltipStyle, {
+					trigger: 'axis',
+					axisPointer: {
+						type: 'line',
+						crossStyle: {
+							color: 'rgba(255,255,255,0.3)'
+						},
+						lineStyle: {
+							type: [
+								4,
+								4
+							],
+							color: 'rgba(255,255,255,0.3)'
+						}
+					}
+				} ),
 				legend: defaultLegendSettings,
 				grid: {
 					left: '3%',
