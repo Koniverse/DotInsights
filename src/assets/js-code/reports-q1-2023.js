@@ -417,6 +417,28 @@
 			} );
 		}
 
+		function setItemHighlight( $li ) {
+			var $otherLi = $li.siblings( 'li' ),
+				pieID = $li.data( 'id' );
+
+			var $chart = $li.closest( 'ul' ).siblings( '.block-chart' );
+			var chartInstance = echarts.getInstanceByDom( $chart.get( 0 ) );
+
+			chartInstance.dispatchAction( {
+				                              type: 'highlight',
+				                              name: pieID
+			                              } );
+
+			$otherLi.each( function () {
+				var name = $( this ).data( 'id' );
+
+				chartInstance.dispatchAction( {
+					                              type: 'downplay',
+					                              name: name
+				                              } );
+			} );
+		}
+
 		function initCharts( $chart ) {
 			var chartName = $chart.data( 'chart-name' ),
 				chartSource = $chart.data( 'chart-source' ),
@@ -544,8 +566,28 @@
 						chartOptions = getChartOptionsMoonFitNewUsers( chartName );
 						break;
 				}
+
 				chartInstance.hideLoading();
 				chartInstance.setOption( chartOptions );
+
+				var $customLegend = $chart.siblings( '.block-chart-legend' );
+				if ( $customLegend.length > 0 ) {
+					chartInstance.on( 'mouseover', 'series', function ( params ) {
+
+						var $current = $customLegend.find( 'li[data-id="' + params.name + '"]' );
+
+						setItemHighlight( $current );
+					} );
+
+					var $firstActive = $customLegend.children( 'li.active' );
+
+					setItemHighlight( $firstActive );
+
+					$customLegend.on( 'click', 'li', function () {
+						var $li = $( this );
+						setItemHighlight( $li );
+					} );
+				}
 			}
 		}
 
@@ -582,8 +624,23 @@
 				textStyle: {
 					fontFamily: fontFamily,
 					fontWeight: 500
-				},
-				tooltip: defaultTooltipSettings,
+				}, //				tooltip: defaultTooltipSettings,
+				tooltip: $.extend( true, {}, defaultTooltipStyle, {
+					trigger: 'axis',
+					axisPointer: {
+						type: 'line',
+						crossStyle: {
+							color: 'rgba(255,255,255,0.3)'
+						},
+						lineStyle: {
+							type: [
+								4,
+								4
+							],
+							color: 'rgba(255,255,255,0.3)'
+						}
+					}
+				} ),
 				legend: defaultLegendSettings,
 				grid: {
 					left: '3%',
@@ -595,7 +652,7 @@
 					type: 'time',
 					boundaryGap: false,
 					splitLine: {
-						show: true,
+						show: false,
 						lineStyle: {
 							type: [
 								4,
@@ -608,6 +665,7 @@
 						show: false
 					},
 					axisLine: {
+						show: false,
 						lineStyle: {
 							color: '#262626'
 						}
@@ -1099,92 +1157,49 @@
 
 		function getChartOptionsDotHolderDistribution( chartName ) {
 			var colors = [
-					'#f8b00c',
-					'#ca93af',
+					'#e10266',
 					'#18234e',
-					'#e10266'
+					'#ca93af',
+					'#f8b00c'
 				],
 				datasets = [
 					{
-						value: 145,
+						value: 871873088,
 						name: 'Whale Account'
 					},
 					{
-						value: 591,
+						value: 235373963,
 						name: 'Dolphin Account'
 					},
 					{
-						value: 337792,
+						value: 190364757,
 						name: 'Fish Account'
 					},
 					{
-						value: 745022,
+						value: 2041661,
 						name: 'Shrimp Account'
 					}
 				],
 				baseOptions = {
 					color: colors,
-					tooltip: $.extend( true, {}, defaultTooltipStyle, {
-						trigger: 'item',
-						valueFormatter: function ( value ) {
-							return NumberUtil.formatWithCommas( value );
-						}
-					} ),
-					legend: $.extend( true, {}, defaultLegendSettings, {
-						show: true,
-						orient: 'vertical',
-						top: '20%',
-						right: '10%',
-						align: 'left',
-						textStyle: {
-							fontFamily: fontFamily,
-							color: '#cccccc',
-							fontSize: 14,
-							fontWeight: '500',
-							margin: [
-								3,
-								0,
-								0,
-								0
-							]
-						},
-						itemWidth: 25,
-						itemHeight: 25,
-						data: [
-							{
-								name: 'Whale Account',
-								icon: 'image://data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAOxSURBVHgBxVdLaBNBGP5m20bbWoiokPiACCIoxa62YinYpjefJSI+2oOKF70p1YuINB60HlQseFAPWhVsfRziA+utqQVRUFxRfFTB9UGyoGCgWtutZvxna9ImmU1W+/pgSGb/f+b/53/OMDiE6g+4YRYFFKCGg6sA8wHcPURlMfqvM8a0OEcXXH0hLRyKOdmX5WJQK7f6FIXt5WDbhwU62Jix1nhB/LAWbtez8tkRxImVwcImzrEXowBjyql4wY/DdhaRKiBOTSfoJKoPYwOdu3itzBpKhvCqBnWMhQv4mMk61eWb1HRCigXG4eTpyLBEUgHhczZQ+HQchY9Q4ufSREwkXSACbgKEC/iUweKmxMSygGV6hb3HBIJcMV+4wrIA+T2IiYbJrPRmqn+Hm5kD3zDxiFEszFdgmgFMDoZKO+Pcj8kCQ41CeVCW/r1kWhH81RUYC/iry+H1zJLSGIeqgDNfOqF86SKcbG7E/j3bMBo0bF5F++xD3dpqGw7uy8/W4cQGwhq3Orqsee/3PkQjX6zfbPB6Z6JuTQ127dyIHHDny74+efoq+X/9mmprjEQk+gXHWy4j3P0Y5csWoXblcstqQtnZ3kxzC3475P+9TKRYQZzwMSlRQZvKIIScPNZIPC+JZzFyoefdRztSTKFI0GWUO3e7kAtOhEeiX/GmR7ehMl3hcTyTkW7dvW8tHi3Onr9hS+MMGlmAhe0YGg+cwGhw5do93KaD2GsQ71LgcoWG4iATPW8/oOnIGfyv8OMtl7IzufpDeYau9XvmlXqpLVbCRolOivaqFSpKSoqQC8JtwaNnSIGOrHycLq1a9/Wr/9SO6ygd19GQBZ9INWHuK9c70Nvbl2urZDsevhFV1Z+iyR44gLBE24XmlJwXQRt06C4OtGgP2qx2PHwpdU0JEkV3soE4Ye/3HynfhHUclm4drp/BxCSpgBZujXHOa50qEZWkqCjdwYO7sy37eykdfiOkXMu1h+06/8U2OFEiYsjLq7BEW2uzrAPq9LrakP42yEvnMiLPDc/c0psMLED92rZRDZiDVsORYeYMN2qpnYuSLrIIiZN3t71O582TbWB8fhHzLKi4iN+/C+3SM2p8RcOW1ZjiKpCRKVCLLSWKiwpbHmiP6rXwDUPGJ1XAUoLqg/HpxT3PnNKLVKimM4aMV41pmqiqLJMtFz4+S6O+bMnCdkN/3W8nJ+frOIGh5/nUAFUQP60qIxf5RBc9d/qQ6JpCoE5DoyG6WIhu2o6e538A5Xxu/bmU3e8AAAAASUVORK5CYII='
-							},
-							{
-								name: 'Dolphin Account',
-								icon: 'image://data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAO3SURBVHgBzVdNSFRRFD73NY6pDbhIUCF8UilC4LMUJFLHXUaGYprNIqMg3SQWLYIIlXAnobboZxGWIVoJIlJL/0AkNJ+bzAp6blRQacL8G21u59xxRp2Z9xxnJuqDmTdv7rn3nHt+vnsPgwChWItiwRFdJAHkceAKAJMBeKxrlNnxt8YYU50cBsC80q32d9sDWZftJaBkl8uSxGo4sIpthQEszFirM8JZr/Z3aIZyegO0Y2kjqpZzqIEQwJjU5IxYrtfziF8DaNe4gz4clSE80LiZ5/vzhuSj/LRNCbNygswcrE/JKlW8B3Z54C/s3Bs+nvAYQDFn61HjwSg/dTIN8nOywGKJgtGPk+IzOzdvYMRqhjsnTO5/RcIFqJwUph5LgtSUJLCeIcXRnrHCgjzoHxqF23cf6k2XpY2YWnzeohfhAeF6iX03Umo5FA22SwVgKy3YpdAbY+OT0Nj8Eqa+ThstBxiKZAqFSEKMe52RMO24920LVF4rMVQuZDPSwJqbCXvCwUR5M8V6NZY51n/oySXGx0FvVzPsF40tbdDe+d5IxI65kCyBw1FkJEVuDwbkrQQ03gAuamecW/Uk6u9Vga3sLAQDypmq6yXGQgzyJKSidH9jiQlxUHguF0IB5QIZoqufg2ICzmTMSZ/Bmdl5qGt4AinHZcxoDUbHP+FiMZCJSWaxxAgZW1mBR8HS0opPgtJYCpbqGPKCf3DZZHTC9bwbxO9Bz/ssLMCXneWFdlduuXnq27Qw+Nmj++i9wx4RSuIx0DMAYiUIAU+fd0H7a1emk2cItQ2Pd8lQKI1g2rpMBHzOe6OxuU14JW+r9omIKHxuxUu/Voym202YCRq6UoEQQKFyhcuFMXXSY8DMzLzBTKZJ3AkTECZQ0onMj9lOxqXlZV15PHtU9ADrx58VECKoZO9UX/GphJnZBf1J3Dkggdnc7cqD0JCfk+n3nLhgxCXmte4Dc5q6Fn/kRAIei9kQAoY/TMDwyASSGxN84TYmFXmk9VWPjzzHS6s69KbTVYZO3gQhgoiIKqAWueDGzQce11NeJPgrRbwx00MYoI50aMgp+z/ydEBleP5iNbKnfwIiXe5r2QH3n/FHM0fY5u9y9GDQnOANupQsLv4UN6Qd0MC8enlO+7xGL//8UrqLikUoNlkx+kiD8APDzIq9e4P/rzEhCE9ERmaEIzFpDdc13H+PGFBzimxZxxjsgy2ZHTvoF2DmTUE3pz6GiPb8YBEyiBVnpSPhyDvbc1So4VPFl321538A9ohxk005PNQAAAAASUVORK5CYII='
-							},
-							{
-								name: 'Fish Account',
-								icon: 'image://data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAOkSURBVHgBzVdbSBRhFP7OmLuVGQYFbiBO0IUiaS0D8aH0rYLCoJtGdIGCoBv00Eth0fWhYjWhG5QV2BIJEli9hGYEQZoThIIFThdUMGjBG+7a/p1/1ss6O7vOeKk+WHbmnPn/c/nPOf85BJvw5hemITi7UAHWCwgvQCog0iJcCvCzTkRaWOA1XH3VWl11wM6+NN4H3txdqqLQCQHaOyrQxsZEFeHk8Dmtzq8n/C4eQ1qshGaVCIETmASIFF84ufdcPI9YKiCtZgtqmatiaqALlyiw8oYSIzyv2DvFwiVUClKtd+12r5kxxgPTYLkZMZ4YUUCeOQ3MappG4VFK9GcPx8TIEciA+wvCJVQllFIy/GJ4wHC9Qm12Vi9bkomTx/egu6cPjR+aUVvfiI7OLjgFH8UieRRJ8sWTkeVjVbx2FgaDIRw7XGQokpe7Crt3bsSa1cvR8KEFPayUbfwm6vz+6SV58/elUXDgFxzgccUlVkCNoTc0NaP18zfUvnnP3mkZb5sAx8KiGWxSIRyiO46lOdkrjF/xjg1o7+jCwSMXEh1PpLSTEPlmjnSpJ31BzIqFTLtTftoQMh4WehagpqoUmzeti/8RYX2SJzNLRmR6NL3maVnM2S5dnIny66csXZ8IBety0KA1o6Pjp4V84jQUpJoZ0n0S0lL/g8uGFXfLzxhWTQTXL59E6pzZFhyhJnkyVl4xk1PnpCBndcTNbleyYYXbnYyJQu4RDIXQ2BQTmDMVqwWVT15gqlG8Y6MlXYk0E2MhLZ5q1NU3WJEDCkjoZmoRp9Ewurv7cPbirbipZwftHIC371VZcEhXRBgfzeThSJeF5dDR83j2vJ5z+ryx0URwrezhSGBHQxA04vt/H0Hcj2asyV6Odi4g5tSRWXDnhsyG+bCLq6WP4sYU95b7h0pxsM1Jv7eF0/LQgW0JFZHeKrl40yryRxVw9c+L3IZ5RT5+OA4HkF6StWFUYBfHSS9av3zFs5r6hIIN4dy0am8r988w3sLCB4UcKRCNyicv2dUPHa0Bd8zyz7iOO398CqRnZEl35NpdPzc1he+xQZTdfIyq6ldwAgGUam/8fvkc1ZJxLAwM/LuWTKurCAghClg9HdOHoaZ0dEYYU4q1d35dDNLWaVJC5+lqq3k2+P8GEwnDE253tgwWTBJyj8iZW8+ItoZTHvDOEmEvbIMCXOUewCV8Ex5OYxQxxvOZhVxB8nnVKu5m1OjxnAXq/K/xi6Px/A8nK4h6OiGYxwAAAABJRU5ErkJggg=='
-							},
-							{
-								name: 'Shrimp Account',
-								icon: 'image://data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQ1SURBVHgBzVdvaBxFFP/N9nIxqQcpNpALhF6hWloacmlSCAWb6zcbpaREY4loxYJVEFNjEaRKWqwo2Ega+iGJVLRCiZVIMNr2iySXgCgkZiu1klToBsUEGvDgcqm30Rvfm+Tau73dy94lpf192d2Z2fd7/+bNPAGXCIYaS2AWN2pAvYQMAiIAyJKlWRGhd0MIoSckwvAuDOjDAxE3csVKC4J1BwOaJo5KiEN3CV0IFuKzREHipD7cZ2Rd5zTBFmuLRe1S4ihWASG0zkRB7KSTR2wVYKvJgiGaDWBtYEiv3GvnDS2DfHdLcI3JGQFhiqHgrmeC1ok0D9wDy63I8MQdBTjmIl40sRpy38PF8JeXqufU1DSi8wsOStyuTuaEJzmqEi6FPPR4DXy+9Ri8NLIiacuz+7B1yybQ/5iZmVPjR15qUu/d5/oxM3sr9ZeAtri+nZ5v8IfygHK9Jm5aBXd8+CZefu09W+KandsUCaOHSMYnfstYU+4vxYnjr6D9VLdVCVAoNnMo1vGHv6Kyk1RJSxDTXER5WSn2N9QjGospYbXV29X3668ehBlfREfXF+gf+J6Ez9kqySGYvDGN428dzvTkf0LM/nHtigiGXiwRZvxvOKCmehtqd25fEhiNYYwsnSKhuaD37DvkyVPW4QjlwmYPmdqY7efxZUKOc2hPLbn9acqNYrjFhYtX1JNDaklKVdo9QspQtoLc0vxEzqRJ9Hzaj8HvRiiX2ux3hEC9h0pRFaS9AE6yI4ebkCui0QWc7jqP4ZExfHL2XbS9/bHtOiER1GjvBOwm9zfsyYucMXg5rJK2l8g/OnMef83cclgpAx6nE+4pUiBXsMXfXAqr+sGkFy5eVt7IghKP0wxvOSewcLYwCSbheDNhrvAsXybSvMAZa088R/s5jDH9uqpyHR+0oZeIh8jyPBHRKBMM6yhnrF3Wjk/8iqHRMVV2W5r3of39HqXssdYXkB+E4ZEJXBWWKsjgClZLRSgV3ee+VsnJMZ68YWB+PkYx5wo3gnxAZ4dOHhDDdpPjP19P++a476L6zzXD5ytSBco5u91qkAgvl2Lzpl0efNvflZYPTza1Zhwqq+L33t6wbtbQ/ymr2OEnw+pSJ/kwMk0Tu+uq7oztpVI8+fu0SkA+DZ9rbkDlji3KK8lj2DU5XVr10a++dDyOkzjW+rxKuFTwtrOWZj7tTlPRcbiEZCqQehzP/nktUlZRucHqBcYPP/2i3O73b8TGR5aiVFhYkCFw66ObaNxL669iRXLgjD7a18fvKVcyyoV4POuVjK1+jLagE9h6F0d12pXsvl9K067l+o99hvxXHCAfGVh7GNRdHbD2Bg9eY8JQnigsrOZkwSrBMpZibt8jumpOqVqeoHJ9CK4hItRBfw6v7My7Oc1QRLXnDzVSBeErXJWACKS250Ro0FOnj5za8/8BQDjfQrxgKhkAAAAASUVORK5CYII='
-							}
-						]
-					} ),
+					tooltip: false,
+					legend: false,
 					grid: {
-						left: '3%',
-						right: '3%',
+						left: '0',
+						right: '0',
 						top: '0',
 						containLabel: true
 					},
 					series: [
 						{
-							name: 'Polkadot And Kusama Holder Distribution',
+							name: 'Polkadot Holder Distribution',
 							type: 'pie',
 							center: [
-								'30%',
-								'50%'
+								'45%',
+								'45%'
 							],
 							radius: [
-								'65%',
+								'68%',
 								'85%'
 							],
 							avoidLabelOverlap: false,
@@ -1197,33 +1212,42 @@
 									show: true,
 									fontFamily: fontFamily,
 									color: '#ffffff',
-									fontSize: 15,
+									fontSize: 17,
 									fontWeight: '500',
-									formatter: '{per|{d}%}\n{b|{b}}\n{c|{c}}',
+									formatter: function ( param ) {
+										var value = NumberUtil.formatWithCommas( param.value );
+
+										return '{per|' + param.percent + '%}\n{b|' + param.name + '}\n{c|' + value + '}';
+									},
 									rich: {
 										per: {
 											fontFamily: fontFamily,
-											fontWeight: '600',
+											fontWeight: 700,
 											color: '#e10266',
-											fontSize: 40,
-											align: 'center',
-											padding: [
-												0,
-												0,
-												15,
-												0
-											]
+											fontSize: 32,
+											align: 'center'
 										},
 										b: {
 											fontFamily: fontFamily,
-											color: '#ffffff',
+											fontWeight: 500,
+											color: '#cccccc',
 											fontSize: 17,
-											align: 'center'
+											align: 'center',
+											padding: [
+												10,
+												0,
+												10,
+												0
+											]
 										},
 										c: {
 											fontFamily: fontFamily,
-											color: '#cccccc',
-											fontSize: 16,
+											fontWeight: 700,
+											color: '#ffffff',
+											fontSize: 17,
+											formatter: function ( name ) {
+												return '$ ' + name;
+											},
 											align: 'center'
 										}
 									}
@@ -1243,76 +1267,33 @@
 
 		function getChartOptionsKsmHolderDistribution( chartName ) {
 			var colors = [
-					'#f8b00c',
 					'#e10266',
 					'#18234e',
-					'#a1a1a1'
+					'#ca93af',
+					'#f8b00c'
 				],
 				datasets = [
 					{
-						value: 176,
+						value: 964380884,
 						name: 'Whale Account'
 					},
 					{
-						value: 547,
+						value: 212527253,
 						name: 'Dolphin Account'
 					},
 					{
-						value: 94549,
+						value: 164220346,
 						name: 'Fish Account'
 					},
 					{
-						value: 192371,
+						value: 411232.854,
 						name: 'Shrimp Account'
 					}
 				],
 				baseOptions = {
 					color: colors,
-					tooltip: $.extend( true, {}, defaultTooltipStyle, {
-						trigger: 'item',
-						valueFormatter: function ( value ) {
-							return NumberUtil.formatWithCommas( value );
-						}
-					} ),
-					legend: $.extend( true, {}, defaultLegendSettings, {
-						show: true,
-						orient: 'vertical',
-						top: '20%',
-						right: '10%',
-						align: 'left',
-						textStyle: {
-							fontFamily: fontFamily,
-							color: '#cccccc',
-							fontSize: 14,
-							fontWeight: '500',
-							margin: [
-								3,
-								0,
-								0,
-								0
-							]
-						},
-						itemWidth: 25,
-						itemHeight: 25,
-						data: [
-							{
-								name: 'Whale Account',
-								icon: 'image://data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAOxSURBVHgBxVdLaBNBGP5m20bbWoiokPiACCIoxa62YinYpjefJSI+2oOKF70p1YuINB60HlQseFAPWhVsfRziA+utqQVRUFxRfFTB9UGyoGCgWtutZvxna9ImmU1W+/pgSGb/f+b/53/OMDiE6g+4YRYFFKCGg6sA8wHcPURlMfqvM8a0OEcXXH0hLRyKOdmX5WJQK7f6FIXt5WDbhwU62Jix1nhB/LAWbtez8tkRxImVwcImzrEXowBjyql4wY/DdhaRKiBOTSfoJKoPYwOdu3itzBpKhvCqBnWMhQv4mMk61eWb1HRCigXG4eTpyLBEUgHhczZQ+HQchY9Q4ufSREwkXSACbgKEC/iUweKmxMSygGV6hb3HBIJcMV+4wrIA+T2IiYbJrPRmqn+Hm5kD3zDxiFEszFdgmgFMDoZKO+Pcj8kCQ41CeVCW/r1kWhH81RUYC/iry+H1zJLSGIeqgDNfOqF86SKcbG7E/j3bMBo0bF5F++xD3dpqGw7uy8/W4cQGwhq3Orqsee/3PkQjX6zfbPB6Z6JuTQ127dyIHHDny74+efoq+X/9mmprjEQk+gXHWy4j3P0Y5csWoXblcstqQtnZ3kxzC3475P+9TKRYQZzwMSlRQZvKIIScPNZIPC+JZzFyoefdRztSTKFI0GWUO3e7kAtOhEeiX/GmR7ehMl3hcTyTkW7dvW8tHi3Onr9hS+MMGlmAhe0YGg+cwGhw5do93KaD2GsQ71LgcoWG4iATPW8/oOnIGfyv8OMtl7IzufpDeYau9XvmlXqpLVbCRolOivaqFSpKSoqQC8JtwaNnSIGOrHycLq1a9/Wr/9SO6ygd19GQBZ9INWHuK9c70Nvbl2urZDsevhFV1Z+iyR44gLBE24XmlJwXQRt06C4OtGgP2qx2PHwpdU0JEkV3soE4Ye/3HynfhHUclm4drp/BxCSpgBZujXHOa50qEZWkqCjdwYO7sy37eykdfiOkXMu1h+06/8U2OFEiYsjLq7BEW2uzrAPq9LrakP42yEvnMiLPDc/c0psMLED92rZRDZiDVsORYeYMN2qpnYuSLrIIiZN3t71O582TbWB8fhHzLKi4iN+/C+3SM2p8RcOW1ZjiKpCRKVCLLSWKiwpbHmiP6rXwDUPGJ1XAUoLqg/HpxT3PnNKLVKimM4aMV41pmqiqLJMtFz4+S6O+bMnCdkN/3W8nJ+frOIGh5/nUAFUQP60qIxf5RBc9d/qQ6JpCoE5DoyG6WIhu2o6e538A5Xxu/bmU3e8AAAAASUVORK5CYII='
-							},
-							{
-								name: 'Dolphin Account',
-								icon: 'image://data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAO3SURBVHgBzVdNSFRRFD73NY6pDbhIUCF8UilC4LMUJFLHXUaGYprNIqMg3SQWLYIIlXAnobboZxGWIVoJIlJL/0AkNJ+bzAp6blRQacL8G21u59xxRp2Z9xxnJuqDmTdv7rn3nHt+vnsPgwChWItiwRFdJAHkceAKAJMBeKxrlNnxt8YYU50cBsC80q32d9sDWZftJaBkl8uSxGo4sIpthQEszFirM8JZr/Z3aIZyegO0Y2kjqpZzqIEQwJjU5IxYrtfziF8DaNe4gz4clSE80LiZ5/vzhuSj/LRNCbNygswcrE/JKlW8B3Z54C/s3Bs+nvAYQDFn61HjwSg/dTIN8nOywGKJgtGPk+IzOzdvYMRqhjsnTO5/RcIFqJwUph5LgtSUJLCeIcXRnrHCgjzoHxqF23cf6k2XpY2YWnzeohfhAeF6iX03Umo5FA22SwVgKy3YpdAbY+OT0Nj8Eqa+ThstBxiKZAqFSEKMe52RMO24920LVF4rMVQuZDPSwJqbCXvCwUR5M8V6NZY51n/oySXGx0FvVzPsF40tbdDe+d5IxI65kCyBw1FkJEVuDwbkrQQ03gAuamecW/Uk6u9Vga3sLAQDypmq6yXGQgzyJKSidH9jiQlxUHguF0IB5QIZoqufg2ICzmTMSZ/Bmdl5qGt4AinHZcxoDUbHP+FiMZCJSWaxxAgZW1mBR8HS0opPgtJYCpbqGPKCf3DZZHTC9bwbxO9Bz/ssLMCXneWFdlduuXnq27Qw+Nmj++i9wx4RSuIx0DMAYiUIAU+fd0H7a1emk2cItQ2Pd8lQKI1g2rpMBHzOe6OxuU14JW+r9omIKHxuxUu/Voym202YCRq6UoEQQKFyhcuFMXXSY8DMzLzBTKZJ3AkTECZQ0onMj9lOxqXlZV15PHtU9ADrx58VECKoZO9UX/GphJnZBf1J3Dkggdnc7cqD0JCfk+n3nLhgxCXmte4Dc5q6Fn/kRAIei9kQAoY/TMDwyASSGxN84TYmFXmk9VWPjzzHS6s69KbTVYZO3gQhgoiIKqAWueDGzQce11NeJPgrRbwx00MYoI50aMgp+z/ydEBleP5iNbKnfwIiXe5r2QH3n/FHM0fY5u9y9GDQnOANupQsLv4UN6Qd0MC8enlO+7xGL//8UrqLikUoNlkx+kiD8APDzIq9e4P/rzEhCE9ERmaEIzFpDdc13H+PGFBzimxZxxjsgy2ZHTvoF2DmTUE3pz6GiPb8YBEyiBVnpSPhyDvbc1So4VPFl321538A9ohxk005PNQAAAAASUVORK5CYII='
-							},
-							{
-								name: 'Fish Account',
-								icon: 'image://data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAOkSURBVHgBzVdbSBRhFP7OmLuVGQYFbiBO0IUiaS0D8aH0rYLCoJtGdIGCoBv00Eth0fWhYjWhG5QV2BIJEli9hGYEQZoThIIFThdUMGjBG+7a/p1/1ss6O7vOeKk+WHbmnPn/c/nPOf85BJvw5hemITi7UAHWCwgvQCog0iJcCvCzTkRaWOA1XH3VWl11wM6+NN4H3txdqqLQCQHaOyrQxsZEFeHk8Dmtzq8n/C4eQ1qshGaVCIETmASIFF84ufdcPI9YKiCtZgtqmatiaqALlyiw8oYSIzyv2DvFwiVUClKtd+12r5kxxgPTYLkZMZ4YUUCeOQ3MappG4VFK9GcPx8TIEciA+wvCJVQllFIy/GJ4wHC9Qm12Vi9bkomTx/egu6cPjR+aUVvfiI7OLjgFH8UieRRJ8sWTkeVjVbx2FgaDIRw7XGQokpe7Crt3bsSa1cvR8KEFPayUbfwm6vz+6SV58/elUXDgFxzgccUlVkCNoTc0NaP18zfUvnnP3mkZb5sAx8KiGWxSIRyiO46lOdkrjF/xjg1o7+jCwSMXEh1PpLSTEPlmjnSpJ31BzIqFTLtTftoQMh4WehagpqoUmzeti/8RYX2SJzNLRmR6NL3maVnM2S5dnIny66csXZ8IBety0KA1o6Pjp4V84jQUpJoZ0n0S0lL/g8uGFXfLzxhWTQTXL59E6pzZFhyhJnkyVl4xk1PnpCBndcTNbleyYYXbnYyJQu4RDIXQ2BQTmDMVqwWVT15gqlG8Y6MlXYk0E2MhLZ5q1NU3WJEDCkjoZmoRp9Ewurv7cPbirbipZwftHIC371VZcEhXRBgfzeThSJeF5dDR83j2vJ5z+ryx0URwrezhSGBHQxA04vt/H0Hcj2asyV6Odi4g5tSRWXDnhsyG+bCLq6WP4sYU95b7h0pxsM1Jv7eF0/LQgW0JFZHeKrl40yryRxVw9c+L3IZ5RT5+OA4HkF6StWFUYBfHSS9av3zFs5r6hIIN4dy0am8r988w3sLCB4UcKRCNyicv2dUPHa0Bd8zyz7iOO398CqRnZEl35NpdPzc1he+xQZTdfIyq6ldwAgGUam/8fvkc1ZJxLAwM/LuWTKurCAghClg9HdOHoaZ0dEYYU4q1d35dDNLWaVJC5+lqq3k2+P8GEwnDE253tgwWTBJyj8iZW8+ItoZTHvDOEmEvbIMCXOUewCV8Ex5OYxQxxvOZhVxB8nnVKu5m1OjxnAXq/K/xi6Px/A8nK4h6OiGYxwAAAABJRU5ErkJggg=='
-							},
-							{
-								name: 'Shrimp Account',
-								icon: 'image://data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQ1SURBVHgBzVdvaBxFFP/N9nIxqQcpNpALhF6hWloacmlSCAWb6zcbpaREY4loxYJVEFNjEaRKWqwo2Ega+iGJVLRCiZVIMNr2iySXgCgkZiu1klToBsUEGvDgcqm30Rvfm+Tau73dy94lpf192d2Z2fd7/+bNPAGXCIYaS2AWN2pAvYQMAiIAyJKlWRGhd0MIoSckwvAuDOjDAxE3csVKC4J1BwOaJo5KiEN3CV0IFuKzREHipD7cZ2Rd5zTBFmuLRe1S4ihWASG0zkRB7KSTR2wVYKvJgiGaDWBtYEiv3GvnDS2DfHdLcI3JGQFhiqHgrmeC1ok0D9wDy63I8MQdBTjmIl40sRpy38PF8JeXqufU1DSi8wsOStyuTuaEJzmqEi6FPPR4DXy+9Ri8NLIiacuz+7B1yybQ/5iZmVPjR15qUu/d5/oxM3sr9ZeAtri+nZ5v8IfygHK9Jm5aBXd8+CZefu09W+KandsUCaOHSMYnfstYU+4vxYnjr6D9VLdVCVAoNnMo1vGHv6Kyk1RJSxDTXER5WSn2N9QjGospYbXV29X3668ehBlfREfXF+gf+J6Ez9kqySGYvDGN428dzvTkf0LM/nHtigiGXiwRZvxvOKCmehtqd25fEhiNYYwsnSKhuaD37DvkyVPW4QjlwmYPmdqY7efxZUKOc2hPLbn9acqNYrjFhYtX1JNDaklKVdo9QspQtoLc0vxEzqRJ9Hzaj8HvRiiX2ux3hEC9h0pRFaS9AE6yI4ebkCui0QWc7jqP4ZExfHL2XbS9/bHtOiER1GjvBOwm9zfsyYucMXg5rJK2l8g/OnMef83cclgpAx6nE+4pUiBXsMXfXAqr+sGkFy5eVt7IghKP0wxvOSewcLYwCSbheDNhrvAsXybSvMAZa088R/s5jDH9uqpyHR+0oZeIh8jyPBHRKBMM6yhnrF3Wjk/8iqHRMVV2W5r3of39HqXssdYXkB+E4ZEJXBWWKsjgClZLRSgV3ee+VsnJMZ68YWB+PkYx5wo3gnxAZ4dOHhDDdpPjP19P++a476L6zzXD5ytSBco5u91qkAgvl2Lzpl0efNvflZYPTza1Zhwqq+L33t6wbtbQ/ymr2OEnw+pSJ/kwMk0Tu+uq7oztpVI8+fu0SkA+DZ9rbkDlji3KK8lj2DU5XVr10a++dDyOkzjW+rxKuFTwtrOWZj7tTlPRcbiEZCqQehzP/nktUlZRucHqBcYPP/2i3O73b8TGR5aiVFhYkCFw66ObaNxL669iRXLgjD7a18fvKVcyyoV4POuVjK1+jLagE9h6F0d12pXsvl9K067l+o99hvxXHCAfGVh7GNRdHbD2Bg9eY8JQnigsrOZkwSrBMpZibt8jumpOqVqeoHJ9CK4hItRBfw6v7My7Oc1QRLXnDzVSBeErXJWACKS250Ro0FOnj5za8/8BQDjfQrxgKhkAAAAASUVORK5CYII='
-							}
-						]
-					} ),
+					tooltip: false,
+					legend: false,
 					grid: {
 						left: '3%',
 						right: '3%',
@@ -1324,11 +1305,11 @@
 							name: 'Polkadot And Kusama Holder Distribution',
 							type: 'pie',
 							center: [
-								'30%',
-								'50%'
+								'45%',
+								'45%'
 							],
 							radius: [
-								'65%',
+								'68%',
 								'85%'
 							],
 							avoidLabelOverlap: false,
@@ -1343,31 +1324,40 @@
 									color: '#ffffff',
 									fontSize: 15,
 									fontWeight: '500',
-									formatter: '{per|{d}%}\n{b|{b}}\n{c|{c}}',
+									formatter: function ( param ) {
+										var value = NumberUtil.formatWithCommas( param.value );
+
+										return '{per|' + param.percent + '%}\n{b|' + param.name + '}\n{c|' + value + '}';
+									},
 									rich: {
 										per: {
 											fontFamily: fontFamily,
-											fontWeight: '600',
+											fontWeight: 700,
 											color: '#e10266',
-											fontSize: 40,
-											align: 'center',
-											padding: [
-												0,
-												0,
-												15,
-												0
-											]
+											fontSize: 32,
+											align: 'center'
 										},
 										b: {
 											fontFamily: fontFamily,
-											color: '#ffffff',
+											fontWeight: 500,
+											color: '#cccccc',
 											fontSize: 17,
-											align: 'center'
+											align: 'center',
+											padding: [
+												10,
+												0,
+												10,
+												0
+											]
 										},
 										c: {
 											fontFamily: fontFamily,
-											color: '#cccccc',
-											fontSize: 16,
+											fontWeight: 700,
+											color: '#ffffff',
+											fontSize: 17,
+											formatter: function ( name ) {
+												return '$ ' + name;
+											},
 											align: 'center'
 										}
 									}
@@ -1396,63 +1386,28 @@
 			if ( window.innerWidth < 768 ) {
 				newOptions['series'][0] = {
 					center: [
-						'35%',
+						'50%',
 						'50%'
 					],
 					radius: [
-						'50%',
-						'70%'
+						'70%',
+						'90%'
 					],
-					label: {
-						fontSize: 11,
-						lineHeight: 24,
-						formatter: function ( params ) {
-							return `${params.percent}%`;
-						}
-					},
-					labelLine: {
-						length: 5,
-					},
 					emphasis: {
 						label: {
 							rich: {
 								per: {
-									fontSize: 30
+									fontSize: 28
 								},
 								b: {
-									fontSize: 15,
+									fontSize: 17,
 								},
 								c: {
-									fontSize: 14,
+									fontSize: 17,
 								}
 							}
 						}
 					},
-				};
-				newOptions['legend'] = {
-					top: 0,
-					right: 0,
-					textStyle: {
-						fontSize: 11,
-						itemWidth: 15,
-						itemHeight: 15,
-						margin: [
-							0,
-							0,
-							0,
-							0
-						]
-					},
-				}
-			} else {
-				newOptions['series'][0] = {
-					label: {
-						fontSize: 17,
-						lineHeight: 30,
-						formatter: function ( params ) {
-							return `${params.name} ${params.percent}%`;
-						}
-					}
 				}
 			}
 
@@ -1475,9 +1430,6 @@
 					{
 						value: 31.0,
 						name: 'Infrastructure deployment and continued operation',
-						label: {
-							color: colors[0]
-						},
 						labelLine: {
 							lineStyle: {
 								color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
@@ -1497,9 +1449,6 @@
 					{
 						value: 12.2,
 						name: 'Software development (wallets and wallet integration, clients and client upgrades)',
-						label: {
-							color: colors[1]
-						},
 						labelLine: {
 							lineStyle: {
 								color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
@@ -1518,52 +1467,31 @@
 					},
 					{
 						value: 8.5,
-						name: 'Community events and outreach (meetups, hackerspaces).',
-						label: {
-							color: colors[2]
-						},
+						name: 'Community events and outreach (meetups, hackerspaces).'
 					},
 					{
 						value: 8.5,
-						name: 'Marketing activities (advertising, paid features, collaborations)',
-						label: {
-							color: colors[3]
-						},
+						name: 'Marketing activities (advertising, paid features, collaborations)'
 					},
 					{
 						value: 9.4,
 						name: 'Bounties',
-						label: {
-							color: colors[4]
-						},
 					},
 					{
 						value: 13.0,
-						name: 'Others',
-						label: {
-							color: colors[5]
-						},
+						name: 'Others'
 					},
 					{
 						value: 13.5,
-						name: 'Liquidity provision ',
-						label: {
-							color: colors[6]
-						},
+						name: 'Liquidity provision '
 					},
 					{
 						value: 2.1,
-						name: 'Network security operations (monitoring services, anti-scam activities, continuous auditing).',
-						label: {
-							color: colors[7]
-						},
+						name: 'Network security operations (monitoring services, anti-scam activities, continuous auditing).'
 					},
 					{
 						value: 1.8,
 						name: 'Ecosystem provisions (collaborations with friendly chains).',
-						label: {
-							color: colors[8]
-						},
 						labelLine: {
 							lineStyle: {
 								color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
@@ -1586,7 +1514,7 @@
 					tooltip: $.extend( true, {}, defaultTooltipStyle, {
 						trigger: 'item',
 						valueFormatter: function ( value ) {
-							return NumberUtil.formatWithCommas( value );
+							return NumberUtil.formatWithCommas( value ) + '%';
 						}
 					} ),
 					legend: $.extend( true, {}, defaultLegendSettings, {
@@ -1608,8 +1536,8 @@
 								'45%'
 							],
 							radius: [
-								'40%',
-								'60%'
+								'45%',
+								'65%'
 							],
 							label: {
 								alignTo: 'edge',
@@ -1618,8 +1546,8 @@
 								color: '#ffffff',
 								fontFamily: fontFamily,
 								fontWeight: 500,
-								fontSize: 17,
-								lineHeight: 30,
+								fontSize: 13,
+								lineHeight: 28,
 								formatter: function ( params ) {
 									return `${params.name} ${params.percent}%`;
 								}
@@ -1697,7 +1625,7 @@
 				};
 				newOptions['series'][0] = {
 					label: {
-						fontSize: 17,
+						fontSize: 13,
 						lineHeight: 30,
 						formatter: function ( params ) {
 							return `${params.name} ${params.percent}%`;
@@ -1725,9 +1653,6 @@
 					{
 						value: 10.8,
 						name: 'Public infrastructure deployment and continued operation',
-						label: {
-							color: colors[0]
-						},
 						labelLine: {
 							lineStyle: {
 								color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
@@ -1747,9 +1672,6 @@
 					{
 						value: 0.5,
 						name: 'Software development (wallets and wallet integration, clients and client upgrades)',
-						label: {
-							color: colors[1]
-						},
 						labelLine: {
 							lineStyle: {
 								color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
@@ -1768,52 +1690,31 @@
 					},
 					{
 						value: 4.0,
-						name: 'Community events and outreach (meetups, hackerspaces).',
-						label: {
-							color: colors[2]
-						},
+						name: 'Community events and outreach (meetups, hackerspaces).'
 					},
 					{
 						value: 2.0,
-						name: 'Marketing activities (advertising, paid features, collaborations)',
-						label: {
-							color: colors[3]
-						},
+						name: 'Marketing activities (advertising, paid features, collaborations)'
 					},
 					{
 						value: 73.2,
-						name: 'Bounties',
-						label: {
-							color: colors[4]
-						},
+						name: 'Bounties'
 					},
 					{
 						value: 0.9,
-						name: 'Others',
-						label: {
-							color: colors[5]
-						},
+						name: 'Others'
 					},
 					{
 						value: 0.0,
-						name: 'Liquidity provision ',
-						label: {
-							color: colors[6]
-						},
+						name: 'Liquidity provision '
 					},
 					{
 						value: 7.3,
-						name: 'Network security operations (monitoring services, anti-scam activities, continuous auditing).',
-						label: {
-							color: colors[7]
-						},
+						name: 'Network security operations (monitoring services, anti-scam activities, continuous auditing).'
 					},
 					{
 						value: 1.4,
 						name: 'Ecosystem provisions (collaborations with friendly chains).',
-						label: {
-							color: colors[8]
-						},
 						labelLine: {
 							lineStyle: {
 								color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
@@ -1836,7 +1737,7 @@
 					tooltip: $.extend( true, {}, defaultTooltipStyle, {
 						trigger: 'item',
 						valueFormatter: function ( value ) {
-							return NumberUtil.formatWithCommas( value );
+							return NumberUtil.formatWithCommas( value ) + '%';
 						}
 					} ),
 					legend: $.extend( true, {}, defaultLegendSettings, {
@@ -1858,8 +1759,8 @@
 								'45%'
 							],
 							radius: [
-								'40%',
-								'60%'
+								'45%',
+								'65%'
 							],
 							label: {
 								alignTo: 'edge',
@@ -1868,7 +1769,7 @@
 								color: '#ffffff',
 								fontFamily: fontFamily,
 								fontWeight: 500,
-								fontSize: 17,
+								fontSize: 13,
 								lineHeight: 30,
 								formatter: function ( params ) {
 									return `${params.name} ${params.percent}%`;
@@ -1947,8 +1848,8 @@
 				};
 				newOptions['series'][0] = {
 					label: {
-						fontSize: 17,
-						lineHeight: 30,
+						fontSize: 13,
+						lineHeight: 28,
 						formatter: function ( params ) {
 							return `${params.name} ${params.percent}%`;
 						}
@@ -1980,11 +1881,13 @@
 					'#f8b00c'
 				],
 				chartExtraOptions = {
-					legend: {
-						show: true,
-					},
+					legend: defaultLegendSettings,
 					grid: {
-						bottom: '13%'
+						top: '5%',
+						left: '3%',
+						right: '3%',
+						containLabel: true,
+						height: '82%'
 					},
 					yAxis: {
 						min: 0,
@@ -2088,7 +1991,7 @@
 						axisLine: {
 							show: false,
 						},
-						interval: 250000,
+						interval: 500000,
 						splitLine: {
 							lineStyle: {
 								type: [
@@ -2247,27 +2150,14 @@
 
 		function getChartOptionsSpendingDominatedKusama( chartName ) {
 			var colors = [
-					'#004bff',
-					'#e12c29',
-					'#f8b00c'
-				],
-				data = [
-					[
-						'lease_admin',
-						'general_admin',
-						'staking_admin',
-						'big_tipper',
-						'auction_admin',
-						'referendum_canceller',
-						'root',
-						'small_spender',
-						'small_tipper',
-						'treasurer',
-						'whitelisted_caller',
-						'big_spender',
-						'medium_spender'
-					],
-					[
+				'#004bff',
+				'#e12c29',
+				'#f8b00c'
+			];
+			var series = [
+				{
+					name: locate.Approved,
+					data: [
 						1,
 						0,
 						2,
@@ -2281,8 +2171,11 @@
 						19,
 						14,
 						22
-					],
-					[
+					]
+				},
+				{
+					name: locate.notApproved,
+					data: [
 						0,
 						2,
 						0,
@@ -2296,8 +2189,11 @@
 						7,
 						11,
 						6
-					],
-					[
+					]
+				},
+				{
+					name: locate.pending,
+					data: [
 						0,
 						0,
 						0,
@@ -2312,8 +2208,24 @@
 						4,
 						4
 					]
-				],
-				baseOptions = {
+				}
+			];
+
+			function genFormatter( series ) {
+				return ( param ) => {
+					let sum = 0;
+					series.forEach( item => {
+						sum += item.data[param.dataIndex];
+					} );
+					return sum
+				}
+			}
+
+			function isLastSeries( index ) {
+				return index === series.length - 1
+			}
+
+			var baseOptions = {
 					color: colors,
 					textStyle: {
 						fontFamily: fontFamily,
@@ -2329,7 +2241,21 @@
 					},
 					xAxis: {
 						type: 'category',
-						data: data[0],
+						data: [
+							'lease_admin',
+							'general_admin',
+							'staking_admin',
+							'big_tipper',
+							'auction_admin',
+							'referendum_canceller',
+							'root',
+							'small_spender',
+							'small_tipper',
+							'treasurer',
+							'whitelisted_caller',
+							'big_spender',
+							'medium_spender'
+						],
 						splitLine: {
 							show: false,
 							lineStyle: {
@@ -2379,29 +2305,18 @@
 							color: '#cccccc'
 						}
 					},
-					series: [
-						{
-							name: locate.Approved,
-							data: data[1],
-							type: 'bar',
-							stack: 'Total',
-							barMaxWidth: 40
+					series: series.map( ( item, index ) => Object.assign( item, {
+						type: 'bar',
+						stack: true,
+						label: {
+							show: isLastSeries( index ) ? true : false,
+							formatter: genFormatter( series ),
+							fontSize: 16,
+							color: '#ffffff',
+							position: 'top'
 						},
-						{
-							name: locate.notApproved,
-							data: data[2],
-							type: 'bar',
-							stack: 'Total',
-							barMaxWidth: 40
-						},
-						{
-							name: locate.pending,
-							data: data[3],
-							type: 'bar',
-							stack: 'Total',
-							barMaxWidth: 40
-						}
-					]
+						barMaxWidth: 40
+					} ) )
 				},
 				responsiveOptions = getChartResponsiveOptionsSpendingDominatedKusama();
 
@@ -2637,7 +2552,7 @@
 		function getChartOptionsWeb3FoundationGrants( chartName ) {
 			var colors = [
 					'#004bff',
-					'#e6007a'
+					'#e12c29'
 				],
 				data = [
 					[
@@ -2815,8 +2730,8 @@
 							barMaxWidth: 102,
 							itemStyle: {
 								borderRadius: [
-									8,
-									8,
+									2,
+									2,
 									0,
 									0
 								]
@@ -2832,9 +2747,9 @@
 								fontWeight: 700,
 								fontSize: 16,
 								position: 'top',
-								color: colors[1],
+								color: '#ffffff',
 							},
-							smooth: false,
+							smooth: true,
 							showSymbol: true,
 							symbolSize: 16, //symbol: 'path://M11 8C11 9.65685 9.65685 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5C9.65685 5 11 6.34315 11 8 M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM8 11C9.65685 11 11 9.65685 11 8C11 6.34315 9.65685 5 8 5C6.34315 5 5 6.34315 5 8C5 9.65685 6.34315 11 8 11Z',
 							symbol: 'image://data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFzSURBVHgBpVMxS8NAGH13uTSgtkhrCwpqVXCyix100cFMSpzFSRdH166li0N/g4OTg2ulTl10EIdOnUTQ0kGhbVwqQtMm511ECdeisT744PLue++Sl+8IFDSQm9GgpzVg3gOPfrLEJoDN0KsmUewE+8nX4gHHRgyTqy7cDH6ABq2WAq0SFJxvAykeR8wCeAKhQOxpsJI0ofJRnhxeLMETTXhZ36qFXLQHto8RoAMl1ocunPjAZrx8sGuYS1ty3btr3LY3Ty/UHhFymgrpwKvHr4/2jO1lCxFtTJa+sWDGy4eW2tcHTdNh326sza4PcOaiqXJE/GaKf4JSkI5KOpXHisp1RQ5D5G1K4NVV2t45u+zePFXguO+yulf3pdchIRK4NpGjy8AsjAAG/ZzOofisgdfwR0hNCoU3P8QUIlU5nmHFruht+ZrAZeLIR5pwsmIz89vJUrwSvExBNJGfcIURB58SKfszQuF1+iB1Q1QSJy/B/g/pm3cqp4f8DgAAAABJRU5ErkJggg==',
@@ -2902,53 +2817,27 @@
 				],
 				data = [
 					[
-						'Polkadot',
-						'Moonbeam',
-						'Nodle',
-						'Shiden',
-						'Astar',
-						'Kusama',
-						'Moonriver',
-						'Acala',
-						'Bifrost Kusama',
-						'Karura',
-						'Quartz',
-						'Statemine',
-						'Parallel',
-						'Centrifuge',
-						'Calamari',
-						'Altair',
-						'Pioneer',
-						'Parallel Heiko',
-						'Unique',
-						'Hydradx',
-						'Khala',
-						'Spiritnet',
-						'Basilisk',
-						'Efinity',
-						'Kintsugi',
-						'Zeitgeist',
-						'Integritee',
-						'Interlay',
-						'Equilibrium',
-						'Turing',
-						'Bajun',
-						'Snow',
-						'Crab',
-						'Bifrost',
-						'Datahighway',
-						'Origintrail',
-						'Shadow',
-						'Phala',
-						'Robonomics',
-						'Picasso',
-						'Clv',
-						'Mangatax',
-						'Crust Parachain',
-						'Statemint',
-						'Encointer',
-						'Darwinia Parachain',
-						'Composable'
+						'moonbeam',
+						'polkadot',
+						'nodle',
+						'shiden',
+						'astar',
+						'kusama',
+						'moonriver',
+						'acala',
+						'bifrost-kusama',
+						'karura',
+						'quartz',
+						'statemine',
+						'parallel',
+						'centrifuge',
+						'calamari',
+						'altair',
+						'pioneer',
+						'parallel-heiko',
+						'unique',
+						'hydradx',
+						'khala'
 					],
 					[
 						'1091399',
@@ -2971,33 +2860,7 @@
 						'0',
 						'24007',
 						'23112',
-						'0',
-						'18288',
-						'0',
-						'16207',
-						'0',
-						'15634',
-						'0',
-						'11241',
-						'9522',
-						'0',
-						'0',
-						'0',
-						'0',
-						'3968',
-						'0',
-						'3538',
-						'0',
-						'3193',
-						'0',
-						'0',
-						'2209',
-						'0',
-						'996',
-						'617',
-						'0',
-						'22',
-						'7'
+						'0'
 					],
 					[
 						'0',
@@ -3020,33 +2883,7 @@
 						'24060',
 						'0',
 						'0',
-						'21391',
-						'0',
-						'16990',
-						'0',
-						'16016',
-						'0',
-						'13003',
-						'0',
-						'0',
-						'7617',
-						'6106',
-						'5924',
-						'5192',
-						'0',
-						'3746',
-						'0',
-						'3202',
-						'0',
-						'2978',
-						'2841',
-						'0',
-						'1597',
-						'0',
-						'0',
-						'65',
-						'0',
-						'0'
+						'21391'
 					]
 				],
 				baseOptions = {
@@ -3122,7 +2959,7 @@
 							data: data[1],
 							type: 'bar',
 							stack: 'Total',
-							barMaxWidth: 20,
+							barMaxWidth: 40,
 							itemStyle: {
 								borderRadius: [
 									2,
@@ -3137,7 +2974,7 @@
 							data: data[2],
 							type: 'bar',
 							stack: 'Total',
-							barMaxWidth: 20,
+							barMaxWidth: 40,
 							itemStyle: {
 								borderRadius: [
 									2,
@@ -3503,11 +3340,11 @@
 							type: 'pie',
 							center: [
 								'50%',
-								'45%'
+								'50%'
 							],
 							radius: [
-								'40%',
-								'60%'
+								'55%',
+								'70%'
 							],
 							label: {
 								alignTo: 'edge',
@@ -3646,7 +3483,7 @@
 				],
 				chartExtraOptions = {
 					yAxis: {
-						interval: 50000000,
+						interval: 25000000,
 					}
 				};
 
@@ -4301,10 +4138,6 @@
 		function getChartOptionsNftMarketplace( chartName, jsonData ) {
 			var datasets = [
 					{
-						name: 'raresama',
-						label: 'Raresama'
-					},
-					{
 						name: 'singular_ksm',
 						label: 'Singular KSM'
 					},
@@ -4338,7 +4171,6 @@
 					}
 				],
 				colors = [
-					'#6b49b5',
 					'#e6007a',
 					'#429df4',
 					'#9ee542',
@@ -4469,23 +4301,7 @@
 		function getChartResponsiveOptionsNftMarketplace() {
 			var newOptions = {};
 
-			if ( window.innerWidth > 767 ) {
-				newOptions = {
-					yAxis: {
-						axisLabel: {
-							formatter: function ( value ) {
-								return '$' + NumberUtil.formatWithCommas( value );
-							}
-						}
-					},
-					xAxis: {
-						splitNumber: 5,
-						axisLabel: {
-							formatter: dateFormatter
-						}
-					}
-				};
-			} else {
+			if ( window.innerWidth < 767 ) {
 				newOptions = {
 					yAxis: {
 						axisLabel: {
@@ -4501,14 +4317,22 @@
 						}
 					}
 				};
-
-				if ( window.innerWidth < 460 ) {
-					$.extend( newOptions, {
-						xAxis: {
-							splitNumber: 3
+			} else {
+				newOptions = {
+					yAxis: {
+						axisLabel: {
+							formatter: function ( value ) {
+								return '$' + NumberUtil.formatWithCommas( value );
+							}
 						}
-					} )
-				}
+					},
+					xAxis: {
+						splitNumber: 5,
+						axisLabel: {
+							formatter: dateFormatter
+						}
+					}
+				};
 			}
 
 			return newOptions;
@@ -4552,7 +4376,7 @@
 						bottom: '13%'
 					},
 					yAxis: {
-						interval: 100000
+						type: 'log'
 					},
 					xAxis: {
 						axisLine: {
@@ -4952,7 +4776,7 @@
 							fontFamily: fontFamily,
 							fontSize: 11,
 							fontWeight: 500,
-							color: '#ccc'
+							color: '#cccccc'
 						}
 					},
 					yAxis: [
@@ -4980,12 +4804,12 @@
 							},
 							axisPointer: {
 								label: {
-									color: '#fff',
+									color: '#ffffff',
 									backgroundColor: colors[1]
 								}
 							},
 							axisLabel: {
-								color: '#ccc'
+								color: '#cccccc'
 							}
 						},
 						{
@@ -5011,12 +4835,12 @@
 							},
 							axisPointer: {
 								label: {
-									color: '#fff',
+									color: '#ffffff',
 									backgroundColor: colors[0]
 								}
 							},
 							axisLabel: {
-								color: '#ccc'
+								color: '#cccccc'
 							}
 						}
 					],

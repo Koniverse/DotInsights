@@ -20,3 +20,8 @@
 	--hint-background: #{$primary-color};
 	--hint-text: #fff;
 }
+
+.#{$hintPrefix}blue {
+	--hint-background: #18234E;
+	--hint-text: #fff;
+}

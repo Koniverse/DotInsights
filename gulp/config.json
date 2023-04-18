@@ -50,6 +50,12 @@
       ]
     },
     {
+      "name": "sidebar-menu",
+      "files": [
+        "src/assets/js-code/sidebar-menu.js"
+      ]
+    },
+    {
       "name": "projects",
       "files": [
         "src/assets/js-code/projects.js"
