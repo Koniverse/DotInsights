@@ -300,20 +300,23 @@
     }
 
     .block-table-widget {
-        min-width: 500px;
+        //min-width: 500px;
+
+        td:last-child {
+            width: 85px;
+        }
     }
 
     .block-table-heading {
-        padding: 25px 30px;
+        padding: 20px 30px;
     }
 
     .block-table-body {
-        padding: 0 25px;
-        overflow-x: auto;
+        padding: 0 20px;
     }
 
     .block-table-footer {
-        padding: 0 25px 30px;
+        padding: 0 20px 30px;
     }
 
     thead {
@@ -371,6 +374,8 @@
         }
 
         &--count {
+            font-size: 16px;
+            font-weight: 700;
             text-align: right;
         }
     }
@@ -1198,5 +1203,151 @@
                 }
             }
         }
+    }
+}
+
+
+.sidebar {
+    display: none;
+}
+
+@media screen and (min-width: 1900px) {
+    .main-content {
+        display: flex;
+        justify-content: center;
+    }
+
+    .main-content-inner {
+        max-width: 1200px;
+    }
+
+    .sidebar {
+        display: block;
+        width: 330px;
+        height: calc(100vh - 154px);
+        overflow-y: auto;
+        z-index: 999999;
+    }
+
+    .sticky-section {
+        width: 300px;
+        max-width: 300px;
+    }
+
+    .table-contents-list {
+        margin: 0;
+        padding: 0 30px;
+
+        a {
+            display: inline !important;
+            font-size: 15px;
+            font-weight: 700;
+            color: #fff;
+
+            &:hover {
+                color: $primary-color !important;
+            }
+        }
+
+        li {
+            list-style-type: none;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box !important;
+            -webkit-line-clamp: 1; /* number of lines to show */
+            -webkit-box-orient: vertical;
+
+            &.active {
+                > a {
+                    color: $primary-color;
+                }
+            }
+        }
+
+        ul {
+            margin: 6px 0 0;
+
+            li {
+                line-height: 28px;
+                margin: 3px 0 0 !important;
+            }
+
+            a {
+                font-size: 14px;
+                font-weight: 500;
+                color: $body-color;
+            }
+        }
+    }
+
+    .sidebar-widget-title {
+        font-size: 20px;
+        line-height: 1.5;
+        max-width: 100%;
+        display: inline-block;
+        background: -webkit-linear-gradient(96.41deg, #3ee200 3.81%, #ecff0c 40.3%, #4cf371 96.16%);
+        background: linear-gradient(96.41deg, #3ee200 3.81%, #ecff0c 40.3%, #4cf371 96.16%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-fill-color: transparent;
+        padding-top: 0.1785em;
+        margin: 0 0 30px;
+    }
+
+    .report-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            + li {
+                margin-top: 30px;
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                color: #fff;
+                font-size: 16px;
+                font-weight: 700;
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+
+            img {
+                margin-right: 15px;
+            }
+        }
+    }
+
+    .btn-open-panel {
+        display: none;
+    }
+
+    .section-stablecoin,
+    .section-defi-economy {
+        > .section-shapes {
+            display: none;
+        }
+    }
+
+    .section-web3 .shape-corner-blur-1,
+    .section-web3 .shape-corner-blur-2 {
+        display: none;
+    }
+
+    .footer-shape-dot {
+        right: 0;
+    }
+
+    .footer-shape-s-circle {
+        right: 5%;
+    }
+
+    .footer-shape-03 {
+        left: -4%;
     }
 }
