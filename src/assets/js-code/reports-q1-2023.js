@@ -4361,7 +4361,7 @@
 						bottom: '13%'
 					},
 					yAxis: {
-						interval: 100000
+						type: 'log'
 					},
 					xAxis: {
 						axisLine: {
