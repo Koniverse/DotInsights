@@ -4,7 +4,7 @@
 
 		// Cache selectors
 		var lastId,
-			topMenu = $( "#sidebar-menu" ),
+			topMenu = $( "#panel" ),
 			header = $("#header"),
 			topMenuHeight = header.outerHeight() + 15, // All list items
 			menuItems = topMenu.find( "a" ), // Anchors corresponding to menu items
