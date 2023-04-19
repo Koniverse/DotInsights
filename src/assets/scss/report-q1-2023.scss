@@ -1123,11 +1123,25 @@
     }
 
     .section-ecosystem-overview {
-        padding: 142px 0 160px;
+        padding: 122px 0 40px;
+
+        .section-header {
+            .section-shape {
+                display: none;
+            }
+        }
+
+        > .section-shape {
+            display: none;
+        }
     }
 
     .section-governance-grant {
-        padding: 104px 0 240px;
+        padding: 104px 0 100px;
+
+        > .section-shape {
+            display: none;
+        }
     }
 
     .section-defi-economy {
@@ -1212,6 +1226,25 @@
                     margin-top: 20px;
                 }
             }
+        }
+    }
+
+    .table-top-10-xcm-channels-transfer-count {
+        .xcm-channel--thumbnail {
+            width: 40px;
+        }
+
+        .xcm-channel--name,
+        .xcm-channel--count, {
+            font-size: 14px;
+        }
+
+        .block-table-widget td:first-child, .block-table-widget th:first-child {
+            padding-left: 10px;
+        }
+
+        .block-table-widget td:last-child, .block-table-widget th:last-child {
+            padding-right: 10px;
         }
     }
 }

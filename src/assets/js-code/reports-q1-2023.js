@@ -2531,32 +2531,15 @@
 				newOptions['series'] = [
 					{
 						label: {
-							fontSize: 12,
-						},
-					},
-					{
-						label: {
-							fontSize: 12,
-						},
-					},
-					{
-						label: {
-							fontSize: 12,
+							fontSize: 10,
+							rotate: 90,
+							position: "outside",
+							offset: [15, 5]
 						},
 					}
 				]
 			} else {
 				newOptions['series'] = [
-					{
-						label: {
-							fontSize: 16,
-						},
-					},
-					{
-						label: {
-							fontSize: 16,
-						},
-					},
 					{
 						label: {
 							fontSize: 16,
@@ -2674,7 +2657,7 @@
 					yAxis: [
 						{
 							type: 'value',
-							name: locate.grantsEachWave,
+							name: '',
 							nameTextStyle: {
 								fontSize: 0
 							},
@@ -2706,7 +2689,7 @@
 						},
 						{
 							type: 'value',
-							name: locate.grantsCumulative,
+							name: '',
 							nameTextStyle: {
 								fontSize: 0
 							},
