@@ -97,7 +97,7 @@
 			defaultTooltipSettings = $.extend( true, {}, defaultTooltipStyle, {
 				trigger: 'axis',
 				axisPointer: {
-					type: 'cross',
+					type: 'line',
 					crossStyle: {
 						color: 'rgba(255,255,255,0.3)'
 					},
@@ -1157,26 +1157,26 @@
 
 		function getChartOptionsDotHolderDistribution( chartName ) {
 			var colors = [
-					'#e10266',
-					'#18234e',
-					'#ca93af',
-					'#f8b00c'
+					'#E10266',
+					'#18234E',
+					'#D0739D',
+					'#DE498C'
 				],
 				datasets = [
 					{
-						value: 871873088,
+						value: 871873088.53,
 						name: 'Whale Account'
 					},
 					{
-						value: 235373963,
+						value: 235373963.05,
 						name: 'Dolphin Account'
 					},
 					{
-						value: 190364757,
+						value: 190364757.93,
 						name: 'Fish Account'
 					},
 					{
-						value: 2041661,
+						value: 2041661.58,
 						name: 'Shrimp Account'
 					}
 				],
@@ -1267,26 +1267,26 @@
 
 		function getChartOptionsKsmHolderDistribution( chartName ) {
 			var colors = [
-					'#e10266',
-					'#18234e',
-					'#ca93af',
-					'#f8b00c'
+					'#A1A1A1',
+					'#18234E',
+					'#777777',
+					'#414141'
 				],
 				datasets = [
 					{
-						value: 964380884,
+						value: 9643808.85,
 						name: 'Whale Account'
 					},
 					{
-						value: 212527253,
+						value: 2125272.54,
 						name: 'Dolphin Account'
 					},
 					{
-						value: 164220346,
+						value: 1642203.46,
 						name: 'Fish Account'
 					},
 					{
-						value: 411232.854,
+						value: 4112.33,
 						name: 'Shrimp Account'
 					}
 				],
@@ -1333,7 +1333,7 @@
 										per: {
 											fontFamily: fontFamily,
 											fontWeight: 700,
-											color: '#e10266',
+											color: '#ffffff',
 											fontSize: 32,
 											align: 'center'
 										},
@@ -1912,11 +1912,25 @@
 							}
 						}
 					},
-					tooltip: {
+					tooltip: $.extend( true, {}, defaultTooltipStyle, {
+						trigger: 'axis',
+						axisPointer: {
+							type: 'line',
+							crossStyle: {
+								color: 'rgba(255,255,255,0.3)'
+							},
+							lineStyle: {
+								type: [
+									4,
+									4
+								],
+								color: 'rgba(255,255,255,0.3)'
+							}
+						},
 						valueFormatter: function ( value ) {
 							return value + '%';
 						}
-					}
+					} )
 				};
 
 			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors, null, null, chartExtraOptions );
@@ -2291,6 +2305,8 @@
 						axisLine: {
 							show: false,
 						},
+						interval: 10,
+						splitNumber: 4,
 						splitLine: {
 							lineStyle: {
 								type: [
@@ -2415,11 +2431,14 @@
 							return value + '%';
 						}
 					} ),
-					legend: defaultLegendSettings,
+					legend: {
+						show: false
+					},
 					grid: {
 						top: '5%',
 						left: '3%',
 						right: '3%',
+						bottom: '3%',
 						containLabel: true
 					},
 					xAxis: {
@@ -2491,8 +2510,8 @@
 							barMaxWidth: 40,
 							itemStyle: {
 								borderRadius: [
-									2,
-									2,
+									5,
+									5,
 									0,
 									0
 								]
@@ -2665,7 +2684,7 @@
 							axisLine: {
 								show: false,
 							},
-							interval: 200,
+							interval: 120,
 							splitLine: {
 								lineStyle: {
 									type: [
@@ -2730,8 +2749,8 @@
 							barMaxWidth: 102,
 							itemStyle: {
 								borderRadius: [
-									2,
-									2,
+									5,
+									5,
 									0,
 									0
 								]
@@ -2892,7 +2911,9 @@
 						fontFamily: fontFamily,
 						fontWeight: 500
 					},
-					tooltip: defaultTooltipSettings,
+					tooltip: $.extend( true, {}, defaultTooltipStyle, {
+						trigger: 'item'
+					} ),
 					legend: defaultLegendSettings,
 					grid: {
 						top: '5%',
@@ -2938,7 +2959,8 @@
 						axisLine: {
 							show: false,
 						},
-						interval: 250000,
+						interval: 300000,
+						splitNumber: 4,
 						splitLine: {
 							lineStyle: {
 								type: [
@@ -2962,8 +2984,8 @@
 							barMaxWidth: 40,
 							itemStyle: {
 								borderRadius: [
-									2,
-									2,
+									4,
+									4,
 									0,
 									0
 								]
@@ -2977,8 +2999,8 @@
 							barMaxWidth: 40,
 							itemStyle: {
 								borderRadius: [
-									2,
-									2,
+									4,
+									4,
 									0,
 									0
 								]
@@ -3803,6 +3825,7 @@
 							show: false
 						},
 						splitNumber: 4,
+						interval: 500000,
 						splitLine: {
 							lineStyle: {
 								type: [
@@ -3832,6 +3855,7 @@
 							show: false
 						},
 						splitNumber: 4,
+						interval: 125,
 						splitLine: {
 							lineStyle: {
 								type: [
@@ -3983,6 +4007,7 @@
 							show: false
 						},
 						splitNumber: 4,
+						interval: 250000,
 						splitLine: {
 							lineStyle: {
 								type: [
@@ -4012,6 +4037,7 @@
 							show: false
 						},
 						splitNumber: 4,
+						interval: 100,
 						splitLine: {
 							lineStyle: {
 								type: [
@@ -4228,7 +4254,7 @@
 					tooltip: {
 						trigger: 'axis',
 						axisPointer: {
-							type: 'cross',
+							type: 'line',
 							crossStyle: {
 								color: 'rgba(255,255,255,0.3)'
 							},
@@ -4482,7 +4508,8 @@
 						bottom: '13%'
 					},
 					yAxis: {
-						interval: 100000
+						interval: 200000,
+						splitNumber: 4
 					},
 					xAxis: {
 						axisLine: {
@@ -4521,7 +4548,9 @@
 
 			var baseOptions = {
 					color: colors,
-					tooltip: defaultTooltipSettings,
+					tooltip: $.extend( true, {}, defaultTooltipStyle, {
+						trigger: 'item'
+					} ),
 					textStyle: {
 						fontFamily: fontFamily,
 						fontWeight: 500
@@ -4563,7 +4592,8 @@
 							fontFamily: fontFamily,
 							fontSize: 10,
 							fontWeight: 500,
-							color: '#cccccc'
+							color: '#cccccc',
+							lineHeight: 25
 						}
 					},
 					yAxis: {
@@ -4596,7 +4626,12 @@
 							data: data,
 							name: '',
 							label: {
-								show: false,
+								show: true,
+								position: 'top',
+								fontFamily: fontFamily,
+								fontSize: 16,
+								fontWeight: 500,
+								color: '#fff'
 							},
 							barMaxWidth: 60,
 							itemStyle: {
@@ -5157,6 +5192,7 @@
 								show: false,
 							},
 							interval: 2000,
+							splitNumber: 4,
 							splitLine: {
 								lineStyle: {
 									type: [
@@ -5188,6 +5224,7 @@
 								show: false,
 							},
 							interval: 100,
+							splitNumber: 4,
 							splitLine: {
 								lineStyle: {
 									type: [
@@ -5429,7 +5466,7 @@
 				tooltip: $.extend( true, {}, defaultTooltipStyle, {
 					trigger: 'axis',
 					axisPointer: {
-						type: 'cross',
+						type: 'line',
 						crossStyle: {
 							color: 'rgba(255,255,255,0.3)'
 						},
