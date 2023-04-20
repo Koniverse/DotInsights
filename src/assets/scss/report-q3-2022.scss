@@ -1508,7 +1508,15 @@
 
 @include media-breakpoint-down(sm) {
 	.section-reports-hero {
-		padding: 100px 0 120px;
+        padding: 200px 0 120px;
+
+        .section-title {
+            font-size: 42px;
+        }
+
+        .section-sub-title {
+            font-size: 26px;
+        }
 	}
 
 	.section-ecosystem-map {

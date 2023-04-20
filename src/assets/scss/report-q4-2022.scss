@@ -1348,11 +1348,16 @@
 @include media-breakpoint-down(sm) {
 	.section-reports-hero {
 		background-size: 90% auto;
-	}
+        padding: 200px 0 120px;
 
-	.section-reports-hero {
-		padding: 100px 0 120px;
-	}
+        .section-title {
+            font-size: 42px;
+        }
+
+        .section-sub-title {
+            font-size: 26px;
+        }
+    }
 
 	.section-closing-thoughts {
 		margin: 100px 0 0;

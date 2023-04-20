@@ -28,7 +28,7 @@
 
     svg {
         margin-left: 1px;
-        
+
         *[stroke^='#'] {
             stroke: currentColor;
         }
@@ -168,6 +168,58 @@
         svg {
             width: 20px;
             height: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 1099px) {
+    .header .header-inner {
+        padding: 15px 0 !important;
+    }
+
+    .btn-open-panel {
+        display: block;
+        width: 100%;
+        position: fixed;
+        transform: translateY(0);
+        color: #fff;
+        background-color: $background-2;
+        border-radius: 0;
+        padding: 10px 32px 10px 15px;
+
+        &:before {
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1;
+            font-family: 'Font Awesome 5 Pro';
+            font-weight: 400;
+            content: '\f107';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 15px;
+            color: inherit;
+        }
+
+        &--text {
+            writing-mode: inherit;
+            text-transform: capitalize;
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing: inherit;
+            margin-top: 0;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        svg {
+            display: none;
         }
     }
 }

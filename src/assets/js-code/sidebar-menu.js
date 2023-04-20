@@ -2,10 +2,14 @@
 	function ( $ ) {
 		'use strict';
 
+		if ( window.innerWidth < 1100 ) {
+			$( '#btn-open-panel' ).css( 'top', $( '#header' ).outerHeight() );
+		}
+
 		// Cache selectors
 		var lastId,
 			topMenu = $( "#panel" ),
-			header = $("#header"),
+			header = $( "#header" ),
 			topMenuHeight = header.outerHeight() + 15, // All list items
 			menuItems = topMenu.find( "a" ), // Anchors corresponding to menu items
 			scrollItems = menuItems.map( function () {
@@ -44,9 +48,14 @@
 			if ( lastId !== id ) {
 				lastId = id;
 				// Set/remove active class
-				menuItems
-					.parent().removeClass( "active" )
-					.end().filter( "[href='#" + id + "']" ).parent().addClass( "active" );
+				menuItems.parent().removeClass( "active" );
+
+				var $activeLink = menuItems.filter( "[href='#" + id + "']" );
+
+				$activeLink.parent().addClass( "active" );
+				if ( window.innerWidth < 1100 ) {
+					$( '#btn-open-panel' ).find( '.btn-open-panel--text' ).text( $activeLink.text() );
+				}
 			}
 		} );
 	}( jQuery )
