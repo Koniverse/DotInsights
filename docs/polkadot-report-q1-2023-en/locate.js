@@ -17,7 +17,7 @@ var lang = {
 	transferAmount: 'Transfer Amount',
 	count: 'Count',
 	transferIn: 'Transfer in',
-	transferOut: 'Transfer Out',
+	transferOut: 'Transfer out',
 	xcmChannelCount: 'XCM channel count',
 	weeklyNewUsersBeta: 'Weekly New Users (Beta)',
 	weeklyNewUsersIncentivized: 'Weekly New Users (Incentivized)',
