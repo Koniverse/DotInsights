@@ -1157,10 +1157,10 @@
 
 		function getChartOptionsDotHolderDistribution( chartName ) {
 			var colors = [
-					'#E10266',
-					'#18234E',
-					'#D0739D',
-					'#DE498C'
+					'#e10266',
+					'#18234e',
+					'#d0739d',
+					'#de498c'
 				],
 				datasets = [
 					{
@@ -1267,8 +1267,8 @@
 
 		function getChartOptionsKsmHolderDistribution( chartName ) {
 			var colors = [
-					'#A1A1A1',
-					'#18234E',
+					'#a1a1a1',
+					'#18234e',
 					'#777777',
 					'#414141'
 				],
@@ -1467,7 +1467,7 @@
 					},
 					{
 						value: 8.5,
-						name: 'Community events and outreach (meetups, hackerspaces).'
+						name: 'Community events and outreach (meetups, hackerspaces)'
 					},
 					{
 						value: 8.5,
@@ -1487,11 +1487,11 @@
 					},
 					{
 						value: 2.1,
-						name: 'Network security operations (monitoring services, anti-scam activities, continuous auditing).'
+						name: 'Network security operations (monitoring services, anti-scam activities, continuous auditing)'
 					},
 					{
 						value: 1.8,
-						name: 'Ecosystem provisions (collaborations with friendly chains).',
+						name: 'Ecosystem provisions (collaborations with friendly chains)',
 						labelLine: {
 							lineStyle: {
 								color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
@@ -1690,7 +1690,7 @@
 					},
 					{
 						value: 4.0,
-						name: 'Community events and outreach (meetups, hackerspaces).'
+						name: 'Community events and outreach (meetups, hackerspaces)'
 					},
 					{
 						value: 2.0,
@@ -1706,15 +1706,15 @@
 					},
 					{
 						value: 0.0,
-						name: 'Liquidity provision '
+						name: 'Liquidity provision'
 					},
 					{
 						value: 7.3,
-						name: 'Network security operations (monitoring services, anti-scam activities, continuous auditing).'
+						name: 'Network security operations (monitoring services, anti-scam activities, continuous auditing)'
 					},
 					{
 						value: 1.4,
-						name: 'Ecosystem provisions (collaborations with friendly chains).',
+						name: 'Ecosystem provisions (collaborations with friendly chains)',
 						labelLine: {
 							lineStyle: {
 								color: new echarts.graphic.LinearGradient( 0, 0, 1, 1, [
@@ -2256,19 +2256,19 @@
 					xAxis: {
 						type: 'category',
 						data: [
-							'lease_admin',
-							'general_admin',
-							'staking_admin',
-							'big_tipper',
-							'auction_admin',
-							'referendum_canceller',
-							'root',
-							'small_spender',
-							'small_tipper',
-							'treasurer',
-							'whitelisted_caller',
-							'big_spender',
-							'medium_spender'
+							'Lease Admin',
+							'General Admin',
+							'Staking Admin',
+							'Big Tipper',
+							'Auction Admin',
+							'Referendum Canceller',
+							'Root',
+							'Small Spender',
+							'Small Tipper',
+							'Treasurer',
+							'Whitelisted Caller',
+							'Big Spender',
+							'Medium Spender'
 						],
 						splitLine: {
 							show: false,
@@ -2389,19 +2389,19 @@
 				],
 				data = [
 					[
-						'lease_admin',
-						'general_admin',
-						'staking_admin',
-						'big_tipper',
-						'auction_admin',
-						'referendum_canceller',
-						'root',
-						'small_spender',
-						'small_tipper',
-						'treasurer',
-						'whitelisted_caller',
-						'big_spender',
-						'medium_spender'
+						'Lease Admin',
+						'General Admin',
+						'Staking Admin',
+						'Big Tipper',
+						'Auction Admin',
+						'Referendum Canceller',
+						'Root',
+						'Small Spender',
+						'Small Tipper',
+						'Treasurer',
+						'Whitelisted Caller',
+						'Big Spender',
+						'Medium Spender'
 					],
 					[
 						0.16,
@@ -2534,7 +2534,10 @@
 							fontSize: 10,
 							rotate: 90,
 							position: "outside",
-							offset: [15, 5]
+							offset: [
+								15,
+								5
+							]
 						},
 					}
 				]
@@ -2819,27 +2822,27 @@
 				],
 				data = [
 					[
-						'moonbeam',
-						'polkadot',
-						'nodle',
-						'shiden',
-						'astar',
-						'kusama',
-						'moonriver',
-						'acala',
-						'bifrost-kusama',
-						'karura',
-						'quartz',
-						'statemine',
-						'parallel',
-						'centrifuge',
-						'calamari',
-						'altair',
-						'pioneer',
-						'parallel-heiko',
-						'unique',
-						'hydradx',
-						'khala'
+						'Moonbeam',
+						'Polkadot',
+						'Nodle',
+						'Shiden',
+						'Astar',
+						'Kusama',
+						'Moonriver',
+						'Acala',
+						'Bifrost Kusama',
+						'Karura',
+						'Quartz',
+						'Statemine',
+						'Parallel',
+						'Centrifuge',
+						'Calamari',
+						'Altair',
+						'Pioneer',
+						'Parallel Heiko',
+						'Unique',
+						'Hydradx',
+						'Khala'
 					],
 					[
 						'1091399',
@@ -3105,7 +3108,9 @@
 						name: dataName[0],
 						label: {
 							color: colors[0],
-							formatter: '{b} ${c}'
+							formatter: function ( params ) {
+								return params.name + ' $' + NumberUtil.formatWithCommas( params.value );
+							}
 						},
 						labelLine: {
 							lineStyle: {
@@ -3127,7 +3132,9 @@
 						name: dataName[1],
 						label: {
 							color: colors[1],
-							formatter: '{b} ${c}'
+							formatter: function ( params ) {
+								return params.name + ' $' + NumberUtil.formatWithCommas( params.value );
+							}
 						},
 						labelLine: {
 							lineStyle: {
@@ -3149,7 +3156,9 @@
 						name: dataName[2],
 						label: {
 							color: colors[2],
-							formatter: '{b} ${c}'
+							formatter: function ( params ) {
+								return params.name + ' $' + NumberUtil.formatWithCommas( params.value );
+							}
 						},
 						labelLine: {
 							lineStyle: {
@@ -3171,7 +3180,9 @@
 						name: dataName[3],
 						label: {
 							color: colors[3],
-							formatter: '{b} ${c}'
+							formatter: function ( params ) {
+								return params.name + ' $' + NumberUtil.formatWithCommas( params.value );
+							}
 						},
 						labelLine: {
 							lineStyle: {
@@ -3193,7 +3204,9 @@
 						name: dataName[4],
 						label: {
 							color: colors[4],
-							formatter: '{b} ${c}'
+							formatter: function ( params ) {
+								return params.name + ' $' + NumberUtil.formatWithCommas( params.value );
+							}
 						},
 						labelLine: {
 							lineStyle: {
@@ -3215,7 +3228,9 @@
 						name: dataName[5],
 						label: {
 							color: colors[5],
-							formatter: '{b} ${c}'
+							formatter: function ( params ) {
+								return params.name + ' $' + NumberUtil.formatWithCommas( params.value );
+							}
 						},
 						labelLine: {
 							lineStyle: {
@@ -3237,7 +3252,9 @@
 						name: dataName[6],
 						label: {
 							color: colors[6],
-							formatter: '{b} ${c}'
+							formatter: function ( params ) {
+								return params.name + ' $' + NumberUtil.formatWithCommas( params.value );
+							}
 						},
 						labelLine: {
 							lineStyle: {
@@ -3259,7 +3276,9 @@
 						name: dataName[7],
 						label: {
 							color: colors[7],
-							formatter: '{b} ${c}'
+							formatter: function ( params ) {
+								return params.name + ' $' + NumberUtil.formatWithCommas( params.value );
+							}
 						},
 						labelLine: {
 							lineStyle: {
@@ -3281,7 +3300,9 @@
 						name: dataName[8],
 						label: {
 							color: colors[8],
-							formatter: '{b} ${c}'
+							formatter: function ( params ) {
+								return params.name + ' $' + NumberUtil.formatWithCommas( params.value );
+							}
 						},
 						labelLine: {
 							lineStyle: {
@@ -3303,7 +3324,9 @@
 						name: dataName[9],
 						label: {
 							color: colors[9],
-							formatter: '{b} ${c}'
+							formatter: function ( params ) {
+								return params.name + ' $' + NumberUtil.formatWithCommas( params.value );
+							}
 						},
 						labelLine: {
 							lineStyle: {
@@ -4358,8 +4381,8 @@
 						label: 'Minted'
 					},
 					{
-						name: 'player',
-						label: 'Player'
+						name: 'players',
+						label: 'Players'
 					},
 					{
 						name: 'trades',
@@ -4614,7 +4637,7 @@
 								fontFamily: fontFamily,
 								fontSize: 16,
 								fontWeight: 500,
-								color: '#fff'
+								color: '#ffffff'
 							},
 							barMaxWidth: 60,
 							itemStyle: {
