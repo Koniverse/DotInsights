@@ -356,30 +356,24 @@
 			<div class="container">
 				<div class="text-wrap">
 					<div class="text">
-						<p>Both development activities and token prices of DOT and KSM enjoyed a sharp rise
-							after
-							the New Year break, and both shared quite the same pattern throughout Q1 2023.
-							Deviations appeared in late February and March as development activities remained
-							consistent while DOT and KSM prices spiraled down to the quarter’s bottom. The reason
-							for the price fall might have been a
-							series of macroeconomic events: US regulators’ <a
-								href="https://finance.yahoo.com/news/u-regulators-warn-banks-alert-150845781.html"
-								target="_blank"
-								rel="nofollow">warning statement</a>
-							for banks on risk
-							management of crypto asset funding, Silvergate’s <a
-								href="https://www.reuters.com/technology/crypto-focused-bank-silvergate-plans-wind-down-operations-2023-03-08/"
-								target="_blank"
-								rel="nofollow">shutdown</a> and
-							Silicon Valley Bank
-							(SVB)’s <a
-								href="https://www.reuters.com/business/finance/global-markets-banks-wrapup-1-2023-03-10/"
-								target="_blank" rel="nofollow">collapse</a>.
+						<p>
+							Overall, DOT price correlated moderately with staking ratio (Pearson’s correlation
+							coefficient r = 0.47). However, fluctuations in price sometimes preceded those in staking
+							ratio, such as in late-November 2022, late-January 2023, and early May 2023. The drastic
+							drop from 48.68% to 40.78% in staking ratio on May 4 led to DOT inflation rate falling from
+							7.37% to 6.58%, and reward rate rising from 15.14% to 16.13%. In <a
+							href="https://research.web3.foundation/Polkadot/overview/token-economics"
+							target="_blank"
+							rel="nofollow">theory</a>, when staking ratio
+							drops below the ideal threshold of 50%, inflation rate goes down and reward rate goes up to
+							incentivize token holders to stake more.
 						</p>
-						<p>Starting March 10, however, along with the recovery of the whole crypto space, DOT
-							and
-							KSM prices bounced back roughly 30%. Development activities also shot up and peaked at
-							90.27 points in this period.
+						<p>
+							By contrast, there was no apparent correlation between staking ratio and daily DOT rewards
+							(Pearson’s correlation coefficient r = -0.003). The latter had four extreme peaks (on
+							December 5, January 19, March 22, and April 27, respectively), which occurred because
+							multiple validators with high total stake received rewards. Other than that, the reward
+							patterns were relatively stable throughout the period.
 						</p>
 					</div>
 				</div>
@@ -404,33 +398,115 @@
 
 				<div class="text-wrap">
 					<div class="text">
-						<p>Both development activities and token prices of DOT and KSM enjoyed a sharp rise
-							after
-							the New Year break, and both shared quite the same pattern throughout Q1 2023.
-							Deviations appeared in late February and March as development activities remained
-							consistent while DOT and KSM prices spiraled down to the quarter’s bottom. The reason
-							for the price fall might have been a
-							series of macroeconomic events: US regulators’ <a
-								href="https://finance.yahoo.com/news/u-regulators-warn-banks-alert-150845781.html"
-								target="_blank"
-								rel="nofollow">warning statement</a>
-							for banks on risk
-							management of crypto asset funding, Silvergate’s <a
-								href="https://www.reuters.com/technology/crypto-focused-bank-silvergate-plans-wind-down-operations-2023-03-08/"
-								target="_blank"
-								rel="nofollow">shutdown</a> and
-							Silicon Valley Bank
-							(SVB)’s <a
-								href="https://www.reuters.com/business/finance/global-markets-banks-wrapup-1-2023-03-10/"
-								target="_blank" rel="nofollow">collapse</a>.
+						<p>
+							DOT total supply increased steadily from 1.25B on November 1, 2022 to 1.32B on May 31, 2023,
+							with an average rate of 0.19% in weekly increments. Total DOT locked in parachain leases
+							rose at a slower rate from 120.01M to 121.43M – that is, from 9.62% to 9.21% of the supply.
+							The two metrics shared a highly similar pattern (Pearson’s correlation coefficient r =
+							0.95).
 						</p>
-						<p>Starting March 10, however, along with the recovery of the whole crypto space, DOT
-							and
-							KSM prices bounced back roughly 30%. Development activities also shot up and peaked at
-							90.27 points in this period.
+						<p>
+							Unlike supply and total DOT locked in parachains, total stake experienced more fluctuations,
+							starting at 638.13M (51.13% staking ratio) on November 1, 2022 and ending up at 569.13M
+							(43.14% staking ratio) on May 31, 2023, with a few big changes in between. Most of the big
+							changes (except for two declines in mid-March and in early May, respectively) occurred due
+							to <a
+							href="https://dotinsights.subwallet.app/polkadot-report-q1-2023-en/#decentralization-staking"
+							target="_blank"
+							rel="nofollow">whale movements</a>.
 						</p>
 					</div>
 				</div>
+
+				<div class="block-report-chart">
+					<div class="section-shape shape-blur-circle shape-position-tl"></div>
+					<div class="section-shape shape-blur-circle shape-position-mr"></div>
+					<div class="block-content">
+						<h3 class="block-chart-heading">Token Price vs. Development Activity</h3>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="price-dev-act"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Source: Santiment</p>
+								<p>Note: Development activities counted by GitHub events happening on Parity Tech's
+									public repos.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="text-wrap">
+					<div class="text">
+						<p>
+							The drops in total stake were particularly interesting. On November 25, 2022, a noticeable
+							35.51M DOT was unbonded by four whales, specifically <a
+							href="https://polkadot.subscan.io/account/14mE5hA3rnJmBJ9yqcgdivJ8BT6qKChyUCYtJq5n44UhAbej"
+							target="_blank"
+							rel="nofollow">10.79M</a>, <a
+							href="https://polkadot.subscan.io/account/149zYw6W8jtLLJGaizfsfSLubowjW48uMxDAGvn1uV6emN7"
+							target="_blank"
+							rel="nofollow">8.99M</a>, <a
+							href="https://polkadot.subscan.io/account/16VWmNbvkrmfHunFuhWsKetpi2NxFzMKTLH3irKrR29x7NFz"
+							target="_blank"
+							rel="nofollow">9.19M</a> (this whale also
+							unbonded 30.6M DOT on January 24, 2023) and <a
+							href="https://polkadot.subscan.io/account/15Um6atyqLWW6TDRbRQ6mthGLC6K55cWa8uzgx63tk249fgd"
+							target="_blank"
+							rel="nofollow">6.54M</a> DOT. These funds were withdrawn and moved
+							away after 28 days. Coincidentally, the four whale accounts shared one <a
+							href="https://polkadot.subscan.io/account/16hyZ4jo1zNEvDU66KqhkYWdprnJcPt5NgD3tCwLcGuRysCe"
+							target="_blank"
+							rel="nofollow">proxy account</a>, which
+							also acted as a proxy for one <a
+							href="https://polkadot.subscan.io/account/129Mmtk1oF8i1YPfvHJmRaH8YMMGsqwkcJwjGy6jLos9HEMR"
+							target="_blank"
+							rel="nofollow">Kraken account</a>.
+						</p>
+						<p>
+							On the contrary, the two declines in March and May were not due to unstaking but to
+							validator rotation. Every day, a new active set of 297 out of 900+ validators is elected,
+							meaning that some validators are removed and some are newly added. Usually, this rotation
+							does not lead to big changes in total stake. However, on March 19 and May 4, the new active
+							validator sets had significantly lower nominator stake backing them than the previous era’s
+							sets, causing the amount of total stake to drop by 24.32M DOT and 103.30M DOT, respectively.
+						</p>
+					</div>
+				</div>
+
+				<div class="block-report-chart">
+					<div class="section-shape shape-blur-circle shape-position-tl"></div>
+					<div class="section-shape shape-blur-circle shape-position-mr"></div>
+					<div class="block-content">
+						<h3 class="block-chart-heading">Token Price vs. Development Activity</h3>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="price-dev-act"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Source: Santiment</p>
+								<p>Note: Development activities counted by GitHub events happening on Parity Tech's
+									public repos.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="text-wrap">
+					<div class="text">
+						<p>
+							The rotation on May 4, 2023 saw 48 validators being replaced. Whereas each of the removed
+							validators had at least 1.81M DOT of total stake backing them, the newly active validators
+							only had at most 2.10M DOT. As a result, the total stake distribution among active
+							validators underwent a major shift. The number of validators with total stake less than
+							2.01M DOT rocketed from 92 on May 3 to 253 on May 4, while the number of validators with
+							2.01-2.61M DOT of total stake plummeted from 195 to 44. Noticeably, the removal of two
+							validators each with 12.21M DOT of total stake greatly narrowed the distribution spread, as
+							evidenced by the decrease in standard deviation from 867.29K DOT to 182.19K DOT.
+						</p>
+					</div>
+				</div>
+
 			</div>
 		</div>
 	</div>
@@ -441,8 +517,238 @@
 			<div class="section-header">
 				<h2 class="section-title">Validators & Nominators</h2>
 			</div>
-			<div class="container">
 
+			<div class="container">
+				<div id="validator-rotation-network-vulnerability" class="block-text">
+					<h3 class="heading">Validator Rotation & Network Vulnerability</h3>
+				</div>
+				<div class="block-report-chart">
+					<div class="section-shape shape-blur-circle shape-position-tl"></div>
+					<div class="section-shape shape-blur-circle shape-position-mr"></div>
+					<div class="block-content">
+						<h3 class="block-chart-heading">Token Price vs. Development Activity</h3>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="price-dev-act"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Source: Santiment</p>
+								<p>Note: Development activities counted by GitHub events happening on Parity Tech's
+									public repos.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="text-wrap">
+					<div class="text">
+						<p>While total validator count varied very little between 917 and 990, total nominator count
+							experienced a significant rise in November 2022 and reached a peak of 47,672 on December 5,
+							2022, before gradually decreasing and ending up at 44,241 on May 31, 2023. In terms of stake
+							amount, validator stake and nominator stake did not correlate. Validator stake mostly stayed
+							between 1.59M and 1.90M DOT before March 17, and increased to the range of 1.91M-2.13M DOT
+							afterward. On May 4, nominator stake lost 103.40M DOT whereas validator stake gained 102.46K
+							DOT, pulling validators’ share of total stake from 0.31% to the maximum 0.39%.
+						</p>
+						<p>As mentioned above, the active set of 297 validators change every day on the brink of a new
+							era. A look at daily new active validators revealed an average count of 13. Even at its peak
+							on May 4, there were only 48 new validators added to the active set, which makes up 16.16%
+							of the total set. This points to a lack of diversity; in fact, since November 2022, the
+							total number of unique active validators only increased from 297 to 591 whereas total
+							validator count had reached 987 by May 31.
+						</p>
+						<p>
+							Note that from February 23, 2023 onward, the share among validators with unchanged,
+							decreased, and increased total stake experienced much more volatility compared to that in
+							the previous period, partly due to more dramatic fluctuations in new active validators.
+						</p>
+					</div>
+				</div>
+				<div class="block-report-chart">
+					<div class="section-shape shape-blur-circle shape-position-tl"></div>
+					<div class="section-shape shape-blur-circle shape-position-mr"></div>
+					<div class="block-content">
+						<h3 class="block-chart-heading">Token Price vs. Development Activity</h3>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="price-dev-act"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Source: Santiment</p>
+								<p>Note: Development activities counted by GitHub events happening on Parity Tech's
+									public repos.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="text-wrap">
+					<div class="text">
+						<p>In every era, the lowest total stake among active validators is indicative of how vulnerable
+							the Polkadot network is. Since November 2022, the two most drastic drops in minimum total
+							stake occurred on November 25, 2022 (from 1.79M to 1.53M DOT) and May 4, 2023 (from 1.78M to
+							1.41M DOT), which coincided with the two major declines in total stake. The network went
+							through its most vulnerable point on December 27, 2022, when the minimum total stake came
+							down to 1.24M DOT.
+						</p>
+					</div>
+				</div>
+				<div class="block-report-chart">
+					<div class="section-shape shape-blur-circle shape-position-tl"></div>
+					<div class="section-shape shape-blur-circle shape-position-mr"></div>
+					<div class="block-content">
+						<h3 class="block-chart-heading">Token Price vs. Development Activity</h3>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="price-dev-act"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Source: Santiment</p>
+								<p>Note: Development activities counted by GitHub events happening on Parity Tech's
+									public repos.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="nominators-preferences" class="block-text">
+					<h3 class="heading">Nominators’ Preferences</h3>
+				</div>
+				<div class="text-wrap">
+					<div class="text">
+						<p>It is worth noting that the number of validators with zero self-stake was comparatively high,
+							accounting for 76.69% of all active validators in one era on average. Theoretically, if
+							these validators behave dishonestly, the slashes are entirely on nominators, and data
+							suggested that validators’ self-stake was a criterion to which nominators paid attention
+							when choosing validators. On May 31, 2023, 200 active validators with zero self-stake
+							received 8,552 nominations in total, an average of 42.55 nominations per validator, whereas
+							the other 97 validators received 13,703 nominations, an average of 141.27 nominations per
+							validator. Most nominators tended to back validators whose self-stakes were less than 10K
+							DOT. This pattern is understandable considering that popular validators will <a
+								href="https://wiki.polkadot.network/docs/learn-staking#slashing"
+								target="_blank"
+								rel="nofollow">get slashed more harshly</a> than those with lower stake backing them.
+						</p>
+					</div>
+				</div>
+				<div class="block-report-chart">
+					<div class="section-shape shape-blur-circle shape-position-tl"></div>
+					<div class="section-shape shape-blur-circle shape-position-mr"></div>
+					<div class="block-content">
+						<h3 class="block-chart-heading">Token Price vs. Development Activity</h3>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="price-dev-act"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Source: Santiment</p>
+								<p>Note: Development activities counted by GitHub events happening on Parity Tech's
+									public repos.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="text-wrap">
+					<div class="text">
+						<p>The number of oversubscribed validators went on a downward trend in the last two months of
+							2022. A more dramatic reduction occurred in mid-January, when, through Polkadot’s upgrade to
+							<a
+								href="https://polkadot.polkassembly.io/referendum/96"
+								target="_blank"
+								rel="nofollow">runtime 9340</a>, the <a
+								href="https://github.com/paritytech/polkadot/pull/6230"
+								target="_blank"
+								rel="nofollow">maximum number of rewardable nominators</a> per active validator was
+							changed
+							from 256 to 512. Only 0-3 validators were considered oversubscribed each day since January
+							14, 2023, compared to 15-45 validators prior to the runtime upgrade, a remarkable 15-time
+							decrease.
+						</p>
+					</div>
+				</div>
+				<div class="block-report-chart">
+					<div class="section-shape shape-blur-circle shape-position-tl"></div>
+					<div class="section-shape shape-blur-circle shape-position-mr"></div>
+					<div class="block-content">
+						<h3 class="block-chart-heading">Oversubcribed Validators</h3>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="price-dev-act"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Source: Santiment</p>
+								<p>Note: Development activities counted by GitHub events happening on Parity Tech's
+									public repos.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="earning-rewards-fast-unstake" class="block-text">
+					<h3 class="heading">Earning Rewards & Fast Unstake</h3>
+				</div>
+				<div class="text-wrap">
+					<div class="text">
+						<p>As there are <a
+							href="https://support.polkadot.network/support/solutions/articles/65000170805-why-am-i-not-getting-staking-rewards-#:~:text=If%20you%20are%20not%20among,validators%20that%20are%20not%20oversubscribed."
+							target="_blank"
+							rel="nofollow">limits</a> on the number of nominators able to earn staking rewards (at most
+							22,500
+							nominators across all validators in one era, with a cap of 512 nominators per validator),
+							the threshold to receive nominator staking rewards – called minimum active nominator stake –
+							is dynamic. Within seven months from November 2022, this threshold almost doubled from
+							187.35 DOT to 363.98 DOT (the latter value had not changed since May 3, 2023). Every 21-40
+							days there was a noticeable jump of 15.01 DOT on average. It is thus recommended practice
+							that token holders join active nomination pools to earn uninterrupted rewards.
+						</p>
+					</div>
+				</div>
+				<div class="block-report-chart">
+					<div class="section-shape shape-blur-circle shape-position-tl"></div>
+					<div class="section-shape shape-blur-circle shape-position-mr"></div>
+					<div class="block-content">
+						<h3 class="block-chart-heading">Minimum Active Nominator Stake</h3>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="price-dev-act"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Source: Santiment</p>
+								<p>Note: Development activities counted by GitHub events happening on Parity Tech's
+									public repos.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="text-wrap">
+					<div class="text">
+						<p>For nominators who were not earning rewards, a new feature called fast unstake might be a
+							solution. Implemented on Polkadot on March 28, 2023 with the passing of <a
+								href="https://polkadot.polkassembly.io/referendum/111"
+								target="_blank"
+								rel="nofollow">referendum 111</a>, fast
+							unstake allows nominators to withdraw immediately if their stake has been inactive for at
+							least 28 days on Polkadot. An average of four unique accounts used this feature each day. Up
+							to May 31, a total of 122.23K DOT was withdrawn via fast unstake, of which 20.25K DOT was
+							associated with 10 unique accounts on May 12 alone.
+						</p>
+					</div>
+				</div>
+				<div class="block-report-chart">
+					<div class="section-shape shape-blur-circle shape-position-tl"></div>
+					<div class="section-shape shape-blur-circle shape-position-mr"></div>
+					<div class="block-content">
+						<h3 class="block-chart-heading">Fast Unstake on Polkadot</h3>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="price-dev-act"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Source: Santiment</p>
+								<p>Note: Development activities counted by GitHub events happening on Parity Tech's
+									public repos.</p>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -454,7 +760,103 @@
 				<h2 class="section-title">Nomination Pools</h2>
 			</div>
 			<div class="container">
+				<div class="block-report-chart">
+					<div class="section-shape shape-blur-circle shape-position-tl"></div>
+					<div class="section-shape shape-blur-circle shape-position-mr"></div>
+					<div class="block-content">
+						<h3 class="block-chart-heading">Total Stake & Total Members in Polkadot Nomination Pools</h3>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="price-dev-act"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Source: Santiment</p>
+								<p>Note: Development activities counted by GitHub events happening on Parity Tech's
+									public repos.</p>
+							</div>
+						</div>
+					</div>
+				</div>
 
+				<div class="text-wrap">
+					<div class="text">
+						<p>Polkadot nomination pools officially surpassed 10K in total pool members on May 7, 2023, and
+							4M DOT in total stake the next day. On average, pools gained 52 new members and 22K DOT
+							every day. Daily pool rewards observed a similarly rapid rise, from 3.22 DOT on November 2,
+							2022 to a maximum of 2.83K DOT on May 22, 2023. These values were still very little compared
+							to individual nominator rewards, which mostly stayed between 87.78K and 178.50K DOT.
+							However, the increase in pool rewards combined with the moderate stability of individual
+							nominator rewards resulted in the gradual escalation of pools’ share of total rewards to the
+							range of 1%-2%.
+						</p>
+					</div>
+				</div>
+
+				<div class="block-report-chart" style="--chart-top-spacing: 30px; --chart-bot-spacing: 100px">
+					<div class="section-shape shape-blur-circle shape-position-tl green"></div>
+					<div class="section-shape shape-blur-circle shape-position-br"></div>
+					<div class="block-content">
+						<div class="block-chart-group">
+							<div class="block-chart-child">
+								<h3 class="block-chart-heading">Daily Reward Distribution by Nominator Type</h3>
+								<div class="block-chart-body">
+									<div class="block-chart" data-chart-name="usdt-on-statemine-ksm"></div>
+								</div>
+							</div>
+							<div class="block-chart-child">
+								<h3 class="block-chart-heading">USDT on Statemint (Polkadot)</h3>
+								<div class="block-chart-body">
+									<div class="block-chart" data-chart-name="usdt-on-statemine-dot"></div>
+								</div>
+							</div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Source: Statescan</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="text-wrap">
+					<div class="text">
+						<p>A look at each pool revealed that Talisman Pool 1 was the clear winner with 106.44K DOT of
+							reward since November 2022, averaging 504.46 DOT per day and taking up 49.09% of total
+							rewards across all pools. These numbers were 6.03 times higher than those for the runner-up
+							Amforc (83.72 DOT/day) and 9.15 times higher than those for the second runner-up
+							decentraDOT.com (55.15 DOT/day). ParaNodes.io and SubWallet Official followed closely with
+							48.84 DOT/day and 36.91 DOT/day respectively. This came as no surprise considering that, as
+							of May 31, 2023, Talisman Pool 1 had accumulated both the largest stake (2.40M DOT) and the
+							highest member count (3,546) among all pools.
+						</p>
+					</div>
+				</div>
+
+				<div class="block-report-chart">
+					<div class="section-shape shape-blur-circle shape-position-tl green"></div>
+					<div class="section-shape shape-blur-circle shape-position-br"></div>
+					<div class="block-content">
+						<div class="block-chart-group">
+							<div class="block-chart-child">
+								<h3 class="block-chart-heading">Daily Reward Distribution by Nominator Type</h3>
+								<div class="block-chart-body">
+									<div class="block-chart" data-chart-name="usdt-on-statemine-ksm"></div>
+								</div>
+							</div>
+							<div class="block-chart-child">
+								<h3 class="block-chart-heading">USDT on Statemint (Polkadot)</h3>
+								<div class="block-chart-body">
+									<div class="block-chart" data-chart-name="usdt-on-statemine-dot"></div>
+								</div>
+							</div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Source: Statescan</p>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -466,7 +868,41 @@
 				<h2 class="section-title">Closing Thoughts</h2>
 			</div>
 			<div class="container">
-
+				<div class="text-wrap">
+					<div class="text">
+						<p>Overall, on the one hand, the past seven months witnessed the introduction and incredible
+							growth of Polkadot nomination pools, a more affordable and more economically rewarding
+							alternative to direct staking. Along with fast unstake, a new feature which allows stakers
+							to bypass the 28-day unbonding period, pools help bring the concept of <a
+								href="https://research.web3.foundation/Polkadot/protocols/NPoS"
+								target="_blank"
+								rel="nofollow">Nominated Proof-of-Stake</a> (NPoS) in general and Polkadot staking in
+							particular closer to token holders’
+							hearts. With several <a
+								href="https://forum.polkadot.network/t/the-future-of-polkadot-staking/1848#nomination-pools-20-3"
+								target="_blank"
+								rel="nofollow">improvements</a> planned for the near future, nomination pools are
+							expected
+							to flourish even more and to contribute significantly to the further development of staking
+							on Polkadot.
+						</p>
+						<p>
+							On the other hand, due to a sudden drop of 103.40M in nominator stake in early May,
+							attention was brought to a crucial concept in the NPoS scheme: validator election. The
+							<a
+								href="https://research.web3.foundation/Polkadot/protocols/NPoS/Overview#the-election-process"
+								target="_blank"
+								rel="nofollow">election process</a> has two main goals: fair representation of the
+							nominators and maximal
+							security of the network. As a result, power and influence among validators should be as
+							evenly distributed as possible. With these goals in mind, in the major stake drop incident,
+							the removal of active validators with massive amounts of stake backing them appeared to be
+							in line with the election process. Nonetheless, the incident raised the question of how to
+							prevent such validators from entering the active set in the first place. Hopefully, this
+							issue will soon be addressed in future extensions of the NPoS scheme.
+						</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -530,13 +966,14 @@
 						<div class="block-contributor block-small">
 							<div class="avatar-wrap">
 								<div class="avatar">
-									<img src="../assets/images/report/contributors/alex-vu.jpg" alt="Alex Vu"
+									<img src="../assets/images/report/contributors/tara-nguyen.png"
+									     alt="Tara Nguyen"
 									     loading="lazy" width="164" height="164"/>
 								</div>
 							</div>
 							<div class="info">
-								<h4 class="name">Alex Vu</h4>
-								<div class="position">Data Engineer</div>
+								<h4 class="name">Tara Nguyen</h4>
+								<div class="position">Data Analytics Engineer</div>
 							</div>
 						</div>
 					</div>
@@ -558,13 +995,13 @@
 						<div class="block-contributor block-small">
 							<div class="avatar-wrap">
 								<div class="avatar">
-									<img src="../assets/images/report/contributors/le-bui.jpg" alt="Le Bui"
+									<img src="../assets/images/report/contributors/alex-vu.jpg" alt="Alex Vu"
 									     loading="lazy" width="164" height="164"/>
 								</div>
 							</div>
 							<div class="info">
-								<h4 class="name">Le Bui</h4>
-								<div class="position">Web Designer</div>
+								<h4 class="name">Alex Vu</h4>
+								<div class="position">Data Engineer</div>
 							</div>
 						</div>
 					</div>
@@ -572,17 +1009,18 @@
 						<div class="block-contributor block-small">
 							<div class="avatar-wrap">
 								<div class="avatar">
-									<img src="../assets/images/report/contributors/viet-cao.png"
-									     alt="Viet Cao"
+									<img src="../assets/images/report/contributors/dara-mai.png"
+									     alt="Duong Mai"
 									     loading="lazy" width="164" height="164"/>
 								</div>
 							</div>
 							<div class="info">
-								<h4 class="name">Viet Cao</h4>
-								<div class="position">Frontend Developer</div>
+								<h4 class="name">Duong Mai</h4>
+								<div class="position">Graphic Designer</div>
 							</div>
 						</div>
 					</div>
+
 					<div class="grid-item grid-item-1-3">
 						<div class="block-contributor layout-horizontal">
 							<div class="avatar-wrap">
@@ -628,6 +1066,7 @@
 							</div>
 						</div>
 					</div>
+
 					<div class="grid-item grid-item-1-3">
 						<div class="block-contributor layout-horizontal">
 							<div class="avatar-wrap">
@@ -672,6 +1111,22 @@
 							</div>
 						</div>
 					</div>
+
+					<div class="grid-item grid-item-md-1-3">
+						<div class="block-contributor layout-horizontal">
+							<div class="avatar-wrap">
+								<div class="avatar">
+									<img src="../assets/images/report/contributors/viet-cao.png"
+									     alt="Viet Cao"
+									     loading="lazy" width="164" height="164"/>
+								</div>
+							</div>
+							<div class="info">
+								<h4 class="name">Viet Cao</h4>
+								<div class="position">Frontend Developer</div>
+							</div>
+						</div>
+					</div>
 					<div class="grid-item grid-item-1-3">
 						<div class="block-contributor layout-horizontal">
 							<div class="avatar-wrap">
@@ -683,7 +1138,7 @@
 							</div>
 							<div class="info">
 								<h4 class="name">Emily Nguyen</h4>
-								<div class="position">Growth Executive</div>
+								<div class="position">Junior Designer</div>
 							</div>
 						</div>
 					</div>
@@ -698,37 +1153,7 @@
 							</div>
 							<div class="info">
 								<h4 class="name">Mabel Nguyen</h4>
-								<div class="position">BD Executive</div>
-							</div>
-						</div>
-					</div>
-					<div class="grid-item grid-item-1-3">
-						<div class="block-contributor layout-horizontal">
-							<div class="avatar-wrap">
-								<div class="avatar">
-									<img src="../assets/images/report/contributors/tara-nguyen.png"
-									     alt="Tara Nguyen"
-									     loading="lazy" width="164" height="164"/>
-								</div>
-							</div>
-							<div class="info">
-								<h4 class="name">Tara Nguyen</h4>
-								<div class="position">Data Analyst</div>
-							</div>
-						</div>
-					</div>
-					<div class="grid-item grid-item-1-3">
-						<div class="block-contributor layout-horizontal">
-							<div class="avatar-wrap">
-								<div class="avatar">
-									<img src="../assets/images/report/contributors/dara-mai.png"
-									     alt="Dara Mai"
-									     loading="lazy" width="164" height="164"/>
-								</div>
-							</div>
-							<div class="info">
-								<h4 class="name">Dara Mai</h4>
-								<div class="position">Graphic Designer</div>
+								<div class="position">Business Development Executive</div>
 							</div>
 						</div>
 					</div>
@@ -767,138 +1192,17 @@
 								<img loading="lazy" src="../assets/images/report/friends/parity.png"
 								     alt="Parity" width="94" height="42"/>
 							</a>
-							<a class="block-friend grid-item" target="_blank" href="https://bit.country/">
-								<img loading="lazy" src="../assets/images/report/friends/bit-country.png"
-								     alt="Bit.Country & Metaverse.Network" width="110" height="34"/>
-							</a>
-							<a class="block-friend grid-item" target="_blank" href="https://moonbeam.network/">
-								<img loading="lazy" src="../assets/images/report/friends/moonbeam.png"
-								     alt="Moonbeam" width="126" height="35"/>
-							</a>
-							<a class="block-friend grid-item" target="_blank" href="https://astar.network/">
-								<img loading="lazy" src="../assets/images/report/friends/astar.png"
-								     alt="Astar" width="114" height="53"/>
-							</a>
-
-							<a class="block-friend grid-item" target="_blank" href="https://alephzero.org/">
-								<img loading="lazy" src="../assets/images/report/friends/aleph-zero.png"
-								     alt="Aleph Zero" width="148" height="25"/>
-							</a>
-							<a class="block-friend grid-item" target="_blank" href="https://acala.network/">
-								<img loading="lazy" src="../assets/images/report/friends/acala.png"
-								     alt="Acala" width="102" height="41"/>
-							</a>
-							<a class="block-friend grid-item" target="_blank" href="https://www.rmrk.app/">
-								<img loading="lazy" src="../assets/images/report/friends/rmrk.png"
-								     alt="RMRK" width="95" height="33"/>
-							</a>
-							<a class="block-friend grid-item" target="_blank" href="https://bifrost.finance/">
-								<img loading="lazy" src="../assets/images/report/friends/bifrost.png"
-								     alt="Bifrost" width="107" height="26"/>
-							</a>
-							<a class="block-friend grid-item" target="_blank" href="https://ajuna.io/">
-								<img loading="lazy" src="../assets/images/report/friends/ajuna.png"
-								     alt="Ajuna" width="107" height="26"/>
-							</a>
-							<a class="block-friend grid-item" target="_blank" href="https://litentry.com/">
-								<img loading="lazy" src="../assets/images/report/friends/litentry.png"
-								     alt="litentry" width="127" height="27"/>
-							</a>
-							<a class="block-friend grid-item" target="_blank" href="https://www.kilt.io/">
-								<img loading="lazy" src="../assets/images/report/friends/kilt.png"
-								     alt="KILT" width="82" height="34"/>
-							</a>
-							<a class="block-friend grid-item" target="_blank" href="https://www.phala.network/">
-								<img loading="lazy" src="../assets/images/report/friends/phala-network.png"
-								     alt="Phala Network" width="120" height="40"/>
-							</a>
-							<a class="block-friend grid-item" target="_blank" href="https://parallel.fi/">
-								<img loading="lazy" src="../assets/images/report/friends/parallel.png"
-								     alt="Parallel" width="117" height="29"/>
-							</a>
-							<a class="block-friend grid-item" target="_blank" href="https://invarch.network/">
-								<img loading="lazy" src="../assets/images/report/friends/inv-arch.png"
-								     alt="InvArch" width="114" height="26"/>
+							<a class="block-friend grid-item" target="_blank" href="https://subsquid.io/">
+								<img loading="lazy" src="../assets/images/report/friends/subsquid.png"
+								     alt="Subsquid" width="130" height="30"/>
 							</a>
 							<a class="block-friend grid-item" target="_blank" href="https://polkaholic.io/">
 								<img loading="lazy" src="../assets/images/report/friends/polkaholic.png"
 								     alt="Polkaholic" width="57" height="45"/>
 							</a>
-							<a class="block-friend grid-item" target="_blank" href="https://subsquid.io/">
-								<img loading="lazy" src="../assets/images/report/friends/subsquid.png"
-								     alt="Subsquid" width="130" height="30"/>
-							</a>
-							<a class="block-friend grid-item" target="_blank" href="https://www.subscan.io/">
-								<img loading="lazy" src="../assets/images/report/friends/subscan.png"
-								     alt="Subscan" width="133" height="28"/>
-							</a>
-							<a class="block-friend grid-item" target="_blank" href="https://tokenguard.io/">
-								<img loading="lazy" src="../assets/images/report/friends/token-guard.png"
-								     alt="Token Guard" width="140" height="22"/>
-							</a>
-							<a class="block-friend grid-item" target="_blank" href="https://zenlink.pro/">
-								<img loading="lazy" src="../assets/images/report/friends/zenlink.png"
-								     alt="Zenlink" width="119" height="39"/>
-							</a>
-							<a class="block-friend grid-item" target="_blank" href="https://stellaswap.com/">
-								<img loading="lazy" src="../assets/images/report/friends/stella-swap.png"
-								     alt="StellaSwap" width="136" height="28"/>
-							</a>
-							<a class="block-friend grid-item" target="_blank" href="https://beamswap.io/">
-								<img loading="lazy" src="../assets/images/report/friends/beamswap.png"
-								     alt="Beamswap" width="136" height="27"/>
-							</a>
-							<a class="block-friend grid-item" target="_blank" href="https://solarbeam.io/">
-								<img loading="lazy" src="../assets/images/report/friends/solarbeam.png"
-								     alt="Solarbeam" width="150" height="29"/>
-							</a>
-							<a class="block-friend grid-item" target="_blank" href="https://moonwell.fi/">
-								<img loading="lazy" src="../assets/images/report/friends/moonwell.png"
-								     alt="Moonwell" width="130" height="37"/>
-							</a>
-							<a class="block-friend grid-item" target="_blank" href="https://www.arthswap.org/">
-								<img loading="lazy" src="../assets/images/report/friends/arthswap.png"
-								     alt="ArthSwap" width="130" height="31"/>
-							</a>
-							<a class="block-friend grid-item" target="_blank" href="https://starlay.finance/">
-								<img loading="lazy" src="../assets/images/report/friends/starlay.png"
-								     alt="Starlay" width="122" height="44"/>
-							</a>
-							<a class="block-friend grid-item" target="_blank" href="https://astriddao.xyz/">
-								<img loading="lazy" src="../assets/images/report/friends/astrid-dao.png"
-								     alt="AstridDAO" width="130" height="36"/>
-							</a>
-							<a class="block-friend grid-item" target="_blank" href="https://moonbeans.io/">
-								<img loading="lazy" src="../assets/images/report/friends/moonbeans.png"
-								     alt="MoonBeans" width="140" height="70"/>
-							</a>
-							<a class="block-friend grid-item" target="_blank" href="https://www.paka.fund/">
-								<img loading="lazy" src="../assets/images/report/friends/paka.png"
-								     alt="PAKA" width="93" height="25"/>
-							</a>
-							<a class="block-friend grid-item" target="_blank" href="https://web3go.xyz/">
-								<img loading="lazy" src="../assets/images/report/friends/web3-go.png"
-								     alt="Web3Go" width="113" height="30"/>
-							</a>
-							<a class="block-friend grid-item" target="_blank" href="https://lido.fi/">
-								<img loading="lazy" src="../assets/images/report/friends/lido.png"
-								     alt="Lido" width="108" height="26"/>
-							</a>
-							<a class="block-friend grid-item" target="_blank" href="https://moonfit.xyz/">
-								<img loading="lazy" src="../assets/images/report/friends/moonfit.png"
-								     alt="MoonFit" width="121" height="20"/>
-							</a>
-							<a class="block-friend grid-item" target="_blank" href="https://www.glmrapes.com/">
-								<img loading="lazy" src="../assets/images/report/friends/glmr-apes.png"
-								     alt="GLMR Apes" width="55" height="43"/>
-							</a>
-							<a class="block-friend grid-item" target="_blank" href="https://www.tapioprotocol.io/">
-								<img loading="lazy" src="../assets/images/report/friends/tapio.png"
-								     alt="Tapio Protocol" width="133" height="38"/>
-							</a>
-							<a class="block-friend grid-item" target="_blank" href="https://www.avault.network/">
-								<img loading="lazy" src="../assets/images/report/friends/avault.png"
-								     alt="Avault Finance" width="61" height="39"/>
+							<a class="block-friend grid-item" target="_blank" href="https://blog.polkawatch.app/">
+								<img loading="lazy" src="../assets/images/report/friends/polkawatch.png"
+								     alt="Polkawatch" width="144" height="30"/>
 							</a>
 						</div>
 					</div>
@@ -1057,7 +1361,8 @@
 					<a href="#validators-nominators" class="scroll-to">Validators & Nominators</a>
 					<ul>
 						<li>
-							<a href="#validator-rotation-network-vulnerability" class="scroll-to">Validator Rotation & Network Vulnerability</a>
+							<a href="#validator-rotation-network-vulnerability" class="scroll-to">Validator Rotation &
+								Network Vulnerability</a>
 						</li>
 						<li>
 							<a href="#nominators-preferences" class="scroll-to">Nominators’ Preferences</a>
