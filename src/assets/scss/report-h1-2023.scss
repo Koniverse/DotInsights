@@ -9,10 +9,15 @@
     .section-title {
         font-size: 28px;
     }
+
+    .section {
+        margin: 60px 0;
+    }
 }
 
 .section-reports-hero {
     padding: 200px 0 170px;
+    margin: 0 !important;
     background: url(../images/report/shapes/box-grid.png) no-repeat center center;
     background-size: auto;
     --s-header-spacing: 0;
@@ -92,6 +97,10 @@
     }
 }
 
+.section-introduction {
+    margin-top: 0 !important;
+}
+
 .section-key-takeaways {
     .section-content {
         position: relative;
@@ -102,7 +111,7 @@
         --border-size: -3px;
         position: relative;
         background-color: $background-2;
-        padding: 60px 50px 40px;
+        padding: 50px 15px 35px;
         -webkit-border-radius: 20px;
         -moz-border-radius: 20px;
         border-radius: 20px;
@@ -369,6 +378,10 @@
         .section-title {
             font-size: 36px;
         }
+
+        .section {
+            margin: 80px 0;
+        }
     }
 
     .section-reports-hero {
@@ -386,6 +399,16 @@
             font-size: 30px;
         }
     }
+
+    .section-key-takeaways {
+        .section-title {
+            margin-bottom: 45px;
+        }
+
+        .section-content-inner {
+            padding: 65px 45px 45px;
+        }
+    }
 }
 
 @include media-breakpoint-up(lg) {
@@ -396,6 +419,10 @@
 
         .section-title {
             font-size: 42px;
+        }
+
+        .section {
+            margin: 100px 0;
         }
     }
 
@@ -414,10 +441,24 @@
             font-size: 32px;
         }
     }
+
+    .section-key-takeaways {
+        .section-title {
+            margin-bottom: 50px;
+        }
+
+        .section-content-inner {
+            padding: 72px 55px 50px;
+        }
+    }
 }
 
 @include media-breakpoint-up(xl) {
     .polkadot-h1-2023 {
+        .section {
+            margin: 120px 0;
+        }
+
         .section-header {
             --s-header-spacing: 48px;
         }
@@ -432,7 +473,7 @@
     }
 
     .section-reports-hero {
-        padding: 244px 0 190px;
+        padding: 250px 0 170px;
 
         .section-title {
             font-size: 116px;
@@ -445,5 +486,12 @@
         .section-sub-title {
             font-size: 32px;
         }
+    }
+}
+
+@media (max-width: 767px) {
+    .block-table-source, .block-chart-source {
+        font-size: 14px;
+        line-height: 24px;
     }
 }
