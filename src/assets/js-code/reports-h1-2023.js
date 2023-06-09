@@ -12,7 +12,7 @@
 			}
 		}
 
-		var sourceBaseUrl = baseUrl + '/assets/data/q1-2023/';
+		var sourceBaseUrl = baseUrl + '/assets/data/h1-2023/';
 		var tokenBaseUrl = baseUrl + '/assets/images/token/';
 
 		var NumberUtil = dotinsights.NumberUtil,
@@ -247,6 +247,8 @@
 						case 'top-dot-ksm-chain-fees':
 							chartOptions = getChartResponsiveOptionsTopDotKsmChainFees( chartName );
 							break;
+						case 'total-dot-staked-locked':
+
 						case 'tvl-defi-parachain':
 						case 'tvl-dot-dex':
 						case 'tvl-ksm-dex':
@@ -309,63 +311,63 @@
 					code: 'en',
 					name: 'English',
 					flag: 'us.svg',
-					url: 'polkadot-report-q1-2023-en',
+					url: 'polkadot-staking-report-h1-2023-en',
 					isActive: 1,
 				},
 				{
 					code: 'pt',
 					name: 'Português',
 					flag: 'pt.svg',
-					url: 'polkadot-report-q1-2023-pt',
+					url: 'polkadot-staking-report-h1-2023-pt',
 					isActive: 1,
 				},
 				{
 					code: 'vi',
 					name: 'Tiếng Việt',
 					flag: 'vn.svg',
-					url: 'polkadot-report-q1-2023-vi',
+					url: 'polkadot-staking-report-h1-2023-vi',
 					isActive: 1,
 				},
 				{
 					code: 'zh',
 					name: '中文',
 					flag: 'cn.svg',
-					url: 'polkadot-report-q1-2023-zh',
+					url: 'polkadot-staking-report-h1-2023-zh',
 					isActive: 1,
 				},
 				{
 					code: 'id_ID',
 					name: 'Bahasa Indonesia',
 					flag: 'id.svg',
-					url: 'polkadot-report-q1-2023-id',
+					url: 'polkadot-staking-report-h1-2023-id',
 					isActive: 1,
 				},
 				{
 					code: 'es',
 					name: 'Español',
 					flag: 'es.svg',
-					url: 'polkadot-report-q1-2023-es',
+					url: 'polkadot-staking-report-h1-2023-es',
 					isActive: 1,
 				},
 				{
 					code: 'kr',
 					name: '한국어',
 					flag: 'kr.svg',
-					url: 'polkadot-report-q1-2023-kr',
+					url: 'polkadot-staking-report-h1-2023-kr',
 					isActive: 1,
 				},
 				{
 					code: 'ja',
 					name: '日本語',
 					flag: 'jp.svg',
-					url: 'polkadot-report-q1-2023-ja',
+					url: 'polkadot-staking-report-h1-2023-ja',
 					isActive: 1,
 				},
 				{
 					code: 'fr',
 					name: 'Français',
 					flag: 'fr.svg',
-					url: 'polkadot-report-q1-2023-fr',
+					url: 'polkadot-staking-report-h1-2023-fr',
 					isActive: 1,
 				}
 			];
@@ -473,6 +475,9 @@
 					var chartOptions = {};
 
 					switch ( chartName ) {
+						case 'total-dot-staked-locked':
+							chartOptions = getChartOptionsTotalDotStakedLocked( chartName, jsonData );
+							break;
 						case 'price-dev-act':
 							chartOptions = getChartOptionsPriceDevAct( chartName, jsonData );
 							break;
@@ -1858,6 +1863,81 @@
 			}
 
 			return newOptions;
+		}
+
+		function getChartOptionsTotalDotStakedLocked( chartName, jsonData ) {
+			var datasets = [
+					{
+						name: 'supply',
+						label: 'DOT Supply'
+					},
+					{
+						name: 'staked',
+						label: 'DOT Staked'
+					},
+					{
+						name: 'locked_in_prachain',
+						label: 'DOT Locked In Prachain'
+					},
+				],
+				colors = [
+					'#66e1b6',
+					'#f13221',
+					'#5c42fb'
+				],
+				chartExtraOptions = {
+					legend: defaultLegendSettings,
+					grid: {
+						top: '5%',
+						left: '3%',
+						right: '3%',
+						containLabel: true,
+						height: '82%'
+					},
+					yAxis: {
+						min: 0,
+						max: 1500000000,
+						interval: 500000000
+					},
+					xAxis: {
+						axisLine: {
+							show: false,
+						},
+						splitLine: {
+							show: true,
+							lineStyle: {
+								type: [
+									4,
+									4
+								],
+								color: ['#262626']
+							}
+						}
+					},
+					tooltip: $.extend( true, {}, defaultTooltipStyle, {
+						trigger: 'axis',
+						axisPointer: {
+							type: 'line',
+							crossStyle: {
+								color: 'rgba(255,255,255,0.3)'
+							},
+							lineStyle: {
+								type: [
+									4,
+									4
+								],
+								color: 'rgba(255,255,255,0.3)'
+							}
+						},
+						valueFormatter: function ( value ) {
+							return value + '%';
+						}
+					} )
+				};
+
+			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors, null, null, chartExtraOptions );
+			var responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
+			return $.extend( true, {}, baseOptions, responsiveOptions );
 		}
 
 		function getChartOptionsStakingRatio( chartName, jsonData ) {
