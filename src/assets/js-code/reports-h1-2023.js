@@ -116,7 +116,7 @@
 				textStyle: {
 					fontFamily: fontFamily,
 					color: '#ffffff',
-					fontSize: 15,
+					fontSize: 14,
 					fontWeight: '500',
 					padding: [
 						3,
@@ -137,7 +137,7 @@
 				pageTextStyle: {
 					fontFamily: fontFamily,
 					color: '#ffffff',
-					fontSize: 15,
+					fontSize: 14,
 					fontWeight: '500'
 				}
 			},
@@ -248,7 +248,6 @@
 							chartOptions = getChartResponsiveOptionsTopDotKsmChainFees( chartName );
 							break;
 						case 'total-dot-staked-locked':
-
 						case 'tvl-defi-parachain':
 						case 'tvl-dot-dex':
 						case 'tvl-ksm-dex':
@@ -259,6 +258,10 @@
 						case 'usdt-on-statemine-ksm':
 						case 'usdt-on-statemine-dot':
 							chartOptions = getChartResponsiveOptionsUsdtOnStatemine( chartName );
+							break;
+						case 'dot-staking-ratio-inflation-rate-price':
+						case 'staking-ratio-daily-dot-rewards':
+							chartOptions = getChartResponsiveOptionsDotStakingRatio( chartName );
 							break;
 						case 'nft-marketplace':
 							chartOptions = getChartResponsiveOptionsNftMarketplace( chartName );
@@ -477,6 +480,12 @@
 					switch ( chartName ) {
 						case 'total-dot-staked-locked':
 							chartOptions = getChartOptionsTotalDotStakedLocked( chartName, jsonData );
+							break;
+						case 'dot-staking-ratio-inflation-rate-price':
+							chartOptions = getChartOptionsDotStakingRatioInflationRatePrice( chartName, jsonData );
+							break;
+						case 'staking-ratio-daily-dot-rewards':
+							chartOptions = getChartOptionsStakingRatioDailyDotRewards( chartName, jsonData );
 							break;
 						case 'price-dev-act':
 							chartOptions = getChartOptionsPriceDevAct( chartName, jsonData );
@@ -1865,6 +1874,7 @@
 			return newOptions;
 		}
 
+		/* New */
 		function getChartOptionsTotalDotStakedLocked( chartName, jsonData ) {
 			var datasets = [
 					{
@@ -1939,6 +1949,411 @@
 			var responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
 			return $.extend( true, {}, baseOptions, responsiveOptions );
 		}
+
+		/* New */
+		function getChartOptionsDotStakingRatioInflationRatePrice( chartName, jsonData ) {
+			var totalItems = jsonData.length,
+				data = {
+					stakingRate: [],
+					inflationRate: [],
+					dotPrice: []
+				},
+				colors = [
+					'#004dff',
+					'#66e1b6',
+					'#e6007a'
+				];
+
+			for ( var i = 0; i < totalItems; i ++ ) {
+				data.stakingRate.push( [
+					                       jsonData[i].date,
+					                       jsonData[i].staking_rate
+				                       ] );
+				data.inflationRate.push( [
+					                         jsonData[i].date,
+					                         jsonData[i].inflation_rate
+				                         ] );
+				data.dotPrice.push( [
+					                    jsonData[i].date,
+					                    jsonData[i].price
+				                    ] );
+			}
+
+			var baseOptions = {
+				color: colors,
+				textStyle: {
+					fontFamily: fontFamily,
+					fontWeight: 500
+				},
+				tooltip: defaultTooltipSettings,
+				legend: defaultLegendSettings,
+				grid: {
+					left: '3%',
+					right: '3%',
+					top: '3%', //bottom: 100, // DataZoom + Legend.
+					containLabel: true
+				},
+				xAxis: {
+					type: 'time',
+					boundaryGap: false,
+					axisTick: {
+						show: false
+					},
+					axisLine: {
+						lineStyle: {
+							color: '#262626'
+						}
+					},
+					splitLine: {
+						show: true,
+						lineStyle: {
+							type: [
+								4,
+								4
+							],
+							color: ['#262626']
+						}
+					},
+					axisPointer: defaultAxisPointerLabelSettings,
+					axisLabel: {
+						hideOverlap: false,
+						showMaxLabel: true,
+						overflow: 'breakAll', //						rotate: 45,
+						align: 'center',
+						fontFamily: fontFamily,
+						fontSize: 10,
+						fontWeight: 500,
+						formatter: dateFormatter,
+						color: '#cccccc',
+					}
+				},
+				yAxis: [
+					{
+						type: 'value',
+						name: locate.rate,
+						position: 'left',
+						axisLine: {
+							show: false
+						},
+						splitNumber: 4,
+						interval: 15,
+						splitLine: {
+							lineStyle: {
+								type: [
+									4,
+									4
+								],
+								color: ['#262626']
+							}
+						},
+						axisPointer: {
+							label: {
+								color: '#000000',
+								backgroundColor: '#cccccc',
+								formatter: "{value}%"
+							}
+						},
+						axisLabel: {
+							formatter: "{value}%",
+							color: '#cccccc',
+							fontSize: 10
+						}
+					},
+					{
+						type: 'value',
+						name: locate.price,
+						position: 'right',
+						axisLine: {
+							show: false
+						},
+						splitNumber: 4,
+						interval: 2,
+						splitLine: {
+							lineStyle: {
+								type: [
+									4,
+									4
+								],
+								color: ['#262626']
+							}
+						},
+						axisPointer: defaultAxisPointerLabelSettings,
+						axisLabel: {
+							color: '#cccccc',
+							fontSize: 10
+						}
+					}
+				],
+				series: [
+					{
+						name: locate.stakingRate,
+						data: data.stakingRate,
+						itemStyle: {
+							color: colors[0]
+						},
+						type: 'line',
+						smooth: true,
+						showSymbol: false,
+						emphasis: {
+							focus: 'series'
+						}
+					},
+					{
+						name: locate.inflationRate,
+						data: data.inflationRate,
+						itemStyle: {
+							color: colors[1]
+						},
+						type: 'line',
+						smooth: true,
+						showSymbol: false,
+						emphasis: {
+							focus: 'series'
+						}
+					},
+					{
+						name: locate.dotPrice,
+						data: data.dotPrice,
+						itemStyle: {
+							color: colors[2]
+						},
+						type: 'line',
+						smooth: true,
+						showSymbol: false,
+						yAxisIndex: 1,
+						emphasis: {
+							focus: 'series'
+						}
+					}
+				]
+			};
+			var responsiveOptions = getChartResponsiveOptionsDotStakingRatio();
+
+			$.extend( true, baseOptions, responsiveOptions );
+
+			return baseOptions;
+		}
+
+		function getChartOptionsStakingRatioDailyDotRewards( chartName, jsonData ) {
+			var totalItems = jsonData.length,
+				data = {
+					stakingRate: [],
+					dotReward: []
+				},
+				colors = [
+					'#004dff',
+					'#e4560a'
+				];
+
+			for ( var i = 0; i < totalItems; i ++ ) {
+				data.stakingRate.push( [
+					                       jsonData[i].date,
+					                       jsonData[i].staking_rate
+				                       ] );
+				data.dotReward.push( [
+					                     jsonData[i].date,
+					                     jsonData[i].reward
+				                     ] );
+			}
+
+			var baseOptions = {
+				color: colors,
+				textStyle: {
+					fontFamily: fontFamily,
+					fontWeight: 500
+				},
+				tooltip: defaultTooltipSettings,
+				legend: defaultLegendSettings,
+				grid: {
+					left: '3%',
+					right: '3%',
+					top: '3%', //bottom: 100, // DataZoom + Legend.
+					containLabel: true
+				},
+				xAxis: {
+					type: 'time',
+					boundaryGap: false,
+					axisTick: {
+						show: false
+					},
+					axisLine: {
+						lineStyle: {
+							color: '#262626'
+						}
+					},
+					splitLine: {
+						show: true,
+						lineStyle: {
+							type: [
+								4,
+								4
+							],
+							color: ['#262626']
+						}
+					},
+					axisPointer: defaultAxisPointerLabelSettings,
+					axisLabel: {
+						hideOverlap: false,
+						showMaxLabel: true,
+						overflow: 'breakAll',
+						align: 'center',
+						fontFamily: fontFamily,
+						fontSize: 10,
+						fontWeight: 500,
+						formatter: dateFormatter,
+						color: '#cccccc',
+					}
+				},
+				yAxis: [
+					{
+						type: 'value',
+						name: locate.rate,
+						position: 'left',
+						axisLine: {
+							show: false
+						},
+						splitNumber: 4,
+						interval: 15,
+						splitLine: {
+							lineStyle: {
+								type: [
+									4,
+									4
+								],
+								color: ['#262626']
+							}
+						},
+						axisPointer: {
+							label: {
+								color: '#000000',
+								backgroundColor: '#cccccc',
+								formatter: "{value}%"
+							}
+						},
+						axisLabel: {
+							formatter: "{value}%",
+							color: '#cccccc',
+							fontSize: 10
+						}
+					},
+					{
+						type: 'value',
+						name: locate.dotReward,
+						position: 'right',
+						axisLine: {
+							show: false
+						},
+						splitNumber: 4,
+						interval: 500000,
+						splitLine: {
+							show: false,
+							lineStyle: {
+								type: [
+									4,
+									4
+								],
+								color: ['#262626']
+							}
+						},
+						axisPointer: defaultAxisPointerLabelSettings,
+						axisLabel: {
+							color: '#cccccc',
+							fontSize: 10
+						}
+					}
+				],
+				series: [
+					{
+						name: locate.stakingRate,
+						data: data.stakingRate,
+						itemStyle: {
+							color: colors[0]
+						},
+						type: 'line',
+						smooth: true,
+						showSymbol: false,
+						emphasis: {
+							focus: 'series'
+						}
+					},
+					{
+						name: locate.dotReward,
+						data: data.dotReward,
+						itemStyle: {
+							color: colors[1]
+						},
+						type: 'line',
+						smooth: true,
+						showSymbol: false,
+						yAxisIndex: 1,
+						emphasis: {
+							focus: 'series'
+						}
+					}
+				]
+			};
+			var responsiveOptions = getChartResponsiveOptionsDotStakingRatio();
+
+			$.extend( true, baseOptions, responsiveOptions );
+
+			return baseOptions;
+		}
+
+		function getChartResponsiveOptionsDotStakingRatio() {
+			var newOptions = {};
+
+			if ( window.innerWidth > 767 ) {
+				newOptions = {
+					xAxis: {
+						splitNumber: 3
+					}
+				};
+			} else {
+				newOptions = {
+					tooltip: {
+						trigger: 'axis'
+					},
+					xAxis: {
+						splitNumber: 2
+					}
+				};
+
+				if ( window.innerWidth < 460 ) {
+					$.extend( newOptions, {
+						xAxis: {
+							splitNumber: 2
+						}
+					} )
+				}
+
+				if ( window.innerWidth < 460 ) {
+					$.extend( newOptions, {
+						xAxis: {
+							splitNumber: 2
+						},
+						yAxis: [
+							{
+								axisLabel: {
+									formatter: function ( value ) {
+										return value ? NumberUtil.formatMoney( value ) + '%' : '0';
+									}
+								}
+							},
+							{
+								axisLabel: {
+									formatter: function ( value ) {
+										return value ? NumberUtil.formatMoney( value ) : '0';
+									}
+								}
+							}
+						]
+					} )
+				}
+			}
+
+			return newOptions;
+		}
+
 
 		function getChartOptionsStakingRatio( chartName, jsonData ) {
 			var datasets = [
@@ -2407,7 +2822,7 @@
 						label: {
 							show: isLastSeries( index ) ? true : false,
 							formatter: genFormatter( series ),
-							fontSize: 16,
+							fontSize: 15,
 							color: '#ffffff',
 							position: 'top'
 						},

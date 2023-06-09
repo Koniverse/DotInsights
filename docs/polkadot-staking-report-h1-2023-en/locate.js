@@ -1,6 +1,13 @@
 var lang = {
+	stakingRate: 'DOT Staking Ration (%)',
+	inflationRate: 'DOT Inflation Rate (%)',
+	dotPrice: 'DOT Price ($)',
+	dotReward: 'DOT Reward',
+	rate: 'Rate',
+	price: 'Price',
+
+
 	ksmPrice: 'KSM Price',
-	dotPrice: 'DOT Price',
 	developmentActivity: 'Development Activity',
 	activeDevelopers: 'Active developers',
 	codeCommits: 'Code commits',
