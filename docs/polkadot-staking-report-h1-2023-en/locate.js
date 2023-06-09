@@ -5,6 +5,9 @@ var lang = {
 	dotReward: 'DOT Reward',
 	rate: 'Rate',
 	price: 'Price',
+	may3: 'May 3',
+	may4: 'May 4',
+	may31: 'May 31',
 
 
 	ksmPrice: 'KSM Price',

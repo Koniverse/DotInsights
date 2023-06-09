@@ -546,6 +546,11 @@
 				var chartOptions = {};
 
 				switch ( chartName ) {
+					/* New */
+					case 'total-stake-distribution':
+						chartOptions = getChartOptionsTotalStakeDistribution( chartName );
+						break;
+
 					case 'dot-holder-distribution':
 						chartOptions = getChartOptionsDotHolderDistribution( chartName );
 						break;
@@ -5810,6 +5815,256 @@
 			return $.extend( true, {}, baseOptions, responsiveOptions );
 		}
 
+		function getChartOptionsTotalStakeDistribution( chartName ) {
+			var colors = [
+					'#004dff',
+					'#df146a',
+					'#f4c54a'
+				],
+				data = [
+					[
+						'1.41-1.71',
+						'1.71-2.01',
+						'2.01-2.31',
+						'2.31-2.61',
+						'2.61-2.91',
+						'> 2.91'
+					],
+					[
+						'0',
+						'92',
+						'182',
+						'13',
+						'2',
+						'8'
+					],
+					[
+						'53',
+						'200',
+						'39',
+						'5',
+						'0',
+						'0'
+					],
+					[
+						'45',
+						'200',
+						'47',
+						'5',
+						'0',
+						'0'
+					]
+				],
+				baseOptions = {
+					color: colors,
+					textStyle: {
+						fontFamily: fontFamily,
+						fontWeight: 500
+					},
+					tooltip: defaultTooltipSettings,
+					legend: defaultLegendSettings,
+					grid: {
+						top: '5%',
+						left: '5%',
+						right: '5%',
+						containLabel: true
+					},
+					xAxis: {
+						type: 'category',
+						data: data[0],
+						splitLine: {
+							show: false,
+							lineStyle: {
+								type: [
+									4,
+									4
+								],
+								color: ['#262626']
+							}
+						},
+						axisTick: {
+							show: false
+						},
+						axisLine: {
+							show: false,
+						},
+						axisPointer: defaultAxisPointerLabelSettings,
+						axisLabel: {
+							fontFamily: fontFamily,
+							fontSize: 11,
+							fontWeight: 500,
+							lineHeight: 15,
+							color: '#cccccc'
+						}
+					},
+					yAxis: [
+						{
+							type: 'value',
+							name: 'Validators count',
+							nameTextStyle: {
+								fontSize: 0
+							},
+							offset: 20,
+							alignTicks: true,
+							axisLine: {
+								show: false,
+							},
+							interval: 50,
+							splitNumber: 4,
+							splitLine: {
+								lineStyle: {
+									type: [
+										4,
+										4
+									],
+									color: ['#262626']
+								}
+							},
+							axisPointer: {
+								label: {
+									color: '#ffffff',
+									backgroundColor: colors[0]
+								}
+							},
+							axisLabel: {
+								color: '#cccccc'
+							}
+						}
+					],
+					series: [
+						{
+							name: locate.may3,
+							data: data[1],
+							type: 'bar',
+							label: {
+								show: true,
+								position: 'top',
+								fontFamily: fontFamily,
+								fontSize: 12,
+								fontWeight: 600,
+								color: colors[0]
+							},
+							barMaxWidth: 28,
+							itemStyle: {
+								borderRadius: [
+									3,
+									3,
+									0,
+									0
+								]
+							}
+						},
+						{
+							name: locate.may4,
+							data: data[2],
+							type: 'bar',
+							label: {
+								show: true,
+								position: 'top',
+								fontFamily: fontFamily,
+								fontSize: 12,
+								fontWeight: 600,
+								color: colors[1]
+							},
+							barMaxWidth: 28,
+							itemStyle: {
+								borderRadius: [
+									3,
+									3,
+									0,
+									0
+								]
+							}
+						},
+						{
+							name: locate.may31,
+							data: data[3],
+							type: 'bar',
+							label: {
+								show: true,
+								position: 'top',
+								fontFamily: fontFamily,
+								fontSize: 12,
+								fontWeight: 600,
+								color: colors[2]
+							},
+							barMaxWidth: 28,
+							itemStyle: {
+								borderRadius: [
+									3,
+									3,
+									0,
+									0
+								]
+							}
+						}
+					]
+				},
+				responsiveOptions = getChartResponsiveOptionsTotalStakeDistribution();
+
+			return $.extend( true, {}, baseOptions, responsiveOptions );
+		}
+
+		function getChartResponsiveOptionsTotalStakeDistribution() {
+			var newOptions = {};
+
+			if ( window.innerWidth < 768 ) {
+				newOptions['series'] = [
+					{
+						label: {
+							fontSize: 8,
+						},
+					},
+					{
+						label: {
+							fontSize: 8,
+						},
+					},
+					{
+						label: {
+							fontSize: 8,
+						},
+					}
+				];
+				newOptions['yAxis'] = [
+					{
+						axisLabel: {
+							color: '#cccccc',
+							fontSize: 10
+						}
+					}
+				];
+			} else {
+				newOptions['series'] = [
+					{
+						label: {
+							fontSize: 13,
+						},
+					},
+					{
+						label: {
+							fontSize: 13,
+						},
+					},
+					{
+						label: {
+							fontSize: 13,
+						},
+					}
+				];
+				newOptions['yAxis'] = [
+					{
+						axisLabel: {
+							color: '#cccccc',
+							fontSize: 12
+						}
+					}
+				];
+			}
+
+			return newOptions;
+		}
+
 		function getChartResponsiveOptionsMoonFitNewUsers() {
 			var newOptions = {};
 
@@ -6080,6 +6335,20 @@
 
 			var yAxis = {};
 			switch ( chartName ) {
+				case 'total-dot-staked-locked':
+					if ( window.innerWidth < 768 ) {
+						yAxis = {
+							axisLabel: {
+								formatter: function ( value ) {
+									return NumberUtil.formatMoney( value );
+								},
+								fontSize: 10
+							}
+						};
+					}
+					newOptions.yAxis = yAxis;
+
+					break;
 				case 'tvl-defi-parachain':
 				case 'tvl-dot-dex':
 				case 'tvl-ksm-dex':
