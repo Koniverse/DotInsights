@@ -13,6 +13,11 @@
     .section {
         margin: 60px 0;
         padding: 0;
+
+        &.site-footer {
+            margin: 0 !important;
+            padding-bottom: 50px;
+        }
     }
 
     .section-reports-hero {
@@ -157,130 +162,39 @@
         }
     }
 
-    .section-ecosystem-overview {
-        padding: 142px 0 284px;
-        --s-header-spacing: 99px;
+    .section.section-staking-overview {
+        padding: 0 0 230px;
+        margin: 0;
+    }
 
-        .section-header {
-            min-height: 144px;
-        }
+    .section.section-validators-nominators {
+        margin: 40px 0 0;
+    }
 
-        .section-top-title {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .shape-group-box-grid {
-            .shape-ball {
-                top: 18%;
-                left: 11%;
-            }
-
-            .shape-cone {
-                bottom: 5%;
-                right: 5%;
-            }
-
-            .shape-dot {
-                bottom: 60%;
-                right: 28%;
-                --shape-width: 148px;
-                --shape-max-width: 9vw;
-            }
-
-            .shape-satellite-04 {
-                bottom: 11%;
-                left: 39%;
-            }
-        }
-
-        .shape-group-galaxy {
-            right: 0;
-            top: 35%;
-            transform: translate(65%, 0);
-
-            .shape-blur-circle {
-                top: 50%;
-                left: 0;
-                transform: translate(0, -50%)
-            }
-
-            .main-image {
-                max-width: 60vw;
-            }
-
-            .shape-02 {
-                top: 18%;
-                left: 13%;
-                z-index: 2;
-                --shape-max-width: 8vw;
-                --shape-width: 84px;
-            }
-
-            .shape-hollow-cube {
-                bottom: 8%;
-                left: 12%;
-                z-index: 2;
-                --shape-width: 277px;
-                --shape-max-width: 15vw;
-            }
-
-            .shape-cube {
-                bottom: 30%;
-                left: 1%;
-                z-index: 2;
-                --shape-max-width: 8vw;
-                --shape-width: 74px;
-                transform: translateX(-40%);
-            }
-        }
-
-        .shape-group-ring {
-            left: 0;
-            bottom: 30%;
-            transform: translate(-37%, 0);
-            --shape-max-width: 14vw;
-
-            .shape-radial-circle {
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-            }
-        }
-
-        .shape-group-grid {
-            bottom: 95px;
-            left: 50%;
-            transform: translateX(-50%);
-            --shape-max-width: 90vw;
-
-            .shape-cone {
-                bottom: 0;
-                left: 25%;
-                transform: translateY(15%);
-                --shape-max-width: 10vw;
-            }
-
-            .shape-ring {
-                right: 8%;
-                top: 32%;
-                --shape-max-width: 8vw;
-                --shape-width: 131px;
-                --shape-transform: scale(1, -1) rotate(-90deg);
-            }
-
-            .shape-02 {
-                top: 20%;
-                left: 5%;
-                --shape-max-width: 9vw;
-                --shape-width: 142px;
-            }
-        }
+    .section.section-nomination-pools {
+        padding: 220px 0 50px;
+        margin-top: 60px;
     }
 
     .section-closing-thoughts {
+        .section-shape {
+            img {
+                --shape-width: 100%;
+            }
+        }
+        .shape-1 {
+            top: 5%;
+            left: -90px;
+            width: 536px;
+            max-width: 28vw;
+        }
+
+        .shape-2 {
+            bottom: 0;
+            right: -12vw;
+            width: 450px;
+            max-width: 24vw;
+        }
 
     }
 
@@ -449,6 +363,12 @@
 
             .section-content-inner {
                 padding: 72px 55px 50px;
+            }
+        }
+
+        .section.section-validators-nominators {
+            .section-header {
+                --s-header-spacing: 100px;
             }
         }
     }
