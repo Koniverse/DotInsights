@@ -5867,11 +5867,21 @@
 						top: '5%',
 						left: '5%',
 						right: '5%',
+						bottom: '20%',
 						containLabel: true
 					},
 					xAxis: {
 						type: 'category',
 						data: data[0],
+						name: 'Total Stake (MDOT)',
+						nameLocation: 'center',
+						nameTextStyle: {
+							fontFamily: fontFamily,
+							fontSize: 13,
+							fontWeight: 500,
+							color: '#ffffff',
+							lineHeight: 80
+						},
 						splitLine: {
 							show: false,
 							lineStyle: {
@@ -5897,40 +5907,43 @@
 							color: '#cccccc'
 						}
 					},
-					yAxis: [
-						{
-							type: 'value',
-							name: 'Validators count',
-							nameTextStyle: {
-								fontSize: 0
-							},
-							offset: 20,
-							alignTicks: true,
-							axisLine: {
-								show: false,
-							},
-							interval: 50,
-							splitNumber: 4,
-							splitLine: {
-								lineStyle: {
-									type: [
-										4,
-										4
-									],
-									color: ['#262626']
-								}
-							},
-							axisPointer: {
-								label: {
-									color: '#ffffff',
-									backgroundColor: colors[0]
-								}
-							},
-							axisLabel: {
-								color: '#cccccc'
+					yAxis: {
+						type: 'value',
+						name: 'Validators count',
+						nameLocation: 'center',
+						nameTextStyle: {
+							fontFamily: fontFamily,
+							fontSize: 13,
+							fontWeight: 500,
+							color: '#ffffff',
+							lineHeight: 80
+						},
+						offset: 0,
+						alignTicks: true,
+						axisLine: {
+							show: false,
+						},
+						interval: 50,
+						splitNumber: 4,
+						splitLine: {
+							lineStyle: {
+								type: [
+									4,
+									4
+								],
+								color: ['#262626']
 							}
+						},
+						axisPointer: {
+							label: {
+								color: '#ffffff',
+								backgroundColor: colors[0]
+							}
+						},
+						axisLabel: {
+							color: '#cccccc'
 						}
-					],
+					},
 					series: [
 						{
 							name: locate.may3,
@@ -6008,6 +6021,54 @@
 		function getChartResponsiveOptionsTotalStakeDistribution() {
 			var newOptions = {};
 
+			if ( window.innerWidth > 767 ) {
+				newOptions['series'] = [
+					{
+						label: {
+							fontSize: 13,
+						},
+					},
+					{
+						label: {
+							fontSize: 13,
+						},
+					},
+					{
+						label: {
+							fontSize: 13,
+						},
+					}
+				];
+			} else {
+				newOptions['series'] = [
+					{
+						label: {
+							fontSize: 8,
+						},
+					},
+					{
+						label: {
+							fontSize: 8,
+						},
+					},
+					{
+						label: {
+							fontSize: 8,
+						},
+					}
+				];
+				newOptions['xAxis'] = {
+					nameTextStyle: {
+						fontSize: 0
+					}
+				};
+				newOptions['yAxis'] = {
+					nameTextStyle: {
+						fontSize: 0
+					}
+				};
+			}
+
 			if ( window.innerWidth < 768 ) {
 				newOptions['series'] = [
 					{
@@ -6026,14 +6087,6 @@
 						},
 					}
 				];
-				newOptions['yAxis'] = [
-					{
-						axisLabel: {
-							color: '#cccccc',
-							fontSize: 10
-						}
-					}
-				];
 			} else {
 				newOptions['series'] = [
 					{
@@ -6050,14 +6103,6 @@
 						label: {
 							fontSize: 13,
 						},
-					}
-				];
-				newOptions['yAxis'] = [
-					{
-						axisLabel: {
-							color: '#cccccc',
-							fontSize: 12
-						}
 					}
 				];
 			}
