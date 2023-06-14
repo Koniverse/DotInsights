@@ -17,6 +17,8 @@ var lang = {
 	stakeUnchangedValidators: 'Validator with unchanged total stake',
 	minTotalStake: 'Minimum Total Stake',
 	zeroSelfStakeCount: 'Count of Validators with zero Self-stake',
+	nominatorCount: 'Nominator Count',
+	validatorStake: 'Validator Self-Stake',
 
 
 	ksmPrice: 'KSM Price',

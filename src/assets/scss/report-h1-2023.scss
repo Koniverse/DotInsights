@@ -182,6 +182,7 @@
                 --shape-width: 100%;
             }
         }
+
         .shape-1 {
             top: 5%;
             left: -90px;
@@ -242,6 +243,15 @@
 
     .block-table-heading, .block-chart-heading {
         text-transform: capitalize;
+    }
+
+    .block-chart-heading {
+        div span {
+            display: block;
+            font-size: 13px;
+            font-weight: 500;
+            color: rgba(204, 204, 204, 0.7);
+        }
     }
 
     .block-table-source, .block-chart-source {
