@@ -10,6 +10,11 @@ var lang = {
 	may31: 'May 31',
 	nominatorStake: 'Nominator Stake',
 	validatorStake: 'Validator Stake',
+	cumulativeUniqueValidators: 'Total unique active Validators since Nov 1,2022',
+	newActiveValidators: 'New Active Validators',
+	stakeGainValidators: 'Validator with increase in total stake',
+	stakeDropValidators: 'Validator with decreases in total stake',
+	stakeUnchangedValidators: 'Validator with unchanged total stake ',
 
 
 	ksmPrice: 'KSM Price',
