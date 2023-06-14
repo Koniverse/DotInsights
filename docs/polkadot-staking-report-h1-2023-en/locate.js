@@ -8,6 +8,8 @@ var lang = {
 	may3: 'May 3',
 	may4: 'May 4',
 	may31: 'May 31',
+	nominatorStake: 'Nominator Stake',
+	validatorStake: 'Validator Stake',
 
 
 	ksmPrice: 'KSM Price',

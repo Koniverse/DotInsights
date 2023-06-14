@@ -248,6 +248,7 @@
 							chartOptions = getChartResponsiveOptionsTopDotKsmChainFees( chartName );
 							break;
 						case 'total-dot-staked-locked':
+
 						case 'tvl-defi-parachain':
 						case 'tvl-dot-dex':
 						case 'tvl-ksm-dex':
@@ -480,6 +481,12 @@
 					switch ( chartName ) {
 						case 'total-dot-staked-locked':
 							chartOptions = getChartOptionsTotalDotStakedLocked( chartName, jsonData );
+							break;
+						case 'total-nominator-count-total-validator-count':
+							chartOptions = getChartOptionsTotalNominatorCountTotalValidatorCount( chartName, jsonData );
+							break;
+						case 'nominator-stake-validator-stake':
+							chartOptions = getChartOptionsNominatorStakeValidatorStake( chartName, jsonData );
 							break;
 						case 'dot-staking-ratio-inflation-rate-price':
 							chartOptions = getChartOptionsDotStakingRatioInflationRatePrice( chartName, jsonData );
@@ -1953,6 +1960,314 @@
 			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors, null, null, chartExtraOptions );
 			var responsiveOptions = getChartLinesBaseResponsiveOptions( chartName );
 			return $.extend( true, {}, baseOptions, responsiveOptions );
+		}
+
+		/* New */
+		function getChartOptionsTotalNominatorCountTotalValidatorCount( chartName, jsonData ) {
+			var datasets = [
+					{
+						name: 'total_nominators',
+						label: 'Nominators'
+					},
+					{
+						name: 'total_validators',
+						label: 'Validators'
+					}
+				],
+				colors = [
+					'#00E7E7',
+					'#DF146A'
+				],
+				chartExtraOptions = {
+					legend: defaultLegendSettings,
+					grid: {
+						top: '5%',
+						left: '3%',
+						right: '3%',
+						containLabel: true
+					},
+					yAxis: {
+						min: 0,
+						max: 50000,
+						interval: 10000,
+						axisLabel: {
+							color: '#cccccc',
+							fontSize: 10
+						}
+					},
+					xAxis: {
+						type: 'time',
+						splitNumber: 3,
+						axisLine: {
+							show: false,
+						},
+						splitLine: {
+							show: true,
+							lineStyle: {
+								type: [
+									4,
+									4
+								],
+								color: ['#262626']
+							}
+						},
+						axisLabel: {
+							color: '#cccccc',
+							fontSize: 10
+						}
+					},
+					tooltip: $.extend( true, {}, defaultTooltipStyle, {
+						trigger: 'axis',
+						axisPointer: {
+							type: 'line',
+							crossStyle: {
+								color: 'rgba(255,255,255,0.3)'
+							},
+							lineStyle: {
+								type: [
+									4,
+									4
+								],
+								color: 'rgba(255,255,255,0.3)'
+							}
+						}
+					} )
+				};
+
+			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors, null, null, chartExtraOptions );
+			var responsiveOptions = getChartResponsiveOptionsTotalNominatorCountTotalValidatorCount( chartName );
+			return $.extend( true, {}, baseOptions, responsiveOptions );
+		}
+
+		function getChartResponsiveOptionsTotalNominatorCountTotalValidatorCount() {
+			var newOptions = {};
+
+			if ( window.innerWidth < 460 ) {
+				$.extend( newOptions, {
+					xAxis: {
+						splitNumber: 2
+					},
+					yAxis: {
+						axisLabel: {
+							formatter: function ( value ) {
+								return value ? NumberUtil.formatMoney( value ) : '0';
+							}
+						}
+					}
+				} )
+			}
+
+			return newOptions;
+		}
+
+		/* New */
+		function getChartOptionsNominatorStakeValidatorStake( chartName, jsonData ) {
+			var totalItems = jsonData.length,
+				data = {
+					nominatorStake: [],
+					validatorStake: []
+				},
+				colors = [
+					'#004dff',
+					'#e4560a'
+				];
+
+			for ( var i = 0; i < totalItems; i ++ ) {
+				data.nominatorStake.push( [
+					                       jsonData[i].date,
+					                       jsonData[i].nominator_stake
+				                       ] );
+				data.validatorStake.push( [
+					                     jsonData[i].date,
+					                     jsonData[i].validator_stake
+				                     ] );
+			}
+
+			var baseOptions = {
+				color: colors,
+				textStyle: {
+					fontFamily: fontFamily,
+					fontWeight: 500
+				},
+				tooltip: defaultTooltipSettings,
+				legend: defaultLegendSettings,
+				grid: {
+					left: '3%',
+					right: '3%',
+					top: '3%', //bottom: 100, // DataZoom + Legend.
+					containLabel: true
+				},
+				xAxis: {
+					type: 'time',
+					boundaryGap: false,
+					axisTick: {
+						show: false
+					},
+					axisLine: {
+						lineStyle: {
+							color: '#262626'
+						}
+					},
+					splitLine: {
+						show: true,
+						lineStyle: {
+							type: [
+								4,
+								4
+							],
+							color: ['#262626']
+						}
+					},
+					axisPointer: defaultAxisPointerLabelSettings,
+					axisLabel: {
+						hideOverlap: false,
+						showMaxLabel: true,
+						overflow: 'breakAll',
+						align: 'center',
+						fontFamily: fontFamily,
+						fontSize: 10,
+						fontWeight: 500,
+						formatter: dateFormatter,
+						color: '#cccccc',
+					}
+				},
+				yAxis: [
+					{
+						type: 'value',
+						name: locate.nominatorStake,
+						position: 'left',
+						axisLine: {
+							show: false
+						},
+						splitNumber: 4,
+						interval: 200000000,
+						splitLine: {
+							lineStyle: {
+								type: [
+									4,
+									4
+								],
+								color: ['#262626']
+							}
+						},
+						axisPointer: {
+							label: {
+								color: '#000000',
+								backgroundColor: '#cccccc',
+							}
+						},
+						axisLabel: {
+							color: '#cccccc',
+							fontSize: 10
+						}
+					},
+					{
+						type: 'value',
+						name: locate.validatorStake,
+						position: 'right',
+						axisLine: {
+							show: false
+						},
+						splitNumber: 4,
+						min: 1000000,
+						max: 3000000,
+						interval: 500000,
+						splitLine: {
+							show: false,
+							lineStyle: {
+								type: [
+									4,
+									4
+								],
+								color: ['#262626']
+							}
+						},
+						axisPointer: defaultAxisPointerLabelSettings,
+						axisLabel: {
+							color: '#cccccc',
+							fontSize: 10
+						}
+					}
+				],
+				series: [
+					{
+						name: locate.nominatorStake,
+						data: data.nominatorStake,
+						itemStyle: {
+							color: colors[0]
+						},
+						type: 'line',
+						smooth: true,
+						showSymbol: false,
+						emphasis: {
+							focus: 'series'
+						}
+					},
+					{
+						name: locate.validatorStake,
+						data: data.validatorStake,
+						itemStyle: {
+							color: colors[1]
+						},
+						type: 'line',
+						smooth: true,
+						showSymbol: false,
+						yAxisIndex: 1,
+						emphasis: {
+							focus: 'series'
+						}
+					}
+				]
+			};
+			var responsiveOptions = getChartResponsiveOptionsNominatorStakeValidatorStake();
+
+			$.extend( true, baseOptions, responsiveOptions );
+
+			return baseOptions;
+		}
+
+		function getChartResponsiveOptionsNominatorStakeValidatorStake() {
+			var newOptions = {};
+
+			if ( window.innerWidth > 767 ) {
+				newOptions = {
+					xAxis: {
+						splitNumber: 3
+					}
+				};
+			} else {
+				newOptions = {
+					xAxis: {
+						splitNumber: 2
+					}
+				};
+
+				if ( window.innerWidth < 460 ) {
+					$.extend( newOptions, {
+						xAxis: {
+							splitNumber: 2
+						},
+						yAxis: [
+							{
+								axisLabel: {
+									formatter: function ( value ) {
+										return value ? NumberUtil.formatMoney( value ) : '0';
+									}
+								}
+							},
+							{
+								axisLabel: {
+									formatter: function ( value ) {
+										return value ? NumberUtil.formatMoney( value ) : '0';
+									}
+								}
+							}
+						],
+					} )
+				}
+			}
+
+			return newOptions;
 		}
 
 		/* New */
@@ -6350,9 +6665,9 @@
 
 			if ( window.innerWidth > 767 ) {
 				switch ( chartName ) {
-					case 'mf-daily-active-user':
+					case 'total-nominator-count-total-validator-count':
 						newOptions['xAxis'] = {
-							splitNumber: 4
+							splitNumber: 3
 						};
 						break;
 					default:

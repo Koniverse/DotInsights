@@ -542,13 +542,13 @@
 								<h3 class="block-chart-heading">Total Nominator count & Total Validator count</h3>
 								<div class="block-chart-body">
 									<div class="block-chart"
-									     data-chart-name="dot-staking-ratio-inflation-rate-price"></div>
+									     data-chart-name="total-nominator-count-total-validator-count"></div>
 								</div>
 							</div>
 							<div class="block-chart-child">
 								<h3 class="block-chart-heading">Nominator Stake & Validator Stake</h3>
 								<div class="block-chart-body">
-									<div class="block-chart" data-chart-name="staking-ratio-daily-dot-rewards"></div>
+									<div class="block-chart" data-chart-name="nominator-stake-validator-stake"></div>
 								</div>
 							</div>
 						</div>
@@ -1510,22 +1510,20 @@
 <script src="../assets/js/reports-h1-2023.js?v=1.0"></script>
 <script src="../assets/js/wallet-manager.js?v=1.15"></script>
 <script id="__bs_script__">//<![CDATA[
-(
-	function () {
-		try {
-			var script = document.createElement( 'script' );
-			if ( 'async' ) {
-				script.async = true;
-			}
-			script.src = 'http://HOST:3000/browser-sync/browser-sync-client.js?v=2.29.1'.replace( "HOST", location.hostname );
-			if ( document.body ) {
-				document.body.appendChild( script );
-			}
-		} catch ( e ) {
-			console.error( "Browsersync: could not append script tag", e );
+(function() {
+	try {
+		var script = document.createElement('script');
+		if ('async') {
+			script.async = true;
 		}
+		script.src = 'http://HOST:3000/browser-sync/browser-sync-client.js?v=2.29.1'.replace("HOST", location.hostname);
+		if (document.body) {
+			document.body.appendChild(script);
+		}
+	} catch (e) {
+		console.error("Browsersync: could not append script tag", e);
 	}
-)()
+})()
 //]]></script>
 </body>
 </html>
