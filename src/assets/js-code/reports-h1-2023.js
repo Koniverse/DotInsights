@@ -213,59 +213,15 @@
 					var chartOptions = false;
 
 					switch ( chartName ) {
-						case 'newly-created-repo':
-							chartOptions = getChartResponsiveOptionsNewlyCreatedRepo( chartName );
-							break;
-						case 'dot-holder-distribution':
-						case 'ksm-holder-distribution':
-							chartOptions = getChartResponsiveOptionsHolderDistribution( chartName );
-							break;
-						case 'ku-net-alloca':
-							chartOptions = getChartResponsiveOptionsKuNetAlloca( chartName );
-							break;
-						case 'pol-net-alloca':
-							chartOptions = getChartResponsiveOptionsPolNetAlloca( chartName );
-							break;
-						case 'nomination-pool-staking':
-							chartOptions = getChartResponsiveOptionsNominationPoolStaking( chartName );
-							break;
-						case 'spending-dominated-kusama':
-							chartOptions = getChartResponsiveOptionsSpendingDominatedKusama( chartName );
-							break;
-						case 'open-gov-average-turnout':
-							chartOptions = getChartResponsiveOptionsOpenGovAverageTurnout( chartName );
-							break;
-						case 'web3-foundation-grants':
-							chartOptions = getChartResponsiveOptionsWeb3FoundationGrants( chartName );
-							break;
-						case 'chain-with-more-token-holders':
-							chartOptions = getChartResponsiveOptionsChainWithMoreTokenHolders( chartName );
-							break;
-						case 'top-dot-ksm-chain-fees':
-							chartOptions = getChartResponsiveOptionsTopDotKsmChainFees( chartName );
-							break;
 						case 'total-dot-staked-locked':
-
-						case 'tvl-defi-parachain':
-						case 'tvl-dot-dex':
-						case 'tvl-ksm-dex':
-						case 'tvl-dot-liquid-staking':
-						case 'tvl-ksm-liquid-staking':
 							chartOptions = getChartLinesBaseResponsiveOptions( chartName );
-							break;
-						case 'usdt-on-statemine-ksm':
-						case 'usdt-on-statemine-dot':
-							chartOptions = getChartResponsiveOptionsUsdtOnStatemine( chartName );
 							break;
 						case 'dot-staking-ratio-inflation-rate-price':
 						case 'staking-ratio-daily-dot-rewards':
 							chartOptions = getChartResponsiveOptionsDotStakingRatio( chartName );
 							break;
-						case 'nft-marketplace':
-							chartOptions = getChartResponsiveOptionsNftMarketplace( chartName );
-							break;
-						case 'daily-new-smart-contracts':
-							chartOptions = getChartResponsiveOptionsDailyNewSmartContracts( chartName );
+						case 'total-unique-active-validator-new-active-validators':
+							chartOptions = getChartResponsiveOptionsTotalUniqueActiveValidatorNewActiveValidators( chartName );
 							break;
 					}
 
@@ -490,6 +446,9 @@
 							break;
 						case 'staking-ratio-daily-dot-rewards':
 							chartOptions = getChartOptionsStakingRatioDailyDotRewards( chartName, jsonData );
+							break;
+						case 'total-unique-active-validator-new-active-validators':
+							chartOptions = getChartOptionsTotalUniqueActiveValidatorNewActiveValidators( chartName, jsonData );
 							break;
 					}
 					chartInstance.hideLoading();
@@ -1612,7 +1571,228 @@
 
 			return newOptions;
 		}
-		
+
+		/* New */
+		function getChartOptionsTotalUniqueActiveValidatorNewActiveValidators( chartName, jsonData ) {
+			var totalItems = jsonData.length,
+				data = {
+					cumulativeUniqueValidators: [],
+					newActiveValidators: []
+				},
+				colors = [
+					'#004dff',
+					'#e6007a'
+				];
+
+			for ( var i = 0; i < totalItems; i ++ ) {
+				data.cumulativeUniqueValidators.push( [
+					                       jsonData[i].date,
+					                       jsonData[i].cumulative_unique_validators
+				                       ] );
+				data.newActiveValidators.push( [
+					                         jsonData[i].date,
+					                         jsonData[i].new_active_validators
+				                         ] );
+			}
+
+			var baseOptions = {
+				color: colors,
+				textStyle: {
+					fontFamily: fontFamily,
+					fontWeight: 500
+				},
+				tooltip: defaultTooltipSettings,
+				legend: defaultLegendSettings,
+				grid: {
+					left: '3%',
+					right: '3%',
+					top: '3%', //bottom: 100, // DataZoom + Legend.
+					containLabel: true
+				},
+				xAxis: {
+					type: 'time',
+					boundaryGap: false,
+					axisTick: {
+						show: false
+					},
+					axisLine: {
+						lineStyle: {
+							color: '#262626'
+						}
+					},
+					splitLine: {
+						show: true,
+						lineStyle: {
+							type: [
+								4,
+								4
+							],
+							color: ['#262626']
+						}
+					},
+					axisPointer: defaultAxisPointerLabelSettings,
+					axisLabel: {
+						hideOverlap: false,
+						showMaxLabel: true,
+						overflow: 'breakAll', //						rotate: 45,
+						align: 'center',
+						fontFamily: fontFamily,
+						fontSize: 10,
+						fontWeight: 500,
+						formatter: dateFormatter,
+						color: '#cccccc',
+					}
+				},
+				yAxis: [
+					{
+						type: 'value',
+						name: locate.cumulativeUniqueValidators,
+						position: 'left',
+						axisLine: {
+							show: false
+						},
+						splitNumber: 4,
+						interval: 200,
+						splitLine: {
+							lineStyle: {
+								type: [
+									4,
+									4
+								],
+								color: ['#262626']
+							}
+						},
+						axisPointer: {
+							label: {
+								color: '#000000',
+								backgroundColor: '#cccccc',
+							}
+						},
+						axisLabel: {
+							color: '#cccccc',
+							fontSize: 10
+						}
+					},
+					{
+						type: 'value',
+						name: locate.newActiveValidators,
+						position: 'right',
+						axisLine: {
+							show: false
+						},
+						splitNumber: 4,
+						interval: 10,
+						splitLine: {
+							show: false,
+							lineStyle: {
+								type: [
+									4,
+									4
+								],
+								color: ['#262626']
+							}
+						},
+						axisPointer: defaultAxisPointerLabelSettings,
+						axisLabel: {
+							color: '#cccccc',
+							fontSize: 10
+						}
+					}
+				],
+				series: [
+					{
+						name: locate.cumulativeUniqueValidators,
+						data: data.cumulativeUniqueValidators,
+						itemStyle: {
+							color: colors[0]
+						},
+						type: 'line',
+						smooth: true,
+						showSymbol: false,
+						emphasis: {
+							focus: 'series'
+						}
+					},
+					{
+						name: locate.newActiveValidators,
+						data: data.newActiveValidators,
+						itemStyle: {
+							color: colors[1]
+						},
+						type: 'line',
+						smooth: true,
+						showSymbol: false,
+						yAxisIndex: 1,
+						emphasis: {
+							focus: 'series'
+						}
+					}
+				]
+			};
+			var responsiveOptions = getChartResponsiveOptionsTotalUniqueActiveValidatorNewActiveValidators();
+
+			$.extend( true, baseOptions, responsiveOptions );
+
+			return baseOptions;
+		}
+
+		function getChartResponsiveOptionsTotalUniqueActiveValidatorNewActiveValidators() {
+			var newOptions = {};
+
+			if ( window.innerWidth > 767 ) {
+				newOptions = {
+					xAxis: {
+						splitNumber: 3
+					}
+				};
+			} else {
+				newOptions = {
+					tooltip: {
+						trigger: 'axis'
+					},
+					xAxis: {
+						splitNumber: 2
+					}
+				};
+
+				if ( window.innerWidth < 460 ) {
+					$.extend( newOptions, {
+						xAxis: {
+							splitNumber: 2
+						}
+					} )
+				}
+
+				if ( window.innerWidth < 460 ) {
+					$.extend( newOptions, {
+						xAxis: {
+							splitNumber: 2
+						},
+						yAxis: [
+							{
+								axisLabel: {
+									formatter: function ( value ) {
+										return value ? NumberUtil.formatMoney( value ) + '%' : '0';
+									}
+								}
+							},
+							{
+								axisLabel: {
+									formatter: function ( value ) {
+										return value ? NumberUtil.formatMoney( value ) : '0';
+									}
+								}
+							}
+						]
+					} )
+				}
+			}
+
+			return newOptions;
+		}
+
+
+
 
 		function getChartLinesBaseOptions( jsonData, datasets, colors, areaBackground, seriesOptions, chartExtraOptions ) {
 			var totalItems = jsonData.length,
