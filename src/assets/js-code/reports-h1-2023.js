@@ -223,6 +223,9 @@
 						case 'total-unique-active-validator-new-active-validators':
 							chartOptions = getChartResponsiveOptionsTotalUniqueActiveValidatorNewActiveValidators( chartName );
 							break;
+						case 'validator-with-changes-versus-with-no-changes-in-total-stake':
+							chartOptions = getChartResponsiveOptionsValidatorWithChangesVersusWithNoChangesInTotalStake( chartName );
+							break;
 					}
 
 					if ( chartOptions ) {
@@ -450,6 +453,9 @@
 						case 'total-unique-active-validator-new-active-validators':
 							chartOptions = getChartOptionsTotalUniqueActiveValidatorNewActiveValidators( chartName, jsonData );
 							break;
+						case 'validator-with-changes-versus-with-no-changes-in-total-stake':
+							chartOptions = getChartOptionsValidatorWithChangesVersusWithNoChangesInTotalStake( chartName, jsonData );
+							break;
 					}
 					chartInstance.hideLoading();
 					chartInstance.setOption( chartOptions );
@@ -577,8 +583,8 @@
 					}
 				],
 				colors = [
-					'#00E7E7',
-					'#DF146A'
+					'#00e7e7',
+					'#df146a'
 				],
 				chartExtraOptions = {
 					legend: defaultLegendSettings,
@@ -676,13 +682,13 @@
 
 			for ( var i = 0; i < totalItems; i ++ ) {
 				data.nominatorStake.push( [
-					                       jsonData[i].date,
-					                       jsonData[i].nominator_stake
-				                       ] );
+					                          jsonData[i].date,
+					                          jsonData[i].nominator_stake
+				                          ] );
 				data.validatorStake.push( [
-					                     jsonData[i].date,
-					                     jsonData[i].validator_stake
-				                     ] );
+					                          jsonData[i].date,
+					                          jsonData[i].validator_stake
+				                          ] );
 			}
 
 			var baseOptions = {
@@ -1586,13 +1592,13 @@
 
 			for ( var i = 0; i < totalItems; i ++ ) {
 				data.cumulativeUniqueValidators.push( [
-					                       jsonData[i].date,
-					                       jsonData[i].cumulative_unique_validators
-				                       ] );
+					                                      jsonData[i].date,
+					                                      jsonData[i].cumulative_unique_validators
+				                                      ] );
 				data.newActiveValidators.push( [
-					                         jsonData[i].date,
-					                         jsonData[i].new_active_validators
-				                         ] );
+					                               jsonData[i].date,
+					                               jsonData[i].new_active_validators
+				                               ] );
 			}
 
 			var baseOptions = {
@@ -1791,7 +1797,205 @@
 			return newOptions;
 		}
 
+		/* New */
+		function getChartOptionsValidatorWithChangesVersusWithNoChangesInTotalStake( chartName, jsonData ) {
+			var totalItems = jsonData.length,
+				data = {
+					stakeGainValidators: [],
+					stakeDropValidators: [],
+					stakeUnchangedValidators: []
+				},
+				colors = [
+					'#00e7e7',
+					'#e6007a',
+					'#f4c54a'
+				];
 
+			for ( var i = 0; i < totalItems; i ++ ) {
+				data.stakeGainValidators.push( [
+					                               jsonData[i].date,
+					                               jsonData[i].stake_gain_validators
+				                               ] );
+				data.stakeDropValidators.push( [
+					                               jsonData[i].date,
+					                               jsonData[i].stake_drop_validators
+				                               ] );
+				data.stakeUnchangedValidators.push( [
+					                                    jsonData[i].date,
+					                                    jsonData[i].stake_unchanged_validators
+				                                    ] );
+			}
+
+			var baseOptions = {
+				color: colors,
+				textStyle: {
+					fontFamily: fontFamily,
+					fontWeight: 500
+				},
+				tooltip: $.extend( true, {}, defaultTooltipStyle, {
+					trigger: 'axis',
+					axisPointer: {
+						type: 'line',
+						crossStyle: {
+							color: 'rgba(255,255,255,0.3)'
+						},
+						lineStyle: {
+							type: [
+								4,
+								4
+							],
+							color: 'rgba(255,255,255,0.3)'
+						}
+					},
+					valueFormatter: function ( value ) {
+						return value + '%';
+					}
+				} ),
+				legend: defaultLegendSettings,
+				grid: {
+					left: '3%',
+					right: '3%',
+					top: '3%', //bottom: 100, // DataZoom + Legend.
+					containLabel: true
+				},
+				xAxis: {
+					type: 'time',
+					boundaryGap: false,
+					axisTick: {
+						show: false
+					},
+					axisLine: {
+						lineStyle: {
+							color: '#262626'
+						}
+					},
+					splitLine: {
+						show: true,
+						lineStyle: {
+							type: [
+								4,
+								4
+							],
+							color: ['#262626']
+						}
+					},
+					axisPointer: defaultAxisPointerLabelSettings,
+					axisLabel: {
+						hideOverlap: false,
+						showMaxLabel: true,
+						overflow: 'breakAll', //						rotate: 45,
+						align: 'center',
+						fontFamily: fontFamily,
+						fontSize: 10,
+						fontWeight: 500,
+						formatter: dateFormatter,
+						color: '#cccccc',
+					}
+				},
+				yAxis: [
+					{
+						type: 'value',
+						name: locate.cumulativeUniqueValidators,
+						position: 'left',
+						axisLine: {
+							show: false
+						},
+						max: 100,
+						splitNumber: 4,
+						interval: 25,
+						splitLine: {
+							lineStyle: {
+								type: [
+									4,
+									4
+								],
+								color: ['#262626']
+							}
+						},
+						axisPointer: {
+							label: {
+								color: '#000000',
+								backgroundColor: '#cccccc'
+							}
+						},
+						axisLabel: {
+							color: '#cccccc',
+							fontSize: 10,
+							formatter: "{value}%"
+						}
+					}
+				],
+				series: [
+					{
+						name: locate.stakeGainValidators,
+						data: data.stakeGainValidators,
+						itemStyle: {
+							color: colors[0]
+						},
+						type: 'bar',
+						smooth: true,
+						showSymbol: false,
+						emphasis: {
+							focus: 'series'
+						},
+						stack: '1'
+					},
+					{
+						name: locate.stakeDropValidators,
+						data: data.stakeDropValidators,
+						itemStyle: {
+							color: colors[1]
+						},
+						type: 'bar',
+						smooth: true,
+						showSymbol: false,
+						emphasis: {
+							focus: 'series'
+						},
+						stack: '1'
+					},
+					{
+						name: locate.stakeUnchangedValidators,
+						data: data.stakeUnchangedValidators,
+						itemStyle: {
+							color: colors[2]
+						},
+						type: 'bar',
+						smooth: true,
+						showSymbol: false,
+						emphasis: {
+							focus: 'series'
+						},
+						stack: '1'
+					}
+				]
+			};
+			var responsiveOptions = getChartResponsiveOptionsTotalUniqueActiveValidatorNewActiveValidators();
+
+			$.extend( true, baseOptions, responsiveOptions );
+
+			return baseOptions;
+		}
+
+		function getChartResponsiveOptionsValidatorWithChangesVersusWithNoChangesInTotalStake() {
+			var newOptions = {};
+
+			if ( window.innerWidth > 767 ) {
+				newOptions = {
+					xAxis: {
+						splitNumber: 3
+					}
+				};
+			} else {
+				newOptions = {
+					xAxis: {
+						splitNumber: 2
+					}
+				};
+			}
+
+			return newOptions;
+		}
 
 
 		function getChartLinesBaseOptions( jsonData, datasets, colors, areaBackground, seriesOptions, chartExtraOptions ) {
