@@ -216,6 +216,9 @@
 						case 'total-dot-staked-locked':
 							chartOptions = getChartLinesBaseResponsiveOptions( chartName );
 							break;
+						case 'total-nominator-count-total-validator-count':
+							chartOptions = getChartResponsiveOptionsTotalNominatorCountTotalValidatorCount( chartName );
+							break;
 						case 'dot-staking-ratio-inflation-rate-price':
 						case 'staking-ratio-daily-dot-rewards':
 							chartOptions = getChartResponsiveOptionsDotStakingRatio( chartName );
@@ -225,6 +228,9 @@
 							break;
 						case 'validator-with-changes-versus-with-no-changes-in-total-stake':
 							chartOptions = getChartResponsiveOptionsValidatorWithChangesVersusWithNoChangesInTotalStake( chartName );
+							break;
+						case 'total-stake-distribution-among-active-validators':
+							chartOptions = getChartResponsiveOptionsTotalStakeDistributionAmongActiveValidators( chartName );
 							break;
 					}
 
@@ -455,6 +461,9 @@
 							break;
 						case 'validator-with-changes-versus-with-no-changes-in-total-stake':
 							chartOptions = getChartOptionsValidatorWithChangesVersusWithNoChangesInTotalStake( chartName, jsonData );
+							break;
+						case 'total-stake-distribution-among-active-validators':
+							chartOptions = getChartOptionsTotalStakeDistributionAmongActiveValidators( chartName, jsonData );
 							break;
 					}
 					chartInstance.hideLoading();
@@ -835,6 +844,214 @@
 		}
 
 		function getChartResponsiveOptionsNominatorStakeValidatorStake() {
+			var newOptions = {};
+
+			if ( window.innerWidth > 767 ) {
+				newOptions = {
+					xAxis: {
+						splitNumber: 3
+					}
+				};
+			} else {
+				newOptions = {
+					xAxis: {
+						splitNumber: 2
+					}
+				};
+
+				if ( window.innerWidth < 460 ) {
+					$.extend( newOptions, {
+						xAxis: {
+							splitNumber: 2
+						},
+						yAxis: [
+							{
+								axisLabel: {
+									formatter: function ( value ) {
+										return value ? NumberUtil.formatMoney( value ) : '0';
+									}
+								}
+							},
+							{
+								axisLabel: {
+									formatter: function ( value ) {
+										return value ? NumberUtil.formatMoney( value ) : '0';
+									}
+								}
+							}
+						],
+					} )
+				}
+			}
+
+			return newOptions;
+		}
+
+		/* New */
+		function getChartOptionsTotalStakeDistributionAmongActiveValidators( chartName, jsonData ) {
+			var totalItems = jsonData.length,
+				data = {
+					minTotalStake: [],
+					zeroSelfStakeCount: []
+				},
+				colors = [
+					'#004dff',
+					'#EA5474'
+				];
+
+			for ( var i = 0; i < totalItems; i ++ ) {
+				data.minTotalStake.push( [
+					                          jsonData[i].date,
+					                          jsonData[i].min_total_stake
+				                          ] );
+				data.zeroSelfStakeCount.push( [
+					                          jsonData[i].date,
+					                          jsonData[i].zero_self_stake_count
+				                          ] );
+			}
+
+			var baseOptions = {
+				color: colors,
+				textStyle: {
+					fontFamily: fontFamily,
+					fontWeight: 500
+				},
+				tooltip: defaultTooltipSettings,
+				legend: defaultLegendSettings,
+				grid: {
+					left: '3%',
+					right: '3%',
+					top: '3%', //bottom: 100, // DataZoom + Legend.
+					containLabel: true
+				},
+				xAxis: {
+					type: 'time',
+					boundaryGap: false,
+					axisTick: {
+						show: false
+					},
+					axisLine: {
+						lineStyle: {
+							color: '#262626'
+						}
+					},
+					splitLine: {
+						show: true,
+						lineStyle: {
+							type: [
+								4,
+								4
+							],
+							color: ['#262626']
+						}
+					},
+					axisPointer: defaultAxisPointerLabelSettings,
+					axisLabel: {
+						hideOverlap: false,
+						showMaxLabel: true,
+						overflow: 'breakAll',
+						align: 'center',
+						fontFamily: fontFamily,
+						fontSize: 10,
+						fontWeight: 500,
+						formatter: dateFormatter,
+						color: '#cccccc',
+					}
+				},
+				yAxis: [
+					{
+						type: 'value',
+						name: locate.minTotalStake,
+						position: 'left',
+						axisLine: {
+							show: false
+						},
+						splitNumber: 4,
+						interval: 500000,
+						splitLine: {
+							lineStyle: {
+								type: [
+									4,
+									4
+								],
+								color: ['#262626']
+							}
+						},
+						axisPointer: {
+							label: {
+								color: '#000000',
+								backgroundColor: '#cccccc',
+							}
+						},
+						axisLabel: {
+							color: '#cccccc',
+							fontSize: 10
+						}
+					},
+					{
+						type: 'value',
+						name: locate.zeroSelfStakeCount,
+						position: 'right',
+						axisLine: {
+							show: false
+						},
+						splitNumber: 4,
+						interval: 50,
+						splitLine: {
+							show: false,
+							lineStyle: {
+								type: [
+									4,
+									4
+								],
+								color: ['#262626']
+							}
+						},
+						axisPointer: defaultAxisPointerLabelSettings,
+						axisLabel: {
+							color: '#cccccc',
+							fontSize: 10
+						}
+					}
+				],
+				series: [
+					{
+						name: locate.minTotalStake,
+						data: data.minTotalStake,
+						itemStyle: {
+							color: colors[0]
+						},
+						type: 'line',
+						smooth: true,
+						showSymbol: false,
+						emphasis: {
+							focus: 'series'
+						}
+					},
+					{
+						name: locate.zeroSelfStakeCount,
+						data: data.zeroSelfStakeCount,
+						itemStyle: {
+							color: colors[1]
+						},
+						type: 'line',
+						smooth: true,
+						showSymbol: false,
+						yAxisIndex: 1,
+						emphasis: {
+							focus: 'series'
+						}
+					}
+				]
+			};
+			var responsiveOptions = getChartResponsiveOptionsTotalStakeDistributionAmongActiveValidators();
+
+			$.extend( true, baseOptions, responsiveOptions );
+
+			return baseOptions;
+		}
+
+		function getChartResponsiveOptionsTotalStakeDistributionAmongActiveValidators() {
 			var newOptions = {};
 
 			if ( window.innerWidth > 767 ) {

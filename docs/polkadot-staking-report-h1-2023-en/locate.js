@@ -14,7 +14,9 @@ var lang = {
 	newActiveValidators: 'New Active Validators',
 	stakeGainValidators: 'Validator with increase in total stake',
 	stakeDropValidators: 'Validator with decreases in total stake',
-	stakeUnchangedValidators: 'Validator with unchanged total stake ',
+	stakeUnchangedValidators: 'Validator with unchanged total stake',
+	minTotalStake: 'Minimum Total Stake',
+	zeroSelfStakeCount: 'Count of Validators with zero Self-stake',
 
 
 	ksmPrice: 'KSM Price',
