@@ -234,6 +234,7 @@
 							break;
 						case 'active-validators-nominator-counts-versus-self-stakes':
 						case 'active-validators-nominator-counts-versus-self-stakes-less-than-10k':
+						case 'active-validators-nominator-counts-versus-commission':
 							chartOptions = getChartResponsiveOptionsActiveValidatorsNominatorCountsVersusSelfStakes( chartName );
 							break;
 					}
@@ -474,6 +475,9 @@
 							break;
 						case 'active-validators-nominator-counts-versus-self-stakes-less-than-10k':
 							chartOptions = getChartOptionsActiveValidatorsNominatorCountsVersusSelfStakesLessThan10k( chartName, jsonData );
+							break;
+						case 'active-validators-nominator-counts-versus-commission':
+							chartOptions = getChartOptionsActiveValidatorsNominatorCountsVersusCommission( chartName, jsonData );
 							break;
 					}
 					chartInstance.hideLoading();
@@ -2239,7 +2243,7 @@
 			}
 
 			var baseOptions = {
-				color: '#66E1B6',
+				color: '#66e1b6',
 				textStyle: {
 					fontFamily: fontFamily,
 					fontWeight: 500
@@ -2456,6 +2460,133 @@
 						data: data.activeValidators,
 						itemStyle: {
 							color: 'rgba(223,20,106,0.7)'
+						},
+						type: 'scatter',
+						symbolSize: 6,
+						smooth: true,
+						showSymbol: false,
+						emphasis: {
+							focus: 'series'
+						}
+					}
+				]
+			};
+			var responsiveOptions = getChartResponsiveOptionsActiveValidatorsNominatorCountsVersusSelfStakes();
+
+			$.extend( true, baseOptions, responsiveOptions );
+
+			return baseOptions;
+		}
+
+		function getChartOptionsActiveValidatorsNominatorCountsVersusCommission( chartName, jsonData ) {
+			var totalItems = jsonData.length,
+				data = {
+					activeValidators: []
+				};
+
+			for ( var i = 0; i < totalItems; i ++ ) {
+				data.activeValidators.push( [
+					                            jsonData[i].validator_commission,
+					                            jsonData[i].nominator_count
+				                            ] );
+			}
+
+			var baseOptions = {
+				color: 'rgba(223,20,106,0.7)',
+				textStyle: {
+					fontFamily: fontFamily,
+					fontWeight: 500
+				},
+				tooltip: defaultTooltipSettings,
+				legend: {
+					show: false
+				},
+				grid: {
+					left: '8%',
+					right: '5%',
+					top: '3%', //bottom: 100, // DataZoom + Legend.
+					containLabel: true
+				},
+				xAxis: {
+					type: 'value',
+					name: locate.validatorCommission,
+					nameLocation: 'middle',
+					nameTextStyle: {
+						fontFamily: fontFamily,
+						fontSize: 13,
+						fontWeight: 500,
+						color: '#ffffff',
+						lineHeight: 80
+					},
+					axisLine: {
+						show: false
+					},
+					max: 100,
+					splitNumber: 4,
+					interval: 25,
+					splitLine: {
+						lineStyle: {
+							type: [
+								4,
+								4
+							],
+							color: ['#262626']
+						}
+					},
+					axisPointer: {
+						label: {
+							color: '#000000',
+							backgroundColor: '#cccccc',
+							formatter: "{value}%"
+						}
+					},
+					axisLabel: {
+						formatter: "{value}%",
+						color: '#cccccc',
+						fontSize: 10
+					}
+				},
+				yAxis: {
+					type: 'value',
+					name: locate.nominatorCount,
+					nameLocation: 'center',
+					nameTextStyle: {
+						fontFamily: fontFamily,
+						fontSize: 13,
+						fontWeight: 500,
+						color: '#ffffff',
+						lineHeight: 80
+					},
+					axisLine: {
+						show: false
+					},
+					splitNumber: 4,
+					interval: 200,
+					splitLine: {
+						lineStyle: {
+							type: [
+								4,
+								4
+							],
+							color: ['#262626']
+						}
+					},
+					axisPointer: {
+						label: {
+							color: '#000000',
+							backgroundColor: '#cccccc',
+						}
+					},
+					axisLabel: {
+						color: '#cccccc',
+						fontSize: 10
+					}
+				},
+				series: [
+					{
+						data: data.activeValidators,
+						itemStyle: {
+							color: 'rgba(34,191,254,0.7)'
 						},
 						type: 'scatter',
 						symbolSize: 6,
