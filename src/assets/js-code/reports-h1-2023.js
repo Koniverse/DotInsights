@@ -261,6 +261,9 @@
 						case 'pools-share-of-total-rewards':
 							chartOptions = getChartResponsiveOptionsPoolsShareOfTotalRewards( chartName );
 							break;
+						case 'reward-share-by-five-pools-with-the-highest-all-time-total-rewards':
+							chartOptions = getChartResponsiveOptionsRewardShareByFivePoolsWithTheHighestAllTimeTotalRewards( chartName );
+							break;
 					}
 
 					if ( chartOptions ) {
@@ -520,6 +523,9 @@
 							break;
 						case 'pools-share-of-total-rewards':
 							chartOptions = getChartOptionsPoolsShareOfTotalRewards( chartName, jsonData );
+							break;
+						case 'reward-share-by-five-pools-with-the-highest-all-time-total-rewards':
+							chartOptions = getChartOptionsRewardShareByFivePoolsWithTheHighestAllTimeTotalRewards( chartName, jsonData );
 							break;
 					}
 					chartInstance.hideLoading();
@@ -3937,6 +3943,253 @@
 				newOptions = {
 					xAxis: {
 						splitNumber: 2
+					}
+				};
+			}
+
+			return newOptions;
+		}
+
+		/* New */
+		function getChartOptionsRewardShareByFivePoolsWithTheHighestAllTimeTotalRewards( chartName, jsonData ) {
+			var totalItems = jsonData.length,
+				data = {
+					talisman_pool_1: [],
+					amforc_np_nominator: [],
+					decentradot: [],
+					paranodesio_pool: [],
+					subwallet: [],
+				},
+				colors = [
+					'#004DFF',
+					'#DF146A',
+					'#F4C54A',
+					'#8247E5',
+					'#66E1B6'
+				];
+
+			for ( var i = 0; i < totalItems; i ++ ) {
+				data.talisman_pool_1.push( [
+					                      jsonData[i].date,
+					                      jsonData[i].talisman_pool_1
+				                      ] );
+				data.amforc_np_nominator.push( [
+					                      jsonData[i].date,
+					                      jsonData[i].amforc_np_nominator
+				                      ] );
+				data.decentradot.push( [
+					                      jsonData[i].date,
+					                      jsonData[i].decentradot
+				                      ] );
+				data.paranodesio_pool.push( [
+					                      jsonData[i].date,
+					                      jsonData[i].paranodesio_pool
+				                      ] );
+				data.subwallet.push( [
+					                      jsonData[i].date,
+					                      jsonData[i].subwallet
+				                      ] );
+			}
+
+			var baseOptions = {
+				color: colors,
+				textStyle: {
+					fontFamily: fontFamily,
+					fontWeight: 500
+				},
+				tooltip: defaultTooltipSettings,
+				legend: {
+					show: true,
+					icon: 'roundRect',
+					textStyle: {
+						fontFamily: fontFamily,
+						color: '#ffffff',
+						fontSize: 13,
+						fontWeight: '500',
+						padding: [
+							3,
+							0,
+							0,
+							0
+						]
+					},
+					itemWidth: 14,
+					itemHeight: 14,
+					itemGap: 20,
+					left: 'center',
+					right: 'center',
+					bottom: 0,
+
+					// Should be allow scroll for better ux.
+//					type: 'plain',
+					pageIconColor: '#ffffff',
+					pageIconInactiveColor: 'rgba(255,255,255,0.2)',
+					pageTextStyle: {
+						fontFamily: fontFamily,
+						color: '#ffffff',
+						fontSize: 13,
+						fontWeight: '500'
+					}
+				},
+				grid: {
+					left: '3%',
+					right: '3%',
+					top: '3%',
+					bottom: 80, // DataZoom + Legend.
+					containLabel: true
+				},
+				xAxis: {
+					type: 'time',
+					boundaryGap: false,
+					axisTick: {
+						show: false
+					},
+					axisLine: {
+						lineStyle: {
+							color: '#262626'
+						}
+					},
+					splitLine: {
+						show: true,
+						lineStyle: {
+							type: [
+								4,
+								4
+							],
+							color: ['#262626']
+						}
+					},
+					axisPointer: defaultAxisPointerLabelSettings,
+					axisLabel: {
+						fontFamily: fontFamily,
+						fontSize: 10,
+						fontWeight: 500,
+						formatter: dateFormatter,
+						color: '#cccccc',
+					}
+				},
+				yAxis: {
+					type: 'value',
+					position: 'left',
+					axisLine: {
+						show: false
+					},
+					splitNumber: 4,
+					interval: 500,
+					splitLine: {
+						lineStyle: {
+							type: [
+								4,
+								4
+							],
+							color: ['#262626']
+						}
+					},
+					axisPointer: {
+						label: {
+							color: '#000000',
+							backgroundColor: '#cccccc',
+						}
+					},
+					axisLabel: {
+						color: '#cccccc',
+						fontSize: 10
+					}
+				},
+				series: [
+					{
+						data: data.talisman_pool_1,
+						name: 'Talisman pool 1',
+						itemStyle: {
+							color: colors[0]
+						},
+						type: 'line',
+						smooth: true,
+						showSymbol: false,
+						emphasis: {
+							focus: 'series'
+						}
+					},
+					{
+						data: data.amforc_np_nominator,
+						name: 'Amforc / np-nominator',
+						itemStyle: {
+							color: colors[1]
+						},
+						type: 'line',
+						smooth: true,
+						showSymbol: false,
+						emphasis: {
+							focus: 'series'
+						}
+					},
+					{
+						data: data.decentradot,
+						name: 'decentraDOT.com',
+						itemStyle: {
+							color: colors[2]
+						},
+						type: 'line',
+						smooth: true,
+						showSymbol: false,
+						emphasis: {
+							focus: 'series'
+						}
+					},
+					{
+						data: data.paranodesio_pool,
+						name: 'ParaNodes.io / Pool 🚀',
+						itemStyle: {
+							color: colors[3]
+						},
+						type: 'line',
+						smooth: true,
+						showSymbol: false,
+						emphasis: {
+							focus: 'series'
+						}
+					},
+					{
+						data: data.subwallet,
+						name: 'SubWallet Official',
+						itemStyle: {
+							color: colors[4]
+						},
+						type: 'line',
+						smooth: true,
+						showSymbol: false,
+						emphasis: {
+							focus: 'series'
+						}
+					}
+				]
+			};
+			var responsiveOptions = getChartResponsiveOptionsRewardShareByFivePoolsWithTheHighestAllTimeTotalRewards();
+
+			$.extend( true, baseOptions, responsiveOptions );
+
+			return baseOptions;
+		}
+
+		function getChartResponsiveOptionsRewardShareByFivePoolsWithTheHighestAllTimeTotalRewards() {
+			var newOptions = {};
+
+			if ( window.innerWidth > 767 ) {
+				newOptions = {
+					xAxis: {
+						splitNumber: 3
+					},
+					legend: {
+						type: 'plain'
+					}
+				};
+			} else {
+				newOptions = {
+					xAxis: {
+						splitNumber: 2
+					},
+					legend: {
+						type: 'scroll'
 					}
 				};
 			}
