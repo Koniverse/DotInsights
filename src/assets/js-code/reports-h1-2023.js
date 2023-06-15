@@ -232,10 +232,16 @@
 						case 'total-stake-distribution-among-active-validators':
 							chartOptions = getChartResponsiveOptionsTotalStakeDistributionAmongActiveValidators( chartName );
 							break;
+						case 'total-stake-distribution':
+							chartOptions = getChartResponsiveOptionsTotalStakeDistribution( chartName );
+							break;
 						case 'active-validators-nominator-counts-versus-self-stakes':
 						case 'active-validators-nominator-counts-versus-self-stakes-less-than-10k':
 						case 'active-validators-nominator-counts-versus-commission':
 							chartOptions = getChartResponsiveOptionsActiveValidatorsNominatorCountsVersusSelfStakes( chartName );
+							break;
+						case 'nominations-backing-validators-with-100-commission':
+							chartOptions = getChartResponsiveOptionsNominationsBackingValidatorsWith100Commission( chartName );
 							break;
 					}
 
@@ -490,6 +496,9 @@
 					/* New */
 					case 'total-stake-distribution':
 						chartOptions = getChartOptionsTotalStakeDistribution( chartName );
+						break;
+					case 'nominations-backing-validators-with-100-commission':
+						chartOptions = getChartOptionsNominationsBackingValidatorsWith100Commission( chartName );
 						break;
 				}
 
@@ -2504,7 +2513,7 @@
 				grid: {
 					left: '8%',
 					right: '5%',
-					top: '3%', //bottom: 100, // DataZoom + Legend.
+					top: '3%',
 					containLabel: true
 				},
 				xAxis: {
@@ -2629,6 +2638,181 @@
 								return value ? NumberUtil.formatMoney( value ) : '0';
 							}
 						}
+					}
+				} )
+			}
+
+			return newOptions;
+		}
+
+		/* New */
+		function getChartOptionsNominationsBackingValidatorsWith100Commission( chartName ) {
+			var colors = [
+					'#F42F44'
+				],
+				data = [
+					[
+						'0-10',
+						'10-20',
+						'20-30',
+						'30-40',
+						'40-50',
+						'50-60',
+						'60-70',
+						'70-80',
+						'80-90',
+						'90-100',
+						'100-110',
+						'110-120'
+					],
+					[
+						'97',
+						'13',
+						'6',
+						'1',
+						'0',
+						'1',
+						'1',
+						'0',
+						'0',
+						'0',
+						'0',
+						'1'
+					]
+				],
+				baseOptions = {
+					color: colors,
+					textStyle: {
+						fontFamily: fontFamily,
+						fontWeight: 500
+					},
+					tooltip: defaultTooltipSettings,
+					legend: {
+						show: false
+					},
+					grid: {
+						top: '3%',
+						left: '8%',
+						right: '5%',
+						containLabel: true
+					},
+					xAxis: {
+						type: 'category',
+						data: data[0],
+						name: 'Nomination Count',
+						nameLocation: 'center',
+						nameTextStyle: {
+							fontFamily: fontFamily,
+							fontSize: 13,
+							fontWeight: 500,
+							color: '#ffffff',
+							lineHeight: 120
+						},
+						splitLine: {
+							show: false,
+							lineStyle: {
+								type: [
+									4,
+									4
+								],
+								color: ['#262626']
+							}
+						},
+						axisTick: {
+							show: false
+						},
+						axisLine: {
+							show: false,
+						},
+						axisPointer: defaultAxisPointerLabelSettings,
+						axisLabel: {
+							hideOverlap: false,
+							showMaxLabel: true,
+							overflow: 'breakAll',
+							rotate: 45,
+							align: 'right',
+							fontFamily: fontFamily,
+							fontSize: 10,
+							fontWeight: 500,
+							color: '#cccccc'
+						}
+					},
+					yAxis: {
+						type: 'value',
+						name: 'Validators Count',
+						nameLocation: 'center',
+						nameTextStyle: {
+							fontFamily: fontFamily,
+							fontSize: 13,
+							fontWeight: 500,
+							color: '#ffffff',
+							lineHeight: 80
+						},
+						offset: 0,
+						alignTicks: true,
+						axisLine: {
+							show: false,
+						},
+						interval: 25,
+						splitNumber: 4,
+						splitLine: {
+							lineStyle: {
+								type: [
+									4,
+									4
+								],
+								color: ['#262626']
+							}
+						},
+						axisPointer: {
+							label: {
+								color: '#ffffff',
+								backgroundColor: colors[0]
+							}
+						},
+						axisLabel: {
+							color: '#cccccc'
+						}
+					},
+					series: [
+						{
+							data: data[1],
+							type: 'bar',
+							label: {
+								show: true,
+								position: 'top',
+								fontFamily: fontFamily,
+								fontSize: 12,
+								fontWeight: 600,
+								color: colors[0]
+							},
+							barMaxWidth: 28,
+							itemStyle: {
+								borderRadius: [
+									3,
+									3,
+									0,
+									0
+								]
+							}
+						}
+					]
+				},
+				responsiveOptions = getChartResponsiveOptionsNominationsBackingValidatorsWith100Commission();
+
+			return $.extend( true, {}, baseOptions, responsiveOptions );
+		}
+
+		function getChartResponsiveOptionsNominationsBackingValidatorsWith100Commission() {
+			var newOptions = {};
+
+			if ( window.innerWidth < 460 ) {
+				$.extend( newOptions, {
+					grid: {
+						left: '15%',
+						right: '5%',
+						top: '3%', //bottom: 100, // DataZoom + Legend.
+						containLabel: true
 					}
 				} )
 			}
