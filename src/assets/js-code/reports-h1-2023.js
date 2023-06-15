@@ -246,6 +246,9 @@
 						case 'oversubcribed-validators':
 							chartOptions = getChartResponsiveOptionsOversubcribedValidators( chartName );
 							break;
+						case 'minimum-active-nominator-stake':
+							chartOptions = getChartResponsiveOptionsMinimumActiveNominatorStake( chartName );
+							break;
 					}
 
 					if ( chartOptions ) {
@@ -490,6 +493,9 @@
 							break;
 						case 'oversubcribed-validators':
 							chartOptions = getChartOptionsOversubcribedValidators( chartName, jsonData );
+							break;
+						case 'minimum-active-nominator-stake':
+							chartOptions = getChartOptionsMinimumActiveNominatorStake( chartName, jsonData );
 							break;
 					}
 					chartInstance.hideLoading();
@@ -2660,9 +2666,9 @@
 					btwn257and512: [],
 				},
 				colors = [
-					'#004DFF',
-					'#EA5474',
-					'#F4C54A'
+					'#004dff',
+					'#ea5474',
+					'#f4c54a'
 				];
 
 			for ( var i = 0; i < totalItems; i ++ ) {
@@ -2994,6 +3000,131 @@
 			return newOptions;
 		}
 
+		/* New */
+		function getChartOptionsMinimumActiveNominatorStake( chartName, jsonData ) {
+			var datasets = [
+					{
+						name: 'min_active_stake',
+						label: 'Min Active Stake'
+					},
+					{
+						name: 'annotation_min_active_stake',
+						label: 'Annotation Min Active Stake'
+					}
+				],
+				colors = [
+					'#00e7e7',
+					'rgba(0,231,231,0)'
+				],
+				chartExtraOptions = {
+					tooltip: defaultTooltipSettings,
+					legend: {
+						show: false,
+					},
+					grid: {
+						top: '5%',
+						left: '3%',
+						right: '3%',
+						containLabel: true
+					},
+					yAxis: {
+						interval: 100,
+						axisLabel: {
+							color: '#cccccc',
+							fontSize: 10
+						}
+					},
+					xAxis: {
+						type: 'time',
+						splitNumber: 3,
+						axisLine: {
+							show: false,
+						},
+						splitLine: {
+							show: true,
+							lineStyle: {
+								type: [
+									4,
+									4
+								],
+								color: ['#262626']
+							}
+						},
+						axisLabel: {
+							color: '#cccccc',
+							fontSize: 10
+						}
+					},
+					series: [
+						{
+							type: 'line',
+							label: {
+								show: false,
+							},
+							areaStyle: {
+								color: new echarts.graphic.LinearGradient( 0, 0, 0, 1, [
+									{
+										offset: 0,
+										color: 'rgba(0,231,231,0.4)'
+									},
+									{
+										offset: 1,
+										color: 'rgba(0, 231, 231, 0)'
+									}
+								] )
+							},
+							smooth: true,
+							showSymbol: false,
+							emphasis: {
+								focus: 'series'
+							}
+						},
+						{
+							type: 'line',
+							label: {
+								show: true,
+								fontFamily: fontFamily,
+								fontWeight: 700,
+								fontSize: 16,
+								position: 'top',
+								color: '#ffffff',
+							},
+							smooth: true,
+							showSymbol: true,
+							symbolSize: 16, //symbol: 'path://M11 8C11 9.65685 9.65685 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5C9.65685 5 11 6.34315 11 8 M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM8 11C9.65685 11 11 9.65685 11 8C11 6.34315 9.65685 5 8 5C6.34315 5 5 6.34315 5 8C5 9.65685 6.34315 11 8 11Z',
+							symbol: 'image://data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAATCAYAAACdkl3yAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGfSURBVHgBrZS9asJQFMfPzVelmCBah4iCUx37CkK3UueuhW7tK3TsK3QsdOrQNdCtQ9+gq04Wi1cIAUUporlJz4mx2HsTq9A/mJg/9/5y7vkIwD+JZbq+78J83gLTdCGK7NQNQIgADKMPrtvfDorjIoxGbbzXYJvieAq1mgeMzVRQHJcR0sH7AeyiKFrg1YN6PaBHbSOS3SHJTs3CayfZ+wMaDveDbMIoFSgDOG8ixJbXnFpW5aFUunR1vY6vPuyG4fvNZPL8ulgEvxZSPrE4DAaDNuj6sQx5qVRuCbDpY1K+zoLgToEJ0dPAsspyNPeOcyFDSORRlKAe0dWQdiT7LdM8gRzRURWTMVvLWkxHgBxlRZoEhWFNZZML8Qk56mHSFRM7XsOsc9m/Go8fs6Ii7xorp+IBQYbRlV2qClWHSk6b6feBlcmsGAnnbzUinJ//OV95EmIGjcaTlhLf0tnZT7SnUPDo7wpUrVLCvb1gtNZxvHSv9BnxfRu/Qx3s9OJWCGPD5BQpRAWtRfMXhs2k69cNS22yXHI8ShcBSqW/AcwIuZ5JADyUAAAAAElFTkSuQmCC',
+							emphasis: {
+								focus: 'series'
+							}
+						}
+					]
+				};
+
+			var baseOptions = getChartLinesBaseOptions( jsonData, datasets, colors, null, null, chartExtraOptions );
+			var responsiveOptions = getChartResponsiveOptionsMinimumActiveNominatorStake( chartName );
+			return $.extend( true, {}, baseOptions, responsiveOptions );
+		}
+
+		function getChartResponsiveOptionsMinimumActiveNominatorStake() {
+			var newOptions = {};
+
+			if ( window.innerWidth < 460 ) {
+				$.extend( newOptions, {
+					series: [
+						{
+
+						},
+						{
+							label: {
+								fontSize: 10
+							},
+						}
+					]
+				} )
+			}
+
+			return newOptions;
+		}
 
 		function getChartLinesBaseOptions( jsonData, datasets, colors, areaBackground, seriesOptions, chartExtraOptions ) {
 			var totalItems = jsonData.length,
