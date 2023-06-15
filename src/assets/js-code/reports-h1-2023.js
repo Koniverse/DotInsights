@@ -255,6 +255,12 @@
 						case 'total-stake-total-members-in-polkadot-nomination-pools':
 							chartOptions = getChartResponsiveOptionsTotalStakeTotalMembersInPolkadotNominationPools( chartName );
 							break;
+						case 'daily-reward-distribution-by-nominator-type':
+							chartOptions = getChartResponsiveOptionsDailyRewardDistributionByNominatorType( chartName );
+							break;
+						case 'pools-share-of-total-rewards':
+							chartOptions = getChartResponsiveOptionsPoolsShareOfTotalRewards( chartName );
+							break;
 					}
 
 					if ( chartOptions ) {
@@ -508,6 +514,12 @@
 							break;
 						case 'total-stake-total-members-in-polkadot-nomination-pools':
 							chartOptions = getChartOptionsTotalStakeTotalMembersInPolkadotNominationPools( chartName, jsonData );
+							break;
+						case 'daily-reward-distribution-by-nominator-type':
+							chartOptions = getChartOptionsDailyRewardDistributionByNominatorType( chartName, jsonData );
+							break;
+						case 'pools-share-of-total-rewards':
+							chartOptions = getChartOptionsPoolsShareOfTotalRewards( chartName, jsonData );
 							break;
 					}
 					chartInstance.hideLoading();
@@ -3569,6 +3581,362 @@
 						axisLabel: {
 							formatter: dateShortFormatter
 						}
+					}
+				};
+			}
+
+			return newOptions;
+		}
+
+		/* New */
+		function getChartOptionsDailyRewardDistributionByNominatorType( chartName, jsonData ) {
+			var totalItems = jsonData.length,
+				data = {
+					individual: [],
+					pool: []
+				},
+				colors = [
+					'#004DFF',
+					'#DF146A'
+				];
+
+			for ( var i = 0; i < totalItems; i ++ ) {
+				data.individual.push( [
+					                         jsonData[i].date,
+					                         jsonData[i].individual
+				                         ] );
+				data.pool.push( [
+					                              jsonData[i].date,
+					                              jsonData[i].pool
+				                              ] );
+			}
+
+			var baseOptions = {
+				color: colors,
+				textStyle: {
+					fontFamily: fontFamily,
+					fontWeight: 500
+				},
+				tooltip: defaultTooltipSettings,
+				legend: defaultLegendSettings,
+				grid: {
+					left: '3%',
+					right: '3%',
+					top: '3%', //bottom: 100, // DataZoom + Legend.
+					containLabel: true
+				},
+				xAxis: {
+					type: 'time',
+					boundaryGap: false,
+					axisTick: {
+						show: false
+					},
+					axisLine: {
+						lineStyle: {
+							color: '#262626'
+						}
+					},
+					splitLine: {
+						show: true,
+						lineStyle: {
+							type: [
+								4,
+								4
+							],
+							color: ['#262626']
+						}
+					},
+					axisPointer: defaultAxisPointerLabelSettings,
+					axisLabel: {
+						fontFamily: fontFamily,
+						fontSize: 10,
+						fontWeight: 500,
+						formatter: dateFormatter,
+						color: '#cccccc',
+					}
+				},
+				yAxis: [
+					{
+						type: 'value',
+						name: locate.individual,
+						position: 'left',
+						axisLine: {
+							show: false
+						},
+						splitNumber: 4,
+						interval: 50000,
+						splitLine: {
+							lineStyle: {
+								type: [
+									4,
+									4
+								],
+								color: ['#262626']
+							}
+						},
+						axisPointer: {
+							label: {
+								color: '#000000',
+								backgroundColor: '#cccccc',
+							}
+						},
+						axisLabel: {
+							color: '#cccccc',
+							fontSize: 10
+						}
+					},
+					{
+						type: 'value',
+						name: locate.pool,
+						position: 'right',
+						axisLine: {
+							show: false
+						},
+						splitNumber: 4,
+						interval: 1000,
+						splitLine: {
+							show: false,
+							lineStyle: {
+								type: [
+									4,
+									4
+								],
+								color: ['#262626']
+							}
+						},
+						axisPointer: defaultAxisPointerLabelSettings,
+						axisLabel: {
+							color: '#cccccc',
+							fontSize: 10
+						}
+					}
+				],
+				series: [
+					{
+						name: locate.individual,
+						data: data.individual,
+						itemStyle: {
+							color: colors[0]
+						},
+						type: 'line',
+						smooth: true,
+						showSymbol: false,
+						emphasis: {
+							focus: 'series'
+						}
+					},
+					{
+						name: locate.pool,
+						data: data.pool,
+						itemStyle: {
+							color: colors[1]
+						},
+						type: 'line',
+						smooth: true,
+						showSymbol: false,
+						yAxisIndex: 1,
+						emphasis: {
+							focus: 'series'
+						}
+					}
+				]
+			};
+			var responsiveOptions = getChartResponsiveOptionsDailyRewardDistributionByNominatorType();
+
+			$.extend( true, baseOptions, responsiveOptions );
+
+			return baseOptions;
+		}
+
+		function getChartResponsiveOptionsDailyRewardDistributionByNominatorType() {
+			var newOptions = {};
+
+			if ( window.innerWidth > 767 ) {
+				newOptions = {
+					xAxis: {
+						splitNumber: 3
+					}
+				};
+			} else {
+				newOptions = {
+					xAxis: {
+						splitNumber: 2
+					}
+				};
+
+				if ( window.innerWidth < 460 ) {
+					$.extend( newOptions, {
+						xAxis: {
+							splitNumber: 2
+						},
+						yAxis: [
+							{
+								axisLabel: {
+									formatter: function ( value ) {
+										return value ? NumberUtil.formatMoney( value ) : '0';
+									}
+								}
+							},
+							{
+								axisLabel: {
+									formatter: function ( value ) {
+										return value ? NumberUtil.formatMoney( value ) : '0';
+									}
+								}
+							}
+						],
+					} )
+				}
+			}
+
+			return newOptions;
+		}
+
+		/* New */
+		function getChartOptionsPoolsShareOfTotalRewards( chartName, jsonData ) {
+			var totalItems = jsonData.length,
+				data = {
+					pool_share: []
+				},
+				colors = [
+					'#66E1B6'
+				];
+
+			for ( var i = 0; i < totalItems; i ++ ) {
+				data.pool_share.push( [
+					                      jsonData[i].date,
+					                      jsonData[i].pool_share
+				                      ] );
+			}
+
+			var baseOptions = {
+				color: colors,
+				textStyle: {
+					fontFamily: fontFamily,
+					fontWeight: 500
+				},
+				tooltip: $.extend( true, {}, defaultTooltipStyle, {
+					trigger: 'axis',
+					axisPointer: {
+						type: 'line',
+						crossStyle: {
+							color: 'rgba(255,255,255,0.3)'
+						},
+						lineStyle: {
+							type: [
+								4,
+								4
+							],
+							color: 'rgba(255,255,255,0.3)'
+						}
+					},
+					valueFormatter: function ( value ) {
+						return value + '%';
+					}
+				} ),
+				legend: {
+					show: false
+				},
+				grid: {
+					left: '3%',
+					right: '3%',
+					top: '3%', //bottom: 100, // DataZoom + Legend.
+					containLabel: true
+				},
+				xAxis: {
+					type: 'time',
+					boundaryGap: false,
+					axisTick: {
+						show: false
+					},
+					axisLine: {
+						lineStyle: {
+							color: '#262626'
+						}
+					},
+					splitLine: {
+						show: true,
+						lineStyle: {
+							type: [
+								4,
+								4
+							],
+							color: ['#262626']
+						}
+					},
+					axisPointer: defaultAxisPointerLabelSettings,
+					axisLabel: {
+						fontFamily: fontFamily,
+						fontSize: 10,
+						fontWeight: 500,
+						formatter: dateFormatter,
+						color: '#cccccc',
+					}
+				},
+				yAxis: {
+					type: 'value',
+					position: 'left',
+					axisLine: {
+						show: false
+					},
+					splitNumber: 4,
+					interval: 0.5,
+					splitLine: {
+						lineStyle: {
+							type: [
+								4,
+								4
+							],
+							color: ['#262626']
+						}
+					},
+					axisPointer: {
+						label: {
+							color: '#000000',
+							backgroundColor: '#cccccc',
+						}
+					},
+					axisLabel: {
+						formatter: "{value}%",
+						color: '#cccccc',
+						fontSize: 10
+					}
+				},
+				series: [
+					{
+						data: data.pool_share,
+						itemStyle: {
+							color: colors[0]
+						},
+						type: 'line',
+						smooth: true,
+						showSymbol: false,
+						emphasis: {
+							focus: 'series'
+						}
+					}
+				]
+			};
+			var responsiveOptions = getChartResponsiveOptionsPoolsShareOfTotalRewards();
+
+			$.extend( true, baseOptions, responsiveOptions );
+
+			return baseOptions;
+		}
+
+		function getChartResponsiveOptionsPoolsShareOfTotalRewards() {
+			var newOptions = {};
+
+			if ( window.innerWidth > 767 ) {
+				newOptions = {
+					xAxis: {
+						splitNumber: 3
+					}
+				};
+			} else {
+				newOptions = {
+					xAxis: {
+						splitNumber: 2
 					}
 				};
 			}

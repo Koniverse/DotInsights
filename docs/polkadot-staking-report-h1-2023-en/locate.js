@@ -27,6 +27,8 @@ var lang = {
 	numAccounts: 'Count of unique Account',
 	totalPoolsMembers: 'Total Members',
 	totalPoolsStake: 'Total Stake',
+	individual: 'Individual Nominators',
+	pool: 'Pools',
 
 
 	amount: 'Total Amount Unbounded',
