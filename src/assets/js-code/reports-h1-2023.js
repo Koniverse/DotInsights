@@ -243,6 +243,9 @@
 						case 'nominations-backing-validators-with-100-commission':
 							chartOptions = getChartResponsiveOptionsNominationsBackingValidatorsWith100Commission( chartName );
 							break;
+						case 'oversubcribed-validators':
+							chartOptions = getChartResponsiveOptionsOversubcribedValidators( chartName );
+							break;
 					}
 
 					if ( chartOptions ) {
@@ -484,6 +487,9 @@
 							break;
 						case 'active-validators-nominator-counts-versus-commission':
 							chartOptions = getChartOptionsActiveValidatorsNominatorCountsVersusCommission( chartName, jsonData );
+							break;
+						case 'oversubcribed-validators':
+							chartOptions = getChartOptionsOversubcribedValidators( chartName, jsonData );
 							break;
 					}
 					chartInstance.hideLoading();
@@ -2269,7 +2275,7 @@
 				},
 				xAxis: {
 					type: 'value',
-					name: locate.validatorStake,
+					name: locate.validatorSelfStake,
 					nameLocation: 'middle',
 					nameTextStyle: {
 						fontFamily: fontFamily,
@@ -2393,7 +2399,7 @@
 				},
 				xAxis: {
 					type: 'value',
-					name: locate.validatorStake,
+					name: locate.validatorSelfStake,
 					nameLocation: 'middle',
 					nameTextStyle: {
 						fontFamily: fontFamily,
@@ -2646,9 +2652,177 @@
 		}
 
 		/* New */
+		function getChartOptionsOversubcribedValidators( chartName, jsonData ) {
+			var totalItems = jsonData.length,
+				data = {
+					oversubscribed: [],
+					over512: [],
+					btwn257and512: [],
+				},
+				colors = [
+					'#004DFF',
+					'#EA5474',
+					'#F4C54A'
+				];
+
+			for ( var i = 0; i < totalItems; i ++ ) {
+				data.oversubscribed.push( [
+					                          jsonData[i].date,
+					                          jsonData[i].oversubscribed
+				                          ] );
+				data.over512.push( [
+					                   jsonData[i].date,
+					                   jsonData[i].over512
+				                   ] );
+				data.btwn257and512.push( [
+					                         jsonData[i].date,
+					                         jsonData[i].btwn257and512
+				                         ] );
+			}
+
+			var baseOptions = {
+				color: colors,
+				textStyle: {
+					fontFamily: fontFamily,
+					fontWeight: 500
+				},
+				tooltip: defaultTooltipSettings,
+				legend: defaultLegendSettings,
+				grid: {
+					top: '3%',
+					left: '8%',
+					right: '3%',
+					containLabel: true
+				},
+				xAxis: {
+					type: 'time',
+					splitLine: {
+						show: false,
+					},
+					splitNumber: 4,
+					axisTick: {
+						show: false
+					},
+					axisLine: {
+						show: false
+					},
+					axisPointer: defaultAxisPointerLabelSettings,
+					axisLabel: {
+						formatter: dateFormatter,
+						color: '#cccccc'
+					}
+				},
+				yAxis: [
+					{
+						type: 'value',
+						name: locate.validatorCount,
+						nameLocation: 'middle',
+						nameTextStyle: {
+							fontFamily: fontFamily,
+							fontSize: 13,
+							fontWeight: 500,
+							color: '#ffffff',
+							lineHeight: 80
+						},
+						offset: 20,
+						alignTicks: true,
+						axisLine: {
+							show: false,
+						},
+						interval: 10,
+						splitLine: {
+							lineStyle: {
+								type: [
+									4,
+									4
+								],
+								color: ['#262626']
+							}
+						},
+						axisPointer: {
+							label: {
+								color: '#ffffff',
+								backgroundColor: colors[1]
+							}
+						},
+						axisLabel: {
+							color: '#cccccc'
+						}
+					}
+				],
+				series: [
+					{
+						name: locate.oversubscribed,
+						data: data.oversubscribed,
+						type: 'bar',
+						smooth: false,
+						showSymbol: false,
+						emphasis: {
+							focus: 'series'
+						}
+					},
+					{
+						name: locate.over512,
+						data: data.over512,
+						type: 'line',
+						smooth: false,
+						showSymbol: false,
+						emphasis: {
+							focus: 'series'
+						}
+					},
+					{
+						name: locate.btwn257and512,
+						data: data.btwn257and512,
+						type: 'line',
+						smooth: false,
+						showSymbol: false,
+						emphasis: {
+							focus: 'series'
+						}
+					}
+				]
+			};
+			var responsiveOptions = getChartResponsiveOptionsOversubcribedValidators();
+
+			$.extend( true, baseOptions, responsiveOptions );
+
+			return baseOptions;
+		}
+
+		function getChartResponsiveOptionsOversubcribedValidators() {
+			var newOptions = {};
+
+			if ( window.innerWidth < 460 ) {
+				$.extend( newOptions, {
+					grid: {
+						top: '3%',
+						left: '20%',
+						right: '3%',
+						containLabel: true
+					},
+					xAxis: {
+						axisLabel: {
+							overflow: 'breakAll',
+							rotate: 45,
+							align: 'right',
+							fontFamily: fontFamily,
+							fontSize: 10,
+							fontWeight: 500,
+							formatter: dateFormatter,
+							color: '#cccccc',
+						}
+					}
+				} )
+			}
+
+			return newOptions;
+		}
+
+		/* New */
 		function getChartOptionsNominationsBackingValidatorsWith100Commission( chartName ) {
 			var colors = [
-					'#F42F44'
+					'#f42f44'
 				],
 				data = [
 					[

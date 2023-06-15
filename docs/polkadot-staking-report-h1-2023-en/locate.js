@@ -18,8 +18,12 @@ var lang = {
 	minTotalStake: 'Minimum Total Stake',
 	zeroSelfStakeCount: 'Count of Validators with zero Self-stake',
 	nominatorCount: 'Nominator Count',
-	validatorStake: 'Validator Self-Stake',
+	validatorSelfStake: 'Validator Self-Stake',
 	validatorCommission: 'Validator Commission',
+	validatorCount: 'Validator Count',
+	oversubscribed: 'Oversubscribed',
+	over512: 'Over 512 Nominators',
+	btwn257and512: 'Between 257 & 512 Nominators',
 
 
 	ksmPrice: 'KSM Price',
