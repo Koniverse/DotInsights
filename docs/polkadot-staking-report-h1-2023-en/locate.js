@@ -25,15 +25,15 @@ var lang = {
 	over512: 'Over 512 Nominators',
 	btwn257and512: 'Between 257 & 512 Nominators',
 	numAccounts: 'Count of unique Account',
+	totalPoolsMembers: 'Total Members',
+	totalPoolsStake: 'Total Stake',
+
+
 	amount: 'Total Amount Unbounded',
-
-
 	ksmPrice: 'KSM Price',
 	developmentActivity: 'Development Activity',
 	activeDevelopers: 'Active developers',
 	codeCommits: 'Code commits',
-	totalPoolsMembers: 'Total Pool Members',
-	totalPoolsStake: 'Total Pool Stake (DOT)',
 	pending: 'Pending',
 	notApproved: 'Not Approved',
 	grantsEachWave: 'Grants Each Wave (Quater)',

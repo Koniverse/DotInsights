@@ -252,6 +252,9 @@
 						case 'fast-unstake-on-polkadot':
 							chartOptions = getChartResponsiveOptionsFastUnstakeOnPolkadot( chartName );
 							break;
+						case 'total-stake-total-members-in-polkadot-nomination-pools':
+							chartOptions = getChartResponsiveOptionsTotalStakeTotalMembersInPolkadotNominationPools( chartName );
+							break;
 					}
 
 					if ( chartOptions ) {
@@ -502,6 +505,9 @@
 							break;
 						case 'fast-unstake-on-polkadot':
 							chartOptions = getChartOptionsFastUnstakeOnPolkadot( chartName, jsonData );
+							break;
+						case 'total-stake-total-members-in-polkadot-nomination-pools':
+							chartOptions = getChartOptionsTotalStakeTotalMembersInPolkadotNominationPools( chartName, jsonData );
 							break;
 					}
 					chartInstance.hideLoading();
@@ -3347,6 +3353,219 @@
 					],
 					xAxis: {
 						splitNumber: 2,
+						axisLabel: {
+							formatter: dateShortFormatter
+						}
+					}
+				};
+			}
+
+			return newOptions;
+		}
+
+		/* New */
+		function getChartOptionsTotalStakeTotalMembersInPolkadotNominationPools( chartName, jsonData ) {
+			var totalItems = jsonData.length,
+				data = {
+					total_members: [],
+					total_stake: [],
+				},
+				colors = [
+					'#004DFF',
+					'#FF279A'
+				];
+
+			for ( var i = 0; i < totalItems; i ++ ) {
+				data.total_members.push( [
+					                         jsonData[i].date,
+					                         jsonData[i].total_members
+				                         ] );
+				data.total_stake.push( [
+					                       jsonData[i].date,
+					                       jsonData[i].total_stake
+				                       ] );
+			}
+
+			var baseOptions = {
+				color: colors,
+				textStyle: {
+					fontFamily: fontFamily,
+					fontWeight: 500
+				},
+				tooltip: defaultTooltipSettings,
+				legend: defaultLegendSettings,
+				grid: {
+					top: '3%',
+					left: '40px',
+					right: '40px',
+					containLabel: true
+				},
+				xAxis: {
+					type: 'time',
+					splitLine: {
+						show: false,
+					},
+
+					axisTick: {
+						show: false
+					},
+					axisLine: {
+						show: false
+					},
+					axisPointer: defaultAxisPointerLabelSettings,
+					axisLabel: {
+						margin: 15,
+						formatter: dateFormatter,
+						color: '#cccccc'
+					}
+				},
+				yAxis: [
+					{
+						type: 'value',
+						name: locate.totalPoolsStake,
+						nameTextStyle: {
+							fontSize: 0
+						},
+						alignTicks: true,
+						axisLine: {
+							show: false,
+						},
+						interval: 2500,
+						max: 12500,
+						splitLine: {
+							lineStyle: {
+								type: [
+									4,
+									4
+								],
+								color: ['#262626']
+							}
+						},
+						axisPointer: {
+							label: {
+								color: '#ffffff',
+								backgroundColor: colors[0]
+							}
+						},
+						axisLabel: {
+							color: '#cccccc'
+						}
+					},
+					{
+						type: 'value',
+						name: locate.totalPoolsMembers,
+						nameTextStyle: {
+							fontSize: 0
+						},
+						position: 'right',
+						interval: 1000000,
+						max: 5000000,
+						alignTicks: true,
+						axisLine: {
+							show: false,
+						},
+						splitLine: {
+							lineStyle: {
+								type: [
+									4,
+									4
+								],
+								color: ['#262626']
+							}
+						},
+						axisPointer: {
+							label: {
+								color: '#ffffff',
+								backgroundColor: colors[1]
+							}
+						},
+						axisLabel: {
+							color: '#cccccc'
+						}
+					}
+				],
+				series: [
+					{
+						name: locate.totalPoolsMembers,
+						data: data.total_members,
+						type: 'bar',
+						showSymbol: false,
+						emphasis: {
+							focus: 'series'
+						}
+					},
+					{
+						name: locate.totalPoolsStake,
+						data: data.total_stake,
+						type: 'line',
+						yAxisIndex: 1,
+						smooth: true,
+						showSymbol: false,
+						emphasis: {
+							focus: 'series'
+						}
+					}
+				]
+			};
+			var responsiveOptions = getChartResponsiveOptionsTotalStakeTotalMembersInPolkadotNominationPools();
+
+			$.extend( true, baseOptions, responsiveOptions );
+
+			return baseOptions;
+		}
+
+		function getChartResponsiveOptionsTotalStakeTotalMembersInPolkadotNominationPools() {
+			var newOptions = {};
+
+			if ( window.innerWidth > 767 ) {
+				newOptions = {
+					grid: {
+						left: '40px',
+						right: '40px',
+					},
+					yAxis: [
+						{
+							axisLabel: {
+								formatter: '{value}'
+							}
+						},
+						{
+							axisLabel: {
+								formatter: '{value}'
+							}
+						}
+					],
+					xAxis: {
+						splitNumber: 3,
+						axisLabel: {
+							formatter: dateFormatter
+						}
+					}
+				};
+			} else {
+				newOptions = {
+					grid: {
+						left: '20px',
+						right: '20px',
+					},
+					yAxis: [
+						{
+							axisLabel: {
+								formatter: function ( value ) {
+									return NumberUtil.formatMoney( value );
+								}
+							}
+						},
+						{
+							axisLabel: {
+								formatter: function ( value ) {
+									return NumberUtil.formatMoney( value );
+								}
+							}
+						}
+					],
+					xAxis: {
+						splitNumber: 3,
 						axisLabel: {
 							formatter: dateShortFormatter
 						}
