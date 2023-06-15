@@ -249,6 +249,9 @@
 						case 'minimum-active-nominator-stake':
 							chartOptions = getChartResponsiveOptionsMinimumActiveNominatorStake( chartName );
 							break;
+						case 'fast-unstake-on-polkadot':
+							chartOptions = getChartResponsiveOptionsFastUnstakeOnPolkadot( chartName );
+							break;
 					}
 
 					if ( chartOptions ) {
@@ -496,6 +499,9 @@
 							break;
 						case 'minimum-active-nominator-stake':
 							chartOptions = getChartOptionsMinimumActiveNominatorStake( chartName, jsonData );
+							break;
+						case 'fast-unstake-on-polkadot':
+							chartOptions = getChartOptionsFastUnstakeOnPolkadot( chartName, jsonData );
 							break;
 					}
 					chartInstance.hideLoading();
@@ -3111,9 +3117,7 @@
 			if ( window.innerWidth < 460 ) {
 				$.extend( newOptions, {
 					series: [
-						{
-
-						},
+						{},
 						{
 							label: {
 								fontSize: 10
@@ -3125,6 +3129,234 @@
 
 			return newOptions;
 		}
+
+		/* New */
+		function getChartOptionsFastUnstakeOnPolkadot( chartName, jsonData ) {
+			var totalItems = jsonData.length,
+				data = {
+					num_accounts: [],
+					amount: [],
+				},
+				colors = [
+					'#004bff',
+					'#e6007a'
+				];
+
+			for ( var i = 0; i < totalItems; i ++ ) {
+				data.num_accounts.push( [
+					                        jsonData[i].date,
+					                        jsonData[i].num_accounts
+				                        ] );
+				data.amount.push( [
+					                  jsonData[i].date,
+					                  jsonData[i].amount
+				                  ] );
+			}
+
+			var baseOptions = {
+				color: colors,
+				textStyle: {
+					fontFamily: fontFamily,
+					fontWeight: 500
+				},
+				tooltip: defaultTooltipSettings,
+				legend: defaultLegendSettings,
+				grid: {
+					top: '3%',
+					left: '40px',
+					right: '40px',
+					containLabel: true
+				},
+				xAxis: {
+					type: 'time',
+					splitLine: {
+						show: false,
+					},
+
+					axisTick: {
+						show: false
+					},
+					axisLine: {
+						show: false
+					},
+					axisPointer: defaultAxisPointerLabelSettings,
+					axisLabel: {
+						margin: 15,
+						formatter: dateFormatter,
+						color: '#cccccc'
+					}
+				},
+				yAxis: [
+					{
+						type: 'value',
+						name: locate.amount,
+						nameTextStyle: {
+							fontSize: 0
+						},
+						position: 'right',
+						interval: 5000,
+						offset: 20,
+						alignTicks: true,
+						axisLine: {
+							show: false,
+						},
+						splitLine: {
+							lineStyle: {
+								type: [
+									4,
+									4
+								],
+								color: ['#262626']
+							}
+						},
+						axisPointer: {
+							label: {
+								color: '#ffffff',
+								backgroundColor: colors[0]
+							}
+						},
+						axisLabel: {
+							color: '#cccccc'
+						}
+					},
+					{
+						type: 'value',
+						name: locate.numAccounts,
+						nameTextStyle: {
+							fontSize: 0
+						},
+						offset: 20,
+						alignTicks: true,
+						axisLine: {
+							show: false,
+						},
+						interval: 2,
+						splitLine: {
+							lineStyle: {
+								type: [
+									4,
+									4
+								],
+								color: ['#262626']
+							}
+						},
+						axisPointer: {
+							label: {
+								color: '#ffffff',
+								backgroundColor: colors[1]
+							}
+						},
+						axisLabel: {
+							color: '#cccccc'
+						}
+					}
+				],
+				series: [
+					{
+						name: locate.numAccounts,
+						data: data.num_accounts,
+						type: 'bar',
+						smooth: true,
+						yAxisIndex: 1,
+						showSymbol: false,
+						emphasis: {
+							focus: 'series'
+						},
+						barMaxWidth: 10,
+						itemStyle: {
+							borderRadius: [
+								4,
+								4,
+								0,
+								0
+							]
+						}
+					},
+					{
+						name: locate.amount,
+						data: data.amount,
+						type: 'line',
+						smooth: false,
+						showSymbol: false,
+						emphasis: {
+							focus: 'series'
+						}
+					}
+				]
+			};
+			var responsiveOptions = getChartResponsiveOptionsFastUnstakeOnPolkadot();
+
+			$.extend( true, baseOptions, responsiveOptions );
+
+			return baseOptions;
+		}
+
+		function getChartResponsiveOptionsFastUnstakeOnPolkadot() {
+			var newOptions = {};
+
+			if ( window.innerWidth > 767 ) {
+				newOptions = {
+					grid: {
+						left: '40px',
+						right: '40px',
+					},
+					yAxis: [
+						{
+							offset: 20,
+							axisLabel: {
+								formatter: '{value}'
+							}
+						},
+						{
+							offset: 20,
+							axisLabel: {
+								formatter: '{value}'
+							}
+						}
+					],
+					xAxis: {
+						splitNumber: 3,
+						axisLabel: {
+							formatter: dateFormatter
+						}
+					}
+				};
+			} else {
+				newOptions = {
+					grid: {
+						left: '20px',
+						right: '20px',
+					},
+					yAxis: [
+						{
+							offset: 5,
+							axisLabel: {
+								formatter: function ( value ) {
+									return NumberUtil.formatMoney( value );
+								}
+							}
+						},
+						{
+							offset: 5,
+							axisLabel: {
+								formatter: function ( value ) {
+									return NumberUtil.formatMoney( value );
+								}
+							}
+						}
+					],
+					xAxis: {
+						splitNumber: 2,
+						axisLabel: {
+							formatter: dateShortFormatter
+						}
+					}
+				};
+			}
+
+			return newOptions;
+		}
+
 
 		function getChartLinesBaseOptions( jsonData, datasets, colors, areaBackground, seriesOptions, chartExtraOptions ) {
 			var totalItems = jsonData.length,

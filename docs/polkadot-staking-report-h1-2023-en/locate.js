@@ -24,6 +24,8 @@ var lang = {
 	oversubscribed: 'Oversubscribed',
 	over512: 'Over 512 Nominators',
 	btwn257and512: 'Between 257 & 512 Nominators',
+	numAccounts: 'Count of unique Account',
+	amount: 'Total Amount Unbounded',
 
 
 	ksmPrice: 'KSM Price',
