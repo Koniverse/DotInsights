@@ -116,7 +116,7 @@
 				textStyle: {
 					fontFamily: fontFamily,
 					color: '#ffffff',
-					fontSize: 14,
+					fontSize: 13,
 					fontWeight: '500',
 					padding: [
 						3,
@@ -137,7 +137,7 @@
 				pageTextStyle: {
 					fontFamily: fontFamily,
 					color: '#ffffff',
-					fontSize: 14,
+					fontSize: 13,
 					fontWeight: '500'
 				}
 			},
@@ -804,9 +804,6 @@
 					},
 					axisPointer: defaultAxisPointerLabelSettings,
 					axisLabel: {
-						hideOverlap: false,
-						showMaxLabel: true,
-						overflow: 'breakAll',
 						align: 'center',
 						fontFamily: fontFamily,
 						fontSize: 10,
@@ -1013,9 +1010,6 @@
 					},
 					axisPointer: defaultAxisPointerLabelSettings,
 					axisLabel: {
-						hideOverlap: false,
-						showMaxLabel: true,
-						overflow: 'breakAll',
 						align: 'center',
 						fontFamily: fontFamily,
 						fontSize: 10,
@@ -1226,9 +1220,6 @@
 					},
 					axisPointer: defaultAxisPointerLabelSettings,
 					axisLabel: {
-						hideOverlap: false,
-						showMaxLabel: true,
-						overflow: 'breakAll', //						rotate: 45,
 						align: 'center',
 						fontFamily: fontFamily,
 						fontSize: 10,
@@ -1403,9 +1394,6 @@
 					},
 					axisPointer: defaultAxisPointerLabelSettings,
 					axisLabel: {
-						hideOverlap: false,
-						showMaxLabel: true,
-						overflow: 'breakAll',
 						align: 'center',
 						fontFamily: fontFamily,
 						fontSize: 10,
@@ -1658,7 +1646,7 @@
 					},
 					yAxis: {
 						type: 'value',
-						name: 'Validators count',
+						name: 'Validators Count',
 						nameLocation: 'center',
 						nameTextStyle: {
 							fontFamily: fontFamily,
@@ -1918,9 +1906,6 @@
 					},
 					axisPointer: defaultAxisPointerLabelSettings,
 					axisLabel: {
-						hideOverlap: false,
-						showMaxLabel: true,
-						overflow: 'breakAll', //						rotate: 45,
 						align: 'center',
 						fontFamily: fontFamily,
 						fontSize: 10,
@@ -2160,9 +2145,6 @@
 					},
 					axisPointer: defaultAxisPointerLabelSettings,
 					axisLabel: {
-						hideOverlap: false,
-						showMaxLabel: true,
-						overflow: 'breakAll', //						rotate: 45,
 						align: 'center',
 						fontFamily: fontFamily,
 						fontSize: 10,
@@ -2294,8 +2276,15 @@
 				textStyle: {
 					fontFamily: fontFamily,
 					fontWeight: 500
-				},
-				tooltip: defaultTooltipSettings,
+				}, //				tooltip: defaultTooltipSettings,
+				tooltip: $.extend( true, {}, defaultTooltipSettings, {
+					trigger: 'item',
+					formatter: function ( params ) {
+						return (
+							'Validator Self-Stake: ' + NumberUtil.formatWithCommas( params.value[params.encode.x[0]] ) + '<br /><div style="display: inline-block; width: 10px; height: 10px; background-color: rgba(102,225,182,0.7); margin-right: 8px; border-radius: 50%;"></div>' + params.value[params.encode.y[0]] + ' Nominators'
+						);
+					}
+				} ),
 				legend: {
 					show: false
 				},
@@ -2419,7 +2408,14 @@
 					fontFamily: fontFamily,
 					fontWeight: 500
 				},
-				tooltip: defaultTooltipSettings,
+				tooltip: $.extend( true, {}, defaultTooltipSettings, {
+					trigger: 'item',
+					formatter: function ( params ) {
+						return (
+							'Validator Self-Stake: ' + NumberUtil.formatWithCommas( params.value[params.encode.x[0]] ) + '<br /><div style="display: inline-block; width: 10px; height: 10px; background-color: rgba(223,20,106,0.7); margin-right: 8px; border-radius: 50%;"></div>' + params.value[params.encode.y[0]] + ' Nominators'
+						);
+					}
+				} ),
 				legend: {
 					show: false
 				},
@@ -2544,7 +2540,14 @@
 					fontFamily: fontFamily,
 					fontWeight: 500
 				},
-				tooltip: defaultTooltipSettings,
+				tooltip: $.extend( true, {}, defaultTooltipSettings, {
+					trigger: 'item',
+					formatter: function ( params ) {
+						return (
+							'Validator Commission: ' + NumberUtil.formatWithCommas( params.value[params.encode.x[0]] ) + '%' + '<br /><div style="display: inline-block; width: 10px; height: 10px; background-color: rgba(34,191,254,0.7); margin-right: 8px; border-radius: 50%;"></div>' + params.value[params.encode.y[0]] + ' Nominators'
+						);
+					}
+				} ),
 				legend: {
 					show: false
 				},
@@ -2890,7 +2893,10 @@
 						fontFamily: fontFamily,
 						fontWeight: 500
 					},
-					tooltip: defaultTooltipSettings,
+					tooltip: $.extend( true, {}, defaultTooltipSettings, {
+						trigger: 'item',
+						formatter: '{b} Nominations<br /> <div style="display: inline-block; width: 10px; height: 10px; background-color: #f42f44; margin-right: 8px; border-radius: 50%;"></div>{c} Validators',
+					} ),
 					legend: {
 						show: false
 					},
@@ -2943,7 +2949,7 @@
 					},
 					yAxis: {
 						type: 'value',
-						name: 'Validators Count',
+						name: 'Validator Count',
 						nameLocation: 'center',
 						nameTextStyle: {
 							fontFamily: fontFamily,
@@ -3028,11 +3034,11 @@
 			var datasets = [
 					{
 						name: 'min_active_stake',
-						label: 'Min Active Stake'
+//						label: 'Min Active Stake'
 					},
 					{
 						name: 'annotation_min_active_stake',
-						label: 'Annotation Min Active Stake'
+//						label: 'Annotation Min Active Stake'
 					}
 				],
 				colors = [
@@ -3040,7 +3046,9 @@
 					'rgba(0,231,231,0)'
 				],
 				chartExtraOptions = {
-					tooltip: defaultTooltipSettings,
+					tooltip: $.extend( true, {}, defaultTooltipSettings, {
+
+					} ),
 					legend: {
 						show: false,
 					},
@@ -3111,6 +3119,9 @@
 								fontSize: 16,
 								position: 'top',
 								color: '#ffffff',
+							},
+							tooltip: {
+								show: false
 							},
 							smooth: true,
 							showSymbol: true,
@@ -3188,7 +3199,6 @@
 					splitLine: {
 						show: false,
 					},
-
 					axisTick: {
 						show: false
 					},
@@ -3197,7 +3207,6 @@
 					},
 					axisPointer: defaultAxisPointerLabelSettings,
 					axisLabel: {
-						margin: 15,
 						formatter: dateFormatter,
 						color: '#cccccc'
 					}
@@ -3289,14 +3298,17 @@
 						}
 					},
 					{
-						name: locate.amount,
+						name: locate.totalAmountUnbounded,
 						data: data.amount,
 						type: 'line',
 						smooth: false,
 						showSymbol: false,
 						emphasis: {
 							focus: 'series'
-						}
+						},
+						lineStyle: {
+							width: 3
+						},
 					}
 				]
 			};
@@ -3308,7 +3320,7 @@
 		}
 
 		function getChartResponsiveOptionsFastUnstakeOnPolkadot() {
-			var newOptions = {};
+			var newOptions = {};/**/
 
 			if ( window.innerWidth > 767 ) {
 				newOptions = {
@@ -3331,7 +3343,7 @@
 						}
 					],
 					xAxis: {
-						splitNumber: 3,
+						splitNumber: 4,
 						axisLabel: {
 							formatter: dateFormatter
 						}
@@ -4087,7 +4099,7 @@
 				series: [
 					{
 						data: data.talisman_pool_1,
-						name: 'Talisman pool 1',
+						name: 'Talisman Pool 1',
 						itemStyle: {
 							color: colors[0]
 						},
@@ -4113,7 +4125,7 @@
 					},
 					{
 						data: data.decentradot,
-						name: 'decentraDOT.com',
+						name: '🌐 decentraDOT.com 🌐',
 						itemStyle: {
 							color: colors[2]
 						},
