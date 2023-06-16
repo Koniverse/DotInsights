@@ -927,9 +927,56 @@
 						<div class="block-chart-group">
 							<div class="block-chart-child">
 								<h3 class="block-chart-heading">All-Time Reward Distribution by pool</h3>
-								<div class="block-chart-body">
+								<div class="block-chart-body block-chart-body-pie-chart">
 									<div class="block-chart"
-									     data-chart-name="all-time-reward-distribution-by-pool"></div>
+									     data-chart-name="all-time-reward-distribution-by-pool"
+									     data-chart-source="inline"></div>
+									<ul id="custom-legend-dot" class="block-chart-legend">
+										<li data-id="Talisman Pool 1" class="active">
+											<div class="icon" style="background-color: #004dff;"></div>
+											Talisman Pool 1
+										</li>
+										<li data-id="Amforc / np-nominator">
+											<div class="icon" style="background-color: #ff279a;"></div>
+											Amforc / np-nominator
+										</li>
+										<li data-id="🌐 decentraDOT.com 🌐">
+											<div class="icon" style="background-color: #f4c54a;"></div>
+											🌐 decentraDOT.com 🌐
+										</li>
+										<li data-id="ParaNodes.io / Pool 🚀">
+											<div class="icon" style="background-color: #5c42fb;"></div>
+											ParaNodes.io / Pool 🚀
+										</li>
+										<li data-id="SubWallet Official">
+											<div class="icon" style="background-color: #66e1b6;"></div>
+											SubWallet Official
+										</li>
+										<li data-id="Talisman Pool 2">
+											<div class="icon" style="background-color: #8247e5;"></div>
+											Talisman Pool 2
+										</li>
+										<li data-id="Staking4All 🥩 / pool">
+											<div class="icon" style="background-color: #960db9;"></div>
+											Staking4All 🥩 / pool
+										</li>
+										<li data-id="POLKADOT BRASIL">
+											<div class="icon" style="background-color: #ea5474;"></div>
+											POLKADOT BRASIL
+										</li>
+										<li data-id="DOZENODES.COM / pool">
+											<div class="icon" style="background-color: #8b93af;"></div>
+											DOZENODES.COM / pool
+										</li>
+										<li data-id="CRYPTONITAS">
+											<div class="icon" style="background-color: #dfada5;"></div>
+											CRYPTONITAS
+										</li>
+										<li data-id="Others">
+											<div class="icon" style="background-color: #c6e977;"></div>
+											Others
+										</li>
+									</ul>
 								</div>
 							</div>
 							<div class="block-chart-child">
@@ -1568,22 +1615,20 @@
 <script src="../assets/js/reports-h1-2023.js?v=1.0"></script>
 <script src="../assets/js/wallet-manager.js?v=1.15"></script>
 <script id="__bs_script__">//<![CDATA[
-(
-	function () {
-		try {
-			var script = document.createElement( 'script' );
-			if ( 'async' ) {
-				script.async = true;
-			}
-			script.src = 'http://HOST:3000/browser-sync/browser-sync-client.js?v=2.29.1'.replace( "HOST", location.hostname );
-			if ( document.body ) {
-				document.body.appendChild( script );
-			}
-		} catch ( e ) {
-			console.error( "Browsersync: could not append script tag", e );
+(function() {
+	try {
+		var script = document.createElement('script');
+		if ('async') {
+			script.async = true;
 		}
+		script.src = 'http://HOST:3000/browser-sync/browser-sync-client.js?v=2.29.1'.replace("HOST", location.hostname);
+		if (document.body) {
+			document.body.appendChild(script);
+		}
+	} catch (e) {
+		console.error("Browsersync: could not append script tag", e);
 	}
-)()
+})()
 //]]></script>
 </body>
 </html>

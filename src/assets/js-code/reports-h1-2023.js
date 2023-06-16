@@ -264,6 +264,9 @@
 						case 'reward-share-by-five-pools-with-the-highest-all-time-total-rewards':
 							chartOptions = getChartResponsiveOptionsRewardShareByFivePoolsWithTheHighestAllTimeTotalRewards( chartName );
 							break;
+						case 'all-time-reward-distribution-by-pool':
+							chartOptions = getChartResponsiveOptionsAllTimeRewardDistributionByPool( chartName );
+							break;
 					}
 
 					if ( chartOptions ) {
@@ -535,12 +538,14 @@
 				var chartOptions = {};
 
 				switch ( chartName ) {
-					/* New */
 					case 'total-stake-distribution':
 						chartOptions = getChartOptionsTotalStakeDistribution( chartName );
 						break;
 					case 'nominations-backing-validators-with-100-commission':
 						chartOptions = getChartOptionsNominationsBackingValidatorsWith100Commission( chartName );
+						break;
+					case 'all-time-reward-distribution-by-pool':
+						chartOptions = getChartOptionsAllTimeRewardDistributionByPool( chartName );
 						break;
 				}
 
@@ -568,7 +573,6 @@
 			}
 		}
 
-		/* New */
 		function getChartOptionsTotalDotStakedLocked( chartName, jsonData ) {
 			var datasets = [
 					{
@@ -644,7 +648,6 @@
 			return $.extend( true, {}, baseOptions, responsiveOptions );
 		}
 
-		/* New */
 		function getChartOptionsTotalNominatorCountTotalValidatorCount( chartName, jsonData ) {
 			var datasets = [
 					{
@@ -742,7 +745,6 @@
 			return newOptions;
 		}
 
-		/* New */
 		function getChartOptionsNominatorStakeValidatorStake( chartName, jsonData ) {
 			var totalItems = jsonData.length,
 				data = {
@@ -952,7 +954,6 @@
 			return newOptions;
 		}
 
-		/* New */
 		function getChartOptionsTotalStakeDistributionAmongActiveValidators( chartName, jsonData ) {
 			var totalItems = jsonData.length,
 				data = {
@@ -1160,7 +1161,6 @@
 			return newOptions;
 		}
 
-		/* New */
 		function getChartOptionsDotStakingRatioInflationRatePrice( chartName, jsonData ) {
 			var totalItems = jsonData.length,
 				data = {
@@ -1564,7 +1564,6 @@
 			return newOptions;
 		}
 
-		/* New */
 		function getChartOptionsTotalStakeDistribution( chartName ) {
 			var colors = [
 					'#004dff',
@@ -1860,7 +1859,6 @@
 			return newOptions;
 		}
 
-		/* New */
 		function getChartOptionsTotalUniqueActiveValidatorNewActiveValidators( chartName, jsonData ) {
 			var totalItems = jsonData.length,
 				data = {
@@ -2079,7 +2077,6 @@
 			return newOptions;
 		}
 
-		/* New */
 		function getChartOptionsValidatorWithChangesVersusWithNoChangesInTotalStake( chartName, jsonData ) {
 			var totalItems = jsonData.length,
 				data = {
@@ -2279,7 +2276,6 @@
 			return newOptions;
 		}
 
-		/* New */
 		function getChartOptionsActiveValidatorsNominatorCountsVersusSelfStakes( chartName, jsonData ) {
 			var totalItems = jsonData.length,
 				data = {
@@ -2687,7 +2683,6 @@
 			return newOptions;
 		}
 
-		/* New */
 		function getChartOptionsOversubcribedValidators( chartName, jsonData ) {
 			var totalItems = jsonData.length,
 				data = {
@@ -2855,7 +2850,6 @@
 			return newOptions;
 		}
 
-		/* New */
 		function getChartOptionsNominationsBackingValidatorsWith100Commission( chartName ) {
 			var colors = [
 					'#f42f44'
@@ -3030,7 +3024,6 @@
 			return newOptions;
 		}
 
-		/* New */
 		function getChartOptionsMinimumActiveNominatorStake( chartName, jsonData ) {
 			var datasets = [
 					{
@@ -3154,7 +3147,6 @@
 			return newOptions;
 		}
 
-		/* New */
 		function getChartOptionsFastUnstakeOnPolkadot( chartName, jsonData ) {
 			var totalItems = jsonData.length,
 				data = {
@@ -3381,7 +3373,6 @@
 			return newOptions;
 		}
 
-		/* New */
 		function getChartOptionsTotalStakeTotalMembersInPolkadotNominationPools( chartName, jsonData ) {
 			var totalItems = jsonData.length,
 				data = {
@@ -3389,8 +3380,8 @@
 					total_stake: [],
 				},
 				colors = [
-					'#004DFF',
-					'#FF279A'
+					'#004dff',
+					'#ff279a'
 				];
 
 			for ( var i = 0; i < totalItems; i ++ ) {
@@ -3594,7 +3585,6 @@
 			return newOptions;
 		}
 
-		/* New */
 		function getChartOptionsDailyRewardDistributionByNominatorType( chartName, jsonData ) {
 			var totalItems = jsonData.length,
 				data = {
@@ -3602,19 +3592,19 @@
 					pool: []
 				},
 				colors = [
-					'#004DFF',
-					'#DF146A'
+					'#004dff',
+					'#df146a'
 				];
 
 			for ( var i = 0; i < totalItems; i ++ ) {
 				data.individual.push( [
-					                         jsonData[i].date,
-					                         jsonData[i].individual
-				                         ] );
+					                      jsonData[i].date,
+					                      jsonData[i].individual
+				                      ] );
 				data.pool.push( [
-					                              jsonData[i].date,
-					                              jsonData[i].pool
-				                              ] );
+					                jsonData[i].date,
+					                jsonData[i].pool
+				                ] );
 			}
 
 			var baseOptions = {
@@ -3798,14 +3788,13 @@
 			return newOptions;
 		}
 
-		/* New */
 		function getChartOptionsPoolsShareOfTotalRewards( chartName, jsonData ) {
 			var totalItems = jsonData.length,
 				data = {
 					pool_share: []
 				},
 				colors = [
-					'#66E1B6'
+					'#66e1b6'
 				];
 
 			for ( var i = 0; i < totalItems; i ++ ) {
@@ -3950,7 +3939,6 @@
 			return newOptions;
 		}
 
-		/* New */
 		function getChartOptionsRewardShareByFivePoolsWithTheHighestAllTimeTotalRewards( chartName, jsonData ) {
 			var totalItems = jsonData.length,
 				data = {
@@ -3961,34 +3949,34 @@
 					subwallet: [],
 				},
 				colors = [
-					'#004DFF',
-					'#DF146A',
-					'#F4C54A',
-					'#8247E5',
-					'#66E1B6'
+					'#004dff',
+					'#df146a',
+					'#f4c54a',
+					'#8247e5',
+					'#66e1b6'
 				];
 
 			for ( var i = 0; i < totalItems; i ++ ) {
 				data.talisman_pool_1.push( [
-					                      jsonData[i].date,
-					                      jsonData[i].talisman_pool_1
-				                      ] );
+					                           jsonData[i].date,
+					                           jsonData[i].talisman_pool_1
+				                           ] );
 				data.amforc_np_nominator.push( [
-					                      jsonData[i].date,
-					                      jsonData[i].amforc_np_nominator
-				                      ] );
+					                               jsonData[i].date,
+					                               jsonData[i].amforc_np_nominator
+				                               ] );
 				data.decentradot.push( [
-					                      jsonData[i].date,
-					                      jsonData[i].decentradot
-				                      ] );
+					                       jsonData[i].date,
+					                       jsonData[i].decentradot
+				                       ] );
 				data.paranodesio_pool.push( [
-					                      jsonData[i].date,
-					                      jsonData[i].paranodesio_pool
-				                      ] );
+					                            jsonData[i].date,
+					                            jsonData[i].paranodesio_pool
+				                            ] );
 				data.subwallet.push( [
-					                      jsonData[i].date,
-					                      jsonData[i].subwallet
-				                      ] );
+					                     jsonData[i].date,
+					                     jsonData[i].subwallet
+				                     ] );
 			}
 
 			var baseOptions = {
@@ -4021,7 +4009,7 @@
 					bottom: 0,
 
 					// Should be allow scroll for better ux.
-//					type: 'plain',
+					//					type: 'plain',
 					pageIconColor: '#ffffff',
 					pageIconInactiveColor: 'rgba(255,255,255,0.2)',
 					pageTextStyle: {
@@ -4192,6 +4180,186 @@
 						type: 'scroll'
 					}
 				};
+			}
+
+			return newOptions;
+		}
+
+		function getChartOptionsAllTimeRewardDistributionByPool( chartName ) {
+			var colors = [
+					'#004dff',
+					'#ff279a',
+					'#f4c54a',
+					'#5c42fb',
+					'#66e1b6',
+					'#8247e5',
+					'#960db9',
+					'#ea5474',
+					'#8b93af',
+					'#dfada5',
+					'#c6e977'
+				],
+				datasets = [
+					{
+						value: 106440.88,
+						name: 'Talisman Pool 1'
+					},
+					{
+						value: 17664.11,
+						name: 'Amforc / np-nominator'
+					},
+					{
+						value: 11635.82,
+						name: '🌐 decentraDOT.com 🌐'
+					},
+					{
+						value: 10305.67,
+						name: 'ParaNodes.io / Pool 🚀'
+					},
+					{
+						value: 7788.42,
+						name: 'SubWallet Official'
+					},
+					{
+						value: 5124.24,
+						name: 'Talisman Pool 2'
+					},
+					{
+						value: 4362.28,
+						name: 'Staking4All 🥩 / pool'
+					},
+					{
+						value: 3800.97,
+						name: 'POLKADOT BRASIL'
+					},
+					{
+						value: 3342.79,
+						name: 'DOZENODES.COM / pool'
+					},
+					{
+						value: 3195.72,
+						name: 'CRYPTONITAS'
+					},
+					{
+						value: 43162.84,
+						name: 'Others'
+					}
+				],
+				baseOptions = {
+					color: colors,
+					tooltip: {
+						show: false
+					},
+					legend: {
+						show: false
+					},
+					grid: {
+						left: '0',
+						right: '0',
+						top: '0',
+						containLabel: true
+					},
+					series: [
+						{
+							type: 'pie',
+							center: [
+								'50%',
+								'50%'
+							],
+							radius: [
+								'60%',
+								'85%'
+							],
+							avoidLabelOverlap: false,
+							label: {
+								show: false,
+								position: 'center'
+							},
+							emphasis: {
+								label: {
+									show: true,
+									fontFamily: fontFamily,
+									color: '#ffffff',
+									fontSize: 17,
+									fontWeight: '500',
+									formatter: function ( param ) {
+										var value = NumberUtil.formatWithCommas( param.value );
+
+										return '{per|' + param.percent + '%}\n{b|' + param.name + '}\n{c|' + value + '}';
+									},
+									rich: {
+										per: {
+											fontFamily: fontFamily,
+											fontWeight: 700,
+											color: '#ffffff',
+											fontSize: 32,
+											align: 'center'
+										},
+										b: {
+											fontFamily: fontFamily,
+											fontWeight: 500,
+											color: '#cccccc',
+											fontSize: 14,
+											align: 'center',
+											padding: [
+												10,
+												0,
+												10,
+												0
+											]
+										},
+										c: {
+											fontFamily: fontFamily,
+											fontWeight: 500,
+											color: '#ffffff',
+											fontSize: 17,
+											formatter: function ( name ) {
+												return '$ ' + name;
+											},
+											align: 'center'
+										}
+									}
+								}
+							},
+							labelLine: {
+								show: false
+							},
+							itemStyle: {
+								borderColor: '#151515',
+								borderWidth: 2
+							},
+							data: datasets
+						}
+					]
+				},
+				responsiveOptions = getChartResponsiveOptionsAllTimeRewardDistributionByPool();
+
+			return $.extend( true, {}, baseOptions, responsiveOptions );
+		}
+
+		function getChartResponsiveOptionsAllTimeRewardDistributionByPool() {
+			var newOptions = {};
+
+			if ( window.innerWidth < 768 ) {
+				newOptions['series'] = [
+					{
+						emphasis: {
+							label: {
+								rich: {
+									per: {
+										fontSize: 28
+									},
+									b: {
+										fontSize: 12,
+									},
+									c: {
+										fontSize: 14,
+									}
+								}
+							}
+						}
+					}
+				]
 			}
 
 			return newOptions;
