@@ -149,7 +149,7 @@
             li {
                 display: flex;
                 align-items: baseline;
-                width: 50%;
+                width: 100%;
                 padding: 0 15px;
                 margin: 0 0 20px 0;
 
@@ -230,10 +230,6 @@
             }
         }
 
-        p {
-
-        }
-
         a,
         mark {
             color: #fff;
@@ -293,6 +289,16 @@
             margin-right: 8px;
         }
     }
+
+    .table-contents-list {
+        li {
+            &.active {
+                > a {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
 }
 
 @include media-breakpoint-up(sm) {
@@ -318,6 +324,14 @@
 
             .section-sub-title {
                 font-size: 28px;
+            }
+        }
+
+        .section-key-takeaways {
+            .key-takeaways-list {
+                li {
+                    width: 50%;
+                }
             }
         }
     }
