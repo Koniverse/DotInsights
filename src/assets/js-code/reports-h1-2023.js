@@ -3219,7 +3219,7 @@
 				yAxis: [
 					{
 						type: 'value',
-						name: locate.amount,
+						name: locate.totalAmountUnbounded,
 						nameTextStyle: {
 							fontSize: 0
 						},
@@ -3348,10 +3348,7 @@
 						}
 					],
 					xAxis: {
-						splitNumber: 4,
-						axisLabel: {
-							formatter: dateFormatter
-						}
+						splitNumber: 4
 					}
 				};
 			} else {
@@ -3379,10 +3376,7 @@
 						}
 					],
 					xAxis: {
-						splitNumber: 2,
-						axisLabel: {
-							formatter: dateShortFormatter
-						}
+						splitNumber: 2
 					}
 				};
 			}
