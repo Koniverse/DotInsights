@@ -636,9 +636,6 @@
 								],
 								color: 'rgba(255,255,255,0.3)'
 							}
-						},
-						valueFormatter: function ( value ) {
-							return value + '%';
 						}
 					} )
 				};
@@ -1560,12 +1557,12 @@
 				],
 				data = [
 					[
-						'1.41-1.71',
-						'1.71-2.01',
-						'2.01-2.31',
-						'2.31-2.61',
-						'2.61-2.91',
-						'> 2.91'
+						'1.41-1.71 MDOT',
+						'1.71-2.01 MDOT',
+						'2.01-2.31 MDOT',
+						'2.31-2.61 MDOT',
+						'2.61-2.91 MDOT',
+						'> 2.91 MDOT'
 					],
 					[
 						'0',
@@ -1598,7 +1595,14 @@
 						fontFamily: fontFamily,
 						fontWeight: 500
 					},
-					tooltip: defaultTooltipSettings,
+					tooltip: $.extend( true, {}, defaultTooltipSettings, {
+						valueFormatter: function ( value ) {
+							return value + ' Validators';
+						},
+						axisPointer: {
+							type: 'shadow'
+						}
+					} ),
 					legend: defaultLegendSettings,
 					grid: {
 						top: '5%',
@@ -1646,7 +1650,7 @@
 					},
 					yAxis: {
 						type: 'value',
-						name: 'Validators Count',
+						name: 'Validator Count',
 						nameLocation: 'center',
 						nameTextStyle: {
 							fontFamily: fontFamily,
@@ -1660,6 +1664,7 @@
 						axisLine: {
 							show: false,
 						},
+						max: 250,
 						interval: 50,
 						splitNumber: 4,
 						splitLine: {
