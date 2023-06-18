@@ -12,7 +12,7 @@ var lang = {
 	validatorStake: 'Validator Stake',
 	cumulativeUniqueValidators: 'Total Unique Active Validators Since Nov 1,2022',
 	newActiveValidators: 'New Active Validators',
-	stakeGainValidators: 'Validators With Increase In Total Stake',
+	stakeGainValidators: 'Validators With Increases In Total Stake',
 	stakeDropValidators: 'Validators With Decreases In Total Stake',
 	stakeUnchangedValidators: 'Validators With Unchanged Total Stake',
 	minTotalStake: 'Minimum Total Stake',

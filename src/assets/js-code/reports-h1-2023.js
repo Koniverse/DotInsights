@@ -2295,7 +2295,7 @@
 				},
 				grid: {
 					left: '8%',
-					right: '5%',
+					right: '8%',
 					top: '3%', //bottom: 100, // DataZoom + Legend.
 					containLabel: true
 				},
@@ -2426,7 +2426,7 @@
 				},
 				grid: {
 					left: '8%',
-					right: '5%',
+					right: '8%',
 					top: '3%', //bottom: 100, // DataZoom + Legend.
 					containLabel: true
 				},
@@ -2558,7 +2558,7 @@
 				},
 				grid: {
 					left: '8%',
-					right: '5%',
+					right: '8%',
 					top: '3%',
 					containLabel: true
 				},
@@ -3630,7 +3630,26 @@
 					fontFamily: fontFamily,
 					fontWeight: 500
 				},
-				tooltip: defaultTooltipSettings,
+//				tooltip: defaultTooltipSettings,
+				tooltip: $.extend( true, {}, defaultTooltipStyle, {
+					trigger: 'axis',
+					axisPointer: {
+						type: 'line',
+						crossStyle: {
+							color: 'rgba(255,255,255,0.3)'
+						},
+						lineStyle: {
+							type: [
+								4,
+								4
+							],
+							color: 'rgba(255,255,255,0.3)'
+						}
+					},
+					valueFormatter: function ( value ) {
+						return value + ' DOT';
+					}
+				} ),
 				legend: defaultLegendSettings,
 				grid: {
 					left: '3%',
