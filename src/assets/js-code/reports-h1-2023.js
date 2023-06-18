@@ -4297,7 +4297,7 @@
 									formatter: function ( param ) {
 										var value = NumberUtil.formatWithCommas( param.value );
 
-										return '{per|' + param.percent + '%}\n{b|' + param.name + '}\n{c|' + value + '}';
+										return '{per|' + param.percent + '%}\n{b|' + param.name + '}\n{c|' + value + ' DOT' + '}';
 									},
 									rich: {
 										per: {
