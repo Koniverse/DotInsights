@@ -201,7 +201,7 @@
 
     .section-about-us {
         .section-content {
-            padding: 122px 30px 131px;
+            padding: 70px 15px;
             background: $secondary-color url(../images/report/about-us-bg.jpg) no-repeat center;
             background-size: cover;
             border-radius: 30px;
@@ -397,6 +397,12 @@
                 display: flex;
                 margin-left: 0;
                 margin-right: 0;
+            }
+        }
+
+        .section-about-us {
+            .section-content {
+                padding: 122px 30px 131px;
             }
         }
     }

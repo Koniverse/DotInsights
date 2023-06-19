@@ -3059,8 +3059,8 @@
 					},
 					grid: {
 						top: '5%',
-						left: '3%',
-						right: '3%',
+						left: '5%',
+						right: '5%',
 						containLabel: true
 					},
 					yAxis: {
@@ -3156,7 +3156,13 @@
 								fontSize: 10
 							},
 						}
-					]
+					],
+					grid: {
+						top: '5%',
+						left: '5%',
+						right: '8%',
+						containLabel: true
+					},
 				} )
 			}
 
