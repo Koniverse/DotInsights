@@ -1,0 +1,1274 @@
+[
+  {
+    "date": "2023-05-31",
+    "stake_gain_validators": "32.53",
+    "stake_drop_validators": "61.45",
+    "stake_unchanged_validators": "6.02"
+  },
+  {
+    "date": "2023-05-30",
+    "stake_gain_validators": "34.37",
+    "stake_drop_validators": "46.44",
+    "stake_unchanged_validators": "19.20"
+  },
+  {
+    "date": "2023-05-29",
+    "stake_gain_validators": "57.45",
+    "stake_drop_validators": "23.60",
+    "stake_unchanged_validators": "18.94"
+  },
+  {
+    "date": "2023-05-28",
+    "stake_gain_validators": "60.06",
+    "stake_drop_validators": "19.81",
+    "stake_unchanged_validators": "20.12"
+  },
+  {
+    "date": "2023-05-27",
+    "stake_gain_validators": "70.87",
+    "stake_drop_validators": "7.77",
+    "stake_unchanged_validators": "21.36"
+  },
+  {
+    "date": "2023-05-26",
+    "stake_gain_validators": "63.35",
+    "stake_drop_validators": "29.50",
+    "stake_unchanged_validators": "7.14"
+  },
+  {
+    "date": "2023-05-25",
+    "stake_gain_validators": "64.07",
+    "stake_drop_validators": "16.47",
+    "stake_unchanged_validators": "19.46"
+  },
+  {
+    "date": "2023-05-24",
+    "stake_gain_validators": "79.93",
+    "stake_drop_validators": "17.11",
+    "stake_unchanged_validators": "2.96"
+  },
+  {
+    "date": "2023-05-23",
+    "stake_gain_validators": "72.67",
+    "stake_drop_validators": "10.67",
+    "stake_unchanged_validators": "16.67"
+  },
+  {
+    "date": "2023-05-22",
+    "stake_gain_validators": "71.00",
+    "stake_drop_validators": "13.00",
+    "stake_unchanged_validators": "16.00"
+  },
+  {
+    "date": "2023-05-21",
+    "stake_gain_validators": "69.10",
+    "stake_drop_validators": "13.62",
+    "stake_unchanged_validators": "17.28"
+  },
+  {
+    "date": "2023-05-20",
+    "stake_gain_validators": "69.84",
+    "stake_drop_validators": "13.65",
+    "stake_unchanged_validators": "16.51"
+  },
+  {
+    "date": "2023-05-19",
+    "stake_gain_validators": "29.47",
+    "stake_drop_validators": "56.74",
+    "stake_unchanged_validators": "13.79"
+  },
+  {
+    "date": "2023-05-18",
+    "stake_gain_validators": "74.45",
+    "stake_drop_validators": "20.19",
+    "stake_unchanged_validators": "5.36"
+  },
+  {
+    "date": "2023-05-17",
+    "stake_gain_validators": "31.09",
+    "stake_drop_validators": "59.94",
+    "stake_unchanged_validators": "8.97"
+  },
+  {
+    "date": "2023-05-16",
+    "stake_gain_validators": "64.42",
+    "stake_drop_validators": "18.59",
+    "stake_unchanged_validators": "16.99"
+  },
+  {
+    "date": "2023-05-15",
+    "stake_gain_validators": "72.47",
+    "stake_drop_validators": "16.14",
+    "stake_unchanged_validators": "11.39"
+  },
+  {
+    "date": "2023-05-14",
+    "stake_gain_validators": "65.18",
+    "stake_drop_validators": "15.97",
+    "stake_unchanged_validators": "18.85"
+  },
+  {
+    "date": "2023-05-13",
+    "stake_gain_validators": "71.25",
+    "stake_drop_validators": "8.31",
+    "stake_unchanged_validators": "20.45"
+  },
+  {
+    "date": "2023-05-12",
+    "stake_gain_validators": "66.45",
+    "stake_drop_validators": "20.65",
+    "stake_unchanged_validators": "12.90"
+  },
+  {
+    "date": "2023-05-11",
+    "stake_gain_validators": "29.07",
+    "stake_drop_validators": "53.67",
+    "stake_unchanged_validators": "17.25"
+  },
+  {
+    "date": "2023-05-10",
+    "stake_gain_validators": "58.28",
+    "stake_drop_validators": "24.20",
+    "stake_unchanged_validators": "17.52"
+  },
+  {
+    "date": "2023-05-09",
+    "stake_gain_validators": "78.27",
+    "stake_drop_validators": "8.31",
+    "stake_unchanged_validators": "13.42"
+  },
+  {
+    "date": "2023-05-08",
+    "stake_gain_validators": "22.68",
+    "stake_drop_validators": "53.99",
+    "stake_unchanged_validators": "23.32"
+  },
+  {
+    "date": "2023-05-07",
+    "stake_gain_validators": "23.96",
+    "stake_drop_validators": "54.95",
+    "stake_unchanged_validators": "21.09"
+  },
+  {
+    "date": "2023-05-06",
+    "stake_gain_validators": "21.34",
+    "stake_drop_validators": "62.74",
+    "stake_unchanged_validators": "15.92"
+  },
+  {
+    "date": "2023-05-05",
+    "stake_gain_validators": "72.52",
+    "stake_drop_validators": "21.41",
+    "stake_unchanged_validators": "6.07"
+  },
+  {
+    "date": "2023-05-04",
+    "stake_gain_validators": "15.94",
+    "stake_drop_validators": "81.16",
+    "stake_unchanged_validators": "2.90"
+  },
+  {
+    "date": "2023-05-03",
+    "stake_gain_validators": "63.26",
+    "stake_drop_validators": "23.96",
+    "stake_unchanged_validators": "12.78"
+  },
+  {
+    "date": "2023-05-02",
+    "stake_gain_validators": "26.28",
+    "stake_drop_validators": "52.27",
+    "stake_unchanged_validators": "21.45"
+  },
+  {
+    "date": "2023-05-01",
+    "stake_gain_validators": "72.58",
+    "stake_drop_validators": "8.36",
+    "stake_unchanged_validators": "19.06"
+  },
+  {
+    "date": "2023-04-30",
+    "stake_gain_validators": "61.74",
+    "stake_drop_validators": "4.70",
+    "stake_unchanged_validators": "33.56"
+  },
+  {
+    "date": "2023-04-29",
+    "stake_gain_validators": "22.07",
+    "stake_drop_validators": "50.84",
+    "stake_unchanged_validators": "27.09"
+  },
+  {
+    "date": "2023-04-28",
+    "stake_gain_validators": "57.38",
+    "stake_drop_validators": "35.23",
+    "stake_unchanged_validators": "7.38"
+  },
+  {
+    "date": "2023-04-27",
+    "stake_gain_validators": "38.06",
+    "stake_drop_validators": "55.81",
+    "stake_unchanged_validators": "6.13"
+  },
+  {
+    "date": "2023-04-26",
+    "stake_gain_validators": "22.26",
+    "stake_drop_validators": "50.97",
+    "stake_unchanged_validators": "26.77"
+  },
+  {
+    "date": "2023-04-25",
+    "stake_gain_validators": "65.16",
+    "stake_drop_validators": "10.00",
+    "stake_unchanged_validators": "24.84"
+  },
+  {
+    "date": "2023-04-24",
+    "stake_gain_validators": "59.55",
+    "stake_drop_validators": "12.94",
+    "stake_unchanged_validators": "27.51"
+  },
+  {
+    "date": "2023-04-23",
+    "stake_gain_validators": "57.28",
+    "stake_drop_validators": "17.15",
+    "stake_unchanged_validators": "25.57"
+  },
+  {
+    "date": "2023-04-22",
+    "stake_gain_validators": "58.01",
+    "stake_drop_validators": "18.59",
+    "stake_unchanged_validators": "23.40"
+  },
+  {
+    "date": "2023-04-21",
+    "stake_gain_validators": "65.71",
+    "stake_drop_validators": "7.94",
+    "stake_unchanged_validators": "26.35"
+  },
+  {
+    "date": "2023-04-20",
+    "stake_gain_validators": "62.01",
+    "stake_drop_validators": "6.82",
+    "stake_unchanged_validators": "31.17"
+  },
+  {
+    "date": "2023-04-19",
+    "stake_gain_validators": "17.89",
+    "stake_drop_validators": "56.87",
+    "stake_unchanged_validators": "25.24"
+  },
+  {
+    "date": "2023-04-18",
+    "stake_gain_validators": "55.84",
+    "stake_drop_validators": "10.06",
+    "stake_unchanged_validators": "34.09"
+  },
+  {
+    "date": "2023-04-17",
+    "stake_gain_validators": "56.83",
+    "stake_drop_validators": "9.84",
+    "stake_unchanged_validators": "33.33"
+  },
+  {
+    "date": "2023-04-16",
+    "stake_gain_validators": "19.23",
+    "stake_drop_validators": "46.15",
+    "stake_unchanged_validators": "34.62"
+  },
+  {
+    "date": "2023-04-15",
+    "stake_gain_validators": "62.66",
+    "stake_drop_validators": "6.82",
+    "stake_unchanged_validators": "30.52"
+  },
+  {
+    "date": "2023-04-14",
+    "stake_gain_validators": "20.78",
+    "stake_drop_validators": "49.03",
+    "stake_unchanged_validators": "30.19"
+  },
+  {
+    "date": "2023-04-13",
+    "stake_gain_validators": "60.63",
+    "stake_drop_validators": "7.30",
+    "stake_unchanged_validators": "32.06"
+  },
+  {
+    "date": "2023-04-12",
+    "stake_gain_validators": "24.27",
+    "stake_drop_validators": "45.31",
+    "stake_unchanged_validators": "30.42"
+  },
+  {
+    "date": "2023-04-11",
+    "stake_gain_validators": "61.78",
+    "stake_drop_validators": "10.83",
+    "stake_unchanged_validators": "27.39"
+  },
+  {
+    "date": "2023-04-10",
+    "stake_gain_validators": "57.37",
+    "stake_drop_validators": "9.94",
+    "stake_unchanged_validators": "32.69"
+  },
+  {
+    "date": "2023-04-09",
+    "stake_gain_validators": "58.60",
+    "stake_drop_validators": "8.28",
+    "stake_unchanged_validators": "33.12"
+  },
+  {
+    "date": "2023-04-08",
+    "stake_gain_validators": "14.24",
+    "stake_drop_validators": "51.46",
+    "stake_unchanged_validators": "34.30"
+  },
+  {
+    "date": "2023-04-07",
+    "stake_gain_validators": "15.71",
+    "stake_drop_validators": "50.32",
+    "stake_unchanged_validators": "33.97"
+  },
+  {
+    "date": "2023-04-06",
+    "stake_gain_validators": "13.83",
+    "stake_drop_validators": "58.84",
+    "stake_unchanged_validators": "27.33"
+  },
+  {
+    "date": "2023-04-05",
+    "stake_gain_validators": "50.32",
+    "stake_drop_validators": "24.04",
+    "stake_unchanged_validators": "25.64"
+  },
+  {
+    "date": "2023-04-04",
+    "stake_gain_validators": "22.44",
+    "stake_drop_validators": "47.12",
+    "stake_unchanged_validators": "30.45"
+  },
+  {
+    "date": "2023-04-03",
+    "stake_gain_validators": "57.83",
+    "stake_drop_validators": "6.71",
+    "stake_unchanged_validators": "35.46"
+  },
+  {
+    "date": "2023-04-02",
+    "stake_gain_validators": "56.35",
+    "stake_drop_validators": "8.79",
+    "stake_unchanged_validators": "34.85"
+  },
+  {
+    "date": "2023-04-01",
+    "stake_gain_validators": "18.91",
+    "stake_drop_validators": "50.64",
+    "stake_unchanged_validators": "30.45"
+  },
+  {
+    "date": "2023-03-31",
+    "stake_gain_validators": "60.19",
+    "stake_drop_validators": "13.27",
+    "stake_unchanged_validators": "26.54"
+  },
+  {
+    "date": "2023-03-30",
+    "stake_gain_validators": "57.41",
+    "stake_drop_validators": "16.09",
+    "stake_unchanged_validators": "26.50"
+  },
+  {
+    "date": "2023-03-29",
+    "stake_gain_validators": "61.44",
+    "stake_drop_validators": "3.27",
+    "stake_unchanged_validators": "35.29"
+  },
+  {
+    "date": "2023-03-28",
+    "stake_gain_validators": "54.81",
+    "stake_drop_validators": "10.26",
+    "stake_unchanged_validators": "34.94"
+  },
+  {
+    "date": "2023-03-27",
+    "stake_gain_validators": "16.07",
+    "stake_drop_validators": "58.03",
+    "stake_unchanged_validators": "25.90"
+  },
+  {
+    "date": "2023-03-26",
+    "stake_gain_validators": "18.01",
+    "stake_drop_validators": "52.48",
+    "stake_unchanged_validators": "29.50"
+  },
+  {
+    "date": "2023-03-25",
+    "stake_gain_validators": "11.44",
+    "stake_drop_validators": "54.58",
+    "stake_unchanged_validators": "33.99"
+  },
+  {
+    "date": "2023-03-24",
+    "stake_gain_validators": "53.40",
+    "stake_drop_validators": "19.42",
+    "stake_unchanged_validators": "27.18"
+  },
+  {
+    "date": "2023-03-23",
+    "stake_gain_validators": "9.80",
+    "stake_drop_validators": "58.50",
+    "stake_unchanged_validators": "31.70"
+  },
+  {
+    "date": "2023-03-22",
+    "stake_gain_validators": "25.56",
+    "stake_drop_validators": "48.88",
+    "stake_unchanged_validators": "25.56"
+  },
+  {
+    "date": "2023-03-21",
+    "stake_gain_validators": "67.63",
+    "stake_drop_validators": "11.86",
+    "stake_unchanged_validators": "20.51"
+  },
+  {
+    "date": "2023-03-20",
+    "stake_gain_validators": "61.56",
+    "stake_drop_validators": "7.49",
+    "stake_unchanged_validators": "30.94"
+  },
+  {
+    "date": "2023-03-19",
+    "stake_gain_validators": "11.90",
+    "stake_drop_validators": "54.02",
+    "stake_unchanged_validators": "34.08"
+  },
+  {
+    "date": "2023-03-18",
+    "stake_gain_validators": "7.14",
+    "stake_drop_validators": "66.56",
+    "stake_unchanged_validators": "26.30"
+  },
+  {
+    "date": "2023-03-17",
+    "stake_gain_validators": "64.33",
+    "stake_drop_validators": "10.98",
+    "stake_unchanged_validators": "24.70"
+  },
+  {
+    "date": "2023-03-16",
+    "stake_gain_validators": "12.71",
+    "stake_drop_validators": "52.51",
+    "stake_unchanged_validators": "34.78"
+  },
+  {
+    "date": "2023-03-15",
+    "stake_gain_validators": "57.81",
+    "stake_drop_validators": "13.29",
+    "stake_unchanged_validators": "28.90"
+  },
+  {
+    "date": "2023-03-14",
+    "stake_gain_validators": "60.20",
+    "stake_drop_validators": "24.01",
+    "stake_unchanged_validators": "15.79"
+  },
+  {
+    "date": "2023-03-13",
+    "stake_gain_validators": "24.01",
+    "stake_drop_validators": "56.91",
+    "stake_unchanged_validators": "19.08"
+  },
+  {
+    "date": "2023-03-12",
+    "stake_gain_validators": "12.46",
+    "stake_drop_validators": "52.13",
+    "stake_unchanged_validators": "35.41"
+  },
+  {
+    "date": "2023-03-11",
+    "stake_gain_validators": "12.38",
+    "stake_drop_validators": "63.19",
+    "stake_unchanged_validators": "24.43"
+  },
+  {
+    "date": "2023-03-10",
+    "stake_gain_validators": "11.04",
+    "stake_drop_validators": "58.44",
+    "stake_unchanged_validators": "30.52"
+  },
+  {
+    "date": "2023-03-09",
+    "stake_gain_validators": "53.21",
+    "stake_drop_validators": "10.58",
+    "stake_unchanged_validators": "36.22"
+  },
+  {
+    "date": "2023-03-08",
+    "stake_gain_validators": "54.34",
+    "stake_drop_validators": "8.36",
+    "stake_unchanged_validators": "37.30"
+  },
+  {
+    "date": "2023-03-07",
+    "stake_gain_validators": "14.94",
+    "stake_drop_validators": "47.08",
+    "stake_unchanged_validators": "37.99"
+  },
+  {
+    "date": "2023-03-06",
+    "stake_gain_validators": "48.87",
+    "stake_drop_validators": "26.05",
+    "stake_unchanged_validators": "25.08"
+  },
+  {
+    "date": "2023-03-05",
+    "stake_gain_validators": "25.48",
+    "stake_drop_validators": "51.27",
+    "stake_unchanged_validators": "23.25"
+  },
+  {
+    "date": "2023-03-04",
+    "stake_gain_validators": "19.61",
+    "stake_drop_validators": "45.02",
+    "stake_unchanged_validators": "35.37"
+  },
+  {
+    "date": "2023-03-03",
+    "stake_gain_validators": "28.53",
+    "stake_drop_validators": "42.95",
+    "stake_unchanged_validators": "28.53"
+  },
+  {
+    "date": "2023-03-02",
+    "stake_gain_validators": "53.75",
+    "stake_drop_validators": "12.50",
+    "stake_unchanged_validators": "33.75"
+  },
+  {
+    "date": "2023-03-01",
+    "stake_gain_validators": "60.63",
+    "stake_drop_validators": "23.75",
+    "stake_unchanged_validators": "15.63"
+  },
+  {
+    "date": "2023-02-28",
+    "stake_gain_validators": "77.49",
+    "stake_drop_validators": "5.47",
+    "stake_unchanged_validators": "17.04"
+  },
+  {
+    "date": "2023-02-27",
+    "stake_gain_validators": "15.02",
+    "stake_drop_validators": "53.35",
+    "stake_unchanged_validators": "31.63"
+  },
+  {
+    "date": "2023-02-26",
+    "stake_gain_validators": "57.56",
+    "stake_drop_validators": "10.29",
+    "stake_unchanged_validators": "32.15"
+  },
+  {
+    "date": "2023-02-25",
+    "stake_gain_validators": "61.15",
+    "stake_drop_validators": "6.05",
+    "stake_unchanged_validators": "32.80"
+  },
+  {
+    "date": "2023-02-24",
+    "stake_gain_validators": "15.56",
+    "stake_drop_validators": "52.38",
+    "stake_unchanged_validators": "32.06"
+  },
+  {
+    "date": "2023-02-23",
+    "stake_gain_validators": "59.68",
+    "stake_drop_validators": "37.14",
+    "stake_unchanged_validators": "3.17"
+  },
+  {
+    "date": "2023-02-22",
+    "stake_gain_validators": "45.25",
+    "stake_drop_validators": "37.97",
+    "stake_unchanged_validators": "16.77"
+  },
+  {
+    "date": "2023-02-21",
+    "stake_gain_validators": "50.80",
+    "stake_drop_validators": "28.75",
+    "stake_unchanged_validators": "20.45"
+  },
+  {
+    "date": "2023-02-20",
+    "stake_gain_validators": "41.75",
+    "stake_drop_validators": "35.92",
+    "stake_unchanged_validators": "22.33"
+  },
+  {
+    "date": "2023-02-19",
+    "stake_gain_validators": "43.77",
+    "stake_drop_validators": "37.06",
+    "stake_unchanged_validators": "19.17"
+  },
+  {
+    "date": "2023-02-18",
+    "stake_gain_validators": "43.69",
+    "stake_drop_validators": "40.45",
+    "stake_unchanged_validators": "15.86"
+  },
+  {
+    "date": "2023-02-17",
+    "stake_gain_validators": "42.17",
+    "stake_drop_validators": "37.70",
+    "stake_unchanged_validators": "20.13"
+  },
+  {
+    "date": "2023-02-16",
+    "stake_gain_validators": "49.03",
+    "stake_drop_validators": "30.32",
+    "stake_unchanged_validators": "20.65"
+  },
+  {
+    "date": "2023-02-15",
+    "stake_gain_validators": "38.22",
+    "stake_drop_validators": "41.08",
+    "stake_unchanged_validators": "20.70"
+  },
+  {
+    "date": "2023-02-14",
+    "stake_gain_validators": "53.04",
+    "stake_drop_validators": "28.75",
+    "stake_unchanged_validators": "18.21"
+  },
+  {
+    "date": "2023-02-13",
+    "stake_gain_validators": "39.16",
+    "stake_drop_validators": "39.48",
+    "stake_unchanged_validators": "21.36"
+  },
+  {
+    "date": "2023-02-12",
+    "stake_gain_validators": "43.09",
+    "stake_drop_validators": "36.66",
+    "stake_unchanged_validators": "20.26"
+  },
+  {
+    "date": "2023-02-11",
+    "stake_gain_validators": "40.00",
+    "stake_drop_validators": "42.22",
+    "stake_unchanged_validators": "17.78"
+  },
+  {
+    "date": "2023-02-10",
+    "stake_gain_validators": "51.75",
+    "stake_drop_validators": "29.84",
+    "stake_unchanged_validators": "18.41"
+  },
+  {
+    "date": "2023-02-09",
+    "stake_gain_validators": "40.78",
+    "stake_drop_validators": "39.16",
+    "stake_unchanged_validators": "20.06"
+  },
+  {
+    "date": "2023-02-08",
+    "stake_gain_validators": "37.50",
+    "stake_drop_validators": "41.99",
+    "stake_unchanged_validators": "20.51"
+  },
+  {
+    "date": "2023-02-07",
+    "stake_gain_validators": "45.98",
+    "stake_drop_validators": "34.08",
+    "stake_unchanged_validators": "19.94"
+  },
+  {
+    "date": "2023-02-06",
+    "stake_gain_validators": "41.99",
+    "stake_drop_validators": "38.14",
+    "stake_unchanged_validators": "19.87"
+  },
+  {
+    "date": "2023-02-05",
+    "stake_gain_validators": "43.41",
+    "stake_drop_validators": "35.37",
+    "stake_unchanged_validators": "21.22"
+  },
+  {
+    "date": "2023-02-04",
+    "stake_gain_validators": "35.69",
+    "stake_drop_validators": "42.77",
+    "stake_unchanged_validators": "21.54"
+  },
+  {
+    "date": "2023-02-03",
+    "stake_gain_validators": "43.32",
+    "stake_drop_validators": "39.41",
+    "stake_unchanged_validators": "17.26"
+  },
+  {
+    "date": "2023-02-02",
+    "stake_gain_validators": "48.86",
+    "stake_drop_validators": "29.97",
+    "stake_unchanged_validators": "21.17"
+  },
+  {
+    "date": "2023-02-01",
+    "stake_gain_validators": "45.28",
+    "stake_drop_validators": "33.22",
+    "stake_unchanged_validators": "21.50"
+  },
+  {
+    "date": "2023-01-31",
+    "stake_gain_validators": "54.31",
+    "stake_drop_validators": "27.80",
+    "stake_unchanged_validators": "17.89"
+  },
+  {
+    "date": "2023-01-30",
+    "stake_gain_validators": "32.90",
+    "stake_drop_validators": "42.02",
+    "stake_unchanged_validators": "25.08"
+  },
+  {
+    "date": "2023-01-29",
+    "stake_gain_validators": "41.99",
+    "stake_drop_validators": "36.54",
+    "stake_unchanged_validators": "21.47"
+  },
+  {
+    "date": "2023-01-28",
+    "stake_gain_validators": "45.83",
+    "stake_drop_validators": "30.45",
+    "stake_unchanged_validators": "23.72"
+  },
+  {
+    "date": "2023-01-27",
+    "stake_gain_validators": "40.13",
+    "stake_drop_validators": "39.81",
+    "stake_unchanged_validators": "20.06"
+  },
+  {
+    "date": "2023-01-26",
+    "stake_gain_validators": "40.19",
+    "stake_drop_validators": "42.77",
+    "stake_unchanged_validators": "17.04"
+  },
+  {
+    "date": "2023-01-25",
+    "stake_gain_validators": "49.52",
+    "stake_drop_validators": "34.08",
+    "stake_unchanged_validators": "16.40"
+  },
+  {
+    "date": "2023-01-24",
+    "stake_gain_validators": "47.28",
+    "stake_drop_validators": "34.82",
+    "stake_unchanged_validators": "17.89"
+  },
+  {
+    "date": "2023-01-23",
+    "stake_gain_validators": "37.94",
+    "stake_drop_validators": "44.05",
+    "stake_unchanged_validators": "18.01"
+  },
+  {
+    "date": "2023-01-22",
+    "stake_gain_validators": "47.77",
+    "stake_drop_validators": "32.80",
+    "stake_unchanged_validators": "19.43"
+  },
+  {
+    "date": "2023-01-21",
+    "stake_gain_validators": "40.45",
+    "stake_drop_validators": "42.39",
+    "stake_unchanged_validators": "17.15"
+  },
+  {
+    "date": "2023-01-20",
+    "stake_gain_validators": "49.68",
+    "stake_drop_validators": "30.77",
+    "stake_unchanged_validators": "19.55"
+  },
+  {
+    "date": "2023-01-19",
+    "stake_gain_validators": "43.55",
+    "stake_drop_validators": "37.10",
+    "stake_unchanged_validators": "19.35"
+  },
+  {
+    "date": "2023-01-18",
+    "stake_gain_validators": "41.94",
+    "stake_drop_validators": "38.06",
+    "stake_unchanged_validators": "20.00"
+  },
+  {
+    "date": "2023-01-17",
+    "stake_gain_validators": "44.48",
+    "stake_drop_validators": "37.01",
+    "stake_unchanged_validators": "18.51"
+  },
+  {
+    "date": "2023-01-16",
+    "stake_gain_validators": "47.44",
+    "stake_drop_validators": "33.01",
+    "stake_unchanged_validators": "19.55"
+  },
+  {
+    "date": "2023-01-15",
+    "stake_gain_validators": "40.94",
+    "stake_drop_validators": "38.59",
+    "stake_unchanged_validators": "20.47"
+  },
+  {
+    "date": "2023-01-14",
+    "stake_gain_validators": "30.84",
+    "stake_drop_validators": "48.05",
+    "stake_unchanged_validators": "21.10"
+  },
+  {
+    "date": "2023-01-13",
+    "stake_gain_validators": "38.31",
+    "stake_drop_validators": "37.99",
+    "stake_unchanged_validators": "23.70"
+  },
+  {
+    "date": "2023-01-12",
+    "stake_gain_validators": "43.51",
+    "stake_drop_validators": "39.29",
+    "stake_unchanged_validators": "17.21"
+  },
+  {
+    "date": "2023-01-11",
+    "stake_gain_validators": "38.83",
+    "stake_drop_validators": "43.04",
+    "stake_unchanged_validators": "18.12"
+  },
+  {
+    "date": "2023-01-10",
+    "stake_gain_validators": "45.66",
+    "stake_drop_validators": "35.69",
+    "stake_unchanged_validators": "18.65"
+  },
+  {
+    "date": "2023-01-09",
+    "stake_gain_validators": "44.05",
+    "stake_drop_validators": "36.01",
+    "stake_unchanged_validators": "19.94"
+  },
+  {
+    "date": "2023-01-08",
+    "stake_gain_validators": "42.19",
+    "stake_drop_validators": "39.20",
+    "stake_unchanged_validators": "18.60"
+  },
+  {
+    "date": "2023-01-07",
+    "stake_gain_validators": "44.30",
+    "stake_drop_validators": "33.55",
+    "stake_unchanged_validators": "22.15"
+  },
+  {
+    "date": "2023-01-06",
+    "stake_gain_validators": "54.18",
+    "stake_drop_validators": "31.89",
+    "stake_unchanged_validators": "13.93"
+  },
+  {
+    "date": "2023-01-05",
+    "stake_gain_validators": "34.98",
+    "stake_drop_validators": "42.57",
+    "stake_unchanged_validators": "22.44"
+  },
+  {
+    "date": "2023-01-04",
+    "stake_gain_validators": "50.67",
+    "stake_drop_validators": "31.21",
+    "stake_unchanged_validators": "18.12"
+  },
+  {
+    "date": "2023-01-03",
+    "stake_gain_validators": "42.47",
+    "stake_drop_validators": "35.79",
+    "stake_unchanged_validators": "21.74"
+  },
+  {
+    "date": "2023-01-02",
+    "stake_gain_validators": "46.31",
+    "stake_drop_validators": "33.89",
+    "stake_unchanged_validators": "19.80"
+  },
+  {
+    "date": "2023-01-01",
+    "stake_gain_validators": "39.46",
+    "stake_drop_validators": "38.46",
+    "stake_unchanged_validators": "22.07"
+  },
+  {
+    "date": "2022-12-31",
+    "stake_gain_validators": "46.80",
+    "stake_drop_validators": "33.33",
+    "stake_unchanged_validators": "19.87"
+  },
+  {
+    "date": "2022-12-30",
+    "stake_gain_validators": "41.28",
+    "stake_drop_validators": "30.87",
+    "stake_unchanged_validators": "27.85"
+  },
+  {
+    "date": "2022-12-29",
+    "stake_gain_validators": "48.90",
+    "stake_drop_validators": "32.60",
+    "stake_unchanged_validators": "18.50"
+  },
+  {
+    "date": "2022-12-28",
+    "stake_gain_validators": "44.41",
+    "stake_drop_validators": "32.89",
+    "stake_unchanged_validators": "22.70"
+  },
+  {
+    "date": "2022-12-27",
+    "stake_gain_validators": "43.46",
+    "stake_drop_validators": "33.66",
+    "stake_unchanged_validators": "22.88"
+  },
+  {
+    "date": "2022-12-26",
+    "stake_gain_validators": "35.50",
+    "stake_drop_validators": "41.69",
+    "stake_unchanged_validators": "22.80"
+  },
+  {
+    "date": "2022-12-25",
+    "stake_gain_validators": "22.36",
+    "stake_drop_validators": "58.47",
+    "stake_unchanged_validators": "19.17"
+  },
+  {
+    "date": "2022-12-24",
+    "stake_gain_validators": "42.62",
+    "stake_drop_validators": "33.44",
+    "stake_unchanged_validators": "23.93"
+  },
+  {
+    "date": "2022-12-23",
+    "stake_gain_validators": "40.40",
+    "stake_drop_validators": "35.10",
+    "stake_unchanged_validators": "24.50"
+  },
+  {
+    "date": "2022-12-22",
+    "stake_gain_validators": "49.84",
+    "stake_drop_validators": "37.13",
+    "stake_unchanged_validators": "13.03"
+  },
+  {
+    "date": "2022-12-21",
+    "stake_gain_validators": "35.31",
+    "stake_drop_validators": "40.92",
+    "stake_unchanged_validators": "23.76"
+  },
+  {
+    "date": "2022-12-20",
+    "stake_gain_validators": "36.33",
+    "stake_drop_validators": "46.62",
+    "stake_unchanged_validators": "17.04"
+  },
+  {
+    "date": "2022-12-19",
+    "stake_gain_validators": "47.92",
+    "stake_drop_validators": "31.95",
+    "stake_unchanged_validators": "20.13"
+  },
+  {
+    "date": "2022-12-18",
+    "stake_gain_validators": "45.57",
+    "stake_drop_validators": "33.77",
+    "stake_unchanged_validators": "20.66"
+  },
+  {
+    "date": "2022-12-17",
+    "stake_gain_validators": "43.41",
+    "stake_drop_validators": "38.59",
+    "stake_unchanged_validators": "18.01"
+  },
+  {
+    "date": "2022-12-16",
+    "stake_gain_validators": "41.39",
+    "stake_drop_validators": "37.09",
+    "stake_unchanged_validators": "21.52"
+  },
+  {
+    "date": "2022-12-15",
+    "stake_gain_validators": "41.50",
+    "stake_drop_validators": "36.27",
+    "stake_unchanged_validators": "22.22"
+  },
+  {
+    "date": "2022-12-14",
+    "stake_gain_validators": "33.76",
+    "stake_drop_validators": "47.27",
+    "stake_unchanged_validators": "18.97"
+  },
+  {
+    "date": "2022-12-13",
+    "stake_gain_validators": "26.75",
+    "stake_drop_validators": "50.00",
+    "stake_unchanged_validators": "23.25"
+  },
+  {
+    "date": "2022-12-12",
+    "stake_gain_validators": "44.81",
+    "stake_drop_validators": "29.22",
+    "stake_unchanged_validators": "25.97"
+  },
+  {
+    "date": "2022-12-11",
+    "stake_gain_validators": "40.66",
+    "stake_drop_validators": "35.41",
+    "stake_unchanged_validators": "23.93"
+  },
+  {
+    "date": "2022-12-10",
+    "stake_gain_validators": "38.51",
+    "stake_drop_validators": "32.36",
+    "stake_unchanged_validators": "29.13"
+  },
+  {
+    "date": "2022-12-09",
+    "stake_gain_validators": "35.90",
+    "stake_drop_validators": "37.50",
+    "stake_unchanged_validators": "26.60"
+  },
+  {
+    "date": "2022-12-08",
+    "stake_gain_validators": "36.58",
+    "stake_drop_validators": "33.56",
+    "stake_unchanged_validators": "29.87"
+  },
+  {
+    "date": "2022-12-07",
+    "stake_gain_validators": "40.39",
+    "stake_drop_validators": "33.55",
+    "stake_unchanged_validators": "26.06"
+  },
+  {
+    "date": "2022-12-06",
+    "stake_gain_validators": "38.36",
+    "stake_drop_validators": "38.03",
+    "stake_unchanged_validators": "23.61"
+  },
+  {
+    "date": "2022-12-05",
+    "stake_gain_validators": "41.31",
+    "stake_drop_validators": "29.51",
+    "stake_unchanged_validators": "29.18"
+  },
+  {
+    "date": "2022-12-04",
+    "stake_gain_validators": "41.61",
+    "stake_drop_validators": "30.97",
+    "stake_unchanged_validators": "27.42"
+  },
+  {
+    "date": "2022-12-03",
+    "stake_gain_validators": "38.71",
+    "stake_drop_validators": "35.16",
+    "stake_unchanged_validators": "26.13"
+  },
+  {
+    "date": "2022-12-02",
+    "stake_gain_validators": "37.66",
+    "stake_drop_validators": "44.81",
+    "stake_unchanged_validators": "17.53"
+  },
+  {
+    "date": "2022-12-01",
+    "stake_gain_validators": "35.83",
+    "stake_drop_validators": "34.85",
+    "stake_unchanged_validators": "29.32"
+  },
+  {
+    "date": "2022-11-30",
+    "stake_gain_validators": "51.67",
+    "stake_drop_validators": "25.53",
+    "stake_unchanged_validators": "22.80"
+  },
+  {
+    "date": "2022-11-29",
+    "stake_gain_validators": "23.92",
+    "stake_drop_validators": "46.18",
+    "stake_unchanged_validators": "29.90"
+  },
+  {
+    "date": "2022-11-28",
+    "stake_gain_validators": "36.12",
+    "stake_drop_validators": "30.43",
+    "stake_unchanged_validators": "33.44"
+  },
+  {
+    "date": "2022-11-27",
+    "stake_gain_validators": "44.44",
+    "stake_drop_validators": "14.81",
+    "stake_unchanged_validators": "40.74"
+  },
+  {
+    "date": "2022-11-26",
+    "stake_gain_validators": "34.00",
+    "stake_drop_validators": "38.00",
+    "stake_unchanged_validators": "28.00"
+  },
+  {
+    "date": "2022-11-25",
+    "stake_gain_validators": "21.20",
+    "stake_drop_validators": "60.44",
+    "stake_unchanged_validators": "18.35"
+  },
+  {
+    "date": "2022-11-24",
+    "stake_gain_validators": "45.64",
+    "stake_drop_validators": "22.48",
+    "stake_unchanged_validators": "31.88"
+  },
+  {
+    "date": "2022-11-23",
+    "stake_gain_validators": "38.13",
+    "stake_drop_validators": "33.11",
+    "stake_unchanged_validators": "28.76"
+  },
+  {
+    "date": "2022-11-22",
+    "stake_gain_validators": "30.67",
+    "stake_drop_validators": "37.33",
+    "stake_unchanged_validators": "32.00"
+  },
+  {
+    "date": "2022-11-21",
+    "stake_gain_validators": "34.78",
+    "stake_drop_validators": "24.08",
+    "stake_unchanged_validators": "41.14"
+  },
+  {
+    "date": "2022-11-20",
+    "stake_gain_validators": "24.58",
+    "stake_drop_validators": "37.54",
+    "stake_unchanged_validators": "37.87"
+  },
+  {
+    "date": "2022-11-19",
+    "stake_gain_validators": "33.66",
+    "stake_drop_validators": "31.07",
+    "stake_unchanged_validators": "35.28"
+  },
+  {
+    "date": "2022-11-18",
+    "stake_gain_validators": "31.70",
+    "stake_drop_validators": "35.62",
+    "stake_unchanged_validators": "32.68"
+  },
+  {
+    "date": "2022-11-17",
+    "stake_gain_validators": "40.58",
+    "stake_drop_validators": "28.12",
+    "stake_unchanged_validators": "31.31"
+  },
+  {
+    "date": "2022-11-16",
+    "stake_gain_validators": "41.08",
+    "stake_drop_validators": "39.17",
+    "stake_unchanged_validators": "19.75"
+  },
+  {
+    "date": "2022-11-15",
+    "stake_gain_validators": "41.64",
+    "stake_drop_validators": "24.92",
+    "stake_unchanged_validators": "33.44"
+  },
+  {
+    "date": "2022-11-14",
+    "stake_gain_validators": "39.48",
+    "stake_drop_validators": "31.07",
+    "stake_unchanged_validators": "29.45"
+  },
+  {
+    "date": "2022-11-13",
+    "stake_gain_validators": "34.95",
+    "stake_drop_validators": "34.30",
+    "stake_unchanged_validators": "30.74"
+  },
+  {
+    "date": "2022-11-12",
+    "stake_gain_validators": "30.62",
+    "stake_drop_validators": "43.32",
+    "stake_unchanged_validators": "26.06"
+  },
+  {
+    "date": "2022-11-11",
+    "stake_gain_validators": "24.35",
+    "stake_drop_validators": "54.87",
+    "stake_unchanged_validators": "20.78"
+  },
+  {
+    "date": "2022-11-10",
+    "stake_gain_validators": "33.22",
+    "stake_drop_validators": "33.55",
+    "stake_unchanged_validators": "33.22"
+  },
+  {
+    "date": "2022-11-09",
+    "stake_gain_validators": "34.52",
+    "stake_drop_validators": "50.65",
+    "stake_unchanged_validators": "14.84"
+  },
+  {
+    "date": "2022-11-08",
+    "stake_gain_validators": "35.35",
+    "stake_drop_validators": "35.67",
+    "stake_unchanged_validators": "28.98"
+  },
+  {
+    "date": "2022-11-07",
+    "stake_gain_validators": "38.61",
+    "stake_drop_validators": "29.75",
+    "stake_unchanged_validators": "31.65"
+  },
+  {
+    "date": "2022-11-06",
+    "stake_gain_validators": "31.73",
+    "stake_drop_validators": "36.22",
+    "stake_unchanged_validators": "32.05"
+  },
+  {
+    "date": "2022-11-05",
+    "stake_gain_validators": "33.55",
+    "stake_drop_validators": "30.62",
+    "stake_unchanged_validators": "35.83"
+  },
+  {
+    "date": "2022-11-04",
+    "stake_gain_validators": "39.80",
+    "stake_drop_validators": "26.64",
+    "stake_unchanged_validators": "33.55"
+  },
+  {
+    "date": "2022-11-03",
+    "stake_gain_validators": "43.69",
+    "stake_drop_validators": "28.48",
+    "stake_unchanged_validators": "27.83"
+  },
+  {
+    "date": "2022-11-02",
+    "stake_gain_validators": "40.06",
+    "stake_drop_validators": "29.81",
+    "stake_unchanged_validators": "30.13"
+  },
+  {
+    "date": "2022-11-01",
+    "stake_gain_validators": "34.84",
+    "stake_drop_validators": "30.65",
+    "stake_unchanged_validators": "34.52"
+  }
+]

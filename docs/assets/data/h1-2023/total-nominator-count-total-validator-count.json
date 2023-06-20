@@ -1,0 +1,1062 @@
+[
+  {
+    "date": "2023-05-31",
+    "total_validators": "987",
+    "total_nominators": "44241"
+  },
+  {
+    "date": "2023-05-30",
+    "total_validators": "983",
+    "total_nominators": "44255"
+  },
+  {
+    "date": "2023-05-29",
+    "total_validators": "984",
+    "total_nominators": "44280"
+  },
+  {
+    "date": "2023-05-28",
+    "total_validators": "980",
+    "total_nominators": "44314"
+  },
+  {
+    "date": "2023-05-27",
+    "total_validators": "979",
+    "total_nominators": "44321"
+  },
+  {
+    "date": "2023-05-26",
+    "total_validators": "976",
+    "total_nominators": "44348"
+  },
+  {
+    "date": "2023-05-25",
+    "total_validators": "979",
+    "total_nominators": "44347"
+  },
+  {
+    "date": "2023-05-24",
+    "total_validators": "976",
+    "total_nominators": "44358"
+  },
+  {
+    "date": "2023-05-23",
+    "total_validators": "975",
+    "total_nominators": "44393"
+  },
+  {
+    "date": "2023-05-22",
+    "total_validators": "973",
+    "total_nominators": "44416"
+  },
+  {
+    "date": "2023-05-21",
+    "total_validators": "968",
+    "total_nominators": "44436"
+  },
+  {
+    "date": "2023-05-20",
+    "total_validators": "967",
+    "total_nominators": "44454"
+  },
+  {
+    "date": "2023-05-19",
+    "total_validators": "974",
+    "total_nominators": "44463"
+  },
+  {
+    "date": "2023-05-18",
+    "total_validators": "974",
+    "total_nominators": "44479"
+  },
+  {
+    "date": "2023-05-17",
+    "total_validators": "973",
+    "total_nominators": "44485"
+  },
+  {
+    "date": "2023-05-16",
+    "total_validators": "973",
+    "total_nominators": "44508"
+  },
+  {
+    "date": "2023-05-15",
+    "total_validators": "972",
+    "total_nominators": "44522"
+  },
+  {
+    "date": "2023-05-14",
+    "total_validators": "973",
+    "total_nominators": "44505"
+  },
+  {
+    "date": "2023-05-13",
+    "total_validators": "973",
+    "total_nominators": "44529"
+  },
+  {
+    "date": "2023-05-12",
+    "total_validators": "971",
+    "total_nominators": "44532"
+  },
+  {
+    "date": "2023-05-11",
+    "total_validators": "966",
+    "total_nominators": "44538"
+  },
+  {
+    "date": "2023-05-10",
+    "total_validators": "962",
+    "total_nominators": "44520"
+  },
+  {
+    "date": "2023-05-09",
+    "total_validators": "958",
+    "total_nominators": "44541"
+  },
+  {
+    "date": "2023-05-08",
+    "total_validators": "955",
+    "total_nominators": "44544"
+  },
+  {
+    "date": "2023-05-07",
+    "total_validators": "950",
+    "total_nominators": "44560"
+  },
+  {
+    "date": "2023-05-06",
+    "total_validators": "950",
+    "total_nominators": "44556"
+  },
+  {
+    "date": "2023-05-05",
+    "total_validators": "952",
+    "total_nominators": "44564"
+  },
+  {
+    "date": "2023-05-04",
+    "total_validators": "940",
+    "total_nominators": "44578"
+  },
+  {
+    "date": "2023-05-03",
+    "total_validators": "936",
+    "total_nominators": "44589"
+  },
+  {
+    "date": "2023-05-02",
+    "total_validators": "938",
+    "total_nominators": "44644"
+  },
+  {
+    "date": "2023-05-01",
+    "total_validators": "934",
+    "total_nominators": "44661"
+  },
+  {
+    "date": "2023-04-30",
+    "total_validators": "934",
+    "total_nominators": "44681"
+  },
+  {
+    "date": "2023-04-29",
+    "total_validators": "932",
+    "total_nominators": "44688"
+  },
+  {
+    "date": "2023-04-28",
+    "total_validators": "932",
+    "total_nominators": "44714"
+  },
+  {
+    "date": "2023-04-27",
+    "total_validators": "927",
+    "total_nominators": "44726"
+  },
+  {
+    "date": "2023-04-26",
+    "total_validators": "927",
+    "total_nominators": "44741"
+  },
+  {
+    "date": "2023-04-25",
+    "total_validators": "926",
+    "total_nominators": "44761"
+  },
+  {
+    "date": "2023-04-24",
+    "total_validators": "926",
+    "total_nominators": "44786"
+  },
+  {
+    "date": "2023-04-23",
+    "total_validators": "926",
+    "total_nominators": "44800"
+  },
+  {
+    "date": "2023-04-22",
+    "total_validators": "927",
+    "total_nominators": "44826"
+  },
+  {
+    "date": "2023-04-21",
+    "total_validators": "928",
+    "total_nominators": "44861"
+  },
+  {
+    "date": "2023-04-20",
+    "total_validators": "928",
+    "total_nominators": "44869"
+  },
+  {
+    "date": "2023-04-19",
+    "total_validators": "929",
+    "total_nominators": "44893"
+  },
+  {
+    "date": "2023-04-18",
+    "total_validators": "930",
+    "total_nominators": "44931"
+  },
+  {
+    "date": "2023-04-17",
+    "total_validators": "932",
+    "total_nominators": "44981"
+  },
+  {
+    "date": "2023-04-16",
+    "total_validators": "932",
+    "total_nominators": "45021"
+  },
+  {
+    "date": "2023-04-15",
+    "total_validators": "932",
+    "total_nominators": "45057"
+  },
+  {
+    "date": "2023-04-14",
+    "total_validators": "931",
+    "total_nominators": "45113"
+  },
+  {
+    "date": "2023-04-13",
+    "total_validators": "933",
+    "total_nominators": "45219"
+  },
+  {
+    "date": "2023-04-12",
+    "total_validators": "931",
+    "total_nominators": "45311"
+  },
+  {
+    "date": "2023-04-11",
+    "total_validators": "930",
+    "total_nominators": "45366"
+  },
+  {
+    "date": "2023-04-10",
+    "total_validators": "930",
+    "total_nominators": "45451"
+  },
+  {
+    "date": "2023-04-09",
+    "total_validators": "931",
+    "total_nominators": "45494"
+  },
+  {
+    "date": "2023-04-08",
+    "total_validators": "928",
+    "total_nominators": "45532"
+  },
+  {
+    "date": "2023-04-07",
+    "total_validators": "927",
+    "total_nominators": "45552"
+  },
+  {
+    "date": "2023-04-06",
+    "total_validators": "927",
+    "total_nominators": "45581"
+  },
+  {
+    "date": "2023-04-05",
+    "total_validators": "926",
+    "total_nominators": "45615"
+  },
+  {
+    "date": "2023-04-04",
+    "total_validators": "924",
+    "total_nominators": "45667"
+  },
+  {
+    "date": "2023-04-03",
+    "total_validators": "925",
+    "total_nominators": "45686"
+  },
+  {
+    "date": "2023-04-02",
+    "total_validators": "924",
+    "total_nominators": "45708"
+  },
+  {
+    "date": "2023-04-01",
+    "total_validators": "922",
+    "total_nominators": "45737"
+  },
+  {
+    "date": "2023-03-31",
+    "total_validators": "921",
+    "total_nominators": "45795"
+  },
+  {
+    "date": "2023-03-30",
+    "total_validators": "923",
+    "total_nominators": "45860"
+  },
+  {
+    "date": "2023-03-29",
+    "total_validators": "922",
+    "total_nominators": "45916"
+  },
+  {
+    "date": "2023-03-28",
+    "total_validators": "920",
+    "total_nominators": "46036"
+  },
+  {
+    "date": "2023-03-27",
+    "total_validators": "920",
+    "total_nominators": "46079"
+  },
+  {
+    "date": "2023-03-26",
+    "total_validators": "919",
+    "total_nominators": "46080"
+  },
+  {
+    "date": "2023-03-25",
+    "total_validators": "920",
+    "total_nominators": "46080"
+  },
+  {
+    "date": "2023-03-24",
+    "total_validators": "921",
+    "total_nominators": "46051"
+  },
+  {
+    "date": "2023-03-23",
+    "total_validators": "921",
+    "total_nominators": "46068"
+  },
+  {
+    "date": "2023-03-22",
+    "total_validators": "919",
+    "total_nominators": "46068"
+  },
+  {
+    "date": "2023-03-21",
+    "total_validators": "917",
+    "total_nominators": "46091"
+  },
+  {
+    "date": "2023-03-20",
+    "total_validators": "917",
+    "total_nominators": "46104"
+  },
+  {
+    "date": "2023-03-19",
+    "total_validators": "918",
+    "total_nominators": "46136"
+  },
+  {
+    "date": "2023-03-18",
+    "total_validators": "918",
+    "total_nominators": "46157"
+  },
+  {
+    "date": "2023-03-17",
+    "total_validators": "924",
+    "total_nominators": "46204"
+  },
+  {
+    "date": "2023-03-16",
+    "total_validators": "926",
+    "total_nominators": "46232"
+  },
+  {
+    "date": "2023-03-15",
+    "total_validators": "925",
+    "total_nominators": "46234"
+  },
+  {
+    "date": "2023-03-14",
+    "total_validators": "925",
+    "total_nominators": "46233"
+  },
+  {
+    "date": "2023-03-13",
+    "total_validators": "923",
+    "total_nominators": "46258"
+  },
+  {
+    "date": "2023-03-12",
+    "total_validators": "922",
+    "total_nominators": "46287"
+  },
+  {
+    "date": "2023-03-11",
+    "total_validators": "924",
+    "total_nominators": "46243"
+  },
+  {
+    "date": "2023-03-10",
+    "total_validators": "926",
+    "total_nominators": "46189"
+  },
+  {
+    "date": "2023-03-09",
+    "total_validators": "935",
+    "total_nominators": "46110"
+  },
+  {
+    "date": "2023-03-08",
+    "total_validators": "935",
+    "total_nominators": "46096"
+  },
+  {
+    "date": "2023-03-07",
+    "total_validators": "936",
+    "total_nominators": "46085"
+  },
+  {
+    "date": "2023-03-06",
+    "total_validators": "937",
+    "total_nominators": "46057"
+  },
+  {
+    "date": "2023-03-05",
+    "total_validators": "936",
+    "total_nominators": "46040"
+  },
+  {
+    "date": "2023-03-04",
+    "total_validators": "938",
+    "total_nominators": "46013"
+  },
+  {
+    "date": "2023-03-03",
+    "total_validators": "940",
+    "total_nominators": "45992"
+  },
+  {
+    "date": "2023-03-02",
+    "total_validators": "940",
+    "total_nominators": "45968"
+  },
+  {
+    "date": "2023-03-01",
+    "total_validators": "938",
+    "total_nominators": "45955"
+  },
+  {
+    "date": "2023-02-28",
+    "total_validators": "937",
+    "total_nominators": "45959"
+  },
+  {
+    "date": "2023-02-27",
+    "total_validators": "924",
+    "total_nominators": "45936"
+  },
+  {
+    "date": "2023-02-26",
+    "total_validators": "924",
+    "total_nominators": "45921"
+  },
+  {
+    "date": "2023-02-25",
+    "total_validators": "925",
+    "total_nominators": "45914"
+  },
+  {
+    "date": "2023-02-24",
+    "total_validators": "927",
+    "total_nominators": "45902"
+  },
+  {
+    "date": "2023-02-23",
+    "total_validators": "926",
+    "total_nominators": "45876"
+  },
+  {
+    "date": "2023-02-22",
+    "total_validators": "923",
+    "total_nominators": "45867"
+  },
+  {
+    "date": "2023-02-21",
+    "total_validators": "921",
+    "total_nominators": "45891"
+  },
+  {
+    "date": "2023-02-20",
+    "total_validators": "925",
+    "total_nominators": "45906"
+  },
+  {
+    "date": "2023-02-19",
+    "total_validators": "921",
+    "total_nominators": "45920"
+  },
+  {
+    "date": "2023-02-18",
+    "total_validators": "921",
+    "total_nominators": "45938"
+  },
+  {
+    "date": "2023-02-17",
+    "total_validators": "921",
+    "total_nominators": "45938"
+  },
+  {
+    "date": "2023-02-16",
+    "total_validators": "920",
+    "total_nominators": "45932"
+  },
+  {
+    "date": "2023-02-15",
+    "total_validators": "922",
+    "total_nominators": "45927"
+  },
+  {
+    "date": "2023-02-14",
+    "total_validators": "919",
+    "total_nominators": "45921"
+  },
+  {
+    "date": "2023-02-13",
+    "total_validators": "920",
+    "total_nominators": "45861"
+  },
+  {
+    "date": "2023-02-12",
+    "total_validators": "923",
+    "total_nominators": "45811"
+  },
+  {
+    "date": "2023-02-11",
+    "total_validators": "922",
+    "total_nominators": "45725"
+  },
+  {
+    "date": "2023-02-10",
+    "total_validators": "922",
+    "total_nominators": "45634"
+  },
+  {
+    "date": "2023-02-09",
+    "total_validators": "927",
+    "total_nominators": "45491"
+  },
+  {
+    "date": "2023-02-08",
+    "total_validators": "926",
+    "total_nominators": "45502"
+  },
+  {
+    "date": "2023-02-07",
+    "total_validators": "926",
+    "total_nominators": "45514"
+  },
+  {
+    "date": "2023-02-06",
+    "total_validators": "926",
+    "total_nominators": "45517"
+  },
+  {
+    "date": "2023-02-05",
+    "total_validators": "928",
+    "total_nominators": "45520"
+  },
+  {
+    "date": "2023-02-04",
+    "total_validators": "927",
+    "total_nominators": "45507"
+  },
+  {
+    "date": "2023-02-03",
+    "total_validators": "927",
+    "total_nominators": "45502"
+  },
+  {
+    "date": "2023-02-02",
+    "total_validators": "926",
+    "total_nominators": "45536"
+  },
+  {
+    "date": "2023-02-01",
+    "total_validators": "927",
+    "total_nominators": "45606"
+  },
+  {
+    "date": "2023-01-31",
+    "total_validators": "927",
+    "total_nominators": "45621"
+  },
+  {
+    "date": "2023-01-30",
+    "total_validators": "926",
+    "total_nominators": "45651"
+  },
+  {
+    "date": "2023-01-29",
+    "total_validators": "925",
+    "total_nominators": "45680"
+  },
+  {
+    "date": "2023-01-28",
+    "total_validators": "925",
+    "total_nominators": "45723"
+  },
+  {
+    "date": "2023-01-27",
+    "total_validators": "927",
+    "total_nominators": "45741"
+  },
+  {
+    "date": "2023-01-26",
+    "total_validators": "925",
+    "total_nominators": "45767"
+  },
+  {
+    "date": "2023-01-25",
+    "total_validators": "924",
+    "total_nominators": "45832"
+  },
+  {
+    "date": "2023-01-24",
+    "total_validators": "922",
+    "total_nominators": "45858"
+  },
+  {
+    "date": "2023-01-23",
+    "total_validators": "923",
+    "total_nominators": "45908"
+  },
+  {
+    "date": "2023-01-22",
+    "total_validators": "921",
+    "total_nominators": "46005"
+  },
+  {
+    "date": "2023-01-21",
+    "total_validators": "922",
+    "total_nominators": "46039"
+  },
+  {
+    "date": "2023-01-20",
+    "total_validators": "923",
+    "total_nominators": "46104"
+  },
+  {
+    "date": "2023-01-19",
+    "total_validators": "924",
+    "total_nominators": "46137"
+  },
+  {
+    "date": "2023-01-18",
+    "total_validators": "922",
+    "total_nominators": "46157"
+  },
+  {
+    "date": "2023-01-17",
+    "total_validators": "921",
+    "total_nominators": "46239"
+  },
+  {
+    "date": "2023-01-16",
+    "total_validators": "921",
+    "total_nominators": "46323"
+  },
+  {
+    "date": "2023-01-15",
+    "total_validators": "920",
+    "total_nominators": "46346"
+  },
+  {
+    "date": "2023-01-14",
+    "total_validators": "920",
+    "total_nominators": "46404"
+  },
+  {
+    "date": "2023-01-13",
+    "total_validators": "921",
+    "total_nominators": "46544"
+  },
+  {
+    "date": "2023-01-12",
+    "total_validators": "934",
+    "total_nominators": "46603"
+  },
+  {
+    "date": "2023-01-11",
+    "total_validators": "933",
+    "total_nominators": "46634"
+  },
+  {
+    "date": "2023-01-10",
+    "total_validators": "934",
+    "total_nominators": "46650"
+  },
+  {
+    "date": "2023-01-09",
+    "total_validators": "936",
+    "total_nominators": "46692"
+  },
+  {
+    "date": "2023-01-08",
+    "total_validators": "934",
+    "total_nominators": "46728"
+  },
+  {
+    "date": "2023-01-07",
+    "total_validators": "936",
+    "total_nominators": "46714"
+  },
+  {
+    "date": "2023-01-06",
+    "total_validators": "935",
+    "total_nominators": "46695"
+  },
+  {
+    "date": "2023-01-05",
+    "total_validators": "936",
+    "total_nominators": "46695"
+  },
+  {
+    "date": "2023-01-04",
+    "total_validators": "933",
+    "total_nominators": "46717"
+  },
+  {
+    "date": "2023-01-03",
+    "total_validators": "934",
+    "total_nominators": "46752"
+  },
+  {
+    "date": "2023-01-02",
+    "total_validators": "934",
+    "total_nominators": "46776"
+  },
+  {
+    "date": "2023-01-01",
+    "total_validators": "933",
+    "total_nominators": "46797"
+  },
+  {
+    "date": "2022-12-31",
+    "total_validators": "933",
+    "total_nominators": "46787"
+  },
+  {
+    "date": "2022-12-30",
+    "total_validators": "931",
+    "total_nominators": "46816"
+  },
+  {
+    "date": "2022-12-29",
+    "total_validators": "931",
+    "total_nominators": "46843"
+  },
+  {
+    "date": "2022-12-28",
+    "total_validators": "929",
+    "total_nominators": "46853"
+  },
+  {
+    "date": "2022-12-27",
+    "total_validators": "933",
+    "total_nominators": "46851"
+  },
+  {
+    "date": "2022-12-26",
+    "total_validators": "931",
+    "total_nominators": "46868"
+  },
+  {
+    "date": "2022-12-25",
+    "total_validators": "931",
+    "total_nominators": "46892"
+  },
+  {
+    "date": "2022-12-24",
+    "total_validators": "931",
+    "total_nominators": "46891"
+  },
+  {
+    "date": "2022-12-23",
+    "total_validators": "930",
+    "total_nominators": "46898"
+  },
+  {
+    "date": "2022-12-22",
+    "total_validators": "930",
+    "total_nominators": "46890"
+  },
+  {
+    "date": "2022-12-21",
+    "total_validators": "939",
+    "total_nominators": "46872"
+  },
+  {
+    "date": "2022-12-20",
+    "total_validators": "942",
+    "total_nominators": "46853"
+  },
+  {
+    "date": "2022-12-19",
+    "total_validators": "944",
+    "total_nominators": "46845"
+  },
+  {
+    "date": "2022-12-18",
+    "total_validators": "944",
+    "total_nominators": "46817"
+  },
+  {
+    "date": "2022-12-17",
+    "total_validators": "947",
+    "total_nominators": "46782"
+  },
+  {
+    "date": "2022-12-16",
+    "total_validators": "948",
+    "total_nominators": "46713"
+  },
+  {
+    "date": "2022-12-15",
+    "total_validators": "950",
+    "total_nominators": "46724"
+  },
+  {
+    "date": "2022-12-14",
+    "total_validators": "950",
+    "total_nominators": "46743"
+  },
+  {
+    "date": "2022-12-13",
+    "total_validators": "951",
+    "total_nominators": "46786"
+  },
+  {
+    "date": "2022-12-12",
+    "total_validators": "959",
+    "total_nominators": "46833"
+  },
+  {
+    "date": "2022-12-11",
+    "total_validators": "962",
+    "total_nominators": "46899"
+  },
+  {
+    "date": "2022-12-10",
+    "total_validators": "962",
+    "total_nominators": "46979"
+  },
+  {
+    "date": "2022-12-09",
+    "total_validators": "964",
+    "total_nominators": "47044"
+  },
+  {
+    "date": "2022-12-08",
+    "total_validators": "964",
+    "total_nominators": "47161"
+  },
+  {
+    "date": "2022-12-07",
+    "total_validators": "965",
+    "total_nominators": "47306"
+  },
+  {
+    "date": "2022-12-06",
+    "total_validators": "965",
+    "total_nominators": "47496"
+  },
+  {
+    "date": "2022-12-05",
+    "total_validators": "968",
+    "total_nominators": "47672"
+  },
+  {
+    "date": "2022-12-04",
+    "total_validators": "986",
+    "total_nominators": "47599"
+  },
+  {
+    "date": "2022-12-03",
+    "total_validators": "985",
+    "total_nominators": "47512"
+  },
+  {
+    "date": "2022-12-02",
+    "total_validators": "986",
+    "total_nominators": "47374"
+  },
+  {
+    "date": "2022-12-01",
+    "total_validators": "988",
+    "total_nominators": "47279"
+  },
+  {
+    "date": "2022-11-30",
+    "total_validators": "990",
+    "total_nominators": "47151"
+  },
+  {
+    "date": "2022-11-29",
+    "total_validators": "984",
+    "total_nominators": "47049"
+  },
+  {
+    "date": "2022-11-28",
+    "total_validators": "985",
+    "total_nominators": "46948"
+  },
+  {
+    "date": "2022-11-27",
+    "total_validators": "985",
+    "total_nominators": "46820"
+  },
+  {
+    "date": "2022-11-26",
+    "total_validators": "984",
+    "total_nominators": "46666"
+  },
+  {
+    "date": "2022-11-25",
+    "total_validators": "983",
+    "total_nominators": "46525"
+  },
+  {
+    "date": "2022-11-24",
+    "total_validators": "984",
+    "total_nominators": "46393"
+  },
+  {
+    "date": "2022-11-23",
+    "total_validators": "983",
+    "total_nominators": "46209"
+  },
+  {
+    "date": "2022-11-22",
+    "total_validators": "986",
+    "total_nominators": "46047"
+  },
+  {
+    "date": "2022-11-21",
+    "total_validators": "983",
+    "total_nominators": "45845"
+  },
+  {
+    "date": "2022-11-20",
+    "total_validators": "985",
+    "total_nominators": "45645"
+  },
+  {
+    "date": "2022-11-19",
+    "total_validators": "984",
+    "total_nominators": "45360"
+  },
+  {
+    "date": "2022-11-18",
+    "total_validators": "986",
+    "total_nominators": "45086"
+  },
+  {
+    "date": "2022-11-17",
+    "total_validators": "986",
+    "total_nominators": "44762"
+  },
+  {
+    "date": "2022-11-16",
+    "total_validators": "984",
+    "total_nominators": "44387"
+  },
+  {
+    "date": "2022-11-15",
+    "total_validators": "981",
+    "total_nominators": "44002"
+  },
+  {
+    "date": "2022-11-14",
+    "total_validators": "982",
+    "total_nominators": "43546"
+  },
+  {
+    "date": "2022-11-13",
+    "total_validators": "981",
+    "total_nominators": "43059"
+  },
+  {
+    "date": "2022-11-12",
+    "total_validators": "982",
+    "total_nominators": "42595"
+  },
+  {
+    "date": "2022-11-11",
+    "total_validators": "983",
+    "total_nominators": "42280"
+  },
+  {
+    "date": "2022-11-10",
+    "total_validators": "984",
+    "total_nominators": "41973"
+  },
+  {
+    "date": "2022-11-09",
+    "total_validators": "983",
+    "total_nominators": "41722"
+  },
+  {
+    "date": "2022-11-08",
+    "total_validators": "985",
+    "total_nominators": "41585"
+  },
+  {
+    "date": "2022-11-07",
+    "total_validators": "985",
+    "total_nominators": "41488"
+  },
+  {
+    "date": "2022-11-06",
+    "total_validators": "984",
+    "total_nominators": "41417"
+  },
+  {
+    "date": "2022-11-05",
+    "total_validators": "985",
+    "total_nominators": "41375"
+  },
+  {
+    "date": "2022-11-04",
+    "total_validators": "987",
+    "total_nominators": "41305"
+  },
+  {
+    "date": "2022-11-03",
+    "total_validators": "986",
+    "total_nominators": "41240"
+  },
+  {
+    "date": "2022-11-02",
+    "total_validators": "984",
+    "total_nominators": "41162"
+  },
+  {
+    "date": "2022-11-01",
+    "total_validators": "990",
+    "total_nominators": "41121"
+  }
+]
