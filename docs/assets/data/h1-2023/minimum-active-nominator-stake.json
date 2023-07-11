@@ -1,0 +1,858 @@
+[
+  {
+    "date": "2023-05-31",
+    "min_active_stake": "363.98",
+    "annotation_min_active_stake": "363.98"
+  },
+  {
+    "date": "2023-05-30",
+    "min_active_stake": "363.98"
+  },
+  {
+    "date": "2023-05-29",
+    "min_active_stake": "363.98"
+  },
+  {
+    "date": "2023-05-28",
+    "min_active_stake": "363.98"
+  },
+  {
+    "date": "2023-05-27",
+    "min_active_stake": "363.98"
+  },
+  {
+    "date": "2023-05-26",
+    "min_active_stake": "363.98"
+  },
+  {
+    "date": "2023-05-25",
+    "min_active_stake": "363.98"
+  },
+  {
+    "date": "2023-05-24",
+    "min_active_stake": "363.98"
+  },
+  {
+    "date": "2023-05-23",
+    "min_active_stake": "363.98"
+  },
+  {
+    "date": "2023-05-22",
+    "min_active_stake": "363.98"
+  },
+  {
+    "date": "2023-05-21",
+    "min_active_stake": "363.98"
+  },
+  {
+    "date": "2023-05-20",
+    "min_active_stake": "363.98"
+  },
+  {
+    "date": "2023-05-19",
+    "min_active_stake": "363.98"
+  },
+  {
+    "date": "2023-05-18",
+    "min_active_stake": "363.98"
+  },
+  {
+    "date": "2023-05-17",
+    "min_active_stake": "363.98"
+  },
+  {
+    "date": "2023-05-16",
+    "min_active_stake": "363.98"
+  },
+  {
+    "date": "2023-05-15",
+    "min_active_stake": "363.98"
+  },
+  {
+    "date": "2023-05-14",
+    "min_active_stake": "363.98"
+  },
+  {
+    "date": "2023-05-13",
+    "min_active_stake": "363.98"
+  },
+  {
+    "date": "2023-05-12",
+    "min_active_stake": "363.98"
+  },
+  {
+    "date": "2023-05-11",
+    "min_active_stake": "363.98"
+  },
+  {
+    "date": "2023-05-10",
+    "min_active_stake": "363.98"
+  },
+  {
+    "date": "2023-05-09",
+    "min_active_stake": "363.98"
+  },
+  {
+    "date": "2023-05-08",
+    "min_active_stake": "363.98"
+  },
+  {
+    "date": "2023-05-07",
+    "min_active_stake": "363.98"
+  },
+  {
+    "date": "2023-05-06",
+    "min_active_stake": "363.98"
+  },
+  {
+    "date": "2023-05-05",
+    "min_active_stake": "363.98"
+  },
+  {
+    "date": "2023-05-04",
+    "min_active_stake": "363.98"
+  },
+  {
+    "date": "2023-05-03",
+    "min_active_stake": "363.98"
+  },
+  {
+    "date": "2023-05-02",
+    "min_active_stake": "363.87",
+    "annotation_min_active_stake": "363.87"
+  },
+  {
+    "date": "2023-05-01",
+    "min_active_stake": "355.39"
+  },
+  {
+    "date": "2023-04-30",
+    "min_active_stake": "345.00"
+  },
+  {
+    "date": "2023-04-29",
+    "min_active_stake": "339.16"
+  },
+  {
+    "date": "2023-04-28",
+    "min_active_stake": "327.00"
+  },
+  {
+    "date": "2023-04-27",
+    "min_active_stake": "327.00"
+  },
+  {
+    "date": "2023-04-26",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-04-25",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-04-24",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-04-23",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-04-22",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-04-21",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-04-20",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-04-19",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-04-18",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-04-17",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-04-16",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-04-15",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-04-14",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-04-13",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-04-12",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-04-11",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-04-10",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-04-09",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-04-08",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-04-07",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-04-06",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-04-05",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-04-04",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-04-03",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-04-02",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-04-01",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-03-31",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-03-30",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-03-29",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-03-28",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-03-27",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-03-26",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-03-25",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-03-24",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-03-23",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-03-22",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-03-21",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-03-20",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-03-19",
+    "min_active_stake": "326.98"
+  },
+  {
+    "date": "2023-03-18",
+    "min_active_stake": "326.93",
+    "annotation_min_active_stake": "326.93"
+  },
+  {
+    "date": "2023-03-17",
+    "min_active_stake": "313.00"
+  },
+  {
+    "date": "2023-03-16",
+    "min_active_stake": "300.00"
+  },
+  {
+    "date": "2023-03-15",
+    "min_active_stake": "296.00"
+  },
+  {
+    "date": "2023-03-14",
+    "min_active_stake": "294.50"
+  },
+  {
+    "date": "2023-03-13",
+    "min_active_stake": "293.96"
+  },
+  {
+    "date": "2023-03-12",
+    "min_active_stake": "293.96"
+  },
+  {
+    "date": "2023-03-11",
+    "min_active_stake": "293.96"
+  },
+  {
+    "date": "2023-03-10",
+    "min_active_stake": "293.96"
+  },
+  {
+    "date": "2023-03-09",
+    "min_active_stake": "293.70"
+  },
+  {
+    "date": "2023-03-08",
+    "min_active_stake": "293.70"
+  },
+  {
+    "date": "2023-03-07",
+    "min_active_stake": "293.70"
+  },
+  {
+    "date": "2023-03-06",
+    "min_active_stake": "293.70"
+  },
+  {
+    "date": "2023-03-05",
+    "min_active_stake": "293.70"
+  },
+  {
+    "date": "2023-03-04",
+    "min_active_stake": "293.70"
+  },
+  {
+    "date": "2023-03-03",
+    "min_active_stake": "293.70"
+  },
+  {
+    "date": "2023-03-02",
+    "min_active_stake": "293.70"
+  },
+  {
+    "date": "2023-03-01",
+    "min_active_stake": "293.70"
+  },
+  {
+    "date": "2023-02-28",
+    "min_active_stake": "293.70"
+  },
+  {
+    "date": "2023-02-27",
+    "min_active_stake": "293.70"
+  },
+  {
+    "date": "2023-02-26",
+    "min_active_stake": "293.70"
+  },
+  {
+    "date": "2023-02-25",
+    "min_active_stake": "293.70"
+  },
+  {
+    "date": "2023-02-24",
+    "min_active_stake": "293.70"
+  },
+  {
+    "date": "2023-02-23",
+    "min_active_stake": "293.70"
+  },
+  {
+    "date": "2023-02-22",
+    "min_active_stake": "293.70"
+  },
+  {
+    "date": "2023-02-21",
+    "min_active_stake": "293.70"
+  },
+  {
+    "date": "2023-02-20",
+    "min_active_stake": "293.70"
+  },
+  {
+    "date": "2023-02-19",
+    "min_active_stake": "293.70"
+  },
+  {
+    "date": "2023-02-18",
+    "min_active_stake": "293.70"
+  },
+  {
+    "date": "2023-02-17",
+    "min_active_stake": "293.70"
+  },
+  {
+    "date": "2023-02-16",
+    "min_active_stake": "293.70"
+  },
+  {
+    "date": "2023-02-15",
+    "min_active_stake": "293.70"
+  },
+  {
+    "date": "2023-02-14",
+    "min_active_stake": "293.70",
+    "annotation_min_active_stake": "293.70"
+  },
+  {
+    "date": "2023-02-13",
+    "min_active_stake": "280.80"
+  },
+  {
+    "date": "2023-02-12",
+    "min_active_stake": "264.52"
+  },
+  {
+    "date": "2023-02-11",
+    "min_active_stake": "264.38"
+  },
+  {
+    "date": "2023-02-10",
+    "min_active_stake": "264.17"
+  },
+  {
+    "date": "2023-02-09",
+    "min_active_stake": "264.17"
+  },
+  {
+    "date": "2023-02-08",
+    "min_active_stake": "264.08"
+  },
+  {
+    "date": "2023-02-07",
+    "min_active_stake": "264.08"
+  },
+  {
+    "date": "2023-02-06",
+    "min_active_stake": "264.08"
+  },
+  {
+    "date": "2023-02-05",
+    "min_active_stake": "264.08"
+  },
+  {
+    "date": "2023-02-04",
+    "min_active_stake": "264.05"
+  },
+  {
+    "date": "2023-02-03",
+    "min_active_stake": "264.00"
+  },
+  {
+    "date": "2023-02-02",
+    "min_active_stake": "264.00"
+  },
+  {
+    "date": "2023-02-01",
+    "min_active_stake": "264.00"
+  },
+  {
+    "date": "2023-01-31",
+    "min_active_stake": "263.80"
+  },
+  {
+    "date": "2023-01-30",
+    "min_active_stake": "263.80"
+  },
+  {
+    "date": "2023-01-29",
+    "min_active_stake": "263.80"
+  },
+  {
+    "date": "2023-01-28",
+    "min_active_stake": "263.80"
+  },
+  {
+    "date": "2023-01-27",
+    "min_active_stake": "263.80"
+  },
+  {
+    "date": "2023-01-26",
+    "min_active_stake": "263.80"
+  },
+  {
+    "date": "2023-01-25",
+    "min_active_stake": "263.80"
+  },
+  {
+    "date": "2023-01-24",
+    "min_active_stake": "263.80"
+  },
+  {
+    "date": "2023-01-23",
+    "min_active_stake": "263.80"
+  },
+  {
+    "date": "2023-01-22",
+    "min_active_stake": "263.80"
+  },
+  {
+    "date": "2023-01-21",
+    "min_active_stake": "263.80"
+  },
+  {
+    "date": "2023-01-20",
+    "min_active_stake": "263.80"
+  },
+  {
+    "date": "2023-01-19",
+    "min_active_stake": "263.78"
+  },
+  {
+    "date": "2023-01-18",
+    "min_active_stake": "263.78",
+    "annotation_min_active_stake": "263.78"
+  },
+  {
+    "date": "2023-01-17",
+    "min_active_stake": "248.50"
+  },
+  {
+    "date": "2023-01-16",
+    "min_active_stake": "240.00"
+  },
+  {
+    "date": "2023-01-15",
+    "min_active_stake": "238.00"
+  },
+  {
+    "date": "2023-01-14",
+    "min_active_stake": "238.00"
+  },
+  {
+    "date": "2023-01-13",
+    "min_active_stake": "237.00"
+  },
+  {
+    "date": "2023-01-12",
+    "min_active_stake": "237.00"
+  },
+  {
+    "date": "2023-01-11",
+    "min_active_stake": "237.00"
+  },
+  {
+    "date": "2023-01-10",
+    "min_active_stake": "237.00"
+  },
+  {
+    "date": "2023-01-09",
+    "min_active_stake": "237.00"
+  },
+  {
+    "date": "2023-01-08",
+    "min_active_stake": "237.00"
+  },
+  {
+    "date": "2023-01-07",
+    "min_active_stake": "237.00"
+  },
+  {
+    "date": "2023-01-06",
+    "min_active_stake": "237.00"
+  },
+  {
+    "date": "2023-01-05",
+    "min_active_stake": "237.00"
+  },
+  {
+    "date": "2023-01-04",
+    "min_active_stake": "237.00"
+  },
+  {
+    "date": "2023-01-03",
+    "min_active_stake": "237.00"
+  },
+  {
+    "date": "2023-01-02",
+    "min_active_stake": "237.00"
+  },
+  {
+    "date": "2023-01-01",
+    "min_active_stake": "237.00"
+  },
+  {
+    "date": "2022-12-31",
+    "min_active_stake": "237.00"
+  },
+  {
+    "date": "2022-12-30",
+    "min_active_stake": "237.00"
+  },
+  {
+    "date": "2022-12-29",
+    "min_active_stake": "237.00"
+  },
+  {
+    "date": "2022-12-28",
+    "min_active_stake": "237.00"
+  },
+  {
+    "date": "2022-12-27",
+    "min_active_stake": "236.98"
+  },
+  {
+    "date": "2022-12-26",
+    "min_active_stake": "236.98"
+  },
+  {
+    "date": "2022-12-25",
+    "min_active_stake": "236.98"
+  },
+  {
+    "date": "2022-12-24",
+    "min_active_stake": "236.98"
+  },
+  {
+    "date": "2022-12-23",
+    "min_active_stake": "236.98"
+  },
+  {
+    "date": "2022-12-22",
+    "min_active_stake": "236.98"
+  },
+  {
+    "date": "2022-12-21",
+    "min_active_stake": "236.98",
+    "annotation_min_active_stake": "236.98"
+  },
+  {
+    "date": "2022-12-20",
+    "min_active_stake": "216.00"
+  },
+  {
+    "date": "2022-12-19",
+    "min_active_stake": "213.83"
+  },
+  {
+    "date": "2022-12-18",
+    "min_active_stake": "212.97"
+  },
+  {
+    "date": "2022-12-17",
+    "min_active_stake": "212.97"
+  },
+  {
+    "date": "2022-12-16",
+    "min_active_stake": "212.97"
+  },
+  {
+    "date": "2022-12-15",
+    "min_active_stake": "212.97"
+  },
+  {
+    "date": "2022-12-14",
+    "min_active_stake": "212.97"
+  },
+  {
+    "date": "2022-12-13",
+    "min_active_stake": "212.88"
+  },
+  {
+    "date": "2022-12-12",
+    "min_active_stake": "212.88"
+  },
+  {
+    "date": "2022-12-11",
+    "min_active_stake": "212.88"
+  },
+  {
+    "date": "2022-12-10",
+    "min_active_stake": "212.88"
+  },
+  {
+    "date": "2022-12-09",
+    "min_active_stake": "212.88"
+  },
+  {
+    "date": "2022-12-08",
+    "min_active_stake": "212.88"
+  },
+  {
+    "date": "2022-12-07",
+    "min_active_stake": "212.88"
+  },
+  {
+    "date": "2022-12-06",
+    "min_active_stake": "212.88"
+  },
+  {
+    "date": "2022-12-05",
+    "min_active_stake": "212.88"
+  },
+  {
+    "date": "2022-12-04",
+    "min_active_stake": "212.88"
+  },
+  {
+    "date": "2022-12-03",
+    "min_active_stake": "212.88"
+  },
+  {
+    "date": "2022-12-02",
+    "min_active_stake": "212.88"
+  },
+  {
+    "date": "2022-12-01",
+    "min_active_stake": "212.88"
+  },
+  {
+    "date": "2022-11-30",
+    "min_active_stake": "212.88"
+  },
+  {
+    "date": "2022-11-29",
+    "min_active_stake": "212.88"
+  },
+  {
+    "date": "2022-11-28",
+    "min_active_stake": "212.88"
+  },
+  {
+    "date": "2022-11-27",
+    "min_active_stake": "212.88"
+  },
+  {
+    "date": "2022-11-26",
+    "min_active_stake": "212.88"
+  },
+  {
+    "date": "2022-11-25",
+    "min_active_stake": "212.88"
+  },
+  {
+    "date": "2022-11-24",
+    "min_active_stake": "212.88",
+    "annotation_min_active_stake": "212.88"
+  },
+  {
+    "date": "2022-11-23",
+    "min_active_stake": "193.76"
+  },
+  {
+    "date": "2022-11-22",
+    "min_active_stake": "191.68"
+  },
+  {
+    "date": "2022-11-21",
+    "min_active_stake": "191.28"
+  },
+  {
+    "date": "2022-11-20",
+    "min_active_stake": "191.28"
+  },
+  {
+    "date": "2022-11-19",
+    "min_active_stake": "191.28"
+  },
+  {
+    "date": "2022-11-18",
+    "min_active_stake": "191.28"
+  },
+  {
+    "date": "2022-11-17",
+    "min_active_stake": "191.28"
+  },
+  {
+    "date": "2022-11-16",
+    "min_active_stake": "191.28"
+  },
+  {
+    "date": "2022-11-15",
+    "min_active_stake": "191.28"
+  },
+  {
+    "date": "2022-11-14",
+    "min_active_stake": "191.28"
+  },
+  {
+    "date": "2022-11-13",
+    "min_active_stake": "191.28"
+  },
+  {
+    "date": "2022-11-12",
+    "min_active_stake": "191.28"
+  },
+  {
+    "date": "2022-11-11",
+    "min_active_stake": "191.28"
+  },
+  {
+    "date": "2022-11-10",
+    "min_active_stake": "191.28"
+  },
+  {
+    "date": "2022-11-09",
+    "min_active_stake": "191.28"
+  },
+  {
+    "date": "2022-11-08",
+    "min_active_stake": "191.28"
+  },
+  {
+    "date": "2022-11-07",
+    "min_active_stake": "191.28"
+  },
+  {
+    "date": "2022-11-06",
+    "min_active_stake": "191.28"
+  },
+  {
+    "date": "2022-11-05",
+    "min_active_stake": "191.27"
+  },
+  {
+    "date": "2022-11-04",
+    "min_active_stake": "191.27"
+  },
+  {
+    "date": "2022-11-03",
+    "min_active_stake": "191.27"
+  },
+  {
+    "date": "2022-11-02",
+    "min_active_stake": "191.27",
+    "annotation_min_active_stake": "191.27"
+  },
+  {
+    "date": "2022-11-01",
+    "min_active_stake": "187.35"
+  }
+]

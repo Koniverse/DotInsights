@@ -36,8 +36,5 @@
 		"gulp-uglify": "latest",
 		"lodash": "^4.14.1",
 		"stylelint": "latest"
-	},
-	"scripts": {
-		"push:test": "rsync -avz -e 'ssh -p 2222' /Volumes/DATA/repos/giong/html-dotinsights/docs/* www-data@178.128.57.30:/opt/easyengine/sites/project.thememove.com/app/htdocs/ --delete"
 	}
 }

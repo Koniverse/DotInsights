@@ -19,6 +19,24 @@
       ]
     },
     {
+      "name": "reports-q4-2022",
+      "files": [
+        "src/assets/js-code/reports-q4-2022.js"
+      ]
+    },
+    {
+      "name": "reports-q1-2023",
+      "files": [
+        "src/assets/js-code/reports-q1-2023.js"
+      ]
+    },
+    {
+      "name": "reports-h1-2023",
+      "files": [
+        "src/assets/js-code/reports-h1-2023.js"
+      ]
+    },
+    {
       "name": "ecosystem-map",
       "files": [
         "src/assets/js-code/ecosystem-map.js"
@@ -35,6 +53,12 @@
       "name": "modal",
       "files": [
         "src/assets/js-code/modal.js"
+      ]
+    },
+    {
+      "name": "sidebar-menu",
+      "files": [
+        "src/assets/js-code/sidebar-menu.js"
       ]
     },
     {

@@ -1,0 +1,902 @@
+[
+  {
+    "date": "2023-01-01",
+    "starlay_finance": "7344918.00",
+    "acala": "42032725.02",
+    "astriddao": "5022679.39",
+    "moonwell_artemis": "12424476.01",
+    "parallel": "4888115.59",
+    "moonwell_apollo": "15076669.19",
+    "karura": "7344918.12"
+  },
+  {
+    "date": "2023-01-02",
+    "starlay_finance": "6830681.00",
+    "acala": "41497297.79",
+    "astriddao": "5062826.69",
+    "moonwell_artemis": "12474336.29",
+    "parallel": "4777395.19",
+    "moonwell_apollo": "15059096.21",
+    "karura": "6830681.14"
+  },
+  {
+    "date": "2023-01-03",
+    "starlay_finance": "7030320.00",
+    "acala": "42239527.69",
+    "astriddao": "5075662.80",
+    "moonwell_artemis": "12536693.95",
+    "parallel": "5046251.81",
+    "moonwell_apollo": "15130782.15",
+    "karura": "7030320.44"
+  },
+  {
+    "date": "2023-01-04",
+    "starlay_finance": "7126360.00",
+    "acala": "41949380.33",
+    "astriddao": "5054964.30",
+    "moonwell_artemis": "12542487.88",
+    "parallel": "5112776.05",
+    "moonwell_apollo": "15219873.77",
+    "karura": "7126359.88"
+  },
+  {
+    "date": "2023-01-05",
+    "starlay_finance": "7383327.00",
+    "acala": "42956264.21",
+    "astriddao": "5096811.77",
+    "moonwell_artemis": "12814963.21",
+    "parallel": "5239728.82",
+    "moonwell_apollo": "15350856.99",
+    "karura": "7383326.72"
+  },
+  {
+    "date": "2023-01-06",
+    "starlay_finance": "7318535.00",
+    "acala": "43073198.23",
+    "astriddao": "5052694.58",
+    "moonwell_artemis": "12704173.06",
+    "parallel": "5351955.21",
+    "moonwell_apollo": "15868268.80",
+    "karura": "7318535.17"
+  },
+  {
+    "date": "2023-01-07",
+    "starlay_finance": "7343338.00",
+    "acala": "42802900.83",
+    "astriddao": "5105647.55",
+    "moonwell_artemis": "12692648.46",
+    "parallel": "5419720.65",
+    "moonwell_apollo": "16035148.92",
+    "karura": "7343337.56"
+  },
+  {
+    "date": "2023-01-08",
+    "starlay_finance": "7183577.00",
+    "acala": "42429367.59",
+    "astriddao": "5090644.56",
+    "moonwell_artemis": "12615038.25",
+    "parallel": "5352718.28",
+    "moonwell_apollo": "17747320.69",
+    "karura": "7183576.75"
+  },
+  {
+    "date": "2023-01-09",
+    "starlay_finance": "7372512.00",
+    "acala": "43246454.91",
+    "astriddao": "5109100.67",
+    "moonwell_artemis": "12959671.35",
+    "parallel": "5604623.05",
+    "moonwell_apollo": "17898874.78",
+    "karura": "7372512.28"
+  },
+  {
+    "date": "2023-01-10",
+    "starlay_finance": "7625569.00",
+    "acala": "43325012.89",
+    "astriddao": "5154325.12",
+    "moonwell_artemis": "12772109.83",
+    "parallel": "5737675.33",
+    "moonwell_apollo": "17744263.01",
+    "karura": "7625568.64"
+  },
+  {
+    "date": "2023-01-11",
+    "starlay_finance": "7682033.00",
+    "acala": "43881192.49",
+    "astriddao": "5169102.47",
+    "moonwell_artemis": "12429444.35",
+    "parallel": "5765862.36",
+    "moonwell_apollo": "17945507.39",
+    "karura": "7682032.93"
+  },
+  {
+    "date": "2023-01-12",
+    "starlay_finance": "7642503.00",
+    "acala": "44746538.78",
+    "astriddao": "5208706.97",
+    "moonwell_artemis": "12539983.16",
+    "parallel": "6060884.96",
+    "moonwell_apollo": "18406747.80",
+    "karura": "7642502.82"
+  },
+  {
+    "date": "2023-01-13",
+    "starlay_finance": "7821679.00",
+    "acala": "45098398.55",
+    "astriddao": "5178371.61",
+    "moonwell_artemis": "12480736.91",
+    "parallel": "6103147.52",
+    "moonwell_apollo": "18035929.28",
+    "karura": "7821678.52"
+  },
+  {
+    "date": "2023-01-14",
+    "starlay_finance": "8256227.00",
+    "acala": "46008646.02",
+    "astriddao": "5332224.65",
+    "moonwell_artemis": "12921873.45",
+    "parallel": "6540495.39",
+    "moonwell_apollo": "18626501.90",
+    "karura": "8256226.59"
+  },
+  {
+    "date": "2023-01-15",
+    "starlay_finance": "8559572.00",
+    "acala": "46275138.85",
+    "astriddao": "5343071.62",
+    "moonwell_artemis": "13073776.33",
+    "parallel": "7009033.15",
+    "moonwell_apollo": "19278713.03",
+    "karura": "8559571.54"
+  },
+  {
+    "date": "2023-01-16",
+    "starlay_finance": "8681978.00",
+    "acala": "47365609.94",
+    "astriddao": "5338374.40",
+    "moonwell_artemis": "13229106.06",
+    "parallel": "7093071.15",
+    "moonwell_apollo": "19482615.95",
+    "karura": "8681978.14"
+  },
+  {
+    "date": "2023-01-17",
+    "starlay_finance": "8718562.00",
+    "acala": "46555187.21",
+    "astriddao": "5174233.08",
+    "moonwell_artemis": "13285301.29",
+    "parallel": "6966169.31",
+    "moonwell_apollo": "19540144.22",
+    "karura": "8718562.50"
+  },
+  {
+    "date": "2023-01-18",
+    "starlay_finance": "9217852.00",
+    "acala": "47352257.53",
+    "astriddao": "5154178.43",
+    "moonwell_artemis": "13601939.44",
+    "parallel": "7206090.02",
+    "moonwell_apollo": "20647570.57",
+    "karura": "9217851.94"
+  },
+  {
+    "date": "2023-01-19",
+    "starlay_finance": "8916731.00",
+    "acala": "45604318.57",
+    "astriddao": "5025104.60",
+    "moonwell_artemis": "13348294.76",
+    "parallel": "6892980.82",
+    "moonwell_apollo": "21161304.84",
+    "karura": "8916730.72"
+  },
+  {
+    "date": "2023-01-20",
+    "starlay_finance": "8746160.00",
+    "acala": "45867291.86",
+    "astriddao": "5029234.66",
+    "moonwell_artemis": "13602472.05",
+    "parallel": "7008845.63",
+    "moonwell_apollo": "21356278.85",
+    "karura": "8746160.43"
+  },
+  {
+    "date": "2023-01-21",
+    "starlay_finance": "9290711.00",
+    "acala": "46864039.14",
+    "astriddao": "5174533.28",
+    "moonwell_artemis": "14105750.83",
+    "parallel": "7545984.12",
+    "moonwell_apollo": "19310334.29",
+    "karura": "9290711.05"
+  },
+  {
+    "date": "2023-01-22",
+    "starlay_finance": "9239629.00",
+    "acala": "46577389.10",
+    "astriddao": "5362488.28",
+    "moonwell_artemis": "14247373.22",
+    "parallel": "7540703.42",
+    "moonwell_apollo": "19285186.70",
+    "karura": "9239628.79"
+  },
+  {
+    "date": "2023-01-23",
+    "starlay_finance": "9340502.00",
+    "acala": "47474302.46",
+    "astriddao": "5499194.71",
+    "moonwell_artemis": "14837431.33",
+    "parallel": "7594955.69",
+    "moonwell_apollo": "19832784.71",
+    "karura": "9340501.59"
+  },
+  {
+    "date": "2023-01-24",
+    "starlay_finance": "9534511.00",
+    "acala": "49213445.59",
+    "astriddao": "5458888.84",
+    "moonwell_artemis": "15032568.50",
+    "parallel": "7888149.94",
+    "moonwell_apollo": "19893829.79",
+    "karura": "9534511.06"
+  },
+  {
+    "date": "2023-01-25",
+    "starlay_finance": "8893520.00",
+    "acala": "46912043.47",
+    "astriddao": "5187807.16",
+    "moonwell_artemis": "14375604.85",
+    "parallel": "7389148.88",
+    "moonwell_apollo": "19621528.39",
+    "karura": "8893520.23"
+  },
+  {
+    "date": "2023-01-26",
+    "starlay_finance": "9208026.00",
+    "acala": "47709207.99",
+    "astriddao": "5281028.49",
+    "moonwell_artemis": "14964521.47",
+    "parallel": "7813191.20",
+    "moonwell_apollo": "16055909.59",
+    "karura": "9208025.79"
+  },
+  {
+    "date": "2023-01-27",
+    "starlay_finance": "9262523.00",
+    "acala": "47367385.33",
+    "astriddao": "5352361.58",
+    "moonwell_artemis": "14980940.54",
+    "parallel": "7746464.19",
+    "moonwell_apollo": "14205727.27",
+    "karura": "9262523.38"
+  },
+  {
+    "date": "2023-01-28",
+    "starlay_finance": "9883730.00",
+    "acala": "48076986.20",
+    "astriddao": "5591901.39",
+    "moonwell_artemis": "15374161.22",
+    "parallel": "8085995.20",
+    "moonwell_apollo": "14266971.92",
+    "karura": "9883730.04"
+  },
+  {
+    "date": "2023-01-29",
+    "starlay_finance": "9721652.00",
+    "acala": "47747443.41",
+    "astriddao": "5530004.39",
+    "moonwell_artemis": "14981481.07",
+    "parallel": "7885836.83",
+    "moonwell_apollo": "14156991.13",
+    "karura": "9721652.00"
+  },
+  {
+    "date": "2023-01-30",
+    "starlay_finance": "10052938.00",
+    "acala": "48532815.21",
+    "astriddao": "5744968.26",
+    "moonwell_artemis": "15380452.92",
+    "parallel": "8098071.24",
+    "moonwell_apollo": "14216801.92",
+    "karura": "10052937.68"
+  },
+  {
+    "date": "2023-01-31",
+    "starlay_finance": "9260809.00",
+    "acala": "46382449.14",
+    "astriddao": "5454487.85",
+    "moonwell_artemis": "14794067.75",
+    "parallel": "7546870.17",
+    "moonwell_apollo": "14316538.18",
+    "karura": "9260808.75"
+  },
+  {
+    "date": "2023-02-01",
+    "starlay_finance": "9590047.00",
+    "acala": "46268611.34",
+    "astriddao": "5841901.84",
+    "moonwell_artemis": "15087641.52",
+    "parallel": "7643964.25",
+    "moonwell_apollo": "14271100.44",
+    "karura": "9590047.07"
+  },
+  {
+    "date": "2023-02-02",
+    "starlay_finance": "10125537.00",
+    "acala": "47406384.00",
+    "astriddao": "5852021.07",
+    "moonwell_artemis": "15659472.55",
+    "parallel": "7928267.47",
+    "moonwell_apollo": "14499091.59",
+    "karura": "10125537.22"
+  },
+  {
+    "date": "2023-02-03",
+    "starlay_finance": "11022031.00",
+    "acala": "47032891.41",
+    "astriddao": "5764533.39",
+    "moonwell_artemis": "15695546.08",
+    "parallel": "7957497.56",
+    "moonwell_apollo": "13064200.35",
+    "karura": "11022031.31"
+  },
+  {
+    "date": "2023-02-04",
+    "starlay_finance": "11543576.00",
+    "acala": "47611933.23",
+    "astriddao": "5806722.33",
+    "moonwell_artemis": "16243281.13",
+    "parallel": "8462152.39",
+    "moonwell_apollo": "13095169.78",
+    "karura": "11543575.82"
+  },
+  {
+    "date": "2023-02-05",
+    "starlay_finance": "11174757.00",
+    "acala": "40975138.55",
+    "astriddao": "5552387.23",
+    "moonwell_artemis": "16067338.68",
+    "parallel": "8234820.85",
+    "moonwell_apollo": "13102030.19",
+    "karura": "11174757.20"
+  },
+  {
+    "date": "2023-02-06",
+    "starlay_finance": "10374821.00",
+    "acala": "40449707.95",
+    "astriddao": "5458106.22",
+    "moonwell_artemis": "15932922.13",
+    "parallel": "8141216.09",
+    "moonwell_apollo": "12687758.50",
+    "karura": "10374821.27"
+  },
+  {
+    "date": "2023-02-07",
+    "starlay_finance": "10326783.00",
+    "acala": "40633364.79",
+    "astriddao": "5503117.09",
+    "moonwell_artemis": "15493560.65",
+    "parallel": "7833233.48",
+    "moonwell_apollo": "12549330.07",
+    "karura": "10326783.05"
+  },
+  {
+    "date": "2023-02-08",
+    "starlay_finance": "10705332.00",
+    "acala": "42717800.86",
+    "astriddao": "5953658.62",
+    "moonwell_artemis": "16572312.02",
+    "parallel": "8343923.65",
+    "moonwell_apollo": "12654104.84",
+    "karura": "10705332.30"
+  },
+  {
+    "date": "2023-02-09",
+    "starlay_finance": "10320142.00",
+    "acala": "42550692.03",
+    "astriddao": "7603569.05",
+    "moonwell_artemis": "16927025.14",
+    "parallel": "8134221.71",
+    "moonwell_apollo": "12661376.55",
+    "karura": "10320142.05"
+  },
+  {
+    "date": "2023-02-10",
+    "starlay_finance": "9640847.00",
+    "acala": "39651125.25",
+    "astriddao": "6269957.15",
+    "moonwell_artemis": "15174263.34",
+    "parallel": "7387429.49",
+    "moonwell_apollo": "12326623.19",
+    "karura": "9640847.10"
+  },
+  {
+    "date": "2023-02-11",
+    "starlay_finance": "9641520.00",
+    "acala": "39178215.54",
+    "astriddao": "6295316.96",
+    "moonwell_artemis": "15353618.79",
+    "parallel": "7257944.00",
+    "moonwell_apollo": "12322722.55",
+    "karura": "9641519.95"
+  },
+  {
+    "date": "2023-02-12",
+    "starlay_finance": "9642961.00",
+    "acala": "39408778.74",
+    "astriddao": "6774244.76",
+    "moonwell_artemis": "15313893.85",
+    "parallel": "7306875.19",
+    "moonwell_apollo": "12369034.46",
+    "karura": "9642961.39"
+  },
+  {
+    "date": "2023-02-13",
+    "starlay_finance": "9621748.00",
+    "acala": "38456818.72",
+    "astriddao": "6292917.38",
+    "moonwell_artemis": "15400993.63",
+    "parallel": "7192387.33",
+    "moonwell_apollo": "12134039.05",
+    "karura": "9621748.36"
+  },
+  {
+    "date": "2023-02-14",
+    "starlay_finance": "9531057.00",
+    "acala": "37811747.93",
+    "astriddao": "6399520.66",
+    "moonwell_artemis": "15223619.10",
+    "parallel": "7148037.34",
+    "moonwell_apollo": "11861361.42",
+    "karura": "9531056.96"
+  },
+  {
+    "date": "2023-02-15",
+    "starlay_finance": "9342905.00",
+    "acala": "38120871.99",
+    "astriddao": "6556234.06",
+    "moonwell_artemis": "15870790.08",
+    "parallel": "7156140.73",
+    "moonwell_apollo": "11698557.15",
+    "karura": "9342905.37"
+  },
+  {
+    "date": "2023-02-16",
+    "starlay_finance": "9579280.00",
+    "acala": "39832449.37",
+    "astriddao": "7333535.71",
+    "moonwell_artemis": "16823940.82",
+    "parallel": "7690520.37",
+    "moonwell_apollo": "12164003.78",
+    "karura": "9579280.22"
+  },
+  {
+    "date": "2023-02-17",
+    "starlay_finance": "9525859.00",
+    "acala": "38811768.89",
+    "astriddao": "7123401.03",
+    "moonwell_artemis": "16385645.38",
+    "parallel": "7586601.44",
+    "moonwell_apollo": "12152793.13",
+    "karura": "9525859.01"
+  },
+  {
+    "date": "2023-02-18",
+    "starlay_finance": "10392975.00",
+    "acala": "41927053.47",
+    "astriddao": "7822489.36",
+    "moonwell_artemis": "17804169.81",
+    "parallel": "8526836.55",
+    "moonwell_apollo": "12585048.79",
+    "karura": "10392974.66"
+  },
+  {
+    "date": "2023-02-19",
+    "starlay_finance": "11186350.00",
+    "acala": "40867772.84",
+    "astriddao": "7842014.80",
+    "moonwell_artemis": "17597979.21",
+    "parallel": "8531752.19",
+    "moonwell_apollo": "12441628.03",
+    "karura": "11186349.52"
+  },
+  {
+    "date": "2023-02-20",
+    "starlay_finance": "11183512.00",
+    "acala": "41235234.17",
+    "astriddao": "7586774.82",
+    "moonwell_artemis": "17403360.75",
+    "parallel": "8720891.28",
+    "moonwell_apollo": "12384847.40",
+    "karura": "11183511.96"
+  },
+  {
+    "date": "2023-02-21",
+    "starlay_finance": "10325465.00",
+    "acala": "42282983.10",
+    "astriddao": "7405235.49",
+    "moonwell_artemis": "17849015.72",
+    "parallel": "8791512.87",
+    "moonwell_apollo": "12453921.99",
+    "karura": "10325464.85"
+  },
+  {
+    "date": "2023-02-22",
+    "starlay_finance": "10126240.00",
+    "acala": "43937562.78",
+    "astriddao": "7164566.94",
+    "moonwell_artemis": "17208872.10",
+    "parallel": "8440981.87",
+    "moonwell_apollo": "12396484.89",
+    "karura": "10126240.48"
+  },
+  {
+    "date": "2023-02-23",
+    "starlay_finance": "9676107.00",
+    "acala": "41759536.64",
+    "astriddao": "6963988.92",
+    "moonwell_artemis": "17632433.47",
+    "parallel": "8330320.60",
+    "moonwell_apollo": "12284015.78",
+    "karura": "9676106.74"
+  },
+  {
+    "date": "2023-02-24",
+    "starlay_finance": "10011351.00",
+    "acala": "42777754.53",
+    "astriddao": "6863782.32",
+    "moonwell_artemis": "17804219.31",
+    "parallel": "8243987.47",
+    "moonwell_apollo": "12385393.45",
+    "karura": "10011351.21"
+  },
+  {
+    "date": "2023-02-25",
+    "starlay_finance": "9260497.00",
+    "acala": "40698666.83",
+    "astriddao": "6455834.34",
+    "moonwell_artemis": "16753550.69",
+    "parallel": "7676078.32",
+    "moonwell_apollo": "12290114.67",
+    "karura": "9260496.71"
+  },
+  {
+    "date": "2023-02-26",
+    "starlay_finance": "8944584.00",
+    "acala": "39918408.00",
+    "astriddao": "6267657.15",
+    "moonwell_artemis": "16520034.08",
+    "parallel": "7587705.53",
+    "moonwell_apollo": "12219544.28",
+    "karura": "8944583.96"
+  },
+  {
+    "date": "2023-02-27",
+    "starlay_finance": "9166521.00",
+    "acala": "40272880.65",
+    "astriddao": "6453677.46",
+    "moonwell_artemis": "17196532.09",
+    "parallel": "7758296.81",
+    "moonwell_apollo": "12553909.32",
+    "karura": "9166521.14"
+  },
+  {
+    "date": "2023-02-28",
+    "starlay_finance": "9078972.00",
+    "acala": "39956753.89",
+    "astriddao": "6381842.96",
+    "moonwell_artemis": "16935041.12",
+    "parallel": "7636853.69",
+    "moonwell_apollo": "12674399.90",
+    "karura": "9078972.48"
+  },
+  {
+    "date": "2023-03-01",
+    "starlay_finance": "8757045.00",
+    "acala": "38579019.28",
+    "astriddao": "6164649.09",
+    "moonwell_artemis": "16111300.78",
+    "parallel": "7359371.79",
+    "moonwell_apollo": "12585994.06",
+    "karura": "8757045.25"
+  },
+  {
+    "date": "2023-03-02",
+    "starlay_finance": "9071523.00",
+    "acala": "41214301.04",
+    "astriddao": "6404240.94",
+    "moonwell_artemis": "17204333.14",
+    "parallel": "7558185.72",
+    "moonwell_apollo": "12705448.71",
+    "karura": "9071522.90"
+  },
+  {
+    "date": "2023-03-03",
+    "starlay_finance": "8619210.00",
+    "acala": "40754270.93",
+    "astriddao": "6131863.44",
+    "moonwell_artemis": "17252962.78",
+    "parallel": "7299040.59",
+    "moonwell_apollo": "12646252.55",
+    "karura": "8619210.43"
+  },
+  {
+    "date": "2023-03-04",
+    "starlay_finance": "8136084.00",
+    "acala": "37904674.60",
+    "astriddao": "5832571.26",
+    "moonwell_artemis": "16904172.25",
+    "parallel": "6987320.09",
+    "moonwell_apollo": "12501525.90",
+    "karura": "8136084.25"
+  },
+  {
+    "date": "2023-03-05",
+    "starlay_finance": "8068266.00",
+    "acala": "36872220.01",
+    "astriddao": "5629065.46",
+    "moonwell_artemis": "17211383.53",
+    "parallel": "6826810.53",
+    "moonwell_apollo": "12466087.54",
+    "karura": "8068265.72"
+  },
+  {
+    "date": "2023-03-06",
+    "starlay_finance": "8212415.00",
+    "acala": "36952707.62",
+    "astriddao": "5626810.49",
+    "moonwell_artemis": "17393078.55",
+    "parallel": "3535830.03",
+    "moonwell_apollo": "12454745.83",
+    "karura": "8212415.01"
+  },
+  {
+    "date": "2023-03-07",
+    "starlay_finance": "8183634.00",
+    "acala": "36325727.76",
+    "astriddao": "5648319.75",
+    "moonwell_artemis": "17829755.32",
+    "parallel": "3512565.54",
+    "moonwell_apollo": "12420852.72",
+    "karura": "8183634.14"
+  },
+  {
+    "date": "2023-03-08",
+    "starlay_finance": "7875264.00",
+    "acala": "35397076.01",
+    "astriddao": "5628417.89",
+    "moonwell_artemis": "17958817.69",
+    "parallel": "3454522.01",
+    "moonwell_apollo": "12434302.10",
+    "karura": "7875263.53"
+  },
+  {
+    "date": "2023-03-09",
+    "starlay_finance": "7700741.00",
+    "acala": "33877293.97",
+    "astriddao": "5291858.34",
+    "moonwell_artemis": "17528318.79",
+    "parallel": "3277390.62",
+    "moonwell_apollo": "12292671.53",
+    "karura": "7700740.78"
+  },
+  {
+    "date": "2023-03-10",
+    "starlay_finance": "7711523.00",
+    "acala": "32031197.71",
+    "astriddao": "5042426.76",
+    "moonwell_artemis": "16775275.30",
+    "parallel": "3195308.14",
+    "moonwell_apollo": "11442093.19",
+    "karura": "7711523.48"
+  },
+  {
+    "date": "2023-03-11",
+    "starlay_finance": "7610496.00",
+    "acala": "19549437.49",
+    "astriddao": "5105083.82",
+    "moonwell_artemis": "16425477.39",
+    "parallel": "3290698.14",
+    "moonwell_apollo": "10171862.31",
+    "karura": "7610495.67"
+  },
+  {
+    "date": "2023-03-12",
+    "starlay_finance": "7110995.00",
+    "acala": "18240384.39",
+    "astriddao": "4773108.63",
+    "moonwell_artemis": "13996118.78",
+    "parallel": "3187445.58",
+    "moonwell_apollo": "8483230.29",
+    "karura": "7110994.53"
+  },
+  {
+    "date": "2023-03-13",
+    "starlay_finance": "7699222.00",
+    "acala": "20022239.08",
+    "astriddao": "5277514.35",
+    "moonwell_artemis": "15319635.11",
+    "parallel": "3502694.89",
+    "moonwell_apollo": "8879054.49",
+    "karura": "7699221.85"
+  },
+  {
+    "date": "2023-03-14",
+    "starlay_finance": "7772973.00",
+    "acala": "20989670.21",
+    "astriddao": "5489768.15",
+    "moonwell_artemis": "15846945.72",
+    "parallel": "3583072.52",
+    "moonwell_apollo": "9131971.68",
+    "karura": "7772972.66"
+  },
+  {
+    "date": "2023-03-15",
+    "starlay_finance": "8060199.00",
+    "acala": "21656041.14",
+    "astriddao": "5614758.44",
+    "moonwell_artemis": "16608533.64",
+    "parallel": "3670949.20",
+    "moonwell_apollo": "9003136.37",
+    "karura": "8060199.50"
+  },
+  {
+    "date": "2023-03-16",
+    "starlay_finance": "7614182.00",
+    "acala": "20254481.07",
+    "astriddao": "5322053.99",
+    "moonwell_artemis": "16564307.26",
+    "parallel": "3410261.09",
+    "moonwell_apollo": "9261291.97",
+    "karura": "7614181.87"
+  },
+  {
+    "date": "2023-03-17",
+    "starlay_finance": "7570316.00",
+    "acala": "21605754.15",
+    "astriddao": "5404365.42",
+    "moonwell_artemis": "16545749.63",
+    "parallel": "3479827.48",
+    "moonwell_apollo": "9390688.74",
+    "karura": "7570315.67"
+  },
+  {
+    "date": "2023-03-18",
+    "starlay_finance": "8211833.00",
+    "acala": "22506130.41",
+    "astriddao": "5454981.27",
+    "moonwell_artemis": "17436592.13",
+    "parallel": "3876925.71",
+    "moonwell_apollo": "9818972.60",
+    "karura": "8211833.44"
+  },
+  {
+    "date": "2023-03-19",
+    "starlay_finance": "8008860.00",
+    "acala": "21163073.50",
+    "astriddao": "5561251.97",
+    "moonwell_artemis": "17385066.85",
+    "parallel": "3823652.06",
+    "moonwell_apollo": "9823423.75",
+    "karura": "8008860.23"
+  },
+  {
+    "date": "2023-03-20",
+    "starlay_finance": "7950411.00",
+    "acala": "21279894.34",
+    "astriddao": "5519352.55",
+    "moonwell_artemis": "17529337.13",
+    "parallel": "3756163.76",
+    "moonwell_apollo": "9843841.74",
+    "karura": "7950411.20"
+  },
+  {
+    "date": "2023-03-21",
+    "starlay_finance": "7672363.00",
+    "acala": "20230328.61",
+    "astriddao": "5267545.47",
+    "moonwell_artemis": "16874781.00",
+    "parallel": "3622688.46",
+    "moonwell_apollo": "9726100.02",
+    "karura": "7672362.95"
+  },
+  {
+    "date": "2023-03-22",
+    "starlay_finance": "7732058.00",
+    "acala": "20198884.97",
+    "astriddao": "5477019.23",
+    "moonwell_artemis": "17300211.15",
+    "parallel": "3685341.18",
+    "moonwell_apollo": "9856682.61",
+    "karura": "7732058.41"
+  },
+  {
+    "date": "2023-03-23",
+    "starlay_finance": "7835311.00",
+    "acala": "19426487.13",
+    "astriddao": "5145029.52",
+    "moonwell_artemis": "16769217.31",
+    "parallel": "3619752.18",
+    "moonwell_apollo": "7376573.67",
+    "karura": "7835310.99"
+  },
+  {
+    "date": "2023-03-24",
+    "starlay_finance": "7761425.00",
+    "acala": "20706969.41",
+    "astriddao": "5288380.59",
+    "moonwell_artemis": "16959555.55",
+    "parallel": "3779616.39",
+    "moonwell_apollo": "8684031.64",
+    "karura": "7761424.62"
+  },
+  {
+    "date": "2023-03-25",
+    "starlay_finance": "7325030.00",
+    "acala": "20340928.60",
+    "astriddao": "5138641.66",
+    "moonwell_artemis": "16635982.98",
+    "parallel": "3615393.32",
+    "moonwell_apollo": "8495505.31",
+    "karura": "7325029.56"
+  },
+  {
+    "date": "2023-03-26",
+    "starlay_finance": "7174381.00",
+    "acala": "20498681.71",
+    "astriddao": "5065542.35",
+    "moonwell_artemis": "16669399.42",
+    "parallel": "3528324.32",
+    "moonwell_apollo": "8459589.71",
+    "karura": "7174380.83"
+  },
+  {
+    "date": "2023-03-27",
+    "starlay_finance": "7436515.00",
+    "acala": "21413236.54",
+    "astriddao": "5077076.93",
+    "moonwell_artemis": "16750860.91",
+    "parallel": "3608302.58",
+    "moonwell_apollo": "8501989.57",
+    "karura": "7436514.60"
+  },
+  {
+    "date": "2023-03-28",
+    "starlay_finance": "4361124.00",
+    "acala": "19955191.56",
+    "astriddao": "4992307.88",
+    "moonwell_artemis": "16306126.53",
+    "parallel": "3489192.23",
+    "moonwell_apollo": "8388833.02",
+    "karura": "7045712.29"
+  },
+  {
+    "date": "2023-03-29",
+    "starlay_finance": "4371729.24",
+    "acala": "20075107.85",
+    "astriddao": "5074282.11",
+    "moonwell_artemis": "16642359.71",
+    "parallel": "3617583.85",
+    "moonwell_apollo": "8530021.69",
+    "karura": "7339738.71"
+  },
+  {
+    "date": "2023-03-30",
+    "starlay_finance": "4235017.59",
+    "acala": "20294579.75",
+    "astriddao": "5577538.84",
+    "moonwell_artemis": "16886868.00",
+    "parallel": "3706326.74",
+    "moonwell_apollo": "8571016.81",
+    "karura": "7455660.74"
+  },
+  {
+    "date": "2023-03-31",
+    "starlay_finance": "4258384.16",
+    "acala": "47639714.10",
+    "astriddao": "5346302.70",
+    "moonwell_artemis": "16257476.34",
+    "parallel": "3715832.46",
+    "moonwell_apollo": "8619689.47",
+    "karura": "7323774.60"
+  }
+]

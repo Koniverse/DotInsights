@@ -1,0 +1,327 @@
+[
+  {
+    "date": "2023-05-31",
+    "num_accounts": "2",
+    "amount": "282.57"
+  },
+  {
+    "date": "2023-05-30",
+    "num_accounts": "0",
+    "amount": "0.00"
+  },
+  {
+    "date": "2023-05-29",
+    "num_accounts": "1",
+    "amount": "18.44"
+  },
+  {
+    "date": "2023-05-28",
+    "num_accounts": "3",
+    "amount": "994.39"
+  },
+  {
+    "date": "2023-05-27",
+    "num_accounts": "3",
+    "amount": "467.14"
+  },
+  {
+    "date": "2023-05-26",
+    "num_accounts": "2",
+    "amount": "639.13"
+  },
+  {
+    "date": "2023-05-25",
+    "num_accounts": "1",
+    "amount": "255.88"
+  },
+  {
+    "date": "2023-05-24",
+    "num_accounts": "3",
+    "amount": "3137.00"
+  },
+  {
+    "date": "2023-05-23",
+    "num_accounts": "5",
+    "amount": "3643.07"
+  },
+  {
+    "date": "2023-05-22",
+    "num_accounts": "9",
+    "amount": "4333.57"
+  },
+  {
+    "date": "2023-05-21",
+    "num_accounts": "3",
+    "amount": "1060.16"
+  },
+  {
+    "date": "2023-05-20",
+    "num_accounts": "7",
+    "amount": "1869.12"
+  },
+  {
+    "date": "2023-05-19",
+    "num_accounts": "2",
+    "amount": "651.98"
+  },
+  {
+    "date": "2023-05-18",
+    "num_accounts": "6",
+    "amount": "1794.25"
+  },
+  {
+    "date": "2023-05-17",
+    "num_accounts": "7",
+    "amount": "5403.12"
+  },
+  {
+    "date": "2023-05-16",
+    "num_accounts": "7",
+    "amount": "1422.11"
+  },
+  {
+    "date": "2023-05-15",
+    "num_accounts": "8",
+    "amount": "1781.71"
+  },
+  {
+    "date": "2023-05-14",
+    "num_accounts": "4",
+    "amount": "541.02"
+  },
+  {
+    "date": "2023-05-13",
+    "num_accounts": "2",
+    "amount": "736.37"
+  },
+  {
+    "date": "2023-05-12",
+    "num_accounts": "10",
+    "amount": "20246.74"
+  },
+  {
+    "date": "2023-05-11",
+    "num_accounts": "6",
+    "amount": "1193.53"
+  },
+  {
+    "date": "2023-05-10",
+    "num_accounts": "3",
+    "amount": "1050.10"
+  },
+  {
+    "date": "2023-05-09",
+    "num_accounts": "2",
+    "amount": "598.48"
+  },
+  {
+    "date": "2023-05-08",
+    "num_accounts": "0",
+    "amount": "0.00"
+  },
+  {
+    "date": "2023-05-07",
+    "num_accounts": "3",
+    "amount": "8193.75"
+  },
+  {
+    "date": "2023-05-06",
+    "num_accounts": "7",
+    "amount": "1343.61"
+  },
+  {
+    "date": "2023-05-05",
+    "num_accounts": "4",
+    "amount": "1301.59"
+  },
+  {
+    "date": "2023-05-04",
+    "num_accounts": "2",
+    "amount": "4133.75"
+  },
+  {
+    "date": "2023-05-03",
+    "num_accounts": "1",
+    "amount": "375.70"
+  },
+  {
+    "date": "2023-05-02",
+    "num_accounts": "3",
+    "amount": "4442.45"
+  },
+  {
+    "date": "2023-05-01",
+    "num_accounts": "5",
+    "amount": "2957.91"
+  },
+  {
+    "date": "2023-04-30",
+    "num_accounts": "4",
+    "amount": "1096.24"
+  },
+  {
+    "date": "2023-04-29",
+    "num_accounts": "2",
+    "amount": "1855.20"
+  },
+  {
+    "date": "2023-04-28",
+    "num_accounts": "3",
+    "amount": "2777.49"
+  },
+  {
+    "date": "2023-04-27",
+    "num_accounts": "3",
+    "amount": "554.65"
+  },
+  {
+    "date": "2023-04-26",
+    "num_accounts": "4",
+    "amount": "897.64"
+  },
+  {
+    "date": "2023-04-25",
+    "num_accounts": "8",
+    "amount": "5197.09"
+  },
+  {
+    "date": "2023-04-24",
+    "num_accounts": "5",
+    "amount": "625.27"
+  },
+  {
+    "date": "2023-04-23",
+    "num_accounts": "3",
+    "amount": "823.47"
+  },
+  {
+    "date": "2023-04-22",
+    "num_accounts": "3",
+    "amount": "790.32"
+  },
+  {
+    "date": "2023-04-21",
+    "num_accounts": "2",
+    "amount": "559.42"
+  },
+  {
+    "date": "2023-04-20",
+    "num_accounts": "5",
+    "amount": "1337.76"
+  },
+  {
+    "date": "2023-04-19",
+    "num_accounts": "6",
+    "amount": "1701.66"
+  },
+  {
+    "date": "2023-04-18",
+    "num_accounts": "3",
+    "amount": "615.66"
+  },
+  {
+    "date": "2023-04-17",
+    "num_accounts": "2",
+    "amount": "488.05"
+  },
+  {
+    "date": "2023-04-16",
+    "num_accounts": "8",
+    "amount": "2570.53"
+  },
+  {
+    "date": "2023-04-15",
+    "num_accounts": "3",
+    "amount": "651.65"
+  },
+  {
+    "date": "2023-04-14",
+    "num_accounts": "6",
+    "amount": "1717.93"
+  },
+  {
+    "date": "2023-04-13",
+    "num_accounts": "3",
+    "amount": "605.20"
+  },
+  {
+    "date": "2023-04-12",
+    "num_accounts": "2",
+    "amount": "472.67"
+  },
+  {
+    "date": "2023-04-11",
+    "num_accounts": "4",
+    "amount": "1234.35"
+  },
+  {
+    "date": "2023-04-10",
+    "num_accounts": "4",
+    "amount": "862.75"
+  },
+  {
+    "date": "2023-04-09",
+    "num_accounts": "2",
+    "amount": "488.89"
+  },
+  {
+    "date": "2023-04-08",
+    "num_accounts": "5",
+    "amount": "1590.13"
+  },
+  {
+    "date": "2023-04-07",
+    "num_accounts": "2",
+    "amount": "213.78"
+  },
+  {
+    "date": "2023-04-06",
+    "num_accounts": "1",
+    "amount": "309.01"
+  },
+  {
+    "date": "2023-04-05",
+    "num_accounts": "5",
+    "amount": "1270.21"
+  },
+  {
+    "date": "2023-04-04",
+    "num_accounts": "6",
+    "amount": "1815.75"
+  },
+  {
+    "date": "2023-04-03",
+    "num_accounts": "6",
+    "amount": "2223.15"
+  },
+  {
+    "date": "2023-04-02",
+    "num_accounts": "2",
+    "amount": "6284.72"
+  },
+  {
+    "date": "2023-04-01",
+    "num_accounts": "2",
+    "amount": "1623.85"
+  },
+  {
+    "date": "2023-03-31",
+    "num_accounts": "3",
+    "amount": "668.63"
+  },
+  {
+    "date": "2023-03-30",
+    "num_accounts": "6",
+    "amount": "780.55"
+  },
+  {
+    "date": "2023-03-29",
+    "num_accounts": "8",
+    "amount": "1941.23"
+  },
+  {
+    "date": "2023-03-28",
+    "num_accounts": "3",
+    "amount": "715.28"
+  }
+]

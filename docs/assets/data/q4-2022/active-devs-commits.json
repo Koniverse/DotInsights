@@ -1,0 +1,1832 @@
+﻿[
+    {
+        "date": "2021-12-31 0:00:00",
+        "active_devs": "109",
+        "code_commits": "6"
+    },
+    {
+        "date": "2022-01-01 0:00:00",
+        "active_devs": "107",
+        "code_commits": "8"
+    },
+    {
+        "date": "2022-01-02 0:00:00",
+        "active_devs": "104",
+        "code_commits": "1"
+    },
+    {
+        "date": "2022-01-03 0:00:00",
+        "active_devs": "105",
+        "code_commits": "45"
+    },
+    {
+        "date": "2022-01-04 0:00:00",
+        "active_devs": "105",
+        "code_commits": "68"
+    },
+    {
+        "date": "2022-01-05 0:00:00",
+        "active_devs": "100",
+        "code_commits": "69"
+    },
+    {
+        "date": "2022-01-06 0:00:00",
+        "active_devs": "99",
+        "code_commits": "48"
+    },
+    {
+        "date": "2022-01-07 0:00:00",
+        "active_devs": "96",
+        "code_commits": "45"
+    },
+    {
+        "date": "2022-01-08 0:00:00",
+        "active_devs": "93",
+        "code_commits": "9"
+    },
+    {
+        "date": "2022-01-09 0:00:00",
+        "active_devs": "92",
+        "code_commits": "14"
+    },
+    {
+        "date": "2022-01-10 0:00:00",
+        "active_devs": "96",
+        "code_commits": "61"
+    },
+    {
+        "date": "2022-01-11 0:00:00",
+        "active_devs": "99",
+        "code_commits": "46"
+    },
+    {
+        "date": "2022-01-12 0:00:00",
+        "active_devs": "102",
+        "code_commits": "48"
+    },
+    {
+        "date": "2022-01-13 0:00:00",
+        "active_devs": "105",
+        "code_commits": "70"
+    },
+    {
+        "date": "2022-01-14 0:00:00",
+        "active_devs": "105",
+        "code_commits": "39"
+    },
+    {
+        "date": "2022-01-15 0:00:00",
+        "active_devs": "101",
+        "code_commits": "15"
+    },
+    {
+        "date": "2022-01-16 0:00:00",
+        "active_devs": "97",
+        "code_commits": "5"
+    },
+    {
+        "date": "2022-01-17 0:00:00",
+        "active_devs": "101",
+        "code_commits": "78"
+    },
+    {
+        "date": "2022-01-18 0:00:00",
+        "active_devs": "103",
+        "code_commits": "63"
+    },
+    {
+        "date": "2022-01-19 0:00:00",
+        "active_devs": "103",
+        "code_commits": "59"
+    },
+    {
+        "date": "2022-01-20 0:00:00",
+        "active_devs": "102",
+        "code_commits": "62"
+    },
+    {
+        "date": "2022-01-21 0:00:00",
+        "active_devs": "103",
+        "code_commits": "66"
+    },
+    {
+        "date": "2022-01-22 0:00:00",
+        "active_devs": "101",
+        "code_commits": "3"
+    },
+    {
+        "date": "2022-01-23 0:00:00",
+        "active_devs": "101",
+        "code_commits": "5"
+    },
+    {
+        "date": "2022-01-24 0:00:00",
+        "active_devs": "101",
+        "code_commits": "44"
+    },
+    {
+        "date": "2022-01-25 0:00:00",
+        "active_devs": "104",
+        "code_commits": "37"
+    },
+    {
+        "date": "2022-01-26 0:00:00",
+        "active_devs": "106",
+        "code_commits": "34"
+    },
+    {
+        "date": "2022-01-27 0:00:00",
+        "active_devs": "108",
+        "code_commits": "27"
+    },
+    {
+        "date": "2022-01-28 0:00:00",
+        "active_devs": "110",
+        "code_commits": "54"
+    },
+    {
+        "date": "2022-01-29 0:00:00",
+        "active_devs": "109",
+        "code_commits": "11"
+    },
+    {
+        "date": "2022-01-30 0:00:00",
+        "active_devs": "108",
+        "code_commits": "12"
+    },
+    {
+        "date": "2022-01-31 0:00:00",
+        "active_devs": "108",
+        "code_commits": "50"
+    },
+    {
+        "date": "2022-02-01 0:00:00",
+        "active_devs": "111",
+        "code_commits": "41"
+    },
+    {
+        "date": "2022-02-02 0:00:00",
+        "active_devs": "113",
+        "code_commits": "69"
+    },
+    {
+        "date": "2022-02-03 0:00:00",
+        "active_devs": "116",
+        "code_commits": "50"
+    },
+    {
+        "date": "2022-02-04 0:00:00",
+        "active_devs": "120",
+        "code_commits": "50"
+    },
+    {
+        "date": "2022-02-05 0:00:00",
+        "active_devs": "119",
+        "code_commits": "7"
+    },
+    {
+        "date": "2022-02-06 0:00:00",
+        "active_devs": "119",
+        "code_commits": "8"
+    },
+    {
+        "date": "2022-02-07 0:00:00",
+        "active_devs": "123",
+        "code_commits": "57"
+    },
+    {
+        "date": "2022-02-08 0:00:00",
+        "active_devs": "124",
+        "code_commits": "33"
+    },
+    {
+        "date": "2022-02-09 0:00:00",
+        "active_devs": "122",
+        "code_commits": "61"
+    },
+    {
+        "date": "2022-02-10 0:00:00",
+        "active_devs": "125",
+        "code_commits": "46"
+    },
+    {
+        "date": "2022-02-11 0:00:00",
+        "active_devs": "124",
+        "code_commits": "45"
+    },
+    {
+        "date": "2022-02-12 0:00:00",
+        "active_devs": "122",
+        "code_commits": "5"
+    },
+    {
+        "date": "2022-02-13 0:00:00",
+        "active_devs": "123",
+        "code_commits": "18"
+    },
+    {
+        "date": "2022-02-14 0:00:00",
+        "active_devs": "125",
+        "code_commits": "65"
+    },
+    {
+        "date": "2022-02-15 0:00:00",
+        "active_devs": "129",
+        "code_commits": "45"
+    },
+    {
+        "date": "2022-02-16 0:00:00",
+        "active_devs": "129",
+        "code_commits": "78"
+    },
+    {
+        "date": "2022-02-17 0:00:00",
+        "active_devs": "127",
+        "code_commits": "57"
+    },
+    {
+        "date": "2022-02-18 0:00:00",
+        "active_devs": "125",
+        "code_commits": "67"
+    },
+    {
+        "date": "2022-02-19 0:00:00",
+        "active_devs": "123",
+        "code_commits": "16"
+    },
+    {
+        "date": "2022-02-20 0:00:00",
+        "active_devs": "124",
+        "code_commits": "18"
+    },
+    {
+        "date": "2022-02-21 0:00:00",
+        "active_devs": "124",
+        "code_commits": "71"
+    },
+    {
+        "date": "2022-02-22 0:00:00",
+        "active_devs": "125",
+        "code_commits": "88"
+    },
+    {
+        "date": "2022-02-23 0:00:00",
+        "active_devs": "126",
+        "code_commits": "42"
+    },
+    {
+        "date": "2022-02-24 0:00:00",
+        "active_devs": "122",
+        "code_commits": "84"
+    },
+    {
+        "date": "2022-02-25 0:00:00",
+        "active_devs": "121",
+        "code_commits": "62"
+    },
+    {
+        "date": "2022-02-26 0:00:00",
+        "active_devs": "118",
+        "code_commits": "15"
+    },
+    {
+        "date": "2022-02-27 0:00:00",
+        "active_devs": "117",
+        "code_commits": "5"
+    },
+    {
+        "date": "2022-02-28 0:00:00",
+        "active_devs": "119",
+        "code_commits": "67"
+    },
+    {
+        "date": "2022-03-01 0:00:00",
+        "active_devs": "124",
+        "code_commits": "85"
+    },
+    {
+        "date": "2022-03-02 0:00:00",
+        "active_devs": "126",
+        "code_commits": "100"
+    },
+    {
+        "date": "2022-03-03 0:00:00",
+        "active_devs": "124",
+        "code_commits": "73"
+    },
+    {
+        "date": "2022-03-04 0:00:00",
+        "active_devs": "127",
+        "code_commits": "89"
+    },
+    {
+        "date": "2022-03-05 0:00:00",
+        "active_devs": "124",
+        "code_commits": "26"
+    },
+    {
+        "date": "2022-03-06 0:00:00",
+        "active_devs": "120",
+        "code_commits": "7"
+    },
+    {
+        "date": "2022-03-07 0:00:00",
+        "active_devs": "121",
+        "code_commits": "72"
+    },
+    {
+        "date": "2022-03-08 0:00:00",
+        "active_devs": "122",
+        "code_commits": "35"
+    },
+    {
+        "date": "2022-03-09 0:00:00",
+        "active_devs": "119",
+        "code_commits": "63"
+    },
+    {
+        "date": "2022-03-10 0:00:00",
+        "active_devs": "122",
+        "code_commits": "77"
+    },
+    {
+        "date": "2022-03-11 0:00:00",
+        "active_devs": "123",
+        "code_commits": "69"
+    },
+    {
+        "date": "2022-03-12 0:00:00",
+        "active_devs": "120",
+        "code_commits": "17"
+    },
+    {
+        "date": "2022-03-13 0:00:00",
+        "active_devs": "116",
+        "code_commits": "15"
+    },
+    {
+        "date": "2022-03-14 0:00:00",
+        "active_devs": "119",
+        "code_commits": "66"
+    },
+    {
+        "date": "2022-03-15 0:00:00",
+        "active_devs": "119",
+        "code_commits": "87"
+    },
+    {
+        "date": "2022-03-16 0:00:00",
+        "active_devs": "118",
+        "code_commits": "53"
+    },
+    {
+        "date": "2022-03-17 0:00:00",
+        "active_devs": "119",
+        "code_commits": "86"
+    },
+    {
+        "date": "2022-03-18 0:00:00",
+        "active_devs": "120",
+        "code_commits": "80"
+    },
+    {
+        "date": "2022-03-19 0:00:00",
+        "active_devs": "118",
+        "code_commits": "22"
+    },
+    {
+        "date": "2022-03-20 0:00:00",
+        "active_devs": "119",
+        "code_commits": "13"
+    },
+    {
+        "date": "2022-03-21 0:00:00",
+        "active_devs": "120",
+        "code_commits": "41"
+    },
+    {
+        "date": "2022-03-22 0:00:00",
+        "active_devs": "121",
+        "code_commits": "84"
+    },
+    {
+        "date": "2022-03-23 0:00:00",
+        "active_devs": "122",
+        "code_commits": "46"
+    },
+    {
+        "date": "2022-03-24 0:00:00",
+        "active_devs": "122",
+        "code_commits": "65"
+    },
+    {
+        "date": "2022-03-25 0:00:00",
+        "active_devs": "121",
+        "code_commits": "45"
+    },
+    {
+        "date": "2022-03-26 0:00:00",
+        "active_devs": "120",
+        "code_commits": "9"
+    },
+    {
+        "date": "2022-03-27 0:00:00",
+        "active_devs": "121",
+        "code_commits": "5"
+    },
+    {
+        "date": "2022-03-28 0:00:00",
+        "active_devs": "122",
+        "code_commits": "50"
+    },
+    {
+        "date": "2022-03-29 0:00:00",
+        "active_devs": "124",
+        "code_commits": "63"
+    },
+    {
+        "date": "2022-03-30 0:00:00",
+        "active_devs": "120",
+        "code_commits": "41"
+    },
+    {
+        "date": "2022-03-31 0:00:00",
+        "active_devs": "119",
+        "code_commits": "69"
+    },
+    {
+        "date": "2022-04-01 0:00:00",
+        "active_devs": "119",
+        "code_commits": "55"
+    },
+    {
+        "date": "2022-04-02 0:00:00",
+        "active_devs": "118",
+        "code_commits": "10"
+    },
+    {
+        "date": "2022-04-03 0:00:00",
+        "active_devs": "116",
+        "code_commits": "18"
+    },
+    {
+        "date": "2022-04-04 0:00:00",
+        "active_devs": "119",
+        "code_commits": "73"
+    },
+    {
+        "date": "2022-04-05 0:00:00",
+        "active_devs": "122",
+        "code_commits": "77"
+    },
+    {
+        "date": "2022-04-06 0:00:00",
+        "active_devs": "121",
+        "code_commits": "91"
+    },
+    {
+        "date": "2022-04-07 0:00:00",
+        "active_devs": "122",
+        "code_commits": "96"
+    },
+    {
+        "date": "2022-04-08 0:00:00",
+        "active_devs": "120",
+        "code_commits": "68"
+    },
+    {
+        "date": "2022-04-09 0:00:00",
+        "active_devs": "115",
+        "code_commits": "5"
+    },
+    {
+        "date": "2022-04-10 0:00:00",
+        "active_devs": "113",
+        "code_commits": "7"
+    },
+    {
+        "date": "2022-04-11 0:00:00",
+        "active_devs": "113",
+        "code_commits": "35"
+    },
+    {
+        "date": "2022-04-12 0:00:00",
+        "active_devs": "117",
+        "code_commits": "45"
+    },
+    {
+        "date": "2022-04-13 0:00:00",
+        "active_devs": "114",
+        "code_commits": "44"
+    },
+    {
+        "date": "2022-04-14 0:00:00",
+        "active_devs": "116",
+        "code_commits": "67"
+    },
+    {
+        "date": "2022-04-15 0:00:00",
+        "active_devs": "114",
+        "code_commits": "24"
+    },
+    {
+        "date": "2022-04-16 0:00:00",
+        "active_devs": "113",
+        "code_commits": "15"
+    },
+    {
+        "date": "2022-04-17 0:00:00",
+        "active_devs": "109",
+        "code_commits": "1"
+    },
+    {
+        "date": "2022-04-18 0:00:00",
+        "active_devs": "111",
+        "code_commits": "23"
+    },
+    {
+        "date": "2022-04-19 0:00:00",
+        "active_devs": "112",
+        "code_commits": "29"
+    },
+    {
+        "date": "2022-04-20 0:00:00",
+        "active_devs": "112",
+        "code_commits": "53"
+    },
+    {
+        "date": "2022-04-21 0:00:00",
+        "active_devs": "112",
+        "code_commits": "77"
+    },
+    {
+        "date": "2022-04-22 0:00:00",
+        "active_devs": "113",
+        "code_commits": "72"
+    },
+    {
+        "date": "2022-04-23 0:00:00",
+        "active_devs": "113",
+        "code_commits": "32"
+    },
+    {
+        "date": "2022-04-24 0:00:00",
+        "active_devs": "110",
+        "code_commits": "12"
+    },
+    {
+        "date": "2022-04-25 0:00:00",
+        "active_devs": "113",
+        "code_commits": "71"
+    },
+    {
+        "date": "2022-04-26 0:00:00",
+        "active_devs": "116",
+        "code_commits": "72"
+    },
+    {
+        "date": "2022-04-27 0:00:00",
+        "active_devs": "116",
+        "code_commits": "38"
+    },
+    {
+        "date": "2022-04-28 0:00:00",
+        "active_devs": "115",
+        "code_commits": "62"
+    },
+    {
+        "date": "2022-04-29 0:00:00",
+        "active_devs": "117",
+        "code_commits": "76"
+    },
+    {
+        "date": "2022-04-30 0:00:00",
+        "active_devs": "115",
+        "code_commits": "20"
+    },
+    {
+        "date": "2022-05-01 0:00:00",
+        "active_devs": "114",
+        "code_commits": "19"
+    },
+    {
+        "date": "2022-05-02 0:00:00",
+        "active_devs": "118",
+        "code_commits": "78"
+    },
+    {
+        "date": "2022-05-03 0:00:00",
+        "active_devs": "119",
+        "code_commits": "82"
+    },
+    {
+        "date": "2022-05-04 0:00:00",
+        "active_devs": "119",
+        "code_commits": "145"
+    },
+    {
+        "date": "2022-05-05 0:00:00",
+        "active_devs": "118",
+        "code_commits": "54"
+    },
+    {
+        "date": "2022-05-06 0:00:00",
+        "active_devs": "123",
+        "code_commits": "82"
+    },
+    {
+        "date": "2022-05-07 0:00:00",
+        "active_devs": "120",
+        "code_commits": "6"
+    },
+    {
+        "date": "2022-05-08 0:00:00",
+        "active_devs": "121",
+        "code_commits": "18"
+    },
+    {
+        "date": "2022-05-09 0:00:00",
+        "active_devs": "125",
+        "code_commits": "45"
+    },
+    {
+        "date": "2022-05-10 0:00:00",
+        "active_devs": "129",
+        "code_commits": "55"
+    },
+    {
+        "date": "2022-05-11 0:00:00",
+        "active_devs": "128",
+        "code_commits": "69"
+    },
+    {
+        "date": "2022-05-12 0:00:00",
+        "active_devs": "129",
+        "code_commits": "83"
+    },
+    {
+        "date": "2022-05-13 0:00:00",
+        "active_devs": "129",
+        "code_commits": "66"
+    },
+    {
+        "date": "2022-05-14 0:00:00",
+        "active_devs": "126",
+        "code_commits": "20"
+    },
+    {
+        "date": "2022-05-15 0:00:00",
+        "active_devs": "126",
+        "code_commits": "29"
+    },
+    {
+        "date": "2022-05-16 0:00:00",
+        "active_devs": "127",
+        "code_commits": "81"
+    },
+    {
+        "date": "2022-05-17 0:00:00",
+        "active_devs": "132",
+        "code_commits": "110"
+    },
+    {
+        "date": "2022-05-18 0:00:00",
+        "active_devs": "133",
+        "code_commits": "102"
+    },
+    {
+        "date": "2022-05-19 0:00:00",
+        "active_devs": "137",
+        "code_commits": "109"
+    },
+    {
+        "date": "2022-05-20 0:00:00",
+        "active_devs": "137",
+        "code_commits": "83"
+    },
+    {
+        "date": "2022-05-21 0:00:00",
+        "active_devs": "135",
+        "code_commits": "47"
+    },
+    {
+        "date": "2022-05-22 0:00:00",
+        "active_devs": "131",
+        "code_commits": "25"
+    },
+    {
+        "date": "2022-05-23 0:00:00",
+        "active_devs": "134",
+        "code_commits": "93"
+    },
+    {
+        "date": "2022-05-24 0:00:00",
+        "active_devs": "137",
+        "code_commits": "65"
+    },
+    {
+        "date": "2022-05-25 0:00:00",
+        "active_devs": "138",
+        "code_commits": "83"
+    },
+    {
+        "date": "2022-05-26 0:00:00",
+        "active_devs": "138",
+        "code_commits": "66"
+    },
+    {
+        "date": "2022-05-27 0:00:00",
+        "active_devs": "136",
+        "code_commits": "89"
+    },
+    {
+        "date": "2022-05-28 0:00:00",
+        "active_devs": "134",
+        "code_commits": "13"
+    },
+    {
+        "date": "2022-05-29 0:00:00",
+        "active_devs": "133",
+        "code_commits": "26"
+    },
+    {
+        "date": "2022-05-30 0:00:00",
+        "active_devs": "135",
+        "code_commits": "58"
+    },
+    {
+        "date": "2022-05-31 0:00:00",
+        "active_devs": "135",
+        "code_commits": "83"
+    },
+    {
+        "date": "2022-06-01 0:00:00",
+        "active_devs": "135",
+        "code_commits": "111"
+    },
+    {
+        "date": "2022-06-02 0:00:00",
+        "active_devs": "134",
+        "code_commits": "57"
+    },
+    {
+        "date": "2022-06-03 0:00:00",
+        "active_devs": "130",
+        "code_commits": "68"
+    },
+    {
+        "date": "2022-06-04 0:00:00",
+        "active_devs": "130",
+        "code_commits": "12"
+    },
+    {
+        "date": "2022-06-05 0:00:00",
+        "active_devs": "123",
+        "code_commits": "30"
+    },
+    {
+        "date": "2022-06-06 0:00:00",
+        "active_devs": "124",
+        "code_commits": "45"
+    },
+    {
+        "date": "2022-06-07 0:00:00",
+        "active_devs": "123",
+        "code_commits": "69"
+    },
+    {
+        "date": "2022-06-08 0:00:00",
+        "active_devs": "123",
+        "code_commits": "22"
+    },
+    {
+        "date": "2022-06-09 0:00:00",
+        "active_devs": "121",
+        "code_commits": "44"
+    },
+    {
+        "date": "2022-06-10 0:00:00",
+        "active_devs": "120",
+        "code_commits": "51"
+    },
+    {
+        "date": "2022-06-11 0:00:00",
+        "active_devs": "115",
+        "code_commits": "24"
+    },
+    {
+        "date": "2022-06-12 0:00:00",
+        "active_devs": "116",
+        "code_commits": "30"
+    },
+    {
+        "date": "2022-06-13 0:00:00",
+        "active_devs": "119",
+        "code_commits": "83"
+    },
+    {
+        "date": "2022-06-14 0:00:00",
+        "active_devs": "122",
+        "code_commits": "104"
+    },
+    {
+        "date": "2022-06-15 0:00:00",
+        "active_devs": "125",
+        "code_commits": "49"
+    },
+    {
+        "date": "2022-06-16 0:00:00",
+        "active_devs": "125",
+        "code_commits": "63"
+    },
+    {
+        "date": "2022-06-17 0:00:00",
+        "active_devs": "129",
+        "code_commits": "69"
+    },
+    {
+        "date": "2022-06-18 0:00:00",
+        "active_devs": "126",
+        "code_commits": "45"
+    },
+    {
+        "date": "2022-06-19 0:00:00",
+        "active_devs": "121",
+        "code_commits": "26"
+    },
+    {
+        "date": "2022-06-20 0:00:00",
+        "active_devs": "123",
+        "code_commits": "64"
+    },
+    {
+        "date": "2022-06-21 0:00:00",
+        "active_devs": "129",
+        "code_commits": "80"
+    },
+    {
+        "date": "2022-06-22 0:00:00",
+        "active_devs": "129",
+        "code_commits": "53"
+    },
+    {
+        "date": "2022-06-23 0:00:00",
+        "active_devs": "128",
+        "code_commits": "78"
+    },
+    {
+        "date": "2022-06-24 0:00:00",
+        "active_devs": "130",
+        "code_commits": "75"
+    },
+    {
+        "date": "2022-06-25 0:00:00",
+        "active_devs": "128",
+        "code_commits": "38"
+    },
+    {
+        "date": "2022-06-26 0:00:00",
+        "active_devs": "128",
+        "code_commits": "18"
+    },
+    {
+        "date": "2022-06-27 0:00:00",
+        "active_devs": "128",
+        "code_commits": "67"
+    },
+    {
+        "date": "2022-06-28 0:00:00",
+        "active_devs": "131",
+        "code_commits": "58"
+    },
+    {
+        "date": "2022-06-29 0:00:00",
+        "active_devs": "130",
+        "code_commits": "41"
+    },
+    {
+        "date": "2022-06-30 0:00:00",
+        "active_devs": "127",
+        "code_commits": "39"
+    },
+    {
+        "date": "2022-07-01 0:00:00",
+        "active_devs": "127",
+        "code_commits": "32"
+    },
+    {
+        "date": "2022-07-02 0:00:00",
+        "active_devs": "125",
+        "code_commits": "2"
+    },
+    {
+        "date": "2022-07-03 0:00:00",
+        "active_devs": "124",
+        "code_commits": "54"
+    },
+    {
+        "date": "2022-07-04 0:00:00",
+        "active_devs": "125",
+        "code_commits": "83"
+    },
+    {
+        "date": "2022-07-05 0:00:00",
+        "active_devs": "129",
+        "code_commits": "56"
+    },
+    {
+        "date": "2022-07-06 0:00:00",
+        "active_devs": "131",
+        "code_commits": "111"
+    },
+    {
+        "date": "2022-07-07 0:00:00",
+        "active_devs": "129",
+        "code_commits": "60"
+    },
+    {
+        "date": "2022-07-08 0:00:00",
+        "active_devs": "128",
+        "code_commits": "59"
+    },
+    {
+        "date": "2022-07-09 0:00:00",
+        "active_devs": "126",
+        "code_commits": "23"
+    },
+    {
+        "date": "2022-07-10 0:00:00",
+        "active_devs": "124",
+        "code_commits": "2"
+    },
+    {
+        "date": "2022-07-11 0:00:00",
+        "active_devs": "126",
+        "code_commits": "49"
+    },
+    {
+        "date": "2022-07-12 0:00:00",
+        "active_devs": "127",
+        "code_commits": "37"
+    },
+    {
+        "date": "2022-07-13 0:00:00",
+        "active_devs": "126",
+        "code_commits": "65"
+    },
+    {
+        "date": "2022-07-14 0:00:00",
+        "active_devs": "128",
+        "code_commits": "73"
+    },
+    {
+        "date": "2022-07-15 0:00:00",
+        "active_devs": "126",
+        "code_commits": "56"
+    },
+    {
+        "date": "2022-07-16 0:00:00",
+        "active_devs": "120",
+        "code_commits": "32"
+    },
+    {
+        "date": "2022-07-17 0:00:00",
+        "active_devs": "117",
+        "code_commits": "19"
+    },
+    {
+        "date": "2022-07-18 0:00:00",
+        "active_devs": "118",
+        "code_commits": "47"
+    },
+    {
+        "date": "2022-07-19 0:00:00",
+        "active_devs": "122",
+        "code_commits": "70"
+    },
+    {
+        "date": "2022-07-20 0:00:00",
+        "active_devs": "121",
+        "code_commits": "90"
+    },
+    {
+        "date": "2022-07-21 0:00:00",
+        "active_devs": "120",
+        "code_commits": "52"
+    },
+    {
+        "date": "2022-07-22 0:00:00",
+        "active_devs": "121",
+        "code_commits": "37"
+    },
+    {
+        "date": "2022-07-23 0:00:00",
+        "active_devs": "120",
+        "code_commits": "15"
+    },
+    {
+        "date": "2022-07-24 0:00:00",
+        "active_devs": "117",
+        "code_commits": "45"
+    },
+    {
+        "date": "2022-07-25 0:00:00",
+        "active_devs": "119",
+        "code_commits": "53"
+    },
+    {
+        "date": "2022-07-26 0:00:00",
+        "active_devs": "119",
+        "code_commits": "90"
+    },
+    {
+        "date": "2022-07-27 0:00:00",
+        "active_devs": "121",
+        "code_commits": "64"
+    },
+    {
+        "date": "2022-07-28 0:00:00",
+        "active_devs": "124",
+        "code_commits": "72"
+    },
+    {
+        "date": "2022-07-29 0:00:00",
+        "active_devs": "128",
+        "code_commits": "70"
+    },
+    {
+        "date": "2022-07-30 0:00:00",
+        "active_devs": "128",
+        "code_commits": "11"
+    },
+    {
+        "date": "2022-07-31 0:00:00",
+        "active_devs": "128",
+        "code_commits": "1"
+    },
+    {
+        "date": "2022-08-01 0:00:00",
+        "active_devs": "132",
+        "code_commits": "74"
+    },
+    {
+        "date": "2022-08-02 0:00:00",
+        "active_devs": "137",
+        "code_commits": "61"
+    },
+    {
+        "date": "2022-08-03 0:00:00",
+        "active_devs": "139",
+        "code_commits": "95"
+    },
+    {
+        "date": "2022-08-04 0:00:00",
+        "active_devs": "142",
+        "code_commits": "101"
+    },
+    {
+        "date": "2022-08-05 0:00:00",
+        "active_devs": "141",
+        "code_commits": "53"
+    },
+    {
+        "date": "2022-08-06 0:00:00",
+        "active_devs": "141",
+        "code_commits": "1"
+    },
+    {
+        "date": "2022-08-07 0:00:00",
+        "active_devs": "140",
+        "code_commits": "4"
+    },
+    {
+        "date": "2022-08-08 0:00:00",
+        "active_devs": "145",
+        "code_commits": "79"
+    },
+    {
+        "date": "2022-08-09 0:00:00",
+        "active_devs": "147",
+        "code_commits": "78"
+    },
+    {
+        "date": "2022-08-10 0:00:00",
+        "active_devs": "144",
+        "code_commits": "62"
+    },
+    {
+        "date": "2022-08-11 0:00:00",
+        "active_devs": "146",
+        "code_commits": "61"
+    },
+    {
+        "date": "2022-08-12 0:00:00",
+        "active_devs": "146",
+        "code_commits": "62"
+    },
+    {
+        "date": "2022-08-13 0:00:00",
+        "active_devs": "141",
+        "code_commits": "13"
+    },
+    {
+        "date": "2022-08-14 0:00:00",
+        "active_devs": "142",
+        "code_commits": "20"
+    },
+    {
+        "date": "2022-08-15 0:00:00",
+        "active_devs": "144",
+        "code_commits": "66"
+    },
+    {
+        "date": "2022-08-16 0:00:00",
+        "active_devs": "145",
+        "code_commits": "60"
+    },
+    {
+        "date": "2022-08-17 0:00:00",
+        "active_devs": "146",
+        "code_commits": "68"
+    },
+    {
+        "date": "2022-08-18 0:00:00",
+        "active_devs": "143",
+        "code_commits": "63"
+    },
+    {
+        "date": "2022-08-19 0:00:00",
+        "active_devs": "144",
+        "code_commits": "79"
+    },
+    {
+        "date": "2022-08-20 0:00:00",
+        "active_devs": "143",
+        "code_commits": "13"
+    },
+    {
+        "date": "2022-08-21 0:00:00",
+        "active_devs": "141",
+        "code_commits": "24"
+    },
+    {
+        "date": "2022-08-22 0:00:00",
+        "active_devs": "146",
+        "code_commits": "80"
+    },
+    {
+        "date": "2022-08-23 0:00:00",
+        "active_devs": "147",
+        "code_commits": "80"
+    },
+    {
+        "date": "2022-08-24 0:00:00",
+        "active_devs": "145",
+        "code_commits": "101"
+    },
+    {
+        "date": "2022-08-25 0:00:00",
+        "active_devs": "145",
+        "code_commits": "70"
+    },
+    {
+        "date": "2022-08-26 0:00:00",
+        "active_devs": "143",
+        "code_commits": "65"
+    },
+    {
+        "date": "2022-08-27 0:00:00",
+        "active_devs": "140",
+        "code_commits": "18"
+    },
+    {
+        "date": "2022-08-28 0:00:00",
+        "active_devs": "136",
+        "code_commits": "21"
+    },
+    {
+        "date": "2022-08-29 0:00:00",
+        "active_devs": "140",
+        "code_commits": "74"
+    },
+    {
+        "date": "2022-08-30 0:00:00",
+        "active_devs": "142",
+        "code_commits": "77"
+    },
+    {
+        "date": "2022-08-31 0:00:00",
+        "active_devs": "140",
+        "code_commits": "83"
+    },
+    {
+        "date": "2022-09-01 0:00:00",
+        "active_devs": "141",
+        "code_commits": "77"
+    },
+    {
+        "date": "2022-09-02 0:00:00",
+        "active_devs": "145",
+        "code_commits": "62"
+    },
+    {
+        "date": "2022-09-03 0:00:00",
+        "active_devs": "141",
+        "code_commits": "16"
+    },
+    {
+        "date": "2022-09-04 0:00:00",
+        "active_devs": "141",
+        "code_commits": "32"
+    },
+    {
+        "date": "2022-09-05 0:00:00",
+        "active_devs": "143",
+        "code_commits": "83"
+    },
+    {
+        "date": "2022-09-06 0:00:00",
+        "active_devs": "145",
+        "code_commits": "57"
+    },
+    {
+        "date": "2022-09-07 0:00:00",
+        "active_devs": "141",
+        "code_commits": "63"
+    },
+    {
+        "date": "2022-09-08 0:00:00",
+        "active_devs": "147",
+        "code_commits": "68"
+    },
+    {
+        "date": "2022-09-09 0:00:00",
+        "active_devs": "146",
+        "code_commits": "31"
+    },
+    {
+        "date": "2022-09-10 0:00:00",
+        "active_devs": "140",
+        "code_commits": "14"
+    },
+    {
+        "date": "2022-09-11 0:00:00",
+        "active_devs": "138",
+        "code_commits": "27"
+    },
+    {
+        "date": "2022-09-12 0:00:00",
+        "active_devs": "139",
+        "code_commits": "83"
+    },
+    {
+        "date": "2022-09-13 0:00:00",
+        "active_devs": "143",
+        "code_commits": "105"
+    },
+    {
+        "date": "2022-09-14 0:00:00",
+        "active_devs": "139",
+        "code_commits": "111"
+    },
+    {
+        "date": "2022-09-15 0:00:00",
+        "active_devs": "138",
+        "code_commits": "90"
+    },
+    {
+        "date": "2022-09-16 0:00:00",
+        "active_devs": "137",
+        "code_commits": "79"
+    },
+    {
+        "date": "2022-09-17 0:00:00",
+        "active_devs": "137",
+        "code_commits": "14"
+    },
+    {
+        "date": "2022-09-18 0:00:00",
+        "active_devs": "134",
+        "code_commits": "7"
+    },
+    {
+        "date": "2022-09-19 0:00:00",
+        "active_devs": "138",
+        "code_commits": "112"
+    },
+    {
+        "date": "2022-09-20 0:00:00",
+        "active_devs": "140",
+        "code_commits": "72"
+    },
+    {
+        "date": "2022-09-21 0:00:00",
+        "active_devs": "139",
+        "code_commits": "92"
+    },
+    {
+        "date": "2022-09-22 0:00:00",
+        "active_devs": "138",
+        "code_commits": "86"
+    },
+    {
+        "date": "2022-09-23 0:00:00",
+        "active_devs": "137",
+        "code_commits": "71"
+    },
+    {
+        "date": "2022-09-24 0:00:00",
+        "active_devs": "136",
+        "code_commits": "10"
+    },
+    {
+        "date": "2022-09-25 0:00:00",
+        "active_devs": "135",
+        "code_commits": "4"
+    },
+    {
+        "date": "2022-09-26 0:00:00",
+        "active_devs": "137",
+        "code_commits": "72"
+    },
+    {
+        "date": "2022-09-27 0:00:00",
+        "active_devs": "138",
+        "code_commits": "65"
+    },
+    {
+        "date": "2022-09-28 0:00:00",
+        "active_devs": "135",
+        "code_commits": "122"
+    },
+    {
+        "date": "2022-09-29 0:00:00",
+        "active_devs": "134",
+        "code_commits": "75"
+    },
+    {
+        "date": "2022-09-30 0:00:00",
+        "active_devs": "134",
+        "code_commits": "88"
+    },
+    {
+        "date": "2022-10-01 0:00:00",
+        "active_devs": "132",
+        "code_commits": "11"
+    },
+    {
+        "date": "2022-10-02 0:00:00",
+        "active_devs": "131",
+        "code_commits": "26"
+    },
+    {
+        "date": "2022-10-03 0:00:00",
+        "active_devs": "134",
+        "code_commits": "60"
+    },
+    {
+        "date": "2022-10-04 0:00:00",
+        "active_devs": "135",
+        "code_commits": "69"
+    },
+    {
+        "date": "2022-10-05 0:00:00",
+        "active_devs": "136",
+        "code_commits": "97"
+    },
+    {
+        "date": "2022-10-06 0:00:00",
+        "active_devs": "137",
+        "code_commits": "86"
+    },
+    {
+        "date": "2022-10-07 0:00:00",
+        "active_devs": "137",
+        "code_commits": "82"
+    },
+    {
+        "date": "2022-10-08 0:00:00",
+        "active_devs": "131",
+        "code_commits": "19"
+    },
+    {
+        "date": "2022-10-09 0:00:00",
+        "active_devs": "132",
+        "code_commits": "31"
+    },
+    {
+        "date": "2022-10-10 0:00:00",
+        "active_devs": "136",
+        "code_commits": "66"
+    },
+    {
+        "date": "2022-10-11 0:00:00",
+        "active_devs": "139",
+        "code_commits": "53"
+    },
+    {
+        "date": "2022-10-12 0:00:00",
+        "active_devs": "140",
+        "code_commits": "83"
+    },
+    {
+        "date": "2022-10-13 0:00:00",
+        "active_devs": "142",
+        "code_commits": "65"
+    },
+    {
+        "date": "2022-10-14 0:00:00",
+        "active_devs": "142",
+        "code_commits": "55"
+    },
+    {
+        "date": "2022-10-15 0:00:00",
+        "active_devs": "142",
+        "code_commits": "0"
+    },
+    {
+        "date": "2022-10-16 0:00:00",
+        "active_devs": "141",
+        "code_commits": "8"
+    },
+    {
+        "date": "2022-10-17 0:00:00",
+        "active_devs": "143",
+        "code_commits": "75"
+    },
+    {
+        "date": "2022-10-18 0:00:00",
+        "active_devs": "147",
+        "code_commits": "98"
+    },
+    {
+        "date": "2022-10-19 0:00:00",
+        "active_devs": "143",
+        "code_commits": "65"
+    },
+    {
+        "date": "2022-10-20 0:00:00",
+        "active_devs": "142",
+        "code_commits": "62"
+    },
+    {
+        "date": "2022-10-21 0:00:00",
+        "active_devs": "146",
+        "code_commits": "118"
+    },
+    {
+        "date": "2022-10-22 0:00:00",
+        "active_devs": "146",
+        "code_commits": "26"
+    },
+    {
+        "date": "2022-10-23 0:00:00",
+        "active_devs": "144",
+        "code_commits": "18"
+    },
+    {
+        "date": "2022-10-24 0:00:00",
+        "active_devs": "143",
+        "code_commits": "54"
+    },
+    {
+        "date": "2022-10-25 0:00:00",
+        "active_devs": "147",
+        "code_commits": "40"
+    },
+    {
+        "date": "2022-10-26 0:00:00",
+        "active_devs": "146",
+        "code_commits": "64"
+    },
+    {
+        "date": "2022-10-27 0:00:00",
+        "active_devs": "149",
+        "code_commits": "72"
+    },
+    {
+        "date": "2022-10-28 0:00:00",
+        "active_devs": "148",
+        "code_commits": "62"
+    },
+    {
+        "date": "2022-10-29 0:00:00",
+        "active_devs": "148",
+        "code_commits": "14"
+    },
+    {
+        "date": "2022-10-30 0:00:00",
+        "active_devs": "147",
+        "code_commits": "20"
+    },
+    {
+        "date": "2022-10-31 0:00:00",
+        "active_devs": "147",
+        "code_commits": "66"
+    },
+    {
+        "date": "2022-11-01 0:00:00",
+        "active_devs": "151",
+        "code_commits": "57"
+    },
+    {
+        "date": "2022-11-02 0:00:00",
+        "active_devs": "149",
+        "code_commits": "52"
+    },
+    {
+        "date": "2022-11-03 0:00:00",
+        "active_devs": "150",
+        "code_commits": "61"
+    },
+    {
+        "date": "2022-11-04 0:00:00",
+        "active_devs": "150",
+        "code_commits": "43"
+    },
+    {
+        "date": "2022-11-05 0:00:00",
+        "active_devs": "148",
+        "code_commits": "25"
+    },
+    {
+        "date": "2022-11-06 0:00:00",
+        "active_devs": "146",
+        "code_commits": "3"
+    },
+    {
+        "date": "2022-11-07 0:00:00",
+        "active_devs": "149",
+        "code_commits": "49"
+    },
+    {
+        "date": "2022-11-08 0:00:00",
+        "active_devs": "150",
+        "code_commits": "66"
+    },
+    {
+        "date": "2022-11-09 0:00:00",
+        "active_devs": "146",
+        "code_commits": "72"
+    },
+    {
+        "date": "2022-11-10 0:00:00",
+        "active_devs": "149",
+        "code_commits": "48"
+    },
+    {
+        "date": "2022-11-11 0:00:00",
+        "active_devs": "150",
+        "code_commits": "77"
+    },
+    {
+        "date": "2022-11-12 0:00:00",
+        "active_devs": "149",
+        "code_commits": "43"
+    },
+    {
+        "date": "2022-11-13 0:00:00",
+        "active_devs": "149",
+        "code_commits": "18"
+    },
+    {
+        "date": "2022-11-14 0:00:00",
+        "active_devs": "149",
+        "code_commits": "61"
+    },
+    {
+        "date": "2022-11-15 0:00:00",
+        "active_devs": "151",
+        "code_commits": "77"
+    },
+    {
+        "date": "2022-11-16 0:00:00",
+        "active_devs": "149",
+        "code_commits": "60"
+    },
+    {
+        "date": "2022-11-17 0:00:00",
+        "active_devs": "146",
+        "code_commits": "52"
+    },
+    {
+        "date": "2022-11-18 0:00:00",
+        "active_devs": "147",
+        "code_commits": "59"
+    },
+    {
+        "date": "2022-11-19 0:00:00",
+        "active_devs": "147",
+        "code_commits": "24"
+    },
+    {
+        "date": "2022-11-20 0:00:00",
+        "active_devs": "145",
+        "code_commits": "30"
+    },
+    {
+        "date": "2022-11-21 0:00:00",
+        "active_devs": "144",
+        "code_commits": "51"
+    },
+    {
+        "date": "2022-11-22 0:00:00",
+        "active_devs": "146",
+        "code_commits": "55"
+    },
+    {
+        "date": "2022-11-23 0:00:00",
+        "active_devs": "147",
+        "code_commits": "85"
+    },
+    {
+        "date": "2022-11-24 0:00:00",
+        "active_devs": "146",
+        "code_commits": "69"
+    },
+    {
+        "date": "2022-11-25 0:00:00",
+        "active_devs": "144",
+        "code_commits": "51"
+    },
+    {
+        "date": "2022-11-26 0:00:00",
+        "active_devs": "138",
+        "code_commits": "39"
+    },
+    {
+        "date": "2022-11-27 0:00:00",
+        "active_devs": "136",
+        "code_commits": "45"
+    },
+    {
+        "date": "2022-11-28 0:00:00",
+        "active_devs": "137",
+        "code_commits": "51"
+    },
+    {
+        "date": "2022-11-29 0:00:00",
+        "active_devs": "137",
+        "code_commits": "19"
+    },
+    {
+        "date": "2022-11-30 0:00:00",
+        "active_devs": "139",
+        "code_commits": "53"
+    },
+    {
+        "date": "2022-12-01 0:00:00",
+        "active_devs": "139",
+        "code_commits": "36"
+    },
+    {
+        "date": "2022-12-02 0:00:00",
+        "active_devs": "138",
+        "code_commits": "26"
+    },
+    {
+        "date": "2022-12-03 0:00:00",
+        "active_devs": "134",
+        "code_commits": "12"
+    },
+    {
+        "date": "2022-12-04 0:00:00",
+        "active_devs": "132",
+        "code_commits": "22"
+    },
+    {
+        "date": "2022-12-05 0:00:00",
+        "active_devs": "137",
+        "code_commits": "49"
+    },
+    {
+        "date": "2022-12-06 0:00:00",
+        "active_devs": "137",
+        "code_commits": "63"
+    },
+    {
+        "date": "2022-12-07 0:00:00",
+        "active_devs": "136",
+        "code_commits": "47"
+    },
+    {
+        "date": "2022-12-08 0:00:00",
+        "active_devs": "137",
+        "code_commits": "43"
+    },
+    {
+        "date": "2022-12-09 0:00:00",
+        "active_devs": "136",
+        "code_commits": "40"
+    },
+    {
+        "date": "2022-12-10 0:00:00",
+        "active_devs": "133",
+        "code_commits": "55"
+    },
+    {
+        "date": "2022-12-11 0:00:00",
+        "active_devs": "133",
+        "code_commits": "33"
+    },
+    {
+        "date": "2022-12-12 0:00:00",
+        "active_devs": "136",
+        "code_commits": "104"
+    },
+    {
+        "date": "2022-12-13 0:00:00",
+        "active_devs": "137",
+        "code_commits": "50"
+    },
+    {
+        "date": "2022-12-14 0:00:00",
+        "active_devs": "139",
+        "code_commits": "95"
+    },
+    {
+        "date": "2022-12-15 0:00:00",
+        "active_devs": "137",
+        "code_commits": "49"
+    },
+    {
+        "date": "2022-12-16 0:00:00",
+        "active_devs": "134",
+        "code_commits": "31"
+    },
+    {
+        "date": "2022-12-17 0:00:00",
+        "active_devs": "127",
+        "code_commits": "51"
+    },
+    {
+        "date": "2022-12-18 0:00:00",
+        "active_devs": "123",
+        "code_commits": "20"
+    },
+    {
+        "date": "2022-12-19 0:00:00",
+        "active_devs": "124",
+        "code_commits": "53"
+    },
+    {
+        "date": "2022-12-20 0:00:00",
+        "active_devs": "124",
+        "code_commits": "71"
+    },
+    {
+        "date": "2022-12-21 0:00:00",
+        "active_devs": "124",
+        "code_commits": "38"
+    },
+    {
+        "date": "2022-12-22 0:00:00",
+        "active_devs": "124",
+        "code_commits": "43"
+    },
+    {
+        "date": "2022-12-23 0:00:00",
+        "active_devs": "123",
+        "code_commits": "17"
+    },
+    {
+        "date": "2022-12-24 0:00:00",
+        "active_devs": "123",
+        "code_commits": "11"
+    },
+    {
+        "date": "2022-12-25 0:00:00",
+        "active_devs": "121",
+        "code_commits": "10"
+    },
+    {
+        "date": "2022-12-26 0:00:00",
+        "active_devs": "122",
+        "code_commits": "25"
+    },
+    {
+        "date": "2022-12-27 0:00:00",
+        "active_devs": "124",
+        "code_commits": "37"
+    },
+    {
+        "date": "2022-12-28 0:00:00",
+        "active_devs": "123",
+        "code_commits": "44"
+    },
+    {
+        "date": "2022-12-29 0:00:00",
+        "active_devs": "126",
+        "code_commits": "52"
+    },
+    {
+        "date": "2022-12-30 0:00:00",
+        "active_devs": "123",
+        "code_commits": "35"
+    },
+    {
+        "date": "2022-12-31 0:00:00",
+        "active_devs": "120",
+        "code_commits": "8"
+    }
+]

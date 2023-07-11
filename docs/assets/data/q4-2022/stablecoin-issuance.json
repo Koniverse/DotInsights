@@ -1,0 +1,977 @@
+﻿[
+    {
+        "date": "2022-06-28",
+        "karura_ausd": "3836126.56",
+        "acala_ausd": "4376276.23"
+    },
+    {
+        "date": "2022-06-29",
+        "karura_ausd": "3832683.55",
+        "acala_ausd": "4376276.23"
+    },
+    {
+        "date": "2022-06-30",
+        "karura_ausd": "3778917.06",
+        "acala_ausd": "4366632.98"
+    },
+    {
+        "date": "2022-07-01",
+        "karura_ausd": "3774173.69",
+        "acala_ausd": "4366632.98"
+    },
+    {
+        "date": "2022-07-02",
+        "karura_ausd": "3783795.29",
+        "acala_ausd": "4366632.98"
+    },
+    {
+        "date": "2022-07-03",
+        "karura_ausd": "3800771.25",
+        "acala_ausd": "4337363.99"
+    },
+    {
+        "date": "2022-07-04",
+        "karura_ausd": "3807828.87",
+        "acala_ausd": "4357754.17"
+    },
+    {
+        "date": "2022-07-05",
+        "karura_ausd": "3809084.47",
+        "acala_ausd": "4357754.17"
+    },
+    {
+        "date": "2022-07-06",
+        "karura_ausd": "3814666.89",
+        "acala_ausd": "4361638.82",
+        "astriddao_bai": "5754856.57"
+    },
+    {
+        "date": "2022-07-07",
+        "karura_ausd": "3815283.97",
+        "acala_ausd": "4361205.61",
+        "astriddao_bai": "5785636.01"
+    },
+    {
+        "date": "2022-07-08",
+        "karura_ausd": "3827883.54",
+        "acala_ausd": "4361205.61",
+        "astriddao_bai": "5537019.54"
+    },
+    {
+        "date": "2022-07-09",
+        "karura_ausd": "3833768.48",
+        "acala_ausd": "4361205.61",
+        "astriddao_bai": "5550990.39"
+    },
+    {
+        "date": "2022-07-10",
+        "karura_ausd": "3838532.43",
+        "acala_ausd": "4361205.61",
+        "astriddao_bai": "5619369.49"
+    },
+    {
+        "date": "2022-07-11",
+        "karura_ausd": "3836656.36",
+        "acala_ausd": "4354716.30",
+        "astriddao_bai": "5668451.32"
+    },
+    {
+        "date": "2022-07-12",
+        "karura_ausd": "4110808.75",
+        "acala_ausd": "4354716.30",
+        "astriddao_bai": "5598451.73"
+    },
+    {
+        "date": "2022-07-13",
+        "karura_ausd": "4107797.58",
+        "acala_ausd": "4394496.16",
+        "astriddao_bai": "5598200.82"
+    },
+    {
+        "date": "2022-07-14",
+        "karura_ausd": "4109834.09",
+        "acala_ausd": "4394496.16",
+        "astriddao_bai": "5068895.84"
+    },
+    {
+        "date": "2022-07-15",
+        "karura_ausd": "4110447.46",
+        "acala_ausd": "4367680.02",
+        "astriddao_bai": "4815732.67"
+    },
+    {
+        "date": "2022-07-16",
+        "karura_ausd": "4112645.23",
+        "acala_ausd": "4367680.02",
+        "astriddao_bai": "5148633.32"
+    },
+    {
+        "date": "2022-07-17",
+        "karura_ausd": "4116805.33",
+        "acala_ausd": "4367680.02",
+        "astriddao_bai": "5110890.41"
+    },
+    {
+        "date": "2022-07-18",
+        "karura_ausd": "4116805.33",
+        "acala_ausd": "4367680.02",
+        "astriddao_bai": "4643030.16"
+    },
+    {
+        "date": "2022-07-19",
+        "karura_ausd": "4107979.68",
+        "acala_ausd": "4367680.02",
+        "astriddao_bai": "4643067.35"
+    },
+    {
+        "date": "2022-07-20",
+        "karura_ausd": "4113797.72",
+        "acala_ausd": "4443493.61",
+        "astriddao_bai": "4592560.78"
+    },
+    {
+        "date": "2022-07-21",
+        "karura_ausd": "4126611.06",
+        "acala_ausd": "4500049.54",
+        "astriddao_bai": "4591763.90"
+    },
+    {
+        "date": "2022-07-22",
+        "karura_ausd": "4136092.17",
+        "acala_ausd": "4500049.54",
+        "astriddao_bai": "4607978.67"
+    },
+    {
+        "date": "2022-07-23",
+        "karura_ausd": "4221080.43",
+        "acala_ausd": "4521913.75",
+        "astriddao_bai": "4266271.26"
+    },
+    {
+        "date": "2022-07-24",
+        "karura_ausd": "4262965.49",
+        "acala_ausd": "4521913.75",
+        "astriddao_bai": "4260415.46"
+    },
+    {
+        "date": "2022-07-25",
+        "karura_ausd": "4263892.10",
+        "acala_ausd": "4603851.59",
+        "astriddao_bai": "4265280.99"
+    },
+    {
+        "date": "2022-07-26",
+        "karura_ausd": "4265767.11",
+        "acala_ausd": "4593796.38",
+        "astriddao_bai": "4187250.73"
+    },
+    {
+        "date": "2022-07-27",
+        "karura_ausd": "4261288.03",
+        "acala_ausd": "4546997.43",
+        "astriddao_bai": "4171703.66"
+    },
+    {
+        "date": "2022-07-28",
+        "karura_ausd": "4193662.76",
+        "acala_ausd": "4605909.23",
+        "astriddao_bai": "3828781.05"
+    },
+    {
+        "date": "2022-07-29",
+        "karura_ausd": "4215924.01",
+        "acala_ausd": "4623156.38",
+        "astriddao_bai": "3887437.84"
+    },
+    {
+        "date": "2022-07-30",
+        "karura_ausd": "4217561.07",
+        "acala_ausd": "4623156.38",
+        "astriddao_bai": "3900043.40"
+    },
+    {
+        "date": "2022-07-31",
+        "karura_ausd": "4258459.15",
+        "acala_ausd": "4635404.74",
+        "astriddao_bai": "3932593.38"
+    },
+    {
+        "date": "2022-08-01",
+        "karura_ausd": "4262792.39",
+        "acala_ausd": "4635404.74",
+        "astriddao_bai": "3846968.17"
+    },
+    {
+        "date": "2022-08-02",
+        "karura_ausd": "4263782.68",
+        "acala_ausd": "4635404.74",
+        "astriddao_bai": "3880508.23"
+    },
+    {
+        "date": "2022-08-03",
+        "karura_ausd": "4267060.06",
+        "acala_ausd": "5762350.78",
+        "astriddao_bai": "3811710.15"
+    },
+    {
+        "date": "2022-08-04",
+        "karura_ausd": "4727069.81",
+        "acala_ausd": "5760752.41",
+        "astriddao_bai": "3186133.17"
+    },
+    {
+        "date": "2022-08-05",
+        "karura_ausd": "4720512.76",
+        "acala_ausd": "5802948.51",
+        "astriddao_bai": "3184397.45"
+    },
+    {
+        "date": "2022-08-06",
+        "karura_ausd": "4712896.17",
+        "acala_ausd": "5802948.51",
+        "astriddao_bai": "3197912.33"
+    },
+    {
+        "date": "2022-08-07",
+        "karura_ausd": "4721382.47",
+        "acala_ausd": "5802948.51",
+        "astriddao_bai": "3214678.47"
+    },
+    {
+        "date": "2022-08-08",
+        "karura_ausd": "4723563.08",
+        "acala_ausd": "5802948.51",
+        "astriddao_bai": "3199322.67"
+    },
+    {
+        "date": "2022-08-09",
+        "karura_ausd": "4735503.68",
+        "acala_ausd": "6016818.37",
+        "astriddao_bai": "3692873.47"
+    },
+    {
+        "date": "2022-08-10",
+        "karura_ausd": "4763844.92",
+        "acala_ausd": "6013804.23",
+        "astriddao_bai": "3888827.43"
+    },
+    {
+        "date": "2022-08-11",
+        "karura_ausd": "4794959.96",
+        "acala_ausd": "6179605.76",
+        "astriddao_bai": "3907582.30"
+    },
+    {
+        "date": "2022-08-12",
+        "karura_ausd": "4799175.85",
+        "acala_ausd": "6273680.44",
+        "astriddao_bai": "3828375.95"
+    },
+    {
+        "date": "2022-08-13",
+        "karura_ausd": "4799175.85",
+        "acala_ausd": "6281462.26",
+        "astriddao_bai": "3792858.39"
+    },
+    {
+        "date": "2022-08-14",
+        "karura_ausd": "4806887.91",
+        "acala_ausd": "6281462.26",
+        "astriddao_bai": "3646416.12"
+    },
+    {
+        "date": "2022-08-15",
+        "karura_ausd": "4776844.44",
+        "astriddao_bai": "3642120.79"
+    },
+    {
+        "date": "2022-08-16",
+        "karura_ausd": "4763268.99",
+        "astriddao_bai": "3511124.09"
+    },
+    {
+        "date": "2022-08-17",
+        "karura_ausd": "4750309.21",
+        "astriddao_bai": "3471154.54"
+    },
+    {
+        "date": "2022-08-18",
+        "karura_ausd": "4750122.92",
+        "astriddao_bai": "3465703.87"
+    },
+    {
+        "date": "2022-08-19",
+        "karura_ausd": "4739200.17",
+        "astriddao_bai": "3403678.07"
+    },
+    {
+        "date": "2022-08-20",
+        "karura_ausd": "4638080.02",
+        "astriddao_bai": "3275556.44"
+    },
+    {
+        "date": "2022-08-21",
+        "karura_ausd": "4643264.70",
+        "astriddao_bai": "3231451.21"
+    },
+    {
+        "date": "2022-08-22",
+        "karura_ausd": "4653595.71",
+        "astriddao_bai": "3184643.47"
+    },
+    {
+        "date": "2022-08-23",
+        "karura_ausd": "4683303.90",
+        "astriddao_bai": "3168787.25"
+    },
+    {
+        "date": "2022-08-24",
+        "karura_ausd": "4687417.99",
+        "astriddao_bai": "3167960.48"
+    },
+    {
+        "date": "2022-08-25",
+        "karura_ausd": "4694035.39",
+        "astriddao_bai": "3649447.82"
+    },
+    {
+        "date": "2022-08-26",
+        "karura_ausd": "4698196.95",
+        "astriddao_bai": "3581253.35"
+    },
+    {
+        "date": "2022-08-27",
+        "karura_ausd": "4634477.23",
+        "astriddao_bai": "3566573.26"
+    },
+    {
+        "date": "2022-08-28",
+        "karura_ausd": "4567616.17",
+        "astriddao_bai": "3559400.98"
+    },
+    {
+        "date": "2022-08-29",
+        "karura_ausd": "4692967.32",
+        "astriddao_bai": "3556139.03"
+    },
+    {
+        "date": "2022-08-30",
+        "karura_ausd": "4681610.56",
+        "astriddao_bai": "3883597.20"
+    },
+    {
+        "date": "2022-08-31",
+        "karura_ausd": "4671024.56",
+        "astriddao_bai": "4006948.40"
+    },
+    {
+        "date": "2022-09-01",
+        "karura_ausd": "4668246.36",
+        "astriddao_bai": "4012226.87"
+    },
+    {
+        "date": "2022-09-02",
+        "karura_ausd": "4674318.16",
+        "astriddao_bai": "4011704.53"
+    },
+    {
+        "date": "2022-09-03",
+        "karura_ausd": "4674677.16",
+        "astriddao_bai": "3945957.97"
+    },
+    {
+        "date": "2022-09-04",
+        "karura_ausd": "4675177.16",
+        "astriddao_bai": "3945872.57"
+    },
+    {
+        "date": "2022-09-05",
+        "karura_ausd": "4675320.65",
+        "astriddao_bai": "3945533.61"
+    },
+    {
+        "date": "2022-09-06",
+        "karura_ausd": "4672370.69",
+        "astriddao_bai": "3907203.56"
+    },
+    {
+        "date": "2022-09-07",
+        "karura_ausd": "4675011.69",
+        "astriddao_bai": "3253241.08"
+    },
+    {
+        "date": "2022-09-08",
+        "karura_ausd": "4660441.23",
+        "astriddao_bai": "3250172.05"
+    },
+    {
+        "date": "2022-09-09",
+        "karura_ausd": "4635584.32",
+        "astriddao_bai": "3239949.56"
+    },
+    {
+        "date": "2022-09-10",
+        "karura_ausd": "4637199.09",
+        "astriddao_bai": "3158711.82"
+    },
+    {
+        "date": "2022-09-11",
+        "karura_ausd": "4642597.31",
+        "astriddao_bai": "3117846.42"
+    },
+    {
+        "date": "2022-09-12",
+        "karura_ausd": "4641956.57",
+        "astriddao_bai": "3117935.92"
+    },
+    {
+        "date": "2022-09-13",
+        "karura_ausd": "4645804.94",
+        "astriddao_bai": "3114808.47"
+    },
+    {
+        "date": "2022-09-14",
+        "karura_ausd": "4639666.40",
+        "astriddao_bai": "2926120.30"
+    },
+    {
+        "date": "2022-09-15",
+        "karura_ausd": "4639013.14",
+        "astriddao_bai": "2917668.91"
+    },
+    {
+        "date": "2022-09-16",
+        "karura_ausd": "4635428.48",
+        "astriddao_bai": "2916362.79"
+    },
+    {
+        "date": "2022-09-17",
+        "karura_ausd": "4616427.89",
+        "astriddao_bai": "2874874.18"
+    },
+    {
+        "date": "2022-09-18",
+        "karura_ausd": "4615869.63",
+        "astriddao_bai": "2882748.43"
+    },
+    {
+        "date": "2022-09-19",
+        "karura_ausd": "4609456.97",
+        "astriddao_bai": "2881969.55"
+    },
+    {
+        "date": "2022-09-20",
+        "karura_ausd": "4535709.44",
+        "astriddao_bai": "2874892.57"
+    },
+    {
+        "date": "2022-09-21",
+        "karura_ausd": "4529897.82",
+        "astriddao_bai": "2874051.17"
+    },
+    {
+        "date": "2022-09-22",
+        "karura_ausd": "4531910.40",
+        "astriddao_bai": "2844046.91"
+    },
+    {
+        "date": "2022-09-23",
+        "karura_ausd": "4506892.97",
+        "astriddao_bai": "2816523.69"
+    },
+    {
+        "date": "2022-09-24",
+        "karura_ausd": "4510799.79",
+        "astriddao_bai": "2816117.28"
+    },
+    {
+        "date": "2022-09-25",
+        "karura_ausd": "4500455.20",
+        "astriddao_bai": "2819132.62"
+    },
+    {
+        "date": "2022-09-26",
+        "karura_ausd": "4497934.22",
+        "astriddao_bai": "2818175.41"
+    },
+    {
+        "date": "2022-09-27",
+        "karura_ausd": "4498807.33",
+        "astriddao_bai": "2797711.21"
+    },
+    {
+        "date": "2022-09-28",
+        "karura_ausd": "4496876.60",
+        "astriddao_bai": "2791579.58"
+    },
+    {
+        "date": "2022-09-29",
+        "karura_ausd": "4498102.34",
+        "astriddao_bai": "2782633.82"
+    },
+    {
+        "date": "2022-09-30",
+        "karura_ausd": "4497264.78",
+        "astriddao_bai": "2782293.62"
+    },
+    {
+        "date": "2022-10-01",
+        "karura_ausd": "4492790.21",
+        "astriddao_bai": "2774974.54"
+    },
+    {
+        "date": "2022-10-02",
+        "karura_ausd": "4492840.21",
+        "astriddao_bai": "2731285.11"
+    },
+    {
+        "date": "2022-10-03",
+        "karura_ausd": "4492090.36",
+        "astriddao_bai": "2731278.03"
+    },
+    {
+        "date": "2022-10-04",
+        "karura_ausd": "4494592.86",
+        "astriddao_bai": "2691118.47"
+    },
+    {
+        "date": "2022-10-05",
+        "karura_ausd": "4489322.91",
+        "astriddao_bai": "2625588.87"
+    },
+    {
+        "date": "2022-10-06",
+        "karura_ausd": "4488780.53",
+        "astriddao_bai": "2621775.52"
+    },
+    {
+        "date": "2022-10-07",
+        "karura_ausd": "4490368.74",
+        "astriddao_bai": "2613785.66"
+    },
+    {
+        "date": "2022-10-08",
+        "karura_ausd": "4471840.50",
+        "astriddao_bai": "2607068.53"
+    },
+    {
+        "date": "2022-10-09",
+        "karura_ausd": "4473146.47",
+        "astriddao_bai": "2579220.19"
+    },
+    {
+        "date": "2022-10-10",
+        "karura_ausd": "4471349.00",
+        "astriddao_bai": "2577859.23"
+    },
+    {
+        "date": "2022-10-11",
+        "karura_ausd": "4472397.78",
+        "astriddao_bai": "1706729.72"
+    },
+    {
+        "date": "2022-10-12",
+        "karura_ausd": "4471406.62",
+        "astriddao_bai": "3272885.08"
+    },
+    {
+        "date": "2022-10-13",
+        "karura_ausd": "4470605.31",
+        "astriddao_bai": "3273860.06"
+    },
+    {
+        "date": "2022-10-14",
+        "karura_ausd": "4440308.30",
+        "astriddao_bai": "3267654.59"
+    },
+    {
+        "date": "2022-10-15",
+        "karura_ausd": "4442338.31",
+        "astriddao_bai": "3294646.10"
+    },
+    {
+        "date": "2022-10-16",
+        "karura_ausd": "4443351.76",
+        "astriddao_bai": "3248092.41"
+    },
+    {
+        "date": "2022-10-17",
+        "karura_ausd": "4443892.27",
+        "astriddao_bai": "3244711.07"
+    },
+    {
+        "date": "2022-10-18",
+        "karura_ausd": "4443102.44",
+        "astriddao_bai": "3253195.44"
+    },
+    {
+        "date": "2022-10-19",
+        "karura_ausd": "4431995.63",
+        "astriddao_bai": "3249797.27"
+    },
+    {
+        "date": "2022-10-20",
+        "karura_ausd": "4424638.75",
+        "astriddao_bai": "3249256.47"
+    },
+    {
+        "date": "2022-10-21",
+        "karura_ausd": "4400355.72",
+        "astriddao_bai": "2776754.16"
+    },
+    {
+        "date": "2022-10-22",
+        "karura_ausd": "4352202.31",
+        "astriddao_bai": "2762070.19"
+    },
+    {
+        "date": "2022-10-23",
+        "karura_ausd": "4348712.30",
+        "astriddao_bai": "2732729.67"
+    },
+    {
+        "date": "2022-10-24",
+        "karura_ausd": "4344755.40",
+        "astriddao_bai": "2732591.44"
+    },
+    {
+        "date": "2022-10-25",
+        "karura_ausd": "4342759.78",
+        "astriddao_bai": "2822995.94"
+    },
+    {
+        "date": "2022-10-26",
+        "karura_ausd": "4342141.33",
+        "astriddao_bai": "2822883.38"
+    },
+    {
+        "date": "2022-10-27",
+        "karura_ausd": "4338715.78",
+        "astriddao_bai": "2675468.33"
+    },
+    {
+        "date": "2022-10-28",
+        "karura_ausd": "4321832.53",
+        "astriddao_bai": "2674170.39"
+    },
+    {
+        "date": "2022-10-29",
+        "karura_ausd": "4321468.87",
+        "astriddao_bai": "2675739.26"
+    },
+    {
+        "date": "2022-10-30",
+        "karura_ausd": "4322553.86",
+        "astriddao_bai": "2490112.30"
+    },
+    {
+        "date": "2022-10-31",
+        "karura_ausd": "4322348.86",
+        "astriddao_bai": "2490969.00"
+    },
+    {
+        "date": "2022-11-01",
+        "karura_ausd": "4321291.90",
+        "astriddao_bai": "2491603.36"
+    },
+    {
+        "date": "2022-11-02",
+        "karura_ausd": "4320755.79",
+        "astriddao_bai": "2489480.43"
+    },
+    {
+        "date": "2022-11-03",
+        "karura_ausd": "4316559.80",
+        "astriddao_bai": "2487974.24"
+    },
+    {
+        "date": "2022-11-04",
+        "karura_ausd": "4313336.14",
+        "astriddao_bai": "2489014.26"
+    },
+    {
+        "date": "2022-11-05",
+        "karura_ausd": "4313496.24",
+        "astriddao_bai": "2489727.61"
+    },
+    {
+        "date": "2022-11-06",
+        "karura_ausd": "4312483.00",
+        "astriddao_bai": "2901319.78"
+    },
+    {
+        "date": "2022-11-07",
+        "karura_ausd": "4323174.62",
+        "astriddao_bai": "2887426.96"
+    },
+    {
+        "date": "2022-11-08",
+        "karura_ausd": "4333366.23",
+        "astriddao_bai": "2885108.93"
+    },
+    {
+        "date": "2022-11-09",
+        "karura_ausd": "4230529.90",
+        "astriddao_bai": "2379370.59"
+    },
+    {
+        "date": "2022-11-10",
+        "karura_ausd": "4052743.84",
+        "astriddao_bai": "2318681.40"
+    },
+    {
+        "date": "2022-11-11",
+        "karura_ausd": "4045918.09",
+        "astriddao_bai": "2303933.84"
+    },
+    {
+        "date": "2022-11-12",
+        "karura_ausd": "3880715.86",
+        "astriddao_bai": "2304019.34"
+    },
+    {
+        "date": "2022-11-13",
+        "karura_ausd": "3876926.75",
+        "astriddao_bai": "2219572.68"
+    },
+    {
+        "date": "2022-11-14",
+        "karura_ausd": "3872416.98",
+        "astriddao_bai": "2211314.05"
+    },
+    {
+        "date": "2022-11-15",
+        "karura_ausd": "3824449.20",
+        "astriddao_bai": "2195614.78"
+    },
+    {
+        "date": "2022-11-16",
+        "karura_ausd": "3822449.08",
+        "astriddao_bai": "2195365.78"
+    },
+    {
+        "date": "2022-11-17",
+        "karura_ausd": "3823215.72",
+        "astriddao_bai": "2193737.78"
+    },
+    {
+        "date": "2022-11-18",
+        "karura_ausd": "3817913.35",
+        "astriddao_bai": "2188396.19"
+    },
+    {
+        "date": "2022-11-19",
+        "karura_ausd": "3821115.39",
+        "astriddao_bai": "2188186.69"
+    },
+    {
+        "date": "2022-11-20",
+        "karura_ausd": "3821616.06",
+        "astriddao_bai": "2173797.12"
+    },
+    {
+        "date": "2022-11-21",
+        "karura_ausd": "3817991.84",
+        "astriddao_bai": "2187396.69"
+    },
+    {
+        "date": "2022-11-22",
+        "karura_ausd": "3817802.19",
+        "astriddao_bai": "2188090.83"
+    },
+    {
+        "date": "2022-11-23",
+        "karura_ausd": "3816832.91",
+        "astriddao_bai": "2187032.31"
+    },
+    {
+        "date": "2022-11-24",
+        "karura_ausd": "3817815.69",
+        "astriddao_bai": "2171802.31"
+    },
+    {
+        "date": "2022-11-25",
+        "karura_ausd": "3817630.07",
+        "astriddao_bai": "2171298.27"
+    },
+    {
+        "date": "2022-11-26",
+        "karura_ausd": "3817830.07",
+        "astriddao_bai": "2170808.30"
+    },
+    {
+        "date": "2022-11-27",
+        "karura_ausd": "3817781.99",
+        "astriddao_bai": "2177817.02"
+    },
+    {
+        "date": "2022-11-28",
+        "karura_ausd": "3818088.61",
+        "astriddao_bai": "2176006.15"
+    },
+    {
+        "date": "2022-11-29",
+        "karura_ausd": "3818032.27",
+        "astriddao_bai": "2175091.65"
+    },
+    {
+        "date": "2022-11-30",
+        "karura_ausd": "3818044.25",
+        "astriddao_bai": "2175404.31"
+    },
+    {
+        "date": "2022-12-01",
+        "karura_ausd": "3818008.32",
+        "astriddao_bai": "2174033.81"
+    },
+    {
+        "date": "2022-12-02",
+        "karura_ausd": "3819228.54",
+        "astriddao_bai": "2174182.05"
+    },
+    {
+        "date": "2022-12-03",
+        "karura_ausd": "3820200.24",
+        "astriddao_bai": "2174182.05"
+    },
+    {
+        "date": "2022-12-04",
+        "karura_ausd": "3820860.18",
+        "astriddao_bai": "2170798.46"
+    },
+    {
+        "date": "2022-12-05",
+        "karura_ausd": "3820830.54",
+        "astriddao_bai": "2170725.53"
+    },
+    {
+        "date": "2022-12-06",
+        "karura_ausd": "3821728.75",
+        "astriddao_bai": "2161695.63"
+    },
+    {
+        "date": "2022-12-07",
+        "karura_ausd": "3815363.62",
+        "astriddao_bai": "2161713.97"
+    },
+    {
+        "date": "2022-12-08",
+        "karura_ausd": "3814478.02",
+        "astriddao_bai": "2159572.92"
+    },
+    {
+        "date": "2022-12-09",
+        "karura_ausd": "3814391.69",
+        "astriddao_bai": "2154703.09"
+    },
+    {
+        "date": "2022-12-10",
+        "karura_ausd": "3814455.29",
+        "astriddao_bai": "2152376.46"
+    },
+    {
+        "date": "2022-12-11",
+        "karura_ausd": "3813499.13",
+        "astriddao_bai": "2152641.50"
+    },
+    {
+        "date": "2022-12-12",
+        "karura_ausd": "3813428.97",
+        "astriddao_bai": "2152831.19"
+    },
+    {
+        "date": "2022-12-13",
+        "karura_ausd": "3812849.48",
+        "astriddao_bai": "2147844.37"
+    },
+    {
+        "date": "2022-12-14",
+        "karura_ausd": "3813357.97",
+        "astriddao_bai": "2143795.98"
+    },
+    {
+        "date": "2022-12-15",
+        "karura_ausd": "3815617.97",
+        "astriddao_bai": "2143926.24"
+    },
+    {
+        "date": "2022-12-16",
+        "karura_ausd": "3795540.40",
+        "astriddao_bai": "2144485.47"
+    },
+    {
+        "date": "2022-12-17",
+        "karura_ausd": "3795166.43",
+        "astriddao_bai": "2151998.49"
+    },
+    {
+        "date": "2022-12-18",
+        "karura_ausd": "3787712.73",
+        "astriddao_bai": "2151653.73"
+    },
+    {
+        "date": "2022-12-19",
+        "karura_ausd": "3787559.59",
+        "astriddao_bai": "2134304.02"
+    },
+    {
+        "date": "2022-12-20",
+        "karura_ausd": "3786333.68",
+        "astriddao_bai": "2080001.09"
+    },
+    {
+        "date": "2022-12-21",
+        "karura_ausd": "3786333.68",
+        "astriddao_bai": "2082271.12"
+    },
+    {
+        "date": "2022-12-22",
+        "karura_ausd": "3786386.36",
+        "astriddao_bai": "2086328.48"
+    },
+    {
+        "date": "2022-12-23",
+        "karura_ausd": "3786327.78",
+        "astriddao_bai": "2071492.34"
+    },
+    {
+        "date": "2022-12-24",
+        "karura_ausd": "3785288.86",
+        "astriddao_bai": "2060339.67"
+    },
+    {
+        "date": "2022-12-25",
+        "karura_ausd": "3785188.67",
+        "astriddao_bai": "2055549.28"
+    },
+    {
+        "date": "2022-12-26",
+        "karura_ausd": "3784988.67",
+        "astriddao_bai": "2055793.43"
+    },
+    {
+        "date": "2022-12-27",
+        "karura_ausd": "3784593.94",
+        "astriddao_bai": "2052990.35"
+    },
+    {
+        "date": "2022-12-28",
+        "karura_ausd": "3784548.50",
+        "astriddao_bai": "2049057.94"
+    },
+    {
+        "date": "2022-12-29",
+        "karura_ausd": "3777708.84",
+        "astriddao_bai": "2042175.55"
+    },
+    {
+        "date": "2022-12-30",
+        "karura_ausd": "3777708.84",
+        "astriddao_bai": "2036102.59"
+    },
+    {
+        "date": "2022-12-31",
+        "karura_ausd": "3775991.24",
+        "astriddao_bai": "2030999.67"
+    }
+]

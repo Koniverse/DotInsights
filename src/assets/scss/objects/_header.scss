@@ -90,7 +90,7 @@
 		font-size: 18px;
 		line-height: 30px;
 		padding: 10px 20px;
-		color: #555;
+		color: #ccc;
 
 		&:hover {
 			color: $primary-color;
@@ -269,7 +269,7 @@
 	}
 }
 
-@media screen and(min-width: 1400px) {
+@media screen and(min-width: 1600px) {
 	.header {
 		.header-inner {
 			padding: 47px 0 20px;

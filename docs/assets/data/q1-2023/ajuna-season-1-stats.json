@@ -1,0 +1,282 @@
+[
+  {
+    "date": "2023-02-10",
+    "avatars": "1795",
+    "trades": "24",
+    "forged": "296",
+    "minted": "2777",
+    "players": "89"
+  },
+  {
+    "date": "2023-02-11",
+    "avatars": "12430",
+    "trades": "495",
+    "forged": "15364",
+    "minted": "69070",
+    "players": "552"
+  },
+  {
+    "date": "2023-02-12",
+    "avatars": "15762",
+    "trades": "1086",
+    "forged": "30172",
+    "minted": "126721",
+    "players": "713"
+  },
+  {
+    "date": "2023-02-13",
+    "avatars": "18346",
+    "trades": "1666",
+    "forged": "46347",
+    "minted": "188215",
+    "players": "813"
+  },
+  {
+    "date": "2023-02-14",
+    "avatars": "20244",
+    "trades": "2390",
+    "forged": "60018",
+    "minted": "239853",
+    "players": "876"
+  },
+  {
+    "date": "2023-02-15",
+    "avatars": "21124",
+    "trades": "4011",
+    "forged": "75407",
+    "minted": "297620",
+    "players": "965"
+  },
+  {
+    "date": "2023-02-16",
+    "avatars": "18915",
+    "trades": "5542",
+    "forged": "77602",
+    "minted": "303197",
+    "players": "995"
+  },
+  {
+    "date": "2023-02-17",
+    "avatars": "18017",
+    "trades": "6270",
+    "forged": "78569",
+    "minted": "305836",
+    "players": "1001"
+  },
+  {
+    "date": "2023-02-18",
+    "avatars": "17964",
+    "trades": "6543",
+    "forged": "79296",
+    "minted": "308472",
+    "players": "1030"
+  },
+  {
+    "date": "2023-02-19",
+    "avatars": "17438",
+    "trades": "6771",
+    "forged": "79719",
+    "minted": "309454",
+    "players": "1039"
+  },
+  {
+    "date": "2023-02-20",
+    "avatars": "16805",
+    "trades": "7092",
+    "forged": "80097",
+    "minted": "310146",
+    "players": "1043"
+  },
+  {
+    "date": "2023-02-21",
+    "avatars": "16282",
+    "trades": "7309",
+    "forged": "80402",
+    "minted": "310738",
+    "players": "1050"
+  },
+  {
+    "date": "2023-02-22",
+    "avatars": "16118",
+    "trades": "7595",
+    "forged": "80603",
+    "minted": "311294",
+    "players": "1054"
+  },
+  {
+    "date": "2023-02-23",
+    "avatars": "16092",
+    "trades": "7752",
+    "forged": "80795",
+    "minted": "311907",
+    "players": "1058"
+  },
+  {
+    "date": "2023-02-24",
+    "avatars": "16055",
+    "trades": "7992",
+    "forged": "80953",
+    "minted": "312453",
+    "players": "1064"
+  },
+  {
+    "date": "2023-02-25",
+    "avatars": "16076",
+    "trades": "8182",
+    "forged": "81317",
+    "minted": "313720",
+    "players": "1069"
+  },
+  {
+    "date": "2023-02-26",
+    "avatars": "16327",
+    "trades": "8440",
+    "forged": "81651",
+    "minted": "315223",
+    "players": "1077"
+  },
+  {
+    "date": "2023-02-27",
+    "avatars": "16514",
+    "trades": "8686",
+    "forged": "82035",
+    "minted": "316816",
+    "players": "1084"
+  },
+  {
+    "date": "2023-02-28",
+    "avatars": "16387",
+    "trades": "8975",
+    "forged": "82203",
+    "minted": "317226",
+    "players": "1086"
+  },
+  {
+    "date": "2023-03-01",
+    "avatars": "16018",
+    "trades": "9283",
+    "forged": "82566",
+    "minted": "318094",
+    "players": "1090"
+  },
+  {
+    "date": "2023-03-02",
+    "avatars": "15862",
+    "trades": "9358",
+    "forged": "82614",
+    "minted": "318094",
+    "players": "1090"
+  },
+  {
+    "date": "2023-03-03",
+    "avatars": "15652",
+    "trades": "9509",
+    "forged": "82680",
+    "minted": "318094",
+    "players": "1090"
+  },
+  {
+    "date": "2023-03-04",
+    "avatars": "15459",
+    "trades": "9733",
+    "forged": "82767",
+    "minted": "318094",
+    "players": "1090"
+  },
+  {
+    "date": "2023-03-05",
+    "avatars": "15293",
+    "trades": "9791",
+    "forged": "82826",
+    "minted": "318094",
+    "players": "1090"
+  },
+  {
+    "date": "2023-03-06",
+    "avatars": "15166",
+    "trades": "9847",
+    "forged": "82870",
+    "minted": "318094",
+    "players": "1090"
+  },
+  {
+    "date": "2023-03-07",
+    "avatars": "15131",
+    "trades": "9876",
+    "forged": "82879",
+    "minted": "318094",
+    "players": "1090"
+  },
+  {
+    "date": "2023-03-08",
+    "avatars": "14799",
+    "trades": "10131",
+    "forged": "82976",
+    "minted": "318094",
+    "players": "1090"
+  },
+  {
+    "date": "2023-03-09",
+    "avatars": "14561",
+    "trades": "10325",
+    "forged": "83050",
+    "minted": "318094",
+    "players": "1090"
+  },
+  {
+    "date": "2023-03-10",
+    "avatars": "14467",
+    "trades": "10571",
+    "forged": "83097",
+    "minted": "318094",
+    "players": "1090"
+  },
+  {
+    "date": "2023-03-11",
+    "avatars": "14406",
+    "trades": "10641",
+    "forged": "83121",
+    "minted": "318094",
+    "players": "1090"
+  },
+  {
+    "date": "2023-03-12",
+    "avatars": "14334",
+    "trades": "10737",
+    "forged": "83144",
+    "minted": "318094",
+    "players": "1090"
+  },
+  {
+    "date": "2023-03-13",
+    "avatars": "14150",
+    "trades": "10795",
+    "forged": "83197",
+    "minted": "318094",
+    "players": "1090"
+  },
+  {
+    "date": "2023-03-14",
+    "avatars": "14069",
+    "trades": "10867",
+    "forged": "83225",
+    "minted": "318094",
+    "players": "1090"
+  },
+  {
+    "date": "2023-03-15",
+    "avatars": "14020",
+    "trades": "10887",
+    "forged": "83239",
+    "minted": "318094",
+    "players": "1090"
+  },
+  {
+    "date": "2023-03-16",
+    "avatars": "14020",
+    "trades": "10891",
+    "forged": "83239",
+    "minted": "318094",
+    "players": "1090"
+  }
+]
