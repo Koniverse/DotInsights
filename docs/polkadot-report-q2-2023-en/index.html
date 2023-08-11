@@ -179,7 +179,7 @@
 
 <div id="main-content" class="main-content">
 
-	<div class="section section-reports-hero" id="polkadot-staking-report">
+	<div class="section section-reports-hero" id="polkadot-deep-dive">
 		<div class="section-shape hero-shape-dot move-vertical-reversed">
 			<img src="../assets/images/shapes/shape-dot-02.png" alt="Polkadot" loading="lazy" width="213" height="206"/>
 		</div>
@@ -226,59 +226,14 @@
 			<div class="section-header">
 				<div class="container">
 					<h1 class="section-title">Polkadot
-						<span class="sub-title">Staking Report</span>
+						<span class="sub-title">Deep Dive</span>
 					</h1>
 					<h2 class="section-sub-title">Q2 2023</h2>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- /.section-reports-hero -->
-
-	<div class="section section-introduction" id="introduction">
-		<div class="section-content">
-			<div class="container">
-				<div class="section-header">
-					<h2 class="section-title">Introduction</h2>
-				</div>
-
-				<div class="text-wrap">
-					<div class="text">
-						<p>
-							As Proof-of-Work consensus protocols proved their inefficiency due to resource
-							consumption and slow transaction speeds, Proof-of-Stake became
-							popular with next-generation blockchains. Polkadot develops a variant of
-							Proof-of-Stake called <a
-							href="https://research.web3.foundation/Polkadot/protocols/NPoS"
-							target="_blank"
-							rel="nofollow">Nominated Proof-of-Stake</a>, in which stakeholders get to select
-							which validators to support with tokens. Nominators receive staking rewards when
-							their chosen validators act honestly, but have their collateral slashed when the
-							validators exhibit malicious behaviors. This way, nominators have economic
-							incentives to select trustworthy validators and contribute to the security of the
-							Polkadot network.
-						</p>
-						<p>
-							In order to lower the staking entry barrier and further decentralize the network,
-							Polkadot introduced nomination pools in November 2022. Nomination pools allow token
-							holders to stake as low as 1 DOT and to entrust nomination management to the pool
-							operators. As a result, there are currently four ways to stake DOT natively: running
-							a validator, nominating directly, opening a nomination pool, and joining a
-							nomination pool.
-						</p>
-						<p>
-							After seven months of nomination pools, this very first in-depth <b>Polkadot Staking
-							Report</b> by SubWallet and Dotinsights will dive into the state of staking overall and
-							at all four levels. We would like to thank the Parity Technologies, Subsquid,
-							Polkaholic, and Polkawatch teams for their help and contribution to this
-							report.
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- /.section-introduction -->
+	<!-- /#polkadot-deep-dive -->
 
 	<div class="section section-key-takeaways" id="key-takeaways">
 		<div class="container">
@@ -290,65 +245,67 @@
 					<ul class="key-takeaways-list">
 						<li><i class="fa-regular fa-arrow-circle-right"></i>
 							<p>
-								DOT total supply <a href="#locked-in-parachain-chart" class="scroll-to">grew consistently</a> from 1.25B on November 1, 2022 to 1.32B on May 31,
-								2023, with an average weekly increase rate of 0.19%.
+								Daily core active developers reached an all-time high of 181 developers on March 22. As of June 1, Polkadot rose from third to second place in terms of ecosystem-wide developer count with 1,923 developers.
 							</p>
 						</li>
 						<li><i class="fa-regular fa-arrow-circle-right"></i>
 							<p>
-								Polkadot <a href="#nomination-pool-stake-member-chart" class="scroll-to">nomination pools</a> officially surpassed 4M DOT in total stake and 10K in total
-								pool members at the beginning of May. <a href="#daily-reward-nominator-versus-pool-chart" class="scroll-to">Daily pool rewards</a> rose rapidly from 3.22 DOT on
-								November 2, 2022 to a maximum of 2.83K DOT on May 22, 2023.
+								Since its launch on March 28, fast unstake has been used at least once almost every day, with an average of six unique users and 2.38K DOT unbonded per day. Polkadot nomination pools continued to grow
+								rapidly, attaining 12,268 members and 5.32M DOT by the end of June.
 							</p>
 						</li>
 						<li><i class="fa-regular fa-arrow-circle-right"></i>
 							<p>
-								The recently implemented <a href="#fast-unstake-chart" class="scroll-to">fast unstake</a> feature observed initial usage. By May 31, 2023, a
-								total of 122.23K DOT was withdrawn via fast unstake.
+								OpenGov support rates on both Polkadot and Kusama were low, averaging 1.44% on Polkadot and 3.33% on Kusama, with treasury tracks having the lowest rates.
 							</p>
 						</li>
 						<li><i class="fa-regular fa-arrow-circle-right"></i>
 							<p>
-								Polkadot <a href="#min-active-stake-chart" class="scroll-to">minimum active nominator stake</a> almost doubled from 187.35 DOT to 363.98 DOT
-								within seven months from November 2022. On average, there was a noticeable increase of
-								15.01 DOT every 21 to 40 days.
+								Karura took a strong lead in terms of all-time XCM transfer count with 85,412 transfers, while Moonbeam topped the Q2 chart with 7,499 transfers in this quarter alone. By July 20, XCM v3 had been used to send
+								5,972 messages across 44 Polkadot channels and 11,565 messages across 73 Kusama channels.
 							</p>
 						</li>
 						<li><i class="fa-regular fa-arrow-circle-right"></i>
 							<p>
-								The number of <a href="#oversubscribed-validator-chart" class="scroll-to">oversubscribed validators</a> went through a remarkable 15-time decrease
-								starting in mid-January, when the maximum number of rewardable nominators per active
-								validator doubled from 256 to 512.
+								In Q2 2023, the total TVL of DeFi parachains on Polkadot and Kusama had a very brief surge period, peaking early at $236.12M on April 14, before going on a downward trend and ending up at $146.77M on June 30.
 							</p>
 						</li>
 						<li><i class="fa-regular fa-arrow-circle-right"></i>
 							<p>
-								Validators’ self-stake and commission were among criteria that nominators used when
-								choosing validators. Specifically, most nominators tended to back validators with <a href="#self-stake-versus-nominator-chart" class="scroll-to">lower
-								self-stakes</a> and <a href="#commission-versus-nominator-chart" class="scroll-to">lower commission rates</a>.
+								Arthswap topped the list of DEX protocols on Polkadot almost throughout Q2, followed by HydraDX and StellaSwap. By the end of June, HydraDX only trailed Arthswap by $264.29K. Moonwell Artemis and Bifrost took
+								the lead for lending and liquid staking, respectively.
 							</p>
 						</li>
 						<li><i class="fa-regular fa-arrow-circle-right"></i>
 							<p>
-								<a href="#nominator-versus-validator-chart" class="scroll-to">Total validator count</a> remained relatively stable between 917 and 990, yet total
-								nominator count surged in November 2022 and reached a peak of 47,672 on December 5,
-								2022. Afterward, it gradually declined and settled at 44,241 on May 31, 2023.
+								Following Binance’s announcement of support for USDT on Polkadot, USDT supply jumped up by 125.02% from 8M to 18M USDT.
 							</p>
 						</li>
 						<li><i class="fa-regular fa-arrow-circle-right"></i>
 							<p>
-								<a href="#nominator-versus-nominator-stake-chart" class="scroll-to">Validator stake</a> fluctuated in the range of 1.59M to 2.13M DOT. By contrast, nominator
-								stake experienced larger changes, such as a major drop of 103.40M DOT on May 4.
+								Singular’s NFT sales volume began to dwindle in the second half of Q2 due to the phasing out of NFT implementation on Kusama. Three NFT marketplaces launched on Astar this quarter included Paras, ArtZero and
+								Bluez.
 							</p>
+						</li>
+						<li><i class="fa-regular fa-arrow-circle-right"></i>
+							<p>
+								Starting with a count of 25 on March 29, WASM smart contracts on Aleph Zero enjoyed a development spurt in early April, reaching 308 contracts on April 9, with an average rate of 25.67 new contracts per day.
+								On the contrary, WASM smart contracts grew almost throughout Q2 on Astar yet very slowly. As of June 30, there were 46 smart contracts and 513,734 active users on Astar mainnet.
+							</p>
+						</li>
+						<li><i class="fa-regular fa-arrow-circle-right"></i>
+							<p>
+								In terms of cold wallets, there are now three main options for Polkadot users: Ledger, Polkadot Vault, and Keystone. Whereas the first is completely a hardware wallet, the latter two offer an air-gapped
+								experience, which brings an extra layer of security. </p>
 						</li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- /.section-key-takeaways -->
+	<!-- /#key-takeaways -->
 
-	<div class="section section-staking-overview" id="staking-overview">
+	<div class="section section-ecosystem-overview" id="ecosystem-overview">
 		<div class="section-shapes">
 			<div
 				class="section-shape shape-corner-left-bottom shape-radial-circle purple shape-corner-blur-1"></div>
@@ -361,195 +318,59 @@
 				<h2 class="section-title">Staking Overview</h2>
 			</div>
 			<div class="container">
-				<div class="text-wrap">
-					<div class="text">
-						<p>
-							Overall, DOT price correlated moderately with staking ratio (Pearson’s correlation
-							coefficient <i>r</i> = 0.47). However, fluctuations in price sometimes preceded those in
-							staking
-							ratio, such as in late-November 2022, late-January 2023, and early May 2023. The drastic
-							drop from 48.68% to 40.78% in staking ratio on May 4 led to DOT inflation rate falling from
-							7.37% to 6.58%, and reward rate rising from 15.14% to 16.13%. In <a
-							href="https://research.web3.foundation/Polkadot/overview/token-economics"
-							target="_blank"
-							rel="nofollow">theory</a>, when staking ratio
-							drops below the ideal threshold of 50%, inflation rate goes down and reward rate goes up to
-							incentivize token holders to stake more.
-						</p>
-						<p>
-							By contrast, there was no apparent correlation between staking ratio and daily DOT rewards
-							(Pearson’s correlation coefficient <i>r</i> = -0.003). The latter had four extreme peaks (on
-							December 5, January 19, March 22, and April 27, respectively), which occurred because
-							multiple validators with high total stake received rewards. Other than that, the reward
-							patterns were relatively stable throughout the period.
-						</p>
-					</div>
-				</div>
-
-				<div id="staking-ratio-chart" class="block-report-chart">
-					<div class="block-content">
-						<div class="block-chart-group">
-							<div class="block-chart-child">
-								<h3 class="block-chart-heading">DOT Staking Ratio, Inflation Rate & Price</h3>
-								<div class="block-chart-body">
-									<div class="block-chart"
-									     data-chart-name="dot-staking-ratio-inflation-rate-price"></div>
-								</div>
-							</div>
-							<div class="block-chart-child">
-								<h3 class="block-chart-heading">Staking Ratio & Daily DOT Rewards</h3>
-								<div class="block-chart-body">
-									<div class="block-chart" data-chart-name="staking-ratio-daily-dot-rewards"></div>
-								</div>
-							</div>
-						</div>
-						<div class="block-chart-footer">
-							<div class="block-chart-source">
-								<p>Source: Subsquid, Polkaholic, CoinGecko</p>
-							</div>
+				<div id="financial-status-development-activity" class="block-text">
+					<h3 class="heading">Financial Status & Development Activity</h3>
+					<div class="text-wrap">
+						<div class="text">
+							<p>
+								Development activity is defined as the number of development-related GitHub events happening on Parity Technologies’ public repositories, averaged across the past seven days. This metric mostly followed a
+								similar pattern to those of DOT price and KSM price except in three short periods. The first period was in mid-April, when development activity did not change much whereas both DOT and KSM slowly climbed up
+								to their respective highest prices of the quarter – $6.92 for DOT on April 18 and $37.59 for KSM on April 16 – before having a sudden drop on April 19. In contrast, in late May and mid-June, token prices
+								stayed relatively stable while development activity peaked at 613.71 on May 28, and 600.29 on June 16.
+							</p>
 						</div>
 					</div>
 				</div>
-
-				<div class="text-wrap">
-					<div class="text">
-						<p>
-							DOT total supply increased steadily from 1.25B on November 1, 2022 to 1.32B on May 31, 2023,
-							with an average rate of 0.19% in weekly increments. Total DOT locked in parachain leases
-							rose at a slower rate from 120.01M to 121.43M – that is, from 9.62% to 9.21% of the supply.
-							The two metrics shared a highly similar pattern (Pearson’s correlation coefficient <i>r</i>
-							=
-							0.95).
-						</p>
-						<p>
-							Unlike supply and total DOT locked in parachains, total stake experienced more fluctuations,
-							starting at 638.13M (51.13% staking ratio) on November 1, 2022 and ending up at 569.13M
-							(43.14% staking ratio) on May 31, 2023, with a few big changes in between. Most of the big
-							changes (except for two declines in mid-March and in early May, respectively) occurred due
-							to <a
-							href="https://dotinsights.subwallet.app/polkadot-report-q1-2023-en/#decentralization-staking"
-							target="_blank"
-							rel="nofollow">whale movements</a>.
-						</p>
-					</div>
-				</div>
-
-				<div id="locked-in-parachain-chart" class="block-report-chart"
-				     style="--chart-top-spacing: 100px; --chart-bot-spacing: 100px; --chart-ratio: 35%; --chart-height: 500px;">
-					<div class="section-shape shape-blur-circle shape-position-ml green"></div>
-					<div class="section-shape shape-blur-circle shape-position-br purple"></div>
+				<div class="block-report-chart">
+					<div class="section-shape shape-blur-circle shape-position-tl"></div>
+					<div class="section-shape shape-blur-circle shape-position-mr"></div>
 					<div class="block-content">
-						<h3 class="block-chart-heading">Total DOT Staked & Locked in Parachains Versus Total DOT
-							Supply</h3>
+						<h4 class="block-chart-heading">Token Price vs. Development Activity</h4>
 						<div class="block-chart-body">
-							<div class="block-chart" data-chart-name="total-dot-staked-locked"></div>
+							<div class="block-chart" data-chart-name="price-dev-act"></div>
 						</div>
 						<div class="block-chart-footer">
 							<div class="block-chart-source">
-								<p>Source: Subsquid</p>
+								<p>Source: Santiment</p>
+								<p>Note: Development activities counted by GitHub events happening on Parity Tech's
+									public repos.</p>
 							</div>
 						</div>
 					</div>
 				</div>
-
-				<div class="text-wrap">
+				<div class="block-text">
 					<div class="text">
 						<p>
-							The drops in total stake were particularly interesting. On November 25, 2022, a noticeable
-							35.51M DOT was unbonded by four whales, specifically <a
-							href="https://polkadot.subscan.io/account/14mE5hA3rnJmBJ9yqcgdivJ8BT6qKChyUCYtJq5n44UhAbej"
-							target="_blank"
-							rel="nofollow">10.79M</a>, <a
-							href="https://polkadot.subscan.io/account/149zYw6W8jtLLJGaizfsfSLubowjW48uMxDAGvn1uV6emN7"
-							target="_blank"
-							rel="nofollow">8.99M</a>, <a
-							href="https://polkadot.subscan.io/account/16VWmNbvkrmfHunFuhWsKetpi2NxFzMKTLH3irKrR29x7NFz"
-							target="_blank"
-							rel="nofollow">9.19M</a> (this whale also
-							unbonded 30.6M DOT on January 24, 2023) and <a
-							href="https://polkadot.subscan.io/account/15Um6atyqLWW6TDRbRQ6mthGLC6K55cWa8uzgx63tk249fgd"
-							target="_blank"
-							rel="nofollow">6.54M</a> DOT. These funds were withdrawn and moved
-							away after 28 days. Coincidentally, the four whale accounts shared one <a
-							href="https://polkadot.subscan.io/account/16hyZ4jo1zNEvDU66KqhkYWdprnJcPt5NgD3tCwLcGuRysCe"
-							target="_blank"
-							rel="nofollow">proxy account</a>, which
-							also acted as a proxy for one <a
-							href="https://polkadot.subscan.io/account/129Mmtk1oF8i1YPfvHJmRaH8YMMGsqwkcJwjGy6jLos9HEMR"
-							target="_blank"
-							rel="nofollow">Kraken account</a>.
-						</p>
-						<p>
-							On the contrary, the two declines in March and May were not due to unstaking but to
-							validator rotation. Every day, a new active set of 297 out of 900+ validators is elected,
-							meaning that some validators are removed and some are newly added. Usually, this rotation
-							does not lead to big changes in total stake. However, on March 19 and May 4, the new active
-							validator sets had significantly lower nominator stake backing them than the previous era’s
-							sets, causing the amount of total stake to drop by 24.32M DOT and 103.30M DOT, respectively.
+							After rising to its year-to-date maximum of 68.33 on February 16, the 30-day average number of code commits to Parity Technologies’ public repositories fluctuated between 52.53 and 67.97 commits. Similarly, the
+							number of core active developers – defined as the number of distinct GitHub users that made at least one commit to the repositories during the past 30 days – reached its all-time high of 181 developers on March
+							22, and then remained fairly consistent, going below 150 only twice on April 30 and May 1. The two metrics correlated strongly (Pearson’s correlation coefficient <i>r</i> = 0.79).
 						</p>
 					</div>
 				</div>
-
-				<div id="validator-stake-distribution-may3-may4-may31-chart" class="block-report-chart">
-					<div class="block-content">
-						<h3 class="block-chart-heading">Total stake distribution among active validators On May 3, May 4
-							and May 31</h3>
-						<div class="block-chart-body">
-							<div class="block-chart" data-chart-name="total-stake-distribution"
-							     data-chart-source="inline"></div>
-						</div>
-						<div class="block-chart-footer">
-							<div class="block-chart-source">
-								<p>Source: Subsquid</p>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="text-wrap">
-					<div class="text">
-						<p>
-							The rotation on May 4, 2023 saw 48 validators being replaced. Whereas each of the removed
-							validators had at least 1.81M DOT of total stake backing them, the newly active validators
-							only had at most 2.10M DOT. As a result, the total stake distribution among active
-							validators underwent a major shift. The number of validators with total stake less than
-							2.01M DOT rocketed from 92 on May 3 to 253 on May 4, while the number of validators with
-							2.01-2.61M DOT of total stake plummeted from 195 to 44. Noticeably, the removal of two
-							validators each with 12.21M DOT of total stake greatly narrowed the distribution spread, as
-							evidenced by the decrease in standard deviation from 867.29K DOT to 182.19K DOT.
-						</p>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
-	<!-- /.section-staking-overview -->
-
-	<div class="section section-validators-nominators" id="validators-nominators">
-		<div class="section-content">
-			<div class="section-header">
-				<h2 class="section-title">Validators & Nominators</h2>
-			</div>
-
-			<div class="container">
-				<div id="validator-rotation-network-vulnerability" class="block-text">
-					<h3 class="heading">Validator Rotation & Network Vulnerability</h3>
-				</div>
-				<div id="nominator-versus-validator-chart" class="block-report-chart" style="--chart-top-spacing: 34px;">
+				<div class="block-report-chart">
 					<div class="section-shape shape-blur-circle shape-position-tl green"></div>
 					<div class="section-shape shape-blur-circle shape-position-br"></div>
 					<div class="block-content">
 						<div class="block-chart-group">
 							<div class="block-chart-child">
-								<h3 class="block-chart-heading">Total Nominator count & Total Validator count</h3>
+								<h4 class="block-chart-heading">Code commits versus active developers</h4>
 								<div class="block-chart-body">
 									<div class="block-chart"
 									     data-chart-name="total-nominator-count-total-validator-count"></div>
 								</div>
 							</div>
 							<div id="nominator-versus-nominator-stake-chart" class="block-chart-child">
-								<h3 class="block-chart-heading">Nominator Stake & Validator Stake</h3>
+								<h4 class="block-chart-heading">Distribution of One-time, part-time, and full-time developers </h4>
 								<div class="block-chart-body">
 									<div class="block-chart" data-chart-name="nominator-stake-validator-stake"></div>
 								</div>
@@ -557,107 +378,85 @@
 						</div>
 						<div class="block-chart-footer">
 							<div class="block-chart-source">
-								<p>Source: Subquid</p>
+								<p>Sources: Token Terminal, Electric Capital</p>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="text-wrap">
+				<div class="block-text">
 					<div class="text">
-						<p>While total validator count varied very little between 917 and 990, total nominator count
-							experienced a significant rise in November 2022 and reached a peak of 47,672 on December 5,
-							2022, before gradually decreasing and ending up at 44,241 on May 31, 2023. In terms of stake
-							amount, validator stake and nominator stake did not correlate. Validator stake mostly stayed
-							between 1.59M and 1.90M DOT before March 17, and increased to the range of 1.91M-2.13M DOT
-							afterward. On May 4, nominator stake lost 103.40M DOT whereas validator stake gained 102.46K
-							DOT, pulling validators’ share of total stake from 0.31% to the maximum 0.39%.
-						</p>
-						<p>As mentioned above, the active set of 297 validators change every day on the brink of a new
-							era. A look at daily new active validators revealed an average count of 13. Even at its peak
-							on May 4, there were only 48 new validators added to the active set, which makes up 16.16%
-							of the total set. This points to a lack of diversity; in fact, since November 2022, the
-							total number of unique active validators only increased from 297 to 591 whereas total
-							validator count had reached 987 by May 31.
-						</p>
-						<p>
-							Note that from February 23, 2023 onward, the share among validators with unchanged,
-							decreased, and increased total stake experienced much more volatility compared to that in
-							the previous period, partly due to more dramatic fluctuations in new active validators.
-						</p>
-					</div>
-				</div>
-				<div id="active-validator-chart" class="block-report-chart">
-					<div class="block-content">
-						<div class="block-chart-group">
-							<div class="block-chart-child">
-								<h3 class="block-chart-heading">Total Unique Active Validators & New Active
-									Validators</h3>
-								<div class="block-chart-body">
-									<div class="block-chart"
-									     data-chart-name="total-unique-active-validator-new-active-validators"></div>
-								</div>
-							</div>
-							<div class="block-chart-child">
-								<h3 class="block-chart-heading">Validators With Changes Versus With No Changes In Total
-									Stake</h3>
-								<div class="block-chart-body">
-									<div class="block-chart"
-									     data-chart-name="validator-with-changes-versus-with-no-changes-in-total-stake"></div>
-								</div>
-							</div>
-						</div>
-						<div class="block-chart-footer">
-							<div class="block-chart-source">
-								<p>Source: Subquid</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="text-wrap">
-					<div class="text">
-						<p>In every era, the lowest total stake among active validators is indicative of how vulnerable
-							the Polkadot network is. Since November 2022, the two most drastic drops in minimum total
-							stake occurred on November 25, 2022 (from 1.79M to 1.53M DOT) and May 4, 2023 (from 1.78M to
-							1.41M DOT), which coincided with the <a href="#staking-overview" class="scroll-to">two major declines in total stake</a>. The network went
-							through its most vulnerable point on December 27, 2022, when the minimum total stake came
-							down to 1.24M DOT.
-						</p>
-					</div>
-				</div>
-				<div id="min-validator-total-stake-chart" class="block-report-chart">
-					<div class="section-shape shape-blur-circle shape-position-ml green"></div>
-					<div class="section-shape shape-blur-circle shape-position-br"></div>
-					<div class="block-content">
-						<h3 class="block-chart-heading">Total Stake distribution among active validators</h3>
-						<div class="block-chart-body">
-							<div class="block-chart"
-							     data-chart-name="total-stake-distribution-among-active-validators"></div>
-						</div>
-						<div class="block-chart-footer">
-							<div class="block-chart-source">
-								<p>Source: Subsquid</p>
-							</div>
-						</div>
+						<p>Ecosystem-wide development activity in the first half of 2023 continued its trend from 2022. According to <a href="https://www.developerreport.com/">Electric Capital</a>, as of June 1, Polkadot maintained its
+							second place in terms of full-time developer
+							count
+							with 645 developers, and rose from third to second place in terms of total developer count with 1,923 developers. The percentage of full-time developers had barely changed since the beginning of 2023, with an
+							average of 33.93%.</p>
 					</div>
 				</div>
 
-				<div id="nominators-preferences" class="block-text">
-					<h3 class="heading">Nominators’ Preferences</h3>
+				<div id="staking" class="block-text" style="--block-top-spacing: 100px; --block-bottom-spacing: 100px">
+					<h3 class="heading">Staking</h3>
+					<div class="text-wrap">
+						<div class="text">
+							<p>
+								When it comes to staking on Polkadot, one of the most noteworthy development points in 2023 was the introduction of <a href="https://polkadot.subsquare.io/democracy/referendum/111">fast unstake</a>, which
+								allows stakers to bypass the usual 28-day unbonding period. Since its
+								implementation on March 28, fast unstake has been used at least once almost every day, with an average of six unique users and 2.38K DOT unbonded per day. The number of unique users was remarkably high in
+								late June, reaching a maximum of 29 users on June 21. The amount of DOT unbonded observed two big peaks: 20.25K DOT on May 12 and 26.26K DOT on June 14. Both of these peaks occurred due to individuals
+								unstaking huge amounts at once (<a href="https://polkadot.subscan.io/extrinsic/15488732-2">12.17K DOT</a> and <a href="https://polkadot.subscan.io/extrinsic/15959062-3">24K DOT</a>, respectively).
+							</p>
+						</div>
+					</div>
 				</div>
-				<div class="text-wrap">
+				<div class="block-report-chart">
+					<div class="section-shape shape-blur-circle shape-position-tl"></div>
+					<div class="section-shape shape-blur-circle shape-position-mr"></div>
+					<div class="block-content">
+						<h4 class="block-chart-heading">Fast Unstake on Polkadot</h4>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="price-dev-act"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Source: Polkaholic</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block-text">
 					<div class="text">
-						<p>It is worth noting that the number of validators with zero self-stake was comparatively high,
-							accounting for 76.69% of all active validators in one era on average. Theoretically, if
-							these validators behave dishonestly, the slashes are entirely on nominators, and data
-							suggested that validators’ self-stake was a criterion to which nominators paid attention
-							when choosing validators. On May 31, 2023, 200 active validators with zero self-stake
-							received 8,552 nominations in total, an average of 42.55 nominations per validator, whereas
-							the other 97 validators received 13,703 nominations, an average of 141.27 nominations per
-							validator. Most nominators tended to back validators whose self-stakes were less than 10K
-							DOT. This pattern is understandable considering that popular validators will <a
-								href="https://wiki.polkadot.network/docs/learn-staking#slashing"
-								target="_blank"
-								rel="nofollow">get slashed more harshly</a> than those with lower stake backing them.
+						<p>
+							Polkadot nomination pools continued to <a href="https://dotinsights.subwallet.app/polkadot-staking-report-h1-2023-en/#nomination-pools">grow rapidly</a>, attaining 12,268 members and 5.32M DOT by the end of June.
+							Daily rewards from pools also rose, albeit slowly and not as consistently as pools themselves, from
+							the range of 1.06K-2.55K DOT in April to that of 1.69K-3.56K DOT in June. Pools’ share of total rewards increased as well – from 1.11% in April to 1.50% in June, on average – thanks to the amount of daily rewards
+							received by individual nominators mostly staying within 121.41K-190.93K DOT.
+						</p>
+					</div>
+				</div>
+				<div class="block-report-chart">
+					<div class="section-shape shape-blur-circle shape-position-tl"></div>
+					<div class="section-shape shape-blur-circle shape-position-mr"></div>
+					<div class="block-content">
+						<h4 class="block-chart-heading">Staking Rewards by Nominator Type</h4>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="price-dev-act"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Source: Polkaholic</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block-text">
+					<div class="text">
+						<p>
+							It is <a href="https://wiki.polkadot.network/docs/learn-staking#selection-of-validators">assumed</a> that nominators would choose to back validators with low commission to increase rewards, and validators with
+							high self-stake because it suggests “skin in the game”. Data supported these
+							assumptions.
+							On June 30, 164 validators with less than 15% commission received 21,374 nominations, accounting for 95.93% of the total nomination count. When it comes to self-stake, an average of 42.40 nominations were
+							attributed to active validators with zero self-stake, compared to 142.27 nominations for the other active validators. These numbers were very similar to those obtained on <a
+							href="https://dotinsights.subwallet.app/polkadot-staking-report-h1-2023-en/#nominators-preferences">May 31</a>, suggesting that these patterns
+							are likely the case in general.
 						</p>
 					</div>
 				</div>
@@ -674,12 +473,12 @@
 								</div>
 							</div>
 							<div class="block-chart-child">
-								<h3 class="block-chart-heading">
+								<h4 class="block-chart-heading">
 									<div>
 										Active Validators’ nominator Counts Versus Self-Stakes
 										<span>Only data for validators with less than 10K DOT in self-stake are shown.</span>
 									</div>
-								</h3>
+								</h4>
 
 								<div class="block-chart-body">
 									<div class="block-chart"
@@ -696,141 +495,505 @@
 					</div>
 				</div>
 
-				<div class="text-wrap">
-					<div class="text">
-						<p>Additionally, validator commission appeared to be another criterion for nominators to select
-							validators. It came as no surprise that nominators were in favor of validators with low
-							commission in order to receive rewards. On May 31, 2023, 167 validators with less than 15%
-							commission received 21,299 out of 22,255 nominations, a notable 95.70%. On the other end,
-							there were only 765 nominations for 120 validators with 100% commission, of which 113
-							validators had zero self-stake. Setting up a validator with both zero self-stake and 100%
-							commission is a tactic commonly used by whales to deter other nominators and thus maximize
-							staking rewards for themselves.
-						</p>
+				<div id="token-holder" class="block-text">
+					<h3 class="heading">Token Holder</h3>
+					<div class="text-wrap">
+						<div class="text">
+							<p>
+								As of July 12, whales (defined as accounts that hold more than 0.1% of the total token supply) took up only 0.01% of total holder count but held 65.93% of total tokens (879.22M DOT). On Kusama, the numbers
+								were 0.06% and 71.24% (9.81M KSM), respectively. Excluding system accounts, which are operated by the systems for specific purposes (e.g., treasury, crowdloan funds, and nomination pool stake) and whose
+								movements are therefore controlled, this left 61.54% of total DOT and 70.16% of total KSM in the hands of real-user whales. These statistics pointed to even more pronounced wealth clusterization in Q2 2023
+								than in the previous quarter. This deviation from the decentralization ethos of Web3 presents great risks to system security, governance maintenance, and market stability.</p>
+						</div>
 					</div>
 				</div>
-				<div id="commission-versus-nominator-chart" class="block-report-chart">
+				<div class="block-report-chart">
+					<div class="section-shape shape-blur-circle shape-position-tl green"></div>
+					<div class="section-shape shape-blur-circle shape-position-br"></div>
 					<div class="block-content">
 						<div class="block-chart-group">
 							<div class="block-chart-child">
-								<h3 class="block-chart-heading">Active Validators’ Nominator Counts Versus
-									Commission</h3>
+								<h4 class="block-chart-heading">Polkadot Token Distribution by Holder Type</h4>
 								<div class="block-chart-body">
 									<div class="block-chart"
-									     data-chart-name="active-validators-nominator-counts-versus-commission"></div>
+									     data-chart-name="total-nominator-count-total-validator-count"></div>
 								</div>
 							</div>
+							<div id="nominator-versus-nominator-stake-chart" class="block-chart-child">
+								<h4 class="block-chart-heading">Kusama Token Distribution by Holder Type</h4>
+								<div class="block-chart-body">
+									<div class="block-chart" data-chart-name="nominator-stake-validator-stake"></div>
+								</div>
+							</div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Sources: Token Terminal, Electric Capital</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="governance-grant" class="block-text">
+					<h3 class="heading">Governance & Grant</h3>
+					<div class="text-wrap">
+						<div class="text">
+							<p>
+								About seven months after having been deployed on Kusama, OpenGov officially went <a href="https://twitter.com/Polkadot/status/1669331660125478912">live on Polkadot</a> on June 15 with the passing of
+								<a href="https://polkadot.subsquare.io/democracy/referendum/121">Referendum 121</a>. By July 29, a total of 90 referenda had been submitted in 11
+								out of 15 tracks on Polkadot, and 248 referenda in 13 tracks on Kusama. The six treasury tracks – Treasurer, Small Tipper, Big Tipper, Small Spender, Medium Spender, and Big Spender – unsurprisingly accounted
+								for the majority of the referenda, 84.44% on Polkadot and 68.95% on Kusama. In total, the Polkadot treasury had awarded 891.10K DOT ($4.75M) and the Kusama treasury 219.70K KSM ($6.06M) to OpenGov referenda.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="block-report-chart">
+					<div class="section-shape shape-blur-circle shape-position-tl green"></div>
+					<div class="section-shape shape-blur-circle shape-position-br"></div>
+					<div class="block-content">
+						<div class="block-chart-group">
 							<div class="block-chart-child">
-								<h3 class="block-chart-heading">Nominations Backing Validators With 100% Commission</h3>
+								<h4 class="block-chart-heading">Polkadot OpenGov Referenda</h4>
 								<div class="block-chart-body">
 									<div class="block-chart"
-									     data-chart-name="nominations-backing-validators-with-100-commission"
-									     data-chart-source="inline"></div>
+									     data-chart-name="total-nominator-count-total-validator-count"></div>
+								</div>
+							</div>
+							<div id="nominator-versus-nominator-stake-chart" class="block-chart-child">
+								<h4 class="block-chart-heading">Kusama OpenGov Referenda</h4>
+								<div class="block-chart-body">
+									<div class="block-chart" data-chart-name="nominator-stake-validator-stake"></div>
 								</div>
 							</div>
 						</div>
 						<div class="block-chart-footer">
 							<div class="block-chart-source">
-								<p>Source: Parity Data Team</p>
-								<p>Note: Data on May 31, 2023.</p>
+								<p>Sources: Token Terminal, Electric Capital</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block-text">
+					<div class="text">
+						<p>
+							In OpenGov, <a href="https://wiki.polkadot.network/docs/learn-polkadot-opengov#origins-and-tracks">support rate</a> is defined as the proportion of aye and abstain votes (without conviction) over the total token
+							issuance. Support rates on both networks were low, averaging 1.44% on Polkadot and
+							3.33% on
+							Kusama. Despite dominating in terms of referendum count, treasury tracks were among the tracks with the lowest support. These numbers point to a need for raising interest in OpenGov.
+						</p>
+					</div>
+				</div>
+				<div class="block-report-chart">
+					<div class="section-shape shape-blur-circle shape-position-tl"></div>
+					<div class="section-shape shape-blur-circle shape-position-mr"></div>
+					<div class="block-content">
+						<h4 class="block-chart-heading">OpenGov Support By Track</h4>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="price-dev-act"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Source: SubSquare</p>
+								<p>Source: SubSquare</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block-text">
+					<div class="text">
+						<p>
+							As of July 29, Polkadot treasury had a balance of 45.43M DOT ($239.02M) and Kusama treasury 277.55K KSM ($6.48M). The fact that treasury-track referenda with values as high as 540K DOT and 50K KSM were approved
+							with only <a href="https://polkadot.subsquare.io/referenda/referendum/47">0.33%</a> and <a href="https://kusama.subsquare.io/referenda/referendum/236">0.31%</a> support rates, respectively, should raise the alarm
+							about potential treasury misuse and even depletion of treasury
+							funds in the future.
+						</p>
+					</div>
+				</div>
+				<div class="block-report-chart">
+					<div class="section-shape shape-blur-circle shape-position-tl green"></div>
+					<div class="section-shape shape-blur-circle shape-position-br"></div>
+					<div class="block-content">
+						<div class="block-chart-group">
+							<div class="block-chart-child">
+								<h4 class="block-chart-heading">Approved Polkadot Treasury Spend Versus Support Rate By Referendum</h4>
+								<div class="block-chart-body">
+									<div class="block-chart"
+									     data-chart-name="total-nominator-count-total-validator-count"></div>
+								</div>
+							</div>
+							<div id="nominator-versus-nominator-stake-chart" class="block-chart-child">
+								<h4 class="block-chart-heading">Approved Kusama Treasury Spend Vs. Support Rate by Referendum</h4>
+								<div class="block-chart-body">
+									<div class="block-chart" data-chart-name="nominator-stake-validator-stake"></div>
+								</div>
+							</div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Sources: Token Terminal, Electric Capital</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block-text">
+					<div class="text">
+						<p>
+							For teams looking to build Web3 projects, the Web3 Foundation Grants Program has been a consistent source of funding. Thirty-five out of 82 projects (42.68%) in the first half of 2023 were related to smart
+							contract implementation and tooling, demonstrating Web3 developers’ growing interest in this area. The development of Substrate runtime modules remained popular, with a total of 22 projects (26.83%). For more
+							information about the Web3 Foundation Grants Program, check out its <a href="https://grants.web3.foundation/">website</a>.
+						</p>
+					</div>
+				</div>
+				<div class="block-report-chart">
+					<div class="section-shape shape-blur-circle shape-position-tl"></div>
+					<div class="section-shape shape-blur-circle shape-position-mr"></div>
+					<div class="block-content">
+						<h4 class="block-chart-heading">Top Six Categories Of Web3 Foundation Grants Projects</h4>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="price-dev-act"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Source: SubSquare</p>
+								<p>Source: SubSquare</p>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="text-wrap">
-					<div class="text">
-						<p>The number of oversubscribed validators went on a downward trend in the last two months of
-							2022. A more dramatic reduction occurred in mid-January, when, through Polkadot’s upgrade to
-							<a
-								href="https://polkadot.polkassembly.io/referendum/96"
-								target="_blank"
-								rel="nofollow">runtime 9340</a>, the <a
-								href="https://github.com/paritytech/polkadot/pull/6230"
-								target="_blank"
-								rel="nofollow">maximum number of rewardable nominators</a> per active validator was
-							changed
-							from 256 to 512. Only 0-3 validators were considered oversubscribed each day since January
-							14, 2023, compared to 15-45 validators prior to the runtime upgrade, a remarkable 15-time
-							decrease.
-						</p>
+				<div id="parachain" class="block-text">
+					<h3 class="heading">Parachain</h3>
+					<div class="text-wrap">
+						<div class="text">
+							<p>
+								Of the top 10 parachains in terms of XCM transfer count, four were on Polkadot and six were on Kusama. Karura maintained its strong lead with an all-time count of 85,412 transfers. Trailing behind were
+								Bifrost on Kusama, Moonbeam, Acala, and Moonriver, each of which had had more than 30K transfers by June 30. In Q2 2023 alone, Moonbeam topped the chart with 7,499 transfers, which may have been due to the
+								renewal of its parachain slot and the <a href="https://gov.uniswap.org/t/deploy-uniswap-v3-on-moonbeam-2023/21042">launch of Uniswap V3</a> in June. Acala, which also re-signed its slot this quarter, and
+								Karura followed with 5,586 and 5,165 transfers, respectively.
+							</p>
+						</div>
 					</div>
 				</div>
-				<div id="oversubscribed-validator-chart" class="block-report-chart">
+				<div class="block-report-chart">
 					<div class="section-shape shape-blur-circle shape-position-tl"></div>
 					<div class="section-shape shape-blur-circle shape-position-mr"></div>
 					<div class="block-content">
-						<h3 class="block-chart-heading">Oversubcribed Validators</h3>
+						<h4 class="block-chart-heading">Parachain With More Than 5K XCM Transfers</h4>
 						<div class="block-chart-body">
-							<div class="block-chart" data-chart-name="oversubcribed-validators"></div>
+							<div class="block-chart" data-chart-name="price-dev-act"></div>
 						</div>
 						<div class="block-chart-footer">
 							<div class="block-chart-source">
-								<p>Source: Subsquid</p>
+								<p>Source: SubSquare</p>
+								<p>Note: Data as of June 30, 2023</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block-text">
+					<div class="text">
+						<p>
+							It is therefore no surprise that all of the top five parachains appeared in the top 12 XCM channels by transfer count. The Bifrost-Karura pairing on Kusama accounted for 42,869 transfers, 2.47 times more than the
+							number of transfers between the next ranked pairing, Moonbeam-Acala on Polkadot (17,376 transfers). Note that 11 of the top 12 channels were between chains heavily involved in DeFi activities, showing that DeFi
+							was <a href="https://dotinsights.subwallet.app/polkadot-report-q1-2023-en/#parachain">still</a> the most widely used application of XCM.
+						</p>
+					</div>
+				</div>
+				<div class="block-report-chart">
+					<div class="section-shape shape-blur-circle shape-position-tl"></div>
+					<div class="section-shape shape-blur-circle shape-position-mr"></div>
+					<div class="block-content">
+						<h4 class="block-chart-heading">Top 12 XCM Channels By Transfer Count</h4>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="price-dev-act"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Source: SubSquare</p>
+								<p>Note: Data as of June 30, 2023</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block-text">
+					<div class="text">
+						<p>
+							Considered a <a href="https://polkadot.network/blog/xcm-v3-breaking-new-ground-for-web3-interoperability">groundbreaking technology</a> that will amplify the Web3 interoperability, XCM v3 was launched on both
+							Polkadot and Kusama in Q2 2023. The upgrade introduced bridging capabilities with external
+							networks,
+							improved programmability features, cross-chain locking, further asset exchanges, and cross-chain functionality involving non-fungible tokens. By July 29, XCM v3 had been used to send 5,972 messages (at a rate of
+							132.71 messages per day) across 44 Polkadot channels, and 11,565 messages (106.10 messages per day) across 73 Kusama channels. The four most active parachains in terms of XCM v3 message count were Moonriver
+							(6,042 messages), Bifrost on Kusama (4,743 messages), Asset Hub on Kusama (formerly Statemine, 3,155 messages), and Moonbeam (3,113 messages).
+						</p>
+					</div>
+				</div>
+				<div class="block-report-chart">
+					<div class="section-shape shape-blur-circle shape-position-tl"></div>
+					<div class="section-shape shape-blur-circle shape-position-mr"></div>
+					<div class="block-content">
+						<h4 class="block-chart-heading">Parachains By XCM V3 Message Count</h4>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="price-dev-act"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Source: SubSquare</p>
+								<p>Note: Data as of June 30, 2023</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block-text">
+					<div class="text">
+						<p>
+							In terms of chain fees, the system parachain Encointer surprisingly took the top spot in Q2 2023 with $123,842.92. This towering number was more than five times the amount for the runner-up Calamari, whose
+							$21,986.35 was in turn 3.58 times greater than the third-place Khala’s $6,139.35.
+						</p>
+					</div>
+				</div>
+				<div class="block-report-chart">
+					<div class="section-shape shape-blur-circle shape-position-tl"></div>
+					<div class="section-shape shape-blur-circle shape-position-mr"></div>
+					<div class="block-content">
+						<h4 class="block-chart-heading">Distribution Of Chain Fees In Q2 2023</h4>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="price-dev-act"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Source: SubSquare</p>
+								<p>Note: Data as of June 30, 2023</p>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<div id="earning-rewards-fast-unstake" class="block-text">
-					<h3 class="heading">Earning Rewards & Fast Unstake</h3>
-				</div>
-				<div class="text-wrap">
+			</div>
+		</div>
+	</div>
+	<!-- /#ecosystem-overview -->
+
+	<div class="section section-the-defi-economy" id="the-defi-economy">
+		<div class="section-shapes">
+			<div
+				class="section-shape shape-corner-left-bottom shape-radial-circle purple shape-corner-blur-1"></div>
+			<div
+				class="section-shape shape-corner-right-bottom shape-radial-circle light-green shape-corner-blur-1"></div>
+		</div>
+		<div class="section-shape section-shape-corners"></div>
+		<div class="section-content">
+			<div class="section-header">
+				<h2 class="section-title">The DeFi Economy</h2>
+			</div>
+			<div class="container">
+				<div class="block-text">
 					<div class="text">
-						<p>As there are <a
-							href="https://support.polkadot.network/support/solutions/articles/65000170805-why-am-i-not-getting-staking-rewards-#:~:text=If%20you%20are%20not%20among,validators%20that%20are%20not%20oversubscribed."
-							target="_blank"
-							rel="nofollow">limits</a> on the number of nominators able to earn staking rewards (at most
-							22,500
-							nominators across all validators in one era, with a cap of 512 nominators per validator),
-							the threshold to receive nominator staking rewards – called minimum active nominator stake –
-							is dynamic. Within seven months from November 2022, this threshold almost doubled from
-							187.35 DOT to 363.98 DOT (the latter value had not changed since May 3, 2023). Every 21-40
-							days there was a noticeable jump of 15.01 DOT on average. It is thus recommended practice
-							that token holders join active nomination pools to earn uninterrupted rewards.
+						<p>
+							In Q2 2023, the total TVL of DeFi parachains on Polkadot and Kusama had a very brief surge period, peaking early at $236.12M on April 14, before going on a downward trend and ending up at $146.77M on June 30.
+							This pattern was very similar to that of Acala, which had been the number-one parachain until its TVL started to drop considerably on April 20 and pulled Acala down to fourth place by the end of June. Moonbeam
+							had been the leader since May 4, whereas its canary network Moonriver had been at fifth place, and Acala’s canary network, Karura, at sixth.
 						</p>
 					</div>
 				</div>
-				<div id="min-active-stake-chart" class="block-report-chart">
+				<div class="block-report-chart">
 					<div class="section-shape shape-blur-circle shape-position-tl"></div>
 					<div class="section-shape shape-blur-circle shape-position-mr"></div>
 					<div class="block-content">
-						<h3 class="block-chart-heading">Minimum Active Nominator Stake</h3>
+						<h4 class="block-chart-heading">TVL of DeFi Parachains on Polkadot & Kusama</h4>
 						<div class="block-chart-body">
-							<div class="block-chart" data-chart-name="minimum-active-nominator-stake"></div>
+							<div class="block-chart" data-chart-name="price-dev-act"></div>
 						</div>
 						<div class="block-chart-footer">
 							<div class="block-chart-source">
-								<p>Source: Subsquid</p>
+								<p>Source: Santiment</p>
+								<p>Note: Development activities counted by GitHub events happening on Parity Tech's
+									public repos.</p>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="text-wrap">
+				<div class="block-text">
 					<div class="text">
-						<p>For nominators who were not earning rewards, a new feature called fast unstake might be a
-							solution. Implemented on Polkadot on March 28, 2023 with the passing of <a
-								href="https://polkadot.polkassembly.io/referendum/111"
-								target="_blank"
-								rel="nofollow">referendum 111</a>, fast
-							unstake allows nominators to withdraw immediately if their stake has been inactive for at
-							least 28 days on Polkadot. An average of four unique accounts used this feature each day. Up
-							to May 31, a total of 122.23K DOT was withdrawn via fast unstake, of which 20.25K DOT was
-							associated with 10 unique accounts on May 12 alone.
+						<p>
+							After rising to its year-to-date maximum of 68.33 on February 16, the 30-day average number of code commits to Parity Technologies’ public repositories fluctuated between 52.53 and 67.97 commits. Similarly, the
+							number of core active developers – defined as the number of distinct GitHub users that made at least one commit to the repositories during the past 30 days – reached its all-time high of 181 developers on March
+							22, and then remained fairly consistent, going below 150 only twice on April 30 and May 1. The two metrics correlated strongly (Pearson’s correlation coefficient <i>r</i> = 0.79).
 						</p>
 					</div>
 				</div>
-				<div id="fast-unstake-chart" class="block-report-chart" style="--chart-bot-spacing: 0;">
+
+				<div id="dex-amm" class="block-text">
+					<h3 class="heading">DEX (AMM)</h3>
+					<div class="text-wrap">
+						<div class="text">
+							<p>
+								From April 20 to April 22, ASTR’s sudden drops in price caused DEX protocols on Astar such as ArthSwap and Sirius Finance to experience great declines in TVL, a sharp contrast to the surge in <a
+								href="https://dotinsights.subwallet.app/polkadot-report-q1-2023-en/#dex-amm">early February</a>.
+								Nonetheless, Arthswap still topped the list of DEX protocols on Polkadot almost throughout Q2, followed by HydraDX and StellaSwap. The huge increase in StellaSwap’s TVL on May 3 was because DefiLlama <a
+								href="https://twitter.com/DefiLlama/status/1654623613629153283">started to track</a> the new concentrated liquidity Automated Market Maker (AMM) protocol, StellaSwap v3. HydraDX also enjoyed a surge on April
+								12, when it <a href="https://twitter.com/hydra_dx/status/1646172550035120130">added</a> three Polkadot native assets – ZTG, iBTC, and USDT – to
+								its innovative AMM, Omnipool. As of June 30, HydraDX trailed ArthSwap by $264.29K. With <a href="https://twitter.com/hydra_dx/status/1676254621231112193">more assets</a> constantly being added to the
+								Omnipool, HydraDX will likely surpass ArthSwap in Q3 2023.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="block-report-chart">
 					<div class="section-shape shape-blur-circle shape-position-tl"></div>
 					<div class="section-shape shape-blur-circle shape-position-mr"></div>
 					<div class="block-content">
-						<h3 class="block-chart-heading">Fast Unstake on Polkadot</h3>
+						<h4 class="block-chart-heading">Top Eight DEX Protocols on Polkadot by TVL</h4>
 						<div class="block-chart-body">
-							<div class="block-chart" data-chart-name="fast-unstake-on-polkadot"></div>
+							<div class="block-chart" data-chart-name="price-dev-act"></div>
 						</div>
 						<div class="block-chart-footer">
 							<div class="block-chart-source">
-								<p>Source: Polkaholic</p>
+								<p>Source: DefiLlama, HydraDX Team</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block-text">
+					<div class="text">
+						<p>
+							On Kusama, Solarbeam remained the clear winner despite experiencing declines almost throughout the quarter, and Bifrost was the clear runner-up, leaving the rest of the DEX protocols on the network far behind.
+							Interestingly, the two protocols had extremely similar TVL patterns (Pearson’s correlation coefficient r = 0.93), though Bifrost’s was more stable during the middle period of Q2.
+						</p>
+					</div>
+				</div>
+				<div class="block-report-chart">
+					<div class="section-shape shape-blur-circle shape-position-tl"></div>
+					<div class="section-shape shape-blur-circle shape-position-mr"></div>
+					<div class="block-content">
+						<h4 class="block-chart-heading">Top Six DEX Protocols on Kusama by TVL</h4>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="price-dev-act"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Source: DefiLlama</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="lending-borrowing" class="block-text">
+					<h3 class="heading">Lending & Borrowing (Money Market)</h3>
+					<div class="text-wrap">
+						<div class="text">
+							<p>
+								Parallel was the top lending protocol in terms of TVL up until April 27, when Moonwell Artemis took the lead by $141.30K. The gap between the two protocols considerably widened on May 7, when Parallel’s TVL
+								dropped by 2.29%. Since the beginning of June, Parallel’s TVL pattern had been highly similar to Moonwell Artemis’s (Pearson’s correlation coefficient r = 0.86).
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="block-report-chart">
+					<div class="section-shape shape-blur-circle shape-position-tl"></div>
+					<div class="section-shape shape-blur-circle shape-position-mr"></div>
+					<div class="block-content">
+						<h4 class="block-chart-heading">Top Six Lending Protocols on Polkadot & Kusama by TVL</h4>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="price-dev-act"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Source: DefiLlama</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="liquid-staking" class="block-text">
+					<h3 class="heading">Liquid Staking</h3>
+					<div class="text-wrap">
+						<div class="text">
+							<p>
+								Most of the liquid staking protocols on Polkadot and Kusama had a disappointing quarter in terms of TVL trends. Just like the DEX protocols on Astar, Algem also suffered due to the sudden decreases in ASTR’s
+								price. Despite starting Q2 at the top rank, the TVL of Lido on Moonbeam quickly shrunk by 51.74% on April 8, and then kept declining for the rest of the quarter. This pattern was expected after MixBytes had
+								initiated their five-phase termination of Lido on Polkadot and Kusama. On June 22, the termination entered Phase 3, in which unbonding was enforced and assets were automatically unstaked from the relay chain.
+								Lido’s TVL on Moonriver declined by 35.52% on that day as a result. Thanks to Lido’s and Algem’s big drops, Bifrost had been leading the chart since April 20.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="block-report-chart">
+					<div class="section-shape shape-blur-circle shape-position-tl"></div>
+					<div class="section-shape shape-blur-circle shape-position-mr"></div>
+					<div class="block-content">
+						<h4 class="block-chart-heading">Top Eight Liquid Staking Protocols on Polkadot & Kusama By TVL</h4>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="price-dev-act"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Source: DefiLlama</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="stablecoin" class="block-text">
+					<h3 class="heading">Stablecoin</h3>
+					<div class="text-wrap">
+						<div class="text">
+							<p>
+								On May 25, Binance <a href="https://www.binance.com/en/support/announcement/binance-completes-integration-of-tether-usdt-on-polkadot-network-opens-deposits-and-withdrawals-74b3d89d94c2410eb3318c241268cb98">announced</a>
+								that it had begun support for USDT on Polkadot. Following this news, USDT supply on the network jumped up by 125.02%, from 8M to 18M USDT. As of June 30, USDT supply on Polkadot
+								was 5.14 times greater than that on Kusama – more specifically, on the parachain Asset Hub (formerly Statemint on Polkadot and Statemine on Kusama).
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="block-report-chart">
+					<div class="section-shape shape-blur-circle shape-position-tl"></div>
+					<div class="section-shape shape-blur-circle shape-position-mr"></div>
+					<div class="block-content">
+						<h4 class="block-chart-heading">USDT Supply</h4>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="price-dev-act"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Source: DefiLlama</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block-text">
+					<div class="text">
+						<p>
+							As a result of Binance’s integration, the number of USDT transfers, the amount transferred, and the number of USDT holders on Polkadot all surged on that day – by 133.33%, 930.69%, and 4.65%, respectively. Both
+							Polkadot and Kusama had other spikes in USDT transfers on June 10. Whereas transfer count increased by 192.31% and transfer amount by 4,244.21% on Polkadot, the numbers on Kusama were 135.48% and 30,145.00%,
+							respectively. These gigantic upsurges occurred after a series of events adversely affecting a fellow dollar-denominated stablecoin, TrueUSD. First, TrueUSD <a
+							href="https://twitter.com/tusdio/status/1667386940948369408">announced</a> that its minting activities via Prime Trust
+							had been paused, and soon after that, TUSD became <a href="https://cointelegraph.com/news/tusd-stops-minting-via-prime-trust-loses-dollar-peg">depegged</a> from the US dollar, falling as low as $0.9964. These
+							events might have caused USDT to temporarily rise in popularity.
+						</p>
+					</div>
+				</div>
+				<div class="block-report-chart">
+					<div class="section-shape shape-blur-circle shape-position-tl green"></div>
+					<div class="section-shape shape-blur-circle shape-position-br"></div>
+					<div class="block-content">
+						<div class="block-chart-group">
+							<div class="block-chart-child">
+								<h4 class="block-chart-heading">USDT On Polkadot</h4>
+								<div class="block-chart-body">
+									<div class="block-chart"
+									     data-chart-name="total-nominator-count-total-validator-count"></div>
+								</div>
+							</div>
+							<div id="nominator-versus-nominator-stake-chart" class="block-chart-child">
+								<h4 class="block-chart-heading">USDT On Kusama</h4>
+								<div class="block-chart-body">
+									<div class="block-chart" data-chart-name="nominator-stake-validator-stake"></div>
+								</div>
+							</div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Sources: Statescan</p>
 							</div>
 						</div>
 					</div>
@@ -838,9 +1001,9 @@
 			</div>
 		</div>
 	</div>
-	<!-- /.section-validators-nominators -->
+	<!-- /#the-defi-economy -->
 
-	<div class="section section-nomination-pools" id="nomination-pools">
+	<div class="section section-nft" id="nft">
 		<div class="section-shapes">
 			<div class="section-shape shape-corner-left-top shape-radial-circle light-green shape-corner-blur-2"></div>
 			<div class="section-shape shape-corner-right-top shape-radial-circle purple shape-corner-blur-2"></div>
@@ -851,157 +1014,206 @@
 
 		<div class="section-content">
 			<div class="section-header">
-				<h2 class="section-title">Nomination Pools</h2>
+				<h2 class="section-title">Non-Fungible Token</h2>
 			</div>
 			<div class="container">
-				<div id= "nomination-pool-stake-member-chart" class="block-report-chart">
+				<div id="nft-marketplace" class="block-text">
+					<h3 class="heading">NFT Marketplace</h3>
+					<div class="text-wrap">
+						<div class="text">
+							<p>
+								Continuing the trend from <a href="https://dotinsights.subwallet.app/polkadot-report-q1-2023-en/#nft-marketplace">Q1 2023</a>, Singular maintained its dominance in the NFT market throughout the first half of
+								Q2, averaging $1.77K in daily sales volume. However, as expected with RMRK’s <a href="https://medium.com/rmrkapp/a-new-chapter-for-rmrk-embracing-evm-support-and-expanding-the-nft-ecosystem-18651baa3990">decision</a>
+								to
+								phase out NFT implementation on Kusama, Singular’s dominance began to dwindle, averaging $524.96 in sales volume per day from May 14 to June 30. Most of the sales volume on tofuNFT came from the Polkadot
+								parachain Astar ($543.08 on average), whereas Moonbeam ($84.17) beat Moonriver ($21.62) on Moonbeans.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="block-report-chart">
 					<div class="block-content">
-						<h3 class="block-chart-heading">Total Stake & Total Members in Polkadot Nomination Pools</h3>
+						<h4 class="block-chart-heading">Distribution of Sales in NFT Marketplaces</h4>
 						<div class="block-chart-body">
 							<div class="block-chart"
 							     data-chart-name="total-stake-total-members-in-polkadot-nomination-pools"></div>
 						</div>
 						<div class="block-chart-footer">
 							<div class="block-chart-source">
-								<p>Source: Subsquid</p>
+								<p>Sources: Moonbeans, NFTrade, RMRK, tofuNFT, CoinGecko</p>
 							</div>
 						</div>
 					</div>
 				</div>
-
 				<div class="text-wrap">
 					<div class="text">
-						<p>Polkadot nomination pools officially surpassed 10K in total pool members on May 7, 2023, and
-							4M DOT in total stake the next day. On average, pools gained 52 new members and 22K DOT
-							every day. Daily pool rewards observed a similarly rapid rise, from 3.22 DOT on November 2,
-							2022 to a maximum of 2.83K DOT on May 22, 2023. These values were still very little compared
-							to individual nominator rewards, which mostly stayed between 87.78K and 178.50K DOT.
-							However, the increase in pool rewards combined with the moderate stability of individual
-							nominator rewards resulted in the gradual escalation of pools’ share of total rewards to the
-							range of 1%-2%.
+						<p>
+							In April, Astar witnessed the launches of three new NFT marketplaces: <a href="https://astar.network/blog/paras-and-their-expansion-to-astar-38382">Paras</a> – a marketplace focusing on digital collectibles –
+							on April 6, <a href="https://twitter.com/ArtZero_io/status/1646861461975891968">ArtZero</a> – a marketplace built completely in ink! – on April 14, and
+							<a href="https://twitter.com/BluezNFT/status/1647925738572488704">Bluez</a>
+							– the first community-driven NFT marketplace on the network – on April 17. By June 30, seventeen items from four collections had been sold on Paras for a total of $396.34. On ArtZero, five collections had been
+							created, including AI Serpenators, which contains items submitted to a four-week AI contest in collaboration with SubWallet to celebrate the thriving Astar NFT ecosystem. As for Bluez, at the time of writing,
+							AstarDegens is the number-one collection in terms of total volume (8.56M ASTR), followed by AstarCats (2.93M ASTR) and Astar Punks (1.89M ASTR).
 						</p>
 					</div>
 				</div>
 
-				<div id="daily-reward-nominator-versus-pool-chart" class="block-report-chart">
-					<div class="section-shape shape-blur-circle shape-position-tl"></div>
-					<div class="section-shape shape-blur-circle shape-position-br green"></div>
+				<div id="metaverse" class="block-text">
+					<h3 class="heading">Metaverse</h3>
+					<div class="text-wrap">
+						<div class="text">
+							<p>
+								NFTs trading and minting on Bit.Country experienced multiple peaks in Q2 2023, yet the peaks in total minted NFTs, total traded NFTs and total NFT trading volume did not coincide. 1000 NFTs were minted on
+								April 17 whereas a maximum of 729 NFTs were traded on May 2, the same day that <a href="https://medium.com/bit-country/marketplace-2-0-is-here-more-features-nft-trading-lucky-draw-join-56329c2838c6">Marketplace
+								2.0</a> was released together with a campaign where users received rewards for purchasing NFTs. The highest volume,
+								however, was recorded on April 24 for $1,965.69.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="block-report-chart">
 					<div class="block-content">
-						<div class="block-chart-group">
-							<div class="block-chart-child">
-								<h3 class="block-chart-heading">Daily Reward Distribution by Nominator Type</h3>
-								<div class="block-chart-body">
-									<div class="block-chart"
-									     data-chart-name="daily-reward-distribution-by-nominator-type"></div>
-								</div>
-							</div>
-							<div class="block-chart-child">
-								<h3 class="block-chart-heading">Pools’ Share of Total Rewards</h3>
-								<div class="block-chart-body">
-									<div class="block-chart" data-chart-name="pools-share-of-total-rewards"></div>
-								</div>
-							</div>
+						<h4 class="block-chart-heading">Bit.Country Minted & Traded NFTs Q2 2023</h4>
+						<div class="block-chart-body">
+							<div class="block-chart"
+							     data-chart-name="total-stake-total-members-in-polkadot-nomination-pools"></div>
 						</div>
 						<div class="block-chart-footer">
 							<div class="block-chart-source">
-								<p>Source: Polkaholic</p>
+								<p>Source: Bit.Country Team</p>
 							</div>
 						</div>
 					</div>
 				</div>
-
 				<div class="text-wrap">
 					<div class="text">
-						<p>A look at each pool revealed that Talisman Pool 1 was the clear winner with 106.44K DOT of
-							reward since November 2022, averaging 504.46 DOT per day and taking up 49.09% of total
-							rewards across all pools. These numbers were 6.03 times higher than those for the runner-up
-							Amforc (83.72 DOT/day) and 9.15 times higher than those for the second runner-up
-							decentraDOT.com (55.15 DOT/day). ParaNodes.io and SubWallet Official followed closely with
-							48.84 DOT/day and 36.91 DOT/day respectively. This came as no surprise considering that, as
-							of May 31, 2023, Talisman Pool 1 had accumulated both the largest stake (2.40M DOT) and the
-							highest member count (3,546) among all pools.
+						<p>
+							July witnessed the release of <a href="https://twitter.com/BitDotCountry/status/1679386070759399425">Bit.Country Space</a> and <a href="https://twitter.com/cosmize_io/status/1685946312355885056">COSMIZE app</a>
+							on iOS, marking steady development for the metaverse sector in the
+							Polkadot ecosystem.
 						</p>
-					</div>
-				</div>
-
-				<div id="reward-by-pool-chart" class="block-report-chart">
-					<div class="block-content">
-						<div class="block-chart-group">
-							<div class="block-chart-child">
-								<h3 class="block-chart-heading">All-Time Reward Distribution by pool</h3>
-								<div class="block-chart-body block-chart-body-pie-chart">
-									<div class="block-chart"
-									     data-chart-name="all-time-reward-distribution-by-pool"
-									     data-chart-source="inline"></div>
-									<ul id="custom-legend-dot" class="block-chart-legend">
-										<li data-id="Talisman Pool 1" class="active">
-											<div class="icon" style="background-color: #004dff;"></div>
-											Talisman Pool 1
-										</li>
-										<li data-id="Amforc / np-nominator">
-											<div class="icon" style="background-color: #ff279a;"></div>
-											Amforc / np-nominator
-										</li>
-										<li data-id="🌐 decentraDOT.com 🌐">
-											<div class="icon" style="background-color: #f4c54a;"></div>
-											🌐 decentraDOT.com 🌐
-										</li>
-										<li data-id="ParaNodes.io / Pool 🚀">
-											<div class="icon" style="background-color: #5c42fb;"></div>
-											ParaNodes.io / Pool 🚀
-										</li>
-										<li data-id="SubWallet Official">
-											<div class="icon" style="background-color: #66e1b6;"></div>
-											SubWallet Official
-										</li>
-										<li data-id="Talisman Pool 2">
-											<div class="icon" style="background-color: #8247e5;"></div>
-											Talisman Pool 2
-										</li>
-										<li data-id="Staking4All 🥩 / pool">
-											<div class="icon" style="background-color: #960db9;"></div>
-											Staking4All 🥩 / pool
-										</li>
-										<li data-id="POLKADOT BRASIL">
-											<div class="icon" style="background-color: #ea5474;"></div>
-											POLKADOT BRASIL
-										</li>
-										<li data-id="DOZENODES.COM / pool">
-											<div class="icon" style="background-color: #8b93af;"></div>
-											DOZENODES.COM / pool
-										</li>
-										<li data-id="CRYPTONITAS">
-											<div class="icon" style="background-color: #dfada5;"></div>
-											CRYPTONITAS
-										</li>
-										<li data-id="Others">
-											<div class="icon" style="background-color: #c6e977;"></div>
-											Others
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="block-chart-child">
-								<h3 class="block-chart-heading">Reward Share by five pools with the highest all-time
-									total rewards</h3>
-								<div class="block-chart-body">
-									<div class="block-chart"
-									     data-chart-name="reward-share-by-five-pools-with-the-highest-all-time-total-rewards"></div>
-								</div>
-							</div>
-						</div>
-						<div class="block-chart-footer">
-							<div class="block-chart-source">
-								<p>Source: Polkaholic</p>
-								<p>Note: Data as of May 31, 2023.</p>
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- /.section-nomination-pools -->
+	<!-- /#nft -->
+
+	<div class="section section-web3" id="web3">
+		<div class="section-shapes">
+			<div class="section-shape shape-corner-left-top shape-radial-circle light-green shape-corner-blur-2"></div>
+			<div class="section-shape shape-corner-right-top shape-radial-circle purple shape-corner-blur-2"></div>
+			<div class="section-shape shape-corner-left-bottom shape-radial-circle purple shape-corner-blur-2"></div>
+			<div class="section-shape shape-corner-right-bottom shape-radial-circle blue shape-corner-blur-2"></div>
+			<div class="section-shape section-shape-corners reverse-direction"></div>
+		</div>
+
+		<div class="section-content">
+			<div class="section-header">
+				<h2 class="section-title">Web3</h2>
+			</div>
+			<div class="container">
+				<div id="wasm" class="block-text">
+					<h3 class="heading">WASM</h3>
+				</div>
+
+				<div class="row">
+					<div class="col-md-5">
+						<div class="text-wrap">
+							<div class="text">
+								<p>
+									Starting with a count of 25 on March 29, WASM smart contracts on Aleph Zero enjoyed a development spurt in early April, reaching 308 contracts on April 9, with an average rate of 25.67 new contracts per
+									day.
+									After that, only 1.11 contracts were created per day on average. As of the end of Q2 2023, Aleph Zero had 399 smart contracts on its mainnet. Similarly, the cumulative number of active smart contract
+									users
+									had a sudden surge from 51,701 on April 7 to 56,403 the day after, and then increased little by little, ending up at 62,324 users on June 30.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-7">
+						<div class="block-report-chart" style="--chart-top-spacing: 0;">
+							<div class="block-content">
+								<h4 class="block-chart-heading">WASM Contracts Versus Active Users on Aleph Zero</h4>
+								<div class="block-chart-body">
+									<div class="block-chart"
+									     data-chart-name="total-stake-total-members-in-polkadot-nomination-pools"></div>
+								</div>
+								<div class="block-chart-footer">
+									<div class="block-chart-source">
+										<p>Source: Tokenguard</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-7">
+						<div class="block-report-chart" style="--chart-top-spacing: 0;">
+							<div class="block-content">
+								<h4 class="block-chart-heading">WASM Contracts Versus Active Users on Astar</h4>
+								<div class="block-chart-body">
+									<div class="block-chart"
+									     data-chart-name="total-stake-total-members-in-polkadot-nomination-pools"></div>
+								</div>
+								<div class="block-chart-footer">
+									<div class="block-chart-source">
+										<p>Source: Tokenguard</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-5">
+						<div class="text-wrap">
+							<div class="text">
+								<p>
+									Unlike on Aleph Zero, on Astar, WASM smart contracts grew almost throughout Q2, albeit very slowly. The cumulative number of active smart contract users barely changed. As of June 30, there were 46 smart
+									contracts and 513,734 active users on Astar mainnet. In Q3, it is expected that Astar and its canary network, Shiden, will welcome ApolloSwap, the first ink!-based WASM DEX on Polkadot.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="wallet" class="block-text">
+					<h3 class="heading">Wallet</h3>
+					<div class="text-wrap">
+						<div class="text">
+							<p>
+								In blockchain, one of the most important things an account holder needs to consider is which wallet(s) to use. It is no surprise that, with a high number of active developers in the ecosystem, Polkadot offers
+								a wide range of wallet options. These options can be divided into two categories: <a href="https://wiki.polkadot.network/docs/wallets-and-extensions#overview">hot wallets</a> – i.e., wallets that are online,
+								such as smartphone apps or browser extensions – and cold wallets – i.e., wallets
+								that are offline, such as hardware wallets or air-gapped devices. In terms of cold wallets, there are now three main options for Polkadot users: Ledger, Polkadot Vault, and Keystone. Whereas the first is a
+								purely hardware wallet, the latter two offer an air-gapped experience, which brings an extra layer of security. The following table shows a quick comparison of what features these three wallets have, as well
+								as which hot wallets are compatible with the cold storage options. Note that SubWallet is the only hot wallet that offers support for all of the three cold wallets, via both its mobile app and its browser
+								extension.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="block-report-chart">
+					<div class="block-content">
+						<h4 class="block-chart-heading">CHART</h4>
+						<div class="block-chart-body">
+							<div class="block-chart"
+							     data-chart-name="total-stake-total-members-in-polkadot-nomination-pools"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Source: Bit.Country Team</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+	<!-- /#web3 -->
 
 	<div class="section section-closing-thoughts" id="closing-thoughts">
 		<div class="section-shape shape-1 move-vertical-reversed">
@@ -1020,43 +1232,21 @@
 			<div class="container">
 				<div class="text-wrap">
 					<div class="text">
-						<p>Overall, on the one hand, the past seven months witnessed the introduction and incredible
-							growth of Polkadot nomination pools, a more affordable and more economically rewarding
-							alternative to direct staking. Along with fast unstake, a new feature which allows stakers
-							to bypass the 28-day unbonding period, pools help bring the concept of <a
-								href="https://research.web3.foundation/Polkadot/protocols/NPoS"
-								target="_blank"
-								rel="nofollow">Nominated Proof-of-Stake</a> (NPoS) in general and Polkadot staking in
-							particular closer to token holders’
-							hearts. With several <a
-								href="https://forum.polkadot.network/t/the-future-of-polkadot-staking/1848#nomination-pools-20-3"
-								target="_blank"
-								rel="nofollow">improvements</a> planned for the near future, nomination pools are
-							expected
-							to flourish even more and to contribute significantly to the further development of staking
-							on Polkadot.
-						</p>
 						<p>
-							On the other hand, due to a sudden drop of 103.40M in nominator stake in early May,
-							attention was brought to a crucial concept in the NPoS scheme: validator election. The
-							<a
-								href="https://research.web3.foundation/Polkadot/protocols/NPoS/Overview#the-election-process"
-								target="_blank"
-								rel="nofollow">election process</a> has two main goals: fair representation of the
-							nominators and maximal
-							security of the network. As a result, power and influence among validators should be as
-							evenly distributed as possible. With these goals in mind, in the major stake drop incident,
-							the removal of active validators with massive amounts of stake backing them appeared to be
-							in line with the election process. Nonetheless, the incident raised the question of how to
-							prevent such validators from entering the active set in the first place. Hopefully, this
-							issue will soon be addressed in future extensions of the NPoS scheme.
+							Q2 2023 was marked by several advancements that solidified Polkadot’s position as a leading blockchain network. Whereas the deployment of OpenGov pointed toward a more robust governance structure, the launch of
+							XCM v3 reflected Polkadot’s commitment to enhanced interoperability. More notably, during Polkadot Decoded 2023, Polkadot’s biggest yearly conference, co-founder Gavin Wood announced his vision for <a
+							href="https://youtu.be/GIB1WeVuJD0">Polkadot 2.0</a>.
+							This new version shifts the focus from chain to application, making Polkadot an ubiquitous multi-core supercomputer that powers a plethora of user-friendly applications that can span multiple chains. Parachain
+							auction will be phased out in favor of agile coretime rental that allows chains to optimize blockspace use by demand. Given that Gavin Wood immediately has <a
+							href="https://github.com/polkadot-fellows/RFCs/pull/1">started coding</a> towards Polkadot 2.0, this new and
+							promising future can be realized rapidly.
 						</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- /.section-closing-thoughts -->
+	<!-- /#closing-thoughts -->
 
 	<div class="section section-about-us" id="about-dotinsights">
 		<div class="container-wide">
@@ -1083,7 +1273,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- /.section-about-us -->
+	<!-- /#about-dotinsights -->
 
 	<div class="section section-report-contributors" id="contributors">
 		<div class="section-shape section-shape-blur">
@@ -1102,20 +1292,6 @@
 						<div class="block-contributor block-small">
 							<div class="avatar-wrap">
 								<div class="avatar">
-									<img src="../assets/images/report/contributors/trang-ha.jpg" alt="DJ Hà Trang"
-									     loading="lazy" width="164" height="164"/>
-								</div>
-							</div>
-							<div class="info">
-								<h4 class="name">DJ Hà Trang</h4>
-								<div class="position">Research Lead</div>
-							</div>
-						</div>
-					</div>
-					<div class="grid-item grid-item-lg-1-5 grid-item-md-1-3">
-						<div class="block-contributor block-small">
-							<div class="avatar-wrap">
-								<div class="avatar">
 									<img src="../assets/images/report/contributors/tara-nguyen.png"
 									     alt="Tara Nguyen"
 									     loading="lazy" width="164" height="164"/>
@@ -1124,6 +1300,20 @@
 							<div class="info">
 								<h4 class="name">Tara Nguyen</h4>
 								<div class="position">Data Analytics Engineer</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item grid-item-lg-1-5 grid-item-md-1-3">
+						<div class="block-contributor block-small">
+							<div class="avatar-wrap">
+								<div class="avatar">
+									<img src="../assets/images/report/contributors/trang-ha.jpg" alt="DJ Hà Trang"
+									     loading="lazy" width="164" height="164"/>
+								</div>
+							</div>
+							<div class="info">
+								<h4 class="name">DJ Hà Trang</h4>
+								<div class="position">Research Lead</div>
 							</div>
 						</div>
 					</div>
@@ -1310,7 +1500,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- /.section-report-contributors -->
+	<!-- /#contributors -->
 
 	<div class="section section-report-friends" id="friends">
 		<div class="section-content">
@@ -1341,6 +1531,39 @@
 								<img loading="lazy" src="../assets/images/report/friends/parity.png"
 								     alt="Parity" width="94" height="42"/>
 							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://bit.country/">
+								<img loading="lazy" src="../assets/images/report/friends/bit-country.png"
+								     alt="Bit.Country & Metaverse.Network" width="110" height="34"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://moonbeam.network/">
+								<img loading="lazy" src="../assets/images/report/friends/moonbeam.png"
+								     alt="Moonbeam" width="126" height="35"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://astar.network/">
+								<img loading="lazy" src="../assets/images/report/friends/astar.png"
+								     alt="Astar" width="114" height="53"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://acala.network/">
+								<img loading="lazy" src="../assets/images/report/friends/acala.png"
+								     alt="Acala" width="102" height="41"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://www.rmrk.app/">
+								<img loading="lazy" src="../assets/images/report/friends/rmrk.png"
+								     alt="RMRK" width="95" height="33"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://bifrost.finance/">
+								<img loading="lazy" src="../assets/images/report/friends/bifrost.png"
+								     alt="Bifrost" width="107" height="26"/>
+							</a>
+							<!-- HydraDX -->
+							<a class="block-friend grid-item" target="_blank" href="#">
+								<img loading="lazy" src="../assets/images/report/friends/hydra.png"
+								     alt="Hydra" width="117" height="29"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://parallel.fi/">
+								<img loading="lazy" src="../assets/images/report/friends/parallel.png"
+								     alt="Parallel" width="117" height="29"/>
+							</a>
 							<a class="block-friend grid-item" target="_blank" href="https://subsquid.io/">
 								<img loading="lazy" src="../assets/images/report/friends/subsquid.png"
 								     alt="Subsquid" width="130" height="30"/>
@@ -1349,9 +1572,65 @@
 								<img loading="lazy" src="../assets/images/report/friends/polkaholic.png"
 								     alt="Polkaholic" width="57" height="45"/>
 							</a>
-							<a class="block-friend grid-item" target="_blank" href="https://polkawatch.app/">
-								<img loading="lazy" src="../assets/images/report/friends/polkawatch.png"
-								     alt="Polkawatch" width="144" height="30"/>
+							<a class="block-friend grid-item" target="_blank" href="#">
+								<img loading="lazy" src="../assets/images/report/friends/subsquare2.png"
+								     alt="SubSquare" width="119" height="25"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="#">
+								<img loading="lazy" src="../assets/images/report/friends/dotreasury.png"
+								     alt="doTreasury" width="119" height="26"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="#">
+								<img loading="lazy" src="../assets/images/report/friends/statescan.png"
+								     alt="statescan" width="119" height="19"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://www.subscan.io/">
+								<img loading="lazy" src="../assets/images/report/friends/subscan.png"
+								     alt="Subscan" width="133" height="28"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="#">
+								<img loading="lazy" src="../assets/images/report/friends/electric-capital.png"
+								     alt="Electric Capital" width="137" height="13"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://tokenguard.io/">
+								<img loading="lazy" src="../assets/images/report/friends/token-guard.png"
+								     alt="Token Guard" width="140" height="22"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://zenlink.pro/">
+								<img loading="lazy" src="../assets/images/report/friends/zenlink.png"
+								     alt="Zenlink" width="119" height="39"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://stellaswap.com/">
+								<img loading="lazy" src="../assets/images/report/friends/stella-swap.png"
+								     alt="StellaSwap" width="136" height="28"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://beamswap.io/">
+								<img loading="lazy" src="../assets/images/report/friends/beamswap.png"
+								     alt="Beamswap" width="136" height="27"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://solarbeam.io/">
+								<img loading="lazy" src="../assets/images/report/friends/solarbeam.png"
+								     alt="Solarbeam" width="150" height="29"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://moonwell.fi/">
+								<img loading="lazy" src="../assets/images/report/friends/moonwell.png"
+								     alt="Moonwell" width="130" height="37"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://www.arthswap.org/">
+								<img loading="lazy" src="../assets/images/report/friends/arthswap.png"
+								     alt="ArthSwap" width="130" height="31"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://starlay.finance/">
+								<img loading="lazy" src="../assets/images/report/friends/starlay.png"
+								     alt="Starlay" width="122" height="44"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="#">
+								<img loading="lazy" src="../assets/images/report/friends/algem.png"
+								     alt="algem" width="95" height="42"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://www.paka.fund/">
+								<img loading="lazy" src="../assets/images/report/friends/paka.png"
+								     alt="PAKA" width="93" height="25"/>
 							</a>
 						</div>
 					</div>
@@ -1359,7 +1638,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- /.section-report-friends -->
+	<!-- /#friends -->
 </div>
 
 <footer id="footer" class="section site-footer">
@@ -1495,34 +1774,69 @@
 		<div class="panel-content">
 			<ul class="table-contents-list">
 				<li>
-					<a href="#polkadot-staking-report" class="scroll-to">Polkadot Staking Report</a>
-				</li>
-				<li>
-					<a href="#introduction" class="scroll-to">Introduction</a>
+					<a href="#polkadot-deep-dive" class="scroll-to">Polkadot Deep Dive</a>
 				</li>
 				<li>
 					<a href="#key-takeaways" class="scroll-to">Key Takeaways</a>
 				</li>
 				<li>
-					<a href="#staking-overview" class="scroll-to">Staking Overview</a>
-				</li>
-				<li>
-					<a href="#validators-nominators" class="scroll-to">Validators & Nominators</a>
+					<a href="#ecosystem-overview" class="scroll-to">Ecosystem Overview</a>
 					<ul>
 						<li>
-							<a href="#validator-rotation-network-vulnerability" class="scroll-to">Validator Rotation &
-								Network Vulnerability</a>
+							<a href="#financial-status-development-activity" class="scroll-to">Financial Status & Development Activity</a>
 						</li>
 						<li>
-							<a href="#nominators-preferences" class="scroll-to">Nominators’ Preferences</a>
+							<a href="#staking" class="scroll-to">Staking</a>
 						</li>
 						<li>
-							<a href="#earning-rewards-fast-unstake" class="scroll-to">Earning Rewards & Fast Unstake</a>
+							<a href="#token-holder" class="scroll-to">Token Holder</a>
+						</li>
+						<li>
+							<a href="#governance-grant" class="scroll-to">Governance & Grant</a>
+						</li>
+						<li>
+							<a href="#parachain" class="scroll-to">Parachain</a>
 						</li>
 					</ul>
 				</li>
 				<li>
-					<a href="#nomination-pools" class="scroll-to">Nomination Pools</a>
+					<a href="#the-defi-economy" class="scroll-to">The DeFi Economy</a>
+					<ul>
+						<li>
+							<a href="#dex-amm" class="scroll-to">DEX(AMM)</a>
+						</li>
+						<li>
+							<a href="#lending-borrowing" class="scroll-to">Lending & Borrowing (Money Market)</a>
+						</li>
+						<li>
+							<a href="#liquid-staking" class="scroll-to">Liquid Staking</a>
+						</li>
+						<li>
+							<a href="#stablecoin" class="scroll-to">Stablecoin</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#nft" class="scroll-to">NFT</a>
+					<ul>
+						<li>
+							<a href="#nft-marketplace" class="scroll-to">NFT Marketplace</a>
+						</li>
+						<li>
+							<a href="#metaverse" class="scroll-to">Metaverse</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#web3" class="scroll-to">Web3</a>
+					<ul>
+						<li>
+							<a href="#wasm" class="scroll-to">WASM</a>
+						</li>
+						<li>
+							<a href="#wallet" class="scroll-to">Wallet</a>
+						</li>
+					</ul>
 				</li>
 				<li>
 					<a href="#closing-thoughts" class="scroll-to">Closing Thoughts</a>
@@ -1594,14 +1908,14 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-T4R8Y0C0JQ"></script>
 <script>
-	window.dataLayer = window.dataLayer || [];
+  window.dataLayer = window.dataLayer || [];
 
-	function gtag() {
-		dataLayer.push( arguments );
-	}
+  function gtag() {
+    dataLayer.push(arguments);
+  }
 
-	gtag( 'js', new Date() );
-	gtag( 'config', 'G-T4R8Y0C0JQ' );
+  gtag('js', new Date());
+  gtag('config', 'G-T4R8Y0C0JQ');
 </script>
 <script src="../assets/libs/jquery/jquery-3.6.0.min.js"></script>
 <script src="../assets/libs/firefly/jquery.firefly-0.7.js"></script>
@@ -1617,20 +1931,22 @@
 <script src="../assets/js/wallet-manager.js?v=1.15"></script>
 
 <script id="__bs_script__">//<![CDATA[
-(function() {
-  try {
-    var script = document.createElement('script');
-    if ('async') {
-      script.async = true;
+(
+    function() {
+      try {
+        var script = document.createElement('script');
+        if ('async') {
+          script.async = true;
+        }
+        script.src = 'http://HOST:3000/browser-sync/browser-sync-client.js?v=2.29.1'.replace('HOST', location.hostname);
+        if (document.body) {
+          document.body.appendChild(script);
+        }
+      } catch (e) {
+        console.error('Browsersync: could not append script tag', e);
+      }
     }
-    script.src = 'http://HOST:3000/browser-sync/browser-sync-client.js?v=2.29.1'.replace("HOST", location.hostname);
-    if (document.body) {
-      document.body.appendChild(script);
-    }
-  } catch (e) {
-    console.error("Browsersync: could not append script tag", e);
-  }
-})()
+)();
 //]]></script>
 
 </body>
