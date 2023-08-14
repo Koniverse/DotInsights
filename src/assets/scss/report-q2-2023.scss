@@ -23,7 +23,7 @@
     .section-reports-hero {
         padding: 200px 0 170px;
         margin: 0 !important;
-        background: url(../images/report/shapes/box-grid.png) no-repeat center center;
+        background: url(../images/report/q2-2023/hero-bg.png) no-repeat center center;
         background-size: auto;
         --s-header-spacing: 0;
 
@@ -45,65 +45,40 @@
         }
 
         .hero-shape-dotinsights {
-            right: 20%;
-            bottom: 12%;
-            --shape-max-width: 10.5vw;
+            top: 30%;
+            left: 6%;
+            --shape-max-width: 20.5vw;
         }
 
         .hero-shape-dot {
-            top: 12%;
-            right: 22%;
-            --shape-max-width: 10vw;
+            right: 7%;
+            bottom: 15%;
+            --shape-max-width: 29.5vw;
         }
 
         .hero-shape-sw {
-            top: 30%;
-            left: 16%;
-            --shape-max-width: 9.5vw;
+            top: 22%;
+            right: 0;
+            --shape-max-width: 30vw;
         }
 
         .hero-shape-ring {
-            left: 40%;
-            top: 18%;
-            --shape-width: 59px;
+            left: 50%;
+            top: 25%;
+            --shape-width: 30px;
+        }
+
+        .hero-shape-cube {
+            left: 35%;
+            bottom: 18%;
+            --shape-width: 25px;
         }
 
         .hero-shape-satellite {
-            bottom: 48%;
-            right: 18%;
-            --shape-max-width: 30px;
+            left: 15%;
+            bottom: 25%;
+            --shape-width: 30px;
         }
-
-        .section-shape.shape-blur-circle {
-            max-width: 25vw;
-
-            &.blue {
-                background: #004BFF;
-                opacity: 0.55;
-                filter: blur(150px);
-
-                &.shape-position-tl {
-                    top: 20%;
-                    left: 20%;
-                }
-
-                &.shape-position-br {
-                    bottom: 10%;
-                    right: 10%;
-                }
-            }
-
-            &.pink {
-                background: #E166A1;
-                opacity: 0.5;
-                filter: blur(150px);
-                right: 20%;
-            }
-        }
-    }
-
-    .section-introduction {
-        margin-top: 0 !important;
     }
 
     .section-key-takeaways {
@@ -165,15 +140,6 @@
     .section.section-staking-overview {
         padding: 0 0 230px;
         margin: 0;
-    }
-
-    .section.section-validators-nominators {
-        margin: 40px 0 0;
-    }
-
-    .section.section-nomination-pools {
-        padding: 220px 0 50px;
-        margin-top: 60px;
     }
 
     .section-closing-thoughts {
@@ -448,11 +414,7 @@
             }
         }
 
-        .section.section-validators-nominators {
-            .section-header {
-                --s-header-spacing: 100px;
-            }
-        }
+
     }
 }
 
@@ -487,6 +449,42 @@
 
             .section-sub-title {
                 font-size: 32px;
+            }
+
+            .hero-shape-dotinsights {
+                top: 30%;
+                left: 16%;
+                --shape-max-width: 13.5vw;
+            }
+
+            .hero-shape-dot {
+                right: 17%;
+                bottom: 5%;
+                --shape-max-width: 19.5vw;
+            }
+
+            .hero-shape-sw {
+                top: 12%;
+                right: 15%;
+                --shape-max-width: 20vw;
+            }
+
+            .hero-shape-ring {
+                left: 50%;
+                top: 20%;
+                --shape-width: 59px;
+            }
+
+            .hero-shape-cube {
+                left: 35%;
+                bottom: 18%;
+                --shape-width: 3vw;
+            }
+
+            .hero-shape-satellite {
+                left: 25%;
+                bottom: 25%;
+                --shape-width: 36px;
             }
         }
 
