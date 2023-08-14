@@ -82,6 +82,11 @@
     }
 
     .section-key-takeaways {
+
+        &.section {
+            margin-top: 0;
+        }
+
         .section-content {
             position: relative;
             z-index: 1;
@@ -425,15 +430,24 @@
         }
 
         .section-header {
-            --s-header-spacing: 48px;
+            --s-header-spacing: 100px;
         }
 
         .section-title {
             font-size: 56px;
         }
 
+        .block-text .heading {
+            --header-spacing: 50px;
+        }
+
         .text {
             font-size: 20px;
+        }
+
+        .block-report-chart {
+            --chart-top-spacing: 64px;
+            --chart-bot-spacing: 64px;
         }
 
         .section-reports-hero {
