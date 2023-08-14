@@ -210,12 +210,17 @@
 
             // Chart Responsive
             switch (chartName) {
-              case 'total-dot-staked-locked':
-                chartOptions = getChartLinesBaseResponsiveOptions(chartName);
-                break;
+
               case 'price-dev-act':
                 chartOptions = getChartResponsiveOptionsPriceDevAct(chartName);
                 break;
+              case 'active-devs-commits':
+                chartOptions = getChartResponsiveOptionsActiveDevsCommits(chartName);
+                break;
+              case 'dev-activity-developers':
+                chartOptions = getChartOptionsResponsiveDevActivityDevelopers(chartName);
+                break;
+
             }
 
             if (chartOptions) {
@@ -425,6 +430,12 @@
             switch (chartName) {
               case 'price-dev-act':
                 chartOptions = getChartOptionsPriceDevAct(chartName, jsonData);
+                break;
+              case 'active-devs-commits':
+                chartOptions = getChartOptionsActiveDevsCommits(chartName, jsonData);
+                break;
+              case 'dev-activity-developers':
+                chartOptions = getChartOptionsDevActivityDevelopers(chartName, jsonData);
                 break;
 
             }
@@ -727,8 +738,395 @@
                 fontFamily: fontFamily,
                 fontSize: 9,
                 fontWeight: 500,
-                color: '#cccccc'
-              }
+                color: '#cccccc',
+              },
+            },
+          };
+        }
+
+        return newOptions;
+      }
+
+      function getChartOptionsActiveDevsCommits(chartName, jsonData) {
+        var totalItems = jsonData.length,
+            data = {
+              active_devs: [],
+              code_commits: [],
+            },
+            colors = [
+              '#e6007a', '#004bff',
+            ];
+
+        for (var i = 0; i < totalItems; i++) {
+          data.active_devs.push([
+            jsonData[i].date, jsonData[i].active_devs,
+          ]);
+          data.code_commits.push([
+            jsonData[i].date, jsonData[i].code_commits,
+          ]);
+        }
+
+        var baseOptions = {
+          color: colors,
+          textStyle: {
+            fontFamily: fontFamily,
+            fontWeight: 500,
+          },
+          tooltip: defaultTooltipSettings,
+          legend: defaultLegendSettings,
+          grid: {
+            top: '3%',
+            left: '3%',
+            right: '3%',
+            containLabel: true,
+          },
+          xAxis: {
+            type: 'time',
+            boundaryGap: false,
+            splitLine: {
+              show: false,
+              lineStyle: {
+                type: [
+                  4, 4,
+                ],
+                color: ['#262626'],
+              },
+            },
+            axisTick: {
+              show: false,
+            },
+            axisLine: {
+              lineStyle: {
+                color: '#262626',
+              },
+            },
+            axisPointer: defaultAxisPointerLabelSettings,
+            axisLabel: {
+              margin: 12,
+              formatter: dateFormatter,
+              color: '#cccccc',
+              fontSize: 10,
+            },
+          },
+          yAxis: [
+            {
+              type: 'value',
+              name: locate.activeDevelopers,
+              nameTextStyle: {
+                fontSize: 0,
+                lineHeight: 0,
+              },
+              alignTicks: true,
+              axisLine: {
+                show: false,
+              },
+              splitLine: {
+                lineStyle: {
+                  type: [
+                    4, 4,
+                  ],
+                  color: ['#262626'],
+                },
+              },
+              interval: 50,
+              min: 0,
+              max: 200,
+              axisPointer: {
+                label: {
+                  color: '#020722',
+                  backgroundColor: colors[0],
+                },
+              },
+              axisLabel: {
+                color: '#cccccc',
+              },
+            },
+            {
+              type: 'value',
+              name: locate.codeCommits,
+              nameTextStyle: {
+                fontSize: 0,
+                lineHeight: 0,
+              },
+              position: 'right',
+              alignTicks: true,
+              axisLine: {
+                show: false,
+              },
+              splitLine: {
+                lineStyle: {
+                  type: [
+                    4, 4,
+                  ],
+                  color: ['#262626'],
+                },
+              },
+              interval: 20,
+              min: 0,
+              max: 80,
+              axisPointer: {
+                label: {
+                  color: '#ffffff',
+                  backgroundColor: colors[1],
+                },
+              },
+              axisLabel: {
+                color: '#cccccc',
+              },
+            },
+          ],
+          series: [
+            {
+              name: locate.activeDevelopers,
+              data: data.active_devs,
+              type: 'line',
+              smooth: true,
+              showSymbol: false,
+              emphasis: {
+                focus: 'series',
+              },
+            }, {
+              name: locate.codeCommits,
+              data: data.code_commits,
+              type: 'bar',
+              smooth: true,
+              yAxisIndex: 1,
+              showSymbol: false,
+              emphasis: {
+                focus: 'series',
+              },
+            },
+          ],
+        };
+        var responsiveOptions = getChartResponsiveOptionsActiveDevsCommits();
+
+        $.extend(true, baseOptions, responsiveOptions);
+
+        return baseOptions;
+      }
+
+      function getChartResponsiveOptionsActiveDevsCommits() {
+        var newOptions = {};
+
+        if (window.innerWidth > 767) {
+          newOptions = {
+            xAxis: {
+              splitNumber: 4,
+              axisLabel: {
+                showMaxLabel: true,
+                align: 'center',
+                fontFamily: fontFamily,
+                fontSize: 10,
+                fontWeight: 500,
+                color: '#cccccc',
+              },
+            },
+          };
+        } else {
+          newOptions = {
+            grid: {
+              left: '3%',
+              right: '3%',
+              top: '3%', //bottom: 100, // DataZoom + Legend.
+              containLabel: true,
+            },
+            xAxis: {
+              splitNumber: 2,
+            },
+          };
+        }
+
+        return newOptions;
+      }
+
+      function getChartOptionsDevActivityDevelopers(chartName, jsonData) {
+        var totalItems = jsonData.length,
+            data = {
+              fullTime: [],
+              partTime: [],
+              oneTime: [],
+            },
+            colors = [
+              '#004dff',
+              '#ffc93f',
+              '#ff035e',
+            ];
+
+        for (var i = 0; i < totalItems; i++) {
+          data.fullTime.push([
+            jsonData[i].date,
+            jsonData[i].full_time,
+          ]);
+          data.partTime.push([
+            jsonData[i].date,
+            jsonData[i].part_time,
+          ]);
+          data.oneTime.push([
+            jsonData[i].date,
+            jsonData[i].one_time,
+          ]);
+        }
+
+        var baseOptions = {
+          color: colors,
+          textStyle: {
+            fontFamily: fontFamily,
+            fontWeight: 500,
+          },
+          tooltip: $.extend(true, {}, defaultTooltipStyle, {
+            trigger: 'axis',
+            axisPointer: {
+              type: 'line',
+              crossStyle: {
+                color: 'rgba(255,255,255,0.3)',
+              },
+              lineStyle: {
+                type: [
+                  4,
+                  4,
+                ],
+                color: 'rgba(255,255,255,0.3)',
+              },
+            },
+            valueFormatter: function(value) {
+              return value + '%';
+            },
+          }),
+          legend: defaultLegendSettings,
+          grid: {
+            left: '5%',
+            right: '6%',
+            top: '3%', //bottom: 100, // DataZoom + Legend.
+            containLabel: true,
+          },
+          xAxis: {
+            type: 'time',
+            boundaryGap: false,
+            axisTick: {
+              show: false,
+            },
+            axisLine: {
+              lineStyle: {
+                color: '#262626',
+              },
+            },
+            splitLine: {
+              show: true,
+              lineStyle: {
+                type: [
+                  4,
+                  4,
+                ],
+                color: ['#262626'],
+              },
+            },
+            axisPointer: defaultAxisPointerLabelSettings,
+            axisLabel: {
+              align: 'center',
+              fontFamily: fontFamily,
+              fontSize: 10,
+              fontWeight: 500,
+              formatter: dateFormatter,
+              color: '#cccccc',
+            },
+          },
+          yAxis: [
+            {
+              type: 'value',
+              position: 'left',
+              axisLine: {
+                show: false,
+              },
+              max: 100,
+              splitNumber: 4,
+              interval: 25,
+              splitLine: {
+                lineStyle: {
+                  type: [
+                    4,
+                    4,
+                  ],
+                  color: ['#262626'],
+                },
+              },
+              axisPointer: {
+                label: {
+                  color: '#000000',
+                  backgroundColor: '#cccccc',
+                },
+              },
+              axisLabel: {
+                color: '#cccccc',
+                fontSize: 10,
+                formatter: '{value}%',
+              },
+            },
+          ],
+          series: [
+            {
+              name: locate.fullTime,
+              data: data.fullTime,
+              itemStyle: {
+                color: colors[0],
+              },
+              type: 'bar',
+              smooth: true,
+              showSymbol: false,
+              emphasis: {
+                focus: 'series',
+              },
+              stack: '1',
+            },
+            {
+              name: locate.partTime,
+              data: data.partTime,
+              itemStyle: {
+                color: colors[1],
+              },
+              type: 'bar',
+              smooth: true,
+              showSymbol: false,
+              emphasis: {
+                focus: 'series',
+              },
+              stack: '1',
+            },
+            {
+              name: locate.oneTime,
+              data: data.oneTime,
+              itemStyle: {
+                color: colors[2],
+              },
+              type: 'bar',
+              smooth: true,
+              showSymbol: false,
+              emphasis: {
+                focus: 'series',
+              },
+              stack: '1',
+            },
+          ],
+        };
+        var responsiveOptions = getChartOptionsResponsiveDevActivityDevelopers();
+
+        $.extend(true, baseOptions, responsiveOptions);
+
+        return baseOptions;
+      }
+
+      function getChartOptionsResponsiveDevActivityDevelopers() {
+        var newOptions = {};
+
+        if (window.innerWidth > 767) {
+          newOptions = {
+            xAxis: {
+              splitNumber: 3,
+            },
+          };
+        } else {
+          newOptions = {
+            xAxis: {
+              splitNumber: 2,
             },
           };
         }
@@ -739,9 +1137,8 @@
       /*
       * CHART BASE FUNCTION
       * */
-      function getChartLinesBaseOptions(
-          jsonData, datasets, colors, areaBackground, seriesOptions,
-          chartExtraOptions,
+      function getChartLinesBaseOptions(jsonData, datasets, colors,
+          areaBackground, seriesOptions, chartExtraOptions,
       ) {
         var totalItems = jsonData.length,
             data = [];
