@@ -7,6 +7,8 @@ var lang = {
   fullTime: 'Full-Time',
   partTime: 'Part-Time',
   oneTime: 'One-Time',
+  uniqueUsers: 'Count Of Unique Users',
+  amountTotal: 'Total Amount Unbounded',
 
   wallets: 'Wallets',
   uiDevelopment: 'UI Development',

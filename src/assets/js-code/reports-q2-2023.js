@@ -220,7 +220,9 @@
               case 'dev-activity-developers':
                 chartOptions = getChartOptionsResponsiveDevActivityDevelopers(chartName);
                 break;
-
+              case 'fast-unstake-on-polkadot':
+                chartOptions = getChartResponsiveOptionsFastUnstakeOnPolkadot(chartName);
+                break;
             }
 
             if (chartOptions) {
@@ -437,7 +439,9 @@
               case 'dev-activity-developers':
                 chartOptions = getChartOptionsDevActivityDevelopers(chartName, jsonData);
                 break;
-
+              case 'fast-unstake-on-polkadot':
+                chartOptions = getChartOptionsFastUnstakeOnPolkadot(chartName, jsonData);
+                break;
             }
             chartInstance.hideLoading();
             chartInstance.setOption(chartOptions);
@@ -1125,6 +1129,227 @@
           };
         } else {
           newOptions = {
+            xAxis: {
+              splitNumber: 2,
+            },
+          };
+        }
+
+        return newOptions;
+      }
+
+      function getChartOptionsFastUnstakeOnPolkadot(chartName, jsonData) {
+        var totalItems = jsonData.length,
+            data = {
+              unique_users: [],
+              amount: [],
+            },
+            colors = [
+              '#004bff',
+              '#e6007a',
+            ];
+
+        for (var i = 0; i < totalItems; i++) {
+          data.unique_users.push([
+            jsonData[i].date,
+            jsonData[i].unique_users,
+          ]);
+          data.amount.push([
+            jsonData[i].date,
+            jsonData[i].amount,
+          ]);
+        }
+
+        var baseOptions = {
+          color: colors,
+          textStyle: {
+            fontFamily: fontFamily,
+            fontWeight: 500,
+          },
+          tooltip: defaultTooltipSettings,
+          legend: defaultLegendSettings,
+          grid: {
+            top: '3%',
+            left: '40px',
+            right: '40px',
+            containLabel: true,
+          },
+          xAxis: {
+            type: 'time',
+            splitLine: {
+              show: false,
+            },
+            axisTick: {
+              show: false,
+            },
+            axisLine: {
+              show: false,
+            },
+            axisPointer: defaultAxisPointerLabelSettings,
+            axisLabel: {
+              formatter: dateFormatter,
+              color: '#cccccc',
+            },
+          },
+          yAxis: [
+            {
+              type: 'value',
+              name: locate.amountTotal,
+              nameTextStyle: {
+                fontSize: 0,
+              },
+              position: 'right',
+              interval: 10000,
+              offset: 20,
+              alignTicks: true,
+              axisLine: {
+                show: false,
+              },
+              splitLine: {
+                lineStyle: {
+                  type: [
+                    4,
+                    4,
+                  ],
+                  color: ['#262626'],
+                },
+              },
+              axisPointer: {
+                label: {
+                  color: '#ffffff',
+                  backgroundColor: colors[0],
+                },
+              },
+              axisLabel: {
+                color: '#cccccc',
+              },
+            },
+            {
+              type: 'value',
+              name: locate.uniqueUsers,
+              nameTextStyle: {
+                fontSize: 0,
+              },
+              offset: 20,
+              alignTicks: true,
+              axisLine: {
+                show: false,
+              },
+              interval: 10,
+              splitLine: {
+                lineStyle: {
+                  type: [
+                    4,
+                    4,
+                  ],
+                  color: ['#262626'],
+                },
+              },
+              axisPointer: {
+                label: {
+                  color: '#ffffff',
+                  backgroundColor: colors[1],
+                },
+              },
+              axisLabel: {
+                color: '#cccccc',
+              },
+            },
+          ],
+          series: [
+            {
+              name: locate.uniqueUsers,
+              data: data.unique_users,
+              type: 'bar',
+              smooth: true,
+              yAxisIndex: 1,
+              showSymbol: false,
+              emphasis: {
+                focus: 'series',
+              },
+              barMaxWidth: 10,
+              itemStyle: {
+                borderRadius: [
+                  4,
+                  4,
+                  0,
+                  0,
+                ],
+              },
+            },
+            {
+              name: locate.amountTotal,
+              data: data.amount,
+              type: 'line',
+              smooth: false,
+              showSymbol: false,
+              emphasis: {
+                focus: 'series',
+              },
+              lineStyle: {
+                width: 3,
+              },
+            },
+          ],
+        };
+        var responsiveOptions = getChartResponsiveOptionsFastUnstakeOnPolkadot();
+
+        $.extend(true, baseOptions, responsiveOptions);
+
+        return baseOptions;
+      }
+
+      function getChartResponsiveOptionsFastUnstakeOnPolkadot() {
+        var newOptions = {};/**/
+
+        if (window.innerWidth > 767) {
+          newOptions = {
+            grid: {
+              left: '40px',
+              right: '40px',
+            },
+            yAxis: [
+              {
+                offset: 20,
+                axisLabel: {
+                  formatter: '{value}',
+                },
+              },
+              {
+                offset: 20,
+                axisLabel: {
+                  formatter: '{value}',
+                },
+              },
+            ],
+            xAxis: {
+              splitNumber: 4,
+            },
+          };
+        } else {
+          newOptions = {
+            grid: {
+              left: '20px',
+              right: '20px',
+            },
+            yAxis: [
+              {
+                offset: 5,
+                axisLabel: {
+                  formatter: function(value) {
+                    return NumberUtil.formatMoney(value);
+                  },
+                },
+              },
+              {
+                offset: 5,
+                axisLabel: {
+                  formatter: function(value) {
+                    return NumberUtil.formatMoney(value);
+                  },
+                },
+              },
+            ],
             xAxis: {
               splitNumber: 2,
             },
