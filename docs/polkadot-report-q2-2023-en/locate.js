@@ -17,6 +17,8 @@ var lang = {
   approved: 'Approved',
   notApproved: 'Not Approved',
   pending: 'Pending',
+  onDot: 'On Polkadot',
+  onKsm: 'On Kusama',
 
   wallets: 'Wallets',
   uiDevelopment: 'UI Development',

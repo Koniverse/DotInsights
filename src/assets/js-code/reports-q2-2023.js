@@ -236,6 +236,9 @@
               case 'kusama-opengov-referenda':
                 chartOptions = getChartResponsiveOptionsPolkadotOpenGovReferenda(chartName);
                 break;
+              case 'opengov-support-by-track':
+                chartOptions = getChartResponsiveOptionsOpenGovSupportByTrack(chartName);
+                break;
             }
 
             if (chartOptions) {
@@ -481,6 +484,9 @@
               break;
             case 'kusama-opengov-referenda':
               chartOptions = getChartOptionsKusamaOpenGovReferenda(chartName);
+              break;
+            case 'opengov-support-by-track':
+              chartOptions = getChartOptionsOpenGovSupportByTrack(chartName);
               break;
           }
 
@@ -2375,6 +2381,229 @@
             }, {
               label: {
                 fontSize: 10,
+              },
+            },
+          ];
+        }
+
+        return newOptions;
+      }
+
+      function getChartOptionsOpenGovSupportByTrack(chartName) {
+        var colors = [
+              '#004dff',
+              '#ffb800',
+            ],
+            data = [
+              [
+                'Root',
+                'Whitelisted Caller',
+                'Staking Admin',
+                'Treasurer',
+                'Lease Admin',
+                'General Admin',
+                'Auction Admin',
+                'Referendum Canceller',
+                'Small Tipper',
+                'Big Tipper',
+                'Small Spender',
+                'Medium Spender',
+                'Big Spender',
+              ],
+              [
+                0.76,
+                4.79,
+                0.09,
+                0.08,
+                0.00,
+                0.14,
+                9.43,
+                0.00,
+                0.03,
+                0.05,
+                0.05,
+                0.10,
+                0.29,
+              ],
+              [
+                2.88,
+                5.88,
+                4.40,
+                1.15,
+                12.19,
+                0.20,
+                11.04,
+                4.51,
+                0.11,
+                0.17,
+                0.18,
+                0.21,
+                0.42,
+              ],
+            ],
+            baseOptions = {
+              color: colors,
+              textStyle: {
+                fontFamily: fontFamily,
+                fontWeight: 500,
+              },
+              tooltip: $.extend(true, {}, defaultTooltipSettings, {
+                valueFormatter: function(value) {
+                  return value + '%';
+                },
+                axisPointer: {
+                  type: 'shadow',
+                },
+              }),
+              legend: defaultLegendSettings,
+              grid: {
+                top: '5%',
+                left: '5%',
+                right: '5%',
+                bottom: '8%',
+                containLabel: true,
+              },
+              xAxis: {
+                type: 'category',
+                data: data[0],
+                splitLine: {
+                  show: false,
+                  lineStyle: {
+                    type: [
+                      4,
+                      4,
+                    ],
+                    color: ['#262626'],
+                  },
+                },
+                axisTick: {
+                  show: false,
+                },
+                axisLine: {
+                  show: false,
+                },
+                axisPointer: defaultAxisPointerLabelSettings,
+                axisLabel: {
+                  hideOverlap: false,
+                  showMaxLabel: true,
+                  overflow: 'breakAll',
+                  rotate: 45,
+                  align: 'right',
+                  fontFamily: fontFamily,
+                  fontSize: 10,
+                  fontWeight: 500,
+                  color: '#cccccc',
+                },
+              },
+              yAxis: {
+                type: 'value',
+                offset: 0,
+                alignTicks: true,
+                axisLine: {
+                  show: false,
+                },
+                max: 12.5,
+                interval: 2.5,
+                splitNumber: 4,
+                splitLine: {
+                  lineStyle: {
+                    type: [
+                      4,
+                      4,
+                    ],
+                    color: ['#262626'],
+                  },
+                },
+                axisPointer: {
+                  label: {
+                    color: '#ffffff',
+                    backgroundColor: colors[0],
+                  },
+                },
+                axisLabel: {
+                  fontSize: 10,
+                  color: '#cccccc',
+                  formatter: '{value}%',
+                },
+              },
+              series: [
+                {
+                  name: locate.onDot,
+                  data: data[1],
+                  type: 'bar',
+                  label: {
+                    //                    show: true,
+                    position: 'top',
+                    fontFamily: fontFamily,
+                    fontSize: 12,
+                    fontWeight: 600,
+                    color: colors[0],
+                  },
+                  barMaxWidth: 28,
+                  itemStyle: {
+                    borderRadius: [
+                      3,
+                      3,
+                      0,
+                      0,
+                    ],
+                  },
+                },
+                {
+                  name: locate.onKsm,
+                  data: data[2],
+                  type: 'bar',
+                  label: {
+                    //                    show: true,
+                    position: 'top',
+                    fontFamily: fontFamily,
+                    fontSize: 10,
+                    fontWeight: 600,
+                    color: colors[1],
+                  },
+                  barMaxWidth: 28,
+                  itemStyle: {
+                    borderRadius: [
+                      3,
+                      3,
+                      0,
+                      0,
+                    ],
+                  },
+                },
+              ],
+            },
+            responsiveOptions = getChartResponsiveOptionsOpenGovSupportByTrack();
+
+        return $.extend(true, {}, baseOptions, responsiveOptions);
+      }
+
+      function getChartResponsiveOptionsOpenGovSupportByTrack() {
+        var newOptions = {};
+
+        if (window.innerWidth > 767) {
+          newOptions['series'] = [
+            {
+              label: {
+                fontSize: 10,
+              },
+            },
+            {
+              label: {
+                fontSize: 10,
+              },
+            },
+          ];
+        } else {
+          newOptions['series'] = [
+            {
+              label: {
+                fontSize: 8,
+              },
+            },
+            {
+              label: {
+                fontSize: 8,
               },
             },
           ];
