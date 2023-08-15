@@ -224,7 +224,11 @@
                 chartOptions = getChartResponsiveOptionsFastUnstakeOnPolkadot(chartName);
                 break;
               case 'staking-rewards-by-nominator-type':
-                chartOptions = getChartResponsiveOptionsStakingRewardsByNominatorType( chartName );
+                chartOptions = getChartResponsiveOptionsStakingRewardsByNominatorType(chartName);
+                break;
+              case 'active-validators-nominator-counts-versus-self-stakes':
+              case 'active-validators-nominator-counts-versus-commission':
+                chartOptions = getChartResponsiveOptionsActiveValidatorsNominatorCounts(chartName);
                 break;
             }
 
@@ -446,7 +450,13 @@
                 chartOptions = getChartOptionsFastUnstakeOnPolkadot(chartName, jsonData);
                 break;
               case 'staking-rewards-by-nominator-type':
-                chartOptions = getChartOptionsStakingRewardsByNominatorType( chartName, jsonData );
+                chartOptions = getChartOptionsStakingRewardsByNominatorType(chartName, jsonData);
+                break;
+              case 'active-validators-nominator-counts-versus-self-stakes':
+                chartOptions = getChartOptionsActiveValidatorsNominatorCountsVersusSelfStakes(chartName, jsonData);
+                break;
+              case 'active-validators-nominator-counts-versus-commission':
+                chartOptions = getChartOptionsActiveValidatorsNominatorCountsVersusCommission(chartName, jsonData);
                 break;
             }
             chartInstance.hideLoading();
@@ -1365,81 +1375,81 @@
         return newOptions;
       }
 
-      function getChartOptionsStakingRewardsByNominatorType( chartName, jsonData ) {
+      function getChartOptionsStakingRewardsByNominatorType(chartName, jsonData) {
         var totalItems = jsonData.length,
             data = {
               individual: [],
-              pool: []
+              pool: [],
             },
             colors = [
-              '#437AF0',
-              '#DF3F32'
+              '#437af0',
+              '#df3f32',
             ];
 
-        for ( var i = 0; i < totalItems; i ++ ) {
-          data.individual.push( [
+        for (var i = 0; i < totalItems; i++) {
+          data.individual.push([
             jsonData[i].date,
-            jsonData[i].individual
-          ] );
-          data.pool.push( [
+            jsonData[i].individual,
+          ]);
+          data.pool.push([
             jsonData[i].date,
-            jsonData[i].pool
-          ] );
+            jsonData[i].pool,
+          ]);
         }
 
         var baseOptions = {
           color: colors,
           textStyle: {
             fontFamily: fontFamily,
-            fontWeight: 500
+            fontWeight: 500,
           },
           //				tooltip: defaultTooltipSettings,
-          tooltip: $.extend( true, {}, defaultTooltipStyle, {
+          tooltip: $.extend(true, {}, defaultTooltipStyle, {
             trigger: 'axis',
             axisPointer: {
               type: 'line',
               crossStyle: {
-                color: 'rgba(255,255,255,0.3)'
+                color: 'rgba(255,255,255,0.3)',
               },
               lineStyle: {
                 type: [
                   4,
-                  4
+                  4,
                 ],
-                color: 'rgba(255,255,255,0.3)'
-              }
+                color: 'rgba(255,255,255,0.3)',
+              },
             },
-            valueFormatter: function ( value ) {
+            valueFormatter: function(value) {
               return value + ' DOT';
-            }
-          } ),
+            },
+          }),
           legend: defaultLegendSettings,
           grid: {
             left: '3%',
             right: '3%',
             top: '3%', //bottom: 100, // DataZoom + Legend.
-            containLabel: true
+            containLabel: true,
           },
           xAxis: {
             type: 'time',
             boundaryGap: false,
             axisTick: {
-              show: false
+              show: false,
             },
             axisLine: {
               lineStyle: {
-                color: '#262626'
-              }
+                color: '#262626',
+              },
             },
             splitLine: {
               show: true,
               lineStyle: {
                 type: [
                   4,
-                  4
+                  4,
                 ],
-                color: ['#262626']
-              }
+                color: ['#262626'],
+              },
             },
             axisPointer: defaultAxisPointerLabelSettings,
             axisLabel: {
@@ -1448,7 +1458,7 @@
               fontWeight: 500,
               formatter: dateFormatter,
               color: '#cccccc',
-            }
+            },
           },
           yAxis: [
             {
@@ -1456,7 +1466,7 @@
               name: locate.individual,
               position: 'left',
               axisLine: {
-                show: false
+                show: false,
               },
               splitNumber: 4,
               interval: 100000,
@@ -1464,28 +1474,28 @@
                 lineStyle: {
                   type: [
                     4,
-                    4
+                    4,
                   ],
-                  color: ['#262626']
-                }
+                  color: ['#262626'],
+                },
               },
               axisPointer: {
                 label: {
                   color: '#000000',
                   backgroundColor: '#cccccc',
-                }
+                },
               },
               axisLabel: {
                 color: '#cccccc',
-                fontSize: 10
-              }
+                fontSize: 10,
+              },
             },
             {
               type: 'value',
               name: locate.pool,
               position: 'right',
               axisLine: {
-                show: false
+                show: false,
               },
               splitNumber: 4,
               interval: 1500,
@@ -1495,49 +1505,49 @@
                 lineStyle: {
                   type: [
                     4,
-                    4
+                    4,
                   ],
-                  color: ['#262626']
-                }
+                  color: ['#262626'],
+                },
               },
               axisPointer: defaultAxisPointerLabelSettings,
               axisLabel: {
                 color: '#cccccc',
-                fontSize: 10
-              }
-            }
+                fontSize: 10,
+              },
+            },
           ],
           series: [
             {
               name: locate.individual,
               data: data.individual,
               itemStyle: {
-                color: colors[0]
+                color: colors[0],
               },
               type: 'line',
               showSymbol: false,
               emphasis: {
-                focus: 'series'
-              }
+                focus: 'series',
+              },
             },
             {
               name: locate.pool,
               data: data.pool,
               itemStyle: {
-                color: colors[1]
+                color: colors[1],
               },
               type: 'line',
               showSymbol: false,
               yAxisIndex: 1,
               emphasis: {
-                focus: 'series'
-              }
-            }
-          ]
+                focus: 'series',
+              },
+            },
+          ],
         };
         var responsiveOptions = getChartResponsiveOptionsStakingRewardsByNominatorType();
 
-        $.extend( true, baseOptions, responsiveOptions );
+        $.extend(true, baseOptions, responsiveOptions);
 
         return baseOptions;
       }
@@ -1545,42 +1555,340 @@
       function getChartResponsiveOptionsStakingRewardsByNominatorType() {
         var newOptions = {};
 
-        if ( window.innerWidth > 767 ) {
+        if (window.innerWidth > 767) {
           newOptions = {
             xAxis: {
-              splitNumber: 5
-            }
+              splitNumber: 5,
+            },
           };
         } else {
           newOptions = {
             xAxis: {
-              splitNumber: 3
-            }
+              splitNumber: 3,
+            },
           };
 
-          if ( window.innerWidth < 460 ) {
-            $.extend( newOptions, {
+          if (window.innerWidth < 460) {
+            $.extend(newOptions, {
               xAxis: {
-                splitNumber: 2
+                splitNumber: 2,
               },
               yAxis: [
                 {
                   axisLabel: {
-                    formatter: function ( value ) {
-                      return value ? NumberUtil.formatMoney( value ) : '0';
-                    }
-                  }
+                    formatter: function(value) {
+                      return value ? NumberUtil.formatMoney(value) : '0';
+                    },
+                  },
                 },
                 {
                   axisLabel: {
-                    formatter: function ( value ) {
-                      return value ? NumberUtil.formatMoney( value ) : '0';
-                    }
-                  }
-                }
+                    formatter: function(value) {
+                      return value ? NumberUtil.formatMoney(value) : '0';
+                    },
+                  },
+                },
               ],
-            } )
+            });
           }
+        }
+
+        return newOptions;
+      }
+
+      function getChartOptionsActiveValidatorsNominatorCountsVersusSelfStakes(chartName, jsonData) {
+        var totalItems = jsonData.length,
+            data = {
+              activeValidators: [],
+            };
+
+        for (var i = 0; i < totalItems; i++) {
+          data.activeValidators.push([
+            jsonData[i].validator_stake,
+            jsonData[i].nominator_count,
+          ]);
+        }
+
+        var baseOptions = {
+          color: '#66e1b6',
+          textStyle: {
+            fontFamily: fontFamily,
+            fontWeight: 500,
+          }, //				tooltip: defaultTooltipSettings,
+          tooltip: $.extend(true, {}, defaultTooltipSettings, {
+            trigger: 'item',
+            formatter: function(params) {
+              return (
+                  'Validator Self-Stake: ' + NumberUtil.formatWithCommas(params.value[params.encode.x[0]]) +
+                  '<br /><div style="display: inline-block; width: 10px; height: 10px; background-color: rgba(102,225,182,0.7); margin-right: 8px; border-radius: 50%;"></div>' + params.value[params.encode.y[0]] + ' Nominators'
+              );
+            },
+          }),
+          legend: {
+            show: false,
+          },
+          grid: {
+            left: '8%',
+            right: '8%',
+            top: '3%', //bottom: 100, // DataZoom + Legend.
+            containLabel: true,
+          },
+          xAxis: {
+            type: 'value',
+            name: locate.validatorSelfStake,
+            nameLocation: 'middle',
+            nameTextStyle: {
+              fontFamily: fontFamily,
+              fontSize: 13,
+              fontWeight: 500,
+              color: '#ffffff',
+              lineHeight: 80,
+            },
+            axisLine: {
+              show: false,
+            },
+            splitNumber: 4,
+            interval: 200000,
+            splitLine: {
+              lineStyle: {
+                type: [
+                  4,
+                  4,
+                ],
+                color: ['#262626'],
+              },
+            },
+            axisPointer: {
+              label: {
+                color: '#000000',
+                backgroundColor: '#cccccc',
+              },
+            },
+            axisLabel: {
+              color: '#cccccc',
+              fontSize: 10,
+            },
+          },
+          yAxis: {
+            type: 'value',
+            name: locate.nominatorCount,
+            nameLocation: 'center',
+            nameTextStyle: {
+              fontFamily: fontFamily,
+              fontSize: 13,
+              fontWeight: 500,
+              color: '#ffffff',
+              lineHeight: 80,
+            },
+            axisLine: {
+              show: false,
+            },
+            splitNumber: 4,
+            interval: 100,
+            splitLine: {
+              lineStyle: {
+                type: [
+                  4,
+                  4,
+                ],
+                color: ['#262626'],
+              },
+            },
+            axisPointer: {
+              label: {
+                color: '#000000',
+                backgroundColor: '#cccccc',
+              },
+            },
+            axisLabel: {
+              color: '#cccccc',
+              fontSize: 10,
+            },
+          },
+          series: [
+            {
+              data: data.activeValidators,
+              itemStyle: {
+                color: 'rgba(102,225,182,0.7)',
+              },
+              type: 'scatter',
+              symbolSize: 6,
+              smooth: true,
+              showSymbol: false,
+              emphasis: {
+                focus: 'series',
+              },
+            },
+          ],
+        };
+        var responsiveOptions = getChartResponsiveOptionsActiveValidatorsNominatorCounts();
+
+        $.extend(true, baseOptions, responsiveOptions);
+
+        return baseOptions;
+      }
+
+      function getChartOptionsActiveValidatorsNominatorCountsVersusCommission(chartName, jsonData) {
+        var totalItems = jsonData.length,
+            data = {
+              activeValidators: [],
+            };
+
+        for (var i = 0; i < totalItems; i++) {
+          data.activeValidators.push([
+            jsonData[i].validator_commission,
+            jsonData[i].nominator_count,
+          ]);
+        }
+
+        var baseOptions = {
+          color: 'rgba(223,20,106,0.7)',
+          textStyle: {
+            fontFamily: fontFamily,
+            fontWeight: 500,
+          },
+          tooltip: $.extend(true, {}, defaultTooltipSettings, {
+            trigger: 'item',
+            formatter: function(params) {
+              return (
+                  'Validator Commission: ' + NumberUtil.formatWithCommas(params.value[params.encode.x[0]]) + '%' +
+                  '<br /><div style="display: inline-block; width: 10px; height: 10px; background-color: rgba(230,0,122,0.7); margin-right: 8px; border-radius: 50%;"></div>' + params.value[params.encode.y[0]] + ' Nominators'
+              );
+            },
+          }),
+          legend: {
+            show: false,
+          },
+          grid: {
+            left: '8%',
+            right: '8%',
+            top: '3%',
+            containLabel: true,
+          },
+          xAxis: {
+            type: 'value',
+            name: locate.validatorCommission + ' (%)',
+            nameLocation: 'middle',
+            nameTextStyle: {
+              fontFamily: fontFamily,
+              fontSize: 13,
+              fontWeight: 500,
+              color: '#ffffff',
+              lineHeight: 80,
+            },
+            axisLine: {
+              show: false,
+            },
+            max: 100,
+            splitNumber: 4,
+            interval: 25,
+            splitLine: {
+              lineStyle: {
+                type: [
+                  4,
+                  4,
+                ],
+                color: ['#262626'],
+              },
+            },
+            axisPointer: {
+              label: {
+                color: '#000000',
+                backgroundColor: '#cccccc',
+                formatter: '{value}%',
+              },
+            },
+            axisLabel: {
+              formatter: '{value}%',
+              color: '#cccccc',
+              fontSize: 10,
+            },
+          },
+          yAxis: {
+            type: 'value',
+            name: locate.nominatorCount,
+            nameLocation: 'center',
+            nameTextStyle: {
+              fontFamily: fontFamily,
+              fontSize: 13,
+              fontWeight: 500,
+              color: '#ffffff',
+              lineHeight: 80,
+            },
+            axisLine: {
+              show: false,
+            },
+            splitNumber: 4,
+            interval: 100,
+            splitLine: {
+              lineStyle: {
+                type: [
+                  4,
+                  4,
+                ],
+                color: ['#262626'],
+              },
+            },
+            axisPointer: {
+              label: {
+                color: '#000000',
+                backgroundColor: '#cccccc',
+              },
+            },
+            axisLabel: {
+              color: '#cccccc',
+              fontSize: 10,
+            },
+          },
+          series: [
+            {
+              data: data.activeValidators,
+              itemStyle: {
+                color: 'rgba(230,0,122,0.7)',
+              },
+              type: 'scatter',
+              symbolSize: 6,
+              smooth: true,
+              showSymbol: false,
+              emphasis: {
+                focus: 'series',
+              },
+            },
+          ],
+        };
+        var responsiveOptions = getChartResponsiveOptionsActiveValidatorsNominatorCounts();
+
+        $.extend(true, baseOptions, responsiveOptions);
+
+        return baseOptions;
+      }
+
+      function getChartResponsiveOptionsActiveValidatorsNominatorCounts() {
+        var newOptions = {};
+
+        if (window.innerWidth < 460) {
+          $.extend(newOptions, {
+            grid: {
+              left: '15%',
+              right: '5%',
+              top: '3%', //bottom: 100, // DataZoom + Legend.
+              containLabel: true,
+            },
+            xAxis: {
+              axisLabel: {
+                formatter: function(value) {
+                  return value ? NumberUtil.formatMoney(value) : '0';
+                },
+              },
+            },
+            yAxis: {
+              axisLabel: {
+                formatter: function(value) {
+                  return value ? NumberUtil.formatMoney(value) : '0';
+                },
+              },
+            },
+          });
         }
 
         return newOptions;

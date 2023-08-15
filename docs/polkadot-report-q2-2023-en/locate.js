@@ -11,6 +11,9 @@ var lang = {
   amountTotal: 'Total Amount Unbounded',
   individual: 'Individual Nominators',
   pool: 'Pools',
+  nominatorCount: 'Nominator Count',
+  validatorSelfStake: 'Validator Self-Stake',
+  validatorCommission: 'Validator Commission',
 
   wallets: 'Wallets',
   uiDevelopment: 'UI Development',
