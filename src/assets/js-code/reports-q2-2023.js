@@ -230,6 +230,10 @@
               case 'active-validators-nominator-counts-versus-commission':
                 chartOptions = getChartResponsiveOptionsActiveValidatorsNominatorCounts(chartName);
                 break;
+              case 'dot-holder-distribution':
+              case 'ksm-holder-distribution':
+                chartOptions = getChartResponsiveOptionsHolderDistribution(chartName);
+                break;
             }
 
             if (chartOptions) {
@@ -466,8 +470,11 @@
           var chartOptions = {};
 
           switch (chartName) {
-            case 'total-stake-distribution':
-              chartOptions = getChartOptionsTotalStakeDistribution(chartName);
+            case 'dot-holder-distribution':
+              chartOptions = getChartOptionsDotHolderDistribution(chartName);
+              break;
+            case 'ksm-holder-distribution':
+              chartOptions = getChartOptionsKsmHolderDistribution(chartName);
               break;
           }
 
@@ -1889,6 +1896,262 @@
               },
             },
           });
+        }
+
+        return newOptions;
+      }
+
+      function getChartOptionsDotHolderDistribution(chartName) {
+        var colors = [
+              '#e6007a',
+              '#ea5474',
+              '#dfada5',
+              '#8b93af',
+            ],
+            datasets = [
+              {
+                value: 879219392.00,
+                name: 'Whale Account',
+              },
+              {
+                value: 248010896.00,
+                name: 'Dolphin Account',
+              },
+              {
+                value: 204198576.00,
+                name: 'Fish Account',
+              },
+              {
+                value: 2141716.25,
+                name: 'Shrimp Account',
+              },
+            ],
+            baseOptions = {
+              color: colors,
+              tooltip: false,
+              legend: false,
+              grid: {
+                left: '0',
+                right: '0',
+                top: '0',
+                containLabel: true,
+              },
+              series: [
+                {
+                  name: 'Polkadot Holder Distribution',
+                  type: 'pie',
+                  center: [
+                    '45%',
+                    '45%',
+                  ],
+                  radius: [
+                    '68%',
+                    '85%',
+                  ],
+                  avoidLabelOverlap: false,
+                  label: {
+                    show: false,
+                    position: 'center',
+                  },
+                  emphasis: {
+                    label: {
+                      show: true,
+                      fontFamily: fontFamily,
+                      color: '#ffffff',
+                      fontSize: 17,
+                      fontWeight: '500',
+                      formatter: function(param) {
+                        var value = NumberUtil.formatWithCommas(param.value);
+
+                        return '{per|' + param.percent + '%}\n{b|' + param.name + '}\n{c|' + value + ' DOT' + '}';
+                      },
+                      rich: {
+                        per: {
+                          fontFamily: fontFamily,
+                          fontWeight: 700,
+                          fontSize: 27,
+                          align: 'center',
+                        },
+                        b: {
+                          fontFamily: fontFamily,
+                          fontWeight: 500,
+                          color: '#b1b1b1',
+                          fontSize: 14,
+                          align: 'center',
+                          padding: [
+                            10,
+                            0,
+                            10,
+                            0,
+                          ],
+                        },
+                        c: {
+                          fontFamily: fontFamily,
+                          fontWeight: 700,
+                          color: '#ffffff',
+                          fontSize: 15,
+                          lineHeight: 26,
+                          align: 'center',
+                        },
+                      },
+                    },
+                  },
+                  labelLine: {
+                    show: false,
+                  },
+                  data: datasets,
+                },
+              ],
+            },
+            responsiveOptions = getChartResponsiveOptionsHolderDistribution();
+
+        return $.extend(true, {}, baseOptions, responsiveOptions);
+      }
+
+      function getChartOptionsKsmHolderDistribution(chartName) {
+        var colors = [
+              '#004bff',
+              '#118af5',
+              '#22bffe',
+              '#8b93af',
+            ],
+            datasets = [
+              {
+                value: 9812790.00,
+                name: 'Whale Account',
+              },
+              {
+                value: 2251811.25,
+                name: 'Dolphin Account',
+              },
+              {
+                value: 1706137.63,
+                name: 'Fish Account',
+              },
+              {
+                value: 4254.99,
+                name: 'Shrimp Account',
+              },
+            ],
+            baseOptions = {
+              color: colors,
+              tooltip: false,
+              legend: false,
+              grid: {
+                left: '3%',
+                right: '3%',
+                top: '0',
+                containLabel: true,
+              },
+              series: [
+                {
+                  name: 'Polkadot And Kusama Holder Distribution',
+                  type: 'pie',
+                  center: [
+                    '45%',
+                    '45%',
+                  ],
+                  radius: [
+                    '68%',
+                    '85%',
+                  ],
+                  avoidLabelOverlap: false,
+                  label: {
+                    show: false,
+                    position: 'center',
+                  },
+                  emphasis: {
+                    label: {
+                      show: true,
+                      fontFamily: fontFamily,
+                      color: '#ffffff',
+                      fontSize: 15,
+                      fontWeight: '500',
+                      formatter: function(param) {
+                        var value = NumberUtil.formatWithCommas(param.value);
+
+                        return '{per|' + param.percent + '%}\n{b|' + param.name + '}\n{c|' + value + '}';
+                      },
+                      rich: {
+                        per: {
+                          fontFamily: fontFamily,
+                          fontWeight: 700,
+                          color: '#ffffff',
+                          fontSize: 32,
+                          align: 'center',
+                        },
+                        b: {
+                          fontFamily: fontFamily,
+                          fontWeight: 500,
+                          color: '#cccccc',
+                          fontSize: 17,
+                          align: 'center',
+                          padding: [
+                            10,
+                            0,
+                            10,
+                            0,
+                          ],
+                        },
+                        c: {
+                          fontFamily: fontFamily,
+                          fontWeight: 700,
+                          color: '#ffffff',
+                          fontSize: 17,
+                          formatter: function(name) {
+                            return '$ ' + name;
+                          },
+                          align: 'center',
+                        },
+                      },
+                    },
+                  },
+                  labelLine: {
+                    show: false,
+                  },
+                  data: datasets,
+                },
+              ],
+            },
+            responsiveOptions = getChartResponsiveOptionsHolderDistribution();
+
+        return $.extend(true, {}, baseOptions, responsiveOptions);
+      }
+
+      function getChartResponsiveOptionsHolderDistribution() {
+        var newOptions = {
+          series: [
+            {},
+            {},
+          ],
+        };
+
+        if (window.innerWidth < 768) {
+          newOptions['series'][0] = {
+            center: [
+              '50%',
+              '50%',
+            ],
+            radius: [
+              '70%',
+              '90%',
+            ],
+            emphasis: {
+              label: {
+                rich: {
+                  per: {
+                    fontSize: 28,
+                  },
+                  b: {
+                    fontSize: 17,
+                  },
+                  c: {
+                    fontSize: 17,
+                  },
+                },
+              },
+            },
+          };
         }
 
         return newOptions;
