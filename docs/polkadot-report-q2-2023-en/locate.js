@@ -14,6 +14,9 @@ var lang = {
   nominatorCount: 'Nominator Count',
   validatorSelfStake: 'Validator Self-Stake',
   validatorCommission: 'Validator Commission',
+  approved: 'Approved',
+  notApproved: 'Not Approved',
+  pending: 'Pending',
 
   wallets: 'Wallets',
   uiDevelopment: 'UI Development',

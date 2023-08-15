@@ -166,10 +166,8 @@
         var $readmore = $('.block-dao .description');
 
         new Readmore($readmore, {
-          moreLink: '<a href="#" class="btn btn-flat btn-small">' +
-                    locate.readMore + '</a>',
-          lessLink: '<a href="#" class="btn btn-flat btn-small">' +
-                    locate.readLess + '</a>',
+          moreLink: '<a href="#" class="btn btn-flat btn-small">' + locate.readMore + '</a>',
+          lessLink: '<a href="#" class="btn btn-flat btn-small">' + locate.readLess + '</a>',
         });
 
         var $blockBridge = $('.block-bridge');
@@ -233,6 +231,10 @@
               case 'dot-holder-distribution':
               case 'ksm-holder-distribution':
                 chartOptions = getChartResponsiveOptionsHolderDistribution(chartName);
+                break;
+              case 'polkadot-opengov-referenda':
+              case 'kusama-opengov-referenda':
+                chartOptions = getChartResponsiveOptionsPolkadotOpenGovReferenda(chartName);
                 break;
             }
 
@@ -430,9 +432,7 @@
         }
 
         if ('inline' !== chartSource) { // Chart with jSON source.
-          var fileName = typeof chartSource !== 'undefined'
-              ? chartSource
-              : chartName;
+          var fileName = typeof chartSource !== 'undefined' ? chartSource : chartName;
           var url = sourceBaseUrl + fileName + '.json';
 
           fetch(url).then(function(response) {
@@ -476,6 +476,12 @@
             case 'ksm-holder-distribution':
               chartOptions = getChartOptionsKsmHolderDistribution(chartName);
               break;
+            case 'polkadot-opengov-referenda':
+              chartOptions = getChartOptionsPolkadotOpenGovReferenda(chartName);
+              break;
+            case 'kusama-opengov-referenda':
+              chartOptions = getChartOptionsKusamaOpenGovReferenda(chartName);
+              break;
           }
 
           chartInstance.hideLoading();
@@ -485,8 +491,7 @@
           if ($customLegend.length > 0) {
             chartInstance.on('mouseover', 'series', function(params) {
 
-              var $current = $customLegend.find(
-                  'li[data-id="' + params.name + '"]');
+              var $current = $customLegend.find('li[data-id="' + params.name + '"]');
 
               setItemHighlight($current);
             });
@@ -867,8 +872,7 @@
               axisLabel: {
                 color: '#cccccc',
               },
-            },
-            {
+            }, {
               type: 'value',
               name: locate.codeCommits,
               nameTextStyle: {
@@ -974,23 +978,18 @@
               oneTime: [],
             },
             colors = [
-              '#004dff',
-              '#ffc93f',
-              '#ff035e',
+              '#004dff', '#ffc93f', '#ff035e',
             ];
 
         for (var i = 0; i < totalItems; i++) {
           data.fullTime.push([
-            jsonData[i].date,
-            jsonData[i].full_time,
+            jsonData[i].date, jsonData[i].full_time,
           ]);
           data.partTime.push([
-            jsonData[i].date,
-            jsonData[i].part_time,
+            jsonData[i].date, jsonData[i].part_time,
           ]);
           data.oneTime.push([
-            jsonData[i].date,
-            jsonData[i].one_time,
+            jsonData[i].date, jsonData[i].one_time,
           ]);
         }
 
@@ -1009,8 +1008,7 @@
               },
               lineStyle: {
                 type: [
-                  4,
-                  4,
+                  4, 4,
                 ],
                 color: 'rgba(255,255,255,0.3)',
               },
@@ -1041,8 +1039,7 @@
               show: true,
               lineStyle: {
                 type: [
-                  4,
-                  4,
+                  4, 4,
                 ],
                 color: ['#262626'],
               },
@@ -1070,8 +1067,7 @@
               splitLine: {
                 lineStyle: {
                   type: [
-                    4,
-                    4,
+                    4, 4,
                   ],
                   color: ['#262626'],
                 },
@@ -1103,8 +1099,7 @@
                 focus: 'series',
               },
               stack: '1',
-            },
-            {
+            }, {
               name: locate.partTime,
               data: data.partTime,
               itemStyle: {
@@ -1117,8 +1112,7 @@
                 focus: 'series',
               },
               stack: '1',
-            },
-            {
+            }, {
               name: locate.oneTime,
               data: data.oneTime,
               itemStyle: {
@@ -1168,18 +1162,15 @@
               amount: [],
             },
             colors = [
-              '#004bff',
-              '#e6007a',
+              '#004bff', '#e6007a',
             ];
 
         for (var i = 0; i < totalItems; i++) {
           data.unique_users.push([
-            jsonData[i].date,
-            jsonData[i].unique_users,
+            jsonData[i].date, jsonData[i].unique_users,
           ]);
           data.amount.push([
-            jsonData[i].date,
-            jsonData[i].amount,
+            jsonData[i].date, jsonData[i].amount,
           ]);
         }
 
@@ -1231,8 +1222,7 @@
               splitLine: {
                 lineStyle: {
                   type: [
-                    4,
-                    4,
+                    4, 4,
                   ],
                   color: ['#262626'],
                 },
@@ -1246,8 +1236,7 @@
               axisLabel: {
                 color: '#cccccc',
               },
-            },
-            {
+            }, {
               type: 'value',
               name: locate.uniqueUsers,
               nameTextStyle: {
@@ -1262,8 +1251,7 @@
               splitLine: {
                 lineStyle: {
                   type: [
-                    4,
-                    4,
+                    4, 4,
                   ],
                   color: ['#262626'],
                 },
@@ -1293,14 +1281,10 @@
               barMaxWidth: 10,
               itemStyle: {
                 borderRadius: [
-                  4,
-                  4,
-                  0,
-                  0,
+                  4, 4, 0, 0,
                 ],
               },
-            },
-            {
+            }, {
               name: locate.amountTotal,
               data: data.amount,
               type: 'line',
@@ -1337,8 +1321,7 @@
                 axisLabel: {
                   formatter: '{value}',
                 },
-              },
-              {
+              }, {
                 offset: 20,
                 axisLabel: {
                   formatter: '{value}',
@@ -1363,8 +1346,7 @@
                     return NumberUtil.formatMoney(value);
                   },
                 },
-              },
-              {
+              }, {
                 offset: 5,
                 axisLabel: {
                   formatter: function(value) {
@@ -1389,18 +1371,15 @@
               pool: [],
             },
             colors = [
-              '#437af0',
-              '#df3f32',
+              '#437af0', '#df3f32',
             ];
 
         for (var i = 0; i < totalItems; i++) {
           data.individual.push([
-            jsonData[i].date,
-            jsonData[i].individual,
+            jsonData[i].date, jsonData[i].individual,
           ]);
           data.pool.push([
-            jsonData[i].date,
-            jsonData[i].pool,
+            jsonData[i].date, jsonData[i].pool,
           ]);
         }
 
@@ -1409,8 +1388,7 @@
           textStyle: {
             fontFamily: fontFamily,
             fontWeight: 500,
-          },
-          //				tooltip: defaultTooltipSettings,
+          }, //				tooltip: defaultTooltipSettings,
           tooltip: $.extend(true, {}, defaultTooltipStyle, {
             trigger: 'axis',
             axisPointer: {
@@ -1420,8 +1398,7 @@
               },
               lineStyle: {
                 type: [
-                  4,
-                  4,
+                  4, 4,
                 ],
                 color: 'rgba(255,255,255,0.3)',
               },
@@ -1452,8 +1429,7 @@
               show: true,
               lineStyle: {
                 type: [
-                  4,
-                  4,
+                  4, 4,
                 ],
                 color: ['#262626'],
               },
@@ -1480,8 +1456,7 @@
               splitLine: {
                 lineStyle: {
                   type: [
-                    4,
-                    4,
+                    4, 4,
                   ],
                   color: ['#262626'],
                 },
@@ -1496,8 +1471,7 @@
                 color: '#cccccc',
                 fontSize: 10,
               },
-            },
-            {
+            }, {
               type: 'value',
               name: locate.pool,
               position: 'right',
@@ -1511,8 +1485,7 @@
                 show: false,
                 lineStyle: {
                   type: [
-                    4,
-                    4,
+                    4, 4,
                   ],
                   color: ['#262626'],
                 },
@@ -1536,8 +1509,7 @@
               emphasis: {
                 focus: 'series',
               },
-            },
-            {
+            }, {
               name: locate.pool,
               data: data.pool,
               itemStyle: {
@@ -1587,8 +1559,7 @@
                       return value ? NumberUtil.formatMoney(value) : '0';
                     },
                   },
-                },
-                {
+                }, {
                   axisLabel: {
                     formatter: function(value) {
                       return value ? NumberUtil.formatMoney(value) : '0';
@@ -1611,8 +1582,7 @@
 
         for (var i = 0; i < totalItems; i++) {
           data.activeValidators.push([
-            jsonData[i].validator_stake,
-            jsonData[i].nominator_count,
+            jsonData[i].validator_stake, jsonData[i].nominator_count,
           ]);
         }
 
@@ -1659,8 +1629,7 @@
             splitLine: {
               lineStyle: {
                 type: [
-                  4,
-                  4,
+                  4, 4,
                 ],
                 color: ['#262626'],
               },
@@ -1695,8 +1664,7 @@
             splitLine: {
               lineStyle: {
                 type: [
-                  4,
-                  4,
+                  4, 4,
                 ],
                 color: ['#262626'],
               },
@@ -1743,8 +1711,7 @@
 
         for (var i = 0; i < totalItems; i++) {
           data.activeValidators.push([
-            jsonData[i].validator_commission,
-            jsonData[i].nominator_count,
+            jsonData[i].validator_commission, jsonData[i].nominator_count,
           ]);
         }
 
@@ -1792,8 +1759,7 @@
             splitLine: {
               lineStyle: {
                 type: [
-                  4,
-                  4,
+                  4, 4,
                 ],
                 color: ['#262626'],
               },
@@ -1830,8 +1796,7 @@
             splitLine: {
               lineStyle: {
                 type: [
-                  4,
-                  4,
+                  4, 4,
                 ],
                 color: ['#262626'],
               },
@@ -1903,25 +1868,19 @@
 
       function getChartOptionsDotHolderDistribution(chartName) {
         var colors = [
-              '#e6007a',
-              '#ea5474',
-              '#dfada5',
-              '#8b93af',
+              '#e6007a', '#ea5474', '#dfada5', '#8b93af',
             ],
             datasets = [
               {
                 value: 879219392.00,
                 name: 'Whale Account',
-              },
-              {
+              }, {
                 value: 248010896.00,
                 name: 'Dolphin Account',
-              },
-              {
+              }, {
                 value: 204198576.00,
                 name: 'Fish Account',
-              },
-              {
+              }, {
                 value: 2141716.25,
                 name: 'Shrimp Account',
               },
@@ -1941,12 +1900,10 @@
                   name: 'Polkadot Holder Distribution',
                   type: 'pie',
                   center: [
-                    '45%',
-                    '45%',
+                    '45%', '45%',
                   ],
                   radius: [
-                    '68%',
-                    '85%',
+                    '68%', '85%',
                   ],
                   avoidLabelOverlap: false,
                   label: {
@@ -1979,10 +1936,7 @@
                           fontSize: 14,
                           align: 'center',
                           padding: [
-                            10,
-                            0,
-                            10,
-                            0,
+                            10, 0, 10, 0,
                           ],
                         },
                         c: {
@@ -2010,25 +1964,19 @@
 
       function getChartOptionsKsmHolderDistribution(chartName) {
         var colors = [
-              '#004bff',
-              '#118af5',
-              '#22bffe',
-              '#8b93af',
+              '#004bff', '#118af5', '#22bffe', '#8b93af',
             ],
             datasets = [
               {
                 value: 9812790.00,
                 name: 'Whale Account',
-              },
-              {
+              }, {
                 value: 2251811.25,
                 name: 'Dolphin Account',
-              },
-              {
+              }, {
                 value: 1706137.63,
                 name: 'Fish Account',
-              },
-              {
+              }, {
                 value: 4254.99,
                 name: 'Shrimp Account',
               },
@@ -2048,12 +1996,10 @@
                   name: 'Polkadot And Kusama Holder Distribution',
                   type: 'pie',
                   center: [
-                    '45%',
-                    '45%',
+                    '45%', '45%',
                   ],
                   radius: [
-                    '68%',
-                    '85%',
+                    '68%', '85%',
                   ],
                   avoidLabelOverlap: false,
                   label: {
@@ -2087,10 +2033,7 @@
                           fontSize: 17,
                           align: 'center',
                           padding: [
-                            10,
-                            0,
-                            10,
-                            0,
+                            10, 0, 10, 0,
                           ],
                         },
                         c: {
@@ -2121,20 +2064,17 @@
       function getChartResponsiveOptionsHolderDistribution() {
         var newOptions = {
           series: [
-            {},
-            {},
+            {}, {},
           ],
         };
 
         if (window.innerWidth < 768) {
           newOptions['series'][0] = {
             center: [
-              '50%',
-              '50%',
+              '50%', '50%',
             ],
             radius: [
-              '70%',
-              '90%',
+              '70%', '90%',
             ],
             emphasis: {
               label: {
@@ -2157,12 +2097,296 @@
         return newOptions;
       }
 
+      function getChartOptionsPolkadotOpenGovReferenda(chartName) {
+        var colors = [
+          '#004bff', '#e12c29', '#f8b00c',
+        ];
+        var series = [
+          {
+            name: locate.approved,
+            data: [
+              1, 5, 0, 1, 1, 2, 6, 7, 2, 13, 3,
+            ],
+          }, {
+            name: locate.notApproved,
+            data: [
+              2, 1, 0, 1, 0, 0, 7, 3, 9, 7, 1,
+            ],
+          }, {
+            name: locate.pending,
+            data: [
+              1, 0, 1, 1, 0, 0, 0, 0, 1, 10, 4,
+            ],
+          },
+        ];
+
+        function genFormatter(series) {
+          return (param) => {
+            let sum = 0;
+            series.forEach(item => {
+              sum += item.data[param.dataIndex];
+            });
+            return sum;
+          };
+        }
+
+        function isLastSeries(index) {
+          return index === series.length - 1;
+        }
+
+        var baseOptions = {
+              color: colors,
+              textStyle: {
+                fontFamily: fontFamily,
+                fontWeight: 500,
+              },
+              tooltip: defaultTooltipSettings,
+              legend: defaultLegendSettings,
+              grid: {
+                top: '5%',
+                left: '3%',
+                right: '3%',
+                containLabel: true,
+              },
+              xAxis: {
+                type: 'category',
+                data: [
+                  'Root', 'Whitelisted Caller', 'Staking Admin', 'Treasurer', 'General Admin', 'Auction Admin', 'Small Tipper', 'Big Tipper', 'Small Spender', 'Medium Spender', 'Big Spender',
+                ],
+                splitLine: {
+                  show: false,
+                  lineStyle: {
+                    type: [
+                      4, 4,
+                    ],
+                    color: ['#262626'],
+                  },
+                },
+                axisTick: {
+                  show: false,
+                },
+                axisLine: {
+                  show: false,
+                },
+                axisPointer: defaultAxisPointerLabelSettings,
+                axisLabel: {
+                  hideOverlap: false,
+                  showMaxLabel: true,
+                  overflow: 'breakAll',
+                  rotate: 45,
+                  align: 'right',
+                  fontFamily: fontFamily,
+                  fontSize: 10,
+                  fontWeight: 500,
+                  color: '#cccccc',
+                },
+              },
+              yAxis: {
+                type: 'value',
+                alignTicks: true,
+                axisLine: {
+                  show: false,
+                },
+                interval: 10,
+                splitNumber: 4,
+                splitLine: {
+                  lineStyle: {
+                    type: [
+                      4, 4,
+                    ],
+                    color: ['#262626'],
+                  },
+                },
+                axisPointer: defaultAxisPointerLabelSettings,
+                axisLabel: {
+                  color: '#cccccc',
+                },
+              },
+              series: series.map((item, index) => Object.assign(item, {
+                type: 'bar',
+                stack: true,
+                label: {
+                  show: isLastSeries(index) ? true : false,
+                  formatter: genFormatter(series),
+                  fontSize: 10,
+                  color: '#ffffff',
+                  position: 'top',
+                },
+                barMaxWidth: 20,
+              })),
+            },
+            responsiveOptions = getChartResponsiveOptionsPolkadotOpenGovReferenda();
+
+        return $.extend(true, {}, baseOptions, responsiveOptions);
+      }
+
+      function getChartOptionsKusamaOpenGovReferenda(chartName) {
+        var colors = [
+          '#004bff', '#e12c29', '#f8b00c',
+        ];
+        var series = [
+          {
+            name: locate.approved,
+            data: [
+              7, 29, 5, 11, 1, 0, 5, 6, 20, 8, 9, 38, 16,
+            ],
+          }, {
+            name: locate.notApproved,
+            data: [
+              11, 9, 0, 4, 0, 2, 0, 1, 5, 2, 6, 25, 19,
+            ],
+          }, {
+            name: locate.pending,
+            data: [
+              1, 0, 0, 0, 0, 0, 0, 0, 2, 0, 1, 5, 0,
+            ],
+          },
+        ];
+
+        function genFormatter(series) {
+          return (param) => {
+            let sum = 0;
+            series.forEach(item => {
+              sum += item.data[param.dataIndex];
+            });
+            return sum;
+          };
+        }
+
+        function isLastSeries(index) {
+          return index === series.length - 1;
+        }
+
+        var baseOptions = {
+              color: colors,
+              textStyle: {
+                fontFamily: fontFamily,
+                fontWeight: 500,
+              },
+              tooltip: defaultTooltipSettings,
+              legend: defaultLegendSettings,
+              grid: {
+                top: '5%',
+                left: '3%',
+                right: '3%',
+                containLabel: true,
+              },
+              xAxis: {
+                type: 'category',
+                data: [
+                  'Root', 'Whitelisted Caller', 'Staking Admin', 'Treasurer', 'Lease Admin', 'General Admin', 'Auction Admin', 'Referendum Canceller', 'Small Tipper', 'Big Tipper', 'Small Spender', 'Medium Spender', 'Big Spender',
+                ],
+                splitLine: {
+                  show: false,
+                  lineStyle: {
+                    type: [
+                      4, 4,
+                    ],
+                    color: ['#262626'],
+                  },
+                },
+                axisTick: {
+                  show: false,
+                },
+                axisLine: {
+                  show: false,
+                },
+                axisPointer: defaultAxisPointerLabelSettings,
+                axisLabel: {
+                  hideOverlap: false,
+                  showMaxLabel: true,
+                  overflow: 'breakAll',
+                  rotate: 45,
+                  align: 'right',
+                  fontFamily: fontFamily,
+                  fontSize: 10,
+                  fontWeight: 500,
+                  color: '#cccccc',
+                },
+              },
+              yAxis: {
+                type: 'value',
+                alignTicks: true,
+                axisLine: {
+                  show: false,
+                },
+                interval: 20,
+                splitNumber: 3,
+                splitLine: {
+                  lineStyle: {
+                    type: [
+                      4, 4,
+                    ],
+                    color: ['#262626'],
+                  },
+                },
+                axisPointer: defaultAxisPointerLabelSettings,
+                axisLabel: {
+                  color: '#cccccc',
+                },
+              },
+              series: series.map((item, index) => Object.assign(item, {
+                type: 'bar',
+                stack: true,
+                label: {
+                  show: isLastSeries(index) ? true : false,
+                  formatter: genFormatter(series),
+                  fontSize: 10,
+                  color: '#ffffff',
+                  position: 'top',
+                },
+                barMaxWidth: 20,
+              })),
+            },
+            responsiveOptions = getChartResponsiveOptionsPolkadotOpenGovReferenda();
+
+        return $.extend(true, {}, baseOptions, responsiveOptions);
+      }
+
+      function getChartResponsiveOptionsPolkadotOpenGovReferenda() {
+        var newOptions = {};
+
+        if (window.innerWidth < 768) {
+          newOptions['series'] = [
+            {
+              label: {
+                fontSize: 10,
+              },
+            }, {
+              label: {
+                fontSize: 10,
+              },
+            }, {
+              label: {
+                fontSize: 10,
+              },
+            },
+          ];
+        } else {
+          newOptions['series'] = [
+            {
+              label: {
+                fontSize: 10,
+              },
+            }, {
+              label: {
+                fontSize: 10,
+              },
+            }, {
+              label: {
+                fontSize: 10,
+              },
+            },
+          ];
+        }
+
+        return newOptions;
+      }
+
       /*
       * CHART BASE FUNCTION
       * */
-      function getChartLinesBaseOptions(jsonData, datasets, colors,
-          areaBackground, seriesOptions, chartExtraOptions,
-      ) {
+      function getChartLinesBaseOptions(jsonData, datasets, colors, areaBackground, seriesOptions, chartExtraOptions) {
         var totalItems = jsonData.length,
             data = [];
 
@@ -2172,8 +2396,7 @@
 
         for (var i = 0; i < totalItems; i++) {
           datasets.forEach(function(dataset) {
-            var value = jsonData[i][dataset.name] ? NumberUtil.validate(
-                jsonData[i][dataset.name]) : '';
+            var value = jsonData[i][dataset.name] ? NumberUtil.validate(jsonData[i][dataset.name]) : '';
             data[dataset.name].push([
               jsonData[i].date, value,
             ]);
