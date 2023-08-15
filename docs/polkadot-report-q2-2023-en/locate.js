@@ -9,6 +9,8 @@ var lang = {
   oneTime: 'One-Time',
   uniqueUsers: 'Count Of Unique Users',
   amountTotal: 'Total Amount Unbounded',
+  individual: 'Individual Nominators',
+  pool: 'Pools',
 
   wallets: 'Wallets',
   uiDevelopment: 'UI Development',

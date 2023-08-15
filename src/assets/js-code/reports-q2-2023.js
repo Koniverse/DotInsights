@@ -223,6 +223,9 @@
               case 'fast-unstake-on-polkadot':
                 chartOptions = getChartResponsiveOptionsFastUnstakeOnPolkadot(chartName);
                 break;
+              case 'staking-rewards-by-nominator-type':
+                chartOptions = getChartResponsiveOptionsStakingRewardsByNominatorType( chartName );
+                break;
             }
 
             if (chartOptions) {
@@ -441,6 +444,9 @@
                 break;
               case 'fast-unstake-on-polkadot':
                 chartOptions = getChartOptionsFastUnstakeOnPolkadot(chartName, jsonData);
+                break;
+              case 'staking-rewards-by-nominator-type':
+                chartOptions = getChartOptionsStakingRewardsByNominatorType( chartName, jsonData );
                 break;
             }
             chartInstance.hideLoading();
@@ -1354,6 +1360,227 @@
               splitNumber: 2,
             },
           };
+        }
+
+        return newOptions;
+      }
+
+      function getChartOptionsStakingRewardsByNominatorType( chartName, jsonData ) {
+        var totalItems = jsonData.length,
+            data = {
+              individual: [],
+              pool: []
+            },
+            colors = [
+              '#437AF0',
+              '#DF3F32'
+            ];
+
+        for ( var i = 0; i < totalItems; i ++ ) {
+          data.individual.push( [
+            jsonData[i].date,
+            jsonData[i].individual
+          ] );
+          data.pool.push( [
+            jsonData[i].date,
+            jsonData[i].pool
+          ] );
+        }
+
+        var baseOptions = {
+          color: colors,
+          textStyle: {
+            fontFamily: fontFamily,
+            fontWeight: 500
+          },
+          //				tooltip: defaultTooltipSettings,
+          tooltip: $.extend( true, {}, defaultTooltipStyle, {
+            trigger: 'axis',
+            axisPointer: {
+              type: 'line',
+              crossStyle: {
+                color: 'rgba(255,255,255,0.3)'
+              },
+              lineStyle: {
+                type: [
+                  4,
+                  4
+                ],
+                color: 'rgba(255,255,255,0.3)'
+              }
+            },
+            valueFormatter: function ( value ) {
+              return value + ' DOT';
+            }
+          } ),
+          legend: defaultLegendSettings,
+          grid: {
+            left: '3%',
+            right: '3%',
+            top: '3%', //bottom: 100, // DataZoom + Legend.
+            containLabel: true
+          },
+          xAxis: {
+            type: 'time',
+            boundaryGap: false,
+            axisTick: {
+              show: false
+            },
+            axisLine: {
+              lineStyle: {
+                color: '#262626'
+              }
+            },
+            splitLine: {
+              show: true,
+              lineStyle: {
+                type: [
+                  4,
+                  4
+                ],
+                color: ['#262626']
+              }
+            },
+            axisPointer: defaultAxisPointerLabelSettings,
+            axisLabel: {
+              fontFamily: fontFamily,
+              fontSize: 10,
+              fontWeight: 500,
+              formatter: dateFormatter,
+              color: '#cccccc',
+            }
+          },
+          yAxis: [
+            {
+              type: 'value',
+              name: locate.individual,
+              position: 'left',
+              axisLine: {
+                show: false
+              },
+              splitNumber: 4,
+              interval: 100000,
+              splitLine: {
+                lineStyle: {
+                  type: [
+                    4,
+                    4
+                  ],
+                  color: ['#262626']
+                }
+              },
+              axisPointer: {
+                label: {
+                  color: '#000000',
+                  backgroundColor: '#cccccc',
+                }
+              },
+              axisLabel: {
+                color: '#cccccc',
+                fontSize: 10
+              }
+            },
+            {
+              type: 'value',
+              name: locate.pool,
+              position: 'right',
+              axisLine: {
+                show: false
+              },
+              splitNumber: 4,
+              interval: 1500,
+              max: 4500,
+              splitLine: {
+                show: false,
+                lineStyle: {
+                  type: [
+                    4,
+                    4
+                  ],
+                  color: ['#262626']
+                }
+              },
+              axisPointer: defaultAxisPointerLabelSettings,
+              axisLabel: {
+                color: '#cccccc',
+                fontSize: 10
+              }
+            }
+          ],
+          series: [
+            {
+              name: locate.individual,
+              data: data.individual,
+              itemStyle: {
+                color: colors[0]
+              },
+              type: 'line',
+              showSymbol: false,
+              emphasis: {
+                focus: 'series'
+              }
+            },
+            {
+              name: locate.pool,
+              data: data.pool,
+              itemStyle: {
+                color: colors[1]
+              },
+              type: 'line',
+              showSymbol: false,
+              yAxisIndex: 1,
+              emphasis: {
+                focus: 'series'
+              }
+            }
+          ]
+        };
+        var responsiveOptions = getChartResponsiveOptionsStakingRewardsByNominatorType();
+
+        $.extend( true, baseOptions, responsiveOptions );
+
+        return baseOptions;
+      }
+
+      function getChartResponsiveOptionsStakingRewardsByNominatorType() {
+        var newOptions = {};
+
+        if ( window.innerWidth > 767 ) {
+          newOptions = {
+            xAxis: {
+              splitNumber: 5
+            }
+          };
+        } else {
+          newOptions = {
+            xAxis: {
+              splitNumber: 3
+            }
+          };
+
+          if ( window.innerWidth < 460 ) {
+            $.extend( newOptions, {
+              xAxis: {
+                splitNumber: 2
+              },
+              yAxis: [
+                {
+                  axisLabel: {
+                    formatter: function ( value ) {
+                      return value ? NumberUtil.formatMoney( value ) : '0';
+                    }
+                  }
+                },
+                {
+                  axisLabel: {
+                    formatter: function ( value ) {
+                      return value ? NumberUtil.formatMoney( value ) : '0';
+                    }
+                  }
+                }
+              ],
+            } )
+          }
         }
 
         return newOptions;
