@@ -243,6 +243,9 @@
               case 'governance-opengov-spend-kusama':
                 chartOptions = getChartResponsiveOptionsGovernanceOpenGovSpend(chartName);
                 break;
+              case 'governance-web3-foundation-grants':
+                chartOptions = getChartResponsiveOptionsGovernanceWeb3FoundationGrants(chartName);
+                break;
             }
 
             if (chartOptions) {
@@ -497,6 +500,9 @@
               break;
             case 'governance-opengov-spend-kusama':
               chartOptions = getChartOptionsGovernanceOpenGovSpendKusama(chartName);
+              break;
+            case 'governance-web3-foundation-grants':
+              chartOptions = getChartOptionsGovernanceWeb3FoundationGrants(chartName);
               break;
           }
 
@@ -3080,6 +3086,314 @@
               },
             },
           ];
+        }
+
+        return newOptions;
+      }
+
+      function getChartOptionsGovernanceWeb3FoundationGrants(chartName) {
+        var colors = [
+              '#0056FE',
+              '#F82613',
+              '#FFB800',
+              '#24F483',
+              '#E4560A',
+              '#00E7E7',
+            ],
+            data = [
+              [
+                'Chains & Pallets',
+                'Smart Contracts',
+                'Tools, APIs, & \nLanguages',
+                'User Interface',
+                'Research',
+                'Wallets',
+              ],
+              [
+                20,
+                1,
+                4,
+                3,
+                1,
+                0,
+              ],
+              [
+                12,
+                6,
+                3,
+                6,
+                1,
+                3,
+              ],
+              [
+                14,
+                8,
+                8,
+                6,
+                2,
+                1,
+              ],
+              [
+                12,
+                0,
+                16,
+                6,
+                3,
+                1,
+              ],
+              [
+                15,
+                7,
+                10,
+                7,
+                4,
+                1,
+              ],
+              [
+                7,
+                12,
+                6,
+                8,
+                1,
+                1,
+              ],
+            ],
+            baseOptions = {
+              color: colors,
+              textStyle: {
+                fontFamily: fontFamily,
+                fontWeight: 500,
+              },
+              tooltip: defaultTooltipSettings,
+              legend: defaultLegendSettings,
+              grid: {
+                top: '5%',
+                left: '5%',
+                right: '5%',
+                bottom: '8%',
+                containLabel: true,
+              },
+              xAxis: {
+                type: 'category',
+                data: data[0],
+                splitLine: {
+                  show: false,
+                  lineStyle: {
+                    type: [
+                      4,
+                      4,
+                    ],
+                    color: ['#262626'],
+                  },
+                },
+                axisTick: {
+                  show: false,
+                },
+                axisLine: {
+                  show: false,
+                },
+                axisPointer: defaultAxisPointerLabelSettings,
+              },
+              yAxis: {
+                type: 'value',
+                offset: 0,
+                alignTicks: true,
+                axisLine: {
+                  show: false,
+                },
+                max: 25,
+                interval: 5,
+                splitNumber: 4,
+                splitLine: {
+                  lineStyle: {
+                    type: [
+                      4,
+                      4,
+                    ],
+                    color: ['#262626'],
+                  },
+                },
+                axisPointer: {
+                  label: {
+                    color: '#ffffff',
+                    backgroundColor: colors[0],
+                  },
+                },
+                axisLabel: {
+                  fontSize: 10,
+                  color: '#cccccc',
+                },
+              },
+              series: [
+                {
+                  name: locate.q12022,
+                  data: data[1],
+                  type: 'bar',
+                  label: {
+                    show: true,
+                    position: 'top',
+                    fontFamily: fontFamily,
+                    fontSize: 10,
+                    fontWeight: 600,
+                    color: colors[0],
+                  },
+                  barMaxWidth: 28,
+                  itemStyle: {
+                    borderRadius: [
+                      3,
+                      3,
+                      0,
+                      0,
+                    ],
+                  },
+                },
+                {
+                  name: locate.q22022,
+                  data: data[2],
+                  type: 'bar',
+                  label: {
+                    show: true,
+                    position: 'top',
+                    fontFamily: fontFamily,
+                    fontSize: 10,
+                    fontWeight: 600,
+                    color: colors[1],
+                  },
+                  barMaxWidth: 28,
+                  itemStyle: {
+                    borderRadius: [
+                      3,
+                      3,
+                      0,
+                      0,
+                    ],
+                  },
+                },
+                {
+                  name: locate.q32022,
+                  data: data[3],
+                  type: 'bar',
+                  label: {
+                    show: true,
+                    position: 'top',
+                    fontFamily: fontFamily,
+                    fontSize: 10,
+                    fontWeight: 600,
+                    color: colors[2],
+                  },
+                  barMaxWidth: 28,
+                  itemStyle: {
+                    borderRadius: [
+                      3,
+                      3,
+                      0,
+                      0,
+                    ],
+                  },
+                },
+                {
+                  name: locate.q42022,
+                  data: data[4],
+                  type: 'bar',
+                  label: {
+                    show: true,
+                    position: 'top',
+                    fontFamily: fontFamily,
+                    fontSize: 10,
+                    fontWeight: 600,
+                    color: colors[3],
+                  },
+                  barMaxWidth: 28,
+                  itemStyle: {
+                    borderRadius: [
+                      3,
+                      3,
+                      0,
+                      0,
+                    ],
+                  },
+                },
+                {
+                  name: locate.q12023,
+                  data: data[5],
+                  type: 'bar',
+                  label: {
+                    show: true,
+                    position: 'top',
+                    fontFamily: fontFamily,
+                    fontSize: 10,
+                    fontWeight: 600,
+                    color: colors[4],
+                  },
+                  barMaxWidth: 28,
+                  itemStyle: {
+                    borderRadius: [
+                      3,
+                      3,
+                      0,
+                      0,
+                    ],
+                  },
+                },
+                {
+                  name: locate.q22023,
+                  data: data[6],
+                  type: 'bar',
+                  label: {
+                    show: true,
+                    position: 'top',
+                    fontFamily: fontFamily,
+                    fontSize: 10,
+                    fontWeight: 600,
+                    color: colors[5],
+                  },
+                  barMaxWidth: 28,
+                  itemStyle: {
+                    borderRadius: [
+                      3,
+                      3,
+                      0,
+                      0,
+                    ],
+                  },
+                },
+              ],
+            },
+            responsiveOptions = getChartResponsiveOptionsGovernanceWeb3FoundationGrants();
+
+        return $.extend(true, {}, baseOptions, responsiveOptions);
+      }
+
+      function getChartResponsiveOptionsGovernanceWeb3FoundationGrants() {
+        var newOptions = {};
+
+        if (window.innerWidth > 767) {
+          newOptions['xAxis'] = {
+            axisLabel: {
+              hideOverlap: false,
+              showMaxLabel: true,
+              overflow: 'breakAll',
+              fontFamily: fontFamily,
+              fontSize: 12,
+              lineHeight: 16,
+              fontWeight: 500,
+              color: '#cccccc'
+            }
+          }
+        } else {
+          newOptions['xAxis'] = {
+            axisLabel: {
+              hideOverlap: false,
+              showMaxLabel: true,
+              overflow: 'breakAll',
+              rotate: -45,
+              align: 'left',
+              fontFamily: fontFamily,
+              fontSize: 10,
+              fontWeight: 500,
+              color: '#cccccc'
+            }
+          }
         }
 
         return newOptions;

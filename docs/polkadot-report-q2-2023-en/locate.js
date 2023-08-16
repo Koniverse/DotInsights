@@ -22,6 +22,12 @@ var lang = {
   supportRate: 'Support Rate',
   amountDot: 'Amount (DOT)',
   amountKsm: 'Amount (KSM)',
+  q12022: 'Q1 2022',
+  q22022: 'Q2 2022',
+  q32022: 'Q3 2022',
+  q42022: 'Q4 2022',
+  q12023: 'Q1 2023',
+  q22023: 'Q2 2023',
 
   wallets: 'Wallets',
   uiDevelopment: 'UI Development',
