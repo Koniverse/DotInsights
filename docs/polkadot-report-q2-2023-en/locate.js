@@ -29,6 +29,7 @@ var lang = {
   pre2023: 'Pre-2023',
   q12023: 'Q1 2023',
   q22023: 'Q2 2023',
+  others: 'Others',
 
   wallets: 'Wallets',
   uiDevelopment: 'UI Development',

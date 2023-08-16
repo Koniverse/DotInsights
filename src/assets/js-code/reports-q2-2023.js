@@ -254,6 +254,9 @@
               case 'parachain-chain-fees':
                 chartOptions = getChartResponsiveOptionsParachain(chartName);
                 break;
+              case 'tvl-defi-parachain':
+                chartOptions = getChartLinesBaseResponsiveOptions(chartName);
+                break;
             }
 
             if (chartOptions) {
@@ -479,6 +482,9 @@
                 break;
               case 'active-validators-nominator-counts-versus-commission':
                 chartOptions = getChartOptionsActiveValidatorsNominatorCountsVersusCommission(chartName, jsonData);
+                break;
+              case 'tvl-defi-parachain':
+                chartOptions = getChartOptionsDefiParachain(chartName, jsonData);
                 break;
             }
             chartInstance.hideLoading();
@@ -4587,6 +4593,58 @@
         return newOptions;
       }
 
+      function getChartOptionsDefiParachain(chartName, jsonData) {
+        var datasets = [
+              {
+                name: 'acala',
+                label: 'Acala',
+              },
+              {
+                name: 'parallel',
+                label: 'Parallel',
+              },
+              {
+                name: 'moonbeam',
+                label: 'Moonbeam',
+              },
+              {
+                name: 'astar',
+                label: 'Astar',
+              },
+              {
+                name: 'moonriver',
+                label: 'Moonriver',
+              },
+              {
+                name: 'karura',
+                label: 'Karura',
+              },
+              {
+                name: 'others',
+                label: locate.others,
+              },
+            ],
+            colors = [
+              '#89c900',
+              '#ffb800',
+              '#004bff',
+              '#f82613',
+              '#e4560a',
+              '#00e7e7',
+              '#b1b1b1',
+            ],
+            chartExtraOptions = {
+              yAxis: {
+                interval: 20000000,
+              },
+            };
+
+        var baseOptions = getChartLinesBaseOptions(jsonData, datasets, colors, null, null, chartExtraOptions);
+        var responsiveOptions = getChartLinesBaseResponsiveOptions(chartName);
+
+        return $.extend(true, {}, baseOptions, responsiveOptions);
+      }
+
       /*
       * CHART BASE FUNCTION
       * */
@@ -4770,18 +4828,40 @@
 
         var yAxis = {};
         switch (chartName) {
-          case 'total-dot-staked-locked':
-            if (window.innerWidth < 768) {
+          case 'tvl-defi-parachain':
+            newOptions.tooltip = {
+              valueFormatter: function(value) {
+                return value ? '$' + NumberUtil.formatWithCommas(value) : '-';
+              },
+            };
+
+            if (window.innerWidth > 767) {
               yAxis = {
+                axisPointer: {
+                  label: {
+                    formatter: '${value}',
+                  },
+                },
+                axisLabel: {
+                  formatter: '${value}',
+                },
+              };
+            } else {
+              yAxis = {
+                axisPointer: {
+                  label: {
+                    formatter: '${value}',
+                  },
+                },
                 axisLabel: {
                   formatter: function(value) {
-                    return NumberUtil.formatMoney(value);
+                    return value ? '$' + NumberUtil.formatMoney(value) : '-';
                   },
-                  fontSize: 10,
                 },
               };
             }
             newOptions.yAxis = yAxis;
+
             break;
         }
 
