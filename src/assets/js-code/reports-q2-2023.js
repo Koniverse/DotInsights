@@ -247,7 +247,8 @@
                 chartOptions = getChartResponsiveOptionsGovernanceWeb3FoundationGrants(chartName);
                 break;
               case 'parachain-xcm-transfers':
-                chartOptions = getChartResponsiveOptionsParachainXcmTransfers(chartName);
+              case 'parachain-xcm-channels':
+                chartOptions = getChartResponsiveOptionsParachainXcm(chartName);
                 break;
             }
 
@@ -509,6 +510,9 @@
               break;
             case 'parachain-xcm-transfers':
               chartOptions = getChartOptionsParachainXcmTransfers(chartName);
+              break;
+            case 'parachain-xcm-channels':
+              chartOptions = getChartOptionsParachainXcmChannels(chartName);
               break;
           }
 
@@ -3588,14 +3592,210 @@
                   lineHeight: 16,
                 },
                 barMaxWidth: 32,
+                itemStyle: {
+                  borderRadius: isLastSeries(index) ? [
+                    4,
+                    4,
+                    0,
+                    0,
+                  ] : [
+                    0,
+                    0,
+                    0,
+                    0,
+                  ],
+                },
               })),
             },
-            responsiveOptions = getChartResponsiveOptionsParachainXcmTransfers();
+            responsiveOptions = getChartResponsiveOptionsParachainXcm();
 
         return $.extend(true, {}, baseOptions, responsiveOptions);
       }
 
-      function getChartResponsiveOptionsParachainXcmTransfers() {
+      function getChartOptionsParachainXcmChannels(chartName) {
+        var colors = [
+          '#5c42fb', '#df146a', '#faff00',
+        ];
+        var series = [
+          {
+            name: locate.pre2023,
+            data: [
+              21627,
+              15958,
+              6418,
+              5396,
+              2514,
+              1443,
+              816,
+              2457,
+              1900,
+              3116,
+              2805,
+              2902,
+            ],
+          }, {
+            name: locate.q12023,
+            data: [
+              2327,
+              2167,
+              1851,
+              2136,
+              1585,
+              2514,
+              3051,
+              1187,
+              1390,
+              812,
+              704,
+              461,
+            ],
+          }, {
+            name: locate.q22023,
+            data: [
+              256,
+              534,
+              574,
+              1001,
+              1252,
+              1205,
+              651,
+              653,
+              922,
+              256,
+              508,
+              389,
+            ],
+          },
+        ];
+
+        function genFormatter(series) {
+          return (param) => {
+            let sum = 0;
+            series.forEach(item => {
+              sum += item.data[param.dataIndex];
+            });
+
+            sum = NumberUtil.formatWithCommas(sum);
+
+            return sum;
+          };
+        }
+
+        function isLastSeries(index) {
+          return index === series.length - 1;
+        }
+
+        var baseOptions = {
+              color: colors,
+              textStyle: {
+                fontFamily: fontFamily,
+                fontWeight: 500,
+              },
+              tooltip: defaultTooltipSettings,
+              legend: defaultLegendSettings,
+              grid: {
+                top: '5%',
+                left: '3%',
+                right: '3%',
+                containLabel: true,
+              },
+              xAxis: {
+                type: 'category',
+                data: [
+                  'Bifrost-Kusama -> Karura',
+                  'Karura -> Bifrost-Kusama',
+                  'Moonbeam -> Acala',
+                  'Acala -> Moonbeam',
+                  'Acala -> Parallel',
+                  'Moonriver -> Bifrost-Kusama',
+                  'Invarch Tinkernet -> Basilisk',
+                  'Interlay -> Moonbeam',
+                  'Parallel -> Acala',
+                  'Kintsugi -> Moonriver',
+                  'Karura -> Asset Hub-Kusama',
+                  'Kintsugi -> Karura',
+                ],
+                splitLine: {
+                  show: false,
+                  lineStyle: {
+                    type: [
+                      4, 4,
+                    ],
+                    color: ['#262626'],
+                  },
+                },
+                axisTick: {
+                  show: false,
+                },
+                axisLine: {
+                  show: false,
+                },
+                axisPointer: defaultAxisPointerLabelSettings,
+                axisLabel: {
+                  hideOverlap: false,
+                  showMaxLabel: true,
+                  overflow: 'breakAll',
+                  rotate: 45,
+                  align: 'right',
+                  fontFamily: fontFamily,
+                  fontSize: 10,
+                  fontWeight: 500,
+                  color: '#cccccc',
+                },
+              },
+              yAxis: {
+                type: 'value',
+                alignTicks: true,
+                axisLine: {
+                  show: false,
+                },
+                interval: 5000,
+                splitNumber: 4,
+                splitLine: {
+                  lineStyle: {
+                    type: [
+                      4, 4,
+                    ],
+                    color: ['#262626'],
+                  },
+                },
+                axisPointer: defaultAxisPointerLabelSettings,
+                axisLabel: {
+                  color: '#cccccc',
+                },
+              },
+              series: series.map((item, index) => Object.assign(item, {
+                type: 'bar',
+                stack: true,
+                label: {
+                  show: isLastSeries(index) ? true : false,
+                  formatter: genFormatter(series),
+                  color: '#ffffff',
+                  position: 'top',
+                  lineHeight: 16,
+                },
+                barMaxWidth: 32,
+                itemStyle: {
+                  borderRadius: isLastSeries(index) ? [
+                    4,
+                    4,
+                    0,
+                    0,
+                  ] : [
+                    0,
+                    0,
+                    0,
+                    0,
+                  ],
+                },
+              })),
+            },
+            responsiveOptions = getChartResponsiveOptionsParachainXcm();
+
+        return $.extend(true, {}, baseOptions, responsiveOptions);
+      }
+
+      function getChartResponsiveOptionsParachainXcm() {
         var newOptions = {};
 
         if (window.innerWidth < 768) {
@@ -3614,8 +3814,8 @@
               label: {
                 fontSize: 0,
               },
-            }
-          ]
+            },
+          ];
         } else if (window.innerWidth < 992) {
           newOptions['series'] = [
             {
@@ -3632,8 +3832,8 @@
               label: {
                 fontSize: 8,
               },
-            }
-          ]
+            },
+          ];
         } else {
           newOptions['series'] = [
             {
@@ -3650,8 +3850,8 @@
               label: {
                 fontSize: 12,
               },
-            }
-          ]
+            },
+          ];
         }
 
         return newOptions;
