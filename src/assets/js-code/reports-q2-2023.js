@@ -246,6 +246,9 @@
               case 'governance-web3-foundation-grants':
                 chartOptions = getChartResponsiveOptionsGovernanceWeb3FoundationGrants(chartName);
                 break;
+              case 'parachain-xcm-transfers':
+                chartOptions = getChartResponsiveOptionsParachainXcmTransfers(chartName);
+                break;
             }
 
             if (chartOptions) {
@@ -503,6 +506,9 @@
               break;
             case 'governance-web3-foundation-grants':
               chartOptions = getChartOptionsGovernanceWeb3FoundationGrants(chartName);
+              break;
+            case 'parachain-xcm-transfers':
+              chartOptions = getChartOptionsParachainXcmTransfers(chartName);
               break;
           }
 
@@ -3093,12 +3099,12 @@
 
       function getChartOptionsGovernanceWeb3FoundationGrants(chartName) {
         var colors = [
-              '#0056FE',
-              '#F82613',
-              '#FFB800',
-              '#24F483',
-              '#E4560A',
-              '#00E7E7',
+              '#0056fe',
+              '#f82613',
+              '#ffb800',
+              '#24f483',
+              '#e4560a',
+              '#00e7e7',
             ],
             data = [
               [
@@ -3377,9 +3383,9 @@
               fontSize: 12,
               lineHeight: 16,
               fontWeight: 500,
-              color: '#cccccc'
-            }
-          }
+              color: '#cccccc',
+            },
+          };
         } else {
           newOptions['xAxis'] = {
             axisLabel: {
@@ -3391,9 +3397,261 @@
               fontFamily: fontFamily,
               fontSize: 10,
               fontWeight: 500,
-              color: '#cccccc'
+              color: '#cccccc',
+            },
+          };
+        }
+
+        return newOptions;
+      }
+
+      function getChartOptionsParachainXcmTransfers(chartName) {
+        var colors = [
+          '#004bff', '#e12c29', '#f8b00c',
+        ];
+        var series = [
+          {
+            name: locate.pre2023,
+            data: [
+              67398,
+              41526,
+              21627,
+              20994,
+              17536,
+              11153,
+              9279,
+              9000,
+              10741,
+              7948,
+              3741,
+              5078,
+              6162,
+              948,
+              1785,
+              1110,
+              1205,
+            ],
+          }, {
+            name: locate.q12023,
+            data: [
+              12849,
+              11455,
+              12273,
+              9845,
+              8427,
+              3674,
+              6046,
+              6150,
+              3608,
+              4081,
+              5889,
+              4947,
+              1370,
+              3260,
+              2588,
+              3425,
+              1672,
+            ],
+          }, {
+            name: locate.q22023,
+            data: [
+              5165,
+              3187,
+              7499,
+              5586,
+              4347,
+              4183,
+              3662,
+              2810,
+              2363,
+              1864,
+              3688,
+              2379,
+              424,
+              2091,
+              1290,
+              832,
+              2459,
+            ],
+          },
+        ];
+
+        function genFormatter(series) {
+          return (param) => {
+            let sum = 0;
+            series.forEach(item => {
+              sum += item.data[param.dataIndex];
+            });
+
+            sum = NumberUtil.formatWithCommas(sum);
+
+            return sum;
+          };
+        }
+
+        function isLastSeries(index) {
+          return index === series.length - 1;
+        }
+
+        var baseOptions = {
+              color: colors,
+              textStyle: {
+                fontFamily: fontFamily,
+                fontWeight: 500,
+              },
+              tooltip: defaultTooltipSettings,
+              legend: defaultLegendSettings,
+              grid: {
+                top: '5%',
+                left: '3%',
+                right: '3%',
+                containLabel: true,
+              },
+              xAxis: {
+                type: 'category',
+                data: [
+                  'Karura',
+                  'Bifrost-Kusama',
+                  'Moonbeam',
+                  'Acala',
+                  'Moonriver',
+                  'Asset Hub-Kusama',
+                  'Parallel',
+                  'Parallel Heiko',
+                  'Kintsugi',
+                  'Interlay',
+                  'Astar',
+                  'Basilisk',
+                  'Khala',
+                  'Bifrost-Polkadot',
+                  'Mangatax',
+                  'Invarch Tinkernet',
+                  'Asset Hub-Polkadot',
+                ],
+                splitLine: {
+                  show: false,
+                  lineStyle: {
+                    type: [
+                      4, 4,
+                    ],
+                    color: ['#262626'],
+                  },
+                },
+                axisTick: {
+                  show: false,
+                },
+                axisLine: {
+                  show: false,
+                },
+                axisPointer: defaultAxisPointerLabelSettings,
+                axisLabel: {
+                  hideOverlap: false,
+                  showMaxLabel: true,
+                  overflow: 'breakAll',
+                  rotate: 45,
+                  align: 'right',
+                  fontFamily: fontFamily,
+                  fontSize: 10,
+                  fontWeight: 500,
+                  color: '#cccccc',
+                },
+              },
+              yAxis: {
+                type: 'value',
+                alignTicks: true,
+                axisLine: {
+                  show: false,
+                },
+                interval: 25000,
+                splitNumber: 4,
+                splitLine: {
+                  lineStyle: {
+                    type: [
+                      4, 4,
+                    ],
+                    color: ['#262626'],
+                  },
+                },
+                axisPointer: defaultAxisPointerLabelSettings,
+                axisLabel: {
+                  color: '#cccccc',
+                },
+              },
+              series: series.map((item, index) => Object.assign(item, {
+                type: 'bar',
+                stack: true,
+                label: {
+                  show: isLastSeries(index) ? true : false,
+                  formatter: genFormatter(series),
+                  color: '#ffffff',
+                  position: 'top',
+                  lineHeight: 16,
+                },
+                barMaxWidth: 32,
+              })),
+            },
+            responsiveOptions = getChartResponsiveOptionsParachainXcmTransfers();
+
+        return $.extend(true, {}, baseOptions, responsiveOptions);
+      }
+
+      function getChartResponsiveOptionsParachainXcmTransfers() {
+        var newOptions = {};
+
+        if (window.innerWidth < 768) {
+          newOptions['series'] = [
+            {
+              label: {
+                fontSize: 0,
+              },
+            },
+            {
+              label: {
+                fontSize: 0,
+              },
+            },
+            {
+              label: {
+                fontSize: 0,
+              },
             }
-          }
+          ]
+        } else if (window.innerWidth < 992) {
+          newOptions['series'] = [
+            {
+              label: {
+                fontSize: 8,
+              },
+            },
+            {
+              label: {
+                fontSize: 8,
+              },
+            },
+            {
+              label: {
+                fontSize: 8,
+              },
+            }
+          ]
+        } else {
+          newOptions['series'] = [
+            {
+              label: {
+                fontSize: 12,
+              },
+            },
+            {
+              label: {
+                fontSize: 12,
+              },
+            },
+            {
+              label: {
+                fontSize: 12,
+              },
+            }
+          ]
         }
 
         return newOptions;
