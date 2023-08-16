@@ -250,6 +250,10 @@
               case 'parachain-xcm-channels':
                 chartOptions = getChartResponsiveOptionsParachainXcm(chartName);
                 break;
+              case 'parachain-xcm-v3':
+              case 'parachain-chain-fees':
+                chartOptions = getChartResponsiveOptionsParachain(chartName);
+                break;
             }
 
             if (chartOptions) {
@@ -513,6 +517,12 @@
               break;
             case 'parachain-xcm-channels':
               chartOptions = getChartOptionsParachainXcmChannels(chartName);
+              break;
+            case 'parachain-xcm-v3':
+              chartOptions = getChartOptionsParachainXcmV3(chartName);
+              break;
+            case 'parachain-chain-fees':
+              chartOptions = getChartOptionsParachainChainFees(chartName);
               break;
           }
 
@@ -3852,6 +3862,721 @@
               },
             },
           ];
+        }
+
+        return newOptions;
+      }
+
+      function getChartOptionsParachainXcmV3(chartName) {
+        var colors = [
+              '#ffb800',
+              '#00e7e7',
+              '#8b93af',
+              '#960db9',
+              '#f13221',
+              '#5c42fb',
+              '#ff279a',
+              '#118af5',
+              '#ea5474',
+              '#ec66ef',
+              '#8247e5',
+              '#dfada5',
+              '#cccccc',
+            ],
+            datasets = [
+              {
+                value: 6042,
+                name: 'Moonriver',
+                label: {
+                  color: colors[0],
+                },
+                labelLine: {
+                  lineStyle: {
+                    color: new echarts.graphic.LinearGradient(0, 0, 1, 1, [
+                      {
+                        offset: 0,
+                        color: '#ffffff',
+
+                      },
+                      {
+                        offset: 1,
+                        color: 'rgba(255,255,255,0)',
+                      },
+                    ]),
+                  },
+                },
+              },
+              {
+                value: 4743,
+                name: 'Bifrost-Kusama',
+                label: {
+                  color: colors[1],
+                },
+                labelLine: {
+                  lineStyle: {
+                    color: new echarts.graphic.LinearGradient(0, 0, 1, 1, [
+                      {
+                        offset: 0,
+                        color: '#ffffff',
+
+                      },
+                      {
+                        offset: 1,
+                        color: 'rgba(255,255,255,0)',
+                      },
+                    ]),
+                  },
+                },
+              },
+              {
+                value: 3155,
+                name: 'Asset Hub-Kusama',
+                label: {
+                  color: colors[2],
+                },
+                labelLine: {
+                  lineStyle: {
+                    color: new echarts.graphic.LinearGradient(0, 0, 1, 1, [
+                      {
+                        offset: 0,
+                        color: '#ffffff',
+
+                      },
+                      {
+                        offset: 1,
+                        color: 'rgba(255,255,255,0)',
+                      },
+                    ]),
+                  },
+                },
+              },
+              {
+                value: 3113,
+                name: 'Moonbeam',
+                label: {
+                  color: colors[3],
+                },
+                labelLine: {
+                  lineStyle: {
+                    color: new echarts.graphic.LinearGradient(0, 0, 1, 1, [
+                      {
+                        offset: 0,
+                        color: '#ffffff',
+
+                      },
+                      {
+                        offset: 1,
+                        color: 'rgba(255,255,255,0)',
+                      },
+                    ]),
+                  },
+                },
+              },
+              {
+                value: 2265,
+                name: 'Karura',
+                label: {
+                  color: colors[4],
+                },
+                labelLine: {
+                  lineStyle: {
+                    color: new echarts.graphic.LinearGradient(1, 1, 0, 0, [
+                      {
+                        offset: 1,
+                        color: 'rgba(255,255,255,0)',
+                      },
+                      {
+                        offset: 0,
+                        color: '#ffffff',
+                      },
+                    ]),
+                  },
+                },
+              },
+              {
+                value: 1878,
+                name: 'Kintsugi',
+                label: {
+                  color: colors[5],
+                },
+                labelLine: {
+                  lineStyle: {
+                    color: new echarts.graphic.LinearGradient(1, 1, 0, 0, [
+                      {
+                        offset: 1,
+                        color: 'rgba(255,255,255,0)',
+                      },
+                      {
+                        offset: 0,
+                        color: '#ffffff',
+                      },
+                    ]),
+                  },
+                },
+              },
+              {
+                value: 1855,
+                name: 'Asset Hub-Polkadot',
+                label: {
+                  color: colors[6],
+                },
+                labelLine: {
+                  lineStyle: {
+                    color: new echarts.graphic.LinearGradient(1, 1, 0, 0, [
+                      {
+                        offset: 1,
+                        color: 'rgba(255,255,255,0)',
+                      },
+                      {
+                        offset: 0,
+                        color: '#ffffff',
+                      },
+                    ]),
+                  },
+                },
+              },
+              {
+                value: 1772,
+                name: 'Astar',
+                label: {
+                  color: colors[7],
+                },
+                labelLine: {
+                  lineStyle: {
+                    color: new echarts.graphic.LinearGradient(1, 1, 0, 0, [
+                      {
+                        offset: 1,
+                        color: 'rgba(255,255,255,0)',
+                      },
+                      {
+                        offset: 0,
+                        color: '#ffffff',
+                      },
+                    ]),
+                  },
+                },
+              },
+              {
+                value: 1658,
+                name: 'Hydradx',
+                label: {
+                  color: colors[8],
+                },
+                labelLine: {
+                  lineStyle: {
+                    color: new echarts.graphic.LinearGradient(1, 1, 0, 0, [
+                      {
+                        offset: 1,
+                        color: 'rgba(255,255,255,0)',
+                      },
+                      {
+                        offset: 0,
+                        color: '#ffffff',
+                      },
+                    ]),
+                  },
+                },
+              },
+              {
+                value: 1578,
+                name: 'Turing',
+                label: {
+                  color: colors[9],
+                },
+                labelLine: {
+                  lineStyle: {
+                    color: new echarts.graphic.LinearGradient(1, 1, 0, 0, [
+                      {
+                        offset: 1,
+                        color: 'rgba(255,255,255,0)',
+                      },
+                      {
+                        offset: 0,
+                        color: '#ffffff',
+                      },
+                    ]),
+                  },
+                },
+              },
+              {
+                value: 1396,
+                name: 'Interlay',
+                label: {
+                  color: colors[10],
+                },
+                labelLine: {
+                  lineStyle: {
+                    color: new echarts.graphic.LinearGradient(1, 1, 0, 0, [
+                      {
+                        offset: 1,
+                        color: 'rgba(255,255,255,0)',
+                      },
+                      {
+                        offset: 0,
+                        color: '#ffffff',
+                      },
+                    ]),
+                  },
+                },
+              },
+              {
+                value: 1250,
+                name: 'Bifrost-Polkadot',
+                label: {
+                  color: colors[11],
+                },
+                labelLine: {
+                  lineStyle: {
+                    color: new echarts.graphic.LinearGradient(1, 1, 0, 0, [
+                      {
+                        offset: 1,
+                        color: 'rgba(255,255,255,0)',
+                      },
+                      {
+                        offset: 0,
+                        color: '#ffffff',
+                      },
+                    ]),
+                  },
+                },
+              },
+              {
+                value: 4355,
+                name: 'Others',
+                label: {
+                  color: colors[12],
+                },
+                labelLine: {
+                  lineStyle: {
+                    color: new echarts.graphic.LinearGradient(1, 1, 0, 0, [
+                      {
+                        offset: 1,
+                        color: 'rgba(255,255,255,0)',
+                      },
+                      {
+                        offset: 0,
+                        color: '#ffffff',
+                      },
+                    ]),
+                  },
+                },
+              },
+            ],
+            baseOptions = {
+              color: colors,
+              tooltip: $.extend(true, {}, defaultTooltipStyle, {
+                trigger: 'item',
+                valueFormatter: function(value) {
+                  return NumberUtil.formatWithCommas(value);
+                },
+              }),
+              legend: $.extend(true, {}, defaultLegendSettings, {
+                show: false,
+              }),
+              grid: {
+                left: '3%',
+                right: '3%',
+                top: '0',
+                containLabel: true,
+              },
+              series: [
+                {
+                  startAngle: 80,
+                  name: '',
+                  type: 'pie',
+                  center: [
+                    '50%',
+                    '45%',
+                  ],
+                  radius: [
+                    '45%',
+                    '65%',
+                  ],
+                  label: {
+                    alignTo: 'edge',
+                    minMargin: 5,
+                    edgeDistance: 10,
+                    color: '#ffffff',
+                    fontFamily: fontFamily,
+                    fontWeight: 500,
+                    fontSize: 13,
+                    lineHeight: 28,
+                    formatter: function(params) {
+                      return `${params.name} ${params.percent}%`;
+                    },
+                  },
+                  labelLine: {
+                    showAbove: false,
+                    length: 30,
+                    length2: 0,
+                    lineStyle: {
+                      color: new echarts.graphic.LinearGradient(0, 0, 1, 1, [
+                        {
+                          offset: 0,
+                          color: 'rgba(255,255,255,0)',
+
+                        },
+                        {
+                          offset: 1,
+                          color: '#ffffff',
+                        },
+                      ]),
+                    },
+                    maxSurfaceAngle: 80,
+                  }, /*labelLayout: function( params ) {
+								const isLeft = params.labelRect.x < 570;
+								const points = params.labelLinePoints;
+								// Update the end point.
+								points[ 2 ][ 0 ] = isLeft
+									? params.labelRect.x
+									: params.labelRect.x + params.labelRect.width;
+								return {
+									labelLinePoints: points
+								};
+							},*/
+                  itemStyle: {
+                    borderColor: '#151515',
+                    borderWidth: 2,
+                  },
+                  emphasis: {
+                    scaleSize: 5,
+                  },
+                  data: datasets,
+                },
+              ],
+            },
+            responsiveOptions = getChartResponsiveOptionsParachain();
+
+        return $.extend(true, {}, baseOptions, responsiveOptions);
+      }
+
+      function getChartOptionsParachainChainFees(chartName) {
+        var colors = [
+              '#004DFF',
+              '#8247E5',
+              '#00E7E7',
+              '#89C900',
+              '#DFADA5',
+              '#118AF5',
+              '#F13221',
+              '#E6007A',
+              '#B1B1B1',
+            ],
+            datasets = [
+              {
+                value: 123842.92,
+                name: 'Encointer',
+                label: {
+                  color: colors[0],
+                },
+                labelLine: {
+                  lineStyle: {
+                    color: new echarts.graphic.LinearGradient(0, 0, 1, 1, [
+                      {
+                        offset: 0,
+                        color: '#ffffff',
+
+                      },
+                      {
+                        offset: 1,
+                        color: 'rgba(255,255,255,0)',
+                      },
+                    ]),
+                  },
+                },
+              },
+              {
+                value: 21986.35,
+                name: 'Calamari',
+                label: {
+                  color: colors[1],
+                },
+                labelLine: {
+                  lineStyle: {
+                    color: new echarts.graphic.LinearGradient(1, 1, 0, 0, [
+                      {
+                        offset: 1,
+                        color: 'rgba(255,255,255,0)',
+                      },
+                      {
+                        offset: 0,
+                        color: '#ffffff',
+                      },
+                    ]),
+                  },
+                },
+              },
+              {
+                value: 6139.35,
+                name: 'Khala',
+                label: {
+                  color: colors[2],
+                },
+                labelLine: {
+                  lineStyle: {
+                    color: new echarts.graphic.LinearGradient(1, 1, 0, 0, [
+                      {
+                        offset: 1,
+                        color: 'rgba(255,255,255,0)',
+                      },
+                      {
+                        offset: 0,
+                        color: '#ffffff',
+                      },
+                    ]),
+                  },
+                },
+              },
+              {
+                value: 4418.19,
+                name: 'Phala',
+                label: {
+                  color: colors[3],
+                },
+                labelLine: {
+                  lineStyle: {
+                    color: new echarts.graphic.LinearGradient(1, 1, 0, 0, [
+                      {
+                        offset: 1,
+                        color: 'rgba(255,255,255,0)',
+                      },
+                      {
+                        offset: 0,
+                        color: '#ffffff',
+                      },
+                    ]),
+                  },
+                },
+              },
+              {
+                value: 1444.98,
+                name: 'Bifrost Kusama',
+                label: {
+                  color: colors[4],
+                },
+                labelLine: {
+                  lineStyle: {
+                    color: new echarts.graphic.LinearGradient(1, 1, 0, 0, [
+                      {
+                        offset: 1,
+                        color: 'rgba(255,255,255,0)',
+                      },
+                      {
+                        offset: 0,
+                        color: '#ffffff',
+                      },
+                    ]),
+                  },
+                },
+              },
+              {
+                value: 1204.55,
+                name: 'Astar',
+                label: {
+                  color: colors[5],
+                },
+                labelLine: {
+                  lineStyle: {
+                    color: new echarts.graphic.LinearGradient(1, 1, 0, 0, [
+                      {
+                        offset: 1,
+                        color: 'rgba(255,255,255,0)',
+                      },
+                      {
+                        offset: 0,
+                        color: '#ffffff',
+                      },
+                    ]),
+                  },
+                },
+              },
+              {
+                value: 548.48,
+                name: 'Acala',
+                label: {
+                  color: colors[6],
+                },
+                labelLine: {
+                  lineStyle: {
+                    color: new echarts.graphic.LinearGradient(1, 1, 0, 0, [
+                      {
+                        offset: 1,
+                        color: 'rgba(255,255,255,0)',
+                      },
+                      {
+                        offset: 0,
+                        color: '#ffffff',
+                      },
+                    ]),
+                  },
+                },
+              },
+              {
+                value: 400.55,
+                name: 'Pioneer',
+                label: {
+                  color: colors[7],
+                },
+                labelLine: {
+                  lineStyle: {
+                    color: new echarts.graphic.LinearGradient(1, 1, 0, 0, [
+                      {
+                        offset: 1,
+                        color: 'rgba(255,255,255,0)',
+                      },
+                      {
+                        offset: 0,
+                        color: '#ffffff',
+                      },
+                    ]),
+                  },
+                },
+              },
+              {
+                value: 1040.19,
+                name: 'Others',
+                label: {
+                  color: colors[8],
+                },
+                labelLine: {
+                  lineStyle: {
+                    color: new echarts.graphic.LinearGradient(1, 1, 0, 0, [
+                      {
+                        offset: 1,
+                        color: 'rgba(255,255,255,0)',
+                      },
+                      {
+                        offset: 0,
+                        color: '#ffffff',
+                      },
+                    ]),
+                  },
+                },
+              },
+            ],
+            baseOptions = {
+              color: colors,
+              tooltip: $.extend(true, {}, defaultTooltipStyle, {
+                trigger: 'item',
+                valueFormatter: function(value) {
+                  return '$' + NumberUtil.formatWithCommas(value);
+                },
+              }),
+              legend: $.extend(true, {}, defaultLegendSettings, {
+                show: false,
+              }),
+              grid: {
+                left: '3%',
+                right: '3%',
+                top: '0',
+                containLabel: true,
+              },
+              series: [
+                {
+                  startAngle: 80,
+                  name: '',
+                  type: 'pie',
+                  center: [
+                    '50%',
+                    '45%',
+                  ],
+                  radius: [
+                    '45%',
+                    '65%',
+                  ],
+                  label: {
+                    alignTo: 'edge',
+                    minMargin: 5,
+                    edgeDistance: 10,
+                    color: '#ffffff',
+                    fontFamily: fontFamily,
+                    fontWeight: 500,
+                    fontSize: 13,
+                    lineHeight: 28,
+                    formatter: function(params) {
+                      return `${params.name} ${params.percent}%`;
+                    },
+                  },
+                  labelLine: {
+                    showAbove: false,
+                    length: 30,
+                    length2: 0,
+                    lineStyle: {
+                      color: new echarts.graphic.LinearGradient(0, 0, 1, 1, [
+                        {
+                          offset: 0,
+                          color: 'rgba(255,255,255,0)',
+
+                        },
+                        {
+                          offset: 1,
+                          color: '#ffffff',
+                        },
+                      ]),
+                    },
+                    maxSurfaceAngle: 80,
+                  }, /*labelLayout: function( params ) {
+								const isLeft = params.labelRect.x < 570;
+								const points = params.labelLinePoints;
+								// Update the end point.
+								points[ 2 ][ 0 ] = isLeft
+									? params.labelRect.x
+									: params.labelRect.x + params.labelRect.width;
+								return {
+									labelLinePoints: points
+								};
+							},*/
+                  itemStyle: {
+                    borderColor: '#151515',
+                    borderWidth: 2,
+                  },
+                  emphasis: {
+                    scaleSize: 5,
+                  },
+                  data: datasets,
+                },
+              ],
+            },
+            responsiveOptions = getChartResponsiveOptionsParachain();
+
+        return $.extend(true, {}, baseOptions, responsiveOptions);
+      }
+
+      function getChartResponsiveOptionsParachain() {
+        var newOptions = {
+          series: [
+            {},
+            {},
+          ],
+        };
+
+        if (window.innerWidth < 768) {
+          newOptions['legend'] = defaultLegendSettings;
+          newOptions['series'][0] = {
+            label: {
+              fontSize: 11,
+              lineHeight: 24,
+              formatter: function(params) {
+                return `${params.percent}%`;
+              },
+            },
+            labelLine: {
+              length: 5,
+            },
+          };
+        } else {
+          newOptions['legend'] = {
+            show: false,
+          };
+          newOptions['series'][0] = {
+            label: {
+              fontSize: 13,
+              lineHeight: 30,
+              formatter: function(params) {
+                return `${params.name} ${params.percent}%`;
+              },
+            },
+          };
         }
 
         return newOptions;
