@@ -4252,15 +4252,15 @@
 
       function getChartOptionsParachainChainFees(chartName) {
         var colors = [
-              '#004DFF',
-              '#8247E5',
-              '#00E7E7',
-              '#89C900',
-              '#DFADA5',
-              '#118AF5',
-              '#F13221',
-              '#E6007A',
-              '#B1B1B1',
+              '#004dff',
+              '#8247e5',
+              '#00e7e7',
+              '#89c900',
+              '#dfada5',
+              '#118af5',
+              '#f13221',
+              '#e6007a',
+              '#b1b1b1',
             ],
             datasets = [
               {
@@ -4356,14 +4356,15 @@
                 },
                 labelLine: {
                   lineStyle: {
-                    color: new echarts.graphic.LinearGradient(1, 1, 0, 0, [
-                      {
-                        offset: 1,
-                        color: 'rgba(255,255,255,0)',
-                      },
+                    color: new echarts.graphic.LinearGradient(0, 0, 1, 1, [
                       {
                         offset: 0,
                         color: '#ffffff',
+
+                      },
+                      {
+                        offset: 1,
+                        color: 'rgba(255,255,255,0)',
                       },
                     ]),
                   },
@@ -4377,14 +4378,15 @@
                 },
                 labelLine: {
                   lineStyle: {
-                    color: new echarts.graphic.LinearGradient(1, 1, 0, 0, [
-                      {
-                        offset: 1,
-                        color: 'rgba(255,255,255,0)',
-                      },
+                    color: new echarts.graphic.LinearGradient(0, 0, 1, 1, [
                       {
                         offset: 0,
                         color: '#ffffff',
+
+                      },
+                      {
+                        offset: 1,
+                        color: 'rgba(255,255,255,0)',
                       },
                     ]),
                   },
@@ -4398,14 +4400,15 @@
                 },
                 labelLine: {
                   lineStyle: {
-                    color: new echarts.graphic.LinearGradient(1, 1, 0, 0, [
-                      {
-                        offset: 1,
-                        color: 'rgba(255,255,255,0)',
-                      },
+                    color: new echarts.graphic.LinearGradient(0, 0, 1, 1, [
                       {
                         offset: 0,
                         color: '#ffffff',
+
+                      },
+                      {
+                        offset: 1,
+                        color: 'rgba(255,255,255,0)',
                       },
                     ]),
                   },
@@ -4419,14 +4422,15 @@
                 },
                 labelLine: {
                   lineStyle: {
-                    color: new echarts.graphic.LinearGradient(1, 1, 0, 0, [
-                      {
-                        offset: 1,
-                        color: 'rgba(255,255,255,0)',
-                      },
+                    color: new echarts.graphic.LinearGradient(0, 0, 1, 1, [
                       {
                         offset: 0,
                         color: '#ffffff',
+
+                      },
+                      {
+                        offset: 1,
+                        color: 'rgba(255,255,255,0)',
                       },
                     ]),
                   },
@@ -4440,14 +4444,15 @@
                 },
                 labelLine: {
                   lineStyle: {
-                    color: new echarts.graphic.LinearGradient(1, 1, 0, 0, [
-                      {
-                        offset: 1,
-                        color: 'rgba(255,255,255,0)',
-                      },
+                    color: new echarts.graphic.LinearGradient(0, 0, 1, 1, [
                       {
                         offset: 0,
                         color: '#ffffff',
+
+                      },
+                      {
+                        offset: 1,
+                        color: 'rgba(255,255,255,0)',
                       },
                     ]),
                   },
