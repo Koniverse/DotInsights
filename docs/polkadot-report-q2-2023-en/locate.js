@@ -19,6 +19,9 @@ var lang = {
   pending: 'Pending',
   onDot: 'On Polkadot',
   onKsm: 'On Kusama',
+  supportRate: 'Support Rate',
+  amountDot: 'Amount (DOT)',
+  amountKsm: 'Amount (KSM)',
 
   wallets: 'Wallets',
   uiDevelopment: 'UI Development',

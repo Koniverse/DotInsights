@@ -239,6 +239,10 @@
               case 'opengov-support-by-track':
                 chartOptions = getChartResponsiveOptionsOpenGovSupportByTrack(chartName);
                 break;
+              case 'governance-opengov-spend-polkadot':
+              case 'governance-opengov-spend-kusama':
+                chartOptions = getChartResponsiveOptionsGovernanceOpenGovSpend(chartName);
+                break;
             }
 
             if (chartOptions) {
@@ -487,6 +491,12 @@
               break;
             case 'opengov-support-by-track':
               chartOptions = getChartOptionsOpenGovSupportByTrack(chartName);
+              break;
+            case 'governance-opengov-spend-polkadot':
+              chartOptions = getChartOptionsGovernanceOpenGovSpendPolkadot(chartName);
+              break;
+            case 'governance-opengov-spend-kusama':
+              chartOptions = getChartOptionsGovernanceOpenGovSpendKusama(chartName);
               break;
           }
 
@@ -2604,6 +2614,469 @@
             {
               label: {
                 fontSize: 8,
+              },
+            },
+          ];
+        }
+
+        return newOptions;
+      }
+
+      function getChartOptionsGovernanceOpenGovSpendPolkadot(chartName) {
+        var colors = [
+              '#df146a',
+              '#ffb800',
+            ],
+            data = [
+              [
+                '47',
+                '21',
+                '8',
+                '22',
+                '6',
+                '36',
+                '5',
+                '15',
+                '20',
+                '13',
+              ],
+              [
+                540000.00,
+                175419.00,
+                120026.26,
+                77500.00,
+                75435.00,
+                69786.00,
+                61477.00,
+                49880.00,
+                41867.70,
+                36969.00,
+              ],
+              [
+                0.33,
+                0.17,
+                1.28,
+                0.14,
+                0.11,
+                0.11,
+                0.31,
+                0.12,
+                0.12,
+                0.58,
+              ],
+            ],
+            baseOptions = {
+              color: colors,
+              textStyle: {
+                fontFamily: fontFamily,
+                fontWeight: 500,
+              },
+              tooltip: defaultTooltipSettings,
+              legend: defaultLegendSettings,
+              grid: {
+                top: '5%',
+                left: '5%',
+                right: '5%',
+                containLabel: true,
+              },
+              xAxis: {
+                type: 'category',
+                data: data[0],
+                splitLine: {
+                  show: false,
+                  lineStyle: {
+                    type: [
+                      4,
+                      4,
+                    ],
+                    color: ['#262626'],
+                  },
+                },
+                axisTick: {
+                  show: false,
+                },
+                axisLine: {
+                  show: false,
+                },
+                axisPointer: defaultAxisPointerLabelSettings,
+                axisLabel: {
+                  fontFamily: fontFamily,
+                  fontSize: 10,
+                  fontWeight: 500,
+                  color: '#cccccc',
+                },
+              },
+              yAxis: [
+                {
+                  type: 'value',
+                  name: locate.supportRate,
+                  nameTextStyle: {
+                    fontSize: 0,
+                  },
+                  offset: 20,
+                  position: 'right',
+                  alignTicks: true,
+                  axisLine: {
+                    show: false,
+                  },
+                  interval: 0.5,
+                  splitLine: {
+                    lineStyle: {
+                      type: [
+                        4,
+                        4,
+                      ],
+                      color: ['#262626'],
+                    },
+                  },
+                  axisPointer: {
+                    label: {
+                      color: '#ffffff',
+                      backgroundColor: colors[1],
+                    },
+                  },
+                  axisLabel: {
+                    fontFamily: fontFamily,
+                    fontSize: 10,
+                    color: '#cccccc',
+                    formatter: '{value}%',
+                  },
+                },
+                {
+                  type: 'value',
+                  name: locate.amountDot,
+                  nameTextStyle: {
+                    fontSize: 0,
+                  },
+                  offset: 20,
+                  alignTicks: true,
+                  axisLine: {
+                    show: false,
+                  },
+                  interval: 200000,
+                  splitLine: {
+                    lineStyle: {
+                      type: [
+                        4,
+                        4,
+                      ],
+                      color: ['#262626'],
+                    },
+                  },
+                  axisPointer: {
+                    label: {
+                      color: '#ffffff',
+                      backgroundColor: colors[0],
+                    },
+                  },
+                  axisLabel: {
+                    fontFamily: fontFamily,
+                    fontSize: 10,
+                    color: '#cccccc',
+                  },
+                },
+              ],
+              series: [
+                {
+                  name: locate.amountDot,
+                  data: data[1],
+                  type: 'bar',
+                  yAxisIndex: 1,
+                  label: {
+                    show: false,
+                  },
+                  barMaxWidth: 102,
+                  itemStyle: {
+                    borderRadius: [
+                      2,
+                      2,
+                      0,
+                      0,
+                    ],
+                  },
+                },
+                {
+                  name: locate.supportRate,
+                  data: data[2],
+                  type: 'line',
+                  label: {
+                    show: true,
+                    fontFamily: fontFamily,
+                    fontWeight: 700,
+                    fontSize: 10,
+                    position: 'top',
+                    color: colors[1],
+                    formatter: '{c}%',
+                  },
+                  smooth: false,
+                  showSymbol: true,
+                  symbolSize: 16,
+                  symbol: 'image://data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABdUExURQAAAP+qANuSJP+qAOuxFPWtCv+tCvauCfauDfuuCfuzDfKwDfawDfevDPmuCfyuDPavDPmvDPatDPavC/mvC/ivDP7ouvznufzouf7sxv7txfzrxf/9+f/++f///0T4C/MAAAAedFJOUwAGBwwNGRk5OTk5OjpAUlJTU1RZWWays7O8vL319RU/hDMAAAB0SURBVBgZVcGBFkJAEAXQN0hot1a8Usz+/2eaORyHe+FuYSBTLLGRhrtOYKTnIQmAhicdUPKiRqSbVP90D7xo5mwmmhF0ms1CBzrNZqHDSPPN5kfT4043q37oImpeVEDLkwBAEg/vAkZa7kKBTRWf5BBqmBU2SxFbD9KnZQAAAABJRU5ErkJggg==',
+                  emphasis: {
+                    focus: 'series',
+                  },
+                },
+              ],
+            },
+            responsiveOptions = getChartResponsiveOptionsGovernanceOpenGovSpend();
+
+        return $.extend(true, {}, baseOptions, responsiveOptions);
+      }
+
+      function getChartOptionsGovernanceOpenGovSpendKusama(chartName) {
+        var colors = [
+              '#0056fe',
+              '#ffb800',
+            ],
+            data = [
+              [
+                '51',
+                '236',
+                '21',
+                '22',
+                '77',
+                '212',
+                '109',
+                '124',
+                '107',
+                '29',
+              ],
+              [
+                52000.00,
+                50000.00,
+                25132.66,
+                22089.00,
+                9373.05,
+                9078.70,
+                6918.88,
+                6533.71,
+                6443.00,
+                5956.88,
+              ],
+              [
+                1.81,
+                0.31,
+                4.49,
+                2.08,
+                0.23,
+                0.62,
+                0.32,
+                0.31,
+                0.19,
+                0.20,
+              ],
+            ],
+            baseOptions = {
+              color: colors,
+              textStyle: {
+                fontFamily: fontFamily,
+                fontWeight: 500,
+              },
+              tooltip: defaultTooltipSettings,
+              legend: defaultLegendSettings,
+              grid: {
+                top: '5%',
+                left: '5%',
+                right: '5%',
+                containLabel: true,
+              },
+              xAxis: {
+                type: 'category',
+                data: data[0],
+                splitLine: {
+                  show: false,
+                  lineStyle: {
+                    type: [
+                      4,
+                      4,
+                    ],
+                    color: ['#262626'],
+                  },
+                },
+                axisTick: {
+                  show: false,
+                },
+                axisLine: {
+                  show: false,
+                },
+                axisPointer: defaultAxisPointerLabelSettings,
+                axisLabel: {
+                  fontFamily: fontFamily,
+                  fontSize: 10,
+                  fontWeight: 500,
+                  color: '#cccccc',
+                },
+              },
+              yAxis: [
+                {
+                  type: 'value',
+                  name: locate.supportRate,
+                  nameTextStyle: {
+                    fontSize: 0,
+                  },
+                  offset: 20,
+                  position: 'right',
+                  alignTicks: true,
+                  axisLine: {
+                    show: false,
+                  },
+                  interval: 2,
+                  max: 6,
+                  splitLine: {
+                    lineStyle: {
+                      type: [
+                        4,
+                        4,
+                      ],
+                      color: ['#262626'],
+                    },
+                  },
+                  axisPointer: {
+                    label: {
+                      color: '#ffffff',
+                      backgroundColor: colors[1],
+                    },
+                  },
+                  axisLabel: {
+                    fontFamily: fontFamily,
+                    fontSize: 10,
+                    color: '#cccccc',
+                    formatter: '{value}%',
+                  },
+                },
+                {
+                  type: 'value',
+                  name: locate.amountKsm,
+                  nameTextStyle: {
+                    fontSize: 0,
+                  },
+                  offset: 20,
+                  alignTicks: true,
+                  axisLine: {
+                    show: false,
+                  },
+                  interval: 20000,
+                  splitLine: {
+                    lineStyle: {
+                      type: [
+                        4,
+                        4,
+                      ],
+                      color: ['#262626'],
+                    },
+                  },
+                  axisPointer: {
+                    label: {
+                      color: '#ffffff',
+                      backgroundColor: colors[0],
+                    },
+                  },
+                  axisLabel: {
+                    fontFamily: fontFamily,
+                    fontSize: 10,
+                    color: '#cccccc',
+                  },
+                },
+              ],
+              series: [
+                {
+                  name: locate.amountKsm,
+                  data: data[1],
+                  type: 'bar',
+                  yAxisIndex: 1,
+                  label: {
+                    show: false,
+                  },
+                  barMaxWidth: 102,
+                  itemStyle: {
+                    borderRadius: [
+                      2,
+                      2,
+                      0,
+                      0,
+                    ],
+                  },
+                },
+                {
+                  name: locate.supportRate,
+                  data: data[2],
+                  type: 'line',
+                  label: {
+                    show: true,
+                    fontFamily: fontFamily,
+                    fontWeight: 700,
+                    fontSize: 10,
+                    position: 'top',
+                    color: colors[1],
+                    formatter: '{c}%',
+                  },
+                  smooth: false,
+                  showSymbol: true,
+                  symbolSize: 16,
+                  symbol: 'image://data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABdUExURQAAAP+qANuSJP+qAOuxFPWtCv+tCvauCfauDfuuCfuzDfKwDfawDfevDPmuCfyuDPavDPmvDPatDPavC/mvC/ivDP7ouvznufzouf7sxv7txfzrxf/9+f/++f///0T4C/MAAAAedFJOUwAGBwwNGRk5OTk5OjpAUlJTU1RZWWays7O8vL319RU/hDMAAAB0SURBVBgZVcGBFkJAEAXQN0hot1a8Usz+/2eaORyHe+FuYSBTLLGRhrtOYKTnIQmAhicdUPKiRqSbVP90D7xo5mwmmhF0ms1CBzrNZqHDSPPN5kfT4043q37oImpeVEDLkwBAEg/vAkZa7kKBTRWf5BBqmBU2SxFbD9KnZQAAAABJRU5ErkJggg==',
+                  emphasis: {
+                    focus: 'series',
+                  },
+                },
+              ],
+            },
+            responsiveOptions = getChartResponsiveOptionsGovernanceOpenGovSpend();
+
+        return $.extend(true, {}, baseOptions, responsiveOptions);
+      }
+
+      function getChartResponsiveOptionsGovernanceOpenGovSpend() {
+        var newOptions = {};
+
+        if (window.innerWidth < 768) {
+          newOptions['series'] = [
+            {
+              label: {
+                fontSize: 10,
+              },
+            },
+            {
+              label: {
+                fontSize: 10,
+              },
+            },
+          ];
+          newOptions['yAxis'] = [
+            {
+              axisLabel: {
+                formatter: '{value}%',
+              },
+            },
+            {
+              axisLabel: {
+                formatter: function(value) {
+                  return NumberUtil.formatMoney(value);
+                },
+              },
+            },
+          ];
+        } else {
+          newOptions['series'] = [
+            {
+              label: {
+                fontSize: 10,
+              },
+            },
+            {
+              label: {
+                fontSize: 10,
+              },
+            },
+          ];
+          newOptions['yAxis'] = [
+            {
+              axisLabel: {
+                formatter: '{value}%',
+              },
+            },
+            {
+              axisLabel: {
+                formatter: '{value}',
               },
             },
           ];
