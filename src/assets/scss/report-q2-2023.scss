@@ -142,9 +142,23 @@
         }
     }
 
-    .section.section-staking-overview {
-        padding: 0 0 230px;
+    .section.section-ecosystem-overview {
+        padding: 30px 0 130px;
         margin: 0;
+    }
+
+    .section.section-the-defi-economy {
+        padding: 30px 0 130px;
+        margin: 0;
+    }
+
+    .section.section-nft {
+        margin: 0;
+        padding-top: 50px;
+    }
+
+    .section.section-web3 {
+        padding-top: 120px;
     }
 
     .section-closing-thoughts {
@@ -298,6 +312,47 @@
             }
         }
     }
+
+    .table--web3-wallet-compare {
+        --block-bg: #000;
+        --td-spacing: 4px;
+        --tr-spacing: 4px;
+        --td-ver-gap: 14px;
+
+        svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        tr {
+            &:before {
+                display: none;
+            }
+        }
+
+        th, td {
+            text-align: center;
+            width: 25%;
+            min-width: 200px;
+
+            &:first-child {
+                text-align: start;
+            }
+        }
+
+        th {
+            border-radius: var(--tr-radius, 5px);
+            background: var(--th-bg, $secondary-color);
+        }
+
+        td {
+            border-radius: var(--tr-radius, 5px);
+            background: var(--td-bg, #151515);
+            font-size: 16px;
+            font-weight: 500;
+            min-height: 100px;
+        }
+    }
 }
 
 @include media-breakpoint-up(sm) {
@@ -332,6 +387,19 @@
                     width: 50%;
                 }
             }
+        }
+
+        .section.section-ecosystem-overview {
+            padding: 30px 0 180px;
+        }
+
+        .section.section-the-defi-economy {
+            padding: 30px 0 220px;
+        }
+
+        .section.section-web3 {
+            margin-top: 40px;
+            padding-top: 180px;
         }
     }
 }
@@ -374,6 +442,19 @@
             .section-content-inner {
                 padding: 65px 45px 45px;
             }
+        }
+
+        .section.section-ecosystem-overview {
+            padding: 30px 0 190px;
+        }
+
+        .section.section-the-defi-economy {
+            padding: 30px 0 210px;
+        }
+
+        .section.section-web3 {
+            margin-top: 60px;
+            padding-top: 250px;
         }
 
         .block-chart-body-pie-chart {
@@ -461,7 +542,18 @@
             }
         }
 
+        .section.section-ecosystem-overview {
+            padding: 30px 0 250px;
+        }
 
+        .section.section-the-defi-economy {
+            padding: 0 0 250px;
+        }
+
+        .section.section-web3 {
+            margin-top: 60px;
+            padding-top: 250px;
+        }
     }
 }
 
@@ -544,6 +636,19 @@
             }
         }
 
+        .section.section-ecosystem-overview {
+            padding: 0 0 280px;
+        }
+
+        .section.section-the-defi-economy {
+            padding: 50px 0 280px;
+        }
+
+        .section.section-web3 {
+            margin-top: 60px;
+            padding-top: 250px;
+        }
+
         .site-footer {
             --s-desc-width: 966px;
         }
@@ -555,6 +660,14 @@
         .block-table-source, .block-chart-source {
             font-size: 14px;
             line-height: 24px;
+        }
+    }
+}
+
+@media (max-width: 460px) {
+    .polkadot-q2-2023 {
+        .block-text .heading {
+            font-size: 20px;
         }
     }
 }
