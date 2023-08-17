@@ -257,6 +257,7 @@
               case 'tvl-defi-parachain':
               case 'defi-dex-polkadot':
               case 'defi-dex-kusama':
+              case 'defi-lending':
                 chartOptions = getChartLinesBaseResponsiveOptions(chartName);
                 break;
             }
@@ -493,6 +494,9 @@
                 break;
               case 'defi-dex-kusama':
                 chartOptions = getChartOptionsDefiDexKusama(chartName, jsonData);
+                break;
+              case 'defi-lending':
+                chartOptions = getChartOptionsDefiLending(chartName, jsonData);
                 break;
             }
             chartInstance.hideLoading();
@@ -4757,6 +4761,53 @@
         return $.extend(true, {}, baseOptions, responsiveOptions);
       }
 
+      function getChartOptionsDefiLending(chartName, jsonData) {
+        var datasets = [
+              {
+                name: 'moonwell_artemis',
+                label: 'Moonwell Artemis',
+              },
+              {
+                name: 'parallel',
+                label: 'Parallel',
+              },
+              {
+                name: 'karura',
+                label: 'Karura Dollar (kUSD)',
+              },
+              {
+                name: 'moonwell_apollo',
+                label: 'Moonwell Apollo',
+              },
+              {
+                name: 'starlay',
+                label: 'Starlay Finance',
+              },
+              {
+                name: 'heiko',
+                label: 'Heiko',
+              },
+            ],
+            colors = [
+              '#004bff',
+              '#f82613',
+              '#ffb800',
+              '#89c900',
+              '#66e1b6',
+              '#ff279a',
+            ],
+            chartExtraOptions = {
+              yAxis: {
+                interval: 10000000,
+              },
+            };
+
+        var baseOptions = getChartLinesBaseOptions(jsonData, datasets, colors, null, null, chartExtraOptions);
+        var responsiveOptions = getChartLinesBaseResponsiveOptions(chartName);
+
+        return $.extend(true, {}, baseOptions, responsiveOptions);
+      }
+
       /*
       * CHART BASE FUNCTION
       * */
@@ -4951,6 +5002,7 @@
           case 'tvl-defi-parachain':
           case 'defi-dex-polkadot':
           case 'defi-dex-kusama':
+          case 'defi-lending':
             newOptions.tooltip = {
               valueFormatter: function(value) {
                 return value ? '$' + NumberUtil.formatWithCommas(value) : '-';
