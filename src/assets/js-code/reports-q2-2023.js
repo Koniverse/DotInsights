@@ -256,6 +256,7 @@
                 break;
               case 'tvl-defi-parachain':
               case 'defi-dex-polkadot':
+              case 'defi-dex-kusama':
                 chartOptions = getChartLinesBaseResponsiveOptions(chartName);
                 break;
             }
@@ -489,6 +490,9 @@
                 break;
               case 'defi-dex-polkadot':
                 chartOptions = getChartOptionsDefiDexPolkadot(chartName, jsonData);
+                break;
+              case 'defi-dex-kusama':
+                chartOptions = getChartOptionsDefiDexKusama(chartName, jsonData);
                 break;
             }
             chartInstance.hideLoading();
@@ -4706,6 +4710,53 @@
         return $.extend(true, {}, baseOptions, responsiveOptions);
       }
 
+      function getChartOptionsDefiDexKusama(chartName, jsonData) {
+        var datasets = [
+              {
+                name: 'solarbeam',
+                label: 'Solarbeam',
+              },
+              {
+                name: 'bifrost',
+                label: 'Bifrost',
+              },
+              {
+                name: 'karura_swap',
+                label: 'Karura Swap',
+              },
+              {
+                name: 'sushiswap',
+                label: 'SushiSwap On Moonriver',
+              },
+              {
+                name: 'zenlink',
+                label: 'Zenlink On Moonriver',
+              },
+              {
+                name: 'moonswap',
+                label: 'Moonswap',
+              },
+            ],
+            colors = [
+              '#004bff',
+              '#f82613',
+              '#ffb800',
+              '#89c900',
+              '#e4560a',
+              '#66e1b6',
+            ],
+            chartExtraOptions = {
+              yAxis: {
+                interval: 2000000,
+              },
+            };
+
+        var baseOptions = getChartLinesBaseOptions(jsonData, datasets, colors, null, null, chartExtraOptions);
+        var responsiveOptions = getChartLinesBaseResponsiveOptions(chartName);
+
+        return $.extend(true, {}, baseOptions, responsiveOptions);
+      }
+
       /*
       * CHART BASE FUNCTION
       * */
@@ -4736,7 +4787,7 @@
               color: colors[index],
             },
             type: 'line',
-            smooth: true,
+            smooth: false,
             showSymbol: false,
             connectNulls: true, // used for dotsama dex.
             emphasis: {
@@ -4899,6 +4950,7 @@
         switch (chartName) {
           case 'tvl-defi-parachain':
           case 'defi-dex-polkadot':
+          case 'defi-dex-kusama':
             newOptions.tooltip = {
               valueFormatter: function(value) {
                 return value ? '$' + NumberUtil.formatWithCommas(value) : '-';
