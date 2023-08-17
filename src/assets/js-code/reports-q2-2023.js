@@ -269,6 +269,9 @@
               case 'nft-marketplace':
                 chartOptions = getChartResponsiveOptionsNftMarketplace(chartName);
                 break;
+              case 'nft-metaverse-bitcountry':
+                chartOptions = getChartResponsiveOptionsNftMetaverseBitcountry(chartName);
+                break;
             }
 
             if (chartOptions) {
@@ -521,6 +524,9 @@
                 break;
               case 'nft-marketplace':
                 chartOptions = getChartOptionsNftMarketplace(chartName, jsonData);
+                break;
+              case 'nft-metaverse-bitcountry':
+                chartOptions = getChartOptionsNftMetaverseBitcountry(chartName, jsonData);
                 break;
             }
             chartInstance.hideLoading();
@@ -5534,6 +5540,237 @@
               axisLabel: {
                 formatter: dateFormatter,
               },
+            },
+          };
+        }
+
+        return newOptions;
+      }
+
+      function getChartOptionsNftMetaverseBitcountry(chartName, jsonData) {
+        var totalItems = jsonData.length,
+            data = {
+              vol_usd: [],
+              traded_nfts: [],
+              minted_nfts: [],
+            },
+            colors = [
+              '#004bff',
+              '#e6007a',
+              '#24F483',
+            ];
+
+        for (var i = 0; i < totalItems; i++) {
+          data.vol_usd.push([
+            jsonData[i].date, jsonData[i].vol_usd,
+          ]);
+          data.traded_nfts.push([
+            jsonData[i].date, jsonData[i].traded_nfts,
+          ]);
+          data.minted_nfts.push([
+            jsonData[i].date, jsonData[i].minted_nfts,
+          ]);
+        }
+
+        var baseOptions = {
+          color: colors,
+          textStyle: {
+            fontFamily: fontFamily,
+            fontWeight: 500,
+          },
+          tooltip: defaultTooltipSettings,
+          legend: defaultLegendSettings,
+          grid: {
+            top: '3%',
+            left: '40px',
+            right: '40px',
+            containLabel: true,
+          },
+          xAxis: {
+            type: 'time',
+            splitLine: {
+              show: false,
+            },
+            axisTick: {
+              show: false,
+            },
+            axisLine: {
+              show: false,
+            },
+            axisPointer: defaultAxisPointerLabelSettings,
+            axisLabel: {
+              formatter: dateFormatter,
+              color: '#cccccc',
+            },
+          },
+          yAxis: [
+            {
+              type: 'value',
+              name: locate.nftTradingVolume,
+              nameTextStyle: {
+                fontSize: 0,
+              },
+              position: 'right',
+              interval: 250,
+              offset: 20,
+              alignTicks: true,
+              axisLine: {
+                show: false,
+              },
+              splitLine: {
+                lineStyle: {
+                  type: [
+                    4, 4,
+                  ],
+                  color: ['#262626'],
+                },
+              },
+              axisPointer: {
+                label: {
+                  color: '#ffffff',
+                  backgroundColor: colors[0],
+                },
+              },
+              axisLabel: {
+                color: '#cccccc',
+              },
+            },
+            {
+              type: 'value',
+              name: locate.tradedNfts,
+              nameTextStyle: {
+                fontSize: 0,
+              },
+              offset: 20,
+              alignTicks: true,
+              axisLine: {
+                show: false,
+              },
+              interval: 500,
+              max: 2000,
+              splitLine: {
+                lineStyle: {
+                  type: [
+                    4, 4,
+                  ],
+                  color: ['#262626'],
+                },
+              },
+              axisPointer: {
+                label: {
+                  color: '#ffffff',
+                  backgroundColor: colors[1],
+                },
+              },
+              axisLabel: {
+                color: '#cccccc',
+              },
+            },
+          ],
+          series: [
+            {
+              name: locate.nftTradingVolume,
+              data: data.vol_usd,
+              type: 'bar',
+              smooth: true,
+              yAxisIndex: 1,
+              showSymbol: false,
+              emphasis: {
+                focus: 'series',
+              },
+              barMaxWidth: 10,
+              itemStyle: {
+                borderRadius: [
+                  4, 4, 0, 0,
+                ],
+              },
+            },
+            {
+              name: locate.tradedNfts,
+              data: data.traded_nfts,
+              type: 'line',
+              smooth: false,
+              showSymbol: false,
+              emphasis: {
+                focus: 'series',
+              },
+              lineStyle: {
+                width: 3,
+              },
+            },
+            {
+              name: locate.mintedNfts,
+              data: data.minted_nfts,
+              type: 'line',
+              smooth: false,
+              showSymbol: false,
+              emphasis: {
+                focus: 'series',
+              },
+              lineStyle: {
+                width: 3,
+              },
+            },
+          ],
+        };
+        var responsiveOptions = getChartResponsiveOptionsFastUnstakeOnPolkadot();
+
+        $.extend(true, baseOptions, responsiveOptions);
+
+        return baseOptions;
+      }
+
+      function getChartResponsiveOptionsNftMetaverseBitcountry() {
+        var newOptions = {};/**/
+
+        if (window.innerWidth > 767) {
+          newOptions = {
+            grid: {
+              left: '40px',
+              right: '40px',
+            },
+            yAxis: [
+              {
+                offset: 20,
+                axisLabel: {
+                  formatter: '{value}',
+                },
+              }, {
+                offset: 20,
+                axisLabel: {
+                  formatter: '{value}',
+                },
+              },
+            ],
+            xAxis: {
+              splitNumber: 4,
+            },
+          };
+        } else {
+          newOptions = {
+            grid: {
+              left: '20px',
+              right: '20px',
+            },
+            yAxis: [
+              {
+                offset: 5,
+                axisLabel: {
+                  formatter: function(value) {
+                    return NumberUtil.formatMoney(value);
+                  },
+                },
+              }, {
+                offset: 5,
+                axisLabel: {
+                  formatter: function(value) {
+                    return NumberUtil.formatMoney(value);
+                  },
+                },
+              },
+            ],
+            xAxis: {
+              splitNumber: 2,
             },
           };
         }

@@ -33,6 +33,9 @@ var lang = {
   transferCount: 'Transfer Count',
   holderCount: 'Holder Count',
   transferAmount: 'Transfer Amount',
+  nftTradingVolume: 'NFT Trading Volume (USD)',
+  tradedNfts: 'Traded NFTs',
+  mintedNfts: 'Minted NFTs',
 
   wallets: 'Wallets',
   uiDevelopment: 'UI Development',

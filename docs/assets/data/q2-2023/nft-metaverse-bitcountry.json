@@ -1,0 +1,733 @@
+[
+  {
+    "date": "2023-06-30",
+    "traded_nfts": "4",
+    "minted_nfts": "2",
+    "vol_usd": "0.00"
+  },
+  {
+    "date": "2023-06-29",
+    "traded_nfts": "25",
+    "minted_nfts": "5",
+    "vol_usd": "0.00"
+  },
+  {
+    "date": "2023-06-28",
+    "traded_nfts": "18",
+    "minted_nfts": "101",
+    "vol_usd": "0.00"
+  },
+  {
+    "date": "2023-06-27",
+    "traded_nfts": "9",
+    "minted_nfts": "3",
+    "vol_usd": "76.91"
+  },
+  {
+    "date": "2023-06-26",
+    "traded_nfts": "64",
+    "minted_nfts": "2",
+    "vol_usd": "12.82"
+  },
+  {
+    "date": "2023-06-25",
+    "traded_nfts": "31",
+    "minted_nfts": "0",
+    "vol_usd": "65.99"
+  },
+  {
+    "date": "2023-06-24",
+    "traded_nfts": "1",
+    "minted_nfts": "0",
+    "vol_usd": "0.00"
+  },
+  {
+    "date": "2023-06-23",
+    "traded_nfts": "40",
+    "minted_nfts": "1",
+    "vol_usd": "48.20"
+  },
+  {
+    "date": "2023-06-22",
+    "traded_nfts": "43",
+    "minted_nfts": "0",
+    "vol_usd": "61.24"
+  },
+  {
+    "date": "2023-06-21",
+    "traded_nfts": "22",
+    "minted_nfts": "0",
+    "vol_usd": "60.96"
+  },
+  {
+    "date": "2023-06-20",
+    "traded_nfts": "28",
+    "minted_nfts": "0",
+    "vol_usd": "58.13"
+  },
+  {
+    "date": "2023-06-19",
+    "traded_nfts": "17",
+    "minted_nfts": "30",
+    "vol_usd": "187.10"
+  },
+  {
+    "date": "2023-06-18",
+    "traded_nfts": "20",
+    "minted_nfts": "0",
+    "vol_usd": "0.00"
+  },
+  {
+    "date": "2023-06-17",
+    "traded_nfts": "19",
+    "minted_nfts": "0",
+    "vol_usd": "21.35"
+  },
+  {
+    "date": "2023-06-16",
+    "traded_nfts": "1",
+    "minted_nfts": "0",
+    "vol_usd": "0.00"
+  },
+  {
+    "date": "2023-06-15",
+    "traded_nfts": "14",
+    "minted_nfts": "0",
+    "vol_usd": "0.00"
+  },
+  {
+    "date": "2023-06-14",
+    "traded_nfts": "27",
+    "minted_nfts": "0",
+    "vol_usd": "8.84"
+  },
+  {
+    "date": "2023-06-13",
+    "traded_nfts": "12",
+    "minted_nfts": "0",
+    "vol_usd": "73.99"
+  },
+  {
+    "date": "2023-06-12",
+    "traded_nfts": "6",
+    "minted_nfts": "0",
+    "vol_usd": "0.00"
+  },
+  {
+    "date": "2023-06-11",
+    "traded_nfts": "30",
+    "minted_nfts": "0",
+    "vol_usd": "1.34"
+  },
+  {
+    "date": "2023-06-10",
+    "traded_nfts": "10",
+    "minted_nfts": "0",
+    "vol_usd": "169.10"
+  },
+  {
+    "date": "2023-06-09",
+    "traded_nfts": "13",
+    "minted_nfts": "162",
+    "vol_usd": "58.70"
+  },
+  {
+    "date": "2023-06-08",
+    "traded_nfts": "17",
+    "minted_nfts": "0",
+    "vol_usd": "0.00"
+  },
+  {
+    "date": "2023-06-07",
+    "traded_nfts": "28",
+    "minted_nfts": "1",
+    "vol_usd": "341.45"
+  },
+  {
+    "date": "2023-06-06",
+    "traded_nfts": "2",
+    "minted_nfts": "0",
+    "vol_usd": "14.68"
+  },
+  {
+    "date": "2023-06-05",
+    "traded_nfts": "34",
+    "minted_nfts": "1",
+    "vol_usd": "92.81"
+  },
+  {
+    "date": "2023-06-04",
+    "traded_nfts": "39",
+    "minted_nfts": "2",
+    "vol_usd": "0.00"
+  },
+  {
+    "date": "2023-06-03",
+    "traded_nfts": "1",
+    "minted_nfts": "0",
+    "vol_usd": "105.41"
+  },
+  {
+    "date": "2023-06-02",
+    "traded_nfts": "23",
+    "minted_nfts": "0",
+    "vol_usd": "1.52"
+  },
+  {
+    "date": "2023-06-01",
+    "traded_nfts": "28",
+    "minted_nfts": "22",
+    "vol_usd": "336.88"
+  },
+  {
+    "date": "2023-05-31",
+    "traded_nfts": "33",
+    "minted_nfts": "5",
+    "vol_usd": "0.00"
+  },
+  {
+    "date": "2023-05-30",
+    "traded_nfts": "12",
+    "minted_nfts": "1",
+    "vol_usd": "3.73"
+  },
+  {
+    "date": "2023-05-29",
+    "traded_nfts": "5",
+    "minted_nfts": "110",
+    "vol_usd": "2.14"
+  },
+  {
+    "date": "2023-05-28",
+    "traded_nfts": "11",
+    "minted_nfts": "3",
+    "vol_usd": "0.00"
+  },
+  {
+    "date": "2023-05-27",
+    "traded_nfts": "19",
+    "minted_nfts": "0",
+    "vol_usd": "0.00"
+  },
+  {
+    "date": "2023-05-26",
+    "traded_nfts": "34",
+    "minted_nfts": "106",
+    "vol_usd": "124.12"
+  },
+  {
+    "date": "2023-05-25",
+    "traded_nfts": "29",
+    "minted_nfts": "1",
+    "vol_usd": "72.12"
+  },
+  {
+    "date": "2023-05-24",
+    "traded_nfts": "42",
+    "minted_nfts": "34",
+    "vol_usd": "1.08"
+  },
+  {
+    "date": "2023-05-23",
+    "traded_nfts": "22",
+    "minted_nfts": "0",
+    "vol_usd": "2.64"
+  },
+  {
+    "date": "2023-05-22",
+    "traded_nfts": "24",
+    "minted_nfts": "9",
+    "vol_usd": "16.54"
+  },
+  {
+    "date": "2023-05-21",
+    "traded_nfts": "9",
+    "minted_nfts": "1",
+    "vol_usd": "2.86"
+  },
+  {
+    "date": "2023-05-20",
+    "traded_nfts": "77",
+    "minted_nfts": "75",
+    "vol_usd": "43.55"
+  },
+  {
+    "date": "2023-05-19",
+    "traded_nfts": "36",
+    "minted_nfts": "4",
+    "vol_usd": "24.18"
+  },
+  {
+    "date": "2023-05-18",
+    "traded_nfts": "5",
+    "minted_nfts": "495",
+    "vol_usd": "76.58"
+  },
+  {
+    "date": "2023-05-17",
+    "traded_nfts": "46",
+    "minted_nfts": "1",
+    "vol_usd": "122.73"
+  },
+  {
+    "date": "2023-05-16",
+    "traded_nfts": "2",
+    "minted_nfts": "4",
+    "vol_usd": "507.26"
+  },
+  {
+    "date": "2023-05-15",
+    "traded_nfts": "13",
+    "minted_nfts": "8",
+    "vol_usd": "57.23"
+  },
+  {
+    "date": "2023-05-14",
+    "traded_nfts": "3",
+    "minted_nfts": "7",
+    "vol_usd": "0.00"
+  },
+  {
+    "date": "2023-05-13",
+    "traded_nfts": "8",
+    "minted_nfts": "5",
+    "vol_usd": "131.86"
+  },
+  {
+    "date": "2023-05-12",
+    "traded_nfts": "15",
+    "minted_nfts": "0",
+    "vol_usd": "56.70"
+  },
+  {
+    "date": "2023-05-11",
+    "traded_nfts": "23",
+    "minted_nfts": "1",
+    "vol_usd": "225.06"
+  },
+  {
+    "date": "2023-05-10",
+    "traded_nfts": "3",
+    "minted_nfts": "2",
+    "vol_usd": "94.45"
+  },
+  {
+    "date": "2023-05-09",
+    "traded_nfts": "25",
+    "minted_nfts": "2",
+    "vol_usd": "215.49"
+  },
+  {
+    "date": "2023-05-08",
+    "traded_nfts": "37",
+    "minted_nfts": "0",
+    "vol_usd": "52.42"
+  },
+  {
+    "date": "2023-05-07",
+    "traded_nfts": "20",
+    "minted_nfts": "1",
+    "vol_usd": "128.41"
+  },
+  {
+    "date": "2023-05-06",
+    "traded_nfts": "2",
+    "minted_nfts": "10",
+    "vol_usd": "138.76"
+  },
+  {
+    "date": "2023-05-05",
+    "traded_nfts": "14",
+    "minted_nfts": "15",
+    "vol_usd": "43.92"
+  },
+  {
+    "date": "2023-05-04",
+    "traded_nfts": "17",
+    "minted_nfts": "2",
+    "vol_usd": "75.53"
+  },
+  {
+    "date": "2023-05-03",
+    "traded_nfts": "92",
+    "minted_nfts": "0",
+    "vol_usd": "24.60"
+  },
+  {
+    "date": "2023-05-02",
+    "traded_nfts": "729",
+    "minted_nfts": "103",
+    "vol_usd": "144.05"
+  },
+  {
+    "date": "2023-05-01",
+    "traded_nfts": "12",
+    "minted_nfts": "12",
+    "vol_usd": "8.44"
+  },
+  {
+    "date": "2023-04-30",
+    "traded_nfts": "6",
+    "minted_nfts": "1",
+    "vol_usd": "143.55"
+  },
+  {
+    "date": "2023-04-29",
+    "traded_nfts": "2",
+    "minted_nfts": "109",
+    "vol_usd": "200.47"
+  },
+  {
+    "date": "2023-04-28",
+    "traded_nfts": "8",
+    "minted_nfts": "29",
+    "vol_usd": "26.29"
+  },
+  {
+    "date": "2023-04-27",
+    "traded_nfts": "33",
+    "minted_nfts": "4",
+    "vol_usd": "235.98"
+  },
+  {
+    "date": "2023-04-26",
+    "traded_nfts": "19",
+    "minted_nfts": "11",
+    "vol_usd": "112.72"
+  },
+  {
+    "date": "2023-04-25",
+    "traded_nfts": "24",
+    "minted_nfts": "4",
+    "vol_usd": "672.74"
+  },
+  {
+    "date": "2023-04-24",
+    "traded_nfts": "37",
+    "minted_nfts": "109",
+    "vol_usd": "1965.69"
+  },
+  {
+    "date": "2023-04-23",
+    "traded_nfts": "404",
+    "minted_nfts": "172",
+    "vol_usd": "418.94"
+  },
+  {
+    "date": "2023-04-22",
+    "traded_nfts": "9",
+    "minted_nfts": "11",
+    "vol_usd": "47.70"
+  },
+  {
+    "date": "2023-04-21",
+    "traded_nfts": "5",
+    "minted_nfts": "17",
+    "vol_usd": "268.47"
+  },
+  {
+    "date": "2023-04-20",
+    "traded_nfts": "57",
+    "minted_nfts": "10",
+    "vol_usd": "264.25"
+  },
+  {
+    "date": "2023-04-19",
+    "minted_nfts": "8",
+    "vol_usd": "70.30"
+  },
+  {
+    "date": "2023-04-18",
+    "traded_nfts": "12",
+    "minted_nfts": "0",
+    "vol_usd": "150.66"
+  },
+  {
+    "date": "2023-04-17",
+    "traded_nfts": "13",
+    "minted_nfts": "1000",
+    "vol_usd": "308.70"
+  },
+  {
+    "date": "2023-04-16",
+    "traded_nfts": "4",
+    "minted_nfts": "561",
+    "vol_usd": "244.25"
+  },
+  {
+    "date": "2023-04-15",
+    "traded_nfts": "40",
+    "minted_nfts": "0",
+    "vol_usd": "17.09"
+  },
+  {
+    "date": "2023-04-14",
+    "traded_nfts": "20",
+    "minted_nfts": "7",
+    "vol_usd": "95.50"
+  },
+  {
+    "date": "2023-04-13",
+    "traded_nfts": "15",
+    "minted_nfts": "1",
+    "vol_usd": "164.22"
+  },
+  {
+    "date": "2023-04-12",
+    "traded_nfts": "23",
+    "minted_nfts": "0",
+    "vol_usd": "147.83"
+  },
+  {
+    "date": "2023-04-11",
+    "traded_nfts": "8",
+    "minted_nfts": "0",
+    "vol_usd": "258.05"
+  },
+  {
+    "date": "2023-04-10",
+    "traded_nfts": "29",
+    "minted_nfts": "0",
+    "vol_usd": "98.12"
+  },
+  {
+    "date": "2023-04-09",
+    "traded_nfts": "4",
+    "minted_nfts": "13",
+    "vol_usd": "204.99"
+  },
+  {
+    "date": "2023-04-08",
+    "traded_nfts": "51",
+    "minted_nfts": "11",
+    "vol_usd": "112.36"
+  },
+  {
+    "date": "2023-04-07",
+    "traded_nfts": "37",
+    "minted_nfts": "19",
+    "vol_usd": "386.52"
+  },
+  {
+    "date": "2023-04-06",
+    "traded_nfts": "95",
+    "minted_nfts": "135",
+    "vol_usd": "326.77"
+  },
+  {
+    "date": "2023-04-05",
+    "traded_nfts": "11",
+    "minted_nfts": "266",
+    "vol_usd": "1018.74"
+  },
+  {
+    "date": "2023-04-04",
+    "traded_nfts": "29",
+    "minted_nfts": "148",
+    "vol_usd": "403.00"
+  },
+  {
+    "date": "2023-04-03",
+    "traded_nfts": "27",
+    "minted_nfts": "255",
+    "vol_usd": "571.09"
+  },
+  {
+    "date": "2023-04-02",
+    "traded_nfts": "114",
+    "minted_nfts": "213",
+    "vol_usd": "90.94"
+  },
+  {
+    "date": "2023-04-01",
+    "traded_nfts": "76",
+    "minted_nfts": "16",
+    "vol_usd": "349.78"
+  },
+  {
+    "date": "2023-03-31",
+    "traded_nfts": "69",
+    "minted_nfts": "60",
+    "vol_usd": "468.39"
+  },
+  {
+    "date": "2023-03-30",
+    "traded_nfts": "198",
+    "minted_nfts": "10",
+    "vol_usd": "226.97"
+  },
+  {
+    "date": "2023-03-29",
+    "traded_nfts": "56",
+    "minted_nfts": "4",
+    "vol_usd": "264.49"
+  },
+  {
+    "date": "2023-03-28",
+    "traded_nfts": "28",
+    "minted_nfts": "6",
+    "vol_usd": "2.36"
+  },
+  {
+    "date": "2023-03-27",
+    "traded_nfts": "12",
+    "minted_nfts": "4",
+    "vol_usd": "444.68"
+  },
+  {
+    "date": "2023-03-26",
+    "traded_nfts": "54",
+    "minted_nfts": "40",
+    "vol_usd": "267.60"
+  },
+  {
+    "date": "2023-03-25",
+    "traded_nfts": "6",
+    "minted_nfts": "1",
+    "vol_usd": "473.43"
+  },
+  {
+    "date": "2023-03-24",
+    "traded_nfts": "52",
+    "minted_nfts": "0",
+    "vol_usd": "343.17"
+  },
+  {
+    "date": "2023-03-23",
+    "traded_nfts": "48",
+    "minted_nfts": "3",
+    "vol_usd": "385.87"
+  },
+  {
+    "date": "2023-03-22",
+    "traded_nfts": "21",
+    "minted_nfts": "20",
+    "vol_usd": "514.82"
+  },
+  {
+    "date": "2023-03-21",
+    "traded_nfts": "9",
+    "minted_nfts": "21",
+    "vol_usd": "143.21"
+  },
+  {
+    "date": "2023-03-20",
+    "traded_nfts": "21",
+    "minted_nfts": "32",
+    "vol_usd": "60.63"
+  },
+  {
+    "date": "2023-03-19",
+    "traded_nfts": "38",
+    "minted_nfts": "6",
+    "vol_usd": "25.15"
+  },
+  {
+    "date": "2023-03-18",
+    "traded_nfts": "7",
+    "minted_nfts": "10",
+    "vol_usd": "88.06"
+  },
+  {
+    "date": "2023-03-17",
+    "traded_nfts": "29",
+    "minted_nfts": "44",
+    "vol_usd": "203.76"
+  },
+  {
+    "date": "2023-03-16",
+    "traded_nfts": "17",
+    "minted_nfts": "1",
+    "vol_usd": "119.38"
+  },
+  {
+    "date": "2023-03-15",
+    "traded_nfts": "25",
+    "minted_nfts": "4",
+    "vol_usd": "142.27"
+  },
+  {
+    "date": "2023-03-14",
+    "traded_nfts": "45",
+    "minted_nfts": "0",
+    "vol_usd": "223.98"
+  },
+  {
+    "date": "2023-03-13",
+    "traded_nfts": "26",
+    "minted_nfts": "1",
+    "vol_usd": "167.72"
+  },
+  {
+    "date": "2023-03-12",
+    "traded_nfts": "9",
+    "minted_nfts": "5",
+    "vol_usd": "185.55"
+  },
+  {
+    "date": "2023-03-11",
+    "traded_nfts": "48",
+    "minted_nfts": "1",
+    "vol_usd": "175.92"
+  },
+  {
+    "date": "2023-03-10",
+    "traded_nfts": "16",
+    "minted_nfts": "0",
+    "vol_usd": "241.18"
+  },
+  {
+    "date": "2023-03-09",
+    "traded_nfts": "10",
+    "minted_nfts": "3",
+    "vol_usd": "230.28"
+  },
+  {
+    "date": "2023-03-08",
+    "traded_nfts": "29",
+    "minted_nfts": "3",
+    "vol_usd": "159.03"
+  },
+  {
+    "date": "2023-03-07",
+    "traded_nfts": "37",
+    "minted_nfts": "4",
+    "vol_usd": "181.31"
+  },
+  {
+    "date": "2023-03-06",
+    "traded_nfts": "43",
+    "minted_nfts": "4",
+    "vol_usd": "1096.93"
+  },
+  {
+    "date": "2023-03-05",
+    "traded_nfts": "81",
+    "minted_nfts": "4",
+    "vol_usd": "116.61"
+  },
+  {
+    "date": "2023-03-04",
+    "traded_nfts": "24",
+    "minted_nfts": "3",
+    "vol_usd": "258.81"
+  },
+  {
+    "date": "2023-03-03",
+    "traded_nfts": "18",
+    "minted_nfts": "6",
+    "vol_usd": "1104.63"
+  },
+  {
+    "date": "2023-03-02",
+    "traded_nfts": "82",
+    "minted_nfts": "2",
+    "vol_usd": "1507.54"
+  },
+  {
+    "date": "2023-03-01",
+    "traded_nfts": "8",
+    "minted_nfts": "2",
+    "vol_usd": "1351.78"
+  }
+]
