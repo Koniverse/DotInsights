@@ -30,6 +30,9 @@ var lang = {
   q12023: 'Q1 2023',
   q22023: 'Q2 2023',
   others: 'Others',
+  transferCount: 'Transfer Count',
+  holderCount: 'Holder Count',
+  transferAmount: 'Transfer Amount',
 
   wallets: 'Wallets',
   uiDevelopment: 'UI Development',

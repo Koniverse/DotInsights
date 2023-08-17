@@ -262,6 +262,10 @@
               case 'defi-usdt-supply':
                 chartOptions = getChartLinesBaseResponsiveOptions(chartName);
                 break;
+              case 'defi-usdt-polkadot':
+              case 'defi-usdt-kusama':
+                chartOptions = getChartResponsiveOptionsDefiUsdt(chartName);
+                break;
             }
 
             if (chartOptions) {
@@ -502,8 +506,15 @@
                 break;
               case 'defi-liquid-staking':
                 chartOptions = getChartOptionsDefiLiquidStaking(chartName, jsonData);
-                break;case 'defi-usdt-supply':
+                break;
+              case 'defi-usdt-supply':
                 chartOptions = getChartOptionsDefiUsdtSupply(chartName, jsonData);
+                break;
+              case 'defi-usdt-polkadot':
+                chartOptions = getChartOptionsDefiUsdtPolkadot(chartName, jsonData);
+                break;
+              case 'defi-usdt-kusama':
+                chartOptions = getChartOptionsDefiUsdtKusama(chartName, jsonData);
                 break;
             }
             chartInstance.hideLoading();
@@ -4897,6 +4908,432 @@
         var responsiveOptions = getChartLinesBaseResponsiveOptions(chartName);
 
         return $.extend(true, {}, baseOptions, responsiveOptions);
+      }
+
+      function getChartOptionsDefiUsdtPolkadot(chartName, jsonData) {
+        var totalItems = jsonData.length,
+            data = {
+              transferCount: [],
+              transferAmount: [],
+              holderCount: [],
+            },
+            colors = [
+              '#004bff',
+              '#e12c29',
+              '#ffb800',
+            ];
+
+        for (var i = 0; i < totalItems; i++) {
+          data.transferCount.push([
+            jsonData[i].date,
+            jsonData[i].transfer_count,
+          ]);
+          data.transferAmount.push([
+            jsonData[i].date,
+            jsonData[i].transfer_amount,
+          ]);
+          data.holderCount.push([
+            jsonData[i].date,
+            jsonData[i].holder_count,
+          ]);
+        }
+
+        var baseOptions = {
+          color: colors,
+          textStyle: {
+            fontFamily: fontFamily,
+            fontWeight: 500,
+          },
+          tooltip: defaultTooltipSettings,
+          legend: defaultLegendSettings,
+          grid: {
+            left: '3%',
+            right: '3%',
+            top: '3%', //bottom: 100, // DataZoom + Legend.
+            containLabel: true,
+          },
+          xAxis: {
+            type: 'time',
+            boundaryGap: false,
+            axisTick: {
+              show: false,
+            },
+            axisLine: {
+              lineStyle: {
+                color: '#262626',
+              },
+            },
+            splitLine: {
+              show: true,
+              lineStyle: {
+                type: [
+                  4,
+                  4,
+                ],
+                color: ['#262626'],
+              },
+            },
+            axisPointer: defaultAxisPointerLabelSettings,
+            axisLabel: {
+              hideOverlap: false,
+              showMaxLabel: true,
+              overflow: 'breakAll', //						rotate: 45,
+              align: 'center',
+              fontFamily: fontFamily,
+              fontSize: 10,
+              fontWeight: 500,
+              formatter: dateFormatter,
+              color: '#cccccc',
+            },
+          },
+          yAxis: [
+            {
+              type: 'value',
+              name: locate.transferAmount,
+              position: 'left',
+              axisLine: {
+                show: false,
+              },
+              splitNumber: 4,
+              interval: 5000000,
+              splitLine: {
+                lineStyle: {
+                  type: [
+                    4,
+                    4,
+                  ],
+                  color: ['#262626'],
+                },
+              },
+              axisPointer: {
+                label: {
+                  color: '#000000',
+                  backgroundColor: '#cccccc',
+                  formatter: '${value}',
+                },
+              },
+              axisLabel: {
+                formatter: '${value}',
+                color: '#cccccc',
+                fontSize: 10,
+              },
+            },
+            {
+              type: 'value',
+              name: locate.count,
+              position: 'right',
+              axisLine: {
+                show: false,
+              },
+              splitNumber: 4,
+              interval: 200,
+              splitLine: {
+                lineStyle: {
+                  type: [
+                    4,
+                    4,
+                  ],
+                  color: ['#262626'],
+                },
+              },
+              axisPointer: defaultAxisPointerLabelSettings,
+              axisLabel: {
+                color: '#cccccc',
+                fontSize: 10,
+              },
+            },
+          ],
+          series: [
+            {
+              name: locate.transferCount,
+              data: data.transferCount,
+              itemStyle: {
+                color: colors[0],
+              },
+              type: 'line',
+              smooth: true,
+              showSymbol: false,
+              yAxisIndex: 1,
+              emphasis: {
+                focus: 'series',
+              },
+            },
+            {
+              name: locate.transferAmount,
+              data: data.transferAmount,
+              itemStyle: {
+                color: colors[1],
+              },
+              type: 'line',
+              smooth: true,
+              showSymbol: false,
+              emphasis: {
+                focus: 'series',
+              },
+            },
+            {
+              name: locate.holderCount,
+              data: data.holderCount,
+              itemStyle: {
+                color: colors[2],
+              },
+              type: 'line',
+              smooth: true,
+              showSymbol: false,
+              yAxisIndex: 1,
+              emphasis: {
+                focus: 'series',
+              },
+            },
+          ],
+        };
+        var responsiveOptions = getChartResponsiveOptionsDefiUsdt();
+
+        $.extend(true, baseOptions, responsiveOptions);
+
+        return baseOptions;
+      }
+
+      function getChartOptionsDefiUsdtKusama(chartName, jsonData) {
+        var totalItems = jsonData.length,
+            data = {
+              transferCount: [],
+              transferAmount: [],
+              holderCount: [],
+            },
+            colors = [
+              '#004bff',
+              '#e12c29',
+              '#ffb800',
+            ];
+
+        for (var i = 0; i < totalItems; i++) {
+          data.transferCount.push([
+            jsonData[i].date,
+            jsonData[i].transfer_count,
+          ]);
+          data.transferAmount.push([
+            jsonData[i].date,
+            jsonData[i].transfer_amount,
+          ]);
+          data.holderCount.push([
+            jsonData[i].date,
+            jsonData[i].holder_count,
+          ]);
+        }
+
+        var baseOptions = {
+          color: colors,
+          textStyle: {
+            fontFamily: fontFamily,
+            fontWeight: 500,
+          },
+          tooltip: defaultTooltipSettings,
+          legend: defaultLegendSettings,
+          grid: {
+            left: '3%',
+            right: '3%',
+            top: '3%', //bottom: 100, // DataZoom + Legend.
+            containLabel: true,
+          },
+          xAxis: {
+            type: 'time',
+            boundaryGap: false,
+            axisTick: {
+              show: false,
+            },
+            axisLine: {
+              lineStyle: {
+                color: '#262626',
+              },
+            },
+            splitLine: {
+              show: true,
+              lineStyle: {
+                type: [
+                  4,
+                  4,
+                ],
+                color: ['#262626'],
+              },
+            },
+            axisPointer: defaultAxisPointerLabelSettings,
+            axisLabel: {
+              hideOverlap: false,
+              showMaxLabel: true,
+              overflow: 'breakAll', //						rotate: 45,
+              align: 'center',
+              fontFamily: fontFamily,
+              fontSize: 10,
+              fontWeight: 500,
+              formatter: dateFormatter,
+              color: '#cccccc',
+            },
+          },
+          yAxis: [
+            {
+              type: 'value',
+              name: locate.transferAmount,
+              position: 'left',
+              axisLine: {
+                show: false,
+              },
+              splitNumber: 4,
+              interval: 1000000,
+              max: 4000000,
+              splitLine: {
+                lineStyle: {
+                  type: [
+                    4,
+                    4,
+                  ],
+                  color: ['#262626'],
+                },
+              },
+              axisPointer: {
+                label: {
+                  color: '#000000',
+                  backgroundColor: '#cccccc',
+                  formatter: '${value}',
+                },
+              },
+              axisLabel: {
+                formatter: '${value}',
+                color: '#cccccc',
+                fontSize: 10,
+              },
+            },
+            {
+              type: 'value',
+              name: locate.count,
+              position: 'right',
+              axisLine: {
+                show: false,
+              },
+              splitNumber: 4,
+              interval: 150,
+              splitLine: {
+                lineStyle: {
+                  type: [
+                    4,
+                    4,
+                  ],
+                  color: ['#262626'],
+                },
+              },
+              axisPointer: defaultAxisPointerLabelSettings,
+              axisLabel: {
+                color: '#cccccc',
+                fontSize: 10,
+              },
+            },
+          ],
+          series: [
+            {
+              name: locate.transferCount,
+              data: data.transferCount,
+              itemStyle: {
+                color: colors[0],
+              },
+              type: 'line',
+              smooth: true,
+              showSymbol: false,
+              yAxisIndex: 1,
+              emphasis: {
+                focus: 'series',
+              },
+            },
+            {
+              name: locate.transferAmount,
+              data: data.transferAmount,
+              itemStyle: {
+                color: colors[1],
+              },
+              type: 'line',
+              smooth: true,
+              showSymbol: false,
+              emphasis: {
+                focus: 'series',
+              },
+            },
+            {
+              name: locate.holderCount,
+              data: data.holderCount,
+              itemStyle: {
+                color: colors[2],
+              },
+              type: 'line',
+              smooth: true,
+              showSymbol: false,
+              yAxisIndex: 1,
+              emphasis: {
+                focus: 'series',
+              },
+            },
+          ],
+        };
+        var responsiveOptions = getChartResponsiveOptionsDefiUsdt();
+
+        $.extend(true, baseOptions, responsiveOptions);
+
+        return baseOptions;
+      }
+
+      function getChartResponsiveOptionsDefiUsdt() {
+        var newOptions = {};
+
+        if (window.innerWidth > 767) {
+          newOptions = {
+            xAxis: {
+              splitNumber: 3,
+            },
+          };
+        } else {
+          newOptions = {
+            tooltip: {
+              trigger: 'axis',
+            },
+            xAxis: {
+              splitNumber: 2,
+            },
+          };
+
+          if (window.innerWidth < 660) {
+            $.extend(newOptions, {
+              xAxis: {
+                splitNumber: 2,
+              },
+              yAxis: [
+                {
+                  axisPointer: {
+                    label: {
+                      formatter: '${value}',
+                    },
+                  },
+                  axisLabel: {
+                    formatter: function(value) {
+                      return value ? '$' + NumberUtil.formatMoney(value) : '-';
+                    },
+                  },
+                },
+                {
+                  axisPointer: {
+                    label: {
+                      formatter: '{value}',
+                    },
+                  },
+                  axisLabel: {
+                    formatter: function(value) {
+                      return value ? NumberUtil.formatMoney(value) : '-';
+                    },
+                  },
+                },
+              ],
+            });
+          }
+        }
+
+        return newOptions;
       }
 
       /*
