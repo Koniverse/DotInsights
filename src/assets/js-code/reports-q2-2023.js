@@ -255,6 +255,7 @@
                 chartOptions = getChartResponsiveOptionsParachain(chartName);
                 break;
               case 'tvl-defi-parachain':
+              case 'defi-dex-polkadot':
                 chartOptions = getChartLinesBaseResponsiveOptions(chartName);
                 break;
             }
@@ -485,6 +486,9 @@
                 break;
               case 'tvl-defi-parachain':
                 chartOptions = getChartOptionsDefiParachain(chartName, jsonData);
+                break;
+              case 'defi-dex-polkadot':
+                chartOptions = getChartOptionsDefiDexPolkadot(chartName, jsonData);
                 break;
             }
             chartInstance.hideLoading();
@@ -4645,6 +4649,63 @@
         return $.extend(true, {}, baseOptions, responsiveOptions);
       }
 
+      function getChartOptionsDefiDexPolkadot(chartName, jsonData) {
+        var datasets = [
+              {
+                name: 'arth_swap',
+                label: 'ArthSwap',
+              },
+              {
+                name: 'hydradx',
+                label: 'HydraDX',
+              },
+              {
+                name: 'stella_swap',
+                label: 'StellaSwap',
+              },
+              {
+                name: 'acala_swap',
+                label: 'Acala Swap',
+              },
+              {
+                name: 'frax_swap',
+                label: 'Frax Swap',
+              },
+              {
+                name: 'parallel',
+                label: 'Parallel',
+              },
+              {
+                name: 'sirius_finance',
+                label: 'Sirius Finance',
+              },
+              {
+                name: 'beam_swap',
+                label: 'BeamSwap',
+              },
+            ],
+            colors = [
+              '#004bff',
+              '#f82613',
+              '#ffb800',
+              '#89c900',
+              '#e4560a',
+              '#ff279a',
+              '#dfada5',
+              '#66e1b6',
+            ],
+            chartExtraOptions = {
+              yAxis: {
+                interval: 5000000,
+              },
+            };
+
+        var baseOptions = getChartLinesBaseOptions(jsonData, datasets, colors, null, null, chartExtraOptions);
+        var responsiveOptions = getChartLinesBaseResponsiveOptions(chartName);
+
+        return $.extend(true, {}, baseOptions, responsiveOptions);
+      }
+
       /*
       * CHART BASE FUNCTION
       * */
@@ -4821,6 +4882,14 @@
             $.extend(true, newOptions, {
               xAxis: {
                 splitNumber: 2,
+                axisLabel: {
+                  fontSize: 10,
+                },
+              },
+              yAxis: {
+                axisLabel: {
+                  fontSize: 10,
+                },
               },
             });
           }
@@ -4829,6 +4898,7 @@
         var yAxis = {};
         switch (chartName) {
           case 'tvl-defi-parachain':
+          case 'defi-dex-polkadot':
             newOptions.tooltip = {
               valueFormatter: function(value) {
                 return value ? '$' + NumberUtil.formatWithCommas(value) : '-';
@@ -4857,6 +4927,7 @@
                   formatter: function(value) {
                     return value ? '$' + NumberUtil.formatMoney(value) : '-';
                   },
+                  fontSize: 10,
                 },
               };
             }
