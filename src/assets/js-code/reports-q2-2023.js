@@ -258,6 +258,7 @@
               case 'defi-dex-polkadot':
               case 'defi-dex-kusama':
               case 'defi-lending':
+              case 'defi-liquid-staking':
                 chartOptions = getChartLinesBaseResponsiveOptions(chartName);
                 break;
             }
@@ -497,6 +498,9 @@
                 break;
               case 'defi-lending':
                 chartOptions = getChartOptionsDefiLending(chartName, jsonData);
+                break;
+              case 'defi-liquid-staking':
+                chartOptions = getChartOptionsDefiLiquidStaking(chartName, jsonData);
                 break;
             }
             chartInstance.hideLoading();
@@ -4808,6 +4812,63 @@
         return $.extend(true, {}, baseOptions, responsiveOptions);
       }
 
+      function getChartOptionsDefiLiquidStaking(chartName, jsonData) {
+        var datasets = [
+              {
+                name: 'bifrost',
+                label: 'Bifrost',
+              },
+              {
+                name: 'acala',
+                label: 'Acala',
+              },
+              {
+                name: 'algem',
+                label: 'Algem',
+              },
+              {
+                name: 'parallel',
+                label: 'Parallel',
+              },
+              {
+                name: 'karura',
+                label: 'Karura',
+              },
+              {
+                name: 'lido_on_moonbeam',
+                label: 'Lido On Moonbeam',
+              },
+              {
+                name: 'lido_on_moonriver',
+                label: 'Lido On Moonriver',
+              },
+              {
+                name: 'heiko',
+                label: 'Heiko',
+              },
+            ],
+            colors = [
+              '#004bff',
+              '#f82613',
+              '#ffb800',
+              '#89c900',
+              '#f76417',
+              '#66e1b6',
+              '#ff279a',
+              '#dfada5',
+            ],
+            chartExtraOptions = {
+              yAxis: {
+                interval: 5000000,
+              },
+            };
+
+        var baseOptions = getChartLinesBaseOptions(jsonData, datasets, colors, null, null, chartExtraOptions);
+        var responsiveOptions = getChartLinesBaseResponsiveOptions(chartName);
+
+        return $.extend(true, {}, baseOptions, responsiveOptions);
+      }
+
       /*
       * CHART BASE FUNCTION
       * */
@@ -5003,6 +5064,7 @@
           case 'defi-dex-polkadot':
           case 'defi-dex-kusama':
           case 'defi-lending':
+          case 'defi-liquid-staking':
             newOptions.tooltip = {
               valueFormatter: function(value) {
                 return value ? '$' + NumberUtil.formatWithCommas(value) : '-';
