@@ -36,7 +36,8 @@ var lang = {
   nftTradingVolume: 'NFT Trading Volume (USD)',
   tradedNfts: 'Traded NFTs',
   mintedNfts: 'Minted NFTs',
-
+  contractsCumulative: 'Contracts - Cumulative',
+  activeUsersCumulative: 'Active Users - Cumulative',
   wallets: 'Wallets',
   uiDevelopment: 'UI Development',
   deploymentTooling: 'Deployment Tooling',

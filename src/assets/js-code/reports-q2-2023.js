@@ -272,6 +272,10 @@
               case 'nft-metaverse-bitcountry':
                 chartOptions = getChartResponsiveOptionsNftMetaverseBitcountry(chartName);
                 break;
+              case 'web3-wasm-alephzero':
+              case 'web3-wasm-astar':
+                chartOptions = getChartResponsiveOptionsWeb3Wasm(chartName);
+                break;
             }
 
             if (chartOptions) {
@@ -527,6 +531,12 @@
                 break;
               case 'nft-metaverse-bitcountry':
                 chartOptions = getChartOptionsNftMetaverseBitcountry(chartName, jsonData);
+                break;
+              case 'web3-wasm-alephzero':
+                chartOptions = getChartOptionsWeb3WasmAlephzero(chartName, jsonData);
+                break;
+              case 'web3-wasm-astar':
+                chartOptions = getChartOptionsWeb3WasmAstar(chartName, jsonData);
                 break;
             }
             chartInstance.hideLoading();
@@ -5557,7 +5567,7 @@
             colors = [
               '#004bff',
               '#e6007a',
-              '#24F483',
+              '#24f483',
             ];
 
         for (var i = 0; i < totalItems; i++) {
@@ -5773,6 +5783,370 @@
               splitNumber: 2,
             },
           };
+        }
+
+        return newOptions;
+      }
+
+      function getChartOptionsWeb3WasmAlephzero(chartName, jsonData) {
+        var totalItems = jsonData.length,
+            data = {
+              contracts: [],
+              active_users: [],
+            },
+            colors = [
+              '#004dff',
+              '#f82613',
+            ];
+
+        for (var i = 0; i < totalItems; i++) {
+          data.contracts.push([
+            jsonData[i].date,
+            jsonData[i].contracts,
+          ]);
+          data.active_users.push([
+            jsonData[i].date,
+            jsonData[i].active_users,
+          ]);
+        }
+
+        var baseOptions = {
+          color: colors,
+          textStyle: {
+            fontFamily: fontFamily,
+            fontWeight: 500,
+          },
+          tooltip: defaultTooltipSettings,
+          legend: defaultLegendSettings,
+          grid: {
+            left: '3%',
+            right: '3%',
+            top: '3%', //bottom: 100, // DataZoom + Legend.
+            containLabel: true,
+          },
+          xAxis: {
+            type: 'time',
+            boundaryGap: false,
+            axisTick: {
+              show: false,
+            },
+            axisLine: {
+              lineStyle: {
+                color: '#262626',
+              },
+            },
+            splitLine: {
+              show: true,
+              lineStyle: {
+                type: [
+                  4,
+                  4,
+                ],
+                color: ['#262626'],
+              },
+            },
+            axisPointer: defaultAxisPointerLabelSettings,
+            axisLabel: {
+              align: 'center',
+              fontFamily: fontFamily,
+              fontSize: 10,
+              fontWeight: 500,
+              formatter: dateFormatter,
+              color: '#cccccc',
+            },
+          },
+          yAxis: [
+            {
+              type: 'value',
+              name: locate.contractsCumulative,
+              position: 'left',
+              axisLine: {
+                show: false,
+              },
+              splitNumber: 4,
+              interval: 100,
+              splitLine: {
+                lineStyle: {
+                  type: [
+                    4,
+                    4,
+                  ],
+                  color: ['#262626'],
+                },
+              },
+              axisPointer: {
+                label: {
+                  color: '#000000',
+                  backgroundColor: '#cccccc',
+                },
+              },
+              axisLabel: {
+                color: '#cccccc',
+                fontSize: 10,
+              },
+            },
+            {
+              type: 'value',
+              name: locate.activeUsersCumulative,
+              position: 'right',
+              axisLine: {
+                show: false,
+              },
+              splitNumber: 4,
+              interval: 20000,
+              splitLine: {
+                show: false,
+                lineStyle: {
+                  type: [
+                    4,
+                    4,
+                  ],
+                  color: ['#262626'],
+                },
+              },
+              axisPointer: defaultAxisPointerLabelSettings,
+              axisLabel: {
+                color: '#cccccc',
+                fontSize: 10,
+              },
+            },
+          ],
+          series: [
+            {
+              name: locate.contractsCumulative,
+              data: data.contracts,
+              itemStyle: {
+                color: colors[0],
+              },
+              type: 'line',
+              smooth: true,
+              showSymbol: false,
+              emphasis: {
+                focus: 'series',
+              },
+            },
+            {
+              name: locate.activeUsersCumulative,
+              data: data.active_users,
+              itemStyle: {
+                color: colors[1],
+              },
+              type: 'line',
+              smooth: true,
+              showSymbol: false,
+              yAxisIndex: 1,
+              emphasis: {
+                focus: 'series',
+              },
+            },
+          ],
+        };
+        var responsiveOptions = getChartResponsiveOptionsWeb3Wasm();
+
+        $.extend(true, baseOptions, responsiveOptions);
+
+        return baseOptions;
+      }
+
+      function getChartOptionsWeb3WasmAstar(chartName, jsonData) {
+        var totalItems = jsonData.length,
+            data = {
+              contracts: [],
+              active_users: [],
+            },
+            colors = [
+              '#004dff',
+              '#f82613',
+            ];
+
+        for (var i = 0; i < totalItems; i++) {
+          data.contracts.push([
+            jsonData[i].date,
+            jsonData[i].contracts,
+          ]);
+          data.active_users.push([
+            jsonData[i].date,
+            jsonData[i].active_users,
+          ]);
+        }
+
+        var baseOptions = {
+          color: colors,
+          textStyle: {
+            fontFamily: fontFamily,
+            fontWeight: 500,
+          },
+          tooltip: defaultTooltipSettings,
+          legend: defaultLegendSettings,
+          grid: {
+            left: '3%',
+            right: '3%',
+            top: '3%', //bottom: 100, // DataZoom + Legend.
+            containLabel: true,
+          },
+          xAxis: {
+            type: 'time',
+            boundaryGap: false,
+            axisTick: {
+              show: false,
+            },
+            axisLine: {
+              lineStyle: {
+                color: '#262626',
+              },
+            },
+            splitLine: {
+              show: true,
+              lineStyle: {
+                type: [
+                  4,
+                  4,
+                ],
+                color: ['#262626'],
+              },
+            },
+            axisPointer: defaultAxisPointerLabelSettings,
+            axisLabel: {
+              align: 'center',
+              fontFamily: fontFamily,
+              fontSize: 10,
+              fontWeight: 500,
+              formatter: dateFormatter,
+              color: '#cccccc',
+            },
+          },
+          yAxis: [
+            {
+              type: 'value',
+              name: locate.contractsCumulative,
+              position: 'left',
+              axisLine: {
+                show: false,
+              },
+              splitNumber: 4,
+              interval: 10,
+              splitLine: {
+                lineStyle: {
+                  type: [
+                    4,
+                    4,
+                  ],
+                  color: ['#262626'],
+                },
+              },
+              axisPointer: {
+                label: {
+                  color: '#000000',
+                  backgroundColor: '#cccccc',
+                },
+              },
+              axisLabel: {
+                color: '#cccccc',
+                fontSize: 10,
+              },
+            },
+            {
+              type: 'value',
+              name: locate.activeUsersCumulative,
+              position: 'right',
+              axisLine: {
+                show: false,
+              },
+              splitNumber: 4,
+              interval: 120000,
+              splitLine: {
+                show: false,
+                lineStyle: {
+                  type: [
+                    4,
+                    4,
+                  ],
+                  color: ['#262626'],
+                },
+              },
+              axisPointer: defaultAxisPointerLabelSettings,
+              axisLabel: {
+                color: '#cccccc',
+                fontSize: 10,
+              },
+            },
+          ],
+          series: [
+            {
+              name: locate.contractsCumulative,
+              data: data.contracts,
+              itemStyle: {
+                color: colors[0],
+              },
+              type: 'line',
+              smooth: true,
+              showSymbol: false,
+              emphasis: {
+                focus: 'series',
+              },
+            },
+            {
+              name: locate.activeUsersCumulative,
+              data: data.active_users,
+              itemStyle: {
+                color: colors[1],
+              },
+              type: 'line',
+              smooth: true,
+              showSymbol: false,
+              yAxisIndex: 1,
+              emphasis: {
+                focus: 'series',
+              },
+            },
+          ],
+        };
+        var responsiveOptions = getChartResponsiveOptionsWeb3Wasm();
+
+        $.extend(true, baseOptions, responsiveOptions);
+
+        return baseOptions;
+      }
+
+      function getChartResponsiveOptionsWeb3Wasm() {
+        var newOptions = {};
+
+        if (window.innerWidth > 767) {
+          newOptions = {
+            xAxis: {
+              splitNumber: 4,
+            },
+          };
+        } else {
+          newOptions = {
+            xAxis: {
+              splitNumber: 3,
+            },
+          };
+
+          if (window.innerWidth < 560) {
+            $.extend(newOptions, {
+              xAxis: {
+                splitNumber: 2,
+              },
+              yAxis: [
+                {
+                  axisLabel: {
+                    formatter: function(value) {
+                      return value ? NumberUtil.formatMoney(value) : '0';
+                    },
+                  },
+                },
+                {
+                  axisLabel: {
+                    formatter: function(value) {
+                      return value ? NumberUtil.formatMoney(value) : '0';
+                    },
+                  },
+                },
+              ],
+            });
+          }
         }
 
         return newOptions;
