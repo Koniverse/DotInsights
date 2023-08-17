@@ -259,6 +259,7 @@
               case 'defi-dex-kusama':
               case 'defi-lending':
               case 'defi-liquid-staking':
+              case 'defi-usdt-supply':
                 chartOptions = getChartLinesBaseResponsiveOptions(chartName);
                 break;
             }
@@ -501,6 +502,8 @@
                 break;
               case 'defi-liquid-staking':
                 chartOptions = getChartOptionsDefiLiquidStaking(chartName, jsonData);
+                break;case 'defi-usdt-supply':
+                chartOptions = getChartOptionsDefiUsdtSupply(chartName, jsonData);
                 break;
             }
             chartInstance.hideLoading();
@@ -4869,6 +4872,33 @@
         return $.extend(true, {}, baseOptions, responsiveOptions);
       }
 
+      function getChartOptionsDefiUsdtSupply(chartName, jsonData) {
+        var datasets = [
+              {
+                name: 'asset_hub_ksm',
+                label: 'Asset Hub-Kusama',
+              },
+              {
+                name: 'asset_hub_dot',
+                label: 'Asset Hub-Polkadot',
+              },
+            ],
+            colors = [
+              '#004bff',
+              '#ff279a',
+            ],
+            chartExtraOptions = {
+              yAxis: {
+                interval: 5000000,
+              },
+            };
+
+        var baseOptions = getChartLinesBaseOptions(jsonData, datasets, colors, null, null, chartExtraOptions);
+        var responsiveOptions = getChartLinesBaseResponsiveOptions(chartName);
+
+        return $.extend(true, {}, baseOptions, responsiveOptions);
+      }
+
       /*
       * CHART BASE FUNCTION
       * */
@@ -5065,6 +5095,7 @@
           case 'defi-dex-kusama':
           case 'defi-lending':
           case 'defi-liquid-staking':
+          case 'defi-usdt-supply':
             newOptions.tooltip = {
               valueFormatter: function(value) {
                 return value ? '$' + NumberUtil.formatWithCommas(value) : '-';
