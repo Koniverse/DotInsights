@@ -4633,7 +4633,7 @@
           };
           newOptions['series'][0] = {
             label: {
-              fontSize: 13,
+              fontSize: 16,
               lineHeight: 30,
               formatter: function(params) {
                 return `${params.name} ${params.percent}%`;

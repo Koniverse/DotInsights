@@ -162,26 +162,7 @@
     }
 
     .section-closing-thoughts {
-        .section-shape {
-            img {
-                --shape-width: 100%;
-            }
-        }
-
-        .shape-1 {
-            top: 5%;
-            left: -90px;
-            width: 536px;
-            max-width: 28vw;
-        }
-
-        .shape-2 {
-            bottom: 0;
-            right: -12vw;
-            width: 450px;
-            max-width: 24vw;
-        }
-
+        text-align: center;
     }
 
     .section-about-us {
@@ -554,6 +535,13 @@
             margin-top: 60px;
             padding-top: 250px;
         }
+
+        .section-closing-thoughts {
+            .section-header {
+                padding-top: 30px;
+                --s-header-spacing: 80px;
+            }
+        }
     }
 }
 
@@ -647,6 +635,10 @@
         .section.section-web3 {
             margin-top: 60px;
             padding-top: 250px;
+
+            .section-wasm {
+                --bs-gutter-x: 65px;
+            }
         }
 
         .site-footer {
