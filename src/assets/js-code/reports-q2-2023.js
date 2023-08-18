@@ -4813,7 +4813,7 @@
               },
               {
                 name: 'karura',
-                label: 'Karura Dollar (kUSD)',
+                label: 'Karura Dollar (aUSD)',
               },
               {
                 name: 'moonwell_apollo',
@@ -5201,9 +5201,10 @@
                 show: false,
               },
               splitNumber: 4,
-              interval: 1000000,
-              max: 4000000,
+              interval: 500000,
+              max: 2500000,
               splitLine: {
+                show: false,
                 lineStyle: {
                   type: [
                     4,
