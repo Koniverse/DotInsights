@@ -1,0 +1,477 @@
+[
+  {
+    "date": "2023-06-30",
+    "unique_users": "3",
+    "amount": "725.21"
+  },
+  {
+    "date": "2023-06-29",
+    "unique_users": "4",
+    "amount": "683.31"
+  },
+  {
+    "date": "2023-06-28",
+    "unique_users": "22",
+    "amount": "4054.60"
+  },
+  {
+    "date": "2023-06-27",
+    "unique_users": "18",
+    "amount": "3302.34"
+  },
+  {
+    "date": "2023-06-26",
+    "unique_users": "22",
+    "amount": "7277.88"
+  },
+  {
+    "date": "2023-06-25",
+    "unique_users": "22",
+    "amount": "3817.58"
+  },
+  {
+    "date": "2023-06-24",
+    "unique_users": "28",
+    "amount": "6360.72"
+  },
+  {
+    "date": "2023-06-23",
+    "unique_users": "15",
+    "amount": "2742.53"
+  },
+  {
+    "date": "2023-06-22",
+    "unique_users": "23",
+    "amount": "5499.39"
+  },
+  {
+    "date": "2023-06-21",
+    "unique_users": "29",
+    "amount": "6361.97"
+  },
+  {
+    "date": "2023-06-20",
+    "unique_users": "21",
+    "amount": "3662.89"
+  },
+  {
+    "date": "2023-06-19",
+    "unique_users": "12",
+    "amount": "2231.46"
+  },
+  {
+    "date": "2023-06-18",
+    "unique_users": "12",
+    "amount": "4506.26"
+  },
+  {
+    "date": "2023-06-17",
+    "unique_users": "8",
+    "amount": "668.61"
+  },
+  {
+    "date": "2023-06-16",
+    "unique_users": "11",
+    "amount": "3745.48"
+  },
+  {
+    "date": "2023-06-15",
+    "unique_users": "5",
+    "amount": "1518.74"
+  },
+  {
+    "date": "2023-06-14",
+    "unique_users": "5",
+    "amount": "26255.42"
+  },
+  {
+    "date": "2023-06-13",
+    "unique_users": "3",
+    "amount": "808.96"
+  },
+  {
+    "date": "2023-06-12",
+    "unique_users": "4",
+    "amount": "1380.99"
+  },
+  {
+    "date": "2023-06-11",
+    "unique_users": "3",
+    "amount": "848.38"
+  },
+  {
+    "date": "2023-06-10",
+    "unique_users": "8",
+    "amount": "3498.59"
+  },
+  {
+    "date": "2023-06-09",
+    "unique_users": "6",
+    "amount": "1465.14"
+  },
+  {
+    "date": "2023-06-08",
+    "unique_users": "2",
+    "amount": "705.32"
+  },
+  {
+    "date": "2023-06-07",
+    "unique_users": "4",
+    "amount": "991.68"
+  },
+  {
+    "date": "2023-06-06",
+    "unique_users": "3",
+    "amount": "508.50"
+  },
+  {
+    "date": "2023-06-05",
+    "unique_users": "1",
+    "amount": "340.19"
+  },
+  {
+    "date": "2023-06-04",
+    "unique_users": "7",
+    "amount": "3726.19"
+  },
+  {
+    "date": "2023-06-03",
+    "unique_users": "5",
+    "amount": "1652.52"
+  },
+  {
+    "date": "2023-06-02",
+    "unique_users": "2",
+    "amount": "634.00"
+  },
+  {
+    "date": "2023-06-01",
+    "unique_users": "4",
+    "amount": "3927.48"
+  },
+  {
+    "date": "2023-05-31",
+    "unique_users": "2",
+    "amount": "282.57"
+  },
+  {
+    "date": "2023-05-30",
+    "unique_users": "0",
+    "amount": "0.00"
+  },
+  {
+    "date": "2023-05-29",
+    "unique_users": "1",
+    "amount": "18.44"
+  },
+  {
+    "date": "2023-05-28",
+    "unique_users": "3",
+    "amount": "994.39"
+  },
+  {
+    "date": "2023-05-27",
+    "unique_users": "3",
+    "amount": "467.14"
+  },
+  {
+    "date": "2023-05-26",
+    "unique_users": "2",
+    "amount": "639.13"
+  },
+  {
+    "date": "2023-05-25",
+    "unique_users": "1",
+    "amount": "255.88"
+  },
+  {
+    "date": "2023-05-24",
+    "unique_users": "3",
+    "amount": "3137.00"
+  },
+  {
+    "date": "2023-05-23",
+    "unique_users": "5",
+    "amount": "3643.07"
+  },
+  {
+    "date": "2023-05-22",
+    "unique_users": "9",
+    "amount": "4333.57"
+  },
+  {
+    "date": "2023-05-21",
+    "unique_users": "3",
+    "amount": "1060.16"
+  },
+  {
+    "date": "2023-05-20",
+    "unique_users": "7",
+    "amount": "1869.12"
+  },
+  {
+    "date": "2023-05-19",
+    "unique_users": "2",
+    "amount": "651.98"
+  },
+  {
+    "date": "2023-05-18",
+    "unique_users": "6",
+    "amount": "1794.25"
+  },
+  {
+    "date": "2023-05-17",
+    "unique_users": "7",
+    "amount": "5403.12"
+  },
+  {
+    "date": "2023-05-16",
+    "unique_users": "7",
+    "amount": "1422.11"
+  },
+  {
+    "date": "2023-05-15",
+    "unique_users": "8",
+    "amount": "1781.71"
+  },
+  {
+    "date": "2023-05-14",
+    "unique_users": "4",
+    "amount": "541.02"
+  },
+  {
+    "date": "2023-05-13",
+    "unique_users": "2",
+    "amount": "736.37"
+  },
+  {
+    "date": "2023-05-12",
+    "unique_users": "10",
+    "amount": "20246.74"
+  },
+  {
+    "date": "2023-05-11",
+    "unique_users": "6",
+    "amount": "1193.53"
+  },
+  {
+    "date": "2023-05-10",
+    "unique_users": "3",
+    "amount": "1050.10"
+  },
+  {
+    "date": "2023-05-09",
+    "unique_users": "2",
+    "amount": "598.48"
+  },
+  {
+    "date": "2023-05-08",
+    "unique_users": "0",
+    "amount": "0.00"
+  },
+  {
+    "date": "2023-05-07",
+    "unique_users": "3",
+    "amount": "8193.75"
+  },
+  {
+    "date": "2023-05-06",
+    "unique_users": "7",
+    "amount": "1343.61"
+  },
+  {
+    "date": "2023-05-05",
+    "unique_users": "4",
+    "amount": "1301.59"
+  },
+  {
+    "date": "2023-05-04",
+    "unique_users": "2",
+    "amount": "4133.75"
+  },
+  {
+    "date": "2023-05-03",
+    "unique_users": "1",
+    "amount": "375.70"
+  },
+  {
+    "date": "2023-05-02",
+    "unique_users": "3",
+    "amount": "4442.45"
+  },
+  {
+    "date": "2023-05-01",
+    "unique_users": "5",
+    "amount": "2957.91"
+  },
+  {
+    "date": "2023-04-30",
+    "unique_users": "4",
+    "amount": "1096.24"
+  },
+  {
+    "date": "2023-04-29",
+    "unique_users": "2",
+    "amount": "1855.20"
+  },
+  {
+    "date": "2023-04-28",
+    "unique_users": "3",
+    "amount": "2777.49"
+  },
+  {
+    "date": "2023-04-27",
+    "unique_users": "3",
+    "amount": "554.65"
+  },
+  {
+    "date": "2023-04-26",
+    "unique_users": "4",
+    "amount": "897.64"
+  },
+  {
+    "date": "2023-04-25",
+    "unique_users": "8",
+    "amount": "5197.09"
+  },
+  {
+    "date": "2023-04-24",
+    "unique_users": "5",
+    "amount": "625.27"
+  },
+  {
+    "date": "2023-04-23",
+    "unique_users": "3",
+    "amount": "823.47"
+  },
+  {
+    "date": "2023-04-22",
+    "unique_users": "3",
+    "amount": "790.32"
+  },
+  {
+    "date": "2023-04-21",
+    "unique_users": "2",
+    "amount": "559.42"
+  },
+  {
+    "date": "2023-04-20",
+    "unique_users": "5",
+    "amount": "1337.76"
+  },
+  {
+    "date": "2023-04-19",
+    "unique_users": "6",
+    "amount": "1701.66"
+  },
+  {
+    "date": "2023-04-18",
+    "unique_users": "3",
+    "amount": "615.66"
+  },
+  {
+    "date": "2023-04-17",
+    "unique_users": "2",
+    "amount": "488.05"
+  },
+  {
+    "date": "2023-04-16",
+    "unique_users": "8",
+    "amount": "2570.53"
+  },
+  {
+    "date": "2023-04-15",
+    "unique_users": "3",
+    "amount": "651.65"
+  },
+  {
+    "date": "2023-04-14",
+    "unique_users": "6",
+    "amount": "1717.93"
+  },
+  {
+    "date": "2023-04-13",
+    "unique_users": "3",
+    "amount": "605.20"
+  },
+  {
+    "date": "2023-04-12",
+    "unique_users": "2",
+    "amount": "472.67"
+  },
+  {
+    "date": "2023-04-11",
+    "unique_users": "4",
+    "amount": "1234.35"
+  },
+  {
+    "date": "2023-04-10",
+    "unique_users": "4",
+    "amount": "862.75"
+  },
+  {
+    "date": "2023-04-09",
+    "unique_users": "2",
+    "amount": "488.89"
+  },
+  {
+    "date": "2023-04-08",
+    "unique_users": "5",
+    "amount": "1590.13"
+  },
+  {
+    "date": "2023-04-07",
+    "unique_users": "2",
+    "amount": "213.78"
+  },
+  {
+    "date": "2023-04-06",
+    "unique_users": "1",
+    "amount": "309.01"
+  },
+  {
+    "date": "2023-04-05",
+    "unique_users": "5",
+    "amount": "1270.21"
+  },
+  {
+    "date": "2023-04-04",
+    "unique_users": "6",
+    "amount": "1815.75"
+  },
+  {
+    "date": "2023-04-03",
+    "unique_users": "6",
+    "amount": "2223.15"
+  },
+  {
+    "date": "2023-04-02",
+    "unique_users": "2",
+    "amount": "6284.72"
+  },
+  {
+    "date": "2023-04-01",
+    "unique_users": "2",
+    "amount": "1623.85"
+  },
+  {
+    "date": "2023-03-31",
+    "unique_users": "3",
+    "amount": "668.63"
+  },
+  {
+    "date": "2023-03-30",
+    "unique_users": "6",
+    "amount": "780.55"
+  },
+  {
+    "date": "2023-03-29",
+    "unique_users": "8",
+    "amount": "1941.23"
+  },
+  {
+    "date": "2023-03-28",
+    "unique_users": "3",
+    "amount": "715.28"
+  }
+]

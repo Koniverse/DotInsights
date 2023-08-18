@@ -1,0 +1,914 @@
+[
+  {
+    "date": "2023-06-01",
+    "full_time": "33.54",
+    "part_time": "52.68",
+    "one_time": "13.78"
+  },
+  {
+    "date": "2023-05-31",
+    "full_time": "33.06",
+    "part_time": "53.10",
+    "one_time": "13.84"
+  },
+  {
+    "date": "2023-05-30",
+    "full_time": "33.88",
+    "part_time": "52.01",
+    "one_time": "14.11"
+  },
+  {
+    "date": "2023-05-29",
+    "full_time": "34.02",
+    "part_time": "51.94",
+    "one_time": "14.03"
+  },
+  {
+    "date": "2023-05-28",
+    "full_time": "33.90",
+    "part_time": "52.18",
+    "one_time": "13.91"
+  },
+  {
+    "date": "2023-05-27",
+    "full_time": "33.84",
+    "part_time": "52.45",
+    "one_time": "13.71"
+  },
+  {
+    "date": "2023-05-26",
+    "full_time": "34.27",
+    "part_time": "52.03",
+    "one_time": "13.70"
+  },
+  {
+    "date": "2023-05-25",
+    "full_time": "34.14",
+    "part_time": "52.07",
+    "one_time": "13.79"
+  },
+  {
+    "date": "2023-05-24",
+    "full_time": "34.16",
+    "part_time": "52.65",
+    "one_time": "13.19"
+  },
+  {
+    "date": "2023-05-23",
+    "full_time": "33.96",
+    "part_time": "52.70",
+    "one_time": "13.33"
+  },
+  {
+    "date": "2023-05-22",
+    "full_time": "34.26",
+    "part_time": "52.37",
+    "one_time": "13.37"
+  },
+  {
+    "date": "2023-05-21",
+    "full_time": "34.11",
+    "part_time": "52.29",
+    "one_time": "13.59"
+  },
+  {
+    "date": "2023-05-20",
+    "full_time": "34.16",
+    "part_time": "52.02",
+    "one_time": "13.81"
+  },
+  {
+    "date": "2023-05-19",
+    "full_time": "34.16",
+    "part_time": "52.02",
+    "one_time": "13.81"
+  },
+  {
+    "date": "2023-05-18",
+    "full_time": "34.23",
+    "part_time": "52.05",
+    "one_time": "13.72"
+  },
+  {
+    "date": "2023-05-17",
+    "full_time": "34.49",
+    "part_time": "51.86",
+    "one_time": "13.65"
+  },
+  {
+    "date": "2023-05-16",
+    "full_time": "34.76",
+    "part_time": "52.03",
+    "one_time": "13.22"
+  },
+  {
+    "date": "2023-05-15",
+    "full_time": "34.38",
+    "part_time": "52.27",
+    "one_time": "13.35"
+  },
+  {
+    "date": "2023-05-14",
+    "full_time": "34.69",
+    "part_time": "51.80",
+    "one_time": "13.51"
+  },
+  {
+    "date": "2023-05-13",
+    "full_time": "34.56",
+    "part_time": "51.83",
+    "one_time": "13.61"
+  },
+  {
+    "date": "2023-05-12",
+    "full_time": "34.70",
+    "part_time": "51.94",
+    "one_time": "13.36"
+  },
+  {
+    "date": "2023-05-11",
+    "full_time": "34.28",
+    "part_time": "52.19",
+    "one_time": "13.53"
+  },
+  {
+    "date": "2023-05-10",
+    "full_time": "34.39",
+    "part_time": "52.14",
+    "one_time": "13.46"
+  },
+  {
+    "date": "2023-05-09",
+    "full_time": "34.33",
+    "part_time": "52.38",
+    "one_time": "13.30"
+  },
+  {
+    "date": "2023-05-08",
+    "full_time": "34.63",
+    "part_time": "52.23",
+    "one_time": "13.13"
+  },
+  {
+    "date": "2023-05-07",
+    "full_time": "34.98",
+    "part_time": "51.99",
+    "one_time": "13.03"
+  },
+  {
+    "date": "2023-05-06",
+    "full_time": "35.01",
+    "part_time": "51.88",
+    "one_time": "13.11"
+  },
+  {
+    "date": "2023-05-05",
+    "full_time": "35.10",
+    "part_time": "51.94",
+    "one_time": "12.96"
+  },
+  {
+    "date": "2023-05-04",
+    "full_time": "35.52",
+    "part_time": "52.18",
+    "one_time": "12.30"
+  },
+  {
+    "date": "2023-05-03",
+    "full_time": "35.62",
+    "part_time": "52.00",
+    "one_time": "12.38"
+  },
+  {
+    "date": "2023-05-02",
+    "full_time": "36.15",
+    "part_time": "51.72",
+    "one_time": "12.14"
+  },
+  {
+    "date": "2023-05-01",
+    "full_time": "35.73",
+    "part_time": "51.86",
+    "one_time": "12.42"
+  },
+  {
+    "date": "2023-04-30",
+    "full_time": "35.47",
+    "part_time": "52.29",
+    "one_time": "12.24"
+  },
+  {
+    "date": "2023-04-29",
+    "full_time": "35.38",
+    "part_time": "52.62",
+    "one_time": "12.00"
+  },
+  {
+    "date": "2023-04-28",
+    "full_time": "35.74",
+    "part_time": "52.26",
+    "one_time": "12.00"
+  },
+  {
+    "date": "2023-04-27",
+    "full_time": "35.54",
+    "part_time": "52.55",
+    "one_time": "11.91"
+  },
+  {
+    "date": "2023-04-26",
+    "full_time": "35.33",
+    "part_time": "52.57",
+    "one_time": "12.11"
+  },
+  {
+    "date": "2023-04-25",
+    "full_time": "35.12",
+    "part_time": "52.65",
+    "one_time": "12.23"
+  },
+  {
+    "date": "2023-04-24",
+    "full_time": "35.29",
+    "part_time": "52.54",
+    "one_time": "12.17"
+  },
+  {
+    "date": "2023-04-23",
+    "full_time": "35.20",
+    "part_time": "52.41",
+    "one_time": "12.39"
+  },
+  {
+    "date": "2023-04-22",
+    "full_time": "35.35",
+    "part_time": "52.28",
+    "one_time": "12.37"
+  },
+  {
+    "date": "2023-04-21",
+    "full_time": "35.21",
+    "part_time": "52.33",
+    "one_time": "12.46"
+  },
+  {
+    "date": "2023-04-20",
+    "full_time": "34.81",
+    "part_time": "52.36",
+    "one_time": "12.82"
+  },
+  {
+    "date": "2023-04-19",
+    "full_time": "34.82",
+    "part_time": "51.99",
+    "one_time": "13.18"
+  },
+  {
+    "date": "2023-04-18",
+    "full_time": "34.56",
+    "part_time": "51.99",
+    "one_time": "13.45"
+  },
+  {
+    "date": "2023-04-17",
+    "full_time": "34.20",
+    "part_time": "52.37",
+    "one_time": "13.43"
+  },
+  {
+    "date": "2023-04-16",
+    "full_time": "34.02",
+    "part_time": "52.26",
+    "one_time": "13.72"
+  },
+  {
+    "date": "2023-04-15",
+    "full_time": "33.94",
+    "part_time": "52.40",
+    "one_time": "13.65"
+  },
+  {
+    "date": "2023-04-14",
+    "full_time": "33.93",
+    "part_time": "52.55",
+    "one_time": "13.52"
+  },
+  {
+    "date": "2023-04-13",
+    "full_time": "33.72",
+    "part_time": "53.13",
+    "one_time": "13.15"
+  },
+  {
+    "date": "2023-04-12",
+    "full_time": "34.10",
+    "part_time": "52.62",
+    "one_time": "13.28"
+  },
+  {
+    "date": "2023-04-11",
+    "full_time": "33.56",
+    "part_time": "53.10",
+    "one_time": "13.35"
+  },
+  {
+    "date": "2023-04-10",
+    "full_time": "33.71",
+    "part_time": "52.24",
+    "one_time": "14.05"
+  },
+  {
+    "date": "2023-04-09",
+    "full_time": "33.74",
+    "part_time": "52.25",
+    "one_time": "14.01"
+  },
+  {
+    "date": "2023-04-08",
+    "full_time": "33.62",
+    "part_time": "52.41",
+    "one_time": "13.97"
+  },
+  {
+    "date": "2023-04-07",
+    "full_time": "33.63",
+    "part_time": "52.22",
+    "one_time": "14.15"
+  },
+  {
+    "date": "2023-04-06",
+    "full_time": "33.63",
+    "part_time": "51.99",
+    "one_time": "14.39"
+  },
+  {
+    "date": "2023-04-05",
+    "full_time": "33.88",
+    "part_time": "51.59",
+    "one_time": "14.53"
+  },
+  {
+    "date": "2023-04-04",
+    "full_time": "34.02",
+    "part_time": "51.24",
+    "one_time": "14.74"
+  },
+  {
+    "date": "2023-04-03",
+    "full_time": "33.73",
+    "part_time": "52.02",
+    "one_time": "14.25"
+  },
+  {
+    "date": "2023-04-02",
+    "full_time": "33.90",
+    "part_time": "52.35",
+    "one_time": "13.75"
+  },
+  {
+    "date": "2023-04-01",
+    "full_time": "33.46",
+    "part_time": "52.84",
+    "one_time": "13.70"
+  },
+  {
+    "date": "2023-03-31",
+    "full_time": "33.41",
+    "part_time": "52.86",
+    "one_time": "13.73"
+  },
+  {
+    "date": "2023-03-30",
+    "full_time": "32.62",
+    "part_time": "53.49",
+    "one_time": "13.89"
+  },
+  {
+    "date": "2023-03-29",
+    "full_time": "32.76",
+    "part_time": "53.38",
+    "one_time": "13.86"
+  },
+  {
+    "date": "2023-03-28",
+    "full_time": "32.68",
+    "part_time": "53.36",
+    "one_time": "13.96"
+  },
+  {
+    "date": "2023-03-27",
+    "full_time": "32.94",
+    "part_time": "53.16",
+    "one_time": "13.90"
+  },
+  {
+    "date": "2023-03-26",
+    "full_time": "33.04",
+    "part_time": "53.13",
+    "one_time": "13.83"
+  },
+  {
+    "date": "2023-03-25",
+    "full_time": "32.96",
+    "part_time": "53.11",
+    "one_time": "13.93"
+  },
+  {
+    "date": "2023-03-24",
+    "full_time": "33.15",
+    "part_time": "53.02",
+    "one_time": "13.84"
+  },
+  {
+    "date": "2023-03-23",
+    "full_time": "32.74",
+    "part_time": "53.26",
+    "one_time": "13.99"
+  },
+  {
+    "date": "2023-03-22",
+    "full_time": "32.77",
+    "part_time": "53.58",
+    "one_time": "13.65"
+  },
+  {
+    "date": "2023-03-21",
+    "full_time": "33.10",
+    "part_time": "53.37",
+    "one_time": "13.53"
+  },
+  {
+    "date": "2023-03-20",
+    "full_time": "32.38",
+    "part_time": "53.74",
+    "one_time": "13.88"
+  },
+  {
+    "date": "2023-03-19",
+    "full_time": "32.56",
+    "part_time": "53.86",
+    "one_time": "13.58"
+  },
+  {
+    "date": "2023-03-18",
+    "full_time": "32.47",
+    "part_time": "53.86",
+    "one_time": "13.68"
+  },
+  {
+    "date": "2023-03-17",
+    "full_time": "32.32",
+    "part_time": "54.00",
+    "one_time": "13.68"
+  },
+  {
+    "date": "2023-03-16",
+    "full_time": "31.73",
+    "part_time": "54.33",
+    "one_time": "13.94"
+  },
+  {
+    "date": "2023-03-15",
+    "full_time": "31.73",
+    "part_time": "54.46",
+    "one_time": "13.81"
+  },
+  {
+    "date": "2023-03-14",
+    "full_time": "31.41",
+    "part_time": "54.46",
+    "one_time": "14.13"
+  },
+  {
+    "date": "2023-03-13",
+    "full_time": "31.50",
+    "part_time": "54.54",
+    "one_time": "13.96"
+  },
+  {
+    "date": "2023-03-12",
+    "full_time": "32.01",
+    "part_time": "54.36",
+    "one_time": "13.64"
+  },
+  {
+    "date": "2023-03-11",
+    "full_time": "32.32",
+    "part_time": "53.98",
+    "one_time": "13.70"
+  },
+  {
+    "date": "2023-03-10",
+    "full_time": "32.63",
+    "part_time": "54.10",
+    "one_time": "13.27"
+  },
+  {
+    "date": "2023-03-09",
+    "full_time": "32.59",
+    "part_time": "54.60",
+    "one_time": "12.81"
+  },
+  {
+    "date": "2023-03-08",
+    "full_time": "32.51",
+    "part_time": "54.06",
+    "one_time": "13.43"
+  },
+  {
+    "date": "2023-03-07",
+    "full_time": "31.83",
+    "part_time": "54.83",
+    "one_time": "13.34"
+  },
+  {
+    "date": "2023-03-06",
+    "full_time": "31.05",
+    "part_time": "55.34",
+    "one_time": "13.61"
+  },
+  {
+    "date": "2023-03-05",
+    "full_time": "31.53",
+    "part_time": "54.84",
+    "one_time": "13.63"
+  },
+  {
+    "date": "2023-03-04",
+    "full_time": "31.35",
+    "part_time": "54.93",
+    "one_time": "13.72"
+  },
+  {
+    "date": "2023-03-03",
+    "full_time": "31.50",
+    "part_time": "54.88",
+    "one_time": "13.62"
+  },
+  {
+    "date": "2023-03-02",
+    "full_time": "31.45",
+    "part_time": "54.95",
+    "one_time": "13.60"
+  },
+  {
+    "date": "2023-03-01",
+    "full_time": "31.44",
+    "part_time": "55.13",
+    "one_time": "13.44"
+  },
+  {
+    "date": "2023-02-28",
+    "full_time": "31.53",
+    "part_time": "55.18",
+    "one_time": "13.29"
+  },
+  {
+    "date": "2023-02-27",
+    "full_time": "31.75",
+    "part_time": "55.28",
+    "one_time": "12.97"
+  },
+  {
+    "date": "2023-02-26",
+    "full_time": "32.40",
+    "part_time": "54.51",
+    "one_time": "13.09"
+  },
+  {
+    "date": "2023-02-25",
+    "full_time": "32.18",
+    "part_time": "54.75",
+    "one_time": "13.07"
+  },
+  {
+    "date": "2023-02-24",
+    "full_time": "32.33",
+    "part_time": "54.66",
+    "one_time": "13.01"
+  },
+  {
+    "date": "2023-02-23",
+    "full_time": "32.50",
+    "part_time": "54.84",
+    "one_time": "12.66"
+  },
+  {
+    "date": "2023-02-22",
+    "full_time": "32.10",
+    "part_time": "55.40",
+    "one_time": "12.50"
+  },
+  {
+    "date": "2023-02-21",
+    "full_time": "32.42",
+    "part_time": "55.09",
+    "one_time": "12.49"
+  },
+  {
+    "date": "2023-02-20",
+    "full_time": "32.25",
+    "part_time": "55.65",
+    "one_time": "12.09"
+  },
+  {
+    "date": "2023-02-19",
+    "full_time": "32.46",
+    "part_time": "55.03",
+    "one_time": "12.51"
+  },
+  {
+    "date": "2023-02-18",
+    "full_time": "32.63",
+    "part_time": "54.87",
+    "one_time": "12.51"
+  },
+  {
+    "date": "2023-02-17",
+    "full_time": "32.52",
+    "part_time": "55.01",
+    "one_time": "12.47"
+  },
+  {
+    "date": "2023-02-16",
+    "full_time": "32.66",
+    "part_time": "54.86",
+    "one_time": "12.48"
+  },
+  {
+    "date": "2023-02-15",
+    "full_time": "33.00",
+    "part_time": "54.72",
+    "one_time": "12.27"
+  },
+  {
+    "date": "2023-02-14",
+    "full_time": "33.00",
+    "part_time": "54.91",
+    "one_time": "12.09"
+  },
+  {
+    "date": "2023-02-13",
+    "full_time": "33.65",
+    "part_time": "54.08",
+    "one_time": "12.27"
+  },
+  {
+    "date": "2023-02-12",
+    "full_time": "33.73",
+    "part_time": "54.40",
+    "one_time": "11.87"
+  },
+  {
+    "date": "2023-02-11",
+    "full_time": "33.94",
+    "part_time": "54.25",
+    "one_time": "11.81"
+  },
+  {
+    "date": "2023-02-10",
+    "full_time": "34.07",
+    "part_time": "53.96",
+    "one_time": "11.97"
+  },
+  {
+    "date": "2023-02-09",
+    "full_time": "34.32",
+    "part_time": "53.60",
+    "one_time": "12.08"
+  },
+  {
+    "date": "2023-02-08",
+    "full_time": "34.62",
+    "part_time": "53.66",
+    "one_time": "11.72"
+  },
+  {
+    "date": "2023-02-07",
+    "full_time": "33.93",
+    "part_time": "54.08",
+    "one_time": "11.99"
+  },
+  {
+    "date": "2023-02-06",
+    "full_time": "34.16",
+    "part_time": "52.42",
+    "one_time": "13.42"
+  },
+  {
+    "date": "2023-02-05",
+    "full_time": "34.40",
+    "part_time": "51.63",
+    "one_time": "13.97"
+  },
+  {
+    "date": "2023-02-04",
+    "full_time": "34.40",
+    "part_time": "51.58",
+    "one_time": "14.02"
+  },
+  {
+    "date": "2023-02-03",
+    "full_time": "34.46",
+    "part_time": "51.40",
+    "one_time": "14.13"
+  },
+  {
+    "date": "2023-02-02",
+    "full_time": "35.20",
+    "part_time": "52.58",
+    "one_time": "12.21"
+  },
+  {
+    "date": "2023-02-01",
+    "full_time": "35.16",
+    "part_time": "52.71",
+    "one_time": "12.13"
+  },
+  {
+    "date": "2023-01-31",
+    "full_time": "34.61",
+    "part_time": "53.13",
+    "one_time": "12.26"
+  },
+  {
+    "date": "2023-01-30",
+    "full_time": "34.91",
+    "part_time": "52.87",
+    "one_time": "12.22"
+  },
+  {
+    "date": "2023-01-29",
+    "full_time": "34.71",
+    "part_time": "53.02",
+    "one_time": "12.27"
+  },
+  {
+    "date": "2023-01-28",
+    "full_time": "34.75",
+    "part_time": "52.90",
+    "one_time": "12.36"
+  },
+  {
+    "date": "2023-01-27",
+    "full_time": "34.87",
+    "part_time": "53.01",
+    "one_time": "12.13"
+  },
+  {
+    "date": "2023-01-26",
+    "full_time": "35.19",
+    "part_time": "52.83",
+    "one_time": "11.98"
+  },
+  {
+    "date": "2023-01-25",
+    "full_time": "34.54",
+    "part_time": "53.47",
+    "one_time": "11.98"
+  },
+  {
+    "date": "2023-01-24",
+    "full_time": "34.81",
+    "part_time": "53.18",
+    "one_time": "12.01"
+  },
+  {
+    "date": "2023-01-23",
+    "full_time": "34.44",
+    "part_time": "53.28",
+    "one_time": "12.27"
+  },
+  {
+    "date": "2023-01-22",
+    "full_time": "34.95",
+    "part_time": "52.91",
+    "one_time": "12.14"
+  },
+  {
+    "date": "2023-01-21",
+    "full_time": "35.22",
+    "part_time": "52.71",
+    "one_time": "12.07"
+  },
+  {
+    "date": "2023-01-20",
+    "full_time": "35.38",
+    "part_time": "52.40",
+    "one_time": "12.22"
+  },
+  {
+    "date": "2023-01-19",
+    "full_time": "35.31",
+    "part_time": "52.45",
+    "one_time": "12.24"
+  },
+  {
+    "date": "2023-01-18",
+    "full_time": "35.64",
+    "part_time": "52.16",
+    "one_time": "12.20"
+  },
+  {
+    "date": "2023-01-17",
+    "full_time": "35.46",
+    "part_time": "52.53",
+    "one_time": "12.01"
+  },
+  {
+    "date": "2023-01-16",
+    "full_time": "35.26",
+    "part_time": "52.51",
+    "one_time": "12.23"
+  },
+  {
+    "date": "2023-01-15",
+    "full_time": "35.39",
+    "part_time": "52.10",
+    "one_time": "12.51"
+  },
+  {
+    "date": "2023-01-14",
+    "full_time": "35.47",
+    "part_time": "52.05",
+    "one_time": "12.48"
+  },
+  {
+    "date": "2023-01-13",
+    "full_time": "35.49",
+    "part_time": "51.94",
+    "one_time": "12.57"
+  },
+  {
+    "date": "2023-01-12",
+    "full_time": "35.39",
+    "part_time": "51.92",
+    "one_time": "12.69"
+  },
+  {
+    "date": "2023-01-11",
+    "full_time": "35.34",
+    "part_time": "51.99",
+    "one_time": "12.66"
+  },
+  {
+    "date": "2023-01-10",
+    "full_time": "35.57",
+    "part_time": "51.86",
+    "one_time": "12.57"
+  },
+  {
+    "date": "2023-01-09",
+    "full_time": "35.80",
+    "part_time": "51.57",
+    "one_time": "12.63"
+  },
+  {
+    "date": "2023-01-08",
+    "full_time": "35.73",
+    "part_time": "51.65",
+    "one_time": "12.62"
+  },
+  {
+    "date": "2023-01-07",
+    "full_time": "35.48",
+    "part_time": "51.72",
+    "one_time": "12.81"
+  },
+  {
+    "date": "2023-01-06",
+    "full_time": "35.39",
+    "part_time": "51.79",
+    "one_time": "12.82"
+  },
+  {
+    "date": "2023-01-05",
+    "full_time": "35.37",
+    "part_time": "51.60",
+    "one_time": "13.03"
+  },
+  {
+    "date": "2023-01-04",
+    "full_time": "35.01",
+    "part_time": "52.18",
+    "one_time": "12.81"
+  },
+  {
+    "date": "2023-01-03",
+    "full_time": "34.69",
+    "part_time": "52.01",
+    "one_time": "13.29"
+  },
+  {
+    "date": "2023-01-02",
+    "full_time": "34.70",
+    "part_time": "51.84",
+    "one_time": "13.46"
+  },
+  {
+    "date": "2023-01-01",
+    "full_time": "35.01",
+    "part_time": "51.51",
+    "one_time": "13.49"
+  }
+]

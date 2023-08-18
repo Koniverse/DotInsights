@@ -1,0 +1,548 @@
+[
+  {
+    "date": "2023-06-30",
+    "transfer_amount": "583582.95",
+    "transfer_count": "104",
+    "holder_count": "628"
+  },
+  {
+    "date": "2023-06-29",
+    "transfer_amount": "2666838.68",
+    "transfer_count": "141",
+    "holder_count": "627"
+  },
+  {
+    "date": "2023-06-28",
+    "transfer_amount": "494161.20",
+    "transfer_count": "80",
+    "holder_count": "616"
+  },
+  {
+    "date": "2023-06-27",
+    "transfer_amount": "1787950.89",
+    "transfer_count": "119",
+    "holder_count": "613"
+  },
+  {
+    "date": "2023-06-26",
+    "transfer_amount": "99653.66",
+    "transfer_count": "48",
+    "holder_count": "610"
+  },
+  {
+    "date": "2023-06-25",
+    "transfer_amount": "169236.58",
+    "transfer_count": "48",
+    "holder_count": "604"
+  },
+  {
+    "date": "2023-06-24",
+    "transfer_amount": "425813.24",
+    "transfer_count": "43",
+    "holder_count": "603"
+  },
+  {
+    "date": "2023-06-23",
+    "transfer_amount": "1249217.41",
+    "transfer_count": "100",
+    "holder_count": "601"
+  },
+  {
+    "date": "2023-06-22",
+    "transfer_amount": "367678.67",
+    "transfer_count": "69",
+    "holder_count": "595"
+  },
+  {
+    "date": "2023-06-21",
+    "transfer_amount": "587153.49",
+    "transfer_count": "71",
+    "holder_count": "593"
+  },
+  {
+    "date": "2023-06-20",
+    "transfer_amount": "551920.21",
+    "transfer_count": "75",
+    "holder_count": "593"
+  },
+  {
+    "date": "2023-06-19",
+    "transfer_amount": "140563.93",
+    "transfer_count": "34",
+    "holder_count": "609"
+  },
+  {
+    "date": "2023-06-18",
+    "transfer_amount": "281751.13",
+    "transfer_count": "54",
+    "holder_count": "604"
+  },
+  {
+    "date": "2023-06-17",
+    "transfer_amount": "51244.29",
+    "transfer_count": "32",
+    "holder_count": "595"
+  },
+  {
+    "date": "2023-06-16",
+    "transfer_amount": "232901.89",
+    "transfer_count": "55",
+    "holder_count": "589"
+  },
+  {
+    "date": "2023-06-15",
+    "transfer_amount": "681301.62",
+    "transfer_count": "99",
+    "holder_count": "585"
+  },
+  {
+    "date": "2023-06-14",
+    "transfer_amount": "537209.66",
+    "transfer_count": "85",
+    "holder_count": "571"
+  },
+  {
+    "date": "2023-06-13",
+    "transfer_amount": "300722.32",
+    "transfer_count": "75",
+    "holder_count": "566"
+  },
+  {
+    "date": "2023-06-12",
+    "transfer_amount": "673924.18",
+    "transfer_count": "46",
+    "holder_count": "558"
+  },
+  {
+    "date": "2023-06-11",
+    "transfer_amount": "144973.64",
+    "transfer_count": "38",
+    "holder_count": "554"
+  },
+  {
+    "date": "2023-06-10",
+    "transfer_amount": "6376455.05",
+    "transfer_count": "152",
+    "holder_count": "550"
+  },
+  {
+    "date": "2023-06-09",
+    "transfer_amount": "146780.71",
+    "transfer_count": "52",
+    "holder_count": "547"
+  },
+  {
+    "date": "2023-06-08",
+    "transfer_amount": "148697.35",
+    "transfer_count": "43",
+    "holder_count": "538"
+  },
+  {
+    "date": "2023-06-07",
+    "transfer_amount": "123949.91",
+    "transfer_count": "50",
+    "holder_count": "534"
+  },
+  {
+    "date": "2023-06-06",
+    "transfer_amount": "160290.61",
+    "transfer_count": "79",
+    "holder_count": "521"
+  },
+  {
+    "date": "2023-06-05",
+    "transfer_amount": "302990.23",
+    "transfer_count": "79",
+    "holder_count": "516"
+  },
+  {
+    "date": "2023-06-04",
+    "transfer_amount": "91066.33",
+    "transfer_count": "32",
+    "holder_count": "509"
+  },
+  {
+    "date": "2023-06-03",
+    "transfer_amount": "46536.48",
+    "transfer_count": "21",
+    "holder_count": "508"
+  },
+  {
+    "date": "2023-06-02",
+    "transfer_amount": "102997.17",
+    "transfer_count": "57",
+    "holder_count": "501"
+  },
+  {
+    "date": "2023-06-01",
+    "transfer_amount": "57439.68",
+    "transfer_count": "35",
+    "holder_count": "495"
+  },
+  {
+    "date": "2023-05-31",
+    "transfer_amount": "117383.57",
+    "transfer_count": "66",
+    "holder_count": "489"
+  },
+  {
+    "date": "2023-05-30",
+    "transfer_amount": "93448.44",
+    "transfer_count": "47",
+    "holder_count": "481"
+  },
+  {
+    "date": "2023-05-29",
+    "transfer_amount": "175549.07",
+    "transfer_count": "52",
+    "holder_count": "478"
+  },
+  {
+    "date": "2023-05-28",
+    "transfer_amount": "99947.47",
+    "transfer_count": "50",
+    "holder_count": "471"
+  },
+  {
+    "date": "2023-05-27",
+    "transfer_amount": "58402.20",
+    "transfer_count": "40",
+    "holder_count": "465"
+  },
+  {
+    "date": "2023-05-26",
+    "transfer_amount": "76780.50",
+    "transfer_count": "95",
+    "holder_count": "456"
+  },
+  {
+    "date": "2023-05-25",
+    "transfer_amount": "16222852.12",
+    "transfer_count": "84",
+    "holder_count": "428"
+  },
+  {
+    "date": "2023-05-24",
+    "transfer_amount": "1573973.42",
+    "transfer_count": "36",
+    "holder_count": "409"
+  },
+  {
+    "date": "2023-05-23",
+    "transfer_amount": "2032984.54",
+    "transfer_count": "17",
+    "holder_count": "406"
+  },
+  {
+    "date": "2023-05-22",
+    "transfer_amount": "1062318.52",
+    "transfer_count": "21",
+    "holder_count": "405"
+  },
+  {
+    "date": "2023-05-21",
+    "transfer_amount": "28314.73",
+    "transfer_count": "20",
+    "holder_count": "404"
+  },
+  {
+    "date": "2023-05-20",
+    "transfer_amount": "14141.93",
+    "transfer_count": "17",
+    "holder_count": "404"
+  },
+  {
+    "date": "2023-05-19",
+    "transfer_amount": "39580.33",
+    "transfer_count": "14",
+    "holder_count": "402"
+  },
+  {
+    "date": "2023-05-18",
+    "transfer_amount": "54469.43",
+    "transfer_count": "15",
+    "holder_count": "400"
+  },
+  {
+    "date": "2023-05-17",
+    "transfer_amount": "52667.37",
+    "transfer_count": "27",
+    "holder_count": "401"
+  },
+  {
+    "date": "2023-05-16",
+    "transfer_amount": "65056.48",
+    "transfer_count": "29",
+    "holder_count": "400"
+  },
+  {
+    "date": "2023-05-15",
+    "transfer_amount": "99278.35",
+    "transfer_count": "39",
+    "holder_count": "394"
+  },
+  {
+    "date": "2023-05-14",
+    "transfer_amount": "87684.57",
+    "transfer_count": "29",
+    "holder_count": "392"
+  },
+  {
+    "date": "2023-05-13",
+    "transfer_amount": "16331.85",
+    "transfer_count": "16",
+    "holder_count": "392"
+  },
+  {
+    "date": "2023-05-12",
+    "transfer_amount": "199262.03",
+    "transfer_count": "13",
+    "holder_count": "391"
+  },
+  {
+    "date": "2023-05-11",
+    "transfer_amount": "9053.24",
+    "transfer_count": "11",
+    "holder_count": "390"
+  },
+  {
+    "date": "2023-05-10",
+    "transfer_amount": "75747.38",
+    "transfer_count": "21",
+    "holder_count": "390"
+  },
+  {
+    "date": "2023-05-09",
+    "transfer_amount": "27753.08",
+    "transfer_count": "14",
+    "holder_count": "387"
+  },
+  {
+    "date": "2023-05-08",
+    "transfer_amount": "82716.12",
+    "transfer_count": "48",
+    "holder_count": "387"
+  },
+  {
+    "date": "2023-05-07",
+    "transfer_amount": "135344.33",
+    "transfer_count": "18",
+    "holder_count": "368"
+  },
+  {
+    "date": "2023-05-06",
+    "transfer_amount": "77754.05",
+    "transfer_count": "21",
+    "holder_count": "367"
+  },
+  {
+    "date": "2023-05-05",
+    "transfer_amount": "27585.32",
+    "transfer_count": "7",
+    "holder_count": "363"
+  },
+  {
+    "date": "2023-05-04",
+    "transfer_amount": "20978.64",
+    "transfer_count": "9",
+    "holder_count": "363"
+  },
+  {
+    "date": "2023-05-03",
+    "transfer_amount": "4989.20",
+    "transfer_count": "8",
+    "holder_count": "360"
+  },
+  {
+    "date": "2023-05-02",
+    "transfer_amount": "59564.42",
+    "transfer_count": "10",
+    "holder_count": "359"
+  },
+  {
+    "date": "2023-05-01",
+    "transfer_amount": "43748.83",
+    "transfer_count": "13",
+    "holder_count": "358"
+  },
+  {
+    "date": "2023-04-30",
+    "transfer_amount": "7705.58",
+    "transfer_count": "7",
+    "holder_count": "355"
+  },
+  {
+    "date": "2023-04-29",
+    "transfer_amount": "2673.95",
+    "transfer_count": "5",
+    "holder_count": "354"
+  },
+  {
+    "date": "2023-04-28",
+    "transfer_amount": "99526.54",
+    "transfer_count": "14",
+    "holder_count": "353"
+  },
+  {
+    "date": "2023-04-27",
+    "transfer_amount": "83100.30",
+    "transfer_count": "11",
+    "holder_count": "353"
+  },
+  {
+    "date": "2023-04-26",
+    "transfer_amount": "628496.07",
+    "transfer_count": "53",
+    "holder_count": "351"
+  },
+  {
+    "date": "2023-04-25",
+    "transfer_amount": "182990.76",
+    "transfer_count": "19",
+    "holder_count": "352"
+  },
+  {
+    "date": "2023-04-24",
+    "transfer_amount": "348372.40",
+    "transfer_count": "14",
+    "holder_count": "350"
+  },
+  {
+    "date": "2023-04-23",
+    "transfer_amount": "20613.50",
+    "transfer_count": "11",
+    "holder_count": "349"
+  },
+  {
+    "date": "2023-04-22",
+    "transfer_amount": "2002396.08",
+    "transfer_count": "6",
+    "holder_count": "347"
+  },
+  {
+    "date": "2023-04-21",
+    "transfer_amount": "155633.92",
+    "transfer_count": "28",
+    "holder_count": "346"
+  },
+  {
+    "date": "2023-04-20",
+    "transfer_amount": "172586.19",
+    "transfer_count": "30",
+    "holder_count": "344"
+  },
+  {
+    "date": "2023-04-19",
+    "transfer_amount": "125598.62",
+    "transfer_count": "29",
+    "holder_count": "343"
+  },
+  {
+    "date": "2023-04-18",
+    "transfer_amount": "58315.85",
+    "transfer_count": "11",
+    "holder_count": "341"
+  },
+  {
+    "date": "2023-04-17",
+    "transfer_amount": "57572.95",
+    "transfer_count": "14",
+    "holder_count": "340"
+  },
+  {
+    "date": "2023-04-16",
+    "transfer_amount": "76687.37",
+    "transfer_count": "13",
+    "holder_count": "340"
+  },
+  {
+    "date": "2023-04-15",
+    "transfer_amount": "11856.90",
+    "transfer_count": "7",
+    "holder_count": "340"
+  },
+  {
+    "date": "2023-04-14",
+    "transfer_amount": "144720.82",
+    "transfer_count": "30",
+    "holder_count": "338"
+  },
+  {
+    "date": "2023-04-13",
+    "transfer_amount": "172914.31",
+    "transfer_count": "28",
+    "holder_count": "335"
+  },
+  {
+    "date": "2023-04-12",
+    "transfer_amount": "117577.44",
+    "transfer_count": "29",
+    "holder_count": "333"
+  },
+  {
+    "date": "2023-04-11",
+    "transfer_amount": "1018692.52",
+    "transfer_count": "39",
+    "holder_count": "331"
+  },
+  {
+    "date": "2023-04-10",
+    "transfer_amount": "2424974.28",
+    "transfer_count": "59",
+    "holder_count": "330"
+  },
+  {
+    "date": "2023-04-09",
+    "transfer_amount": "188748.45",
+    "transfer_count": "16",
+    "holder_count": "329"
+  },
+  {
+    "date": "2023-04-08",
+    "transfer_amount": "831263.86",
+    "transfer_count": "23",
+    "holder_count": "331"
+  },
+  {
+    "date": "2023-04-07",
+    "transfer_amount": "754858.29",
+    "transfer_count": "29",
+    "holder_count": "335"
+  },
+  {
+    "date": "2023-04-06",
+    "transfer_amount": "975595.54",
+    "transfer_count": "22",
+    "holder_count": "333"
+  },
+  {
+    "date": "2023-04-05",
+    "transfer_amount": "105295.72",
+    "transfer_count": "20",
+    "holder_count": "333"
+  },
+  {
+    "date": "2023-04-04",
+    "transfer_amount": "74650.90",
+    "transfer_count": "15",
+    "holder_count": "327"
+  },
+  {
+    "date": "2023-04-03",
+    "transfer_amount": "89477.65",
+    "transfer_count": "20",
+    "holder_count": "326"
+  },
+  {
+    "date": "2023-04-02",
+    "transfer_amount": "56394.00",
+    "transfer_count": "11",
+    "holder_count": "325"
+  },
+  {
+    "date": "2023-04-01",
+    "transfer_amount": "78793.19",
+    "transfer_count": "12",
+    "holder_count": "324"
+  }
+]

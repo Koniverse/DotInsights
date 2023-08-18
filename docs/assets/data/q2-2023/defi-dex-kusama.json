@@ -1,0 +1,821 @@
+﻿[
+  {
+    "date": "2023-06-30",
+    "solarbeam": "4367489.88",
+    "bifrost": "3033173.51",
+    "karura_swap": "902731.17",
+    "sushiswap": "465317.51",
+    "zenlink": "317583.70",
+    "moonswap": "300897.11"
+  },
+  {
+    "date": "2023-06-29",
+    "solarbeam": "4357795.80",
+    "bifrost": "2941768.71",
+    "karura_swap": "885277.04",
+    "sushiswap": "466167.03",
+    "zenlink": "316614.73",
+    "moonswap": "300653.62"
+  },
+  {
+    "date": "2023-06-28",
+    "solarbeam": "4492767.55",
+    "bifrost": "3063987.13",
+    "karura_swap": "907918.76",
+    "sushiswap": "471054.04",
+    "zenlink": "324154.96",
+    "moonswap": "301009.68"
+  },
+  {
+    "date": "2023-06-27",
+    "solarbeam": "4411460.61",
+    "bifrost": "2972396.99",
+    "karura_swap": "878161.69",
+    "sushiswap": "469888.59",
+    "zenlink": "321234.85",
+    "moonswap": "301893.65"
+  },
+  {
+    "date": "2023-06-26",
+    "solarbeam": "4474503.48",
+    "bifrost": "3078599.41",
+    "karura_swap": "897051.19",
+    "sushiswap": "472732.53",
+    "zenlink": "327938.94",
+    "moonswap": "301390.88"
+  },
+  {
+    "date": "2023-06-25",
+    "solarbeam": "4416346.15",
+    "bifrost": "2976583.43",
+    "karura_swap": "881983.35",
+    "sushiswap": "470863.65",
+    "zenlink": "324884.04",
+    "moonswap": "301167.50"
+  },
+  {
+    "date": "2023-06-24",
+    "solarbeam": "4410641.69",
+    "bifrost": "2952263.98",
+    "karura_swap": "869901.92",
+    "sushiswap": "472094.84",
+    "zenlink": "325757.37",
+    "moonswap": "301516.37"
+  },
+  {
+    "date": "2023-06-23",
+    "solarbeam": "4292497.49",
+    "bifrost": "2861651.23",
+    "karura_swap": "867299.64",
+    "sushiswap": "469375.35",
+    "zenlink": "321453.74",
+    "moonswap": "301169.11"
+  },
+  {
+    "date": "2023-06-22",
+    "solarbeam": "4315095.64",
+    "bifrost": "2885046.54",
+    "karura_swap": "866857.30",
+    "sushiswap": "470441.24",
+    "zenlink": "320610.96",
+    "moonswap": "301000.58"
+  },
+  {
+    "date": "2023-06-21",
+    "solarbeam": "4196388.11",
+    "bifrost": "2774526.44",
+    "karura_swap": "845545.13",
+    "sushiswap": "464763.99",
+    "zenlink": "315836.41",
+    "moonswap": "300653.04"
+  },
+  {
+    "date": "2023-06-20",
+    "solarbeam": "4125404.74",
+    "bifrost": "2704622.53",
+    "karura_swap": "831644.68",
+    "sushiswap": "456776.63",
+    "zenlink": "312950.32",
+    "moonswap": "300492.73"
+  },
+  {
+    "date": "2023-06-19",
+    "solarbeam": "4182730.76",
+    "bifrost": "2693378.16",
+    "karura_swap": "832294.73",
+    "sushiswap": "458580.80",
+    "zenlink": "314998.39",
+    "moonswap": "300982.04"
+  },
+  {
+    "date": "2023-06-18",
+    "solarbeam": "4096766.78",
+    "bifrost": "2643554.28",
+    "karura_swap": "825260.36",
+    "sushiswap": "460676.54",
+    "zenlink": "310863.04",
+    "moonswap": "300380.45"
+  },
+  {
+    "date": "2023-06-17",
+    "solarbeam": "4022100.24",
+    "bifrost": "2559075.83",
+    "karura_swap": "811247.75",
+    "sushiswap": "459688.94",
+    "zenlink": "307806.62",
+    "moonswap": "300084.38"
+  },
+  {
+    "date": "2023-06-16",
+    "solarbeam": "3926026.53",
+    "bifrost": "2464277.86",
+    "karura_swap": "783063.24",
+    "sushiswap": "455097.58",
+    "zenlink": "303816.93",
+    "moonswap": "299784.42"
+  },
+  {
+    "date": "2023-06-15",
+    "solarbeam": "3919484.69",
+    "bifrost": "2537329.39",
+    "karura_swap": "805731.35",
+    "sushiswap": "452326.49",
+    "zenlink": "302565.73",
+    "moonswap": "299817.59"
+  },
+  {
+    "date": "2023-06-14",
+    "solarbeam": "4031036.44",
+    "bifrost": "2504638.21",
+    "karura_swap": "803115.87",
+    "sushiswap": "458746.65",
+    "zenlink": "306399.74",
+    "moonswap": "299920.31"
+  },
+  {
+    "date": "2023-06-13",
+    "solarbeam": "4022220.83",
+    "bifrost": "2637532.36",
+    "karura_swap": "818489.52",
+    "sushiswap": "457356.40",
+    "zenlink": "307505.90",
+    "moonswap": "299516.81"
+  },
+  {
+    "date": "2023-06-12",
+    "solarbeam": "3964848.23",
+    "bifrost": "2575395.45",
+    "karura_swap": "806476.91",
+    "sushiswap": "456738.19",
+    "zenlink": "306236.79",
+    "moonswap": "299421.53"
+  },
+  {
+    "date": "2023-06-11",
+    "solarbeam": "4017237.88",
+    "bifrost": "2554433.86",
+    "karura_swap": "807161.60",
+    "sushiswap": "460581.03",
+    "zenlink": "308932.41",
+    "moonswap": "300320.15"
+  },
+  {
+    "date": "2023-06-10",
+    "solarbeam": "4335687.95",
+    "bifrost": "2909967.09",
+    "karura_swap": "866777.55",
+    "sushiswap": "475690.38",
+    "zenlink": "326478.43",
+    "moonswap": "301123.63"
+  },
+  {
+    "date": "2023-06-09",
+    "solarbeam": "4412406.55",
+    "bifrost": "2989184.98",
+    "karura_swap": "879382.31",
+    "sushiswap": "477487.06",
+    "zenlink": "329537.54",
+    "moonswap": "301406.95"
+  },
+  {
+    "date": "2023-06-08",
+    "solarbeam": "4360266.84",
+    "bifrost": "3027172.03",
+    "karura_swap": "882939.71",
+    "sushiswap": "476982.01",
+    "zenlink": "328101.20",
+    "moonswap": "301277.96"
+  },
+  {
+    "date": "2023-06-07",
+    "solarbeam": "4567110.08",
+    "bifrost": "3105698.39",
+    "karura_swap": "897169.36",
+    "sushiswap": "2221.94",
+    "zenlink": "336247.95",
+    "moonswap": "302183.54"
+  },
+  {
+    "date": "2023-06-06",
+    "solarbeam": "4429669.09",
+    "bifrost": "2967489.49",
+    "karura_swap": "873884.72",
+    "sushiswap": "479394.02",
+    "zenlink": "332184.40",
+    "moonswap": "301887.27"
+  },
+  {
+    "date": "2023-06-05",
+    "solarbeam": "4707642.67",
+    "bifrost": "3187988.94",
+    "karura_swap": "908707.24",
+    "sushiswap": "492117.14",
+    "zenlink": "343271.97",
+    "moonswap": "302540.21"
+  },
+  {
+    "date": "2023-06-04",
+    "solarbeam": "4630414.55",
+    "bifrost": "3162200.09",
+    "karura_swap": "889251.12",
+    "sushiswap": "490472.38",
+    "zenlink": "340486.94",
+    "moonswap": "302113.81"
+  },
+  {
+    "date": "2023-06-03",
+    "solarbeam": "4616638.36",
+    "bifrost": "3118629.53",
+    "karura_swap": "896727.66",
+    "sushiswap": "496982.96",
+    "zenlink": "339945.75",
+    "moonswap": "301957.94"
+  },
+  {
+    "date": "2023-06-02",
+    "solarbeam": "4592993.96",
+    "bifrost": "3079712.58",
+    "karura_swap": "894301.66",
+    "sushiswap": "493982.62",
+    "zenlink": "339381.57",
+    "moonswap": "302060.71"
+  },
+  {
+    "date": "2023-06-01",
+    "solarbeam": "4717454.00",
+    "bifrost": "3115353.58",
+    "karura_swap": "901569.63",
+    "sushiswap": "494133.84",
+    "zenlink": "340993.86",
+    "moonswap": "301556.43"
+  },
+  {
+    "date": "2023-05-31",
+    "solarbeam": "4765200.93",
+    "bifrost": "3150870.66",
+    "karura_swap": "898014.16",
+    "sushiswap": "499634.44",
+    "zenlink": "343744.75",
+    "moonswap": "302298.90"
+  },
+  {
+    "date": "2023-05-30",
+    "solarbeam": "4618609.98",
+    "bifrost": "3156838.61",
+    "karura_swap": "894458.69",
+    "sushiswap": "497311.77",
+    "zenlink": "342946.68",
+    "moonswap": "302189.68"
+  },
+  {
+    "date": "2023-05-29",
+    "solarbeam": "4654037.06",
+    "bifrost": "3187655.50",
+    "karura_swap": "890903.22",
+    "sushiswap": "499973.69",
+    "zenlink": "343867.59",
+    "moonswap": "302534.33"
+  },
+  {
+    "date": "2023-05-28",
+    "solarbeam": "4557132.10",
+    "bifrost": "3106758.42",
+    "karura_swap": "887347.75",
+    "sushiswap": "495710.43",
+    "zenlink": "340904.83",
+    "moonswap": "303048.69"
+  },
+  {
+    "date": "2023-05-27",
+    "solarbeam": "4667345.19",
+    "bifrost": "3044638.26",
+    "karura_swap": "883792.28",
+    "sushiswap": "494142.48",
+    "zenlink": "339836.74",
+    "moonswap": "302206.49"
+  },
+  {
+    "date": "2023-05-26",
+    "solarbeam": "4632789.74",
+    "bifrost": "3030058.41",
+    "karura_swap": "880236.81",
+    "sushiswap": "490922.41",
+    "zenlink": "340151.40",
+    "moonswap": "301946.88"
+  },
+  {
+    "date": "2023-05-25",
+    "solarbeam": "4647017.27",
+    "bifrost": "3017470.86",
+    "karura_swap": "876681.33",
+    "sushiswap": "486122.48",
+    "zenlink": "338615.57",
+    "moonswap": "301602.90"
+  },
+  {
+    "date": "2023-05-24",
+    "solarbeam": "5647734.22",
+    "bifrost": "3078272.08",
+    "karura_swap": "873125.86",
+    "sushiswap": "494365.43",
+    "zenlink": "344107.35",
+    "moonswap": "302336.35"
+  },
+  {
+    "date": "2023-05-23",
+    "solarbeam": "5639901.00",
+    "bifrost": "3035381.49",
+    "karura_swap": "865685.79",
+    "sushiswap": "490785.61",
+    "zenlink": "343600.86",
+    "moonswap": "301825.29"
+  },
+  {
+    "date": "2023-05-22",
+    "solarbeam": "5629928.04",
+    "bifrost": "3127199.27",
+    "karura_swap": "875074.33",
+    "sushiswap": "492139.41",
+    "zenlink": "344293.89",
+    "moonswap": "302863.67"
+  },
+  {
+    "date": "2023-05-21",
+    "solarbeam": "5752278.11",
+    "bifrost": "3214621.47",
+    "karura_swap": "885013.55",
+    "sushiswap": "497596.07",
+    "zenlink": "349850.28",
+    "moonswap": "302968.99"
+  },
+  {
+    "date": "2023-05-20",
+    "solarbeam": "5702408.51",
+    "bifrost": "3157954.55",
+    "karura_swap": "887482.36",
+    "sushiswap": "495157.11",
+    "zenlink": "348332.48",
+    "moonswap": "302346.19"
+  },
+  {
+    "date": "2023-05-19",
+    "solarbeam": "5705378.21",
+    "bifrost": "3180411.48",
+    "karura_swap": "887922.44",
+    "sushiswap": "494261.82",
+    "zenlink": "347948.12",
+    "moonswap": "302404.89"
+  },
+  {
+    "date": "2023-05-18",
+    "solarbeam": "5779644.99",
+    "bifrost": "3248955.19",
+    "karura_swap": "896413.34",
+    "sushiswap": "496539.58",
+    "zenlink": "350746.85",
+    "moonswap": "302250.58"
+  },
+  {
+    "date": "2023-05-17",
+    "solarbeam": "5700372.00",
+    "bifrost": "3224331.59",
+    "karura_swap": "902701.32",
+    "sushiswap": "497346.17",
+    "zenlink": "348701.28",
+    "moonswap": "302367.80"
+  },
+  {
+    "date": "2023-05-16",
+    "solarbeam": "5735886.00",
+    "bifrost": "3205557.47",
+    "karura_swap": "897922.52",
+    "sushiswap": "497096.57",
+    "zenlink": "349665.33",
+    "moonswap": "302392.68"
+  },
+  {
+    "date": "2023-05-15",
+    "solarbeam": "5648438.67",
+    "bifrost": "3243356.22",
+    "karura_swap": "904254.39",
+    "sushiswap": "389194.96",
+    "zenlink": "349622.02",
+    "moonswap": "302623.48"
+  },
+  {
+    "date": "2023-05-14",
+    "solarbeam": "5613168.89",
+    "bifrost": "3210843.89",
+    "karura_swap": "897829.22",
+    "sushiswap": "389088.50",
+    "zenlink": "347708.86",
+    "moonswap": "302858.93"
+  },
+  {
+    "date": "2023-05-13",
+    "solarbeam": "5617741.65",
+    "bifrost": "3178331.57",
+    "karura_swap": "891404.05",
+    "sushiswap": "390042.22",
+    "zenlink": "347993.46",
+    "moonswap": "302886.47"
+  },
+  {
+    "date": "2023-05-12",
+    "solarbeam": "5631917.64",
+    "bifrost": "3145819.24",
+    "karura_swap": "884978.87",
+    "sushiswap": "388047.35",
+    "zenlink": "349041.95",
+    "moonswap": "302845.18"
+  },
+  {
+    "date": "2023-05-11",
+    "solarbeam": "5748986.55",
+    "bifrost": "3213624.56",
+    "karura_swap": "908177.92",
+    "sushiswap": "391350.87",
+    "zenlink": "353780.75",
+    "moonswap": "302202.98"
+  },
+  {
+    "date": "2023-05-10",
+    "solarbeam": "5711109.92",
+    "bifrost": "3127673.09",
+    "karura_swap": "902849.10",
+    "sushiswap": "392366.05",
+    "zenlink": "351943.67",
+    "moonswap": "302866.91"
+  },
+  {
+    "date": "2023-05-09",
+    "solarbeam": "5701987.93",
+    "bifrost": "3090828.16",
+    "karura_swap": "902583.44",
+    "sushiswap": "391974.11",
+    "zenlink": "352246.99",
+    "moonswap": "302685.14"
+  },
+  {
+    "date": "2023-05-08",
+    "solarbeam": "6042287.49",
+    "bifrost": "3276908.84",
+    "karura_swap": "943764.67",
+    "sushiswap": "396650.12",
+    "zenlink": "364779.61",
+    "moonswap": "303542.00"
+  },
+  {
+    "date": "2023-05-07",
+    "solarbeam": "6066164.94",
+    "bifrost": "3319799.17",
+    "karura_swap": "944289.89",
+    "sushiswap": "398140.21",
+    "zenlink": "375416.67",
+    "moonswap": "304388.05"
+  },
+  {
+    "date": "2023-05-06",
+    "solarbeam": "6309191.52",
+    "bifrost": "3488788.97",
+    "karura_swap": "972791.95",
+    "sushiswap": "399750.30",
+    "zenlink": "385421.37",
+    "moonswap": "304871.55"
+  },
+  {
+    "date": "2023-05-05",
+    "solarbeam": "6218892.36",
+    "bifrost": "3467916.26",
+    "karura_swap": "967348.88",
+    "sushiswap": "398740.03",
+    "zenlink": "382214.06",
+    "moonswap": "304032.78"
+  },
+  {
+    "date": "2023-05-04",
+    "solarbeam": "6262489.16",
+    "bifrost": "3508347.40",
+    "karura_swap": "984575.28",
+    "sushiswap": "400080.83",
+    "zenlink": "383504.68",
+    "moonswap": "304462.24"
+  },
+  {
+    "date": "2023-05-03",
+    "solarbeam": "6215400.20",
+    "bifrost": "3482170.75",
+    "karura_swap": "984973.65",
+    "sushiswap": "405731.02",
+    "zenlink": "381173.05",
+    "moonswap": "303557.55"
+  },
+  {
+    "date": "2023-05-02",
+    "solarbeam": "6176001.78",
+    "bifrost": "3461535.97",
+    "karura_swap": "986182.95",
+    "sushiswap": "405790.09",
+    "zenlink": "383628.40",
+    "moonswap": "303917.10"
+  },
+  {
+    "date": "2023-05-01",
+    "solarbeam": "6393364.62",
+    "bifrost": "3677398.94",
+    "karura_swap": "1044935.67",
+    "sushiswap": "406299.20",
+    "zenlink": "395761.43",
+    "moonswap": "304183.35"
+  },
+  {
+    "date": "2023-04-30",
+    "solarbeam": "6479609.13",
+    "bifrost": "3734124.32",
+    "karura_swap": "1049290.14",
+    "sushiswap": "409313.35",
+    "zenlink": "397141.66",
+    "moonswap": "304609.83"
+  },
+  {
+    "date": "2023-04-29",
+    "solarbeam": "6371096.49",
+    "bifrost": "3727654.15",
+    "karura_swap": "1050240.29",
+    "sushiswap": "408491.34",
+    "zenlink": "401423.59",
+    "moonswap": "303979.53"
+  },
+  {
+    "date": "2023-04-28",
+    "solarbeam": "6439186.16",
+    "bifrost": "3721183.98",
+    "karura_swap": "1051190.44",
+    "sushiswap": "410097.59",
+    "zenlink": "405001.22",
+    "moonswap": "304210.66"
+  },
+  {
+    "date": "2023-04-27",
+    "solarbeam": "6427611.91",
+    "bifrost": "3846865.43",
+    "karura_swap": "1059397.41",
+    "sushiswap": "410622.06",
+    "zenlink": "404516.79",
+    "moonswap": "304436.85"
+  },
+  {
+    "date": "2023-04-26",
+    "solarbeam": "6353320.06",
+    "bifrost": "3852786.42",
+    "karura_swap": "1066917.06",
+    "sushiswap": "409209.84",
+    "zenlink": "403752.31",
+    "moonswap": "304204.90"
+  },
+  {
+    "date": "2023-04-25",
+    "solarbeam": "6290907.66",
+    "bifrost": "3761956.06",
+    "karura_swap": "1035791.71",
+    "sushiswap": "407724.83",
+    "zenlink": "402087.29",
+    "moonswap": "303923.00"
+  },
+  {
+    "date": "2023-04-24",
+    "solarbeam": "6328615.71",
+    "bifrost": "3783759.11",
+    "karura_swap": "1044989.45",
+    "sushiswap": "407316.78",
+    "zenlink": "404254.40",
+    "moonswap": "303124.16"
+  },
+  {
+    "date": "2023-04-23",
+    "solarbeam": "6385956.28",
+    "bifrost": "3831433.14",
+    "karura_swap": "1055125.67",
+    "sushiswap": "409372.94",
+    "zenlink": "450644.10",
+    "moonswap": "304482.06"
+  },
+  {
+    "date": "2023-04-22",
+    "solarbeam": "6279867.85",
+    "bifrost": "3764400.37",
+    "karura_swap": "1046281.74",
+    "sushiswap": "407689.33",
+    "zenlink": "439304.16",
+    "moonswap": "304349.63"
+  },
+  {
+    "date": "2023-04-21",
+    "solarbeam": "6607926.38",
+    "bifrost": "4025244.94",
+    "karura_swap": "1097958.78",
+    "sushiswap": "413071.34",
+    "zenlink": "468275.54",
+    "moonswap": "305159.55"
+  },
+  {
+    "date": "2023-04-20",
+    "solarbeam": "6820024.53",
+    "bifrost": "4282101.40",
+    "karura_swap": "1137549.14",
+    "sushiswap": "414950.71",
+    "zenlink": "482435.36",
+    "moonswap": "305187.32"
+  },
+  {
+    "date": "2023-04-19",
+    "solarbeam": "7228312.80",
+    "bifrost": "4658184.24",
+    "karura_swap": "1189618.40",
+    "sushiswap": "422777.22",
+    "zenlink": "513764.95",
+    "moonswap": "306385.04"
+  },
+  {
+    "date": "2023-04-18",
+    "solarbeam": "7090086.72",
+    "bifrost": "4556251.79",
+    "karura_swap": "1185111.48",
+    "sushiswap": "421243.04",
+    "zenlink": "502579.29",
+    "moonswap": "306475.46"
+  },
+  {
+    "date": "2023-04-17",
+    "solarbeam": "7142940.05",
+    "bifrost": "4598077.44",
+    "karura_swap": "1206563.81",
+    "sushiswap": "422050.85",
+    "zenlink": "503487.95",
+    "moonswap": "306194.38"
+  },
+  {
+    "date": "2023-04-16",
+    "solarbeam": "7298346.65",
+    "bifrost": "4730776.85",
+    "karura_swap": "1222640.51",
+    "sushiswap": "423178.35",
+    "zenlink": "513290.65",
+    "moonswap": "306381.32"
+  },
+  {
+    "date": "2023-04-15",
+    "solarbeam": "7301373.72",
+    "bifrost": "4594705.24",
+    "karura_swap": "1218837.99",
+    "sushiswap": "420930.08",
+    "zenlink": "495033.99",
+    "moonswap": "306278.56"
+  },
+  {
+    "date": "2023-04-14",
+    "solarbeam": "7250624.73",
+    "bifrost": "4472712.72",
+    "karura_swap": "1197204.84",
+    "sushiswap": "422011.02",
+    "zenlink": "495178.22",
+    "moonswap": "306694.86"
+  },
+  {
+    "date": "2023-04-13",
+    "solarbeam": "7058947.52",
+    "bifrost": "4239022.01",
+    "karura_swap": "1166813.64",
+    "sushiswap": "414168.65",
+    "zenlink": "478627.90",
+    "moonswap": "305319.44"
+  },
+  {
+    "date": "2023-04-12",
+    "solarbeam": "7088885.57",
+    "bifrost": "4192182.40",
+    "karura_swap": "1168516.14",
+    "sushiswap": "413924.70",
+    "zenlink": "480830.14",
+    "moonswap": "305571.14"
+  },
+  {
+    "date": "2023-04-11",
+    "solarbeam": "7083300.17",
+    "bifrost": "4371867.65",
+    "karura_swap": "1155571.56",
+    "sushiswap": "414544.76",
+    "zenlink": "479683.98",
+    "moonswap": "305147.24"
+  },
+  {
+    "date": "2023-04-10",
+    "solarbeam": "7007851.36",
+    "bifrost": "4363802.29",
+    "karura_swap": "1155318.79",
+    "sushiswap": "413290.07",
+    "zenlink": "473950.27",
+    "moonswap": "305982.47"
+  },
+  {
+    "date": "2023-04-09",
+    "solarbeam": "6940036.58",
+    "bifrost": "4342087.73",
+    "karura_swap": "1139671.71",
+    "sushiswap": "412245.47",
+    "zenlink": "468527.97",
+    "moonswap": "305349.36"
+  },
+  {
+    "date": "2023-04-08",
+    "solarbeam": "6817714.27",
+    "bifrost": "4318126.79",
+    "karura_swap": "1137473.64",
+    "sushiswap": "412349.31",
+    "zenlink": "456794.31",
+    "moonswap": "305458.16"
+  },
+  {
+    "date": "2023-04-07",
+    "solarbeam": "6992797.59",
+    "bifrost": "4404299.41",
+    "karura_swap": "1153571.01",
+    "sushiswap": "410292.57",
+    "zenlink": "467038.64",
+    "moonswap": "305523.53"
+  },
+  {
+    "date": "2023-04-06",
+    "solarbeam": "7071117.33",
+    "bifrost": "4468160.68",
+    "karura_swap": "1162064.86",
+    "sushiswap": "411331.84",
+    "zenlink": "472141.01",
+    "moonswap": "305961.98"
+  },
+  {
+    "date": "2023-04-05",
+    "solarbeam": "7095448.93",
+    "bifrost": "4475556.21",
+    "karura_swap": "1176632.47",
+    "sushiswap": "410967.07",
+    "zenlink": "473258.92",
+    "moonswap": "305324.19"
+  },
+  {
+    "date": "2023-04-04",
+    "solarbeam": "6897782.09",
+    "bifrost": "4297792.39",
+    "karura_swap": "1156483.17",
+    "sushiswap": "407461.71",
+    "zenlink": "457773.35",
+    "moonswap": "305123.01"
+  },
+  {
+    "date": "2023-04-03",
+    "solarbeam": "6877034.54",
+    "bifrost": "4292107.29",
+    "karura_swap": "1144016.16",
+    "sushiswap": "406505.42",
+    "zenlink": "457683.42",
+    "moonswap": "305230.66"
+  },
+  {
+    "date": "2023-04-02",
+    "solarbeam": "7024344.06",
+    "bifrost": "4000200.18",
+    "karura_swap": "1154639.08",
+    "sushiswap": "408056.01",
+    "zenlink": "467315.07",
+    "moonswap": "305703.32"
+  },
+  {
+    "date": "2023-04-01",
+    "solarbeam": "7095279.71",
+    "bifrost": "4111648.28",
+    "karura_swap": "1169970.77",
+    "sushiswap": "409960.53",
+    "zenlink": "471401.43",
+    "moonswap": "305562.40"
+  }
+]
