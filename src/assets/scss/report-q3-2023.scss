@@ -1,0 +1,665 @@
+@import "settings/all";
+@import "tools/all";
+
+.polkadot-q3-2023 {
+    .section-header {
+        --s-header-spacing: 25px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .section {
+        margin: 60px 0;
+        padding: 0;
+
+        &.site-footer {
+            margin: 0 !important;
+            padding-bottom: 50px;
+        }
+    }
+
+    .section-reports-hero {
+        padding: 200px 0 170px;
+        margin: 0 !important;
+        background: url(../images/report/q2-2023/hero-bg.png) no-repeat center center;
+        background-size: auto;
+        --s-header-spacing: 0;
+
+        .section-title {
+            font-size: 42px;
+            line-height: 1.2;
+
+            .sub-title {
+                margin: 5px 0 0;
+                display: block;
+                font-size: 32px;
+            }
+        }
+
+        .section-sub-title {
+            font-size: 26px;
+            line-height: 1.5;
+            margin: 27px 0 0;
+        }
+
+        .hero-shape-dotinsights {
+            top: 30%;
+            left: 6%;
+            --shape-max-width: 20.5vw;
+        }
+
+        .hero-shape-dot {
+            right: 7%;
+            bottom: 15%;
+            --shape-max-width: 29.5vw;
+        }
+
+        .hero-shape-sw {
+            top: 22%;
+            right: 0;
+            --shape-max-width: 30vw;
+        }
+
+        .hero-shape-ring {
+            left: 50%;
+            top: 25%;
+            --shape-width: 30px;
+        }
+
+        .hero-shape-cube {
+            left: 35%;
+            bottom: 18%;
+            --shape-width: 25px;
+        }
+
+        .hero-shape-satellite {
+            left: 15%;
+            bottom: 25%;
+            --shape-width: 30px;
+        }
+    }
+
+    .section-key-takeaways {
+
+        &.section {
+            margin-top: 0;
+        }
+
+        .section-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-content-inner {
+            --border-size: -3px;
+            position: relative;
+            background-color: $background-2;
+            padding: 50px 15px 35px;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            border-radius: 20px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: var(--border-size);
+                right: var(--border-size);
+                bottom: var(--border-size);
+                left: var(--border-size);
+                border-radius: inherit;
+                background: linear-gradient(120deg, rgba(226, 226, 226, 0) 0%, #393939 53.57%, rgba(226, 226, 226, 0) 100%);
+                z-index: -1;
+            }
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .key-takeaways-list {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            margin: 0 -15px;
+            padding: 0;
+
+            li {
+                display: flex;
+                align-items: baseline;
+                width: 100%;
+                padding: 0 15px;
+                margin: 0 0 20px 0;
+
+                i {
+                    color: $primary-color;
+                    margin-right: 10px;
+                    flex-shrink: 0;
+                }
+            }
+        }
+    }
+
+    .section.section-ecosystem-overview {
+        padding: 30px 0 130px;
+        margin: 0;
+    }
+
+    .section.section-the-defi-economy {
+        padding: 30px 0 130px;
+        margin: 0;
+    }
+
+    .section.section-nft {
+        margin: 0;
+        padding-top: 50px;
+    }
+
+    .section.section-web3 {
+        padding-top: 120px;
+    }
+
+    .section-closing-thoughts {
+        text-align: center;
+    }
+
+    .section-about-us {
+        .section-content {
+            padding: 70px 15px;
+            background: $secondary-color url(../images/report/about-us-bg.jpg) no-repeat center;
+            background-size: cover;
+            border-radius: 30px;
+        }
+    }
+
+    .block-about-us {
+        width: 970px;
+        max-width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        color: #fff;
+
+        h2 {
+            margin: 0 0 32px;
+
+            span {
+                vertical-align: middle;
+                margin: 0 24px 0 0;
+            }
+
+            img {
+                vertical-align: middle;
+                max-width: 25vw;
+                min-width: 180px;
+            }
+        }
+
+        a,
+        mark {
+            color: #fff;
+            font-weight: 700;
+        }
+    }
+
+    .block-table-heading, .block-chart-heading {
+        text-transform: capitalize;
+    }
+
+    .block-chart-heading {
+        div span {
+            display: block;
+            font-size: 13px;
+            font-weight: 500;
+            color: rgba(204, 204, 204, 0.7);
+        }
+    }
+
+    .block-table-source, .block-chart-source {
+        width: calc(100% - 180px);
+    }
+
+    [class*="hint--"]:after {
+        font-size: 13px;
+        font-family: var(--bs-font-sans-serif);
+        line-height: 21px;
+        padding: 15px;
+    }
+
+    .block-chart-legend {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            display: flex;
+            align-items: center;
+
+            img {
+                flex-shrink: 0;
+            }
+
+            .acc-info {
+                margin-left: 12px;
+                flex-grow: 1;
+            }
+
+            .acc-name {
+                font-size: 15px;
+                font-weight: 500;
+
+                span {
+                    line-height: 1;
+                    margin-left: 6px;
+                }
+            }
+
+            .acc-count {
+                font-size: 17px;
+                font-weight: 700;
+            }
+
+            + li {
+                margin-top: 30px;
+            }
+        }
+    }
+
+    .section-holder-distribution {
+        .block-chart-body {
+            display: block;
+
+            .block-chart {
+                width: 100%;
+            }
+
+            .block-chart-legend {
+                width: 100%;
+
+                li + li {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+
+    .table-contents-list {
+        li {
+            &.active {
+                > a {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+
+    .table--web3-wallet-compare {
+        --block-bg: #000;
+        --td-spacing: 4px;
+        --tr-spacing: 4px;
+        --td-ver-gap: 14px;
+
+        svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        tr {
+            &:before {
+                display: none;
+            }
+        }
+
+        th, td {
+            text-align: center;
+            width: 25%;
+            min-width: 200px;
+
+            &:first-child {
+                text-align: start;
+            }
+        }
+
+        th {
+            border-radius: var(--tr-radius, 5px);
+            background: var(--th-bg, $secondary-color);
+        }
+
+        td {
+            border-radius: var(--tr-radius, 5px);
+            background: var(--td-bg, #151515);
+            font-size: 16px;
+            font-weight: 500;
+            min-height: 100px;
+        }
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .polkadot-q2-2023 {
+        .section-header {
+            --s-header-spacing: 28px;
+        }
+
+        .section-title {
+            font-size: 32px;
+        }
+
+        .section-reports-hero {
+            padding: 200px 0 170px;
+
+            .section-title {
+                font-size: 46px;
+
+                .sub-title {
+                    font-size: 38px;
+                }
+            }
+
+            .section-sub-title {
+                font-size: 28px;
+            }
+        }
+
+        .section-key-takeaways {
+            .key-takeaways-list {
+                li {
+                    width: 50%;
+                }
+            }
+        }
+
+        .section.section-ecosystem-overview {
+            padding: 30px 0 180px;
+        }
+
+        .section.section-the-defi-economy {
+            padding: 30px 0 220px;
+        }
+
+        .section.section-web3 {
+            margin-top: 40px;
+            padding-top: 180px;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .polkadot-q2-2023 {
+        .section-header {
+            --s-header-spacing: 30px;
+        }
+
+        .section-title {
+            font-size: 36px;
+        }
+
+        .section {
+            margin: 80px 0;
+        }
+
+        .section-reports-hero {
+            padding: 200px 0 170px;
+
+            .section-title {
+                font-size: 56px;
+
+                .sub-title {
+                    font-size: 38px;
+                }
+            }
+
+            .section-sub-title {
+                font-size: 30px;
+            }
+        }
+
+        .section-key-takeaways {
+            .section-title {
+                margin-bottom: 45px;
+            }
+
+            .section-content-inner {
+                padding: 65px 45px 45px;
+            }
+        }
+
+        .section.section-ecosystem-overview {
+            padding: 30px 0 190px;
+        }
+
+        .section.section-the-defi-economy {
+            padding: 30px 0 210px;
+        }
+
+        .section.section-web3 {
+            margin-top: 60px;
+            padding-top: 250px;
+        }
+
+        .block-chart-body-pie-chart {
+            display: flex;
+            align-items: center;
+
+            .block-chart-legend {
+                width: 30%;
+            }
+
+            .block-chart {
+                flex-grow: 1;
+            }
+        }
+
+        .section-holder-distribution {
+            .block-chart-body {
+                display: flex;
+
+                .block-chart {
+                    width: 60%;
+                }
+
+                .block-chart-legend {
+                    width: 40%;
+                }
+            }
+        }
+
+        .block-chart-legend {
+            text-align: left;
+
+            li {
+                display: flex;
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+
+        .section-about-us {
+            .section-content {
+                padding: 122px 30px 131px;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .polkadot-q2-2023 {
+        .section-header {
+            --s-header-spacing: 35px;
+        }
+
+        .section-title {
+            font-size: 42px;
+        }
+
+        .section {
+            margin: 100px 0;
+        }
+
+        .section-reports-hero {
+            padding: 220px 0 180px;
+
+            .section-title {
+                font-size: 80px;
+
+                .sub-title {
+                    font-size: 56px;
+                }
+            }
+
+            .section-sub-title {
+                font-size: 32px;
+            }
+        }
+
+        .section-key-takeaways {
+            .section-title {
+                margin-bottom: 50px;
+            }
+
+            .section-content-inner {
+                padding: 72px 55px 50px;
+            }
+        }
+
+        .section.section-ecosystem-overview {
+            padding: 30px 0 250px;
+        }
+
+        .section.section-the-defi-economy {
+            padding: 0 0 250px;
+        }
+
+        .section.section-web3 {
+            margin-top: 60px;
+            padding-top: 250px;
+        }
+
+        .section-closing-thoughts {
+            .section-header {
+                padding-top: 30px;
+                --s-header-spacing: 80px;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .polkadot-q2-2023 {
+        .section {
+            margin: 120px 0;
+        }
+
+        .section-header {
+            --s-header-spacing: 100px;
+        }
+
+        .section-title {
+            font-size: 56px;
+        }
+
+        .block-text .heading {
+            --header-spacing: 50px;
+        }
+
+        .text {
+            font-size: 20px;
+        }
+
+        .block-report-chart {
+            --chart-top-spacing: 64px;
+            --chart-bot-spacing: 64px;
+        }
+
+        .section-reports-hero {
+            padding: 250px 0 170px;
+
+            .section-title {
+                font-size: 116px;
+
+                .sub-title {
+                    font-size: 76px;
+                }
+            }
+
+            .section-sub-title {
+                font-size: 32px;
+            }
+
+            .hero-shape-dotinsights {
+                top: 30%;
+                left: 16%;
+                --shape-max-width: 13.5vw;
+            }
+
+            .hero-shape-dot {
+                right: 17%;
+                bottom: 5%;
+                --shape-max-width: 19.5vw;
+            }
+
+            .hero-shape-sw {
+                top: 12%;
+                right: 15%;
+                --shape-max-width: 20vw;
+            }
+
+            .hero-shape-ring {
+                left: 50%;
+                top: 20%;
+                --shape-width: 59px;
+            }
+
+            .hero-shape-cube {
+                left: 35%;
+                bottom: 18%;
+                --shape-width: 3vw;
+            }
+
+            .hero-shape-satellite {
+                left: 25%;
+                bottom: 25%;
+                --shape-width: 36px;
+            }
+        }
+
+        .section.section-ecosystem-overview {
+            padding: 0 0 260px;
+        }
+
+        .section.section-the-defi-economy {
+            padding: 50px 0 260px;
+        }
+
+        .section.section-web3 {
+            margin-top: 60px;
+            padding-top: 250px;
+
+            .section-wasm {
+                --bs-gutter-x: 65px;
+            }
+        }
+
+        .site-footer {
+            --s-desc-width: 966px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .polkadot-q2-2023 {
+        .block-table-source, .block-chart-source {
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+}
+
+@media (max-width: 460px) {
+    .polkadot-q2-2023 {
+        .block-text .heading {
+            font-size: 20px;
+        }
+    }
+}

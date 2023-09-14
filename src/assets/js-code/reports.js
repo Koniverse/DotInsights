@@ -12,7 +12,8 @@
 			}
 		}
 
-		var sourceBaseUrl = baseUrl + '/assets/data/';
+		// var sourceBaseUrl = baseUrl + '/assets/data/q2-2023/';
+		var sourceBaseUrl = "https://strapi.subwallet.app/api/reports/";
 		var tokenBaseUrl = baseUrl + '/assets/images/token/';
 
 		var NumberUtil                      = dotinsights.NumberUtil,
