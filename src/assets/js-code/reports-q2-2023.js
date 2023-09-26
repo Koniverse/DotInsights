@@ -2086,8 +2086,8 @@
               tooltip: false,
               legend: false,
               grid: {
-                left: '3%',
-                right: '3%',
+                left: '0',
+                right: '0',
                 top: '0',
                 containLabel: true,
               },
@@ -2111,26 +2111,26 @@
                       show: true,
                       fontFamily: fontFamily,
                       color: '#ffffff',
-                      fontSize: 15,
+                      fontSize: 17,
                       fontWeight: '500',
                       formatter: function(param) {
                         var value = NumberUtil.formatWithCommas(param.value);
 
-                        return '{per|' + param.percent + '%}\n{b|' + param.name + '}\n{c|' + value + '}';
+                        return '{per|' + param.percent + '%}\n{b|' + param.name + '}\n{c|' + value + ' KSM' + '}';
                       },
                       rich: {
                         per: {
                           fontFamily: fontFamily,
                           fontWeight: 700,
                           color: '#ffffff',
-                          fontSize: 32,
+                          fontSize: 27,
                           align: 'center',
                         },
                         b: {
                           fontFamily: fontFamily,
                           fontWeight: 500,
-                          color: '#cccccc',
-                          fontSize: 17,
+                          color: '#b1b1b1',
+                          fontSize: 14,
                           align: 'center',
                           padding: [
                             10, 0, 10, 0,
@@ -2140,10 +2140,8 @@
                           fontFamily: fontFamily,
                           fontWeight: 700,
                           color: '#ffffff',
-                          fontSize: 17,
-                          formatter: function(name) {
-                            return '$ ' + name;
-                          },
+                          fontSize: 15,
+                          lineHeight: 26,
                           align: 'center',
                         },
                       },
