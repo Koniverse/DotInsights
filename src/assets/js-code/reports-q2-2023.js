@@ -2086,8 +2086,8 @@
               tooltip: false,
               legend: false,
               grid: {
-                left: '0',
-                right: '0',
+                left: '3%',
+                right: '3%',
                 top: '0',
                 containLabel: true,
               },
@@ -2111,26 +2111,26 @@
                       show: true,
                       fontFamily: fontFamily,
                       color: '#ffffff',
-                      fontSize: 17,
+                      fontSize: 15,
                       fontWeight: '500',
                       formatter: function(param) {
                         var value = NumberUtil.formatWithCommas(param.value);
 
-                        return '{per|' + param.percent + '%}\n{b|' + param.name + '}\n{c|' + value + ' KSM' + '}';
+                        return '{per|' + param.percent + '%}\n{b|' + param.name + '}\n{c|' + value + '}';
                       },
                       rich: {
                         per: {
                           fontFamily: fontFamily,
                           fontWeight: 700,
                           color: '#ffffff',
-                          fontSize: 27,
+                          fontSize: 32,
                           align: 'center',
                         },
                         b: {
                           fontFamily: fontFamily,
                           fontWeight: 500,
-                          color: '#b1b1b1',
-                          fontSize: 14,
+                          color: '#cccccc',
+                          fontSize: 17,
                           align: 'center',
                           padding: [
                             10, 0, 10, 0,
@@ -2140,8 +2140,10 @@
                           fontFamily: fontFamily,
                           fontWeight: 700,
                           color: '#ffffff',
-                          fontSize: 15,
-                          lineHeight: 26,
+                          fontSize: 17,
+                          formatter: function(name) {
+                            return '$ ' + name;
+                          },
                           align: 'center',
                         },
                       },
