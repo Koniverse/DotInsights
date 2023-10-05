@@ -1972,16 +1972,16 @@
             ],
             datasets = [
               {
-                value: 879219392.00,
+                value: 882100431.73,
                 name: 'Whale Account',
               }, {
-                value: 248010896.00,
+                value: 262761103.82,
                 name: 'Dolphin Account',
               }, {
-                value: 204198576.00,
+                value: 216019833.44,
                 name: 'Fish Account',
               }, {
-                value: 2141716.25,
+                value: 2199443.81,
                 name: 'Shrimp Account',
               },
             ],
@@ -2068,16 +2068,16 @@
             ],
             datasets = [
               {
-                value: 9812790.00,
+                value: 10098820.33,
                 name: 'Whale Account',
               }, {
-                value: 2251811.25,
+                value: 2187276.93,
                 name: 'Dolphin Account',
               }, {
-                value: 1706137.63,
+                value: 1763449.16,
                 name: 'Fish Account',
               }, {
-                value: 4254.99,
+                value: 4295.64,
                 name: 'Shrimp Account',
               },
             ],
