@@ -4725,28 +4725,24 @@
                 label: 'Acala',
               },
               {
-                name: 'parallel',
-                label: 'Parallel',
-              },
-              {
-                name: 'moonbeam',
-                label: 'Moonbeam',
-              },
-              {
                 name: 'astar',
                 label: 'Astar',
-              },
-              {
-                name: 'moonriver',
-                label: 'Moonriver',
               },
               {
                 name: 'karura',
                 label: 'Karura',
               },
               {
-                name: 'others',
-                label: locate.others,
+                name: 'moonbeam',
+                label: 'Moonbeam',
+              },
+              {
+                name: 'moonriver',
+                label: 'Moonriver',
+              },
+              {
+                name: 'parallel',
+                label: 'Parallel',
               },
             ],
             colors = [
@@ -4773,36 +4769,48 @@
       function getChartOptionsDefiDexPolkadot(chartName, jsonData) {
         var datasets = [
               {
-                name: 'arth_swap',
-                label: 'ArthSwap',
+                name: 'arthswap',
+                label: 'Arthswap',
               },
               {
-                name: 'hydradx',
-                label: 'HydraDX',
+                name: 'avault',
+                label: 'Avault',
               },
               {
-                name: 'stella_swap',
-                label: 'StellaSwap',
+                name: 'beamswap',
+                label: 'Beamswap',
               },
               {
-                name: 'acala_swap',
-                label: 'Acala Swap',
+                name: 'beefy',
+                label: 'Beefy',
               },
               {
-                name: 'frax_swap',
-                label: 'Frax Swap',
+                name: 'curve',
+                label: 'Curve',
               },
               {
                 name: 'parallel',
                 label: 'Parallel',
               },
               {
-                name: 'sirius_finance',
-                label: 'Sirius Finance',
+                name: 'solarflare',
+                label: 'Solarflare',
               },
               {
-                name: 'beam_swap',
-                label: 'BeamSwap',
+                name: 'stellaswap',
+                label: 'Stellaswap',
+              },
+              {
+                name: 'zenlink_astar',
+                label: 'Zenlink Astar',
+              },
+              {
+                name: 'zenlink_moonbeam',
+                label: 'Zenlink Moonbeam',
+              },
+              {
+                name: 'hydradx',
+                label: 'Hydradx',
               },
             ],
             colors = [
@@ -4814,6 +4822,9 @@
               '#ff279a',
               '#dfada5',
               '#66e1b6',
+              '#ac34d3',
+              '#2f6753',
+              '#357ed2',
             ],
             chartExtraOptions = {
               yAxis: {
