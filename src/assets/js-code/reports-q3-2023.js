@@ -4924,47 +4924,22 @@
       function getChartOptionsDefiLiquidStaking(chartName, jsonData) {
         var datasets = [
               {
-                name: 'bifrost',
-                label: 'Bifrost',
-              },
-              {
                 name: 'acala',
                 label: 'Acala',
               },
               {
-                name: 'algem',
-                label: 'Algem',
+                name: 'bifrost',
+                label: 'Bifrost',
               },
               {
                 name: 'parallel',
                 label: 'Parallel',
-              },
-              {
-                name: 'karura',
-                label: 'Karura',
-              },
-              {
-                name: 'lido_on_moonbeam',
-                label: 'Lido On Moonbeam',
-              },
-              {
-                name: 'lido_on_moonriver',
-                label: 'Lido On Moonriver',
-              },
-              {
-                name: 'heiko',
-                label: 'Heiko',
               },
             ],
             colors = [
               '#004bff',
               '#f82613',
               '#ffb800',
-              '#89c900',
-              '#f76417',
-              '#66e1b6',
-              '#ff279a',
-              '#dfada5',
             ],
             chartExtraOptions = {
               yAxis: {
