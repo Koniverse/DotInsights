@@ -4877,28 +4877,24 @@
       function getChartOptionsDefiLending(chartName, jsonData) {
         var datasets = [
               {
-                name: 'moonwell_artemis',
-                label: 'Moonwell Artemis',
+                name: 'acala',
+                label: 'Acala',
+              },
+              {
+                name: 'astriddao',
+                label: 'Astriddao',
+              },
+              {
+                name: 'moonwell',
+                label: 'Moonwell',
               },
               {
                 name: 'parallel',
                 label: 'Parallel',
               },
               {
-                name: 'karura',
-                label: 'Karura Dollar (aUSD)',
-              },
-              {
-                name: 'moonwell_apollo',
-                label: 'Moonwell Apollo',
-              },
-              {
                 name: 'starlay',
-                label: 'Starlay Finance',
-              },
-              {
-                name: 'heiko',
-                label: 'Heiko',
+                label: 'Starlay',
               },
             ],
             colors = [
@@ -4907,7 +4903,6 @@
               '#ffb800',
               '#89c900',
               '#66e1b6',
-              '#ff279a',
             ],
             chartExtraOptions = {
               yAxis: {
