@@ -3682,7 +3682,7 @@
                 axisLine: {
                   show: false,
                 },
-                interval: 25000,
+                interval: 2500,
                 splitNumber: 4,
                 splitLine: {
                   lineStyle: {
@@ -4729,20 +4729,16 @@
                 label: 'Astar',
               },
               {
-                name: 'karura',
-                label: 'Karura',
-              },
-              {
                 name: 'moonbeam',
                 label: 'Moonbeam',
               },
               {
-                name: 'moonriver',
-                label: 'Moonriver',
-              },
-              {
                 name: 'parallel',
                 label: 'Parallel',
+              },
+              {
+                name: 'hydradx',
+                label: 'Hydradx',
               },
             ],
             colors = [
@@ -4750,9 +4746,7 @@
               '#ffb800',
               '#004bff',
               '#f82613',
-              '#e4560a',
               '#00e7e7',
-              '#b1b1b1',
             ],
             chartExtraOptions = {
               yAxis: {
