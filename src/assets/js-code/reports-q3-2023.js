@@ -4198,7 +4198,7 @@
               },
               {
                 value: 1658,
-                name: 'Hydradx',
+                name: 'HydraDX',
                 label: {
                   color: colors[8],
                 },
@@ -4747,7 +4747,7 @@
               },
               {
                 name: 'hydradx',
-                label: 'Hydradx',
+                label: 'HydraDX',
               },
             ],
             colors = [
@@ -5211,7 +5211,7 @@
               },
               {
                 name: 'hydradx',
-                label: 'Hydradx',
+                label: 'HydraDX',
               },
             ],
             colors = [
