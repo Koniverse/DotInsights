@@ -4,78 +4,48 @@
     "arthswap": "12348448.00",
     "avault": "3505896.00",
     "beamswap": "2963509.50",
-    "beefy": "6197034.50",
-    "curve": "14672576.00",
     "parallel": "3666475.00",
-    "solarflare": "280746.40",
-    "stellaswap": "24860534.00",
-    "zenlink_astar": "581700.50",
-    "zenlink_moonbeam": "172413.72"
+    "stellaswap": "24860534.00"
   },
   {
     "date": "2023-01-02",
     "arthswap": "12553071.00",
     "avault": "3588910.80",
     "beamswap": "2989003.20",
-    "beefy": "6311837.50",
-    "curve": "15345214.00",
     "parallel": "3692279.00",
-    "solarflare": "281948.78",
-    "stellaswap": "25075576.00",
-    "zenlink_astar": "587938.90",
-    "zenlink_moonbeam": "174911.52"
+    "stellaswap": "25075576.00"
   },
   {
     "date": "2023-01-03",
     "arthswap": "12588261.00",
     "avault": "3589560.50",
     "beamswap": "3010708.00",
-    "beefy": "6497566.50",
-    "curve": "15771455.00",
     "parallel": "3799946.00",
-    "solarflare": "287198.34",
-    "stellaswap": "25153364.00",
-    "zenlink_astar": "587123.94",
-    "zenlink_moonbeam": "177739.80"
+    "stellaswap": "25153364.00"
   },
   {
     "date": "2023-01-04",
     "arthswap": "12546456.00",
     "avault": "3555805.80",
     "beamswap": "2974288.50",
-    "beefy": "6661336.50",
-    "curve": "16460693.00",
     "parallel": "3836126.80",
-    "solarflare": "280231.60",
-    "stellaswap": "24785250.00",
-    "zenlink_astar": "585436.30",
-    "zenlink_moonbeam": "174384.95"
+    "stellaswap": "24785250.00"
   },
   {
     "date": "2023-01-05",
     "arthswap": "12681315.00",
     "avault": "3591139.80",
     "beamswap": "3036813.50",
-    "beefy": "6837564.50",
-    "curve": "16533658.00",
     "parallel": "3939342.50",
-    "solarflare": "285108.60",
-    "stellaswap": "25189228.00",
-    "zenlink_astar": "592460.94",
-    "zenlink_moonbeam": "179794.19"
+    "stellaswap": "25189228.00"
   },
   {
     "date": "2023-01-06",
     "arthswap": "12545106.00",
     "avault": "3535795.80",
     "beamswap": "3014801.80",
-    "beefy": "6821927.00",
-    "curve": "16578987.00",
     "parallel": "3946109.50",
-    "solarflare": "279770.12",
     "stellaswap": "24549184.00",
-    "zenlink_astar": "589233.56",
-    "zenlink_moonbeam": "174794.81",
     "hydradx": "150631.00"
   },
   {
@@ -83,13 +53,8 @@
     "arthswap": "12736511.00",
     "avault": "3602504.80",
     "beamswap": "3017575.20",
-    "beefy": "6844126.00",
-    "curve": "16744959.00",
     "parallel": "4120908.00",
-    "solarflare": "276457.12",
     "stellaswap": "24597298.00",
-    "zenlink_astar": "597433.06",
-    "zenlink_moonbeam": "178480.17",
     "hydradx": "152950.00"
   },
   {
@@ -97,13 +62,8 @@
     "arthswap": "12776632.00",
     "avault": "3618362.80",
     "beamswap": "3009511.50",
-    "beefy": "6895695.50",
-    "curve": "16617189.00",
     "parallel": "4090829.20",
-    "solarflare": "274407.62",
     "stellaswap": "24615066.00",
-    "zenlink_astar": "597326.30",
-    "zenlink_moonbeam": "176650.05",
     "hydradx": "179333.00"
   },
   {
@@ -111,13 +71,8 @@
     "arthswap": "12881274.00",
     "avault": "3648451.00",
     "beamswap": "3051477.80",
-    "beefy": "7054519.00",
-    "curve": "17113718.00",
     "parallel": "4311437.50",
-    "solarflare": "280498.20",
     "stellaswap": "25614938.00",
-    "zenlink_astar": "604602.40",
-    "zenlink_moonbeam": "182795.05",
     "hydradx": "228553.00"
   },
   {
@@ -125,13 +80,8 @@
     "arthswap": "13044366.00",
     "avault": "3702900.00",
     "beamswap": "3079854.80",
-    "beefy": "7732065.50",
-    "curve": "18237904.00",
     "parallel": "4371354.00",
-    "solarflare": "286535.47",
     "stellaswap": "24384420.00",
-    "zenlink_astar": "610682.75",
-    "zenlink_moonbeam": "185696.80",
     "hydradx": "227990.00"
   },
   {
@@ -139,13 +89,8 @@
     "arthswap": "13096296.00",
     "avault": "3728224.80",
     "beamswap": "3123885.00",
-    "beefy": "8146725.50",
-    "curve": "18548212.00",
     "parallel": "4398634.50",
-    "solarflare": "285576.97",
     "stellaswap": "22202710.00",
-    "zenlink_astar": "617118.80",
-    "zenlink_moonbeam": "183630.31",
     "hydradx": "291455.00"
   },
   {
@@ -153,13 +98,8 @@
     "arthswap": "13259272.00",
     "avault": "3768968.50",
     "beamswap": "3328606.20",
-    "beefy": "9219550.00",
-    "curve": "19818310.00",
     "parallel": "4594687.00",
-    "solarflare": "294830.00",
     "stellaswap": "22322350.00",
-    "zenlink_astar": "631207.20",
-    "zenlink_moonbeam": "194531.78",
     "hydradx": "296915.00"
   },
   {
@@ -167,13 +107,8 @@
     "arthswap": "13172738.00",
     "avault": "3754629.20",
     "beamswap": "3226312.50",
-    "beefy": "9546248.00",
-    "curve": "20300008.00",
     "parallel": "4648697.50",
-    "solarflare": "300455.06",
     "stellaswap": "22247412.00",
-    "zenlink_astar": "620426.94",
-    "zenlink_moonbeam": "192017.61",
     "hydradx": "308798.00"
   },
   {
@@ -181,13 +116,8 @@
     "arthswap": "13703304.00",
     "avault": "3914552.00",
     "beamswap": "3200526.80",
-    "beefy": "10140996.00",
-    "curve": "22257604.00",
     "parallel": "4774711.00",
-    "solarflare": "315343.38",
     "stellaswap": "22942794.00",
-    "zenlink_astar": "647509.60",
-    "zenlink_moonbeam": "204161.94",
     "hydradx": "332554.00"
   },
   {
@@ -195,13 +125,8 @@
     "arthswap": "13936694.00",
     "avault": "3965765.80",
     "beamswap": "3247386.50",
-    "beefy": "10655810.00",
-    "curve": "23325906.00",
     "parallel": "5149556.50",
-    "solarflare": "320334.44",
     "stellaswap": "22443760.00",
-    "zenlink_astar": "644677.10",
-    "zenlink_moonbeam": "203626.89",
     "hydradx": "365561.00"
   },
   {
@@ -209,13 +134,8 @@
     "arthswap": "14054581.00",
     "avault": "3983935.80",
     "beamswap": "3253467.00",
-    "beefy": "10771953.00",
-    "curve": "23504474.00",
     "parallel": "5137068.00",
-    "solarflare": "324117.72",
     "stellaswap": "22374814.00",
-    "zenlink_astar": "601934.20",
-    "zenlink_moonbeam": "209384.08",
     "hydradx": "341632.00"
   },
   {
@@ -223,13 +143,8 @@
     "arthswap": "14005501.00",
     "avault": "3953898.00",
     "beamswap": "3238673.00",
-    "beefy": "10622499.00",
-    "curve": "22860084.00",
     "parallel": "5011433.50",
-    "solarflare": "320103.90",
     "stellaswap": "22549418.00",
-    "zenlink_astar": "597176.75",
-    "zenlink_moonbeam": "204965.72",
     "hydradx": "354801.00"
   },
   {
@@ -237,13 +152,8 @@
     "arthswap": "13830717.00",
     "avault": "3874514.50",
     "beamswap": "3282084.00",
-    "beefy": "11447673.00",
-    "curve": "24283664.00",
     "parallel": "5210823.50",
-    "solarflare": "325890.75",
     "stellaswap": "22435450.00",
-    "zenlink_astar": "595963.06",
-    "zenlink_moonbeam": "210309.48",
     "hydradx": "320393.00"
   },
   {
@@ -251,13 +161,8 @@
     "arthswap": "13455406.00",
     "avault": "3751685.00",
     "beamswap": "3194068.00",
-    "beefy": "10945103.00",
-    "curve": "23082786.00",
     "parallel": "4915488.50",
-    "solarflare": "313097.16",
     "stellaswap": "21735288.00",
-    "zenlink_astar": "578626.44",
-    "zenlink_moonbeam": "199970.39",
     "hydradx": "266639.00"
   },
   {
@@ -265,13 +170,8 @@
     "arthswap": "13563966.00",
     "avault": "3791917.20",
     "beamswap": "3219863.00",
-    "beefy": "11233359.00",
-    "curve": "23432710.00",
     "parallel": "4998956.50",
-    "solarflare": "321034.34",
     "stellaswap": "22603002.00",
-    "zenlink_astar": "586887.44",
-    "zenlink_moonbeam": "207598.84",
     "hydradx": "495950.00"
   },
   {
@@ -279,13 +179,8 @@
     "arthswap": "14155369.00",
     "avault": "3979686.20",
     "beamswap": "3338508.00",
-    "beefy": "12048084.00",
-    "curve": "25609816.00",
     "parallel": "5365470.50",
-    "solarflare": "332710.56",
     "stellaswap": "22905712.00",
-    "zenlink_astar": "613935.75",
-    "zenlink_moonbeam": "218330.83",
     "hydradx": "440089.00"
   },
   {
@@ -293,13 +188,8 @@
     "arthswap": "14777570.00",
     "avault": "4197883.00",
     "beamswap": "3304614.50",
-    "beefy": "11835619.00",
-    "curve": "25683970.00",
     "parallel": "5326176.50",
-    "solarflare": "338688.70",
     "stellaswap": "22437308.00",
-    "zenlink_astar": "629191.00",
-    "zenlink_moonbeam": "220868.22",
     "hydradx": "440673.00"
   },
   {
@@ -307,13 +197,8 @@
     "arthswap": "15617697.00",
     "avault": "4528940.50",
     "beamswap": "3340328.50",
-    "beefy": "11663925.00",
-    "curve": "25697856.00",
     "parallel": "5390056.50",
-    "solarflare": "339619.97",
     "stellaswap": "22970624.00",
-    "zenlink_astar": "595125.44",
-    "zenlink_moonbeam": "227485.02",
     "hydradx": "447819.00"
   },
   {
@@ -321,13 +206,8 @@
     "arthswap": "15444122.00",
     "avault": "4432149.00",
     "beamswap": "3181264.80",
-    "beefy": "12127636.00",
-    "curve": "26390614.00",
     "parallel": "5626824.50",
-    "solarflare": "350548.38",
     "stellaswap": "22991310.00",
-    "zenlink_astar": "596842.25",
-    "zenlink_moonbeam": "240488.70",
     "hydradx": "426242.00"
   },
   {
@@ -335,13 +215,8 @@
     "arthswap": "14699313.00",
     "avault": "4203958.00",
     "beamswap": "3059192.80",
-    "beefy": "11140894.00",
-    "curve": "25119726.00",
     "parallel": "5315528.50",
-    "solarflare": "340066.53",
     "stellaswap": "22169816.00",
-    "zenlink_astar": "574956.44",
-    "zenlink_moonbeam": "227347.60",
     "hydradx": "462641.00"
   },
   {
@@ -349,13 +224,8 @@
     "arthswap": "15119691.00",
     "avault": "4339279.00",
     "beamswap": "3131505.80",
-    "beefy": "11576070.00",
-    "curve": "26372950.00",
     "parallel": "5528625.00",
-    "solarflare": "348948.84",
     "stellaswap": "22412570.00",
-    "zenlink_astar": "597056.90",
-    "zenlink_moonbeam": "235813.40",
     "hydradx": "478558.00"
   },
   {
@@ -363,13 +233,8 @@
     "arthswap": "15437212.00",
     "avault": "4454211.50",
     "beamswap": "3110860.50",
-    "beefy": "12144069.00",
-    "curve": "26488044.00",
     "parallel": "5487117.00",
-    "solarflare": "235650.56",
     "stellaswap": "21053190.00",
-    "zenlink_astar": "606901.94",
-    "zenlink_moonbeam": "241506.17",
     "hydradx": "1478904.00"
   },
   {
@@ -377,13 +242,8 @@
     "arthswap": "16243393.00",
     "avault": "4705329.00",
     "beamswap": "3170728.00",
-    "beefy": "12369892.00",
-    "curve": "27057448.00",
     "parallel": "5578070.50",
-    "solarflare": "241163.64",
     "stellaswap": "21458306.00",
-    "zenlink_astar": "638260.56",
-    "zenlink_moonbeam": "248165.95",
     "hydradx": "1441236.00"
   },
   {
@@ -391,13 +251,8 @@
     "arthswap": "16179228.00",
     "avault": "4680912.00",
     "beamswap": "3107904.00",
-    "beefy": "12255817.00",
-    "curve": "26255768.00",
     "parallel": "5410736.50",
-    "solarflare": "230373.40",
     "stellaswap": "20895854.00",
-    "zenlink_astar": "635337.44",
-    "zenlink_moonbeam": "233561.45",
     "hydradx": "1488611.00"
   },
   {
@@ -405,13 +260,8 @@
     "arthswap": "16908102.00",
     "avault": "4911022.00",
     "beamswap": "3191135.80",
-    "beefy": "12753977.00",
-    "curve": "27566682.00",
     "parallel": "5619545.50",
-    "solarflare": "241570.23",
     "stellaswap": "21596154.00",
-    "zenlink_astar": "656480.60",
-    "zenlink_moonbeam": "242008.95",
     "hydradx": "1430397.00"
   },
   {
@@ -419,13 +269,8 @@
     "arthswap": "15946227.00",
     "avault": "4598340.50",
     "beamswap": "3054981.50",
-    "beefy": "11914423.00",
-    "curve": "25521876.00",
     "parallel": "5272757.50",
-    "solarflare": "220641.88",
     "stellaswap": "20721328.00",
-    "zenlink_astar": "621289.25",
-    "zenlink_moonbeam": "223374.92",
     "hydradx": "1466174.00"
   },
   {
@@ -433,13 +278,8 @@
     "arthswap": "17235496.00",
     "avault": "5011012.50",
     "beamswap": "3095010.00",
-    "beefy": "12072376.00",
-    "curve": "25325344.00",
     "parallel": "5285135.00",
-    "solarflare": "221076.97",
     "stellaswap": "21049680.00",
-    "zenlink_astar": "658566.20",
-    "zenlink_moonbeam": "225420.33",
     "hydradx": "1477372.00"
   },
   {
@@ -447,13 +287,8 @@
     "arthswap": "17315058.00",
     "avault": "5024936.50",
     "beamswap": "3189569.00",
-    "beefy": "12590378.00",
-    "curve": "26752424.00",
     "parallel": "5536434.50",
-    "solarflare": "223993.83",
     "stellaswap": "21802008.00",
-    "zenlink_astar": "656771.56",
-    "zenlink_moonbeam": "234229.83",
     "hydradx": "1476786.00"
   },
   {
@@ -461,13 +296,8 @@
     "arthswap": "16965008.00",
     "avault": "4888614.50",
     "beamswap": "3168080.20",
-    "beefy": "12600136.00",
-    "curve": "27142264.00",
     "parallel": "5387129.00",
-    "solarflare": "229040.10",
     "stellaswap": "21888674.00",
-    "zenlink_astar": "644768.40",
-    "zenlink_moonbeam": "232321.75",
     "hydradx": "2922662.00"
   },
   {
@@ -475,13 +305,8 @@
     "arthswap": "17336556.00",
     "avault": "4980857.50",
     "beamswap": "3263434.00",
-    "beefy": "13422366.00",
-    "curve": "27594768.00",
     "parallel": "5735032.50",
-    "solarflare": "243360.83",
     "stellaswap": "22933366.00",
-    "zenlink_astar": "664523.20",
-    "zenlink_moonbeam": "244130.08",
     "hydradx": "2908242.00"
   },
   {
@@ -489,13 +314,8 @@
     "arthswap": "16723567.00",
     "avault": "4808673.50",
     "beamswap": "3306619.00",
-    "beefy": "11951108.00",
-    "curve": "23891306.00",
     "parallel": "5550412.50",
-    "solarflare": "239856.92",
     "stellaswap": "22830146.00",
-    "zenlink_astar": "639208.25",
-    "zenlink_moonbeam": "240248.08",
     "hydradx": "2865453.00"
   },
   {
@@ -503,13 +323,8 @@
     "arthswap": "16327917.00",
     "avault": "4658760.50",
     "beamswap": "3241995.50",
-    "beefy": "11475792.00",
-    "curve": "23060460.00",
     "parallel": "4777047.00",
-    "solarflare": "229829.97",
     "stellaswap": "21712180.00",
-    "zenlink_astar": "631502.80",
-    "zenlink_moonbeam": "234553.42",
     "hydradx": "2866902.00"
   },
   {
@@ -517,13 +332,8 @@
     "arthswap": "16524233.00",
     "avault": "4733628.00",
     "beamswap": "3276948.20",
-    "beefy": "11120286.00",
-    "curve": "22346176.00",
     "parallel": "4633400.50",
-    "solarflare": "225602.47",
     "stellaswap": "21325334.00",
-    "zenlink_astar": "635459.40",
-    "zenlink_moonbeam": "229743.19",
     "hydradx": "2907384.00"
   },
   {
@@ -531,13 +341,8 @@
     "arthswap": "17980884.00",
     "avault": "5178604.00",
     "beamswap": "3451000.80",
-    "beefy": "11285814.00",
-    "curve": "22599566.00",
     "parallel": "4706805.00",
-    "solarflare": "233112.97",
     "stellaswap": "22723076.00",
-    "zenlink_astar": "685403.00",
-    "zenlink_moonbeam": "245769.28",
     "hydradx": "2862946.00"
   },
   {
@@ -545,13 +350,8 @@
     "arthswap": "23061226.00",
     "avault": "6732120.00",
     "beamswap": "3486178.80",
-    "beefy": "11098186.00",
-    "curve": "22842604.00",
     "parallel": "4520596.00",
-    "solarflare": "253069.56",
     "stellaswap": "22883824.00",
-    "zenlink_astar": "869165.56",
-    "zenlink_moonbeam": "259651.03",
     "hydradx": "2803812.00"
   },
   {
@@ -559,13 +359,8 @@
     "arthswap": "20196336.00",
     "avault": "5672728.50",
     "beamswap": "3176772.00",
-    "beefy": "10242381.00",
-    "curve": "21066404.00",
     "parallel": "3657132.20",
-    "solarflare": "211687.53",
     "stellaswap": "20518098.00",
-    "zenlink_astar": "644932.30",
-    "zenlink_moonbeam": "220593.45",
     "hydradx": "4169834.00"
   },
   {
@@ -573,13 +368,8 @@
     "arthswap": "20657304.00",
     "avault": "5648871.50",
     "beamswap": "3287043.20",
-    "beefy": "10070163.00",
-    "curve": "20598762.00",
     "parallel": "3625625.20",
-    "solarflare": "206491.81",
     "stellaswap": "20340228.00",
-    "zenlink_astar": "647709.75",
-    "zenlink_moonbeam": "223684.72",
     "hydradx": "4160665.00"
   },
   {
@@ -587,13 +377,8 @@
     "arthswap": "22034328.00",
     "avault": "6114018.50",
     "beamswap": "3322590.80",
-    "beefy": "10011321.00",
-    "curve": "20902668.00",
     "parallel": "3664897.20",
-    "solarflare": "206022.90",
     "stellaswap": "20990778.00",
-    "zenlink_astar": "711741.60",
-    "zenlink_moonbeam": "227177.11",
     "hydradx": "4121875.00"
   },
   {
@@ -601,13 +386,8 @@
     "arthswap": "20536908.00",
     "avault": "5693462.00",
     "beamswap": "3312721.00",
-    "beefy": "9803926.00",
-    "curve": "20418698.00",
     "parallel": "3058467.50",
-    "solarflare": "197347.81",
     "stellaswap": "20536928.00",
-    "zenlink_astar": "654954.80",
-    "zenlink_moonbeam": "217193.92",
     "hydradx": "4065868.00"
   },
   {
@@ -615,13 +395,8 @@
     "arthswap": "21249864.00",
     "avault": "5801617.00",
     "beamswap": "3270376.80",
-    "beefy": "10318420.00",
-    "curve": "20238136.00",
     "parallel": "3685490.20",
-    "solarflare": "184609.53",
     "stellaswap": "19964182.00",
-    "zenlink_astar": "665634.25",
-    "zenlink_moonbeam": "211544.39",
     "hydradx": "4193985.00"
   },
   {
@@ -629,13 +404,8 @@
     "arthswap": "21364778.00",
     "avault": "5904223.50",
     "beamswap": "3296551.00",
-    "beefy": "10119694.00",
-    "curve": "19360352.00",
     "parallel": "3885850.00",
-    "solarflare": "196165.50",
     "stellaswap": "20661322.00",
-    "zenlink_astar": "687281.94",
-    "zenlink_moonbeam": "221381.03",
     "hydradx": "4451015.00"
   },
   {
@@ -643,13 +413,8 @@
     "arthswap": "24349088.00",
     "avault": "6777643.50",
     "beamswap": "3403545.80",
-    "beefy": "10649392.00",
-    "curve": "20617022.00",
     "parallel": "4733558.50",
-    "solarflare": "203834.50",
     "stellaswap": "21493390.00",
-    "zenlink_astar": "750876.70",
-    "zenlink_moonbeam": "224032.69",
     "hydradx": "4401407.00"
   },
   {
@@ -657,13 +422,8 @@
     "arthswap": "23495570.00",
     "avault": "6538784.00",
     "beamswap": "3117668.00",
-    "beefy": "10309792.00",
-    "curve": "19852934.00",
     "parallel": "4634522.00",
-    "solarflare": "199638.03",
     "stellaswap": "20861714.00",
-    "zenlink_astar": "716350.70",
-    "zenlink_moonbeam": "217342.77",
     "hydradx": "5739395.00"
   },
   {
@@ -671,13 +431,8 @@
     "arthswap": "26127822.00",
     "avault": "7362078.00",
     "beamswap": "3366946.50",
-    "beefy": "11530219.00",
-    "curve": "19780772.00",
     "parallel": "5207566.50",
-    "solarflare": "221043.19",
     "stellaswap": "22007564.00",
-    "zenlink_astar": "749481.80",
-    "zenlink_moonbeam": "226311.19",
     "hydradx": "5733296.00"
   },
   {
@@ -685,13 +440,8 @@
     "arthswap": "26191464.00",
     "avault": "7390076.00",
     "beamswap": "3324143.50",
-    "beefy": "11493147.00",
-    "curve": "20225908.00",
     "parallel": "5151578.00",
-    "solarflare": "221562.81",
     "stellaswap": "22319472.00",
-    "zenlink_astar": "756152.30",
-    "zenlink_moonbeam": "228805.36",
     "hydradx": "5697260.00"
   },
   {
@@ -699,13 +449,8 @@
     "arthswap": "25417962.00",
     "avault": "7134432.00",
     "beamswap": "3422936.80",
-    "beefy": "11739483.00",
-    "curve": "20771290.00",
     "parallel": "5282773.50",
-    "solarflare": "210240.56",
     "stellaswap": "22197930.00",
-    "zenlink_astar": "733123.20",
-    "zenlink_moonbeam": "230169.95",
     "hydradx": "5724455.00"
   },
   {
@@ -713,13 +458,8 @@
     "arthswap": "24767124.00",
     "avault": "6877681.50",
     "beamswap": "3496514.00",
-    "beefy": "11771551.00",
-    "curve": "20169252.00",
     "parallel": "5397728.00",
-    "solarflare": "225904.66",
     "stellaswap": "22958546.00",
-    "zenlink_astar": "716396.25",
-    "zenlink_moonbeam": "240943.06",
     "hydradx": "5665535.00"
   },
   {
@@ -727,13 +467,8 @@
     "arthswap": "23948968.00",
     "avault": "6646039.00",
     "beamswap": "3286631.50",
-    "beefy": "11249556.00",
-    "curve": "19331576.00",
     "parallel": "5137340.50",
-    "solarflare": "210659.44",
     "stellaswap": "22205558.00",
-    "zenlink_astar": "703108.06",
-    "zenlink_moonbeam": "227312.75",
     "hydradx": "5660381.00"
   },
   {
@@ -741,13 +476,8 @@
     "arthswap": "23124402.00",
     "avault": "6398693.50",
     "beamswap": "3300285.80",
-    "beefy": "9382841.00",
-    "curve": "17626950.00",
     "parallel": "5135921.00",
-    "solarflare": "208796.31",
     "stellaswap": "22036074.00",
-    "zenlink_astar": "681402.40",
-    "zenlink_moonbeam": "227260.69",
     "hydradx": "5614593.00"
   },
   {
@@ -755,13 +485,8 @@
     "arthswap": "22751408.00",
     "avault": "6287459.50",
     "beamswap": "3365167.80",
-    "beefy": "8729096.00",
-    "curve": "17187674.00",
     "parallel": "5052411.50",
-    "solarflare": "211321.36",
     "stellaswap": "21412232.00",
-    "zenlink_astar": "673645.00",
-    "zenlink_moonbeam": "228509.92",
     "hydradx": "5535637.00"
   },
   {
@@ -769,13 +494,8 @@
     "arthswap": "20519270.00",
     "avault": "5793772.50",
     "beamswap": "3166801.80",
-    "beefy": "6771216.00",
-    "curve": "14856081.00",
     "parallel": "4723987.00",
-    "solarflare": "197889.52",
     "stellaswap": "20628574.00",
-    "zenlink_astar": "629525.70",
-    "zenlink_moonbeam": "212995.48",
     "hydradx": "5463733.00"
   },
   {
@@ -783,13 +503,8 @@
     "arthswap": "20060908.00",
     "avault": "5666260.00",
     "beamswap": "3085419.00",
-    "beefy": "6615743.50",
-    "curve": "14392238.00",
     "parallel": "4674758.50",
-    "solarflare": "190250.88",
     "stellaswap": "20473554.00",
-    "zenlink_astar": "617975.90",
-    "zenlink_moonbeam": "209857.45",
     "hydradx": "5879322.00"
   },
   {
@@ -797,13 +512,8 @@
     "arthswap": "20717966.00",
     "avault": "5863749.50",
     "beamswap": "3201052.50",
-    "beefy": "6866371.50",
-    "curve": "14399108.00",
     "parallel": "4835458.50",
-    "solarflare": "206779.84",
     "stellaswap": "21275420.00",
-    "zenlink_astar": "635155.30",
-    "zenlink_moonbeam": "216323.80",
     "hydradx": "5864719.00"
   },
   {
@@ -811,13 +521,8 @@
     "arthswap": "20481582.00",
     "avault": "5793954.50",
     "beamswap": "3160593.00",
-    "beefy": "6693943.50",
-    "curve": "13131209.00",
     "parallel": "4726653.00",
-    "solarflare": "201760.31",
     "stellaswap": "21106736.00",
-    "zenlink_astar": "632500.70",
-    "zenlink_moonbeam": "212164.05",
     "hydradx": "5864849.00"
   },
   {
@@ -825,13 +530,8 @@
     "arthswap": "19546754.00",
     "avault": "5543817.00",
     "beamswap": "3307836.20",
-    "beefy": "5886928.50",
-    "curve": "10696958.00",
     "parallel": "4604871.00",
-    "solarflare": "195417.60",
     "stellaswap": "20778052.00",
-    "zenlink_astar": "617103.40",
-    "zenlink_moonbeam": "205411.84",
     "hydradx": "5881636.00"
   },
   {
@@ -839,13 +539,8 @@
     "arthswap": "20799658.00",
     "avault": "5913035.00",
     "beamswap": "3072993.20",
-    "beefy": "5071850.00",
-    "curve": "10835065.00",
     "parallel": "4723025.00",
-    "solarflare": "196873.55",
     "stellaswap": "21039602.00",
-    "zenlink_astar": "647550.00",
-    "zenlink_moonbeam": "209030.66",
     "hydradx": "6329039.00"
   },
   {
@@ -853,13 +548,8 @@
     "arthswap": "19795374.00",
     "avault": "5603521.50",
     "beamswap": "2588874.00",
-    "beefy": "3491578.20",
-    "curve": "9662912.00",
     "parallel": "3904118.50",
-    "solarflare": "197243.00",
     "stellaswap": "21129096.00",
-    "zenlink_astar": "623184.50",
-    "zenlink_moonbeam": "208714.61",
     "hydradx": "6315998.00"
   },
   {
@@ -867,13 +557,8 @@
     "arthswap": "18674544.00",
     "avault": "5258697.50",
     "beamswap": "2481923.80",
-    "beefy": "2672719.20",
-    "curve": "9065931.00",
     "parallel": "3762200.50",
-    "solarflare": "188145.50",
     "stellaswap": "20645472.00",
-    "zenlink_astar": "600424.90",
-    "zenlink_moonbeam": "200620.81",
     "hydradx": "6306479.00"
   },
   {
@@ -881,13 +566,8 @@
     "arthswap": "18085584.00",
     "avault": "5112685.50",
     "beamswap": "2444393.00",
-    "beefy": "2555358.50",
-    "curve": "8752705.00",
     "parallel": "4331009.50",
-    "solarflare": "186099.23",
     "stellaswap": "20438452.00",
-    "zenlink_astar": "579553.44",
-    "zenlink_moonbeam": "199234.00",
     "hydradx": "6301802.00"
   },
   {
@@ -895,13 +575,8 @@
     "arthswap": "18006288.00",
     "avault": "5076027.50",
     "beamswap": "2430886.50",
-    "beefy": "2513903.80",
-    "curve": "3685177.50",
     "parallel": "4429899.00",
-    "solarflare": "183365.36",
     "stellaswap": "20533548.00",
-    "zenlink_astar": "580463.06",
-    "zenlink_moonbeam": "199011.02",
     "hydradx": "6290426.00"
   },
   {
@@ -909,13 +584,8 @@
     "arthswap": "18072746.00",
     "avault": "5102857.50",
     "beamswap": "2401170.80",
-    "beefy": "2450110.50",
-    "curve": "3173455.80",
     "parallel": "4366753.00",
-    "solarflare": "180059.14",
     "stellaswap": "20375646.00",
-    "zenlink_astar": "579441.90",
-    "zenlink_moonbeam": "199405.77",
     "hydradx": "6229539.00"
   },
   {
@@ -923,13 +593,8 @@
     "arthswap": "18027838.00",
     "avault": "5086029.00",
     "beamswap": "2377413.80",
-    "beefy": "2403577.20",
-    "curve": "2961456.80",
     "parallel": "4327384.50",
-    "solarflare": "178544.25",
     "stellaswap": "20276568.00",
-    "zenlink_astar": "576322.50",
-    "zenlink_moonbeam": "196939.16",
     "hydradx": "6177294.00"
   },
   {
@@ -937,13 +602,8 @@
     "arthswap": "16745165.00",
     "avault": "4691326.00",
     "beamswap": "2321601.50",
-    "beefy": "2288645.00",
-    "curve": "2844182.20",
     "parallel": "4398896.00",
-    "solarflare": "172730.23",
     "stellaswap": "19728540.00",
-    "zenlink_astar": "541292.56",
-    "zenlink_moonbeam": "190813.62",
     "hydradx": "5874455.00"
   },
   {
@@ -951,13 +611,8 @@
     "arthswap": "15861189.00",
     "avault": "4480621.00",
     "beamswap": "2243840.20",
-    "beefy": "2178049.20",
-    "curve": "2395126.50",
     "parallel": "4209500.50",
-    "solarflare": "163946.25",
     "stellaswap": "18976732.00",
-    "zenlink_astar": "514040.72",
-    "zenlink_moonbeam": "183687.00",
     "hydradx": "6282396.00"
   },
   {
@@ -965,13 +620,8 @@
     "arthswap": "16160479.00",
     "avault": "4543870.00",
     "beamswap": "2211283.20",
-    "beefy": "2205969.00",
-    "curve": "2271042.80",
     "parallel": "4073408.50",
-    "solarflare": "162182.06",
     "stellaswap": "18300716.00",
-    "zenlink_astar": "510166.03",
-    "zenlink_moonbeam": "180625.58",
     "hydradx": "6189594.00"
   },
   {
@@ -979,13 +629,8 @@
     "arthswap": "15389939.00",
     "avault": "4334211.00",
     "beamswap": "1951332.80",
-    "beefy": "2130052.50",
-    "curve": "2148277.20",
     "parallel": "3988839.00",
-    "solarflare": "157733.52",
     "stellaswap": "13946676.00",
-    "zenlink_astar": "486428.88",
-    "zenlink_moonbeam": "174189.10",
     "hydradx": "6373213.00"
   },
   {
@@ -993,13 +638,8 @@
     "arthswap": "16835818.00",
     "avault": "4770280.00",
     "beamswap": "2055247.90",
-    "beefy": "2293436.00",
-    "curve": "2269191.50",
     "parallel": "4394726.00",
-    "solarflare": "171778.72",
     "stellaswap": "15501181.00",
-    "zenlink_astar": "530608.94",
-    "zenlink_moonbeam": "186062.92",
     "hydradx": "6526436.00"
   },
   {
@@ -1007,13 +647,8 @@
     "arthswap": "17539228.00",
     "avault": "4995463.50",
     "beamswap": "2086581.20",
-    "beefy": "2341611.00",
-    "curve": "2373858.20",
     "parallel": "4457241.00",
-    "solarflare": "178840.00",
     "stellaswap": "16855988.00",
-    "zenlink_astar": "542516.25",
-    "zenlink_moonbeam": "191568.61",
     "hydradx": "6558397.00"
   },
   {
@@ -1021,13 +656,8 @@
     "arthswap": "17009816.00",
     "avault": "5135516.00",
     "beamswap": "2088469.90",
-    "beefy": "2352689.00",
-    "curve": "2405038.20",
     "parallel": "4530723.00",
-    "solarflare": "189500.12",
     "stellaswap": "18008520.00",
-    "zenlink_astar": "547384.10",
-    "zenlink_moonbeam": "197228.55",
     "hydradx": "6426817.00"
   },
   {
@@ -1035,13 +665,8 @@
     "arthswap": "16069192.00",
     "avault": "4835305.00",
     "beamswap": "2067018.40",
-    "beefy": "2243821.20",
-    "curve": "2225864.00",
     "parallel": "4232856.00",
-    "solarflare": "181109.60",
     "stellaswap": "17389500.00",
-    "zenlink_astar": "521259.56",
-    "zenlink_moonbeam": "188283.28",
     "hydradx": "6610945.00"
   },
   {
@@ -1049,13 +674,8 @@
     "arthswap": "16439450.00",
     "avault": "4950857.50",
     "beamswap": "2037969.40",
-    "beefy": "2344464.20",
-    "curve": "2167379.20",
     "parallel": "4391263.50",
-    "solarflare": "178222.73",
     "stellaswap": "16953124.00",
-    "zenlink_astar": "537916.94",
-    "zenlink_moonbeam": "187482.60",
     "hydradx": "6858610.00"
   },
   {
@@ -1063,13 +683,8 @@
     "arthswap": "17489860.00",
     "avault": "5288620.50",
     "beamswap": "2158911.50",
-    "beefy": "2471989.20",
-    "curve": "2365179.00",
     "parallel": "4108268.00",
-    "solarflare": "190705.36",
     "stellaswap": "18006070.00",
-    "zenlink_astar": "568683.56",
-    "zenlink_moonbeam": "201033.22",
     "hydradx": "6722953.00"
   },
   {
@@ -1077,13 +692,8 @@
     "arthswap": "17810364.00",
     "avault": "5409837.50",
     "beamswap": "2144474.00",
-    "beefy": "2387429.00",
-    "curve": "2206246.50",
     "parallel": "3920340.20",
-    "solarflare": "175846.86",
     "stellaswap": "17827854.00",
-    "zenlink_astar": "573355.70",
-    "zenlink_moonbeam": "196114.19",
     "hydradx": "6816876.00"
   },
   {
@@ -1091,13 +701,8 @@
     "arthswap": "17678168.00",
     "avault": "5364234.50",
     "beamswap": "2169390.20",
-    "beefy": "2351470.80",
-    "curve": "2195435.50",
     "parallel": "3936601.20",
-    "solarflare": "187744.69",
     "stellaswap": "17226608.00",
-    "zenlink_astar": "564395.60",
-    "zenlink_moonbeam": "197772.27",
     "hydradx": "6670647.00"
   },
   {
@@ -1105,13 +710,8 @@
     "arthswap": "16978750.00",
     "avault": "5081361.50",
     "beamswap": "2141698.50",
-    "beefy": "2185169.00",
-    "curve": "2106916.50",
     "parallel": "3696220.20",
-    "solarflare": "176782.98",
     "stellaswap": "15507566.00",
-    "zenlink_astar": "547257.94",
-    "zenlink_moonbeam": "187648.30",
     "hydradx": "6752362.00"
   },
   {
@@ -1119,13 +719,8 @@
     "arthswap": "17466328.00",
     "avault": "5224619.50",
     "beamswap": "2152359.50",
-    "beefy": "2173389.20",
-    "curve": "1905946.80",
     "parallel": "3800131.50",
-    "solarflare": "174528.67",
     "stellaswap": "15380773.00",
-    "zenlink_astar": "555047.90",
-    "zenlink_moonbeam": "188260.45",
     "hydradx": "6780940.00"
   },
   {
@@ -1133,13 +728,8 @@
     "arthswap": "16458490.00",
     "avault": "4986543.50",
     "beamswap": "2127389.80",
-    "beefy": "1764665.60",
-    "curve": "1827491.80",
     "parallel": "3614057.80",
-    "solarflare": "170018.55",
     "stellaswap": "14086481.00",
-    "zenlink_astar": "529405.10",
-    "zenlink_moonbeam": "183333.31",
     "hydradx": "6891604.00"
   },
   {
@@ -1147,13 +737,8 @@
     "arthswap": "16737733.00",
     "avault": "5053711.50",
     "beamswap": "2161796.50",
-    "beefy": "1793800.10",
-    "curve": "1872500.90",
     "parallel": "3707810.80",
-    "solarflare": "176562.44",
     "stellaswap": "13351226.00",
-    "zenlink_astar": "545891.75",
-    "zenlink_moonbeam": "187105.88",
     "hydradx": "6776905.00"
   },
   {
@@ -1161,13 +746,8 @@
     "arthswap": "16163173.00",
     "avault": "4836223.50",
     "beamswap": "2113072.80",
-    "beefy": "1702485.10",
-    "curve": "1814729.80",
     "parallel": "3528546.20",
-    "solarflare": "170819.67",
     "stellaswap": "12912105.00",
-    "zenlink_astar": "531364.94",
-    "zenlink_moonbeam": "181152.55",
     "hydradx": "6766222.00"
   },
   {
@@ -1175,13 +755,8 @@
     "arthswap": "15881428.00",
     "avault": "4720028.50",
     "beamswap": "2031559.80",
-    "beefy": "1566837.50",
-    "curve": "1776124.60",
     "parallel": "3429515.00",
-    "solarflare": "167767.70",
     "stellaswap": "11939454.00",
-    "zenlink_astar": "520597.34",
-    "zenlink_moonbeam": "176599.25",
     "hydradx": "6792839.00"
   },
   {
@@ -1189,13 +764,8 @@
     "arthswap": "15989573.00",
     "avault": "4770645.50",
     "beamswap": "2050375.40",
-    "beefy": "1576826.40",
-    "curve": "1766421.90",
     "parallel": "3457339.80",
-    "solarflare": "170319.19",
     "stellaswap": "11898304.00",
-    "zenlink_astar": "524715.20",
-    "zenlink_moonbeam": "181329.61",
     "hydradx": "6691534.00"
   },
   {
@@ -1203,13 +773,8 @@
     "arthswap": "15815392.00",
     "avault": "4711551.50",
     "beamswap": "1978003.40",
-    "beefy": "1496295.90",
-    "curve": "1328459.60",
     "parallel": "3272918.00",
-    "solarflare": "162780.31",
     "stellaswap": "11547560.00",
-    "zenlink_astar": "524353.30",
-    "zenlink_moonbeam": "199572.98",
     "hydradx": "6880744.00"
   },
   {
@@ -1217,13 +782,8 @@
     "arthswap": "15946160.00",
     "avault": "4746135.00",
     "beamswap": "1379963.50",
-    "beefy": "1519037.20",
-    "curve": "1347581.40",
     "parallel": "3401105.50",
-    "solarflare": "162890.02",
     "stellaswap": "11576435.00",
-    "zenlink_astar": "523203.28",
-    "zenlink_moonbeam": "202957.66",
     "hydradx": "6877179.00"
   },
   {
@@ -1231,13 +791,8 @@
     "arthswap": "16488602.00",
     "avault": "4932606.00",
     "beamswap": "1408906.10",
-    "beefy": "1522768.60",
-    "curve": "1362374.90",
     "parallel": "3437282.20",
-    "solarflare": "166299.95",
     "stellaswap": "11715613.00",
-    "zenlink_astar": "533120.70",
-    "zenlink_moonbeam": "206844.66",
     "hydradx": "6814734.00"
   },
   {
@@ -1245,13 +800,8 @@
     "arthswap": "16232854.00",
     "avault": "4826879.50",
     "beamswap": "1402095.40",
-    "beefy": "1389909.80",
-    "curve": "1318993.20",
     "parallel": "3432805.80",
-    "solarflare": "163335.38",
     "stellaswap": "10406223.00",
-    "zenlink_astar": "526336.70",
-    "zenlink_moonbeam": "206206.36",
     "hydradx": "6888445.00"
   },
   {
@@ -1259,13 +809,8 @@
     "arthswap": "16360402.00",
     "avault": "4863417.50",
     "beamswap": "1419443.50",
-    "beefy": "1406508.50",
-    "curve": "1360436.50",
     "parallel": "3479199.20",
-    "solarflare": "160902.02",
     "stellaswap": "9734944.00",
-    "zenlink_astar": "531471.06",
-    "zenlink_moonbeam": "212623.52",
     "hydradx": "6884663.00"
   },
   {
@@ -1273,13 +818,8 @@
     "arthswap": "16280954.00",
     "avault": "4859083.00",
     "beamswap": "1437232.60",
-    "beefy": "1357414.00",
-    "curve": "1354202.80",
     "parallel": "3485357.00",
-    "solarflare": "159546.90",
     "stellaswap": "8912317.00",
-    "zenlink_astar": "525726.44",
-    "zenlink_moonbeam": "186547.19",
     "hydradx": "6821891.00"
   },
   {
@@ -1287,13 +827,8 @@
     "arthswap": "15756383.00",
     "avault": "4682254.50",
     "beamswap": "1418739.90",
-    "beefy": "1287764.20",
-    "curve": "1335846.20",
     "parallel": "3456647.50",
-    "solarflare": "154933.90",
     "stellaswap": "8670746.00",
-    "zenlink_astar": "510892.97",
-    "zenlink_moonbeam": "181920.42",
     "hydradx": "6833551.00"
   },
   {
@@ -1301,13 +836,8 @@
     "arthswap": "16017328.00",
     "avault": "4760890.50",
     "beamswap": "1420432.10",
-    "beefy": "1301539.80",
-    "curve": "1346606.10",
     "parallel": "3523231.20",
-    "solarflare": "156253.67",
     "stellaswap": "8238565.00",
-    "zenlink_astar": "515908.84",
-    "zenlink_moonbeam": "185793.42",
     "hydradx": "6991742.00"
   },
   {
@@ -1315,13 +845,8 @@
     "arthswap": "16630594.00",
     "avault": "4958972.00",
     "beamswap": "1446833.90",
-    "beefy": "1327638.90",
-    "curve": "1378972.20",
     "parallel": "3606566.20",
-    "solarflare": "162466.75",
     "stellaswap": "8404416.00",
-    "zenlink_astar": "528168.94",
-    "zenlink_moonbeam": "192337.03",
     "hydradx": "6897477.00"
   },
   {
@@ -1329,13 +854,8 @@
     "arthswap": "16574306.00",
     "avault": "4956778.50",
     "beamswap": "1453218.40",
-    "beefy": "1287299.80",
-    "curve": "1379729.60",
     "parallel": "3540089.00",
-    "solarflare": "161715.00",
     "stellaswap": "8133682.50",
-    "zenlink_astar": "526955.60",
-    "zenlink_moonbeam": "191212.42",
     "hydradx": "6836064.00"
   },
   {
@@ -1343,13 +863,8 @@
     "arthswap": "16453702.00",
     "avault": "4896688.50",
     "beamswap": "1454754.50",
-    "beefy": "1225132.20",
-    "curve": "1346124.10",
     "parallel": "3472608.50",
-    "solarflare": "156212.28",
     "stellaswap": "7877743.50",
-    "zenlink_astar": "522492.22",
-    "zenlink_moonbeam": "191311.61",
     "hydradx": "6864265.00"
   },
   {
@@ -1357,13 +872,8 @@
     "arthswap": "15755468.00",
     "avault": "4649343.50",
     "beamswap": "1435178.90",
-    "beefy": "1181350.10",
-    "curve": "1225509.60",
     "parallel": "3310394.50",
-    "solarflare": "152218.03",
     "stellaswap": "7707309.00",
-    "zenlink_astar": "506269.03",
-    "zenlink_moonbeam": "183675.75",
     "hydradx": "6821796.00"
   },
   {
@@ -1371,13 +881,8 @@
     "arthswap": "16057810.00",
     "avault": "4744037.00",
     "beamswap": "1436137.10",
-    "beefy": "1118075.80",
-    "curve": "1221976.50",
     "parallel": "3354454.80",
-    "solarflare": "152355.39",
     "stellaswap": "7710905.00",
-    "zenlink_astar": "515120.72",
-    "zenlink_moonbeam": "184216.28",
     "hydradx": "6822466.00"
   },
   {
@@ -1385,13 +890,8 @@
     "arthswap": "16203052.00",
     "avault": "4805454.00",
     "beamswap": "1421380.20",
-    "beefy": "1082565.10",
-    "curve": "1214251.20",
     "parallel": "3391287.50",
-    "solarflare": "152595.02",
     "stellaswap": "7582750.00",
-    "zenlink_astar": "516591.84",
-    "zenlink_moonbeam": "186733.73",
     "hydradx": "7034485.00"
   },
   {
@@ -1399,13 +899,8 @@
     "arthswap": "16836862.00",
     "avault": "5012872.50",
     "beamswap": "1424387.00",
-    "beefy": "1095296.40",
-    "curve": "1223021.40",
     "parallel": "3435136.80",
-    "solarflare": "154784.60",
     "stellaswap": "7572734.00",
-    "zenlink_astar": "529850.70",
-    "zenlink_moonbeam": "188574.73",
     "hydradx": "6954174.00"
   },
   {
@@ -1413,13 +908,8 @@
     "arthswap": "17053416.00",
     "avault": "5089340.00",
     "beamswap": "1430721.20",
-    "beefy": "1099667.20",
-    "curve": "1260945.50",
     "parallel": "3476716.20",
-    "solarflare": "154686.56",
     "stellaswap": "7459411.00",
-    "zenlink_astar": "532757.44",
-    "zenlink_moonbeam": "186246.12",
     "hydradx": "9808279.00"
   },
   {
@@ -1427,13 +917,8 @@
     "arthswap": "16771849.00",
     "avault": "4999798.00",
     "beamswap": "1424610.00",
-    "beefy": "1093569.40",
-    "curve": "1257026.50",
     "parallel": "3477986.20",
-    "solarflare": "149935.53",
     "stellaswap": "7631201.00",
-    "zenlink_astar": "522724.75",
-    "zenlink_moonbeam": "187458.94",
     "hydradx": "10038293.00"
   },
   {
@@ -1441,13 +926,8 @@
     "arthswap": "17794084.00",
     "avault": "5321177.50",
     "beamswap": "1523820.20",
-    "beefy": "1161057.90",
-    "curve": "1294137.60",
     "parallel": "3680776.80",
-    "solarflare": "156989.45",
     "stellaswap": "7794517.00",
-    "zenlink_astar": "548937.90",
-    "zenlink_moonbeam": "197212.90",
     "hydradx": "10001807.00"
   },
   {
@@ -1455,13 +935,8 @@
     "arthswap": "17957490.00",
     "avault": "5380508.50",
     "beamswap": "1352355.40",
-    "beefy": "1115140.80",
-    "curve": "1294283.20",
     "parallel": "3614580.80",
-    "solarflare": "152580.25",
     "stellaswap": "7639364.50",
-    "zenlink_astar": "551690.00",
-    "zenlink_moonbeam": "191256.60",
     "hydradx": "9959175.00"
   },
   {
@@ -1469,13 +944,8 @@
     "arthswap": "18152160.00",
     "avault": "5434564.00",
     "beamswap": "1348991.80",
-    "beefy": "1133865.90",
-    "curve": "1293711.80",
     "parallel": "3656120.80",
-    "solarflare": "159466.84",
     "stellaswap": "7204567.50",
-    "zenlink_astar": "558280.56",
-    "zenlink_moonbeam": "201551.90",
     "hydradx": "9935715.00"
   },
   {
@@ -1483,13 +953,8 @@
     "arthswap": "17780128.00",
     "avault": "5328100.00",
     "beamswap": "1394551.80",
-    "beefy": "1171544.40",
-    "curve": "1307325.40",
     "parallel": "3595329.80",
-    "solarflare": "158196.64",
     "stellaswap": "7298987.50",
-    "zenlink_astar": "546040.60",
-    "zenlink_moonbeam": "198369.33",
     "hydradx": "10000853.00"
   },
   {
@@ -1497,13 +962,8 @@
     "arthswap": "17701726.00",
     "avault": "5294785.50",
     "beamswap": "1382357.40",
-    "beefy": "1102296.80",
-    "curve": "1257068.80",
     "parallel": "3580473.80",
-    "solarflare": "157367.72",
     "stellaswap": "6597058.50",
-    "zenlink_astar": "543853.06",
-    "zenlink_moonbeam": "197982.53",
     "hydradx": "9766633.00"
   },
   {
@@ -1511,13 +971,8 @@
     "arthswap": "17864728.00",
     "avault": "5342880.50",
     "beamswap": "1380206.10",
-    "beefy": "1097325.20",
-    "curve": "1036434.20",
     "parallel": "3655510.50",
-    "solarflare": "158527.45",
     "stellaswap": "6318728.50",
-    "zenlink_astar": "544838.90",
-    "zenlink_moonbeam": "197747.19",
     "hydradx": "9709029.00"
   },
   {
@@ -1525,13 +980,8 @@
     "arthswap": "16428935.00",
     "avault": "4837636.00",
     "beamswap": "1248173.50",
-    "beefy": "1002627.70",
-    "curve": "1031627.00",
     "parallel": "3397745.80",
-    "solarflare": "147113.31",
     "stellaswap": "5767464.00",
-    "zenlink_astar": "513821.06",
-    "zenlink_moonbeam": "187673.08",
     "hydradx": "9557016.00"
   },
   {
@@ -1539,13 +989,8 @@
     "arthswap": "14104481.00",
     "avault": "4683584.50",
     "beamswap": "1205012.50",
-    "beefy": "965167.10",
-    "curve": "1004475.00",
     "parallel": "3228782.20",
-    "solarflare": "137698.70",
     "stellaswap": "5354032.50",
-    "zenlink_astar": "500622.70",
-    "zenlink_moonbeam": "185467.40",
     "hydradx": "9421261.00"
   },
   {
@@ -1553,13 +998,8 @@
     "arthswap": "13575743.00",
     "avault": "4487218.50",
     "beamswap": "1071603.60",
-    "beefy": "945081.75",
-    "curve": "976205.25",
     "parallel": "3075219.20",
-    "solarflare": "138895.34",
     "stellaswap": "5234955.50",
-    "zenlink_astar": "488822.62",
-    "zenlink_moonbeam": "184258.45",
     "hydradx": "9435019.00"
   },
   {
@@ -1567,13 +1007,8 @@
     "arthswap": "13603520.00",
     "avault": "4534409.00",
     "beamswap": "1088106.90",
-    "beefy": "946473.60",
-    "curve": "980456.60",
     "parallel": "3133860.00",
-    "solarflare": "142607.86",
     "stellaswap": "5253444.00",
-    "zenlink_astar": "499123.56",
-    "zenlink_moonbeam": "187969.56",
     "hydradx": "9406850.00"
   },
   {
@@ -1581,13 +1016,8 @@
     "arthswap": "13349241.00",
     "avault": "4422494.50",
     "beamswap": "1067738.40",
-    "beefy": "937353.75",
-    "curve": "982886.30",
     "parallel": "3156861.80",
-    "solarflare": "138711.80",
     "stellaswap": "5134707.50",
-    "zenlink_astar": "491367.25",
-    "zenlink_moonbeam": "187805.05",
     "hydradx": "9370091.00"
   },
   {
@@ -1595,13 +1025,8 @@
     "arthswap": "13379056.00",
     "avault": "4447010.00",
     "beamswap": "1068874.00",
-    "beefy": "922297.06",
-    "curve": "976292.25",
     "parallel": "3113556.50",
-    "solarflare": "137501.92",
     "stellaswap": "5062042.00",
-    "zenlink_astar": "476094.94",
-    "zenlink_moonbeam": "186549.75",
     "hydradx": "9652078.00"
   },
   {
@@ -1609,13 +1034,8 @@
     "arthswap": "13739935.00",
     "avault": "4589222.50",
     "beamswap": "1072906.40",
-    "beefy": "928605.50",
-    "curve": "985191.30",
     "parallel": "3145074.20",
-    "solarflare": "140238.98",
     "stellaswap": "5092067.00",
-    "zenlink_astar": "485835.80",
-    "zenlink_moonbeam": "191239.48",
     "hydradx": "9574065.00"
   },
   {
@@ -1623,13 +1043,8 @@
     "arthswap": "13852802.00",
     "avault": "4602752.00",
     "beamswap": "1061387.10",
-    "beefy": "856861.75",
-    "curve": "962813.50",
     "parallel": "3174964.20",
-    "solarflare": "139063.58",
     "stellaswap": "5045976.00",
-    "zenlink_astar": "492061.75",
-    "zenlink_moonbeam": "188965.16",
     "hydradx": "9616313.00"
   },
   {
@@ -1637,13 +1052,8 @@
     "arthswap": "14004272.00",
     "avault": "4676348.50",
     "beamswap": "995282.30",
-    "beefy": "831423.00",
-    "curve": "979409.40",
     "parallel": "3211690.50",
-    "solarflare": "137619.55",
     "stellaswap": "4968507.50",
-    "zenlink_astar": "496584.38",
-    "zenlink_moonbeam": "191153.10",
     "hydradx": "9635743.00"
   },
   {
@@ -1651,13 +1061,8 @@
     "arthswap": "13874872.00",
     "avault": "4619844.00",
     "beamswap": "980740.94",
-    "beefy": "811763.70",
-    "curve": "970742.06",
     "parallel": "2923928.35",
-    "solarflare": "136199.31",
     "stellaswap": "4913066.00",
-    "zenlink_astar": "494432.06",
-    "zenlink_moonbeam": "190365.97",
     "hydradx": "9627590.00"
   },
   {
@@ -1665,13 +1070,8 @@
     "arthswap": "14082867.00",
     "avault": "4703454.00",
     "beamswap": "986452.75",
-    "beefy": "823376.25",
-    "curve": "964594.30",
     "parallel": "2636166.20",
-    "solarflare": "137773.02",
     "stellaswap": "4946902.00",
-    "zenlink_astar": "497821.50",
-    "zenlink_moonbeam": "192410.44",
     "hydradx": "9485081.00"
   },
   {
@@ -1679,13 +1079,8 @@
     "arthswap": "13840253.00",
     "avault": "4666710.50",
     "beamswap": "968747.10",
-    "beefy": "803549.06",
-    "curve": "946620.00",
     "parallel": "2602205.00",
-    "solarflare": "134560.16",
     "stellaswap": "4836598.50",
-    "zenlink_astar": "493855.06",
-    "zenlink_moonbeam": "188365.00",
     "hydradx": "9429419.00"
   },
   {
@@ -1693,13 +1088,8 @@
     "arthswap": "13288556.00",
     "avault": "4445839.50",
     "beamswap": "924443.75",
-    "beefy": "751351.06",
-    "curve": "923412.06",
     "parallel": "2528641.80",
-    "solarflare": "130035.74",
     "stellaswap": "4672459.50",
-    "zenlink_astar": "478619.12",
-    "zenlink_moonbeam": "182630.45",
     "hydradx": "9500567.00"
   },
   {
@@ -1707,13 +1097,8 @@
     "arthswap": "13421595.00",
     "avault": "4499325.50",
     "beamswap": "943732.90",
-    "beefy": "759908.20",
-    "curve": "928026.70",
     "parallel": "2492896.50",
-    "solarflare": "130690.15",
     "stellaswap": "4688877.00",
-    "zenlink_astar": "483331.10",
-    "zenlink_moonbeam": "183257.72",
     "hydradx": "9637378.00"
   },
   {
@@ -1721,13 +1106,8 @@
     "arthswap": "13491509.00",
     "avault": "4513310.00",
     "beamswap": "955011.40",
-    "beefy": "749999.94",
-    "curve": "930295.70",
     "parallel": "2510033.50",
-    "solarflare": "132249.03",
     "stellaswap": "4704616.50",
-    "zenlink_astar": "485221.28",
-    "zenlink_moonbeam": "184130.10",
     "hydradx": "9613479.00"
   },
   {
@@ -1735,13 +1115,8 @@
     "arthswap": "13306140.00",
     "avault": "4432887.50",
     "beamswap": "927984.00",
-    "beefy": "664424.20",
-    "curve": "918302.75",
     "parallel": "2488112.80",
-    "solarflare": "130762.95",
     "stellaswap": "7660969.50",
-    "zenlink_astar": "476788.90",
-    "zenlink_moonbeam": "178904.52",
     "hydradx": "9608522.00"
   },
   {
@@ -1749,13 +1124,8 @@
     "arthswap": "13522916.00",
     "avault": "4507178.00",
     "beamswap": "934590.25",
-    "beefy": "660272.06",
-    "curve": "938529.50",
     "parallel": "2573111.20",
-    "solarflare": "133825.23",
     "stellaswap": "7561819.00",
-    "zenlink_astar": "483155.56",
-    "zenlink_moonbeam": "180925.89",
     "hydradx": "9562755.00"
   },
   {
@@ -1763,13 +1133,8 @@
     "arthswap": "12665349.00",
     "avault": "4197488.00",
     "beamswap": "907402.00",
-    "beefy": "616739.40",
-    "curve": "919331.40",
     "parallel": "2445360.20",
-    "solarflare": "128189.47",
     "stellaswap": "7635235.50",
-    "zenlink_astar": "458062.44",
-    "zenlink_moonbeam": "174768.75",
     "hydradx": "9409345.00"
   },
   {
@@ -1777,13 +1142,8 @@
     "arthswap": "12606222.00",
     "avault": "4175116.00",
     "beamswap": "899544.60",
-    "beefy": "603682.94",
-    "curve": "915160.20",
     "parallel": "2445470.20",
-    "solarflare": "125251.23",
     "stellaswap": "7567585.00",
-    "zenlink_astar": "455759.00",
-    "zenlink_moonbeam": "162196.45",
     "hydradx": "9403438.00"
   },
   {
@@ -1791,13 +1151,8 @@
     "arthswap": "11743265.00",
     "avault": "3847769.20",
     "beamswap": "852805.44",
-    "beefy": "511569.62",
-    "curve": "877146.75",
     "parallel": "2338493.80",
-    "solarflare": "116178.01",
     "stellaswap": "7382256.50",
-    "zenlink_astar": "428007.60",
-    "zenlink_moonbeam": "155123.81",
     "hydradx": "9495386.00"
   },
   {
@@ -1805,13 +1160,8 @@
     "arthswap": "11597184.00",
     "avault": "3832971.80",
     "beamswap": "848582.90",
-    "beefy": "503191.70",
-    "curve": "878720.40",
     "parallel": "2327413.50",
-    "solarflare": "115808.14",
     "stellaswap": "7332749.50",
-    "zenlink_astar": "428829.25",
-    "zenlink_moonbeam": "155330.48",
     "hydradx": "9419926.00"
   },
   {
@@ -1819,13 +1169,8 @@
     "arthswap": "11848434.00",
     "avault": "3906576.20",
     "beamswap": "839553.25",
-    "beefy": "508785.66",
-    "curve": "894351.94",
     "parallel": "2287722.00",
-    "solarflare": "114875.41",
     "stellaswap": "7208079.50",
-    "zenlink_astar": "431401.62",
-    "zenlink_moonbeam": "155386.22",
     "hydradx": "9324899.00"
   },
   {
@@ -1833,13 +1178,8 @@
     "arthswap": "11511786.00",
     "avault": "3780764.00",
     "beamswap": "827320.94",
-    "beefy": "484159.22",
-    "curve": "570219.40",
     "parallel": "2248796.80",
-    "solarflare": "111658.92",
     "stellaswap": "7144289.00",
-    "zenlink_astar": "424398.38",
-    "zenlink_moonbeam": "152537.30",
     "hydradx": "9407070.00"
   },
   {
@@ -1847,13 +1187,8 @@
     "arthswap": "11678013.00",
     "avault": "3843501.50",
     "beamswap": "833839.70",
-    "beefy": "490197.47",
-    "curve": "571817.75",
     "parallel": "2268555.60",
-    "solarflare": "112643.09",
     "stellaswap": "7068987.00",
-    "zenlink_astar": "428938.03",
-    "zenlink_moonbeam": "154319.06",
     "hydradx": "9424495.00"
   },
   {
@@ -1861,13 +1196,8 @@
     "arthswap": "11616607.00",
     "avault": "3819789.50",
     "beamswap": "835910.56",
-    "beefy": "478947.66",
-    "curve": "572073.70",
     "parallel": "2288314.40",
-    "solarflare": "118960.37",
     "stellaswap": "7067334.50",
-    "zenlink_astar": "425860.75",
-    "zenlink_moonbeam": "154277.20",
     "hydradx": "9470664.00"
   },
   {
@@ -1875,13 +1205,8 @@
     "arthswap": "11597313.00",
     "avault": "3815473.20",
     "beamswap": "845548.20",
-    "beefy": "479371.72",
-    "curve": "570001.50",
     "parallel": "2308073.20",
-    "solarflare": "120708.44",
     "stellaswap": "7051401.00",
-    "zenlink_astar": "426261.53",
-    "zenlink_moonbeam": "154730.34",
     "hydradx": "9414446.00"
   },
   {
@@ -1889,13 +1214,8 @@
     "arthswap": "11560561.00",
     "avault": "3889284.80",
     "beamswap": "798533.90",
-    "beefy": "463644.03",
-    "curve": "569666.00",
     "parallel": "2248283.50",
-    "solarflare": "119037.70",
     "stellaswap": "6933638.50",
-    "zenlink_astar": "384753.20",
-    "zenlink_moonbeam": "129343.56",
     "hydradx": "9385314.00"
   },
   {
@@ -1903,13 +1223,8 @@
     "arthswap": "11551364.00",
     "avault": "3889041.50",
     "beamswap": "815162.30",
-    "beefy": "461626.10",
-    "curve": "567433.70",
     "parallel": "2236873.20",
-    "solarflare": "118359.07",
     "stellaswap": "6935336.50",
-    "zenlink_astar": "383638.34",
-    "zenlink_moonbeam": "128501.30",
     "hydradx": "9446516.00"
   },
   {
@@ -1917,13 +1232,8 @@
     "arthswap": "11735673.00",
     "avault": "3980567.50",
     "beamswap": "805948.80",
-    "beefy": "465566.34",
-    "curve": "571432.30",
     "parallel": "2272511.00",
-    "solarflare": "120029.84",
     "stellaswap": "6887158.50",
-    "zenlink_astar": "384186.28",
-    "zenlink_moonbeam": "128572.77",
     "hydradx": "9375176.00"
   },
   {
@@ -1931,13 +1241,8 @@
     "arthswap": "11621922.00",
     "avault": "3941648.20",
     "beamswap": "795089.25",
-    "beefy": "453250.75",
-    "curve": "569260.20",
     "parallel": "2279807.00",
-    "solarflare": "104883.35",
     "stellaswap": "6922662.00",
-    "zenlink_astar": "382435.38",
-    "zenlink_moonbeam": "125481.66",
     "hydradx": "9380045.00"
   },
   {
@@ -1945,13 +1250,8 @@
     "arthswap": "11755003.00",
     "avault": "3978468.20",
     "beamswap": "797341.20",
-    "beefy": "446707.10",
-    "curve": "568629.25",
     "parallel": "2278133.20",
-    "solarflare": "104674.29",
     "stellaswap": "6843998.00",
-    "zenlink_astar": "383775.56",
-    "zenlink_moonbeam": "123676.96",
     "hydradx": "9244021.00"
   },
   {
@@ -1959,13 +1259,8 @@
     "arthswap": "11701695.00",
     "avault": "3984125.20",
     "beamswap": "801186.20",
-    "beefy": "449171.56",
-    "curve": "571046.56",
     "parallel": "2303958.80",
-    "solarflare": "105084.77",
     "stellaswap": "6891895.50",
-    "zenlink_astar": "384015.90",
-    "zenlink_moonbeam": "124650.20",
     "hydradx": "9381158.00"
   },
   {
@@ -1973,13 +1268,8 @@
     "arthswap": "11343641.00",
     "avault": "3831625.00",
     "beamswap": "787478.20",
-    "beefy": "439023.20",
-    "curve": "560245.75",
     "parallel": "2221487.50",
-    "solarflare": "103235.08",
     "stellaswap": "6845111.50",
-    "zenlink_astar": "375142.94",
-    "zenlink_moonbeam": "122197.70",
     "hydradx": "9499874.00"
   },
   {
@@ -1987,13 +1277,8 @@
     "arthswap": "11446722.00",
     "avault": "3868823.80",
     "beamswap": "792347.90",
-    "beefy": "433447.10",
-    "curve": "561389.70",
     "parallel": "2249592.20",
-    "solarflare": "104503.11",
     "stellaswap": "6829456.00",
-    "zenlink_astar": "375342.94",
-    "zenlink_moonbeam": "124752.93",
     "hydradx": "9633653.00"
   },
   {
@@ -2001,13 +1286,8 @@
     "arthswap": "11570855.00",
     "avault": "3913498.00",
     "beamswap": "798961.50",
-    "beefy": "439952.80",
-    "curve": "562963.40",
     "parallel": "2261210.00",
-    "solarflare": "106037.60",
     "stellaswap": "6846219.00",
-    "zenlink_astar": "374991.44",
-    "zenlink_moonbeam": "122447.78",
     "hydradx": "9640526.00"
   },
   {
@@ -2015,13 +1295,8 @@
     "arthswap": "11252403.00",
     "avault": "3789444.50",
     "beamswap": "764250.50",
-    "beefy": "402571.00",
-    "curve": "557992.50",
     "parallel": "2216771.50",
-    "solarflare": "101357.53",
     "stellaswap": "6541097.50",
-    "zenlink_astar": "365381.90",
-    "zenlink_moonbeam": "118642.30",
     "hydradx": "9666136.00"
   },
   {
@@ -2029,13 +1304,8 @@
     "arthswap": "11176716.00",
     "avault": "3758943.20",
     "beamswap": "765874.70",
-    "beefy": "402147.00",
-    "curve": "559216.30",
     "parallel": "2125017.00",
-    "solarflare": "101464.36",
     "stellaswap": "6495881.00",
-    "zenlink_astar": "364060.22",
-    "zenlink_moonbeam": "117105.87",
     "hydradx": "9746693.00"
   },
   {
@@ -2043,13 +1313,8 @@
     "arthswap": "11119957.00",
     "avault": "3740251.00",
     "beamswap": "768825.30",
-    "beefy": "404373.60",
-    "curve": "560890.06",
     "parallel": "2195000.00",
-    "solarflare": "102206.64",
     "stellaswap": "6537859.00",
-    "zenlink_astar": "362570.16",
-    "zenlink_moonbeam": "116859.19",
     "hydradx": "9770482.00"
   },
   {
@@ -2057,13 +1322,8 @@
     "arthswap": "11077422.00",
     "avault": "3737739.50",
     "beamswap": "778812.70",
-    "beefy": "404200.34",
-    "curve": "564685.44",
     "parallel": "2263813.00",
-    "solarflare": "109514.19",
     "stellaswap": "6588795.00",
-    "zenlink_astar": "362792.47",
-    "zenlink_moonbeam": "118339.05",
     "hydradx": "9913783.00"
   },
   {
@@ -2071,13 +1331,8 @@
     "arthswap": "11348813.00",
     "avault": "3839031.00",
     "beamswap": "798190.30",
-    "beefy": "418163.70",
-    "curve": "573044.90",
     "parallel": "2333775.20",
-    "solarflare": "113453.95",
     "stellaswap": "6665245.50",
-    "zenlink_astar": "367402.50",
-    "zenlink_moonbeam": "121830.61",
     "hydradx": "9886047.00"
   },
   {
@@ -2085,13 +1340,8 @@
     "arthswap": "11712711.00",
     "avault": "3793215.50",
     "beamswap": "788305.80",
-    "beefy": "408878.62",
-    "curve": "566803.75",
     "parallel": "2293383.00",
-    "solarflare": "111303.59",
     "stellaswap": "6388165.50",
-    "zenlink_astar": "363262.44",
-    "zenlink_moonbeam": "121174.59",
     "hydradx": "9761400.00"
   },
   {
@@ -2099,13 +1349,8 @@
     "arthswap": "11703895.00",
     "avault": "3778162.00",
     "beamswap": "782280.94",
-    "beefy": "407204.38",
-    "curve": "565489.20",
     "parallel": "2301565.00",
-    "solarflare": "111464.70",
     "stellaswap": "6404237.50",
-    "zenlink_astar": "362554.84",
-    "zenlink_moonbeam": "121038.05",
     "hydradx": "9684716.00"
   },
   {
@@ -2113,13 +1358,8 @@
     "arthswap": "11474098.00",
     "avault": "3705578.00",
     "beamswap": "771817.90",
-    "beefy": "395473.62",
-    "curve": "561933.30",
     "parallel": "2211867.80",
-    "solarflare": "108752.07",
     "stellaswap": "6390263.00",
-    "zenlink_astar": "357848.28",
-    "zenlink_moonbeam": "118519.85",
     "hydradx": "9751180.00"
   },
   {
@@ -2127,13 +1367,8 @@
     "arthswap": "11439102.00",
     "avault": "3688377.50",
     "beamswap": "759205.06",
-    "beefy": "391514.62",
-    "curve": "566301.40",
     "parallel": "2178854.00",
-    "solarflare": "107118.74",
     "stellaswap": "6362127.00",
-    "zenlink_astar": "358468.16",
-    "zenlink_moonbeam": "116420.38",
     "hydradx": "9796365.00"
   },
   {
@@ -2141,13 +1376,8 @@
     "arthswap": "11649524.00",
     "avault": "3761657.50",
     "beamswap": "766664.40",
-    "beefy": "392224.60",
-    "curve": "569914.30",
     "parallel": "2210870.00",
-    "solarflare": "108570.21",
     "stellaswap": "6394407.00",
-    "zenlink_astar": "361842.84",
-    "zenlink_moonbeam": "117269.02",
     "hydradx": "9818911.00"
   },
   {
@@ -2155,13 +1385,8 @@
     "arthswap": "11549243.00",
     "avault": "3723183.00",
     "beamswap": "771101.80",
-    "beefy": "392952.20",
-    "curve": "572311.10",
     "parallel": "2200500.20",
-    "solarflare": "109588.41",
     "stellaswap": "6405726.50",
-    "zenlink_astar": "359808.22",
-    "zenlink_moonbeam": "118061.55",
     "hydradx": "9702007.00"
   },
   {
@@ -2169,13 +1394,8 @@
     "arthswap": "11456431.00",
     "avault": "3691686.00",
     "beamswap": "784491.06",
-    "beefy": "403039.03",
-    "curve": "569593.80",
     "parallel": "2209581.20",
-    "solarflare": "98674.78",
     "stellaswap": "6445313.00",
-    "zenlink_astar": "358247.88",
-    "zenlink_moonbeam": "119520.02",
     "hydradx": "9613418.00"
   },
   {
@@ -2183,13 +1403,8 @@
     "arthswap": "10573989.00",
     "avault": "3360593.80",
     "beamswap": "745059.50",
-    "beefy": "375333.40",
-    "curve": "551580.90",
     "parallel": "2134051.20",
-    "solarflare": "91237.79",
     "stellaswap": "6382715.50",
-    "zenlink_astar": "335890.50",
-    "zenlink_moonbeam": "113164.01",
     "hydradx": "9717875.00"
   },
   {
@@ -2197,13 +1412,8 @@
     "arthswap": "10901711.00",
     "avault": "3476158.80",
     "beamswap": "747992.44",
-    "beefy": "384474.94",
-    "curve": "565497.40",
     "parallel": "2168046.00",
-    "solarflare": "94002.41",
     "stellaswap": "6456924.00",
-    "zenlink_astar": "342906.94",
-    "zenlink_moonbeam": "114920.18",
     "hydradx": "9697832.00"
   },
   {
@@ -2211,13 +1421,8 @@
     "arthswap": "10300528.00",
     "avault": "3254998.80",
     "beamswap": "731799.90",
-    "beefy": "371056.72",
-    "curve": "553029.25",
     "parallel": "2083338.40",
-    "solarflare": "89355.65",
     "stellaswap": "6333473.00",
-    "zenlink_astar": "328025.47",
-    "zenlink_moonbeam": "111797.51",
     "hydradx": "9699492.00"
   },
   {
@@ -2225,13 +1430,8 @@
     "arthswap": "10314942.00",
     "avault": "3252051.80",
     "beamswap": "821071.75",
-    "beefy": "347155.10",
-    "curve": "548143.56",
     "parallel": "2082199.20",
-    "solarflare": "88883.04",
     "stellaswap": "6255401.50",
-    "zenlink_astar": "328018.28",
-    "zenlink_moonbeam": "111634.03",
     "hydradx": "9455092.00"
   },
   {
@@ -2239,13 +1439,8 @@
     "arthswap": "10216830.00",
     "avault": "3215833.50",
     "beamswap": "818603.70",
-    "beefy": "338410.30",
-    "curve": "543956.40",
     "parallel": "2078104.80",
-    "solarflare": "87169.87",
     "stellaswap": "6200881.00",
-    "zenlink_astar": "325845.44",
-    "zenlink_moonbeam": "109851.45",
     "hydradx": "9520786.00"
   },
   {
@@ -2253,13 +1448,8 @@
     "arthswap": "9373413.00",
     "avault": "2913817.00",
     "beamswap": "796915.20",
-    "beefy": "309591.30",
-    "curve": "535364.95",
     "parallel": "1883652.00",
-    "solarflare": "78846.15",
     "stellaswap": "5989687.00",
-    "zenlink_astar": "305169.44",
-    "zenlink_moonbeam": "101448.74",
     "hydradx": "9484041.00"
   },
   {
@@ -2267,13 +1457,8 @@
     "arthswap": "9384154.00",
     "avault": "2916785.20",
     "beamswap": "832288.00",
-    "beefy": "311240.28",
-    "curve": "526773.50",
     "parallel": "1868916.40",
-    "solarflare": "78460.68",
     "stellaswap": "5988275.00",
-    "zenlink_astar": "304625.72",
-    "zenlink_moonbeam": "101418.53",
     "hydradx": "9575572.00"
   },
   {
@@ -2281,13 +1466,8 @@
     "arthswap": "9436049.00",
     "avault": "2932571.80",
     "beamswap": "901073.60",
-    "beefy": "307818.30",
-    "curve": "528197.94",
     "parallel": "1913763.60",
-    "solarflare": "77566.84",
     "stellaswap": "5939259.50",
-    "zenlink_astar": "304361.16",
-    "zenlink_moonbeam": "82478.47",
     "hydradx": "9603815.00"
   },
   {
@@ -2295,13 +1475,8 @@
     "arthswap": "9594112.00",
     "avault": "3003425.20",
     "beamswap": "910448.30",
-    "beefy": "308709.28",
-    "curve": "531990.50",
     "parallel": "1910417.50",
-    "solarflare": "78070.80",
     "stellaswap": "5916223.50",
-    "zenlink_astar": "307813.34",
-    "zenlink_moonbeam": "82996.52",
     "hydradx": "9287607.00"
   },
   {
@@ -2309,13 +1484,8 @@
     "arthswap": "9605682.00",
     "avault": "3009237.50",
     "beamswap": "955093.60",
-    "beefy": "303242.28",
-    "curve": "530350.56",
     "parallel": "1928045.20",
-    "solarflare": "75647.43",
     "stellaswap": "5842181.00",
-    "zenlink_astar": "309694.78",
-    "zenlink_moonbeam": "81664.10",
     "hydradx": "9434359.00"
   },
   {
@@ -2323,13 +1493,8 @@
     "arthswap": "9726264.00",
     "avault": "3052539.80",
     "beamswap": "942379.06",
-    "beefy": "297035.22",
-    "curve": "521816.56",
     "parallel": "1833877.90",
-    "solarflare": "75425.67",
     "stellaswap": "5622018.00",
-    "zenlink_astar": "310246.78",
-    "zenlink_moonbeam": "80628.28",
     "hydradx": "9576955.00"
   },
   {
@@ -2337,13 +1502,8 @@
     "arthswap": "9697840.00",
     "avault": "3034556.00",
     "beamswap": "943098.40",
-    "beefy": "299080.56",
-    "curve": "505080.56",
     "parallel": "1875477.90",
-    "solarflare": "76812.50",
     "stellaswap": "5668603.50",
-    "zenlink_astar": "312072.78",
-    "zenlink_moonbeam": "82320.97",
     "hydradx": "9592255.00"
   },
   {
@@ -2351,13 +1511,8 @@
     "arthswap": "9922391.00",
     "avault": "3111442.20",
     "beamswap": "983857.06",
-    "beefy": "311060.56",
-    "curve": "510016.72",
     "parallel": "1856422.20",
-    "solarflare": "80544.40",
     "stellaswap": "5723305.50",
-    "zenlink_astar": "318715.90",
-    "zenlink_moonbeam": "85333.69",
     "hydradx": "9584024.00"
   },
   {
@@ -2365,13 +1520,8 @@
     "arthswap": "10028486.00",
     "avault": "3158890.50",
     "beamswap": "999044.50",
-    "beefy": "323217.03",
-    "curve": "509359.78",
     "parallel": "1879147.80",
-    "solarflare": "87618.35",
     "stellaswap": "5801900.50",
-    "zenlink_astar": "322654.97",
-    "zenlink_moonbeam": "89803.24",
     "hydradx": "9645343.00"
   },
   {
@@ -2379,13 +1529,8 @@
     "arthswap": "10179779.00",
     "avault": "3215031.80",
     "beamswap": "988566.50",
-    "beefy": "331587.16",
-    "curve": "508493.70",
     "parallel": "1874477.00",
-    "solarflare": "84980.95",
     "stellaswap": "5757416.00",
-    "zenlink_astar": "324747.03",
-    "zenlink_moonbeam": "76555.73",
     "hydradx": "10219716.00"
   },
   {
@@ -2393,13 +1538,8 @@
     "arthswap": "10777625.00",
     "avault": "3351642.20",
     "beamswap": "1008897.06",
-    "beefy": "341163.44",
-    "curve": "507224.94",
     "parallel": "1935997.10",
-    "solarflare": "86216.86",
     "stellaswap": "5801764.00",
-    "zenlink_astar": "333510.56",
-    "zenlink_moonbeam": "79221.23",
     "hydradx": "10335846.00"
   },
   {
@@ -2407,13 +1547,8 @@
     "arthswap": "11189961.00",
     "avault": "3505917.20",
     "beamswap": "1024758.00",
-    "beefy": "355253.56",
-    "curve": "516004.94",
     "parallel": "2000792.80",
-    "solarflare": "95157.94",
     "stellaswap": "5935323.00",
-    "zenlink_astar": "339611.22",
-    "zenlink_moonbeam": "82540.80",
     "hydradx": "10515221.00"
   },
   {
@@ -2421,13 +1556,8 @@
     "arthswap": "11189855.00",
     "avault": "3504588.20",
     "beamswap": "1072660.10",
-    "beefy": "363391.20",
-    "curve": "515010.03",
     "parallel": "2124381.00",
-    "solarflare": "97582.47",
     "stellaswap": "5953223.00",
-    "zenlink_astar": "341355.66",
-    "zenlink_moonbeam": "84299.60",
     "hydradx": "10474847.00"
   },
   {
@@ -2435,13 +1565,8 @@
     "arthswap": "11367172.00",
     "avault": "3569742.20",
     "beamswap": "1078574.40",
-    "beefy": "368483.90",
-    "curve": "526241.20",
     "parallel": "2177722.20",
-    "solarflare": "99139.98",
     "stellaswap": "5973662.50",
-    "zenlink_astar": "345696.44",
-    "zenlink_moonbeam": "85288.60",
     "hydradx": "10508994.00"
   },
   {
@@ -2449,13 +1574,8 @@
     "arthswap": "11280589.00",
     "avault": "3550398.80",
     "beamswap": "1068189.40",
-    "beefy": "356156.28",
-    "curve": "521020.10",
     "parallel": "2139635.80",
-    "solarflare": "96504.95",
     "stellaswap": "5914921.00",
-    "zenlink_astar": "344163.22",
-    "zenlink_moonbeam": "83763.55",
     "hydradx": "10425054.00"
   },
   {
@@ -2463,13 +1583,8 @@
     "arthswap": "11444599.00",
     "avault": "3602955.20",
     "beamswap": "1054050.20",
-    "beefy": "359760.10",
-    "curve": "527057.70",
     "parallel": "2180928.00",
-    "solarflare": "96642.94",
     "stellaswap": "5879489.50",
-    "zenlink_astar": "346195.06",
-    "zenlink_moonbeam": "84022.50",
     "hydradx": "10516712.00"
   },
   {
@@ -2477,13 +1592,8 @@
     "arthswap": "11193611.00",
     "avault": "3520724.20",
     "beamswap": "1054401.90",
-    "beefy": "349123.44",
-    "curve": "524063.28",
     "parallel": "2160013.20",
-    "solarflare": "92463.33",
     "stellaswap": "5818755.50",
-    "zenlink_astar": "341880.88",
-    "zenlink_moonbeam": "79578.16",
     "hydradx": "10426196.00"
   },
   {
@@ -2491,13 +1601,8 @@
     "arthswap": "11368776.00",
     "avault": "3582341.80",
     "beamswap": "1160786.20",
-    "beefy": "349685.30",
-    "curve": "522189.40",
     "parallel": "2079802.80",
-    "solarflare": "93628.71",
     "stellaswap": "5823399.00",
-    "zenlink_astar": "345225.16",
-    "zenlink_moonbeam": "79536.20",
     "hydradx": "10467232.00"
   },
   {
@@ -2505,13 +1610,8 @@
     "arthswap": "10990634.00",
     "avault": "3429405.20",
     "beamswap": "1139819.40",
-    "beefy": "334551.84",
-    "curve": "512746.38",
     "parallel": "2110872.80",
-    "solarflare": "88283.30",
     "stellaswap": "5759055.00",
-    "zenlink_astar": "335611.06",
-    "zenlink_moonbeam": "76743.58",
     "hydradx": "10639482.00"
   },
   {
@@ -2519,13 +1619,8 @@
     "arthswap": "10919561.00",
     "avault": "3406505.20",
     "beamswap": "1128575.20",
-    "beefy": "334984.90",
-    "curve": "516811.25",
     "parallel": "2109270.20",
-    "solarflare": "86856.99",
     "stellaswap": "5759723.50",
-    "zenlink_astar": "334928.80",
-    "zenlink_moonbeam": "76733.44",
     "hydradx": "10698931.00"
   },
   {
@@ -2533,13 +1628,8 @@
     "arthswap": "11065004.00",
     "avault": "3456134.20",
     "beamswap": "1142050.10",
-    "beefy": "345607.84",
-    "curve": "525557.25",
     "parallel": "2168299.80",
-    "solarflare": "90846.16",
     "stellaswap": "5852062.50",
-    "zenlink_astar": "335166.60",
-    "zenlink_moonbeam": "78848.38",
     "hydradx": "10725245.00"
   },
   {
@@ -2547,13 +1637,8 @@
     "arthswap": "11048995.00",
     "avault": "3444011.00",
     "beamswap": "1153370.10",
-    "beefy": "348965.84",
-    "curve": "531856.90",
     "parallel": "2239323.50",
-    "solarflare": "91979.01",
     "stellaswap": "5855175.50",
-    "zenlink_astar": "335196.90",
-    "zenlink_moonbeam": "80199.49",
     "hydradx": "10841181.00"
   },
   {
@@ -2561,13 +1646,8 @@
     "arthswap": "11042438.00",
     "avault": "3443735.50",
     "beamswap": "1145391.00",
-    "beefy": "352722.88",
-    "curve": "536845.30",
     "parallel": "2322493.50",
-    "solarflare": "93531.91",
     "stellaswap": "5882319.00",
-    "zenlink_astar": "335627.78",
-    "zenlink_moonbeam": "82825.87",
     "hydradx": "10589257.00"
   },
   {
@@ -2575,13 +1655,8 @@
     "arthswap": "11273471.00",
     "avault": "3542121.80",
     "beamswap": "1160397.20",
-    "beefy": "354937.20",
-    "curve": "534905.20",
     "parallel": "2246998.50",
-    "solarflare": "95408.81",
     "stellaswap": "5889903.50",
-    "zenlink_astar": "341135.88",
-    "zenlink_moonbeam": "82597.18",
     "hydradx": "10542166.00"
   },
   {
@@ -2589,13 +1664,8 @@
     "arthswap": "11152495.00",
     "avault": "3501058.00",
     "beamswap": "1111126.50",
-    "beefy": "346939.60",
-    "curve": "526391.44",
     "parallel": "2243921.50",
-    "solarflare": "95084.26",
     "stellaswap": "5804713.50",
-    "zenlink_astar": "337265.25",
-    "zenlink_moonbeam": "81462.49",
     "hydradx": "10479081.00"
   },
   {
@@ -2603,13 +1673,8 @@
     "arthswap": "10921469.00",
     "avault": "3412404.80",
     "beamswap": "1096932.40",
-    "beefy": "336588.22",
-    "curve": "521553.47",
     "parallel": "2244185.20",
-    "solarflare": "93815.28",
     "stellaswap": "5748770.00",
-    "zenlink_astar": "332476.75",
-    "zenlink_moonbeam": "78948.85",
     "hydradx": "10492126.00"
   },
   {
@@ -2617,13 +1682,8 @@
     "arthswap": "10404837.00",
     "avault": "3333307.80",
     "beamswap": "1073658.20",
-    "beefy": "326622.90",
-    "curve": "514322.12",
     "parallel": "2178654.50",
-    "solarflare": "86319.65",
     "stellaswap": "5682189.00",
-    "zenlink_astar": "326369.88",
-    "zenlink_moonbeam": "76591.38",
     "hydradx": "10507538.00"
   },
   {
@@ -2631,13 +1691,8 @@
     "arthswap": "10409475.00",
     "avault": "3330845.80",
     "beamswap": "1068281.80",
-    "beefy": "325405.34",
-    "curve": "505393.72",
     "parallel": "2276885.50",
-    "solarflare": "87115.37",
     "stellaswap": "5699732.50",
-    "zenlink_astar": "314965.75",
-    "zenlink_moonbeam": "76733.88",
     "hydradx": "10471454.00"
   },
   {
@@ -2645,13 +1700,8 @@
     "arthswap": "10417952.00",
     "avault": "3340855.50",
     "beamswap": "1045262.70",
-    "beefy": "313843.40",
-    "curve": "505419.47",
     "parallel": "2246472.50",
-    "solarflare": "86233.61",
     "stellaswap": "5722559.00",
-    "zenlink_astar": "315563.30",
-    "zenlink_moonbeam": "76385.09",
     "hydradx": "10511954.00"
   },
   {
@@ -2659,13 +1709,8 @@
     "arthswap": "10342182.00",
     "avault": "3286359.80",
     "beamswap": "1034014.90",
-    "beefy": "317291.03",
-    "curve": "495850.88",
     "parallel": "2181230.80",
-    "solarflare": "84642.41",
     "stellaswap": "5709034.50",
-    "zenlink_astar": "312338.53",
-    "zenlink_moonbeam": "76502.99",
     "hydradx": "10530227.00"
   },
   {
@@ -2673,13 +1718,8 @@
     "arthswap": "10336577.00",
     "avault": "3303212.20",
     "beamswap": "1039971.75",
-    "beefy": "319173.16",
-    "curve": "498245.03",
     "parallel": "2229933.00",
-    "solarflare": "84835.14",
     "stellaswap": "5656273.50",
-    "zenlink_astar": "312734.12",
-    "zenlink_moonbeam": "76385.94",
     "hydradx": "10577314.00"
   },
   {
@@ -2687,13 +1727,8 @@
     "arthswap": "10406192.00",
     "avault": "3330829.00",
     "beamswap": "1057285.80",
-    "beefy": "334579.10",
-    "curve": "500566.16",
     "parallel": "2254455.80",
-    "solarflare": "85100.68",
     "stellaswap": "5662274.00",
-    "zenlink_astar": "313367.60",
-    "zenlink_moonbeam": "76912.08",
     "hydradx": "10744903.00"
   },
   {
@@ -2701,13 +1736,8 @@
     "arthswap": "10382344.00",
     "avault": "3312813.00",
     "beamswap": "1053518.50",
-    "beefy": "402889.50",
-    "curve": "498405.12",
     "parallel": "2258840.80",
-    "solarflare": "84925.10",
     "stellaswap": "5620667.00",
-    "zenlink_astar": "312161.47",
-    "zenlink_moonbeam": "75854.51",
     "hydradx": "10627229.00"
   },
   {
@@ -2715,13 +1745,8 @@
     "arthswap": "11033395.00",
     "avault": "3580729.80",
     "beamswap": "1107255.40",
-    "beefy": "424084.78",
-    "curve": "514848.56",
     "parallel": "2425702.80",
-    "solarflare": "91492.95",
     "stellaswap": "5701027.00",
-    "zenlink_astar": "325758.06",
-    "zenlink_moonbeam": "80987.12",
     "hydradx": "10705591.00"
   },
   {
@@ -2729,13 +1754,8 @@
     "arthswap": "10682191.00",
     "avault": "3433449.20",
     "beamswap": "764920.40",
-    "beefy": "673896.30",
-    "curve": "506657.88",
     "parallel": "2380179.00",
-    "solarflare": "79844.56",
     "stellaswap": "5508429.00",
-    "zenlink_astar": "319880.06",
-    "zenlink_moonbeam": "70044.49",
     "hydradx": "10690003.00"
   },
   {
@@ -2743,13 +1763,8 @@
     "arthswap": "10617296.00",
     "avault": "3405740.20",
     "beamswap": "1157265.60",
-    "beefy": "666022.56",
-    "curve": "504652.97",
     "parallel": "2364067.80",
-    "solarflare": "76456.04",
     "stellaswap": "7768841.50",
-    "zenlink_astar": "318557.16",
-    "zenlink_moonbeam": "69685.39",
     "hydradx": "10547869.00"
   },
   {
@@ -2757,13 +1772,8 @@
     "arthswap": "10235745.00",
     "avault": "3269397.80",
     "beamswap": "1183991.00",
-    "beefy": "698920.60",
-    "curve": "503942.88",
     "parallel": "2309291.80",
-    "solarflare": "74286.41",
     "stellaswap": "7531734.50",
-    "zenlink_astar": "313566.47",
-    "zenlink_moonbeam": "68387.16",
     "hydradx": "10538602.00"
   },
   {
@@ -2771,13 +1781,8 @@
     "arthswap": "10543225.00",
     "avault": "3374459.00",
     "beamswap": "1202370.60",
-    "beefy": "695962.00",
-    "curve": "504409.70",
     "parallel": "2278616.20",
-    "solarflare": "75345.76",
     "stellaswap": "7596777.50",
-    "zenlink_astar": "317187.88",
-    "zenlink_moonbeam": "69473.76",
     "hydradx": "10579279.00"
   },
   {
@@ -2785,13 +1790,8 @@
     "arthswap": "10468603.00",
     "avault": "3349650.20",
     "beamswap": "1249435.40",
-    "beefy": "704356.44",
-    "curve": "503567.72",
     "parallel": "2196449.20",
-    "solarflare": "73267.95",
     "stellaswap": "7612696.50",
-    "zenlink_astar": "315763.84",
-    "zenlink_moonbeam": "59371.73",
     "hydradx": "11294880.00"
   },
   {
@@ -2799,13 +1799,8 @@
     "arthswap": "10436612.00",
     "avault": "3342979.20",
     "beamswap": "1260769.60",
-    "beefy": "704662.00",
-    "curve": "490517.03",
     "parallel": "2078114.60",
-    "solarflare": "70571.99",
     "stellaswap": "7879174.00",
-    "zenlink_astar": "314396.25",
-    "zenlink_moonbeam": "59094.29",
     "hydradx": "11412509.00"
   },
   {
@@ -2813,13 +1808,8 @@
     "arthswap": "10530961.00",
     "avault": "3371906.00",
     "beamswap": "1287394.90",
-    "beefy": "698452.75",
-    "curve": "495435.50",
     "parallel": "2105064.80",
-    "solarflare": "70705.63",
     "stellaswap": "7784636.00",
-    "zenlink_astar": "318434.97",
-    "zenlink_moonbeam": "59597.86",
     "hydradx": "11368506.00"
   },
   {
@@ -2827,13 +1817,8 @@
     "arthswap": "10783840.00",
     "avault": "3457946.50",
     "beamswap": "1442056.40",
-    "beefy": "674675.00",
-    "curve": "491390.34",
     "parallel": "2188909.00",
-    "solarflare": "71655.89",
     "stellaswap": "7830321.00",
-    "zenlink_astar": "321970.56",
-    "zenlink_moonbeam": "61486.20",
     "hydradx": "11404463.00"
   },
   {
@@ -2841,13 +1826,8 @@
     "arthswap": "10596251.00",
     "avault": "3414503.00",
     "beamswap": "1288141.60",
-    "beefy": "695342.75",
-    "curve": "477392.62",
     "parallel": "2095215.00",
-    "solarflare": "69522.68",
     "stellaswap": "8314369.50",
-    "zenlink_astar": "320790.60",
-    "zenlink_moonbeam": "58828.52",
     "hydradx": "11232810.00"
   },
   {
@@ -2855,13 +1835,8 @@
     "arthswap": "10798009.00",
     "avault": "3468278.00",
     "beamswap": "1365393.50",
-    "beefy": "697342.56",
-    "curve": "481444.78",
     "parallel": "2157844.00",
-    "solarflare": "71991.09",
     "stellaswap": "7832356.50",
-    "zenlink_astar": "322471.38",
-    "zenlink_moonbeam": "60129.43",
     "hydradx": "11310605.00"
   },
   {
@@ -2869,13 +1844,8 @@
     "arthswap": "10227291.00",
     "avault": "3255782.00",
     "beamswap": "1322807.00",
-    "beefy": "695130.44",
-    "curve": "472396.34",
     "parallel": "2062784.40",
-    "solarflare": "67449.27",
     "stellaswap": "7627250.00",
-    "zenlink_astar": "312299.72",
-    "zenlink_moonbeam": "56654.66",
     "hydradx": "11328479.00"
   },
   {
@@ -2883,13 +1853,8 @@
     "arthswap": "10664037.00",
     "avault": "3434986.50",
     "beamswap": "1281063.80",
-    "beefy": "717139.20",
-    "curve": "472701.72",
     "parallel": "2065679.10",
-    "solarflare": "67965.94",
     "stellaswap": "7642121.00",
-    "zenlink_astar": "322896.53",
-    "zenlink_moonbeam": "56254.83",
     "hydradx": "11359322.00"
   },
   {
@@ -2897,13 +1862,8 @@
     "arthswap": "11332876.00",
     "avault": "3703337.50",
     "beamswap": "1298512.60",
-    "beefy": "711396.40",
-    "curve": "478011.56",
     "parallel": "2087791.00",
-    "solarflare": "68398.41",
     "stellaswap": "7805378.50",
-    "zenlink_astar": "338589.00",
-    "zenlink_moonbeam": "56888.08",
     "hydradx": "11404768.00"
   },
   {
@@ -2911,13 +1871,8 @@
     "arthswap": "11975494.00",
     "avault": "3981162.50",
     "beamswap": "1332288.20",
-    "beefy": "714422.25",
-    "curve": "475183.90",
     "parallel": "2063146.80",
-    "solarflare": "67368.87",
     "stellaswap": "7758676.50",
-    "zenlink_astar": "390416.78",
-    "zenlink_moonbeam": "56693.98",
     "hydradx": "11397628.00"
   },
   {
@@ -2925,13 +1880,8 @@
     "arthswap": "12044716.00",
     "avault": "3966260.00",
     "beamswap": "1342025.40",
-    "beefy": "715094.70",
-    "curve": "475944.62",
     "parallel": "2062607.20",
-    "solarflare": "67824.86",
     "stellaswap": "7712581.00",
-    "zenlink_astar": "392381.40",
-    "zenlink_moonbeam": "57034.79",
     "hydradx": "11323184.00"
   },
   {
@@ -2939,13 +1889,8 @@
     "arthswap": "11848737.00",
     "avault": "3871706.50",
     "beamswap": "1359444.50",
-    "beefy": "721805.10",
-    "curve": "478424.20",
     "parallel": "2059894.50",
-    "solarflare": "68974.29",
     "stellaswap": "7708759.00",
-    "zenlink_astar": "385560.12",
-    "zenlink_moonbeam": "57450.07",
     "hydradx": "11295074.00"
   },
   {
@@ -2953,13 +1898,8 @@
     "arthswap": "12382627.00",
     "avault": "4034708.00",
     "beamswap": "1388016.20",
-    "beefy": "774776.90",
-    "curve": "471831.62",
     "parallel": "2054884.00",
-    "solarflare": "68565.14",
     "stellaswap": "7758178.50",
-    "zenlink_astar": "399041.25",
-    "zenlink_moonbeam": "57114.69",
     "hydradx": "11412688.00"
   },
   {
@@ -2967,13 +1907,8 @@
     "arthswap": "12028318.00",
     "avault": "3963947.20",
     "beamswap": "1369500.60",
-    "beefy": "772758.44",
-    "curve": "467368.03",
     "parallel": "2016881.00",
-    "solarflare": "67539.85",
     "stellaswap": "7427671.00",
-    "zenlink_astar": "390655.47",
-    "zenlink_moonbeam": "55918.91",
     "hydradx": "11396534.00"
   },
   {
@@ -2981,13 +1916,8 @@
     "arthswap": "14731460.00",
     "avault": "4006942.20",
     "beamswap": "1527794.10",
-    "beefy": "291470.56",
-    "curve": "471745.80",
     "parallel": "2036667.00",
-    "solarflare": "140975.00",
     "stellaswap": "7356689.00",
-    "zenlink_astar": "238310.39",
-    "zenlink_moonbeam": "145179.47",
     "hydradx": "11389024.00"
   },
   {
@@ -2995,13 +1925,8 @@
     "arthswap": "14171093.00",
     "avault": "3834460.80",
     "beamswap": "1524375.00",
-    "beefy": "291561.03",
-    "curve": "470822.56",
     "parallel": "1979245.40",
-    "solarflare": "139968.84",
     "stellaswap": "7363650.50",
-    "zenlink_astar": "230791.66",
-    "zenlink_moonbeam": "144859.84",
     "hydradx": "11323712.00"
   },
   {
@@ -3009,13 +1934,8 @@
     "arthswap": "13761607.00",
     "avault": "3720711.50",
     "beamswap": "1526154.20",
-    "beefy": "297852.60",
-    "curve": "465794.10",
     "parallel": "1957920.80",
-    "solarflare": "140025.64",
     "stellaswap": "7414992.50",
-    "zenlink_astar": "227957.77",
-    "zenlink_moonbeam": "144002.28",
     "hydradx": "11283052.00"
   },
   {
@@ -3023,13 +1943,8 @@
     "arthswap": "13928051.00",
     "avault": "3769179.80",
     "beamswap": "1515617.50",
-    "beefy": "298429.70",
-    "curve": "378737.20",
     "parallel": "1877468.80",
-    "solarflare": "139354.66",
     "stellaswap": "7451630.00",
-    "zenlink_astar": "227469.22",
-    "zenlink_moonbeam": "144398.00",
     "hydradx": "11315806.00"
   },
   {
@@ -3037,13 +1952,8 @@
     "arthswap": "13566847.00",
     "avault": "3652722.80",
     "beamswap": "1511884.90",
-    "beefy": "297416.12",
-    "curve": "377888.22",
     "parallel": "1927131.50",
-    "solarflare": "139083.40",
     "stellaswap": "7413944.50",
-    "zenlink_astar": "224104.97",
-    "zenlink_moonbeam": "144206.94",
     "hydradx": "11295246.00"
   },
   {
@@ -3051,13 +1961,8 @@
     "arthswap": "13804483.00",
     "avault": "3724565.50",
     "beamswap": "1526244.90",
-    "beefy": "293501.28",
-    "curve": "378958.90",
     "parallel": "1929541.40",
-    "solarflare": "138383.20",
     "stellaswap": "7207317.00",
-    "zenlink_astar": "227895.34",
-    "zenlink_moonbeam": "144665.22",
     "hydradx": "11424937.00"
   },
   {
@@ -3065,13 +1970,8 @@
     "arthswap": "14169931.00",
     "avault": "3902494.00",
     "beamswap": "1536372.40",
-    "beefy": "291246.66",
-    "curve": "376552.06",
     "parallel": "1908441.60",
-    "solarflare": "140699.42",
     "stellaswap": "7198393.00",
-    "zenlink_astar": "234013.11",
-    "zenlink_moonbeam": "145292.06",
     "hydradx": "11400641.00"
   },
   {
@@ -3079,13 +1979,8 @@
     "arthswap": "14134350.00",
     "avault": "3889387.50",
     "beamswap": "1566134.00",
-    "beefy": "294911.88",
-    "curve": "380670.94",
     "parallel": "1960538.80",
-    "solarflare": "141145.94",
     "stellaswap": "7196688.00",
-    "zenlink_astar": "236296.36",
-    "zenlink_moonbeam": "143427.90",
     "hydradx": "11373702.00"
   },
   {
@@ -3093,13 +1988,8 @@
     "arthswap": "13888716.00",
     "avault": "3823823.80",
     "beamswap": "1592820.50",
-    "beefy": "293316.75",
-    "curve": "468409.66",
     "parallel": "1943127.60",
-    "solarflare": "143850.33",
     "stellaswap": "7262232.50",
-    "zenlink_astar": "230189.38",
-    "zenlink_moonbeam": "143918.11",
     "hydradx": "11358827.00"
   },
   {
@@ -3107,13 +1997,8 @@
     "arthswap": "14342478.00",
     "avault": "3953177.20",
     "beamswap": "1571419.50",
-    "beefy": "289280.78",
-    "curve": "381815.70",
     "parallel": "1954076.90",
-    "solarflare": "142780.16",
     "stellaswap": "7185784.50",
-    "zenlink_astar": "235702.25",
-    "zenlink_moonbeam": "143974.38",
     "hydradx": "11418890.00"
   },
   {
@@ -3121,13 +2006,8 @@
     "arthswap": "15078271.00",
     "avault": "4157004.00",
     "beamswap": "1602783.00",
-    "beefy": "291669.75",
-    "curve": "380694.25",
     "parallel": "1926269.20",
-    "solarflare": "143390.40",
     "stellaswap": "7232297.50",
-    "zenlink_astar": "246546.10",
-    "zenlink_moonbeam": "143802.53",
     "hydradx": "11385852.00"
   },
   {
@@ -3135,13 +2015,8 @@
     "arthswap": "15305576.00",
     "avault": "4224264.00",
     "beamswap": "1593049.20",
-    "beefy": "284473.80",
-    "curve": "381161.97",
     "parallel": "1931824.20",
-    "solarflare": "143186.34",
     "stellaswap": "7234320.00",
-    "zenlink_astar": "249004.03",
-    "zenlink_moonbeam": "143378.28",
     "hydradx": "11585409.00"
   },
   {
@@ -3149,13 +2024,8 @@
     "arthswap": "15322165.00",
     "avault": "4261246.00",
     "beamswap": "1545031.10",
-    "beefy": "280287.72",
-    "curve": "466420.40",
     "parallel": "1926559.20",
-    "solarflare": "145181.39",
     "stellaswap": "7116874.00",
-    "zenlink_astar": "248695.55",
-    "zenlink_moonbeam": "142765.97",
     "hydradx": "11395104.00"
   },
   {
@@ -3163,13 +2033,8 @@
     "arthswap": "15528064.00",
     "avault": "4328095.00",
     "beamswap": "1384122.80",
-    "beefy": "277059.88",
-    "curve": "371945.06",
     "parallel": "1917013.80",
-    "solarflare": "144111.80",
     "stellaswap": "7054966.00",
-    "zenlink_astar": "255771.48",
-    "zenlink_moonbeam": "143245.88",
     "hydradx": "11257676.00"
   },
   {
@@ -3177,13 +2042,8 @@
     "arthswap": "15199751.00",
     "avault": "4237653.50",
     "beamswap": "1410441.50",
-    "beefy": "266368.75",
-    "curve": "369184.22",
     "parallel": "1844548.20",
-    "solarflare": "141592.60",
     "stellaswap": "6991853.00",
-    "zenlink_astar": "251925.31",
-    "zenlink_moonbeam": "139029.69",
     "hydradx": "10890606.00"
   },
   {
@@ -3191,13 +2051,8 @@
     "arthswap": "14518491.00",
     "avault": "4010080.00",
     "beamswap": "1381421.60",
-    "beefy": "262671.44",
-    "curve": "368658.60",
     "parallel": "1783630.90",
-    "solarflare": "141353.10",
     "stellaswap": "6486870.50",
-    "zenlink_astar": "240970.90",
-    "zenlink_moonbeam": "133238.56",
     "hydradx": "10865874.00"
   },
   {
@@ -3205,13 +2060,8 @@
     "arthswap": "13874149.00",
     "avault": "3820299.50",
     "beamswap": "1368692.80",
-    "beefy": "250163.80",
-    "curve": "363954.47",
     "parallel": "1709492.80",
-    "solarflare": "137857.12",
     "stellaswap": "6258893.50",
-    "zenlink_astar": "236123.23",
-    "zenlink_moonbeam": "129789.71",
     "hydradx": "10932525.00"
   },
   {
@@ -3219,13 +2069,8 @@
     "arthswap": "15272917.00",
     "avault": "4243280.50",
     "beamswap": "1385081.60",
-    "beefy": "247810.52",
-    "curve": "365957.00",
     "parallel": "1785844.90",
-    "solarflare": "137817.58",
     "stellaswap": "6257998.00",
-    "zenlink_astar": "251828.52",
-    "zenlink_moonbeam": "130604.82",
     "hydradx": "10977832.00"
   },
   {
@@ -3233,13 +2078,8 @@
     "arthswap": "15348571.00",
     "avault": "4266275.00",
     "beamswap": "1392624.00",
-    "beefy": "247079.84",
-    "curve": "366333.50",
     "parallel": "1755799.20",
-    "solarflare": "138500.34",
     "stellaswap": "6174236.00",
-    "zenlink_astar": "250636.97",
-    "zenlink_moonbeam": "129962.71",
     "hydradx": "10067843.00"
   },
   {
@@ -3247,13 +2087,8 @@
     "arthswap": "15545898.00",
     "avault": "4325369.50",
     "beamswap": "1383850.10",
-    "beefy": "243640.80",
-    "curve": "365259.84",
     "parallel": "1746038.20",
-    "solarflare": "133675.25",
     "stellaswap": "5910034.50",
-    "zenlink_astar": "254536.14",
-    "zenlink_moonbeam": "130934.45",
     "hydradx": "10490203.00"
   },
   {
@@ -3261,13 +2096,8 @@
     "arthswap": "15036865.00",
     "avault": "3998488.00",
     "beamswap": "1364371.00",
-    "beefy": "246158.61",
-    "curve": "363857.40",
     "parallel": "1717332.90",
-    "solarflare": "132100.31",
     "stellaswap": "5419258.00",
-    "zenlink_astar": "253070.77",
-    "zenlink_moonbeam": "128693.16",
     "hydradx": "10524232.00"
   },
   {
@@ -3275,13 +2105,8 @@
     "arthswap": "15093363.00",
     "avault": "4001179.20",
     "beamswap": "1383519.80",
-    "beefy": "236586.73",
-    "curve": "365015.70",
     "parallel": "1704371.40",
-    "solarflare": "130602.95",
     "stellaswap": "5516275.00",
-    "zenlink_astar": "256246.16",
-    "zenlink_moonbeam": "127357.56",
     "hydradx": "11051643.00"
   },
   {
@@ -3289,13 +2114,8 @@
     "arthswap": "15980006.00",
     "avault": "4248809.50",
     "beamswap": "1397510.10",
-    "beefy": "242360.60",
-    "curve": "364144.28",
     "parallel": "1763284.40",
-    "solarflare": "130758.21",
     "stellaswap": "5649026.50",
-    "zenlink_astar": "264240.47",
-    "zenlink_moonbeam": "128119.94",
     "hydradx": "11026564.00"
   },
   {
@@ -3303,13 +2123,8 @@
     "arthswap": "15989203.00",
     "avault": "4226908.50",
     "beamswap": "1433131.40",
-    "beefy": "241885.95",
-    "curve": "361607.34",
     "parallel": "1709293.40",
-    "solarflare": "129341.24",
     "stellaswap": "5594713.50",
-    "zenlink_astar": "267838.16",
-    "zenlink_moonbeam": "128118.87",
     "hydradx": "11026948.00"
   },
   {
@@ -3317,13 +2132,8 @@
     "arthswap": "15687162.00",
     "avault": "4130225.20",
     "beamswap": "1459958.50",
-    "beefy": "239711.89",
-    "curve": "365714.25",
     "parallel": "1730676.50",
-    "solarflare": "129978.54",
     "stellaswap": "5542888.00",
-    "zenlink_astar": "259429.14",
-    "zenlink_moonbeam": "128145.91",
     "hydradx": "10979162.00"
   },
   {
@@ -3331,13 +2141,8 @@
     "arthswap": "15312838.00",
     "avault": "4020056.20",
     "beamswap": "1472155.10",
-    "beefy": "239915.00",
-    "curve": "364258.78",
     "parallel": "1734823.80",
-    "solarflare": "131427.62",
     "stellaswap": "5566998.50",
-    "zenlink_astar": "257696.97",
-    "zenlink_moonbeam": "128821.93",
     "hydradx": "10967494.00"
   },
   {
@@ -3345,13 +2150,8 @@
     "arthswap": "15018537.00",
     "avault": "3936706.80",
     "beamswap": "1475357.80",
-    "beefy": "239209.36",
-    "curve": "364937.03",
     "parallel": "1760108.80",
-    "solarflare": "132438.14",
     "stellaswap": "5587779.50",
-    "zenlink_astar": "250736.81",
-    "zenlink_moonbeam": "129013.76",
     "hydradx": "11230127.00"
   },
   {
@@ -3359,13 +2159,8 @@
     "arthswap": "14910951.00",
     "avault": "3912834.20",
     "beamswap": "1424531.50",
-    "beefy": "244465.08",
-    "curve": "370444.60",
     "parallel": "1774695.90",
-    "solarflare": "132649.36",
     "stellaswap": "5578616.50",
-    "zenlink_astar": "251890.62",
-    "zenlink_moonbeam": "129707.79",
     "hydradx": "11116693.00"
   },
   {
@@ -3373,13 +2168,8 @@
     "arthswap": "15048985.00",
     "avault": "3963787.00",
     "beamswap": "1447902.20",
-    "beefy": "249143.39",
-    "curve": "366096.70",
     "parallel": "1803962.40",
-    "solarflare": "133636.50",
     "stellaswap": "5713202.00",
-    "zenlink_astar": "255045.62",
-    "zenlink_moonbeam": "130884.35",
     "hydradx": "10886325.00"
   },
   {
@@ -3387,13 +2177,8 @@
     "arthswap": "14567669.00",
     "avault": "3819969.20",
     "beamswap": "1436336.00",
-    "beefy": "249262.60",
-    "curve": "367783.78",
     "parallel": "1761979.40",
-    "solarflare": "131208.20",
     "stellaswap": "5592618.50",
-    "zenlink_astar": "243599.92",
-    "zenlink_moonbeam": "129501.80",
     "hydradx": "10774423.00"
   },
   {
@@ -3401,13 +2186,8 @@
     "arthswap": "14315277.00",
     "avault": "3742173.50",
     "beamswap": "1420536.60",
-    "beefy": "236358.30",
-    "curve": "360918.60",
     "parallel": "1666521.20",
-    "solarflare": "128853.02",
     "stellaswap": "5475744.50",
-    "zenlink_astar": "242626.30",
-    "zenlink_moonbeam": "127073.38",
     "hydradx": "10591970.00"
   },
   {
@@ -3415,13 +2195,8 @@
     "arthswap": "14245012.00",
     "avault": "3724777.00",
     "beamswap": "1169372.00",
-    "beefy": "231044.86",
-    "curve": "360483.80",
     "parallel": "1630329.10",
-    "solarflare": "126227.32",
     "stellaswap": "5410977.50",
-    "zenlink_astar": "243895.05",
-    "zenlink_moonbeam": "124977.28",
     "hydradx": "10703379.00"
   },
   {
@@ -3429,13 +2204,8 @@
     "arthswap": "13992059.00",
     "avault": "3661706.20",
     "beamswap": "1070959.50",
-    "beefy": "232091.53",
-    "curve": "362971.40",
     "parallel": "1649164.80",
-    "solarflare": "126767.01",
     "stellaswap": "5403065.50",
-    "zenlink_astar": "237686.45",
-    "zenlink_moonbeam": "125052.49",
     "hydradx": "10627492.00"
   },
   {
@@ -3443,13 +2213,8 @@
     "arthswap": "14086325.00",
     "avault": "3680519.80",
     "beamswap": "1051294.90",
-    "beefy": "232340.98",
-    "curve": "361180.70",
     "parallel": "1643442.40",
-    "solarflare": "127015.82",
     "stellaswap": "5555598.50",
-    "zenlink_astar": "239207.38",
-    "zenlink_moonbeam": "125210.07",
     "hydradx": "10696725.00"
   },
   {
@@ -3457,13 +2222,8 @@
     "arthswap": "13589995.00",
     "avault": "3548551.00",
     "beamswap": "934057.75",
-    "beefy": "227807.34",
-    "curve": "361285.40",
     "parallel": "1627501.40",
-    "solarflare": "130101.36",
     "stellaswap": "5518970.50",
-    "zenlink_astar": "235528.36",
-    "zenlink_moonbeam": "124710.74",
     "hydradx": "10691680.00"
   },
   {
@@ -3471,26 +2231,16 @@
     "arthswap": "13924959.00",
     "avault": "3663827.80",
     "beamswap": "923991.70",
-    "beefy": "227841.11",
-    "curve": "362257.80",
     "parallel": "1637966.80",
-    "solarflare": "129741.40",
-    "stellaswap": "5630036.50",
-    "zenlink_astar": "241378.73",
-    "zenlink_moonbeam": "124261.63"
+    "stellaswap": "5630036.50"
   },
   {
     "date": "2023-09-07",
     "arthswap": "14334273.00",
     "avault": "3771495.50",
     "beamswap": "938116.75",
-    "beefy": "225211.33",
-    "curve": "361921.25",
     "parallel": "1641383.40",
-    "solarflare": "129428.73",
     "stellaswap": "5371797.50",
-    "zenlink_astar": "247055.52",
-    "zenlink_moonbeam": "124370.96",
     "hydradx": "10899071.00"
   },
   {
@@ -3498,13 +2248,8 @@
     "arthswap": "14815008.00",
     "avault": "3899976.20",
     "beamswap": "928189.20",
-    "beefy": "223904.34",
-    "curve": "358678.30",
     "parallel": "1688000.80",
-    "solarflare": "130764.44",
     "stellaswap": "5210178.50",
-    "zenlink_astar": "250923.67",
-    "zenlink_moonbeam": "124769.70",
     "hydradx": "11483983.00"
   },
   {
@@ -3512,13 +2257,8 @@
     "arthswap": "14801046.00",
     "avault": "3894532.20",
     "beamswap": "911506.44",
-    "beefy": "223011.06",
-    "curve": "356509.78",
     "parallel": "1640564.60",
-    "solarflare": "129293.90",
     "stellaswap": "5119585.50",
-    "zenlink_astar": "250125.98",
-    "zenlink_moonbeam": "124341.69",
     "hydradx": "11520212.00"
   },
   {
@@ -3526,13 +2266,8 @@
     "arthswap": "14727726.00",
     "avault": "3873830.20",
     "beamswap": "903810.50",
-    "beefy": "222769.47",
-    "curve": "357692.70",
     "parallel": "1623426.20",
-    "solarflare": "129056.19",
     "stellaswap": "4957827.50",
-    "zenlink_astar": "245987.10",
-    "zenlink_moonbeam": "124232.45",
     "hydradx": "11420463.00"
   },
   {
@@ -3540,13 +2275,8 @@
     "arthswap": "14613584.00",
     "avault": "3844228.20",
     "beamswap": "894939.30",
-    "beefy": "217211.86",
-    "curve": "355468.44",
     "parallel": "1608519.00",
-    "solarflare": "126870.98",
     "stellaswap": "4712454.00",
-    "zenlink_astar": "244262.00",
-    "zenlink_moonbeam": "122474.80",
     "hydradx": "11263045.00"
   },
   {
@@ -3554,13 +2284,8 @@
     "arthswap": "14305832.00",
     "avault": "3759517.20",
     "beamswap": "850650.20",
-    "beefy": "202533.56",
-    "curve": "356555.84",
     "parallel": "1543055.80",
-    "solarflare": "120726.57",
     "stellaswap": "4368670.50",
-    "zenlink_astar": "242712.08",
-    "zenlink_moonbeam": "117975.50",
     "hydradx": "11433165.00"
   },
   {
@@ -3568,13 +2293,8 @@
     "arthswap": "14110282.00",
     "avault": "3705695.50",
     "beamswap": "856975.40",
-    "beefy": "205243.19",
-    "curve": "355093.34",
     "parallel": "1542967.20",
-    "solarflare": "124660.30",
     "stellaswap": "3899624.50",
-    "zenlink_astar": "251834.36",
-    "zenlink_moonbeam": "116727.03",
     "hydradx": "11462337.00"
   },
   {
@@ -3582,13 +2302,8 @@
     "arthswap": "13479180.00",
     "avault": "3525574.50",
     "beamswap": "853168.50",
-    "beefy": "205995.44",
-    "curve": "356871.50",
     "parallel": "1580865.20",
-    "solarflare": "125028.91",
     "stellaswap": "3862984.20",
-    "zenlink_astar": "242929.53",
-    "zenlink_moonbeam": "115882.86",
     "hydradx": "11467484.00"
   },
   {
@@ -3596,13 +2311,8 @@
     "arthswap": "12776481.00",
     "avault": "3332546.20",
     "beamswap": "862975.94",
-    "beefy": "208155.27",
-    "curve": "422383.12",
     "parallel": "1562928.40",
-    "solarflare": "126106.30",
     "stellaswap": "3911750.80",
-    "zenlink_astar": "225828.08",
-    "zenlink_moonbeam": "116413.84",
     "hydradx": "11516999.00"
   },
   {
@@ -3610,13 +2320,8 @@
     "arthswap": "13143200.00",
     "avault": "3434307.80",
     "beamswap": "867514.44",
-    "beefy": "208153.25",
-    "curve": "425264.22",
     "parallel": "1638367.60",
-    "solarflare": "127741.69",
     "stellaswap": "3953001.00",
-    "zenlink_astar": "230441.36",
-    "zenlink_moonbeam": "117380.09",
     "hydradx": "10163526.00"
   },
   {
@@ -3624,13 +2329,8 @@
     "arthswap": "13058720.00",
     "avault": "3417967.80",
     "beamswap": "873616.10",
-    "beefy": "208627.52",
-    "curve": "423569.34",
     "parallel": "1624179.20",
-    "solarflare": "127496.06",
     "stellaswap": "3967120.00",
-    "zenlink_astar": "229209.50",
-    "zenlink_moonbeam": "117891.41",
     "hydradx": "10248905.00"
   },
   {
@@ -3638,13 +2338,8 @@
     "arthswap": "12874932.00",
     "avault": "3368045.00",
     "beamswap": "841676.75",
-    "beefy": "208184.81",
-    "curve": "422800.60",
     "parallel": "1565867.60",
-    "solarflare": "125069.40",
     "stellaswap": "3876390.00",
-    "zenlink_astar": "225541.17",
-    "zenlink_moonbeam": "116005.03",
     "hydradx": "10297176.00"
   },
   {
@@ -3652,13 +2347,8 @@
     "arthswap": "13745803.00",
     "avault": "3604395.20",
     "beamswap": "851694.70",
-    "beefy": "210254.75",
-    "curve": "423251.20",
     "parallel": "1592955.80",
-    "solarflare": "126406.84",
     "stellaswap": "3943499.80",
-    "zenlink_astar": "227299.81",
-    "zenlink_moonbeam": "116991.73",
     "hydradx": "10392412.00"
   },
   {
@@ -3666,13 +2356,8 @@
     "arthswap": "13295178.00",
     "avault": "3479998.50",
     "beamswap": "888024.44",
-    "beefy": "210667.58",
-    "curve": "423002.28",
     "parallel": "1598546.00",
-    "solarflare": "128371.45",
     "stellaswap": "3939691.80",
-    "zenlink_astar": "234745.78",
-    "zenlink_moonbeam": "117262.81",
     "hydradx": "10338151.00"
   },
   {
@@ -3680,13 +2365,8 @@
     "arthswap": "13684994.00",
     "avault": "3652720.80",
     "beamswap": "888855.00",
-    "beefy": "207976.14",
-    "curve": "424346.53",
     "parallel": "1443337.00",
-    "solarflare": "126089.97",
     "stellaswap": "3909763.50",
-    "zenlink_astar": "241759.97",
-    "zenlink_moonbeam": "116780.09",
     "hydradx": "10204480.00"
   },
   {
@@ -3694,13 +2374,8 @@
     "arthswap": "13360549.00",
     "avault": "3554037.50",
     "beamswap": "850559.70",
-    "beefy": "207814.39",
-    "curve": "420753.78",
     "parallel": "1281567.60",
-    "solarflare": "122540.04",
     "stellaswap": "3749984.80",
-    "zenlink_astar": "236770.38",
-    "zenlink_moonbeam": "114232.31",
     "hydradx": "10181073.00"
   },
   {
@@ -3708,13 +2383,8 @@
     "arthswap": "12987377.00",
     "avault": "3447075.20",
     "beamswap": "870900.50",
-    "beefy": "206385.67",
-    "curve": "418964.97",
     "parallel": "1283740.80",
-    "solarflare": "123459.94",
     "stellaswap": "3843412.50",
-    "zenlink_astar": "230865.72",
-    "zenlink_moonbeam": "114331.29",
     "hydradx": "10592265.00"
   },
   {
@@ -3722,13 +2392,8 @@
     "arthswap": "12859707.00",
     "avault": "3410311.00",
     "beamswap": "877865.10",
-    "beefy": "205345.12",
-    "curve": "422976.70",
     "parallel": "1288027.10",
-    "solarflare": "124631.34",
     "stellaswap": "3823490.20",
-    "zenlink_astar": "229414.47",
-    "zenlink_moonbeam": "114572.11",
     "hydradx": "11851236.00"
   },
   {
@@ -3736,13 +2401,8 @@
     "arthswap": "12668066.00",
     "avault": "3370163.00",
     "beamswap": "872683.20",
-    "beefy": "197271.30",
-    "curve": "418987.90",
     "parallel": "1254619.10",
-    "solarflare": "125419.83",
     "stellaswap": "3718843.80",
-    "zenlink_astar": "227479.19",
-    "zenlink_moonbeam": "115310.30",
     "hydradx": "12075867.00"
   },
   {
@@ -3750,13 +2410,8 @@
     "arthswap": "12829497.00",
     "avault": "3403461.50",
     "beamswap": "916182.90",
-    "beefy": "216919.27",
-    "curve": "419906.34",
     "parallel": "1297160.00",
-    "solarflare": "151120.56",
     "stellaswap": "3783145.00",
-    "zenlink_astar": "227677.83",
-    "zenlink_moonbeam": "128466.66",
     "hydradx": "11299415.00"
   },
   {
@@ -3764,13 +2419,8 @@
     "arthswap": "12435484.00",
     "avault": "3294363.20",
     "beamswap": "878140.40",
-    "beefy": "224428.28",
-    "curve": "418077.84",
     "parallel": "1256030.60",
-    "solarflare": "149640.86",
     "stellaswap": "3779520.50",
-    "zenlink_astar": "222485.88",
-    "zenlink_moonbeam": "127844.63",
     "hydradx": "11256754.00"
   },
   {
@@ -3778,13 +2428,8 @@
     "arthswap": "12044522.00",
     "avault": "3189589.20",
     "beamswap": "909409.44",
-    "beefy": "226478.77",
-    "curve": "416711.20",
     "parallel": "1294000.00",
-    "solarflare": "154210.03",
     "stellaswap": "3811590.20",
-    "zenlink_astar": "218697.45",
-    "zenlink_moonbeam": "130548.66",
     "hydradx": "11372002.00"
   },
   {
@@ -3792,13 +2437,8 @@
     "arthswap": "12542831.00",
     "avault": "3331523.00",
     "beamswap": "923594.94",
-    "beefy": "218633.12",
-    "curve": "310952.50",
     "parallel": "1315659.80",
-    "solarflare": "150177.05",
     "stellaswap": "3813058.50",
-    "zenlink_astar": "224162.36",
-    "zenlink_moonbeam": "129739.02",
     "hydradx": "11393909.00"
   },
   {
@@ -3806,13 +2446,8 @@
     "arthswap": "12509200.00",
     "avault": "3319753.00",
     "beamswap": "926911.10",
-    "beefy": "230384.03",
-    "curve": "381583.12",
     "parallel": "1312886.00",
-    "solarflare": "148399.30",
     "stellaswap": "3800298.00",
-    "zenlink_astar": "220760.36",
-    "zenlink_moonbeam": "129200.31",
     "hydradx": "11397439.00"
   },
   {
@@ -3820,13 +2455,8 @@
     "arthswap": "12421570.00",
     "avault": "3295763.50",
     "beamswap": "934325.56",
-    "beefy": "225899.86",
-    "curve": "382577.20",
     "parallel": "1321910.10",
-    "solarflare": "149678.80",
     "stellaswap": "3802836.20",
-    "zenlink_astar": "222572.16",
-    "zenlink_moonbeam": "129961.23",
     "hydradx": "11488625.00"
   }
 ]

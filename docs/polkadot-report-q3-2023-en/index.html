@@ -978,6 +978,23 @@
 						</div>
 					</div>
 				</div>
+
+				<div class="block-report-chart">
+					<div class="section-shape shape-blur-circle shape-position-ml light-blue"></div>
+					<div class="section-shape shape-blur-circle shape-position-mr purple"></div>
+					<div class="block-content">
+						<h4 class="block-chart-heading">Nominator Stake & Validator Stake</h4>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="nominator-stake-validator-stake"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Source: DefiLlama, HydraDX Team</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
 				<div class="block-text">
 					<div class="text">
 						<p>
@@ -2282,5 +2299,22 @@
 <script src="../assets/js/frontend.js?v=1.4"></script>
 <script src="../assets/js/reports-q3-2023.js?v=1.0"></script>
 <script src="../assets/js/wallet-manager.js?v=1.15"></script>
+<!-- BS:SNIPPET--><script id="__bs_script__">//<![CDATA[
+(function() {
+  try {
+    var script = document.createElement('script');
+    if ('async') {
+      script.async = true;
+    }
+    script.src = 'http://HOST:3000/browser-sync/browser-sync-client.js?v=2.29.1'.replace("HOST", location.hostname);
+    if (document.body) {
+      document.body.appendChild(script);
+    }
+  } catch (e) {
+    console.error("Browsersync: could not append script tag", e);
+  }
+})()
+//]]></script>
+<!-- BS:SNIPPET:END-->
 </body>
 </html>

@@ -1,0 +1,917 @@
+[
+  {
+    "date": "2023-04-01",
+    "nominator_stake": "611375539.33",
+    "validator_stake": "1966930.35"
+  },
+  {
+    "date": "2023-04-02",
+    "nominator_stake": "611718020.38",
+    "validator_stake": "1960358.33"
+  },
+  {
+    "date": "2023-04-03",
+    "nominator_stake": "612097159.74",
+    "validator_stake": "1954942.53"
+  },
+  {
+    "date": "2023-04-04",
+    "nominator_stake": "612221464.59",
+    "validator_stake": "1951746.93"
+  },
+  {
+    "date": "2023-04-05",
+    "nominator_stake": "612449728.14",
+    "validator_stake": "1938862.85"
+  },
+  {
+    "date": "2023-04-06",
+    "nominator_stake": "611560799.15",
+    "validator_stake": "1951568.11"
+  },
+  {
+    "date": "2023-04-07",
+    "nominator_stake": "611665853.66",
+    "validator_stake": "1938119.74"
+  },
+  {
+    "date": "2023-04-08",
+    "nominator_stake": "610458730.77",
+    "validator_stake": "1947334.46"
+  },
+  {
+    "date": "2023-04-09",
+    "nominator_stake": "610597911.43",
+    "validator_stake": "1954327.10"
+  },
+  {
+    "date": "2023-04-10",
+    "nominator_stake": "612154510.48",
+    "validator_stake": "1934883.24"
+  },
+  {
+    "date": "2023-04-11",
+    "nominator_stake": "613210944.08",
+    "validator_stake": "1930920.09"
+  },
+  {
+    "date": "2023-04-12",
+    "nominator_stake": "613898306.95",
+    "validator_stake": "1909430.59"
+  },
+  {
+    "date": "2023-04-13",
+    "nominator_stake": "614304920.01",
+    "validator_stake": "1926700.52"
+  },
+  {
+    "date": "2023-04-14",
+    "nominator_stake": "614237691.23",
+    "validator_stake": "1923561.29"
+  },
+  {
+    "date": "2023-04-15",
+    "nominator_stake": "616818686.40",
+    "validator_stake": "1939415.59"
+  },
+  {
+    "date": "2023-04-16",
+    "nominator_stake": "617152619.51",
+    "validator_stake": "1942510.68"
+  },
+  {
+    "date": "2023-04-17",
+    "nominator_stake": "617251799.77",
+    "validator_stake": "1955885.00"
+  },
+  {
+    "date": "2023-04-18",
+    "nominator_stake": "617608200.68",
+    "validator_stake": "1943635.15"
+  },
+  {
+    "date": "2023-04-19",
+    "nominator_stake": "617724263.06",
+    "validator_stake": "2000373.83"
+  },
+  {
+    "date": "2023-04-20",
+    "nominator_stake": "619210497.63",
+    "validator_stake": "1991572.85"
+  },
+  {
+    "date": "2023-04-21",
+    "nominator_stake": "625664472.97",
+    "validator_stake": "1978129.67"
+  },
+  {
+    "date": "2023-04-22",
+    "nominator_stake": "625894907.24",
+    "validator_stake": "1979831.58"
+  },
+  {
+    "date": "2023-04-23",
+    "nominator_stake": "627094311.89",
+    "validator_stake": "1969307.78"
+  },
+  {
+    "date": "2023-04-24",
+    "nominator_stake": "627469767.64",
+    "validator_stake": "1958977.70"
+  },
+  {
+    "date": "2023-04-25",
+    "nominator_stake": "629522729.02",
+    "validator_stake": "1960307.49"
+  },
+  {
+    "date": "2023-04-26",
+    "nominator_stake": "629701009.97",
+    "validator_stake": "1961997.65"
+  },
+  {
+    "date": "2023-04-27",
+    "nominator_stake": "629998931.18",
+    "validator_stake": "1935159.58"
+  },
+  {
+    "date": "2023-04-28",
+    "nominator_stake": "630002985.05",
+    "validator_stake": "1951723.22"
+  },
+  {
+    "date": "2023-04-29",
+    "nominator_stake": "632012702.49",
+    "validator_stake": "1948532.50"
+  },
+  {
+    "date": "2023-04-30",
+    "nominator_stake": "632226795.29",
+    "validator_stake": "1954774.99"
+  },
+  {
+    "date": "2023-05-01",
+    "nominator_stake": "632739065.59",
+    "validator_stake": "1957316.34"
+  },
+  {
+    "date": "2023-05-02",
+    "nominator_stake": "632841761.31",
+    "validator_stake": "1965506.05"
+  },
+  {
+    "date": "2023-05-03",
+    "nominator_stake": "635617242.86",
+    "validator_stake": "1983965.10"
+  },
+  {
+    "date": "2023-05-04",
+    "nominator_stake": "532214629.83",
+    "validator_stake": "2086426.19"
+  },
+  {
+    "date": "2023-05-05",
+    "nominator_stake": "532456758.29",
+    "validator_stake": "2063693.66"
+  },
+  {
+    "date": "2023-05-06",
+    "nominator_stake": "532349144.08",
+    "validator_stake": "2068719.07"
+  },
+  {
+    "date": "2023-05-07",
+    "nominator_stake": "532184397.33",
+    "validator_stake": "2099967.99"
+  },
+  {
+    "date": "2023-05-08",
+    "nominator_stake": "531865700.82",
+    "validator_stake": "2092681.70"
+  },
+  {
+    "date": "2023-05-09",
+    "nominator_stake": "545059223.89",
+    "validator_stake": "2078244.09"
+  },
+  {
+    "date": "2023-05-10",
+    "nominator_stake": "543633628.70",
+    "validator_stake": "2106398.58"
+  },
+  {
+    "date": "2023-05-11",
+    "nominator_stake": "545347424.69",
+    "validator_stake": "2130671.42"
+  },
+  {
+    "date": "2023-05-12",
+    "nominator_stake": "548043256.63",
+    "validator_stake": "2114546.60"
+  },
+  {
+    "date": "2023-05-13",
+    "nominator_stake": "548382918.16",
+    "validator_stake": "2069508.98"
+  },
+  {
+    "date": "2023-05-14",
+    "nominator_stake": "548618981.32",
+    "validator_stake": "2063371.38"
+  },
+  {
+    "date": "2023-05-15",
+    "nominator_stake": "549115704.09",
+    "validator_stake": "2066081.81"
+  },
+  {
+    "date": "2023-05-16",
+    "nominator_stake": "549545124.59",
+    "validator_stake": "2065525.83"
+  },
+  {
+    "date": "2023-05-17",
+    "nominator_stake": "549573652.38",
+    "validator_stake": "2069256.27"
+  },
+  {
+    "date": "2023-05-18",
+    "nominator_stake": "555046540.87",
+    "validator_stake": "2059006.49"
+  },
+  {
+    "date": "2023-05-19",
+    "nominator_stake": "555050474.77",
+    "validator_stake": "2059229.17"
+  },
+  {
+    "date": "2023-05-20",
+    "nominator_stake": "555257100.23",
+    "validator_stake": "2077905.20"
+  },
+  {
+    "date": "2023-05-21",
+    "nominator_stake": "556929371.22",
+    "validator_stake": "2072019.10"
+  },
+  {
+    "date": "2023-05-22",
+    "nominator_stake": "557153954.57",
+    "validator_stake": "2080015.56"
+  },
+  {
+    "date": "2023-05-23",
+    "nominator_stake": "558340089.25",
+    "validator_stake": "2067765.08"
+  },
+  {
+    "date": "2023-05-24",
+    "nominator_stake": "559310687.63",
+    "validator_stake": "2072940.34"
+  },
+  {
+    "date": "2023-05-25",
+    "nominator_stake": "564383872.02",
+    "validator_stake": "2103789.10"
+  },
+  {
+    "date": "2023-05-26",
+    "nominator_stake": "564522834.78",
+    "validator_stake": "2031465.50"
+  },
+  {
+    "date": "2023-05-27",
+    "nominator_stake": "565615211.76",
+    "validator_stake": "2029455.11"
+  },
+  {
+    "date": "2023-05-28",
+    "nominator_stake": "566272564.07",
+    "validator_stake": "2055121.13"
+  },
+  {
+    "date": "2023-05-29",
+    "nominator_stake": "566320526.12",
+    "validator_stake": "2060791.78"
+  },
+  {
+    "date": "2023-05-30",
+    "nominator_stake": "566562026.77",
+    "validator_stake": "2051723.90"
+  },
+  {
+    "date": "2023-05-31",
+    "nominator_stake": "567059825.98",
+    "validator_stake": "2071600.71"
+  },
+  {
+    "date": "2023-06-01",
+    "nominator_stake": "567516016.79",
+    "validator_stake": "2066470.97"
+  },
+  {
+    "date": "2023-06-02",
+    "nominator_stake": "567382004.79",
+    "validator_stake": "2102173.62"
+  },
+  {
+    "date": "2023-06-03",
+    "nominator_stake": "567485945.06",
+    "validator_stake": "2079821.89"
+  },
+  {
+    "date": "2023-06-04",
+    "nominator_stake": "567671527.52",
+    "validator_stake": "2075111.80"
+  },
+  {
+    "date": "2023-06-05",
+    "nominator_stake": "568399953.75",
+    "validator_stake": "2072461.04"
+  },
+  {
+    "date": "2023-06-06",
+    "nominator_stake": "568840248.34",
+    "validator_stake": "2063835.06"
+  },
+  {
+    "date": "2023-06-07",
+    "nominator_stake": "569237523.05",
+    "validator_stake": "2086067.94"
+  },
+  {
+    "date": "2023-06-08",
+    "nominator_stake": "566379555.33",
+    "validator_stake": "2123664.29"
+  },
+  {
+    "date": "2023-06-09",
+    "nominator_stake": "566928216.05",
+    "validator_stake": "2081537.55"
+  },
+  {
+    "date": "2023-06-10",
+    "nominator_stake": "567510431.56",
+    "validator_stake": "2082528.32"
+  },
+  {
+    "date": "2023-06-11",
+    "nominator_stake": "567998877.94",
+    "validator_stake": "2154068.49"
+  },
+  {
+    "date": "2023-06-12",
+    "nominator_stake": "567735496.14",
+    "validator_stake": "2110136.20"
+  },
+  {
+    "date": "2023-06-13",
+    "nominator_stake": "568394646.12",
+    "validator_stake": "2144228.28"
+  },
+  {
+    "date": "2023-06-14",
+    "nominator_stake": "568816415.01",
+    "validator_stake": "2143910.20"
+  },
+  {
+    "date": "2023-06-15",
+    "nominator_stake": "569123621.01",
+    "validator_stake": "2146684.73"
+  },
+  {
+    "date": "2023-06-16",
+    "nominator_stake": "567861929.15",
+    "validator_stake": "2139800.07"
+  },
+  {
+    "date": "2023-06-17",
+    "nominator_stake": "568953212.68",
+    "validator_stake": "2144347.52"
+  },
+  {
+    "date": "2023-06-18",
+    "nominator_stake": "570103522.63",
+    "validator_stake": "2098130.52"
+  },
+  {
+    "date": "2023-06-19",
+    "nominator_stake": "569860540.45",
+    "validator_stake": "2085839.18"
+  },
+  {
+    "date": "2023-06-20",
+    "nominator_stake": "570436368.25",
+    "validator_stake": "2090249.44"
+  },
+  {
+    "date": "2023-06-21",
+    "nominator_stake": "571645718.74",
+    "validator_stake": "2117754.24"
+  },
+  {
+    "date": "2023-06-22",
+    "nominator_stake": "571375979.84",
+    "validator_stake": "2115353.75"
+  },
+  {
+    "date": "2023-06-23",
+    "nominator_stake": "571979500.27",
+    "validator_stake": "2109659.42"
+  },
+  {
+    "date": "2023-06-24",
+    "nominator_stake": "570350588.94",
+    "validator_stake": "2101283.31"
+  },
+  {
+    "date": "2023-06-25",
+    "nominator_stake": "571374703.14",
+    "validator_stake": "2117753.69"
+  },
+  {
+    "date": "2023-06-26",
+    "nominator_stake": "571084061.08",
+    "validator_stake": "2049150.56"
+  },
+  {
+    "date": "2023-06-27",
+    "nominator_stake": "572906344.92",
+    "validator_stake": "2095887.44"
+  },
+  {
+    "date": "2023-06-28",
+    "nominator_stake": "573056160.90",
+    "validator_stake": "2094387.32"
+  },
+  {
+    "date": "2023-06-29",
+    "nominator_stake": "575920042.01",
+    "validator_stake": "2121981.84"
+  },
+  {
+    "date": "2023-06-30",
+    "nominator_stake": "575758481.47",
+    "validator_stake": "2128070.46"
+  },
+  {
+    "date": "2023-07-01",
+    "nominator_stake": "576060826.54",
+    "validator_stake": "2130702.92"
+  },
+  {
+    "date": "2023-07-02",
+    "nominator_stake": "576548108.10",
+    "validator_stake": "2118512.58"
+  },
+  {
+    "date": "2023-07-03",
+    "nominator_stake": "576844870.80",
+    "validator_stake": "2119914.58"
+  },
+  {
+    "date": "2023-07-04",
+    "nominator_stake": "577082602.01",
+    "validator_stake": "2150193.99"
+  },
+  {
+    "date": "2023-07-05",
+    "nominator_stake": "577815420.52",
+    "validator_stake": "2156701.70"
+  },
+  {
+    "date": "2023-07-06",
+    "nominator_stake": "577871252.70",
+    "validator_stake": "2138144.03"
+  },
+  {
+    "date": "2023-07-07",
+    "nominator_stake": "575963186.89",
+    "validator_stake": "2114480.98"
+  },
+  {
+    "date": "2023-07-08",
+    "nominator_stake": "578242216.16",
+    "validator_stake": "2101945.38"
+  },
+  {
+    "date": "2023-07-09",
+    "nominator_stake": "578138580.80",
+    "validator_stake": "2110883.92"
+  },
+  {
+    "date": "2023-07-10",
+    "nominator_stake": "577389327.29",
+    "validator_stake": "2118780.82"
+  },
+  {
+    "date": "2023-07-11",
+    "nominator_stake": "576235664.86",
+    "validator_stake": "2107691.32"
+  },
+  {
+    "date": "2023-07-12",
+    "nominator_stake": "581113242.04",
+    "validator_stake": "2184731.24"
+  },
+  {
+    "date": "2023-07-13",
+    "nominator_stake": "583233369.31",
+    "validator_stake": "2180794.16"
+  },
+  {
+    "date": "2023-07-14",
+    "nominator_stake": "583820745.04",
+    "validator_stake": "2185376.41"
+  },
+  {
+    "date": "2023-07-15",
+    "nominator_stake": "584161788.84",
+    "validator_stake": "2178289.65"
+  },
+  {
+    "date": "2023-07-16",
+    "nominator_stake": "584326567.23",
+    "validator_stake": "2183946.03"
+  },
+  {
+    "date": "2023-07-17",
+    "nominator_stake": "584361210.58",
+    "validator_stake": "2152647.70"
+  },
+  {
+    "date": "2023-07-18",
+    "nominator_stake": "588131318.68",
+    "validator_stake": "2150611.28"
+  },
+  {
+    "date": "2023-07-19",
+    "nominator_stake": "594174119.50",
+    "validator_stake": "2103002.32"
+  },
+  {
+    "date": "2023-07-20",
+    "nominator_stake": "594176867.00",
+    "validator_stake": "2118650.56"
+  },
+  {
+    "date": "2023-07-21",
+    "nominator_stake": "594252843.24",
+    "validator_stake": "2125112.48"
+  },
+  {
+    "date": "2023-07-22",
+    "nominator_stake": "594668554.22",
+    "validator_stake": "2114662.31"
+  },
+  {
+    "date": "2023-07-23",
+    "nominator_stake": "594746789.82",
+    "validator_stake": "2141240.23"
+  },
+  {
+    "date": "2023-07-24",
+    "nominator_stake": "594685386.49",
+    "validator_stake": "2141389.81"
+  },
+  {
+    "date": "2023-07-25",
+    "nominator_stake": "595478316.69",
+    "validator_stake": "2130227.81"
+  },
+  {
+    "date": "2023-07-26",
+    "nominator_stake": "596330626.19",
+    "validator_stake": "2140612.24"
+  },
+  {
+    "date": "2023-07-27",
+    "nominator_stake": "596700307.32",
+    "validator_stake": "2144865.48"
+  },
+  {
+    "date": "2023-07-28",
+    "nominator_stake": "596685180.93",
+    "validator_stake": "2131423.95"
+  },
+  {
+    "date": "2023-07-29",
+    "nominator_stake": "597150305.69",
+    "validator_stake": "2136074.74"
+  },
+  {
+    "date": "2023-07-30",
+    "nominator_stake": "596629691.62",
+    "validator_stake": "2131074.96"
+  },
+  {
+    "date": "2023-07-31",
+    "nominator_stake": "597365108.03",
+    "validator_stake": "2148987.35"
+  },
+  {
+    "date": "2023-08-01",
+    "nominator_stake": "598584390.70",
+    "validator_stake": "2147298.99"
+  },
+  {
+    "date": "2023-08-02",
+    "nominator_stake": "598940954.35",
+    "validator_stake": "2176896.48"
+  },
+  {
+    "date": "2023-08-03",
+    "nominator_stake": "599953134.58",
+    "validator_stake": "2160680.10"
+  },
+  {
+    "date": "2023-08-04",
+    "nominator_stake": "606591597.64",
+    "validator_stake": "2157156.07"
+  },
+  {
+    "date": "2023-08-05",
+    "nominator_stake": "606693637.89",
+    "validator_stake": "2146470.47"
+  },
+  {
+    "date": "2023-08-06",
+    "nominator_stake": "607032397.25",
+    "validator_stake": "2158201.70"
+  },
+  {
+    "date": "2023-08-07",
+    "nominator_stake": "607022311.61",
+    "validator_stake": "2141635.51"
+  },
+  {
+    "date": "2023-08-08",
+    "nominator_stake": "607552820.14",
+    "validator_stake": "2155659.12"
+  },
+  {
+    "date": "2023-08-09",
+    "nominator_stake": "608664052.37",
+    "validator_stake": "2153171.47"
+  },
+  {
+    "date": "2023-08-10",
+    "nominator_stake": "614604347.11",
+    "validator_stake": "2143292.51"
+  },
+  {
+    "date": "2023-08-11",
+    "nominator_stake": "619734775.60",
+    "validator_stake": "2126139.07"
+  },
+  {
+    "date": "2023-08-12",
+    "nominator_stake": "627881861.83",
+    "validator_stake": "2141380.59"
+  },
+  {
+    "date": "2023-08-13",
+    "nominator_stake": "635035656.49",
+    "validator_stake": "1989099.36"
+  },
+  {
+    "date": "2023-08-14",
+    "nominator_stake": "635181810.28",
+    "validator_stake": "1996155.88"
+  },
+  {
+    "date": "2023-08-15",
+    "nominator_stake": "635072963.56",
+    "validator_stake": "1937647.86"
+  },
+  {
+    "date": "2023-08-16",
+    "nominator_stake": "637661307.91",
+    "validator_stake": "2002745.02"
+  },
+  {
+    "date": "2023-08-17",
+    "nominator_stake": "645246175.04",
+    "validator_stake": "2082614.92"
+  },
+  {
+    "date": "2023-08-18",
+    "nominator_stake": "651903570.79",
+    "validator_stake": "2092138.26"
+  },
+  {
+    "date": "2023-08-19",
+    "nominator_stake": "652460535.74",
+    "validator_stake": "2146966.08"
+  },
+  {
+    "date": "2023-08-20",
+    "nominator_stake": "652527196.45",
+    "validator_stake": "2099039.98"
+  },
+  {
+    "date": "2023-08-21",
+    "nominator_stake": "651621797.31",
+    "validator_stake": "2000167.50"
+  },
+  {
+    "date": "2023-08-22",
+    "nominator_stake": "654487180.46",
+    "validator_stake": "2088239.65"
+  },
+  {
+    "date": "2023-08-23",
+    "nominator_stake": "654912976.56",
+    "validator_stake": "2091790.65"
+  },
+  {
+    "date": "2023-08-24",
+    "nominator_stake": "654367920.78",
+    "validator_stake": "2083307.65"
+  },
+  {
+    "date": "2023-08-25",
+    "nominator_stake": "654315560.35",
+    "validator_stake": "2094295.13"
+  },
+  {
+    "date": "2023-08-26",
+    "nominator_stake": "654517246.55",
+    "validator_stake": "2110355.79"
+  },
+  {
+    "date": "2023-08-27",
+    "nominator_stake": "655721911.71",
+    "validator_stake": "2121109.14"
+  },
+  {
+    "date": "2023-08-28",
+    "nominator_stake": "654761242.27",
+    "validator_stake": "2124116.21"
+  },
+  {
+    "date": "2023-08-29",
+    "nominator_stake": "655309408.26",
+    "validator_stake": "2128649.28"
+  },
+  {
+    "date": "2023-08-30",
+    "nominator_stake": "654938879.11",
+    "validator_stake": "2130895.92"
+  },
+  {
+    "date": "2023-08-31",
+    "nominator_stake": "658643867.89",
+    "validator_stake": "2116954.45"
+  },
+  {
+    "date": "2023-09-01",
+    "nominator_stake": "659199050.79",
+    "validator_stake": "2109715.82"
+  },
+  {
+    "date": "2023-09-02",
+    "nominator_stake": "659563139.04",
+    "validator_stake": "2108258.48"
+  },
+  {
+    "date": "2023-09-03",
+    "nominator_stake": "659694878.04",
+    "validator_stake": "2136500.67"
+  },
+  {
+    "date": "2023-09-04",
+    "nominator_stake": "658772994.49",
+    "validator_stake": "2149400.53"
+  },
+  {
+    "date": "2023-09-05",
+    "nominator_stake": "658758585.29",
+    "validator_stake": "2116258.01"
+  },
+  {
+    "date": "2023-09-06",
+    "nominator_stake": "659030857.27",
+    "validator_stake": "2108801.29"
+  },
+  {
+    "date": "2023-09-07",
+    "nominator_stake": "659117204.47",
+    "validator_stake": "2119216.42"
+  },
+  {
+    "date": "2023-09-08",
+    "nominator_stake": "659363739.20",
+    "validator_stake": "2109870.93"
+  },
+  {
+    "date": "2023-09-09",
+    "nominator_stake": "658213069.55",
+    "validator_stake": "2136469.05"
+  },
+  {
+    "date": "2023-09-10",
+    "nominator_stake": "658450616.45",
+    "validator_stake": "2117031.72"
+  },
+  {
+    "date": "2023-09-11",
+    "nominator_stake": "658730029.39",
+    "validator_stake": "2124096.11"
+  },
+  {
+    "date": "2023-09-12",
+    "nominator_stake": "660277206.91",
+    "validator_stake": "2128854.59"
+  },
+  {
+    "date": "2023-09-13",
+    "nominator_stake": "658480942.19",
+    "validator_stake": "2109172.28"
+  },
+  {
+    "date": "2023-09-14",
+    "nominator_stake": "658697556.30",
+    "validator_stake": "2115528.48"
+  },
+  {
+    "date": "2023-09-15",
+    "nominator_stake": "658894276.55",
+    "validator_stake": "2125927.38"
+  },
+  {
+    "date": "2023-09-16",
+    "nominator_stake": "659495624.52",
+    "validator_stake": "2120837.99"
+  },
+  {
+    "date": "2023-09-17",
+    "nominator_stake": "659874176.63",
+    "validator_stake": "2116982.62"
+  },
+  {
+    "date": "2023-09-18",
+    "nominator_stake": "659713508.79",
+    "validator_stake": "2115005.13"
+  },
+  {
+    "date": "2023-09-19",
+    "nominator_stake": "662247809.63",
+    "validator_stake": "2114180.09"
+  },
+  {
+    "date": "2023-09-20",
+    "nominator_stake": "658355129.30",
+    "validator_stake": "2096370.94"
+  },
+  {
+    "date": "2023-09-21",
+    "nominator_stake": "658028236.28",
+    "validator_stake": "2131864.47"
+  },
+  {
+    "date": "2023-09-22",
+    "nominator_stake": "658343350.03",
+    "validator_stake": "2093615.75"
+  },
+  {
+    "date": "2023-09-23",
+    "nominator_stake": "658350681.77",
+    "validator_stake": "2128527.92"
+  },
+  {
+    "date": "2023-09-24",
+    "nominator_stake": "660819353.66",
+    "validator_stake": "2189502.52"
+  },
+  {
+    "date": "2023-09-25",
+    "nominator_stake": "660575269.22",
+    "validator_stake": "2197542.41"
+  },
+  {
+    "date": "2023-09-26",
+    "nominator_stake": "662252772.52",
+    "validator_stake": "2137615.93"
+  },
+  {
+    "date": "2023-09-27",
+    "nominator_stake": "662308302.91",
+    "validator_stake": "2148424.13"
+  },
+  {
+    "date": "2023-09-28",
+    "nominator_stake": "660695279.53",
+    "validator_stake": "2162176.78"
+  },
+  {
+    "date": "2023-09-29",
+    "nominator_stake": "660890472.90",
+    "validator_stake": "2168545.75"
+  },
+  {
+    "date": "2023-09-30",
+    "nominator_stake": "661051846.68",
+    "validator_stake": "2153143.59"
+  }
+]
