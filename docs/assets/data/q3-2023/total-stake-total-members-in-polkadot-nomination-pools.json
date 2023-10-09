@@ -1,0 +1,917 @@
+[
+  {
+    "date": "2023-04-01",
+    "total_members": "8175",
+    "total_stake": "2969459.02"
+  },
+  {
+    "date": "2023-04-02",
+    "total_members": "8254",
+    "total_stake": "2980387.36"
+  },
+  {
+    "date": "2023-04-03",
+    "total_members": "8305",
+    "total_stake": "2999751.11"
+  },
+  {
+    "date": "2023-04-04",
+    "total_members": "8366",
+    "total_stake": "3012440.37"
+  },
+  {
+    "date": "2023-04-05",
+    "total_members": "8439",
+    "total_stake": "3077656.95"
+  },
+  {
+    "date": "2023-04-06",
+    "total_members": "8487",
+    "total_stake": "3083343.94"
+  },
+  {
+    "date": "2023-04-07",
+    "total_members": "8530",
+    "total_stake": "3100931.21"
+  },
+  {
+    "date": "2023-04-08",
+    "total_members": "8574",
+    "total_stake": "3111903.19"
+  },
+  {
+    "date": "2023-04-09",
+    "total_members": "8629",
+    "total_stake": "3127364.09"
+  },
+  {
+    "date": "2023-04-10",
+    "total_members": "8694",
+    "total_stake": "3142872.40"
+  },
+  {
+    "date": "2023-04-11",
+    "total_members": "8750",
+    "total_stake": "3168735.22"
+  },
+  {
+    "date": "2023-04-12",
+    "total_members": "8794",
+    "total_stake": "3201605.41"
+  },
+  {
+    "date": "2023-04-13",
+    "total_members": "8825",
+    "total_stake": "3217996.45"
+  },
+  {
+    "date": "2023-04-14",
+    "total_members": "8878",
+    "total_stake": "3232953.44"
+  },
+  {
+    "date": "2023-04-15",
+    "total_members": "8930",
+    "total_stake": "3253378.53"
+  },
+  {
+    "date": "2023-04-16",
+    "total_members": "9000",
+    "total_stake": "3267473.66"
+  },
+  {
+    "date": "2023-04-17",
+    "total_members": "9048",
+    "total_stake": "3279992.01"
+  },
+  {
+    "date": "2023-04-18",
+    "total_members": "9100",
+    "total_stake": "3397075.61"
+  },
+  {
+    "date": "2023-04-19",
+    "total_members": "9151",
+    "total_stake": "3415283.40"
+  },
+  {
+    "date": "2023-04-20",
+    "total_members": "9200",
+    "total_stake": "3532426.17"
+  },
+  {
+    "date": "2023-04-21",
+    "total_members": "9247",
+    "total_stake": "3553631.55"
+  },
+  {
+    "date": "2023-04-22",
+    "total_members": "9293",
+    "total_stake": "3585722.86"
+  },
+  {
+    "date": "2023-04-23",
+    "total_members": "9338",
+    "total_stake": "3609179.68"
+  },
+  {
+    "date": "2023-04-24",
+    "total_members": "9388",
+    "total_stake": "3627148.95"
+  },
+  {
+    "date": "2023-04-25",
+    "total_members": "9437",
+    "total_stake": "3746480.44"
+  },
+  {
+    "date": "2023-04-26",
+    "total_members": "9476",
+    "total_stake": "3769993.47"
+  },
+  {
+    "date": "2023-04-27",
+    "total_members": "9512",
+    "total_stake": "3788747.51"
+  },
+  {
+    "date": "2023-04-28",
+    "total_members": "9556",
+    "total_stake": "3802233.33"
+  },
+  {
+    "date": "2023-04-29",
+    "total_members": "9613",
+    "total_stake": "3806207.18"
+  },
+  {
+    "date": "2023-04-30",
+    "total_members": "9651",
+    "total_stake": "3813542.21"
+  },
+  {
+    "date": "2023-05-01",
+    "total_members": "9701",
+    "total_stake": "3829805.71"
+  },
+  {
+    "date": "2023-05-02",
+    "total_members": "9757",
+    "total_stake": "3855027.93"
+  },
+  {
+    "date": "2023-05-03",
+    "total_members": "9829",
+    "total_stake": "3872132.29"
+  },
+  {
+    "date": "2023-05-04",
+    "total_members": "9886",
+    "total_stake": "3899215.01"
+  },
+  {
+    "date": "2023-05-05",
+    "total_members": "9930",
+    "total_stake": "3922921.61"
+  },
+  {
+    "date": "2023-05-06",
+    "total_members": "9982",
+    "total_stake": "3946090.60"
+  },
+  {
+    "date": "2023-05-07",
+    "total_members": "10050",
+    "total_stake": "3969333.42"
+  },
+  {
+    "date": "2023-05-08",
+    "total_members": "10110",
+    "total_stake": "4007117.39"
+  },
+  {
+    "date": "2023-05-09",
+    "total_members": "10145",
+    "total_stake": "4033751.61"
+  },
+  {
+    "date": "2023-05-10",
+    "total_members": "10172",
+    "total_stake": "4048696.65"
+  },
+  {
+    "date": "2023-05-11",
+    "total_members": "10212",
+    "total_stake": "4090581.24"
+  },
+  {
+    "date": "2023-05-12",
+    "total_members": "10256",
+    "total_stake": "4114342.90"
+  },
+  {
+    "date": "2023-05-13",
+    "total_members": "10298",
+    "total_stake": "4129746.34"
+  },
+  {
+    "date": "2023-05-14",
+    "total_members": "10348",
+    "total_stake": "4146856.49"
+  },
+  {
+    "date": "2023-05-15",
+    "total_members": "10387",
+    "total_stake": "4169841.61"
+  },
+  {
+    "date": "2023-05-16",
+    "total_members": "10415",
+    "total_stake": "4182693.23"
+  },
+  {
+    "date": "2023-05-17",
+    "total_members": "10442",
+    "total_stake": "4211779.54"
+  },
+  {
+    "date": "2023-05-18",
+    "total_members": "10465",
+    "total_stake": "4234504.15"
+  },
+  {
+    "date": "2023-05-19",
+    "total_members": "10495",
+    "total_stake": "4230713.82"
+  },
+  {
+    "date": "2023-05-20",
+    "total_members": "10532",
+    "total_stake": "4246772.15"
+  },
+  {
+    "date": "2023-05-21",
+    "total_members": "10574",
+    "total_stake": "4264980.67"
+  },
+  {
+    "date": "2023-05-22",
+    "total_members": "10604",
+    "total_stake": "4285784.52"
+  },
+  {
+    "date": "2023-05-23",
+    "total_members": "10626",
+    "total_stake": "4310337.12"
+  },
+  {
+    "date": "2023-05-24",
+    "total_members": "10661",
+    "total_stake": "4332978.91"
+  },
+  {
+    "date": "2023-05-25",
+    "total_members": "10693",
+    "total_stake": "4342673.40"
+  },
+  {
+    "date": "2023-05-26",
+    "total_members": "10729",
+    "total_stake": "4357650.08"
+  },
+  {
+    "date": "2023-05-27",
+    "total_members": "10767",
+    "total_stake": "4379918.86"
+  },
+  {
+    "date": "2023-05-28",
+    "total_members": "10814",
+    "total_stake": "4390498.53"
+  },
+  {
+    "date": "2023-05-29",
+    "total_members": "10862",
+    "total_stake": "4409862.58"
+  },
+  {
+    "date": "2023-05-30",
+    "total_members": "10904",
+    "total_stake": "4422847.07"
+  },
+  {
+    "date": "2023-05-31",
+    "total_members": "10936",
+    "total_stake": "4454251.55"
+  },
+  {
+    "date": "2023-06-01",
+    "total_members": "10987",
+    "total_stake": "4482259.28"
+  },
+  {
+    "date": "2023-06-02",
+    "total_members": "11045",
+    "total_stake": "4506080.01"
+  },
+  {
+    "date": "2023-06-03",
+    "total_members": "11072",
+    "total_stake": "4525384.52"
+  },
+  {
+    "date": "2023-06-04",
+    "total_members": "11114",
+    "total_stake": "4551461.92"
+  },
+  {
+    "date": "2023-06-05",
+    "total_members": "11142",
+    "total_stake": "4571236.08"
+  },
+  {
+    "date": "2023-06-06",
+    "total_members": "11197",
+    "total_stake": "4592716.21"
+  },
+  {
+    "date": "2023-06-07",
+    "total_members": "11245",
+    "total_stake": "4624951.58"
+  },
+  {
+    "date": "2023-06-08",
+    "total_members": "11313",
+    "total_stake": "4632092.63"
+  },
+  {
+    "date": "2023-06-09",
+    "total_members": "11354",
+    "total_stake": "4644828.05"
+  },
+  {
+    "date": "2023-06-10",
+    "total_members": "11409",
+    "total_stake": "4689516.33"
+  },
+  {
+    "date": "2023-06-11",
+    "total_members": "11469",
+    "total_stake": "4724657.74"
+  },
+  {
+    "date": "2023-06-12",
+    "total_members": "11534",
+    "total_stake": "4798575.53"
+  },
+  {
+    "date": "2023-06-13",
+    "total_members": "11584",
+    "total_stake": "4819727.01"
+  },
+  {
+    "date": "2023-06-14",
+    "total_members": "11618",
+    "total_stake": "4877856.49"
+  },
+  {
+    "date": "2023-06-15",
+    "total_members": "11660",
+    "total_stake": "4917822.61"
+  },
+  {
+    "date": "2023-06-16",
+    "total_members": "11693",
+    "total_stake": "4968603.68"
+  },
+  {
+    "date": "2023-06-17",
+    "total_members": "11745",
+    "total_stake": "4990116.08"
+  },
+  {
+    "date": "2023-06-18",
+    "total_members": "11776",
+    "total_stake": "5023163.75"
+  },
+  {
+    "date": "2023-06-19",
+    "total_members": "11807",
+    "total_stake": "5072700.41"
+  },
+  {
+    "date": "2023-06-20",
+    "total_members": "11854",
+    "total_stake": "5079914.98"
+  },
+  {
+    "date": "2023-06-21",
+    "total_members": "11912",
+    "total_stake": "5114839.23"
+  },
+  {
+    "date": "2023-06-22",
+    "total_members": "11949",
+    "total_stake": "5147763.46"
+  },
+  {
+    "date": "2023-06-23",
+    "total_members": "11986",
+    "total_stake": "5176068.77"
+  },
+  {
+    "date": "2023-06-24",
+    "total_members": "12043",
+    "total_stake": "5193766.21"
+  },
+  {
+    "date": "2023-06-25",
+    "total_members": "12099",
+    "total_stake": "5216023.36"
+  },
+  {
+    "date": "2023-06-26",
+    "total_members": "12143",
+    "total_stake": "5227664.83"
+  },
+  {
+    "date": "2023-06-27",
+    "total_members": "12172",
+    "total_stake": "5244844.22"
+  },
+  {
+    "date": "2023-06-28",
+    "total_members": "12201",
+    "total_stake": "5271100.83"
+  },
+  {
+    "date": "2023-06-29",
+    "total_members": "12235",
+    "total_stake": "5291677.54"
+  },
+  {
+    "date": "2023-06-30",
+    "total_members": "12268",
+    "total_stake": "5313640.53"
+  },
+  {
+    "date": "2023-07-01",
+    "total_members": "12313",
+    "total_stake": "5327987.89"
+  },
+  {
+    "date": "2023-07-02",
+    "total_members": "12349",
+    "total_stake": "5360157.88"
+  },
+  {
+    "date": "2023-07-03",
+    "total_members": "12398",
+    "total_stake": "5393350.16"
+  },
+  {
+    "date": "2023-07-04",
+    "total_members": "12438",
+    "total_stake": "5411473.13"
+  },
+  {
+    "date": "2023-07-05",
+    "total_members": "12471",
+    "total_stake": "5426660.27"
+  },
+  {
+    "date": "2023-07-06",
+    "total_members": "12526",
+    "total_stake": "5462375.12"
+  },
+  {
+    "date": "2023-07-07",
+    "total_members": "12559",
+    "total_stake": "5505626.94"
+  },
+  {
+    "date": "2023-07-08",
+    "total_members": "12598",
+    "total_stake": "5530237.27"
+  },
+  {
+    "date": "2023-07-09",
+    "total_members": "12655",
+    "total_stake": "5551819.90"
+  },
+  {
+    "date": "2023-07-10",
+    "total_members": "12690",
+    "total_stake": "5577271.40"
+  },
+  {
+    "date": "2023-07-11",
+    "total_members": "12731",
+    "total_stake": "5593444.57"
+  },
+  {
+    "date": "2023-07-12",
+    "total_members": "12766",
+    "total_stake": "5615153.28"
+  },
+  {
+    "date": "2023-07-13",
+    "total_members": "12793",
+    "total_stake": "5631079.50"
+  },
+  {
+    "date": "2023-07-14",
+    "total_members": "12822",
+    "total_stake": "5656891.82"
+  },
+  {
+    "date": "2023-07-15",
+    "total_members": "12868",
+    "total_stake": "5677815.60"
+  },
+  {
+    "date": "2023-07-16",
+    "total_members": "12895",
+    "total_stake": "5685565.07"
+  },
+  {
+    "date": "2023-07-17",
+    "total_members": "12932",
+    "total_stake": "5705522.55"
+  },
+  {
+    "date": "2023-07-18",
+    "total_members": "12956",
+    "total_stake": "5721105.33"
+  },
+  {
+    "date": "2023-07-19",
+    "total_members": "12972",
+    "total_stake": "5728400.34"
+  },
+  {
+    "date": "2023-07-20",
+    "total_members": "12994",
+    "total_stake": "5735059.21"
+  },
+  {
+    "date": "2023-07-21",
+    "total_members": "13012",
+    "total_stake": "5743592.75"
+  },
+  {
+    "date": "2023-07-22",
+    "total_members": "13047",
+    "total_stake": "5751424.58"
+  },
+  {
+    "date": "2023-07-23",
+    "total_members": "13081",
+    "total_stake": "5809721.71"
+  },
+  {
+    "date": "2023-07-24",
+    "total_members": "13110",
+    "total_stake": "5826621.30"
+  },
+  {
+    "date": "2023-07-25",
+    "total_members": "13131",
+    "total_stake": "5864729.91"
+  },
+  {
+    "date": "2023-07-26",
+    "total_members": "13159",
+    "total_stake": "5894316.21"
+  },
+  {
+    "date": "2023-07-27",
+    "total_members": "13183",
+    "total_stake": "5912052.95"
+  },
+  {
+    "date": "2023-07-28",
+    "total_members": "13207",
+    "total_stake": "5928865.75"
+  },
+  {
+    "date": "2023-07-29",
+    "total_members": "13223",
+    "total_stake": "5944825.08"
+  },
+  {
+    "date": "2023-07-30",
+    "total_members": "13257",
+    "total_stake": "5969776.23"
+  },
+  {
+    "date": "2023-07-31",
+    "total_members": "13301",
+    "total_stake": "6080809.16"
+  },
+  {
+    "date": "2023-08-01",
+    "total_members": "13321",
+    "total_stake": "6100645.46"
+  },
+  {
+    "date": "2023-08-02",
+    "total_members": "13358",
+    "total_stake": "6124364.83"
+  },
+  {
+    "date": "2023-08-03",
+    "total_members": "13383",
+    "total_stake": "6151369.00"
+  },
+  {
+    "date": "2023-08-04",
+    "total_members": "13403",
+    "total_stake": "6171761.17"
+  },
+  {
+    "date": "2023-08-05",
+    "total_members": "13427",
+    "total_stake": "6187971.99"
+  },
+  {
+    "date": "2023-08-06",
+    "total_members": "13458",
+    "total_stake": "6211525.20"
+  },
+  {
+    "date": "2023-08-07",
+    "total_members": "13498",
+    "total_stake": "6226401.78"
+  },
+  {
+    "date": "2023-08-08",
+    "total_members": "13539",
+    "total_stake": "6244066.00"
+  },
+  {
+    "date": "2023-08-09",
+    "total_members": "13562",
+    "total_stake": "6261961.59"
+  },
+  {
+    "date": "2023-08-10",
+    "total_members": "13586",
+    "total_stake": "6252959.59"
+  },
+  {
+    "date": "2023-08-11",
+    "total_members": "13613",
+    "total_stake": "6264171.74"
+  },
+  {
+    "date": "2023-08-12",
+    "total_members": "13633",
+    "total_stake": "6272457.10"
+  },
+  {
+    "date": "2023-08-13",
+    "total_members": "13669",
+    "total_stake": "6287348.18"
+  },
+  {
+    "date": "2023-08-14",
+    "total_members": "13705",
+    "total_stake": "6301167.47"
+  },
+  {
+    "date": "2023-08-15",
+    "total_members": "13738",
+    "total_stake": "6344495.97"
+  },
+  {
+    "date": "2023-08-16",
+    "total_members": "13766",
+    "total_stake": "6363113.44"
+  },
+  {
+    "date": "2023-08-17",
+    "total_members": "13790",
+    "total_stake": "6381630.86"
+  },
+  {
+    "date": "2023-08-18",
+    "total_members": "13818",
+    "total_stake": "6405356.82"
+  },
+  {
+    "date": "2023-08-19",
+    "total_members": "13848",
+    "total_stake": "6427694.25"
+  },
+  {
+    "date": "2023-08-20",
+    "total_members": "13883",
+    "total_stake": "6460477.82"
+  },
+  {
+    "date": "2023-08-21",
+    "total_members": "13905",
+    "total_stake": "6481399.26"
+  },
+  {
+    "date": "2023-08-22",
+    "total_members": "13946",
+    "total_stake": "6521159.51"
+  },
+  {
+    "date": "2023-08-23",
+    "total_members": "13977",
+    "total_stake": "6530695.37"
+  },
+  {
+    "date": "2023-08-24",
+    "total_members": "14009",
+    "total_stake": "6584951.65"
+  },
+  {
+    "date": "2023-08-25",
+    "total_members": "14039",
+    "total_stake": "6593534.15"
+  },
+  {
+    "date": "2023-08-26",
+    "total_members": "14066",
+    "total_stake": "6615301.52"
+  },
+  {
+    "date": "2023-08-27",
+    "total_members": "14098",
+    "total_stake": "6591642.74"
+  },
+  {
+    "date": "2023-08-28",
+    "total_members": "14124",
+    "total_stake": "6613881.50"
+  },
+  {
+    "date": "2023-08-29",
+    "total_members": "14146",
+    "total_stake": "6644478.95"
+  },
+  {
+    "date": "2023-08-30",
+    "total_members": "14169",
+    "total_stake": "6670184.39"
+  },
+  {
+    "date": "2023-08-31",
+    "total_members": "14201",
+    "total_stake": "6689385.83"
+  },
+  {
+    "date": "2023-09-01",
+    "total_members": "14233",
+    "total_stake": "6721130.34"
+  },
+  {
+    "date": "2023-09-02",
+    "total_members": "14268",
+    "total_stake": "6735604.54"
+  },
+  {
+    "date": "2023-09-03",
+    "total_members": "14293",
+    "total_stake": "6752520.00"
+  },
+  {
+    "date": "2023-09-04",
+    "total_members": "14310",
+    "total_stake": "6759762.30"
+  },
+  {
+    "date": "2023-09-05",
+    "total_members": "14321",
+    "total_stake": "6781898.52"
+  },
+  {
+    "date": "2023-09-06",
+    "total_members": "14338",
+    "total_stake": "6800367.69"
+  },
+  {
+    "date": "2023-09-07",
+    "total_members": "14367",
+    "total_stake": "6836002.13"
+  },
+  {
+    "date": "2023-09-08",
+    "total_members": "14392",
+    "total_stake": "6847300.69"
+  },
+  {
+    "date": "2023-09-09",
+    "total_members": "14418",
+    "total_stake": "6866520.45"
+  },
+  {
+    "date": "2023-09-10",
+    "total_members": "14446",
+    "total_stake": "6879597.94"
+  },
+  {
+    "date": "2023-09-11",
+    "total_members": "14469",
+    "total_stake": "6916343.11"
+  },
+  {
+    "date": "2023-09-12",
+    "total_members": "14509",
+    "total_stake": "6932298.88"
+  },
+  {
+    "date": "2023-09-13",
+    "total_members": "14535",
+    "total_stake": "6955894.07"
+  },
+  {
+    "date": "2023-09-14",
+    "total_members": "14578",
+    "total_stake": "6974749.64"
+  },
+  {
+    "date": "2023-09-15",
+    "total_members": "14628",
+    "total_stake": "7013771.81"
+  },
+  {
+    "date": "2023-09-16",
+    "total_members": "14689",
+    "total_stake": "7043279.20"
+  },
+  {
+    "date": "2023-09-17",
+    "total_members": "14748",
+    "total_stake": "7067365.23"
+  },
+  {
+    "date": "2023-09-18",
+    "total_members": "14807",
+    "total_stake": "7113625.14"
+  },
+  {
+    "date": "2023-09-19",
+    "total_members": "14869",
+    "total_stake": "6900694.53"
+  },
+  {
+    "date": "2023-09-20",
+    "total_members": "14906",
+    "total_stake": "6918744.18"
+  },
+  {
+    "date": "2023-09-21",
+    "total_members": "14937",
+    "total_stake": "6935784.69"
+  },
+  {
+    "date": "2023-09-22",
+    "total_members": "14984",
+    "total_stake": "6969888.44"
+  },
+  {
+    "date": "2023-09-23",
+    "total_members": "15041",
+    "total_stake": "6995035.08"
+  },
+  {
+    "date": "2023-09-24",
+    "total_members": "15085",
+    "total_stake": "6995974.15"
+  },
+  {
+    "date": "2023-09-25",
+    "total_members": "15118",
+    "total_stake": "7028127.61"
+  },
+  {
+    "date": "2023-09-26",
+    "total_members": "15164",
+    "total_stake": "7049256.58"
+  },
+  {
+    "date": "2023-09-27",
+    "total_members": "15192",
+    "total_stake": "7070466.76"
+  },
+  {
+    "date": "2023-09-28",
+    "total_members": "15232",
+    "total_stake": "7103917.43"
+  },
+  {
+    "date": "2023-09-29",
+    "total_members": "15264",
+    "total_stake": "7117847.07"
+  },
+  {
+    "date": "2023-09-30",
+    "total_members": "15305",
+    "total_stake": "7143715.63"
+  }
+]
