@@ -86,12 +86,11 @@
 
 	.nav-link {
 		position: relative;
-		font-family: $heading-font-family;
-		font-weight: $heading-font-weight-secondary;
-		font-size: 15px;
+		font-weight: 600;
+		font-size: 18px;
 		line-height: 30px;
 		padding: 10px 20px;
-		color: #555;
+		color: #ccc;
 
 		&:hover {
 			color: $primary-color;
@@ -157,7 +156,7 @@
 		min-width: 200px;
 
 		.nav-link {
-			font-size: 14px;
+			font-size: 16px;
 			padding: 5px 1rem;
 		}
 	}
@@ -270,7 +269,7 @@
 	}
 }
 
-@media screen and(min-width: 1400px) {
+@media screen and(min-width: 1600px) {
 	.header {
 		.header-inner {
 			padding: 47px 0 20px;
@@ -298,17 +297,18 @@
 	}
 }
 
-@media only screen and (max-width: 1400px) {
-	.primary-menu > .nav > .nav-link {
-		font-size: 16px;
-		padding: 5px 15px;
-	}
-}
+@media screen and(max-width: 1400px) {
+	.primary-menu {
+		.nav-link {
+			font-size: 16px;
+			padding: 10px 15px;
+		}
 
-@media only screen and (max-width: 1200px) {
-	.primary-menu > .nav > .nav-link {
-		font-size: 15px;
-		padding: 5px 8px;
+		.sub-menu {
+			.nav-link {
+				font-size: 15px;
+			}
+		}
 	}
 }
 
@@ -352,11 +352,13 @@
 		transform: translateY(20px);
 		opacity: 0;
 		visibility: hidden;
+		pointer-events: none;
 
 		&.opened {
 			transform: none;
 			opacity: 1;
 			visibility: visible;
+			pointer-events: auto;
 		}
 
 		.nav-link {

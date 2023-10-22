@@ -1,0 +1,2771 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: https://ogp.me/ns#">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Site title and description -->
+	<title>Polkadot Deep Dive Report by dotinsights - The first Polkadot comprehensive quarterly report</title>
+	<meta name="title" content="Polkadot Deep Dive Report by dotinsights - The first Polkadot comprehensive quarterly report">
+	<meta name="description"
+	      content="In order to provide a panoramic view of and give detailed insights into the states of Polkadot and Kusama ecosystem, we are compiling data scattered around various sources to present this Polkadot Deep Dive quarterly report, with sections focused on DeFi, NFT and Web3.">
+	<meta property="og:site_name" content="Polkadot Deep Dive Report by dotinsights - The first Polkadot comprehensive quarterly report">
+	<meta property="og:url" content="https://dotinsights.subwallet.app/polkadot-report-q3-2022-en">
+	<meta property="og:title" content="Polkadot Deep Dive Report by dotinsights - The first Polkadot comprehensive quarterly report">
+	<meta property="og:type" content="website">
+	<meta property="og:description"
+	      content="In order to provide a panoramic view of and give detailed insights into the states of Polkadot and Kusama ecosystem, we are compiling data scattered around various sources to present this Polkadot Deep Dive quarterly report, with sections focused on DeFi, NFT and Web3.">
+	<meta name="twitter:site" content="@https://">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Polkadot Deep Dive Report by dotinsights - The first Polkadot comprehensive quarterly report">
+	<meta name="twitter:description"
+	      content="In order to provide a panoramic view of and give detailed insights into the states of Polkadot and Kusama ecosystem, we are compiling data scattered around various sources to present this Polkadot Deep Dive quarterly report, with sections focused on DeFi, NFT and Web3.">
+	<meta property="og:image" content="https://dotinsights.subwallet.app/assets/images/preview/preview.jpg"/>
+	<meta property="og:image:secure_url" content="https://dotinsights.subwallet.app/assets/images/preview/preview.jpg"/>
+	<meta property="og:image:alt" content="Polkadot Deep Dive Report by dotinsights - The first Polkadot comprehensive quarterly report"/>
+	<meta property="og:image:width" content="1200"/>
+	<meta property="og:image:height" content="630"/>
+
+	<!-- Favicon and App Icon -->
+	<link rel="icon" href="../assets/images/favicon/favicon-dark-32x32.png" sizes="32x32" media="(prefers-color-scheme: dark)">
+	<link rel="icon" href="../assets/images/favicon/favicon-dark-192x192.png" sizes="192x192" media="(prefers-color-scheme: dark)">
+	<link rel="icon" href="../assets/images/favicon/favicon-32x32.png" sizes="32x32" media="(prefers-color-scheme: light)">
+	<link rel="icon" href="../assets/images/favicon/favicon-192x192.png" sizes="192x192" media="(prefers-color-scheme: light)">
+	<link rel="apple-touch-icon-precomposed" href="../assets/images/favicon/favicon-180x180.png">
+	<meta name="msapplication-TileImage" content="../assets/images/favicon/favicon-270x270.png">
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+	<link href="../assets/fonts/unbounded/font-unbounded.css" rel="stylesheet">
+
+	<link href="../assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../assets/libs/swiper/css/swiper.min.css" rel="stylesheet">
+	<link href="../assets/fonts/awesome/css/all.min.css" rel="stylesheet">
+	<link href="../assets/css/style.css?v=2.0" rel="stylesheet">
+	<link href="../assets/css/report.css?v=2.1" rel="stylesheet">
+	<link href="../assets/css/report-q3-2022.css?v=2.0" rel="stylesheet">
+</head>
+<body tabindex="0" class="page-reports">
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" class="svg-symbols" id="svg-symbols">
+	<symbol id="symbol-ph-heart-straight" fill="#000000" viewBox="0 0 256 256">
+		<path class="icon"
+		      d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z"></path>
+	</symbol>
+	<symbol id="symbol-circle-check" fill="none" width="32" height="32" viewBox="0 0 32 32">
+		<path fill="#66E1B6"
+		      d="M16 3C13.4288 3 10.9154 3.76244 8.77759 5.1909C6.63975 6.61935 4.97351 8.64968 3.98957 11.0251C3.00563 13.4006 2.74818 16.0144 3.24979 18.5362C3.7514 21.0579 4.98953 23.3743 6.80761 25.1924C8.62569 27.0105 10.9421 28.2486 13.4638 28.7502C15.9856 29.2518 18.5994 28.9944 20.9749 28.0104C23.3503 27.0265 25.3806 25.3603 26.8091 23.2224C28.2376 21.0846 29 18.5712 29 16C28.9934 12.5542 27.6216 9.25145 25.1851 6.81491C22.7485 4.37837 19.4458 3.00661 16 3V3ZM22.1875 13.725L14.8625 20.725C14.6731 20.9031 14.4225 21.0016 14.1625 21C14.0354 21.0018 13.9092 20.9785 13.7912 20.9313C13.6732 20.8841 13.5658 20.814 13.475 20.725L9.8125 17.225C9.71092 17.1364 9.6283 17.0281 9.56962 16.9067C9.51094 16.7854 9.47741 16.6534 9.47104 16.5187C9.46466 16.3841 9.48559 16.2495 9.53255 16.1231C9.5795 15.9968 9.65153 15.8812 9.74429 15.7834C9.83706 15.6856 9.94864 15.6075 10.0723 15.5539C10.196 15.5003 10.3293 15.4723 10.4641 15.4715C10.5989 15.4707 10.7325 15.4972 10.8568 15.5493C10.9811 15.6015 11.0936 15.6783 11.1875 15.775L14.1625 18.6125L20.8125 12.275C21.0069 12.1054 21.2594 12.0174 21.5172 12.0296C21.7749 12.0418 22.018 12.1532 22.1955 12.3404C22.3731 12.5277 22.4714 12.7763 22.4699 13.0343C22.4684 13.2924 22.3672 13.5398 22.1875 13.725Z"></path>
+	</symbol>
+	<symbol id="symbol-circle-x" fill="none" width="32" height="32" viewBox="0 0 32 32">
+		<circle cx="16" cy="16" r="13" fill="white"/>
+		<path
+			d="M16 3C13.4288 3 10.9154 3.76244 8.77759 5.1909C6.63975 6.61935 4.97351 8.64968 3.98957 11.0251C3.00563 13.4006 2.74818 16.0144 3.24979 18.5362C3.7514 21.0579 4.98953 23.3743 6.80761 25.1924C8.62569 27.0105 10.9421 28.2486 13.4638 28.7502C15.9856 29.2518 18.5994 28.9944 20.9749 28.0104C23.3503 27.0265 25.3806 25.3603 26.8091 23.2224C28.2376 21.0846 29 18.5712 29 16C28.9934 12.5542 27.6216 9.25145 25.1851 6.81491C22.7485 4.37837 19.4458 3.00661 16 3V3ZM20.7125 19.2875C20.9003 19.4771 21.0056 19.7332 21.0056 20C21.0056 20.2668 20.9003 20.5229 20.7125 20.7125C20.5214 20.8973 20.2659 21.0006 20 21.0006C19.7341 21.0006 19.4786 20.8973 19.2875 20.7125L16 17.4125L12.7125 20.7125C12.5214 20.8973 12.2659 21.0006 12 21.0006C11.7341 21.0006 11.4786 20.8973 11.2875 20.7125C11.0997 20.5229 10.9944 20.2668 10.9944 20C10.9944 19.7332 11.0997 19.4771 11.2875 19.2875L14.5875 16L11.2875 12.7125C11.128 12.5182 11.0465 12.2715 11.0589 12.0205C11.0712 11.7694 11.1765 11.5319 11.3542 11.3542C11.5319 11.1765 11.7694 11.0712 12.0205 11.0589C12.2715 11.0465 12.5182 11.128 12.7125 11.2875L16 14.5875L19.2875 11.2875C19.4818 11.128 19.7285 11.0465 19.9795 11.0589C20.2306 11.0712 20.4681 11.1765 20.6458 11.3542C20.8235 11.5319 20.9288 11.7694 20.9411 12.0205C20.9535 12.2715 20.872 12.5182 20.7125 12.7125L17.4125 16L20.7125 19.2875Z"
+			fill="#F82613"/>
+	</symbol>
+</svg>
+<div class="section-effect-snow site-effect-snow" data-firefly-total="50"></div>
+<div id="page-preloader" class="page-loading"></div>
+<header id="header" class="header">
+	<div class="container-wide">
+		<div class="header-inner">
+			<div class="header-left">
+				<div class="site-branding">
+					<a href="/" id="logo">
+						<img loading="lazy" alt="dotinsights - Polkadot & Kusama Ecosystem Map" src="../assets/images/logo/logo.png"/>
+					</a>
+				</div>
+			</div>
+			<div class="header-center">
+				<nav id="primary-menu" class="primary-menu">
+					<ul class="nav">
+						<li class="nav-item">
+							<a class="nav-link" href="/">
+								<span class="nav-text">Most Loved Projects</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/projects/">
+								<span class="nav-text">Projects By Category</span>
+							</a>
+						</li>
+						<li class="nav-item active-item">
+							<a class="nav-link" href="/polkadot-report-q2-2023-en/">
+								<span class="nav-text">Deep Dive Report</span>
+							</a>
+							<ul class="sub-menu">
+								<li class="nav-item">
+									<a class="nav-link" href="/polkadot-report-q2-2023-en/">
+										<span class="nav-text">Q2 2023</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="/polkadot-staking-report-h1-2023-en/">
+										<span class="nav-text">Staking H1 2023</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="/polkadot-report-q1-2023-en/">
+										<span class="nav-text">Q1 2023</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="/polkadot-report-q4-2022-en/">
+										<span class="nav-text">Q4 2022</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="/polkadot-report-q3-2022-en/">
+										<span class="nav-text">Q3 2022</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="https://subwallet.app/v1/polkadot-report-h1-2022-en/" target="_blank">
+										<span class="nav-text">H1 2022</span>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item--mobile-button">
+							<a href="#" class="header-button button btn-open-connect-wallet" data-dotinsights-toggle="modal" data-dotinsights-target="#modal-connect-wallet">
+								<svg class="button-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M20.25 6.75H5.25C5.05109 6.75 4.86032 6.67098 4.71967 6.53033C4.57902 6.38968 4.5 6.19891 4.5 6C4.5 5.80109 4.57902 5.61032 4.71967 5.46967C4.86032 5.32902 5.05109 5.25 5.25 5.25H18C18.1989 5.25 18.3897 5.17098 18.5303 5.03033C18.671 4.88968 18.75 4.69891 18.75 4.5C18.75 4.30109 18.671 4.11032 18.5303 3.96967C18.3897 3.82902 18.1989 3.75 18 3.75H5.25C4.65402 3.75247 4.08316 3.99031 3.66174 4.41174C3.24031 4.83316 3.00247 5.40402 3 6V18C3.00247 18.596 3.24031 19.1668 3.66174 19.5883C4.08316 20.0097 4.65402 20.2475 5.25 20.25H20.25C20.6478 20.25 21.0294 20.092 21.3107 19.8107C21.592 19.5294 21.75 19.1478 21.75 18.75V8.25C21.75 7.85218 21.592 7.47064 21.3107 7.18934C21.0294 6.90804 20.6478 6.75 20.25 6.75ZM16.875 14.625C16.6525 14.625 16.435 14.559 16.25 14.4354C16.065 14.3118 15.9208 14.1361 15.8356 13.9305C15.7505 13.725 15.7282 13.4988 15.7716 13.2805C15.815 13.0623 15.9222 12.8618 16.0795 12.7045C16.2368 12.5472 16.4373 12.44 16.6555 12.3966C16.8738 12.3532 17.1 12.3755 17.3055 12.4606C17.5111 12.5458 17.6868 12.69 17.8104 12.875C17.934 13.06 18 13.2775 18 13.5C18 13.7984 17.8815 14.0845 17.6705 14.2955C17.4595 14.5065 17.1734 14.625 16.875 14.625Z"
+										fill="white"/>
+								</svg>
+								<div class="button-text"><span>Connect Wallet</span></div>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="header-right">
+				<div id="language-switcher" class="language-switcher"></div>
+				<a href="#" class="header-button button btn-open-connect-wallet" data-dotinsights-toggle="modal" data-dotinsights-target="#modal-connect-wallet">
+					<svg class="button-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M20.25 6.75H5.25C5.05109 6.75 4.86032 6.67098 4.71967 6.53033C4.57902 6.38968 4.5 6.19891 4.5 6C4.5 5.80109 4.57902 5.61032 4.71967 5.46967C4.86032 5.32902 5.05109 5.25 5.25 5.25H18C18.1989 5.25 18.3897 5.17098 18.5303 5.03033C18.671 4.88968 18.75 4.69891 18.75 4.5C18.75 4.30109 18.671 4.11032 18.5303 3.96967C18.3897 3.82902 18.1989 3.75 18 3.75H5.25C4.65402 3.75247 4.08316 3.99031 3.66174 4.41174C3.24031 4.83316 3.00247 5.40402 3 6V18C3.00247 18.596 3.24031 19.1668 3.66174 19.5883C4.08316 20.0097 4.65402 20.2475 5.25 20.25H20.25C20.6478 20.25 21.0294 20.092 21.3107 19.8107C21.592 19.5294 21.75 19.1478 21.75 18.75V8.25C21.75 7.85218 21.592 7.47064 21.3107 7.18934C21.0294 6.90804 20.6478 6.75 20.25 6.75ZM16.875 14.625C16.6525 14.625 16.435 14.559 16.25 14.4354C16.065 14.3118 15.9208 14.1361 15.8356 13.9305C15.7505 13.725 15.7282 13.4988 15.7716 13.2805C15.815 13.0623 15.9222 12.8618 16.0795 12.7045C16.2368 12.5472 16.4373 12.44 16.6555 12.3966C16.8738 12.3532 17.1 12.3755 17.3055 12.4606C17.5111 12.5458 17.6868 12.69 17.8104 12.875C17.934 13.06 18 13.2775 18 13.5C18 13.7984 17.8815 14.0845 17.6705 14.2955C17.4595 14.5065 17.1734 14.625 16.875 14.625Z"
+							fill="white"/>
+					</svg>
+					<div class="button-text"><span>Connect Wallet</span></div>
+				</a>
+				<button id="navbar-toggler" class="navbar-toggler collapsed" type="button" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div id="main-content" class="main-content">
+	<div class="section section-reports-hero" id="polkadot-deep-dive">
+		<div class="section-shape hero-shape-dot move-vertical-reversed">
+			<img src="../assets/images/shapes/shape-dot.png" alt="Polkadot" loading="lazy" width="194" height="177"/>
+		</div>
+		<div class="section-shape hero-shape-ksm move-vertical-reversed">
+			<img src="../assets/images/shapes/shape-kusama.png" alt="Kusama" loading="lazy" width="361" height="361"/>
+		</div>
+		<div class="section-shape hero-shape-s-circle move-vertical">
+			<img src="../assets/images/shapes/shape-s-circle.png" alt="SW" loading="lazy" width="306" height="306"/>
+		</div>
+		<div class="section-shape hero-shape-satellite move-vertical">
+			<img src="../assets/images/shapes/shape-satellite2.png" alt="SW" loading="lazy" width="34" height="34"/>
+		</div>
+		<div class="section-shape hero-shape-02 move-vertical">
+			<img src="../assets/images/report/shapes/satellite3.png" alt="Shape" loading="lazy" width="51" height="51"/>
+		</div>
+		<div class="section-shape hero-shape-03 move-vertical-reversed">
+			<img src="../assets/images/shapes/shape-dotinsights.png" alt="Shape" loading="lazy" width="255" height="251"/>
+		</div>
+		<div class="section-content">
+			<div class="container">
+				<div class="section-header">
+					<h1 class="section-title">Polkadot
+						<span class="sub-title">Deep Dive</span>
+					</h1>
+					<h2 class="section-sub-title">Q3 2022</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section section-ecosystem-map" id="ecosystem-map">
+		<div class="section-content">
+			<div class="container">
+				<div class="section-header">
+					<div class="section-header-inner">
+						<div class="section-shape section-shape-01 move-vertical-reversed">
+							<img src="../assets/images/report/shapes/shape-ball.png" alt="Shape" loading="lazy" width="53" height="53"/>
+						</div>
+						<div class="section-shape shape-cube move-vertical-reversed">
+							<img src="../assets/images/report/shapes/shape-cube.png" alt="Shape" loading="lazy" width="109" height="123"/>
+						</div>
+						<h4 class="section-title">はじめてのインタラクティブ
+							Polkadot と Kusama のエコシステムマップ</h4>
+						<div class="section-call-to-actions button-group">
+							<a href="/projects/" class="button button-size-lg">
+								<span class="button-text">全てのプロジェクトを閲覧</span>
+							</a>
+							<a href="https://slink.subwallet.app/project-submit" target="_blank" rel="nofollow" class="button button-outline button-size-lg">
+								<span class="button-text">プロジェクトの提出</span>
+							</a>
+						</div>
+						<div class="section-description-wrap">
+							<div class="section-description">
+								<p>Polkadotとは何ですか？2022年第3四半期、 <a href="https://www.coindesk.com/learn/polkadot-101-connecting-the-dots-for-beginners/" target="_blank" rel="nofollow">大手メディア</a>、<a
+									href="https://twitter.com/blockchain/status/1567113242387922946" target="_blank" rel="nofollow">ポッドキャスト</a>、<a href="https://www.forbes.com/advisor/investing/cryptocurrency/polkadot/" target="_blank"
+								                                                                                                                   rel="nofollow">金融アドバイスプラットフォーム</a>はこれと同じ質問を投げかけていました。Nominated Proof-of-Stake
+									コンセンサスを備えたレイヤー0のシャードプロトコル設計は、PolkadotとKusamaがブロックチェーンのトリレンマを解決できることを意味します。システムは安全でスケーラブル、高度に分散されており、多数のパラチェーン（レイヤー1のブロックチェーン）と分散アプリ（DApps）が不具合なく実行できるようにするのです。</p>
+								<p>拡大を続けるPolkadotとKusamaのエコシステムの全体像を提供するため、SubWalletはParity Technologiesと提携し、このPolkadot Deep
+									Diveレポートシリーズとともに、25カテゴリーにわたる500以上のプロジェクトを網羅した初のインタラクティブなPolkadotとKusamaエコシステムマップを構築しました。DeFi、SocialFi、アイデンティティ、NFT
+									マーケットプレイス、メタバース、ゲーミング、DAOからブリッジ、インフラ、スマートコントラクト、ツーリング、データおよびプライバシーソリューションまで、2022年第3四半期、PolkadotとKusamaのエコシステムは活動でにぎわい、期待で満ちていました。</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section section-ecosystem-overview" id="ecosystem-overview">
+		<div class="section-shape shape-galaxy">
+			<div class="section-shape shape-radial-circle"></div>
+			<img loading="lazy" src="../assets/images/report/shapes/galaxy-border.png" alt="Shape" width="898" height="609" class="main-image">
+			<div class="section-shape shape-satellite">
+				<img loading="lazy" src="../assets/images/report/shapes/satellite2.png" alt="Shape" width="391" height="391" class="move-vertical-reversed"/>
+			</div>
+			<div class="section-shape shape-ball">
+				<img loading="lazy" src="../assets/images/report/shapes/ball2.png" alt="Shape" width="150" height="150"
+				     class="move-vertical"/>
+			</div>
+			<div class="section-shape shape-02">
+				<img src="../assets/images/report/shapes/satellite3.png" alt="Shape" loading="lazy" width="150" height="150"/>
+			</div>
+		</div>
+
+		<div class="section-shape shape-transparent-cube">
+			<div class="section-shape shape-radial-circle purple"></div>
+			<img loading="lazy" src="../assets/images/report/shapes/shape-transparent-cube.png" alt="Shape" width="352" height="305"
+			     class="move-vertical"/>
+		</div>
+		<div class="section-content">
+			<div class="container">
+				<div class="section-header">
+					<h2 class="section-top-title">エコシステムの概要</h2>
+				</div>
+
+				<div id="financial-status-dev-activity" class="block-text" style="--text-width: 750px; --heading-width: 470px;">
+					<h3 class="heading">財務状況・開発活動</h3>
+					<div class="text-wrap">
+						<div class="text">
+							<p>
+								クリプトの冬は2022年第3四半期まで続きましたが、DOTは正しいスタートを切りました。7月1日のオープン価格$7.05で、DOTは大きく上昇し続け、8月13日に$9.66でピークを迎え、時価総額は$10.28Bとなりました。しかし、年初来を拡大すると、第3四半期は過去2四半期に比べて低調であることがわかります。9月21日、DOTは$6.00、時価総額$6.89Bと、年初に比べ75.60%も下落しました。</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="block-report-chart" style="--chart-bot-spacing: 112px;">
+					<div class="block-chart-blur">
+						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-1"/>
+						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-2"/>
+					</div>
+					<div class="block-content">
+						<h3 class="block-chart-heading">トークン価格と開発状況の比較</h3>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="price-dev-act"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<span>出典: Santiment</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block-text">
+					<div class="text">
+						<p>8月10日に時価総額$10.51Bに急増したことで、Polkadotは時価総額ランキングでDogecoinを上回ったが、第3四半期後半のこの急降下でPolkadotは再びDogecoinに順位を奪われ、現在時価総額ランキングは11位です。</p>
+						<p>KSMは7月22日に$69.60でDOTより早くピークを迎えましたが、その後急落し、9月19日には$37.77まで下がり、時価総額は$339.65Mとなりました。ここでも、KSMの価格と時価総額のパターンは、DOTと比較的似ています。
+						</p>
+					</div>
+				</div>
+				<div class="block-report-chart chart--dev-act-comparison" style="--chart-top-spacing: 112px; --chart-bot-spacing: 100px">
+					<div class="block-chart-blur">
+						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-1"/>
+						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-2"/>
+					</div>
+					<div class="block-content">
+						<h3 class="block-chart-heading">開発活動の比較</h3>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="dev-act-comparison"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<span>出典:: Santiment</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section section-top-10-networks-dev-act">
+		<div class="section-shape section-shape-blur">
+			<img loading="lazy" src="../assets/images/report/shapes/full-wide-blur.png" alt="Shape" width="1920" height="851">
+		</div>
+		<div class="section-shape shape-galaxy">
+			<img loading="lazy" src="../assets/images/report/shapes/shape-galaxy-bg.png" alt="Shape" width="898" height="870">
+			<div class="section-shape shape-polygon">
+				<img loading="lazy" src="../assets/images/report/shapes/polygon.png" alt="Shape" width="368" height="368" class="move-vertical-reversed">
+			</div>
+			<div class="section-shape shape-cube">
+				<img loading="lazy" src="../assets/images/report/shapes/shape-cube.png" alt="Shape" width="109" height="123" class="move-vertical">
+			</div>
+			<div class="section-shape shape-02">
+				<img src="../assets/images/report/shapes/satellite3.png" alt="Shape" loading="lazy" width="150" height="150" class="move-vertical"/>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row row-table-overview">
+				<div class="col-lg-6 col-xl-5 col-xl-push-1">
+					<div class="block-report-table table--top-10-networks-dev-act" style="--block-top-spacing: 0; --block-bottom-spacing: 0;">
+						<div class="block-content">
+							<h3 class="block-table-heading">30日以内の開発活動量上位10ネットワーク</h3>
+							<div class="block-table-body">
+								<table class="block-table-widget js-data-table">
+									<thead>
+									<tr>
+										<th class="col--rank">#</th>
+										<th class="col--project">プロジェクト</th>
+										<th class="col--dev-activity">開発活動</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td>1</td>
+										<td>
+											<div class="token-info">
+												<img loading="lazy" src="../assets/images/token/dot.png" alt="DOT" width="24" height="24">Polkadot
+												<span class="token-name-symbol">DOT</span>
+											</div>
+										</td>
+										<td>494.93</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>
+											<div class="token-info">
+												<img loading="lazy" src="../assets/images/token/ksm.png" alt="KSM" width="24" height="24">Kusama
+												<span class="token-name-symbol">KSM</span>
+											</div>
+										</td>
+										<td>494.93</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>
+											<div class="token-info">
+												<img loading="lazy" src="../assets/images/token/ada.png" alt="ADA" width="24" height="24">Cardano
+												<span class="token-name-symbol">ADA</span>
+											</div>
+										</td>
+										<td>429.23</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>
+											<div class="token-info">
+												<img loading="lazy" src="../assets/images/token/eth.png" alt="ETH" width="24" height="24">Etherum
+												<span class="token-name-symbol">ETH</span>
+											</div>
+										</td>
+										<td>386.47</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>
+											<div class="token-info">
+												<img loading="lazy" src="../assets/images/token/snt.png" alt="SNT" width="24" height="24">Status
+												<span class="token-name-symbol">SNT</span>
+											</div>
+										</td>
+										<td>347.87</td>
+									</tr>
+									<tr>
+										<td>6</td>
+										<td>
+											<div class="token-info">
+												<img loading="lazy" src="../assets/images/token/fil.png" alt="FIL" width="24" height="24">Filecoin
+												<span class="token-name-symbol">FIL</span>
+											</div>
+										</td>
+										<td>314</td>
+									</tr>
+									<tr>
+										<td>7</td>
+										<td>
+											<div class="token-info">
+												<img loading="lazy" src="../assets/images/token/miota.png" alt="MIOTA" width="24" height="24">IOTA
+												<span class="token-name-symbol">MIOTA</span>
+											</div>
+										</td>
+										<td>301.33</td>
+									</tr>
+									<tr>
+										<td>8</td>
+										<td>
+											<div class="token-info">
+												<img loading="lazy" src="../assets/images/token/atom.png" alt="ATOM" width="24" height="24">Cosmos
+												<span class="token-name-symbol">ATOM</span>
+											</div>
+										</td>
+										<td>300.5</td>
+									</tr>
+									<tr>
+										<td>9</td>
+										<td>
+											<div class="token-info">
+												<img loading="lazy" src="../assets/images/token/mana.png" alt="MANA" width="24" height="24">Decentraland
+												<span class="token-name-symbol">MANA</span>
+											</div>
+										</td>
+										<td>295.7</td>
+									</tr>
+									<tr>
+										<td>10</td>
+										<td>
+											<div class="token-info">
+												<img loading="lazy" src="../assets/images/token/vega.png" alt="VEGA" width="24" height="24">Vega Protocol
+												<span class="token-name-symbol">VEGA</span>
+											</div>
+										</td>
+										<td>286.57</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="block-table-footer">
+								<div class="block-table-source">
+									<p>Source: Santiment</p>
+									<p>注）10月2日時点のデータです。</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-lg-first">
+					<div class="block-text" style="--text-width: 530px;">
+						<div class="text">
+							<p>トークン価格が下がり続ける一方で、Polkadotの
+								<a href="https://academy.santiment.net/metrics/development-activity/#development-activity-metric" target="_blank" rel="nofollow">開発活動</a>は急増しています。Satimentは、プロジェクトが公開Githubリポジトリで生成した、コミットのプッシュ、プルリクエストの作成とマージ、新しいバージョンのリリースといった構築関連のイベントの数によって、開発活動を測定しています。Polkadotの開発活動は、第3四半期では第2四半期や第1四半期と比べて著しく一貫して高く、特に9月に顕著であったことが容易に見て取れます。PolkadotはEthereum、Solana、Near、Polygonを簡単に上回り、ほとんどの時間Cardanoに次ぐ2位となりました。
+							</p>
+							<p>Polkadotの全体的な開発活動はCardanoより低いとはいえ、そのパターンはより一貫していました。9月01日から9月20日まで、PolkadotはCardanoの支配を引き継ぎました。9月中、Santimentの30日間開発アクティビティランキングで、PolkadotとKusamaの粘り強いリードが見られたのはこのためです。</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section section-decentralization-security">
+		<div class="section-shape shape-grid">
+			<img src="../assets/images/report/shapes/shape-grid.png" loading="lazy" alt="Shape" width="1611" height="376"/>
+
+			<div class="section-shape shape-cone">
+				<img class="move-vertical-reversed" src="../assets/images/report/shapes/shape-cone.png" loading="lazy" alt="Shape" width="180" height="180"/>
+			</div>
+			<div class="section-shape shape-ring move-vertical">
+				<img src="../assets/images/report/shapes/shape-ring.png" loading="lazy" alt="Shape" width="110" height="131"/>
+			</div>
+			<div class="section-shape shape-02">
+				<img class="move-vertical" src="../assets/images/report/shapes/satellite3.png" alt="Shape" loading="lazy" width="142" height="142"/>
+			</div>
+		</div>
+		<div class="container">
+			<div class="block-text" id="decentralization-security">
+				<h3 class="heading">分散化とセキュリティ</h3>
+				<div class="text-wrap">
+					<div class="text">
+						<div class="row">
+							<div class="col-md-6">Ultimate Moneyが7月25日に発表した主要ネットワークの分散化状況を探る<a href="https://medium.com/coinmonks/why-solana-is-more-decentralized-than-you-think-d3710249a92" target="_blank"
+							                                                                               rel="nofollow">レポート</a> では、Polkadotのナカモト係数が調査対象のレイヤー1の係数を大きく上回り、SolanaやAvalancheの3倍、CosmosやNear、BSCの12倍近くであったことが明らかになりました。元Coinbase
+								CTOのBalaji S. Srinivasanが <a href="https://news.earn.com/quantifying-decentralization-e39db233c28e" target="_blank" rel="nofollow">2017年に作った造語</a>で、ビットコインの創業者であるサトシ・ナカモトにちなんで命名された<a
+									href="https://learn.bybit.com/blockchain/nakamoto-coefficient-decentralization/" target="_blank" rel="nofollow">ナカモト係数</a>とは、<a href="https://www.investopedia.com/terms/g/gini-index.asp" target="_blank"
+								                                                                                                                                      rel="nofollow">ジニ係数</a> と <a
+									href="https://www.investopedia.com/terms/l/lorenz-curve.asp#:~:text=The%20Lorenz%20curve%20is%20a,higher%20the%20level%20of%20inequality." target="_blank" rel="nofollow">ローレンツ曲線</a>を組み合わせて、ネットワークを混乱させるのに必要な最小の閾値を測定するもので、数値が高いほど分散化のレベルが高いことを示します。
+							</div>
+							<div class="col-md-6">Polkadotの<a href="https://wiki.polkadot.network/docs/learn-validator" target="_blank" rel="nofollow">バリデーター数は297人</a>で、SolanaとAvalancheのバリデーター数の15.84%と22.90%に過ぎませんが、シャードデザインとノミネーションプルーフオブステークの合意メカニズムにより、より良いステーク分配が可能になり、分散化レベルが向上しています。現在、<a
+								href="https://wiki.polkadot.network/docs/learn-nomination-pools" target="_blank" rel="nofollow">ノミネーションプール</a>はWestendとKusamaで稼働しており、Polkadotにもまもなく導入されます。報酬を得るための最低ステークが引き下げられ、より多くのトークン所有者が参加できるようになるため、ネットワークはさらに分散化されるでしょう。ブロックチェーンとのやりとりは、<a
+								href="https://wiki.polkadot.network/docs/build-substrate" target="_blank" rel="nofollow">Substrate Connect</a>を介した<a href="https://www.parity.io/blog/what-is-a-light-client/" target="_blank" rel="nofollow">ライトクライアント</a>統合のおかげで、分散化され、信頼が最小化された方法で行われる可能性が高いです。
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="block-report-chart chart--nakamoto-coefficient" style="--chart-top-spacing: 100px; --chart-bot-spacing: 100px">
+				<div class="block-chart-blur">
+					<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-1"/>
+					<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-2"/>
+				</div>
+				<div class="block-content">
+					<h3 class="block-chart-heading">主要ネットワークのナカモト係数</h3>
+					<div class="block-chart-body">
+						<div class="block-chart" data-chart-name="nakamoto-coefficient" data-chart-source="inline"></div>
+					</div>
+					<div class="block-chart-footer">
+						<div class="block-chart-source">
+							<p>Source: Ultimate Money</p>
+							<p>Note: Data as of July 25</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="block-text">
+				<div class="text-wrap">
+					<div class="text">
+						<div class="row">
+							<div class="col-md-6">従来は、技術的な課題やリソースの消費を理由にフルノードを実行しない場合、ブロックチェーンと便利にやり取りするためにサードパーティの所有するノードに頼らざるを得ず、集中型の単一障害点となる可能性がありました。<a
+								href="https://www.parity.io/blog/what-is-a-light-client/" target="_blank" rel="nofollow">ライトクライアント</a>はこれら両方の問題を解決します。一方は、チェーン全体ではなくブロックヘッダーのみをダウンロードすることでリソースを大幅に削減し、他方は、フルノードが提供するレスポンスがヘッダーと一致するかどうかを検証するため、ノードを信用する必要がありません。
+							</div>
+							<div class="col-md-6">本稿執筆時点で、SubWallet、Polkadot {.js}、Nova WalletといったPolkadotおよびKusamaエコシステムのトップウォレットは、分散化の精神に則り、ユーザーにスムーズな体験を提供するためにライトクライアントを統合しています。SubWalletとNova
+								Walletは、8月の事件後、エンドユーザーのセキュリティをさらに高めるために、コールドウォレットのLedgerとQRシグナ―のParity SignerとStyloのサポートも拡張しました。8月1日の<a href="https://blockworks.co/nomad-token-bridge-raided-for-190m-in-frenzied-free-for-all/"
+								                                                                                                                 target="_blank" rel="nofollow">Nomad bridge hack</a>と8月14日の<a
+									href="https://cointelegraph.com/news/network-and-token-freeze-after-acala-exploit-raises-questions" target="_blank" rel="nofollow">Acala erroneous aUSD minting</a>による深刻な課題にもかかわらず、Polkadot
+								シェアードセキュリティは強固に保たれたのです。
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="block-report-table table-style-02 table--electricity-consumption" style="--block-top-spacing: 110px;--block-bottom-spacing: 92px;">
+				<div class="block-chart-blur">
+					<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-1"/>
+					<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-2"/>
+				</div>
+				<div class="block-content">
+					<h3 class="block-table-heading">主要なプルーフ・オフ・テイク・ネットワークの電力消費量</h3>
+					<div class="block-table-body">
+						<table class="block-table-widget">
+							<thead>
+							<tr>
+								<th class="col--project">&nbsp;</th>
+								<th class="col--nodes">ノード数
+									<br/>[# total]
+								</th>
+								<th class="col--dev-activity">トランザクション数
+									<br/>[Tx/年]
+								</th>
+								<th>総電力消費量<br/>[kWh/年]
+								</th>
+								<th>ノードあたりの電力量<br/>[kWh/年]
+								</th>
+								<th>トランザクションあたりの電力量
+									<br/>[Wh/Tx]
+								</th>
+								<th>総炭素排出量 <br/>
+									[tCO<sub>2</sub>e/年]
+								</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>
+									<div class="token-info">
+										<img loading="lazy" src="../assets/images/token/ada.png" alt="ADA" width="24" height="24">Cardano
+									</div>
+								</td>
+								<td>3,002</td>
+								<td>11.9 mn</td>
+								<td>598,755</td>
+								<td>
+									<mark>199.45</mark>
+								</td>
+								<td>51.59</td>
+								<td>284.41</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="token-info">
+										<img loading="lazy" src="../assets/images/token/dot.png" alt="DOT" width="24" height="24">Polkadot
+									</div>
+								</td>
+								<td>297</td>
+								<td>4.0 mn</td>
+								<td>
+									<mark>70,237</mark>
+								</td>
+								<td>236.49</td>
+								<td>17.42</td>
+								<td>
+									<mark>33.36</mark>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="token-info">
+										<img loading="lazy" src="../assets/images/token/sol.png" alt="Sol" width="24" height="24">Solana
+									</div>
+								</td>
+								<td>1,015</td>
+								<td>11.8 bn</td>
+								<td>1,967,930</td>
+								<td>1,938.85</td>
+								<td>
+									<mark>0.166</mark>
+								</td>
+								<td>934.77</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="token-info">
+										<img loading="lazy" src="../assets/images/token/weth.png" alt="Tezos" width="24" height="24">Tezos
+									</div>
+								</td>
+								<td>375</td>
+								<td>2.5 mn</td>
+								<td>113,249</td>
+								<td>250.99</td>
+								<td>41.45</td>
+								<td>53.79</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="token-info">
+										<img loading="lazy" src="../assets/images/token/avax.png" alt="Avalanche" width="24" height="24">Avalanche
+									</div>
+								</td>
+								<td>1,084</td>
+								<td>93.9 mn</td>
+								<td>489,311</td>
+								<td>451.39</td>
+								<td>4.76</td>
+								<td>232.42</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="token-info">
+										<img loading="lazy" src="../assets/images/token/algo.png" alt="Algorand" width="24" height="24">Algorand
+									</div>
+								</td>
+								<td>1,190</td>
+								<td>190.0 mn</td>
+								<td>512,671</td>
+								<td>430.82</td>
+								<td>2.70</td>
+								<td>245.52</td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="block-table-footer">
+						<div class="block-table-source">
+							<p>出典: CCRI</p>
+							<p>注）2022年1月時点のデータ。緑色は、それぞれの列の最適値を示す。</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="block-text">
+				<div class="text-wrap">
+					<div class="text">
+						<p>BitcoinやEthereum 1.0などのプルーフ・オブ・ワーク・チェーンのように、分散型ネットワークであればあるほど、ネットワークが消費する電力は多くなると考える人がいるかもしれません。しかし、プルーフ・オブ・ステーク・システムの場合はそうとは限りません。2022年1月に発表された<a
+							href="https://carbon-ratings.com/dl/pos-report-2022" target="_blank" rel="nofollow">CCRIのエネルギー効率報告書</a>によると、Polkadotは年間の電力消費量が最も少なく、結果として年間の二酸化炭素排出量も最も少なくなっています。この結果はトランザクションの総量とは関係なく、総電力消費量を求めるために、CCRIチームはまずハードウェア要件に基づいて各ネットワークのノードあたりの平均エネルギー消費量を算出し、その後に総ノード数を乗算しているのです。調査対象となった6つのブロックチェーンのうち、Polkadotはノード数が最も少なく、ノードあたりの電力消費量も2番目に少ないため、<a
+							href="https://www.bloomberg.com/news/articles/2022-02-02/polkadot-has-smallest-carbon-footprint-crypto-researcher-says" target="_blank" rel="nofollow">最も環境に優しいブロックチェーン</a>となりました。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section section-report-holder-investor" id="token-holder-investor">
+		<div class="section-content">
+			<div class="container">
+				<div class="block-text">
+					<h3 class="heading">トークン・ホルダーと投資家</h3>
+					<div class="text">
+						<p>
+							9月28日、DOTの保有者数が100万人を突破しました。しかし、市場の低迷はまだその影響を残しています。2022年第3四半期の1日平均の新規保有者数は1695人で、第2四半期（2135人）に比べ20.61％、第1四半期（3060人）に比べ44.61％減少しました。9月30日には、1日の新規保有者数が824人となり、今年初めて1000人を割り込みました。価格や時価総額と同様に、KSMのホルダーパターンもDOTのそれと似ています。</p>
+					</div>
+				</div>
+				<div class="block-report-chart" style="--chart-height: 350px; --chart-ratio: 41%;">
+					<div class="block-chart-blur">
+						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-1"/>
+						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-2"/>
+					</div>
+					<div class="block-content">
+						<h3 class="block-chart-heading">PolkadotとKusamaアカウント概要</h3>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="dot-ksm-account-overview"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Source: Web3Go</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block-text">
+					<div class="text">
+						<p>10月5日までに、<a href="https://polkadot.subscan.io/account/16ZL8yLyXv3V3L3z9ofR1ovFLziyXaN1DPq4yffMAZ9czzBD" target="_blank" rel="nofollow">最大のDOTクジラ</a>は58.61M DOT、約$374.80Mを保有し、その47.46%がステークされました。KSMクジラはもっと控えめで、<a
+							href="https://kusama.subscan.io/account/EGP7XztdTosm1EmaATZVMjSWujGEj9nNidhjqA2zZtttkFg" target="_blank" rel="nofollow">最大のもの</a>は492,990KSM、約$21.12Mしか持っていません。</p>
+					</div>
+				</div>
+				<div class="block-report-chart chart-vc-polkadot"
+				     style="--chart-height: 458px; --chart-ratio: 40%;">
+					<div class="block-chart-blur">
+						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-1"/>
+						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-2"/>
+					</div>
+					<div class="block-content">
+						<h3 class="block-chart-heading">PolkadotとKusamaエコシステムに投資するVC</h3>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="vcs-dot-ksm" data-chart-source="inline"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>出典: SubWallet</p>
+								<p>注）9月30日時点のデータです。</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block-text">
+					<div class="text">
+						<p>投資家に関しては、400以上のベンチャーキャピタルがPolkadotとKusamaのエコシステムに投資し、リレーチェーン、パラチェーン、DAppsからのトークンを保有しています。DFGとAU21は明らかにこのエコシステムの最も熱心な信者であり、それぞれ45と40のプロジェクトをポートフォリオに抱えています。NGC Ventures、Hypersphere、Illusionist
+							Group、CMS Holdingsはいずれも30以上のプロジェクトに投資しています。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section section-parachain" id="parachain">
+		<div class="section-shape shape-galaxy">
+			<div class="section-shape shape-radial-circle blue"></div>
+			<div class="section-shape shape-radial-circle purple"></div>
+			<img loading="lazy" src="../assets/images/report/shapes/circle-galaxy.png" alt="Shape" width="375" height="230" class="shape-main"/>
+			<div class="section-shape shape-cube">
+				<img loading="lazy" src="../assets/images/report/shapes/shape-cube.png" alt="Shape" width="148" height="167" class="move-vertical"/>
+			</div>
+			<div class="section-shape shape-02">
+				<img loading="lazy" src="../assets/images/report/shapes/satellite3.png" alt="Shape" width="142" height="142" class="move-vertical-reversed"/>
+			</div>
+			<div class="section-shape shape-satellite-04">
+				<img loading="lazy" src="../assets/images/report/shapes/satellite4.png" alt="Shape" width="24" height="24" class="move-vertical-reversed"/>
+			</div>
+		</div>
+		<div class="section-content">
+			<div class="container">
+				<div class="block-text">
+					<h3 class="heading">Parachain</h3>
+					<div class="text" style="--text-width: 740px">
+						<p>2022年第3四半期は、9月30日にOAK Networkが<a href="https://twitter.com/Polkadot/status/1575819373045874689" target="_blank" rel="nofollow">落札</a>し、Polkadotの28番目のパラチェーンとなり、幕を閉じました。Kusamaでは、合計54件のオークションが行われ、<a
+							href="https://twitter.com/kusamanetwork/status/1546530067718758401" target="_blank" rel="nofollow">41件のパラチェーン</a>が誕生しました。Kusamaでは、Polkadotに先行してXCM（コンセンサスシステム間のコミュニケーションを可能にするメッセージングフォーマット）が開始されたため、Kusamaの24チェーンが互いにXCMチャンネルを開設し、PolkadotのXCM転送を可能にしたチェーンの2倍の数が開設されています。
+						</p>
+					</div>
+				</div>
+				<div class="block-report-chart">
+					<div class="block-content">
+						<h3 class="block-chart-heading">2022年第3四半期にPolkadotとKusama パラチェーンのトップのXCM転送</h3>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="xcm-transfers" data-chart-source="inline"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>出典: Polkaholic</p>
+								<p>注）9月30日時点のデータです。</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block-text">
+					<div class="text">
+						<p>XCMの転送量では、上位6位までが3組の姉妹ネットワークに属してます。Moonbeam/Moonriver、Acala/Karura、Parallel/Heikoの3組が上位6位を占めました。9月の1週間で、<a href="https://twitter.com/ParallelFi/status/1569637446752808961" target="_blank"
+						                                                                                                                                rel="nofollow">$1M相当の資産を送金</a>してトップに立ったものの、長期的に見ると、Parallelは他のビッグ6に遅れをとっているように見えます。その中で、Moonbeamは第3四半期に最も活発で、合計19,160件の取引で$56.88Mの送金額を蓄積し、10,319件の取引で$39.68Mの送金額を蓄積しました。また、同ネットワークは9月8日に<a
+							href="https://twitter.com/MoonbeamNetwork/status/1567627537890639872" target="_blank" rel="nofollow">1,000万件の取引</a>を記録し、その4日後には<a href="https://moonscan.io/chart/address" target="_blank" rel="nofollow">ユニークアドレスが30万</a>を突破しました。
+						</p>
+						<p>Acalaは、$21.89Mの送金額と$27.05Mの送金額で2位となりました。明らかに、8月の事件によって1ヶ月間ネットワーク上の活動が停止したことは、3ヶ月間を通じて大きな影響を与えませんでした。10月5日、Acalaはすべての機能を<a
+							href="https://twitter.com/AcalaNetwork/status/1577472328929116160" target="_blank" rel="nofollow">正式に再開</a>し、第4四半期には目覚しい復活を遂げることを約束した。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section section-governance-treasury" id="governance-grant">
+		<div class="section-shape shape-transparent-cube">
+			<div class="section-shape shape-radial-circle"></div>
+			<img class="move-vertical" loading="lazy" src="../assets/images/report/shapes/shape-transparent-cube.png" alt="Shape" width="352" height="305"/>
+		</div>
+		<div class="section-shapes">
+			<div class="section-shape shape-corner-left-bottom shape-radial-circle red shape-corner-blur-1"></div>
+			<div class="section-shape shape-corner-left-bottom shape-radial-circle blue shape-corner-blur-2"></div>
+			<div class="section-shape shape-corner-right-bottom shape-radial-circle green shape-corner-blur-3"></div>
+		</div>
+		<div class="section-shape section-shape-corners"></div>
+		<div class="section-content">
+			<div class="container">
+				<div class="block-text">
+					<h3 class="heading">ガバナンス・助成金</h3>
+					<div class="text">
+						<p>ガバナンス2.0の導入に続き <a href="https://www.youtube.com/watch?v=tBvxn8WfcFI" target="_blank" rel="nofollow">Polkadot Deep Dive 2022年上半期</a> で取り上げた<a href="https://www.youtube.com/watch?v=tBvxn8WfcFI"
+						                                                                                                                                                         target="_blank" rel="nofollow">「ガバナンス2.0」</a>の導入を受け Gavin
+							Woodは、「Polkadot Fellowship Manifesto」の第一稿を<a href="https://twitter.com/gavofyork/status/1574390238642057216" target="_blank" rel="nofollow">発表しました</a>。<a
+								href="https://github.com/polkadot-fellows/manifesto/blob/main/manifesto.pdf" target="_blank" rel="nofollow">Polkadot Fellowship Manifesto</a>の最初のドラフトを9月26日に発表しました。「コア開発者とプロトコル技術専門家」にメンバーへの応募を呼びかけました。ガバナンス2.0において、<a
+								href="https://twitter.com/rphmeier/status/1574489596741632000" target="_blank" rel="nofollow">Polkadot Fellowship</a>は、現在の技術委員会に代わり、ガバナンスシステムへの技術的助言、コアプロトコルの維持・構築、Polkadot技術・思想の教育普及の3つを主な責務とします。Fellowshipがネットワークの政治的分散化を進めるために存在することを保証するために、コミュニティの意思に反する意思決定権限はこの専門家集団には与えられません。
+						</p>
+					</div>
+				</div>
+				<div class="block-report-chart">
+					<div class="block-chart-blur">
+						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-1"/>
+						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-2"/>
+					</div>
+					<div class="block-content">
+						<h3 class="block-chart-heading">DOTのトレジャリー活動</h3>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="dot-treasury-activity"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<span>出典: DoTreasury</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block-text">
+					<div class="text">
+						は、現在の技術委員会に代わり、ガバナンスシステムへの技術的助言、コアプロトコルの維持・構築、Polkadot技術・思想の教育普及の3つを主な責務とします。Fellowshipがネットワークの政治的分散化を進めるために存在することを保証するために、コミュニティの意思に反する意思決定権限はこの専門家集団には与えられません。<a
+						href="https://forum.polkadot.network/t/a-better-treasury-system/291/10" target="_blank" rel="nofollow">Polkadot Forum</a>は、Polkadotのあらゆる事柄について建設的な会話を行うために新たに導入されたプラットフォームで、財務ガバナンスと支出のプロセスを改善する方法について<a
+						href="https://forum.polkadot.network/" target="_blank" rel="nofollow">議論</a>が続けられています。
+					</div>
+				</div>
+				<div class="block-report-chart">
+					<div class="block-content">
+						<h3 class="block-chart-heading">Web3 Foundation の助成金（カテゴリー別</h3>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="web3-foundation-grants" data-chart-source="inline"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>出典: Web3 Foundation</p>
+								<p>注：7月28日時点のデータです。</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block-text">
+					<div class="text">
+						DOTやKSMのトレジャリー以外にも、Substrateを使った開発を考えているプロジェクトチームは、Web3 Foundation 助成金プログラムに申請することができます。7月28日、Web3 Foundation チームは、次のように<a
+						href="https://medium.com/web3foundation/web3-foundation-grants-program-reaches-400-projects-milestone-1k-grant-applications-received-93a7d3a5f942" target="_blank" rel="nofollow">発表しました</a>1054件の申請のうち、415件が採択され、プロジェクト数が400件を突破したことを発表しました。助成対象プロジェクトの41.5%はランタイムモジュールとチェーンで、このカテゴリが助成対象プロジェクトの中で最も多くなっています。次いで、UI開発、開発ツールがそれぞれ13.2％、11.1％となっています。
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section section-defi-economy" id="defi-economy">
+		<div class="section-content">
+			<div class="container">
+				<div class="section-header">
+					<div class="section-header-inner">
+						<h3 class="section-top-title">DeFi エコノミー</h3>
+					</div>
+				</div>
+				<div class="block-text">
+					<div class="text">分散型金融の略で、DeFiはPolkadotやKusamaエコシステムの<a href="https://dotinsights.subwallet.app/" target="_blank" rel="nofollow">プロジェクト数が最も多く</a>、最も活気のあるセグメントであることは間違いありません。パラチェーンでの市場シェアは、Moonriver、Moonbeam、Acala、Parallel、Astar、Karuraなど主要ネットワークでほぼ二分されていました。Moonbeam/Moonriverの姉妹ネットワークを合わせたTVLは$126.25Mで、総TVLの44.7%を占め、22%であるAcalaとKaruraの2倍以上ありました。全体として、チェーン間の差は大きくなく、つまり、上位5位までの順位はいつでも変動する可能性があるということです。
+					</div>
+				</div>
+				<div class="block-report-chart">
+					<div class="block-chart-blur">
+						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-1"/>
+						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-2"/>
+					</div>
+					<div class="block-content">
+						<h3 class="block-chart-heading">チェーン別TVL</h3>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="tvl-by-chain" data-chart-source="inline"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>出典: Defi Llama</p>
+								<p>注）9月30日時点のデータです。</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block-text">
+					<div class="text">
+						前回の <a href="https://subwallet.app/polkadot-report-h1-2022-en/" target="_blank" rel="nofollow">Polkadot Deep Dive</a>レポートでは、DeFiプロジェクトをレイヤーごとに分け、パラチェーンとDAppを分けました。今回は趣向を変えて、レイヤーに関係なくDeFiプロダクトを掘り下げて、より客観的な比較をしています。主なプロダクト分析は、DEX（AMM）、レンディング
+						& ボロウイング（マネーマーケット）、リキッドステーキング、ステーブルコインの4つです。なお、1ヶ月の活動休止のため、Acalaはこのセクションから除外しています。
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section section-dex-amm" style="padding-top: 90px">
+		<div class="section-shape shape-galaxy">
+			<div class="section-shape shape-radial-circle blue"></div>
+			<img loading="lazy" src="../assets/images/report/shapes/galaxy-border.png" alt="Shape" width="898" height="609" class="main-image">
+			<div class="section-shape shape-bolts">
+				<img loading="lazy" src="../assets/images/report/shapes/bolts.png" alt="Shape" width="274" height="308" class="move-vertical-reversed">
+			</div>
+			<div class="section-shape shape-ball">
+				<img loading="lazy" src="../assets/images/report/shapes/ball2.png" alt="Shape" width="150" height="150" class="move-vertical">
+			</div>
+			<div class="section-shape shape-02">
+				<img loading="lazy" src="../assets/images/report/shapes/satellite3.png" alt="Shape" width="150" height="150" class="move-vertical">
+			</div>
+		</div>
+		<div class="section-shape shape-satellite-02">
+			<div class="section-shape shape-radial-circle blue"></div>
+			<div class="section-shape shape-radial-circle purple"></div>
+			<img class="move-vertical" loading="lazy" src="../assets/images/report/shapes/satellite2.png" alt="Shape" width="391" height="391">
+		</div>
+		<div class="section-shape shape-grid">
+			<img src="../assets/images/report/shapes/shape-grid-2.png" loading="lazy" alt="Shape" width="1920" height="653"/>
+			<div class="section-shape shape-cube">
+				<img class="move-vertical-reversed" src="../assets/images/report/shapes/shape-cube.png" loading="lazy" alt="Shape" width="109" height="123"/>
+			</div>
+			<div class="section-shape shape-smooth-ring">
+				<img class="move-vertical" src="../assets/images/report/shapes/shape-smooth-ring.png" loading="lazy" alt="Shape" width="139" height="133"/>
+			</div>
+			<div class="section-shape shape-02">
+				<img class="move-vertical" src="../assets/images/report/shapes/satellite3.png" alt="Shape" loading="lazy" width="150" height="150"/>
+			</div>
+		</div>
+		<div class="section-content">
+			<div class="container">
+				<div class="block-text" style="--text-width: 745px" id="dex-amm">
+					<h3 class="heading">DEX (AMM)</h3>
+					<div class="text">
+						<p>ここでは、PolkadotとKusama上の13の分散型取引所（AMM=自動売買マーケットメーカー）について、ネイティブチェーンとマルチチェーンの両方を調査しています。視覚化しやすいように、第3四半期の平均トータルバリューロック(TVL)が$10M以上のものと、$5M以下のものに分けています。</p>
+						<p>興味深いことに、第3四半期のDEX上位5位は、すべてパラチェーンの製品ではなくDAppの製品でした。Astar NetworkのDEXはZenlinkとの競合を差し置いてArthSwapが <a href="https://twitter.com/subwalletapp/status/1559136615033085953" target="_blank"
+						                                                                                                                       rel="nofollow">引き続き</a>1位であり、Moonriver NetworkからはSolarbeamが唯一チャートに代表として入っています。Moonbeam
+							NetworkのネイティブDEX StellaSwapやマルチチェーンDEX Curve Financeと比較すると、この3案件は調査期間中にあまり変動がありませんでした。</p>
+					</div>
+				</div>
+				<div class="block-report-chart">
+					<div class="block-chart-blur">
+						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-1"/>
+						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-2"/>
+					</div>
+					<div class="block-content">
+						<h3 class="block-chart-heading">平均TVLが$10M以上のDEX</h3>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="dex-with-average-tvl-higher-than-10m" data-chart-source="dex-with-average-tvl"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>出典: DeFi Llama、The Graph、Zenlink Team。</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block-text">
+					<div class="text">
+						<p>
+							8月1日から8月2日の1日で、StellaSwapのTVLは$31.56Mから$11.21Mに急落し、3分の1になりました。その後、StellaSwapのTVLは$8.75M前後で推移し、8月12日に$13.46Mでピークを迎え、9月6日に$6.60Mで底を打ちました。どうやらこの不幸な事件により、StellaSwapは8月中旬以降、それまで無敵だった1位から5位へと大きく引き下げられたようです。再建プロセスの一環として、チームは6ヶ月間の戦略的ファームのインセンティブとして、<a
+							href="https://github.com/moonbeam-foundation/grants/blob/1efdeeb04d7d3d58350c270e616057252296e99b/level-3/MBGP1.md" target="_blank" rel="nofollow">レベル3のMoonbeamエコシステム助成金</a>の提案（総額783万3600GLMR（$3.89M））を提出し、10月9日の<a
+							href="https://twitter.com/MoonbeamNetwork/status/1579101646793371648" target="_blank" rel="nofollow">コミュニティ投票で可決されました</a>。</p>
+						<p>Curve FinanceはStellaSwapとしてMoonbeamでも運営されていますが、Lidoのリキッドステーキングアセットプール（xcDOT/stDOT）ほどラップアセットに依存しないため、Nomadブリッジハッキングの影響を受けませんでした。実際、マルチチェーンDEXはこの機会を利用して、7月11日から18日までの1週間でTVLを$4.78Mから$9.24Mへと一気に倍増させたのです。Curve
+							Financeは8月9日からTVLレースを常にリードし、第3四半期末にはTVLが四半期のはじめと比較して499%に成長しました。</p>
+					</div>
+				</div>
+				<div class="block-report-chart">
+					<div class="block-chart-blur">
+						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-1"/>
+						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-2"/>
+					</div>
+					<div class="block-content">
+						<h3 class="block-chart-heading">平均TVLが$5M以下のDEX</h3>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="dex-with-average-tvl-lower-than-5m" data-chart-source="dex-with-average-tvl"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>出典: DeFi Llama、The Graph、Zenlink Team。</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block-text">
+					<div class="text">
+						<p>TVLランキングでは、Beamswapは首位の座を長く維持することができず、TVLが急落したため、7月前半でMoonbeamのKaruraとBeefyに譲らざるを得ませんでした。<a href="https://twitter.com/Beamswapio/status/1553406366026440705" target="_blank" rel="nofollow">発表</a>後BeamswapのDEX
+							TVLは、$3.59Mから$6.51Mへと1日でほぼ倍増し、わずか3日後には$4.08Mまで急降下したのでした。</p>
+						<p>
+							Beamswapと同様、MoonbeamのBeefyのTVLも8月1日の$3.99Mから8月2日の$2.57Mまで35.59%の大幅減となりましたが、これはNomad事件後のパニック撤退が原因だと思われます。妹分のMoonriverのBeefyは第3四半期にTVLがあまり変動しなかったが、MoonriverのBeefyのTVLは8月29日の$203Mから9月6日の$524Mまで8日間で258.13%上昇し、残りの期間も比較的安定して上位を占めていました。</p>
+						<p>BeamswapとMoonriverのBeefyが第3四半期の前半と後半を支配したとすれば、Avault
+							Financeは中盤の3分の1の主役だったでしょう。7月8日に$1.10Mという控えめなTVLでスタートしたAvaultは、徐々に上昇し、8月9日の$307Mから8月11日の$610Mまで、2日間で約2倍の目覚ましい増加を確保しました。今期末には3つのDEXのTVLがほぼぶつかり合っただけに、2022年の終盤にこの3つのDEXの競争がどのように展開されるのかが注目されます。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section section-lending-and-borrowing" id="lending-borrowing">
+		<div class="section-content">
+			<div class="container">
+				<div class="block-text">
+					<h3 class="heading">レンディング & ボロウイング（マネーマーケット）</h3>
+					<div class="text">
+						<p>当然のことながら、Moonwell ArtemisもStellaSwapと同じように被害を受け、TVLは8月1日の$103.04Mから8月4日の$22.20Mへと3日間で78.45%下落し、4プロジェクトのランキングで1位から3位に転落しました。プロトコルの再構築のため、Moonwell Artemisは4,166,400GLMR（約$2.08M）の<a
+							href="https://github.com/moonbeam-foundation/grants/blob/1d785613c1744c2566c24954da834d6088b0b4ad/level-3/MBGP2.md" target="_blank" rel="nofollow">Moonbeam Foundation 助成金</a>を提案し、10月9日に<a
+							href="https://twitter.com/MoonbeamNetwork/status/1579101646793371648" target="_blank" rel="nofollow">承認されました</a>。</p>
+						<p>この事件により、Parallelは第3四半期の最後の2/3にレンディング競争の先頭に立ち、8月6日のピーク時にはTVLが$75Mを突破しました。グラフの一番下、Starlayは$13.18Mで四半期が始まって以来、TVLの47.79%を失っていました。</p>
+					</div>
+				</div>
+				<div class="block-report-chart">
+					<div class="block-chart-blur">
+						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-1"/>
+						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-2"/>
+					</div>
+					<div class="block-content">
+						<h3 class="block-chart-heading">レンディング & ボロウイング プロトコルのTVL</h3>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="tvl-lending-borrowing"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>出典: DefiLlama、Parallel Analytics</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block-text" id="liquid-staking">
+					<h3 class="heading">Liquid Staking</h3>
+					<div class="text">
+						<div class="row">
+							<div class="col-md-6">パラレルの主力商品はDEXではなく、レンディングと
+								ボロウイング（マネーマーケット）とリキッドステーキングであったことがわかります。第3四半期を通じて、同社のリキッドステーキングのTVLは、8月9日に$13.35M、9月18日に$12.15Mと2度の下落を除き、$15M前後で比較的安定していました。2回目の下落後、ParallelのTVLは$12M前後で推移し、MoonbeamのLidoと収束しました。
+							</div>
+							<div class="col-md-6">Bifrostは今期、リキッドステーキングのインセンティブキャンペーンを倍増し、6月29日から7月13日まで<a href="https://twitter.com/bifrost_finance/status/1542175587980410880" target="_blank" rel="nofollow">Rainbow Boost 2.0</a>、8月8日から8月23日まで<a
+								href="https://twitter.com/bifrost_finance/status/1556430756716560384" target="_blank" rel="nofollow">Rainbow Boost 3.0</a>を実施しましたが、第3四半期後半のMoonbeamのLidoに対抗するには十分とは言えませんでした。出遅れたにもかかわらず、MoonbeamのLidoは発売日の$5.69Mに対し、216.68%のTVL上昇で第3四半期を締めくくった。興味深いことに、BifrostのリキッドステーキングのTVLが最も急上昇したのはキャンペーン期間外で、7月21日の$5.76Mから7月23日の$9.51Mへと上昇したのです。
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block-report-chart" style="--chart-bot-spacing: 0">
+					<div class="block-chart-blur">
+						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-1"/>
+						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-2"/>
+					</div>
+					<div class="block-content">
+						<h3 class="block-chart-heading">リキッドステーキング プロトコルのTVL</h3>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="tvl-liquid-staking"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>出典: DefiLlama、Parallel Analytics、Bifrost Analytics</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section section-stablecoin" id="stablecoin">
+		<div class="section-shape shape-grid">
+			<div class="section-shape shape-radial-circle blue"></div>
+			<img loading="lazy" src="../assets/images/report/shapes/gird-4.png" alt="Shape" width="730" height="404"/>
+			<div class="section-shape shape-cube">
+				<img loading="lazy" src="../assets/images/report/shapes/shape-cube.png" alt="Shape" width="109" height="123" class="move-vertical-reversed">
+			</div>
+			<div class="section-shape shape-02">
+				<img src="../assets/images/report/shapes/satellite3.png" alt="Shape" loading="lazy" width="150" height="150" class="move-vertical-reversed"/>
+			</div>
+			<div class="section-shape section-gradient-circle brand-01 move-vertical"></div>
+			<div class="section-shape shape-satellite-04">
+				<img src="../assets/images/report/shapes/satellite4.png" alt="Shape" loading="lazy" width="34" height="34" class="move-vertical"/>
+			</div>
+		</div>
+		<div class="section-shapes">
+			<div class="section-shape shape-corner-left-bottom shape-radial-circle purple"></div>
+			<div class="section-shape shape-corner-right-bottom shape-radial-circle dark-blue"></div>
+			<div class="section-shape section-shape-corners"></div>
+		</div>
+		<div class="section-content">
+			<div class="container">
+				<div class="block-text" style="--text-width: 750px">
+					<h3 class="heading">ステーブルコイン</h3>
+					<div class="text">
+						<p>今期の安定コインで最も素晴らしいニュースは、Kusamaで <a href="https://twitter.com/djhatrang/status/1567063802402979842" target="_blank" rel="nofollow">静かに3.5M USDTまで供給量を増やした</a>後、 <a
+							href="https://statemint.statescan.io/asset/1984" target="_blank" rel="nofollow">3M USDT</a>の初期供給量で <a href="https://twitter.com/Polkadot/status/1573299786266050561" target="_blank" rel="nofollow">PolkadotにTether</a>を立ち上げたことだろう。ローンチ直後、Astar
+							NetworkはUSDTのXCM転送をオープンした<a href="https://twitter.com/AstarNetwork/status/1574407634144219136" target="_blank" rel="nofollow">最初のパラチェーン</a>であり、Moonbeam NetworkはすぐにPolkadotネイティブUSDTをそのDAppで使用できるようにして<a
+								href="https://twitter.com/MoonbeamNetwork/status/1574764549554769921" target="_blank" rel="nofollow">それに続きました</a>。</p>
+					</div>
+				</div>
+				<div class="block-report-chart">
+					<div class="block-chart-blur">
+						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-1"/>
+						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-2"/>
+					</div>
+					<div class="block-content">
+						<h3 class="block-chart-heading">ステーブルコイン総発行量</h3>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="stablecoin-total-issuance"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<span>出典: DefiLlama</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block-text">
+					<div class="text">
+						Acalaの事件とは関係なく、KaruraでのaUSD発行額は$3.77M - $4.81M
+						のレンジの外では変動していません。AstridDAOのステーブルコインBAIの流通は、逆に変動が大きいものでした。7月6日に5.75Mで四半期をスタートし、KaruraでのaUSD発行額の1.5倍となったが、BAIの流通量は徐々に減少し、7月26日に正式に競合他社を下回りました。3ヶ月の間に、BAIは時価総額の半分近くを失いました。Acalaが運用に戻り、USDCがPolkadotでローンチする<a
+						href="https://twitter.com/circlepay/status/1575206651530907649?s=20" target="_blank" rel="nofollow">計画を発表</a>したように、2022年末にはネイティブステーブルコインの競争はこれまで以上に厳しくなると予想されます。
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section section-report-nfts" id="nft">
+		<div class="section-shape shape-galaxy">
+			<div class="section-shape shape-radial-circle blue"></div>
+			<img loading="lazy" src="../assets/images/report/shapes/galaxy-border.png" alt="Shape" width="898" height="609" class="main-image">
+			<div class="section-shape shape-ring">
+				<img loading="lazy" src="../assets/images/report/shapes/shape-ring.png" alt="Shape" width="243" height="205" class="move-vertical-reversed">
+			</div>
+			<div class="section-shape shape-cube">
+				<img loading="lazy" src="../assets/images/report/shapes/shape-cube.png" alt="Shape" width="73" height="80" class="move-vertical">
+			</div>
+			<div class="section-shape shape-02">
+				<img loading="lazy" src="../assets/images/report/shapes/satellite3.png" alt="Shape" width="150" height="150" class="move-vertical">
+			</div>
+		</div>
+		<div class="section-content">
+			<div class="container">
+				<div class="section-header">
+					<div class="section-header-inner">
+						<h3 class="section-top-title">Non-fungible token (NFT)</h3>
+					</div>
+				</div>
+				<div class="block-text" style="--text-width: 660px;" id="nft-marketplace">
+					<h3 class="heading">NFTマーケットプレイス</h3>
+					<div class="text">
+						今期のNFT分野は、NFTマーケットプレイス、GameFi、メタバースプロジェクトと多岐に渡り、活況を呈しています。MoonbeamをベースとするNFTマーケットプレイス「Raresama」は、開設から1ヶ月で、取引高200万GLMR（約$927K）を<a href="https://twitter.com/RaresamaNFT/status/1577305788430880769"
+						                                                                                                                                                   target="_blank" rel="nofollow">突破し</a>、記録を更新しました。Raresama以外にも、tofuNFTやMoonbeansなど、Moonbeam/Moonriverエコシステムの代表的な企業が目覚ましい販売量を記録しています。
+					</div>
+				</div>
+				<div class="block-report-chart"
+				     style="--chart-height: 350px; --chart-ratio: 41%;">
+					<div class="block-chart-blur">
+						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-1"/>
+						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-2"/>
+					</div>
+					<div class="block-content">
+						<h3 class="block-chart-heading">NFTマーケットプレイス日次ボリューム</h3>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="nft-marketplace-daily-volume"
+							     data-chart-source="rmrk-sales"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<span>出典: Moonbeans Analytics, tofuNFT Analytics, RMRK Team, NFTScan</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block-text">
+					<div class="text">
+						第3四半期の93日間のうち、MoonbeamのtofuNFTの販売量が最も多かったのは58日で、63.37%を占めています。MoonbeamのtofuNFTで販売されたNFTの総額は$86,078で、MoonriverのMoonbeansの販売額（$41,166）の2倍以上、Singularの販売額（$22,115）の4倍近くを記録しています。
+					</div>
+				</div>
+			</div>
+			<div class="section section-game-fi" id="game-fi">
+				<div class="section-shape shape-grid">
+					<div class="section-shape shape-radial-circle blue"></div>
+					<img loading="lazy" src="../assets/images/report/shapes/gird-4.png" alt="Shape" width="730" height="404"/>
+					<div class="section-shape shape-cube">
+						<img loading="lazy" src="../assets/images/report/shapes/shape-transparent-cube.png" alt="Shape" width="187" height="162" class="move-vertical-reversed">
+					</div>
+					<div class="section-shape shape-02">
+						<img src="../assets/images/report/shapes/satellite3.png" alt="Shape" loading="lazy" width="150" height="150" class="move-vertical"/>
+					</div>
+					<div class="section-shape section-gradient-circle brand-01 move-vertical"></div>
+					<div class="section-shape shape-satellite-04">
+						<img src="../assets/images/report/shapes/satellite4.png" alt="Shape" loading="lazy" width="34" height="34" class="move-vertical-reversed"/>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row row-table-wrap">
+						<div class="col-lg-6">
+							<div class="block-text" style="--text-width: 470px;">
+								<h3 class="heading">GameFi</h3>
+								<div class="text">
+									<p>Moonbeam Networkで初めて完売したNFTコレクション<a href="https://www.glmrapes.com/" target="_blank" rel="nofollow">GlimmerApes</a>は、第2位の<a href="https://www.glmrjungle.com/" target="_blank" rel="nofollow">GLMR
+										Jungle</a>て販売量3万5千GLMRで、$14.8Kの大差をつけ第1位となりました。しかし、この2つのコレクションはGLMR Apes DAOが制作したもので、後者は、Moonbeam Network初のPlay-to-Earn Gameである<a href="https://twitter.com/GLMRJungle" target="_blank"
+									                                                                                                                                                   rel="nofollow">「The Great Escape」</a>の一部でもあります。GameFiプロジェクトは開始後1ヶ月で、210人のユニークプレイヤーによって約14,500ゲームがプレイされ、8,800GLMBがジャングルバンクに集められ、5,600GLMBがバーンされるという<a
+										href="https://twitter.com/T0__FR/status/1575152270634803209?s=20&t=cLHeylev6hm8GeIeWy5r6w" target="_blank" rel="nofollow">素晴らしいマイルストーン</a>を達成したのです。名作<a
+										href="https://www.larvalabs.com/cryptopunks" target="_blank" rel="nofollow">CryptoPunks</a>の<a href="https://boredapeyachtclub.com/" target="_blank" rel="nofollow">Bored Ape Yacht Club</a>
+										がそれぞれ3位、4位となりました。</p>
+									<p>フィットネスとライフスタイルのGameFiアプリ<a href="https://moonfit.xyz/" target="_blank" rel="nofollow">「MoonFit」</a>によるコレクション「MoonFit Beast and Beauty は、発売からわずか数カ月で5位にランクインしました。500台のNFTが<a
+										href="https://twitter.com/MoonFitOfficial/status/1561985933029036033" target="_blank" rel="nofollow">完売 </a>NFTが30分以内に完売し、評価額は39,500GLMR、<a
+										href="https://twitter.com/MoonFitOfficial/status/1574319212956303360" target="_blank" rel="nofollow">2回目の販売</a>では1500NFTが178,500GLMRとなりました。を評価額178,500GLMRで完売し、両ラウンドで合計218,000GLMRの一次市場販売量となりました。また、ホワイトリストのフリーミントコレクション「MoonFit
+										Mint Pass」は、流通市場において11,478.18GLMRという驚くべき販売量を記録しています。</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="block-report-table table-top-10-nft-collections" style=" --block-top-spacing: 0;--block-bottom-spacing: 0;">
+								<div class="section-shape shape-blur-circle pink"></div>
+								<div class="section-shape shape-blur-circle blue"></div>
+								<div class="block-content">
+									<h3 class="block-table-heading"> Moonbeam NetworkのNFTコレクション歴代トップ10</h3>
+									<div class="block-table-body">
+										<table class="block-table-widget" id="table-top-10-nft-collections">
+											<thead>
+											<tr>
+												<th>#</th>
+												<th>コレクション</th>
+												<th>ボリューム</th>
+											</tr>
+											</thead>
+											<tbody>
+											<tr>
+												<td>1</td>
+												<td>
+													<div class="nft-collection">
+														<img src="../assets/images/nft-collections/glimmer-apes.png" alt="GlimmerApes" class="nft-collection--thumbnail" loading="lazy" width="44" height="44"/>
+														<div class="nft-collection--info">
+															<h3 class="nft-collection--name">GlimmerApes</h3>
+															<p class="nft-collection--details">111 所有者/ 1,001 アイテム</p>
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="nft-collection--volume">
+														<img src="../assets/images/token/moonbeam.png" loading="lazy" alt="Moonbeam" width="20" height="20">
+														<span class="value">128,353.37</span>
+													</div>
+													<div class="dotinsights-progress-bar" style="--bar-fill-width: 100%"></div>
+												</td>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td>
+													<div class="nft-collection">
+														<img src="../assets/images/nft-collections/glmr-jungle.png" alt="GLMR Jungle" class="nft-collection--thumbnail" loading="lazy" width="44" height="44"/>
+														<div class="nft-collection--info">
+															<h3 class="nft-collection--name">GLMR Jungle</h3>
+															<p class="nft-collection--details">520 所有者 / 3,333 アイテム</p>
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="nft-collection--volume">
+														<img src="../assets/images/token/moonbeam.png" loading="lazy" alt="Moonbeam" width="20" height="20">
+														<span class="value">93,229.1</span>
+													</div>
+													<div class="dotinsights-progress-bar" style="--bar-fill-width: 72.63%"></div>
+												</td>
+											</tr>
+											<tr>
+												<td>3</td>
+												<td>
+													<div class="nft-collection">
+														<img src="../assets/images/nft-collections/moonbeam-punks.png" alt="Moonbeam Punks" class="nft-collection--thumbnail" loading="lazy" width="44" height="44"/>
+														<div class="nft-collection--info">
+															<h3 class="nft-collection--name">Moonbeam Punks</h3>
+															<p class="nft-collection--details">1149 所有者/ 4,200 アイテム</p>
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="nft-collection--volume">
+														<img src="../assets/images/token/moonbeam.png" loading="lazy" alt="Moonbeam" width="20" height="20">
+														<span class="value">62,531.03</span>
+													</div>
+													<div class="dotinsights-progress-bar" style="--bar-fill-width: 48.72%"></div>
+												</td>
+											</tr>
+											<tr>
+												<td>4</td>
+												<td>
+													<div class="nft-collection">
+														<img src="../assets/images/nft-collections/moonbeam-bayc.png" alt="Moonbeam BAYC" class="nft-collection--thumbnail" loading="lazy" width="44" height="44"/>
+														<div class="nft-collection--info">
+															<h3 class="nft-collection--name">Moonbeam BAYC</h3>
+															<p class="nft-collection--details">111 所有者/ 1,001 アイテム</p>
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="nft-collection--volume">
+														<img src="../assets/images/token/moonbeam.png" loading="lazy" alt="Moonbeam" width="20" height="20">
+														<span class="value">49,189.45</span>
+													</div>
+													<div class="dotinsights-progress-bar" style="--bar-fill-width: 38.32%"></div>
+												</td>
+											</tr>
+											<tr>
+												<td>5</td>
+												<td>
+													<div class="nft-collection">
+														<img src="../assets/images/nft-collections/moonfit-beast-beauty.png" alt="MoonFit Beast & Beauty" class="nft-collection--thumbnail" loading="lazy" width="44" height="44"/>
+														<div class="nft-collection--info">
+															<h3 class="nft-collection--name">MoonFit Beast & Beauty</h3>
+															<p class="nft-collection--details">632 所有者/ 2,000 アイテム</p>
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="nft-collection--volume">
+														<img src="../assets/images/token/moonbeam.png" loading="lazy" alt="Moonbeam" width="20" height="20">
+														<span class="value">41,398.08</span>
+													</div>
+													<div class="dotinsights-progress-bar" style="--bar-fill-width: 32.25%"></div>
+												</td>
+											</tr>
+											<tr>
+												<td>6</td>
+												<td>
+													<div class="nft-collection">
+														<img src="../assets/images/nft-collections/ultimate-harvest-moon.png" alt="Ultimate Harvest Moon" class="nft-collection--thumbnail" loading="lazy" width="44" height="44"/>
+														<div class="nft-collection--info">
+															<h3 class="nft-collection--name">Ultimate Harvest Moon</h3>
+															<p class="nft-collection--details">9,504 所有者/ 41,552 アイテム</p>
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="nft-collection--volume">
+														<img src="../assets/images/token/moonbeam.png" loading="lazy" alt="Moonbeam" width="20" height="20">
+														<span class="value">35,049.84</span>
+													</div>
+													<div class="dotinsights-progress-bar" style="--bar-fill-width: 27.31%"></div>
+												</td>
+											</tr>
+											<tr>
+												<td>7</td>
+												<td>
+													<div class="nft-collection">
+														<img src="../assets/images/nft-collections/moonpets.png" alt="MOONPETS" class="nft-collection--thumbnail" loading="lazy" width="44" height="44"/>
+														<div class="nft-collection--info">
+															<h3 class="nft-collection--name">MOONPETS</h3>
+															<p class="nft-collection--details">622 所有者/ 5,000 アイテム</p>
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="nft-collection--volume">
+														<img src="../assets/images/token/moonbeam.png" loading="lazy" alt="Moonbeam" width="20" height="20">
+														<span class="value">30,269.17</span>
+													</div>
+													<div class="dotinsights-progress-bar" style="--bar-fill-width: 23.58%"></div>
+												</td>
+											</tr>
+											<tr>
+												<td>8</td>
+												<td>
+													<div class="nft-collection">
+														<img src="../assets/images/nft-collections/moonbeam-ape-yatch-club.png" alt="Moonbeam Ape Yatch Club" class="nft-collection--thumbnail" loading="lazy" width="44" height="44"/>
+														<div class="nft-collection--info">
+															<h3 class="nft-collection--name">Moonbeam Ape Yatch Club</h3>
+															<p class="nft-collection--details">111 所有者/ 1,001 アイテム</p>
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="nft-collection--volume">
+														<img src="../assets/images/token/moonbeam.png" loading="lazy" alt="Moonbeam" width="20" height="20">
+														<span class="value">16,948</span>
+													</div>
+													<div class="dotinsights-progress-bar" style="--bar-fill-width: 13.2%"></div>
+												</td>
+											</tr>
+											<tr>
+												<td>9</td>
+												<td>
+													<div class="nft-collection">
+														<img src="../assets/images/nft-collections/bunch-of-bananas.png" alt="Bunch of Bananas" class="nft-collection--thumbnail" loading="lazy" width="44" height="44"/>
+														<div class="nft-collection--info">
+															<h3 class="nft-collection--name">Bunch of Bananas</h3>
+															<p class="nft-collection--details">97 所有者/ 125 アイテム</p>
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="nft-collection--volume">
+														<img src="../assets/images/token/moonbeam.png" loading="lazy" alt="Moonbeam" width="20" height="20">
+														<span class="value">13,077</span>
+													</div>
+													<div class="dotinsights-progress-bar" style="--bar-fill-width: 10.19%"></div>
+												</td>
+											</tr>
+											<tr>
+												<td>10</td>
+												<td>
+													<div class="nft-collection">
+														<img src="../assets/images/nft-collections/moonfit-mint-pass.png" alt="MoonFit Mint Pass" class="nft-collection--thumbnail" loading="lazy" width="44" height="44"/>
+														<div class="nft-collection--info">
+															<h3 class="nft-collection--name">MoonFit Mint Pass</h3>
+															<p class="nft-collection--details">1,889 所有者/ 2,998 アイテム</p>
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="nft-collection--volume">
+														<img src="../assets/images/token/moonbeam.png" loading="lazy" alt="Moonbeam" width="20" height="20">
+														<span class="value">11,478.18</span>
+													</div>
+													<div class="dotinsights-progress-bar" style="--bar-fill-width: 8.94%"></div>
+												</td>
+											</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="block-table-footer">
+										<div class="block-table-source">
+											<p>出典: NFTScan</p>
+											<p>注）10月13日時点のデータです。</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section section-metaverse" id="metaverse">
+		<div class="section-shape shape-grid">
+			<img src="../assets/images/report/shapes/shape-grid-3.png" loading="lazy" alt="Shape" width="1439" height="374">
+
+			<div class="section-shape shape-cone">
+				<img class="move-vertical-reversed" src="../assets/images/report/shapes/shape-cone.png" loading="lazy" alt="Shape" width="180" height="180">
+			</div>
+			<div class="section-shape shape-ring">
+				<img class="move-vertical" src="../assets/images/report/shapes/shape-ring.png" loading="lazy" alt="Shape" width="110" height="131">
+			</div>
+			<div class="section-shape shape-02">
+				<img class="move-vertical" src="../assets/images/shapes/shape-02.png" alt="Shape" loading="lazy" width="51" height="51">
+			</div>
+		</div>
+		<div class="container">
+			<div class="block-text">
+				<h3 class="heading">メタバース</h3>
+				<div class="text">
+					<div class="row">
+						<div class="col-md-6">GameFiの他に、第3四半期に大きな期待を集めたNFT搭載部門はメタバースである。7月22日、Polkadotのメタバースパラチェーン Efinityは、スクウェア・エニックスと提携し、「ファイナルファンタジー」シリーズのNFTをリリースすると<a
+							href="https://twitter.com/Polkadot/status/1550171381718999040" target="_blank" rel="nofollow">発表しました</a>。
+							NFTは純粋なデジタルではなく、「ファイナルファンタジーVII」を題材にした物理的なアクションフィギュアやトレーディングカードと連動する予定です。
+						</div>
+						<div class="col-md-6">別の動きとして、Bit.Countryは6月30日にAlpha Testnetを立ち上げ、最初の2週間で<a href="https://twitter.com/BitDotCountry/status/1547067746474930176" target="_blank" rel="nofollow">約3000のメタバース</a>プロジェクトと2MステークのAlphaNEERを集めました。9月13日には、Bit.Country
+							Pioneerが1日前にKusamaの52番目のパラチェーン枠を<a href="https://twitter.com/BitDotCountry/status/1569504374824775681" target="_blank" rel="nofollow">自費で落札</a>した後、Bit.Country Pioneer Appが<a
+								href="https://twitter.com/parachains/status/1569155301403930624?s=20&t=So2ht8E_5WVruujxYbRizg" target="_blank" rel="nofollow">公開されました</a> 。
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="block-report-table table-style-02 table-bitcountry-pioneer-app">
+				<div class="section-shape shape-blur-circle pink blur-1"></div>
+				<div class="section-shape shape-blur-circle blue blur-2"></div>
+				<div class="section-shape shape-blur-circle blue blur-3"></div>
+				<div class="block-content">
+					<h3 class="block-table-heading">Bit.Country のパフォーマンス</h3>
+					<div class="block-table-body">
+						<table class="block-table-widget" id="table-table-bitcountry-pioneer-app">
+							<thead>
+							<tr>
+								<th>
+									<div class="th-label-group">
+										<div class="category">カテゴリ</div>
+										<div class="separator"></div>
+										<div class="day">ローンチ後</div>
+									</div>
+								</th>
+								<th>1日</th>
+								<th>2日</th>
+								<th>3日</th>
+								<th>4日</th>
+								<th>5日</th>
+								<th>7日</th>
+								<th>現在までの総計</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>メタバースプロジェクト</td>
+								<td>29</td>
+								<td>45</td>
+								<td>66</td>
+								<td>89</td>
+								<td>117</td>
+								<td>136</td>
+								<td>210</td>
+							</tr>
+							<tr>
+								<td>NFTコレクション</td>
+								<td>80</td>
+								<td>117</td>
+								<td>164</td>
+								<td>218</td>
+								<td>282</td>
+								<td>322</td>
+								<td>503</td>
+							</tr>
+							<tr>
+								<td>NFTs ミント</td>
+								<td>920</td>
+								<td>933</td>
+								<td>1,050</td>
+								<td>-</td>
+								<td>1,598</td>
+								<td>1,848</td>
+								<td>2,801</td>
+							</tr>
+							<tr>
+								<td>NEER ステーク</td>
+								<td>3,005,944.98</td>
+								<td>2,340,936.68</td>
+								<td>3,591,736.88</td>
+								<td>3,561,266.38</td>
+								<td>3,532,112.38</td>
+								<td>3,603,074.88</td>
+								<td>4,364,764.61</td>
+							</tr>
+							<tr>
+								<td>BIT バーン</td>
+								<td>-</td>
+								<td>-</td>
+								<td>74,499.40</td>
+								<td>96,102.75</td>
+								<td>101,123.79</td>
+								<td>102,812.79</td>
+								<td>204,608.14</td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="block-table-footer">
+						<div class="block-table-source">
+							<p>出典: Bit.Countryチーム</p>
+							<p>注）10月5日時点のデータです。</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="block-text">
+				<div class="text">
+					<p>Alpha Testnetキャンペーンの成功は、Pioneer Appの雪だるま式効果を生み出しました。ローンチから9時間以内に<a href="https://twitter.com/BitDotCountry/status/1569628185599569921" target="_blank" rel="nofollow">1M NEER</a>がステークされ、この数は初日終了時には3M以上に増加しました。最初の週の終わりまでに、136のメタバースプロジェクトと322のNFTコレクションが作成され、1,848のNFTがミントされ、3.6M
+						NEER以上がステークされ、100K BIT以上がバーンされたのです。チームは引き続き<a href="https://twitter.com/BitDotCountry/status/1582268401023492096" target="_blank" rel="nofollow">「Raw Land Block Sale」</a>イベントを開催し、オークションでは最大<a
+							href="https://twitter.com/BitDotCountry/status/1585824094993338368?s=20&t=f68GYGLVTgPyIHqJt1KzQw" target="_blank" rel="nofollow">5,150 NEER</a> （約$2,060）の金額を記録しました。</p>
+					<p>RMRKの上級メタバースプロジェクトSkybreachも記念すべきマイルストーンに到達しました。10月19日、Skybreachは14,905区画の累積土地販売量と1M xcRMRKを超えたと<a href="https://twitter.com/SkybreachNFT/status/1582742081927258113" target="_blank" rel="nofollow">報告しました</a>。
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section section-dao" id="dao">
+		<div class="container">
+			<div class="section-header">
+				<div class="section-header-inner">
+					<h2 class="section-top-title">DAO</h2>
+					<div class="section-description-wrap">
+						<div class="section-description">
+							ブロックチェーンが中央集権的な存在から脱却したことにより生まれた分散型自律組織（DAOs）は、トークン保有者の集団投票により意思決定プロセスが管理され、その活動がブロックチェーン上で全て公開される実体構造です。他のエコシステムと同様、DAOはPolkadotやKusamaにとって必要不可欠な存在です。
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-wide">
+			<div class="row">
+				<div class="col-md-3 col-dao">
+					<div class="block-dao block-dao--chaos" id="chaosdao">
+						<img src="../assets/images/report/dao/chaos-dao.png" alt="ChaosDAO" loading="lazy" width="100" height="100">
+						<h3>ChaosDAO</h3>
+						<p class="description">PolkadotとKusamaのエコシステムで最も初期に設立され、最も影響力のあるDAOの1つである
+							<a href="https://chaosdao.org/" target="_blank" rel="nofollow">ChaosDAO</a>は、7月13日に
+							<a href="https://twitter.com/ChaosDAO/status/1547252610578763782" target="_blank" rel="nofollow">設立1周年</a>を迎えました。ChaosDAOは、「量より質」を設立理念とし、「この分野で最も知識のある人々を集め、結びつける」という1つの目標に向かって、常に100％有機的に成長してきました。DAOは、会員アクセスおよびガバナンスのために、NFTコレクション
+							<a href="https://singular.app/collectibles/kusama/dac5c7f54029d0e73c-HXAI8" target="_blank" rel="nofollow">Chaos-DAO Apes</a>を備えています。10月24日までに、このコレクションはフロア価格109KSM、トップセール179KSMで、4K
+							KSM近い取引量を記録しました。サーバーの管理人である23人のDAOistが現在ChaosDAOを運営しており、その中にはエコシステム内の著名なプロジェクトからのメンバーも含まれています。
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-dao">
+					<div class="block-dao block-dao--astar" id="astar-degens">
+						<img src="../assets/images/report/dao/astar-degens.png" alt="Astar Degens" loading="lazy" width="100" height="100">
+						<h3>Astar Degens</h3>
+						<p class="description">
+							<a href="http://astardegens.com/" target="_blank" rel="nofollow">Astar Degens</a>は、その名前から想像できるように、Astarのエコシステムに重点を置いたコミュニティベースのVC DAOです。DAO評議会の10人のメンバーによって管理され、2022年9月末までに、Astar Degensは彼らのdApp
+							Staking報酬で1M ASTR以上、tofuNFTのNFTロイヤリティとして200K ASTR以上を
+							<a href="https://twitter.com/AstarDegens/status/1579965754484883456/photo/1" target="_blank" rel="nofollow">受け取りました</a>。DAOで議決権を得るには、Astar Degen ApesのNFTを1万枚中1枚以上所有する必要があります。この
+							<a href="https://tofunft.com/collection/astardegens/items" target="_blank" rel="nofollow">コレクション</a>は10月24日に累積取引量9.6M ASTR、フロア価格1,800 ASTRを記録しています。
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-dao">
+					<div class="block-dao block-dao--glmr-apes" id="glmr-apes">
+						<img src="../assets/images/report/dao/glmr-apes.png" alt="GLMR Apes" loading="lazy" width="100" height="100">
+						<h3>GLMR Apes</h3>
+						<p class="description">偶然にも、これまで取り上げた3つのDAOは、いずれも統治するNFTに猿のイメージを使っています。GameFiの項でも紹介した
+							<a href="https://www.glmrapes.com/" target="_blank" rel="nofollow">GLMR Apes</a>1001アイテムを含むNFTコレクションは、Moonbeam Networkで初めて完売し、現在もセカンダリーマーケットで上位にランクインしています。Jungle Councilは10人のメンバーで構成され、半分はコアチーム、半分はWise
+							Apesに分類されています。
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-dao">
+					<div class="block-dao block-dao--tf-alpha" id="tf-alpha">
+						<img src="../assets/images/report/dao/tf-alpha.png" alt="Take Flight Alpha" loading="lazy" width="100" height="100">
+						<h3>Take Flight Alpha</h3>
+						<p class="description">2022年1月に設立された30人のメンバーからなる
+							<a href="https://tfalpha.xyz/#" target="_blank" rel="nofollow">TFA DAO</a>は、Moonbeam Networkのコレーターノードの運営と600人以上の参加者のコミュニティ構築に重点を置いています。彼らは現在、デリゲーターに29％のAPYを返す彼らのコレーターノードのために、約4.5M
+							GLMRのステークドバリューを保持しています。2022年5月、TFA DAOは参加をゲーミフィケーションするため、5000のアイテムで構成される
+							<a href="https://moonpets.app/" target="_blank" rel="nofollow">MooonPets NFT</a>コレクションを導入しました。第3四半期では、MoonPets保有者の保持率は約60％と報告されています。
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section section-web3" id="web3">
+		<div class="section-shapes">
+			<div class="section-shape shape-corner-left-top shape-radial-circle purple"></div>
+			<div class="section-shape shape-corner-right-top shape-radial-circle blue"></div>
+			<div class="section-shape section-shape-corners reverse-direction"></div>
+		</div>
+		<div class="container">
+			<div class="section-header">
+				<div class="section-header-inner">
+					<img loading="lazy" src="../assets/images/report/shapes/shape-group-web3.png" alt="Shape" width="1028" height="667" class="shape-web3-group">
+					<h2 class="section-top-title">Web3</h2>
+				</div>
+			</div>
+			<div class="section-content">
+				<div class="block-text" id="web3-wallet">
+					<h3 class="heading">ウォレット</h3>
+					<div class="text">
+						Web3の議論は、非カストディアルウォレットなしでは不十分でしょう。Web2アプリへのGoogleやFacebookのサインインと同様に、Web3ウォレットは事実上、ユーザーがDAppsを介してWeb3の世界に足を踏み入れるためのゲートウェイであり、最初のタッチポイントとなります。PolkadotとKusamaのエコシステムでは、ウォレットはレガシーウォレット、マルチチェーンウォレット、ネイティブウォレットの3種類に分類されます。
+					</div>
+				</div>
+				<div class="block-report-table table--web3-wallet-compare">
+					<div class="block-chart-blur">
+						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-1"/>
+						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-2"/>
+					</div>
+					<div class="block-content">
+						<div class="block-table-body">
+							<table class="block-table-widget js-data-table">
+								<thead>
+								<tr>
+									<th>種類</th>
+									<th>レガシーウォレット</th>
+									<th>マルチチェーンウォレット</th>
+									<th>ネイティブウォレット</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+									<td>例</td>
+									<td>Polkadot {.js}, Fearless Wallet, Polkawallet</td>
+									<td>Enkrypt, Math Wallet, Rabby</td>
+									<td>SubWallet, Nova Wallet, Talisman</td>
+								</tr>
+								<tr>
+									<td>Substrate の互換性</td>
+									<td>
+										<svg>
+											<use xlink:href="#symbol-circle-check"></use>
+										</svg>
+									</td>
+									<td>
+										<svg>
+											<use xlink:href="#symbol-circle-check"></use>
+										</svg>
+									</td>
+									<td>
+										<svg>
+											<use xlink:href="#symbol-circle-check"></use>
+										</svg>
+									</td>
+								</tr>
+								<tr>
+									<td>EVM の互換性</td>
+									<td>
+										<svg>
+											<use xlink:href="#symbol-circle-x"></use>
+										</svg>
+									</td>
+									<td>
+										<svg>
+											<use xlink:href="#symbol-circle-check"></use>
+										</svg>
+									</td>
+									<td>
+										<svg>
+											<use xlink:href="#symbol-circle-check"></use>
+										</svg>
+									</td>
+								</tr>
+								<tr>
+									<td>ユーザーフレンドリーなUX/UI</td>
+									<td>
+										<svg>
+											<use xlink:href="#symbol-circle-x"></use>
+										</svg>
+									</td>
+									<td>
+										<svg>
+											<use xlink:href="#symbol-circle-check"></use>
+										</svg>
+									</td>
+									<td>
+										<svg>
+											<use xlink:href="#symbol-circle-check"></use>
+										</svg>
+									</td>
+								</tr>
+								<tr>
+									<td>Substrate固有の機能</td>
+									<td>
+										<svg>
+											<use xlink:href="#symbol-circle-check"></use>
+										</svg>
+									</td>
+									<td>
+										<svg>
+											<use xlink:href="#symbol-circle-x"></use>
+										</svg>
+									</td>
+									<td>
+										<svg>
+											<use xlink:href="#symbol-circle-check"></use>
+										</svg>
+									</td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="block-text">
+					<div class="text">比較表を見ると、特にユーザーフレンドリーなUX/UIや、クラウドローン表示、ステーキング、XCM送金、ライトクライアントといったSubstrate特有の機能において、ネイティブウォレットがレガシーウォレットとマルチチェーンウォレットの両方に勝っていることがよくわかります。したがって、PolkadotとKusamaのエコシステムにおけるウォレット競争は、主にSubWallet、Nova
+						Wallet、Talismanの手に落ちているのです。Nova Walletはモバイルアプリケーションとして、Talismanはブラウザ拡張機能として動作していますが、SubWalletは <a href="https://twitter.com/subwalletapp/status/1587403200105451520" target="_blank" rel="nofollow">ブラウザ拡張機能とモバイルアプリ</a>ケーションの両方を起動した最初の企業です。
+					</div>
+				</div>
+				<div class="block-text" style="--block-top-spacing: 88px;" id="web3-socialfi">
+					<h3 class="heading">SocialFi</h3>
+					<div class="text">唯一の分散型ソーシャルメディアであるSubsocialは、第3四半期も発展を続け、3ヶ月の間に合計1,474件の投稿と395件のスペースが作成されました。10月25日までに、Subsocialアプリでは累積でほぼ25Kの投稿と10K以上のスペースが作成されました。ユーザーのインセンティブをさらに高め、Subsocial
+						のエコシステムの有用性を拡大するために、チームは RMRK で 10,000 個の装備可能なロボットを含む NFT コレクションである<a href="https://twitter.com/Spacers_NFT/status/1578370733587460096" target="_blank" rel="nofollow">Spacers を発表しました</a>。これらの NFT は VIP
+						チケットとして機能し、Subsocial での無料のエネルギー、無料の .spacer Dotsama Domain、投稿の可視性向上などのプレミアム機能を利用できます。
+					</div>
+				</div>
+				<div class="block-report-chart">
+					<div class="block-chart-blur">
+						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-1"/>
+						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-2"/>
+					</div>
+					<div class="block-content">
+						<h3 class="block-chart-heading">2022年第3四半期におけるサブソーシャルな日常活動</h3>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="subsocial-daily-activities"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<span>出典: Subsocial Statistics</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block-text">
+					<div class="text">
+						2022年第3四半期には、動画に特化したもう一つのSocialFiプラットフォームが登場しました。Joystreamです。各ビデオがNFTであるYoutubeのWeb3版と思われるJoystreamは、第3四半期にわずかな成長を記録した。ビデオの総数は7.70%増加したが、総ユーザー数は四半期開始時に比べて9.20%の増加にとどまりました。PolkadotやKusamaエコシステムのSocialFiセグメントのプロジェクトは、より積極的に活動を強化する必要があり、さもなければ他のエコシステムの競合他社に遅れをとることになるでしょう。
+					</div>
+				</div>
+				<div class="block-report-chart">
+					<div class="block-chart-blur">
+						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-1"/>
+						<img loading="lazy" src="../assets/images/report/chart/chart-blur-blue.png" alt="blur" width="894" height="1002" class="blur-2"/>
+					</div>
+					<div class="block-content">
+						<h3 class="block-chart-heading">Joystream の累積活動量 2022年第3四半期</h3>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="joystream-cumulative-activities"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<span>出典: Joystream Dashboard</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block-text block-text-justify-center" style="--block-maxw:970px; --block-bottom-spacing: 60px;" id="web3-bridge">
+					<h3 class="heading">ブリッジ</h3>
+					<div class="text-wrap">
+						<div class="text">Web3ユニバースの急速な拡大により、異なるブロックチェーン間の通信や資産移動を可能にするブリッジの需要が急増しています。PolkadotとKusamaのエコシステムでは、<a href="https://wiki.polkadot.network/docs/learn-xcm#cross-consensus-protocols-xcmp-vmp-hrmp"
+						                                                                                                                             target="_blank" rel="nofollow">XCMPプロトコル</a>がXCM形式を介してレイヤー1チェーン間のシームレスな相互作用を可能にしますが、PolkadotまたはKusamaのパラチェーンが他のエコシステムに手を伸ばそうとする場合、現時点でもブリッジが必要とされます。以下は、PolkadotとKusamaのエコシステムで活発に運用されている著名なブリッジのリストです。すべての橋は双方向であることに注意してください。
+						</div>
+					</div>
+				</div>
+				<div class="block-bridge">
+					<div class="bridge-list">
+						<a href="#" data-filter="nomad">Nomad</a>
+						<a href="#" data-filter="celer-cbridge" class="current">Celer cBridge</a>
+						<a href="#" data-filter="multichain">Multichain</a>
+						<a href="#" data-filter="axelar">Axelar</a>
+						<a href="#" data-filter="wormhole">Wormhole</a>
+						<a href="#" data-filter="interlay">Interlay</a>
+						<a href="#" data-filter="kintsugi">Kintsugi</a>
+						<a href="#" data-filter="snowfork">Snowfork</a>
+						<a href="#" data-filter="helix-bridge">Helix Bridge</a>
+					</div>
+					<div class="bridge-item fade-in-up bridge--nomad">
+						<img loading="lazy" src="../assets/images/report/web3-bridge/nomad.png" alt="Nomad" width="243" height="226">
+					</div>
+					<div class="bridge-item fade-in-up bridge--celer-cbridge animate" style="display: block">
+						<img loading="lazy" src="../assets/images/report/web3-bridge/celer-cbridge.png" alt="Celer cBridge" width="673" height="562">
+					</div>
+					<div class="bridge-item fade-in-up bridge--multichain">
+						<div class="bridge-desc">USDT/USDC/DAI/WBTC/WETH/BUSD/BNBなどのメインラップアセットのみ対象です。その他のトークンは、Moonbeam、Moonriver、Shiden、その他マルチチェーンがサポートする全てのチェーン間で転送可能です。</div>
+						<img loading="lazy" src="../assets/images/report/web3-bridge/multichain.png" alt="Multichain" width="226" height="236">
+					</div>
+					<div class="bridge-item fade-in-up bridge--axelar">
+						<img loading="lazy" src="../assets/images/report/web3-bridge/axelar.png" alt="Axelar" width="234" height="226">
+					</div>
+					<div class="bridge-item fade-in-up bridge--wormhole">
+						<img loading="lazy" src="../assets/images/report/web3-bridge/wormhole.png" alt="Wormhole" width="231" height="240">
+					</div>
+					<div class="bridge-item fade-in-up bridge--interlay">
+						<img loading="lazy" src="../assets/images/report/web3-bridge/interlay.png" alt="Interlay" width="188" height="87">
+					</div>
+					<div class="bridge-item fade-in-up bridge--kintsugi">
+						<img loading="lazy" src="../assets/images/report/web3-bridge/kintsugi.png" alt="Kintsugi" width="188" height="87">
+					</div>
+					<div class="bridge-item fade-in-up bridge--snowfork">
+						<img loading="lazy" src="../assets/images/report/web3-bridge/snowfork.png" alt="Snowfork" width="188" height="87">
+					</div>
+					<div class="bridge-item fade-in-up bridge--helix-bridge">
+						<img loading="lazy" src="../assets/images/report/web3-bridge/helix-bridge.png" alt="Helix Bridge" width="229" height="87">
+						<!--<div class="block-bridge-tokens">
+							<div class="bridge-token bridge-token&#45;&#45;eth-2">
+								<img src="../assets/images/report/bridges/eth-2.0.jpg" alt="Ethereum 2.0" width="96" height="96"/>
+								<div class="bridge-token&#45;&#45;name">Ethereum 2.0</div>
+							</div>
+							<div class="bridge-token bridge-token&#45;&#45;darwinia-smart-chain">
+								<img src="../assets/images/report/bridges/darwinia-smart-chain.png" alt="Darwinia Smart Chain" width="96" height="96"/>
+								<div class="bridge-token&#45;&#45;name">Darwinia Smart Chain</div>
+							</div>
+						</div>-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section section-closing-thoughts" id="closing-thoughts">
+		<div class="section-shape shape-blur-circle purple blur-1"></div>
+		<div class="section-shape shape-blur-circle green blur-2"></div>
+		<div class="section-shape shape-blur-circle purple blur-3"></div>
+		<div class="section-shape shape-blur-circle light-blue blur-4"></div>
+		<div class="container-wide">
+			<div class="section-content">
+				<div class="section-header">
+					<div class="section-header-inner">
+						<h2 class="section-top-title">Closing Thoughts</h2>
+						<div class="section-description-wrap">
+							<div class="section-description">
+								<p>10月22日、PolkadotとParityの共同設立者であるGavin Woodは、Parity TechnologiesのCEO職を退き、チーフアーキテクトの肩書きを持つことを<a href="https://www.parity.io/blog/parity-leadership-update/" target="_blank"
+								                                                                                                            rel="nofollow">発表しました</a>。後任には、Parityの共同創業者で、これまでチーフ・コマーシャル・オフィサーを務めていたBjörn
+									Wagnerが新CEOに就任しました。</p>
+								<p>この動きは、エンドユーザーをターゲットとしたエコシステムの開発と成長拡大に、より多くの注意が払われるようになり、Polkadotの成長方向が前向きで有望であることを示唆しています。今後数ヶ月の間に、SubWalletとエコシステムの他の主要プロジェクトが共催し、200人以上の開発者と投資家を集めたベトナム初の公式Polkadotミートアップ、<a
+									href="https://www.dotinvietnam.com/" target="_blank" rel="nofollow">DOTinVietnam</a>のようなイベントが、世界中で、より大規模に行われる予定です。したがって、Polkadotの爆発的な普及は、時間の問題です。
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section section-get-started" id="get-started-with-polkadot">
+		<div class="section-shape shape-galaxy-1">
+			<div class="section-shape shape-radial-circle purple"></div>
+			<img loading="lazy" src="../assets/images/report/shapes/galaxy-border.png" alt="Shape" width="898" height="609" class="main-image">
+			<div class="section-shape shape-ring">
+				<img loading="lazy" src="../assets/images/report/shapes/shape-ring.png" alt="Shape" width="243" height="205" class="move-vertical-reversed"/>
+			</div>
+			<div class="section-shape shape-satellite-04">
+				<img loading="lazy" src="../assets/images/report/shapes/satellite4.png" alt="Shape" width="150" height="150"
+				     class="move-vertical"/>
+			</div>
+			<div class="section-shape shape-02">
+				<img src="../assets/images/report/shapes/satellite3.png" alt="Shape" loading="lazy" width="150" height="150" class="move-vertical-reversed"/>
+			</div>
+		</div>
+		<div class="section-shape shape-galaxy-2">
+			<div class="section-shape shape-radial-circle dark-blue"></div>
+			<img loading="lazy" src="../assets/images/report/shapes/galaxy-border.png" alt="Shape" width="898" height="609" class="main-image">
+			<div class="section-shape shape-cube">
+				<img loading="lazy" src="../assets/images/report/shapes/shape-cube.png" alt="Shape" width="80" height="89" class="move-vertical-reversed"/>
+			</div>
+			<div class="section-shape shape-satellite-04">
+				<img loading="lazy" src="../assets/images/report/shapes/satellite4.png" alt="Shape" width="150" height="150"
+				     class="move-vertical"/>
+			</div>
+			<div class="section-shape shape-02">
+				<img src="../assets/images/report/shapes/satellite3.png" alt="Shape" loading="lazy" width="150" height="150" class="move-vertical-reversed"/>
+			</div>
+			<div class="section-shape section-gradient-circle brand-01 move-vertical"></div>
+		</div>
+		<div class="container">
+			<div class="section-header">
+				<div class="section-header-inner">
+					<h2 class="section-top-title">Polkadot をはじめよう</h2>
+				</div>
+			</div>
+			<div class="section-content">
+				<div class="block-report-post">
+					<div class="post-thumbnail">
+						<img loading="lazy" src="../assets/images/report/blog/post-subwallet.jpg" alt="SubWallet" width="540" height="345"/>
+					</div>
+					<div class="post-info">
+						<a href="https://subwallet.app/" target="_blank" rel="nofollow">
+							<mark>SubWallet</mark>
+						</a>
+						は、PolkadotとKusamaエコシステムのためのユーザーフレンドリーなWeb3マルチバースゲートウェイです。モバイルアプリとブラウザ拡張機能の両方が利用可能なSubWalletは、アセットの送受信、ポートフォリオの管理、NFTアセットの取り扱い、クラウドローン活動の追跡、ステーキングリワードの管理などを簡単に行うことが可能です。SubWalletを使用することは、SubstrateやEVM互換のDAppsなど、PolkadotおよびKusamaエコシステムの幅広いブロックチェーンベースのアプリケーションに接続する最もシンプルで安全な方法を手に入れるということです。SubWalletをコールドウォレットやQR-signerで使用し、資産を安全に保つことができます。
+					</div>
+				</div>
+				<div class="block-report-post">
+					<div class="post-thumbnail">
+						<div class="section-shape shape-blur-circle purple"></div>
+						<img loading="lazy" src="../assets/images/report/blog/post-moonbeam.jpg" alt="Moonbeam" width="540" height="345"/>
+					</div>
+					<div class="post-info">
+						<a href="https://moonbeam.network/" target="_blank" rel="nofollow">
+							<mark>Moonbeam</mark>
+						</a>
+						は、PolkadotとKusamaエコシステムのためのユーザーフレンドリーなWeb3マルチバースゲートウェイです。モバイルアプリとブラウザ拡張機能の両方が利用可能なSubWalletは、アセットの送受信、ポートフォリオの管理、NFTアセットの取り扱い、クラウドローン活動の追跡、ステーキングリワードの管理などを簡単に行うことが可能です。SubWalletを使用することは、SubstrateやEVM互換のDAppsなど、PolkadotおよびKusamaエコシステムの幅広いブロックチェーンベースのアプリケーションに接続する最もシンプルで安全な方法を手に入れるということです。SubWalletをコールドウォレットやQR-signerで使用し、資産を安全に保つことができます。
+					</div>
+				</div>
+				<div class="block-report-post">
+					<div class="post-thumbnail">
+						<div class="section-shape shape-blur-circle"></div>
+						<img loading="lazy" src="../assets/images/report/blog/post-bit-country.jpg" alt="Bit.Country" width="540" height="325"/>
+					</div>
+					<div class="post-info">
+						<a href="https://bit.country/" target="_blank" rel="nofollow">
+							<mark>Bit.Country</mark>
+						</a>
+						は、ユーザーにメタバースプロジェクトを12秒で作成するためのツールを提供する分散型アプリケーションです。個人、プロジェクト、ブランド、ビジネス、インフルエンサー、コミュニティは誰でも簡単にBit.Countryを使って、ユーザーがマーケティングキャンペーンで一貫してトークンやNFTで報酬を得られるインタラクティブな没入型デジタルワールドを体験したり構築したりすることができるのです。デジタルワールドは、仮想の土地にボクセル、3Dアセット/NFT、および小道具を配置して細分化し、コミュニティと共同で構築されます。Bit.Countryは、Kusama（Polkadotエコシステム）のパラチェーンであるSubstrateベースのMetaverse.Networkブロックチェーンで構築されています。普遍的なネットワーク通貨は$NEERで、ゲーム内通貨は$BITです。
+					</div>
+				</div>
+			</div>
+			<div class="section-call-to-actions">
+				<h6>次回のレポートでも、プロジェクトの特徴をご紹介していきますので、ご期待ください。</h6>
+				<a href="https://twitter.com/dotinsights_xyz" target="_blank" rel="nofollow" class="button">
+					<span class="button-icon">
+						<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M15.6482 5.50898C16.281 5.03437 16.8505 4.46484 17.2935 3.80039C16.724 4.05352 16.0595 4.24336 15.395 4.30664C16.0911 3.89531 16.5974 3.2625 16.8505 2.47148C16.2177 2.85117 15.49 3.13594 14.7622 3.29414C14.1294 2.62969 13.2751 2.25 12.3259 2.25C10.4907 2.25 9.00364 3.73711 9.00364 5.57227C9.00364 5.82539 9.03528 6.07852 9.09856 6.33164C6.34583 6.17344 3.87786 4.84453 2.23254 2.85117C1.94778 3.32578 1.78958 3.89531 1.78958 4.52812C1.78958 5.66719 2.35911 6.67969 3.27668 7.28086C2.73879 7.24922 2.2009 7.12266 1.75793 6.86953V6.90117C1.75793 8.51484 2.897 9.84375 4.41575 10.1602C4.16262 10.2234 3.84622 10.2867 3.56145 10.2867C3.33997 10.2867 3.15012 10.2551 2.92864 10.2234C3.33997 11.5523 4.57395 12.5016 6.02942 12.5332C4.89036 13.4191 3.46653 13.957 1.91614 13.957C1.63137 13.957 1.37825 13.9254 1.12512 13.8937C2.58059 14.843 4.32083 15.3809 6.21926 15.3809C12.3259 15.3809 15.6482 10.35 15.6482 5.95195C15.6482 5.79375 15.6482 5.66719 15.6482 5.50898Z"
+								fill="white"/>
+						</svg>
+					</span>
+					<span class="button-text">Follow Our Twitter</span>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="section section-about-us" id="about-dotinsights">
+		<div class="container-wide">
+			<div class="section-content">
+				<div class="block-about-us">
+					<h2>
+						<span>About</span><img loading="lazy" alt="dotinsights - Polkadot & Kusama Ecosystem Map" src="../assets/images/logo/logo.png" width="426"/>
+					</h2>
+					<p>
+						<mark>dotinsights</mark>
+						は、PolkadotとKusamaエコシステムのための主要な非カストディアルウォレットであるSubWalletによる研究に重点を置いたイニシアチブです。Parity Technologiesのサポートにより、データに基づいたPolkadot Deep Diveレポートと最も包括的で最新のPolkadot &
+						Kusamaエコシステムマップを提供することで、dotinsightsのビジョンはPolkadotの公式かつ信頼できる情報と研究ハブになることです。
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section section-report-contributors" id="contributors">
+		<div class="section-shape section-shape-blur">
+			<img loading="lazy" src="../assets/images/report/shapes/full-wide-blur.png" alt="Shape" width="1920" height="851">
+		</div>
+		<div class="section-content">
+			<div class="container">
+				<div class="section-header">
+					<div class="section-header-inner">
+						<h3 class="section-top-title">コントリビューター</h3>
+					</div>
+				</div>
+				<div class="grid-contributors">
+					<div class="grid-item">
+						<div class="block-contributor">
+							<div class="avatar-wrap">
+								<div class="avatar">
+									<img src="../assets/images/report/contributors/trang-ha.jpg" alt="DJ Hà Trang"
+									     loading="lazy" width="164" height="164"/>
+								</div>
+							</div>
+							<div class="info">
+								<h4 class="name">DJ Hà Trang</h4>
+								<div class="position">Lead Researcher</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item">
+						<div class="block-contributor">
+							<div class="avatar-wrap">
+								<div class="avatar">
+									<img src="../assets/images/report/contributors/alex-vu.jpg" alt="Alex Vu"
+									     loading="lazy" width="164" height="164"/>
+								</div>
+							</div>
+							<div class="info">
+								<h4 class="name">Alex Vu</h4>
+								<div class="position">Data Engineer</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item">
+						<div class="block-contributor">
+							<div class="avatar-wrap">
+								<div class="avatar">
+									<img src="../assets/images/report/contributors/le-bui.jpg" alt="Le Bui"
+									     loading="lazy" width="164" height="164"/>
+								</div>
+							</div>
+							<div class="info">
+								<h4 class="name">Le Bui</h4>
+								<div class="position">Web Designer</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item">
+						<div class="block-contributor">
+							<div class="avatar-wrap">
+								<div class="avatar">
+									<img src="../assets/images/report/contributors/dung-nguyen.jpg" alt="Dung Nguyen"
+									     loading="lazy" width="164" height="164"/>
+								</div>
+							</div>
+							<div class="info">
+								<h4 class="name">Dung Nguyen</h4>
+								<div class="position">Frontend Developer</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item grid-item-1-3">
+						<div class="block-contributor layout-horizontal">
+							<div class="avatar-wrap">
+								<div class="avatar">
+									<img src="../assets/images/report/contributors/hieu-dao.jpg" alt="Hieu Dao"
+									     loading="lazy" width="164" height="164"/>
+								</div>
+							</div>
+							<div class="info">
+								<h4 class="name">Hieu Dao</h4>
+								<div class="position">Co-founder<br/>& Head of Product
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item grid-item-1-3">
+						<div class="block-contributor layout-horizontal">
+							<div class="avatar-wrap">
+								<div class="avatar">
+									<img src="../assets/images/report/contributors/frankie.jpg" alt="Frankie Kao"
+									     loading="lazy" width="164" height="164"/>
+								</div>
+							</div>
+							<div class="info">
+								<h4 class="name">Frankie Kao</h4>
+								<div class="position">Co-founder<br/>& Creative Director
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item grid-item-1-3">
+						<div class="block-contributor layout-horizontal">
+							<div class="avatar-wrap">
+								<div class="avatar">
+									<img src="../assets/images/report/contributors/thony.jpg" alt="Thony"
+									     loading="lazy" width="164" height="164"/>
+								</div>
+							</div>
+							<div class="info">
+								<h4 class="name">Thony</h4>
+								<div class="position">Co-founder<br/>& Head of Strategy
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item grid-item-1-3">
+						<div class="block-contributor layout-horizontal">
+							<div class="avatar-wrap">
+								<div class="avatar">
+									<img src="../assets/images/report/contributors/ryan-dinh.jpg" alt="Ryan Dinh"
+									     loading="lazy" width="164" height="164"/>
+								</div>
+							</div>
+							<div class="info">
+								<h4 class="name">Ryan Dinh</h4>
+								<div class="position">Business
+									<br/>Development Manager
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item grid-item-1-3">
+						<div class="block-contributor layout-horizontal">
+							<div class="avatar-wrap">
+								<div class="avatar">
+									<img src="../assets/images/report/contributors/kate-ha.jpg" alt="Kate Ha"
+									     loading="lazy" width="164" height="164"/>
+								</div>
+							</div>
+							<div class="info">
+								<h4 class="name">Kate Ha</h4>
+								<div class="position">Growth Lead</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item grid-item-1-3">
+						<div class="block-contributor layout-horizontal">
+							<div class="avatar-wrap">
+								<div class="avatar">
+									<img src="../assets/images/report/contributors/emily-nguyen.jpg" alt="Emily Nguyen"
+									     loading="lazy" width="164" height="164"/>
+								</div>
+							</div>
+							<div class="info">
+								<h4 class="name">Emily Nguyen</h4>
+								<div class="position">Growth Executive | Vietnamese Translator</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item grid-item-1-3">
+						<div class="block-contributor layout-horizontal">
+							<div class="avatar-wrap">
+								<div class="avatar">
+									<img src="../assets/images/report/contributors/mabel-nguyen.jpg" alt="Mabel Nguyen"
+									     loading="lazy" width="164" height="164"/>
+								</div>
+							</div>
+							<div class="info">
+								<h4 class="name">Mabel Nguyen</h4>
+								<div class="position">BD Executive | Vietnamese Translator</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item grid-item-1-3">
+						<div class="block-contributor layout-horizontal">
+							<div class="avatar-wrap">
+								<div class="avatar">
+									<img src="../assets/images/report/contributors/marco-da-rocha.jpg" alt="Marco Da Rocha"
+									     loading="lazy" width="164" height="164"/>
+								</div>
+							</div>
+							<div class="info">
+								<h4 class="name">Marco Da Rocha
+									<small>(Pitcoin)</small>
+								</h4>
+								<div class="position">Portuguese Translator</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item grid-item-1-3">
+						<div class="block-contributor layout-horizontal">
+							<div class="avatar-wrap">
+								<div class="avatar">
+									<img src="../assets/images/report/contributors/eunice-feng.jpg" alt="Eunice Feng"
+									     loading="lazy" width="164" height="164"/>
+								</div>
+							</div>
+							<div class="info">
+								<h4 class="name">Eunice Feng</h4>
+								<div class="position">Chinese Translator</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item grid-item-1-3">
+						<div class="block-contributor layout-horizontal">
+							<div class="avatar-wrap">
+								<div class="avatar">
+									<img src="../assets/images/report/contributors/sr-slayer.jpg" alt="SrSlayer"
+									     loading="lazy" width="164" height="164"/>
+								</div>
+							</div>
+							<div class="info">
+								<h4 class="name">SrSlayer</h4>
+								<div class="position">Spanish Translator</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item grid-item-1-3">
+						<div class="block-contributor layout-horizontal">
+							<div class="avatar-wrap">
+								<div class="avatar">
+									<img src="../assets/images/report/contributors/rudy-wicaksono.jpg" alt="Rudy Wicaksono"
+									     loading="lazy" width="164" height="164"/>
+								</div>
+							</div>
+							<div class="info">
+								<h4 class="name">Rudy Wicaksono</h4>
+								<div class="position">Indonesian Translator</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item grid-item-1-3">
+						<div class="block-contributor layout-horizontal">
+							<div class="avatar-wrap">
+								<div class="avatar">
+									<img src="../assets/images/report/contributors/sang-hyun-rhee.jpg" alt="Sang-hyun Rhee"
+									     loading="lazy" width="164" height="164"/>
+								</div>
+							</div>
+							<div class="info">
+								<h4 class="name">Sang-hyun Rhee</h4>
+								<div class="position">Korean Translator</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item grid-item-1-3">
+						<div class="block-contributor layout-horizontal">
+							<div class="avatar-wrap">
+								<div class="avatar">
+									<img src="../assets/images/report/contributors/takeshi-kuramochi.jpg" alt="Takeshi Kuramochi"
+									     loading="lazy" width="164" height="164"/>
+								</div>
+							</div>
+							<div class="info">
+								<h4 class="name">Takeshi Kuramochi</h4>
+								<div class="position">Japanese Translator</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section section-report-friends" id="friends">
+		<div class="section-content">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="section-header section-header-beside">
+							<div class="section-header-inner">
+								<h3 class="section-top-title">Friends</h3>
+								<div class="section-description-wrap">
+									<div class="section-description">この報告書を完成させるために、データを提供してくれた友人たちに、心から感謝したい。</div>
+								</div>
+							</div>
+						</div>
+						<div class="section-shape section-shape-01">
+							<img loading="lazy" src="../assets/images/report/friends-shape.png" alt="Shape" width="753" height="835">
+						</div>
+					</div>
+					<div class="col-lg-8">
+						<div class="grid-modern grid--friends" style="--grid-columns-desktop: 4; --grid-gutter-desktop: 20; --grid-columns-tablet: 3; --grid-columns-mobile: 2; --grid-gutter-mobile-extra: 12;">
+							<a class="block-friend grid-item" target="_blank" href="https://polkadot.network/">
+								<img loading="lazy" src="../assets/images/report/friends/polkadot.png"
+								     alt="Polkadot" width="114" height="28"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://polkadot.network/">
+								<img loading="lazy" src="../assets/images/report/friends/parity.png"
+								     alt="Parity" width="94" height="42"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://polkadot.network/">
+								<img loading="lazy" src="../assets/images/report/friends/bit-country.png"
+								     alt="Bit.Country & Metaverse.Network" width="110" height="34"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://moonbeam.network/">
+								<img loading="lazy" src="../assets/images/report/friends/moonbeam.png"
+								     alt="Moonbeam" width="126" height="35"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://astar.network/">
+								<img loading="lazy" src="../assets/images/report/friends/astar.png"
+								     alt="Astar" width="114" height="53"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://acala.network/">
+								<img loading="lazy" src="../assets/images/report/friends/acala.png"
+								     alt="Acala" width="102" height="41"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://www.rmrk.app/">
+								<img loading="lazy" src="../assets/images/report/friends/rmrk.png"
+								     alt="RMRK" width="95" height="33"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://bifrost.finance/">
+								<img loading="lazy" src="../assets/images/report/friends/bifrost.png"
+								     alt="Bifrost" width="107" height="26"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://parallel.fi/">
+								<img loading="lazy" src="../assets/images/report/friends/parallel.png"
+								     alt="Parallel" width="117" height="29"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://zenlink.pro/">
+								<img loading="lazy" src="../assets/images/report/friends/zenlink.png"
+								     alt="Zenlink" width="119" height="39"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://genshiro.equilibrium.io/">
+								<img loading="lazy" src="../assets/images/report/friends/genshiro.png"
+								     alt="Genshiro" width="119" height="33"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://stellaswap.com/">
+								<img loading="lazy" src="../assets/images/report/friends/stella-swap.png"
+								     alt="StellaSwap" width="136" height="28"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://beamswap.io/">
+								<img loading="lazy" src="../assets/images/report/friends/beamswap.png"
+								     alt="Beamswap" width="136" height="27"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://solarbeam.io/">
+								<img loading="lazy" src="../assets/images/report/friends/solarbeam.png"
+								     alt="Solarbeam" width="150" height="29"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://moonwell.fi/">
+								<img loading="lazy" src="../assets/images/report/friends/moonwell.png"
+								     alt="Moonwell" width="130" height="37"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://www.arthswap.org/">
+								<img loading="lazy" src="../assets/images/report/friends/arthswap.png"
+								     alt="ArthSwap" width="130" height="31"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://starlay.finance/">
+								<img loading="lazy" src="../assets/images/report/friends/starlay.png"
+								     alt="Starlay" width="122" height="44"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://astriddao.xyz/">
+								<img loading="lazy" src="../assets/images/report/friends/astrid-dao.png"
+								     alt="AstridDAO" width="130" height="36"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://www.paka.fund/">
+								<img loading="lazy" src="../assets/images/report/friends/paka.png"
+								     alt="PAKA" width="93" height="25"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://web3go.xyz/#/home/main">
+								<img loading="lazy" src="../assets/images/report/friends/web3-go.png"
+								     alt="Web3Go" width="113" height="30"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://polkaholic.io/">
+								<img loading="lazy" src="../assets/images/report/friends/polkaholic.png"
+								     alt="Polkaholic" width="57" height="45"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://lido.fi/">
+								<img loading="lazy" src="../assets/images/report/friends/lido.png"
+								     alt="Lido" width="108" height="26"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://moonfit.xyz/">
+								<img loading="lazy" src="../assets/images/report/friends/moonfit.png"
+								     alt="MoonFit" width="121" height="20"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://www.glmrapes.com/">
+								<img loading="lazy" src="../assets/images/report/friends/glmr-apes.png"
+								     alt="GLMR Apes" width="55" height="43"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://twitter.com/TFAlphaDao">
+								<img loading="lazy" src="../assets/images/report/friends/tf-alpha-dao.png"
+								     alt="TFA DAO" width="60" height="60"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://astardegens.com/">
+								<img loading="lazy" src="../assets/images/report/friends/astar-degens.png"
+								     alt="Astar Degens" width="60" height="60"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://subsocial.network/">
+								<img loading="lazy" src="../assets/images/report/friends/subsocial.png"
+								     alt="Subsocial" width="118" height="25"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://www.joystream.org/">
+								<img loading="lazy" src="../assets/images/report/friends/joystream.png"
+								     alt="Joystream" width="118" height="25"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://multchain.online/">
+								<img loading="lazy" src="../assets/images/report/friends/multichain.png"
+								     alt="Multichain" width="131" height="21"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://twitter.com/wormholecrypto">
+								<img loading="lazy" src="../assets/images/report/friends/wormhole.png"
+								     alt="Wormhole" width="137" height="24"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://www.celer.network/">
+								<img loading="lazy" src="../assets/images/report/friends/celer.png"
+								     alt="Celer Network" width="73" height="22"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://www.taigaprotocol.io/">
+								<img loading="lazy" src="../assets/images/report/friends/taiga.png"
+								     alt="Taiga Protocol" width="103" height="26"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://www.avault.network/">
+								<img loading="lazy" src="../assets/images/report/friends/avault.png"
+								     alt="Avault Finance" width="61" height="39"/>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer id="footer" class="section site-footer">
+	<div class="section-shape section-footer-bg">
+		<img src="../assets/images/footer-bg.png" alt="Shape" width="796" height="218" loading="lazy"/>
+	</div>
+	<div class="section-shape footer-shape-dot">
+		<img src="../assets/images/shapes/shape-dot.png" alt="Polkadot" loading="lazy" width="194" height="177"/>
+	</div>
+	<div class="section-shape footer-shape-ksm">
+		<img src="../assets/images/shapes/shape-kusama.png" alt="Kusama" loading="lazy" width="220" height="212"/>
+	</div>
+	<div class="section-shape footer-shape-s-circle">
+		<img src="../assets/images/shapes/shape-s-circle.png" alt="SW" loading="lazy" width="306" height="306"/>
+	</div>
+	<div class="section-shape footer-shape-satellite">
+		<img src="../assets/images/shapes/shape-satellite.png" alt="SW" loading="lazy" width="34" height="34"/>
+	</div>
+	<div class="section-shape footer-shape-02">
+		<img src="../assets/images/shapes/shape-02.png" alt="Shape" loading="lazy" width="51" height="51"/>
+	</div>
+	<div class="section-shape footer-shape-03">
+		<img src="../assets/images/shapes/shape-dotinsights.png" alt="Shape" loading="lazy" width="255" height="251"/>
+	</div>
+	<div class="section-content">
+		<div class="container">
+			<div class="section-description-wrap">
+				<div class="section-description">
+					<p>
+						<mark>免責事項：</mark>
+						ここに記載されている見解は、SubWalletのものです。ここに掲載されているデータは、データアグリゲータープラットフォームやチームプロジェクトなどのサードパーティソースから取得したものです。信頼できると思われる情報源から取得したものですが、SubWalletはそのような情報を独自に検証しておらず、情報の永続的な正確さや特定の状況に対する適切さについて、いかなる表明も行いません。
+					</p>
+					<p>このコンテンツは情報提供のみを目的としており、法律、ビジネス、投資、税務上のアドバイスとして依拠するものではありません。これらの事項については、ご自身のアドバイザーにご相談ください。</p>
+				</div>
+			</div>
+			<div class="section-call-to-actions button-group">
+				<a href="https://slink.subwallet.app/project-submit" target="_blank" rel="nofollow" class="button">
+					<span class="button-icon">
+						<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M5.52755 5.98006C5.48498 5.87728 5.47385 5.76418 5.49556 5.65508C5.51727 5.54597 5.57086 5.44575 5.64954 5.36709L8.60266 2.41472C8.70815 2.30927 8.85121 2.25003 9.00037 2.25003C9.14953 2.25003 9.29258 2.30927 9.39807 2.41472L12.3512 5.36709C12.4299 5.44576 12.4835 5.54598 12.5052 5.6551C12.5269 5.76421 12.5157 5.87732 12.4732 5.9801C12.4306 6.08289 12.3585 6.17075 12.266 6.23256C12.1735 6.29437 12.0647 6.32737 11.9535 6.32737H9.56287V10.6875C9.56287 10.8367 9.5036 10.9798 9.39811 11.0852C9.29262 11.1907 9.14955 11.25 9.00037 11.25C8.85118 11.25 8.70811 11.1907 8.60262 11.0852C8.49713 10.9798 8.43787 10.8367 8.43787 10.6875V6.32737H6.04724C5.93598 6.32737 5.82721 6.29438 5.73471 6.23256C5.6422 6.17074 5.57011 6.08287 5.52755 5.98006V5.98006ZM15.1879 10.125C15.0387 10.125 14.8956 10.1843 14.7901 10.2898C14.6846 10.3952 14.6254 10.5383 14.6254 10.6875V14.625H3.37537V10.6875C3.37537 10.5383 3.3161 10.3952 3.21061 10.2898C3.10512 10.1843 2.96205 10.125 2.81287 10.125C2.66368 10.125 2.52061 10.1843 2.41512 10.2898C2.30963 10.3952 2.25037 10.5383 2.25037 10.6875V14.625C2.25071 14.9233 2.36934 15.2092 2.58025 15.4201C2.79115 15.631 3.0771 15.7497 3.37537 15.75H14.6254C14.9236 15.7497 15.2096 15.631 15.4205 15.4201C15.6314 15.2092 15.75 14.9233 15.7504 14.625V10.6875C15.7504 10.5383 15.6911 10.3952 15.5856 10.2898C15.4801 10.1843 15.337 10.125 15.1879 10.125V10.125Z"
+								fill="white"/>
+						</svg>
+					</span>
+					<span class="button-text">Submit Your Project</span>
+				</a>
+				<a href="https://subwallet.notion.site/Polkadot-Kusama-Ecosystem-Map-Listing-Standards-74dbd43ae5fc40cabec43587414812d2" target="_blank" rel="nofollow" class="button button-outline">
+					<span class="button-icon">
+						<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M5.52755 5.98006C5.48498 5.87728 5.47385 5.76418 5.49556 5.65508C5.51727 5.54597 5.57086 5.44575 5.64954 5.36709L8.60266 2.41472C8.70815 2.30927 8.85121 2.25003 9.00037 2.25003C9.14953 2.25003 9.29258 2.30927 9.39807 2.41472L12.3512 5.36709C12.4299 5.44576 12.4835 5.54598 12.5052 5.6551C12.5269 5.76421 12.5157 5.87732 12.4732 5.9801C12.4306 6.08289 12.3585 6.17075 12.266 6.23256C12.1735 6.29437 12.0647 6.32737 11.9535 6.32737H9.56287V10.6875C9.56287 10.8367 9.5036 10.9798 9.39811 11.0852C9.29262 11.1907 9.14955 11.25 9.00037 11.25C8.85118 11.25 8.70811 11.1907 8.60262 11.0852C8.49713 10.9798 8.43787 10.8367 8.43787 10.6875V6.32737H6.04724C5.93598 6.32737 5.82721 6.29438 5.73471 6.23256C5.6422 6.17074 5.57011 6.08287 5.52755 5.98006V5.98006ZM15.1879 10.125C15.0387 10.125 14.8956 10.1843 14.7901 10.2898C14.6846 10.3952 14.6254 10.5383 14.6254 10.6875V14.625H3.37537V10.6875C3.37537 10.5383 3.3161 10.3952 3.21061 10.2898C3.10512 10.1843 2.96205 10.125 2.81287 10.125C2.66368 10.125 2.52061 10.1843 2.41512 10.2898C2.30963 10.3952 2.25037 10.5383 2.25037 10.6875V14.625C2.25071 14.9233 2.36934 15.2092 2.58025 15.4201C2.79115 15.631 3.0771 15.7497 3.37537 15.75H14.6254C14.9236 15.7497 15.2096 15.631 15.4205 15.4201C15.6314 15.2092 15.75 14.9233 15.7504 14.625V10.6875C15.7504 10.5383 15.6911 10.3952 15.5856 10.2898C15.4801 10.1843 15.337 10.125 15.1879 10.125V10.125Z"
+								fill="white"/>
+						</svg>
+					</span>
+					<span class="button-text">View Listing Standards</span>
+				</a>
+				<a href="https://twitter.com/dotinsights_xyz" target="_blank" rel="nofollow" class="button">
+					<span class="button-icon">
+						<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M15.6482 5.50898C16.281 5.03437 16.8505 4.46484 17.2935 3.80039C16.724 4.05352 16.0595 4.24336 15.395 4.30664C16.0911 3.89531 16.5974 3.2625 16.8505 2.47148C16.2177 2.85117 15.49 3.13594 14.7622 3.29414C14.1294 2.62969 13.2751 2.25 12.3259 2.25C10.4907 2.25 9.00364 3.73711 9.00364 5.57227C9.00364 5.82539 9.03528 6.07852 9.09856 6.33164C6.34583 6.17344 3.87786 4.84453 2.23254 2.85117C1.94778 3.32578 1.78958 3.89531 1.78958 4.52812C1.78958 5.66719 2.35911 6.67969 3.27668 7.28086C2.73879 7.24922 2.2009 7.12266 1.75793 6.86953V6.90117C1.75793 8.51484 2.897 9.84375 4.41575 10.1602C4.16262 10.2234 3.84622 10.2867 3.56145 10.2867C3.33997 10.2867 3.15012 10.2551 2.92864 10.2234C3.33997 11.5523 4.57395 12.5016 6.02942 12.5332C4.89036 13.4191 3.46653 13.957 1.91614 13.957C1.63137 13.957 1.37825 13.9254 1.12512 13.8937C2.58059 14.843 4.32083 15.3809 6.21926 15.3809C12.3259 15.3809 15.6482 10.35 15.6482 5.95195C15.6482 5.79375 15.6482 5.66719 15.6482 5.50898Z"
+								fill="#fff"></path>
+						</svg>
+					</span>
+					<span class="button-text">Follow Our Twitter</span>
+				</a>
+			</div>
+			<div class="copyright-text">
+				<p>Made with
+					<svg>
+						<use xlink:href="#symbol-ph-heart-straight"></use>
+					</svg>
+					by
+					<a href="https://www.subwallet.app/" target="_blank" rel="nofollow"><img loading="lazy" src="../assets/images/subwallet.png" alt="SubWallet" width="108" height="36"/></a>
+				</p>
+				<p>Ecosystem Map proudly supported by
+					<a href="https://www.parity.io/" target="_blank" rel="nofollow"><img loading="lazy" src="../assets/images/parity.png" alt="Parity Technologies" width="82" height="30"/></a>
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>
+<a href="#" class="toggle-table-contents btn-open-panel"
+   id="btn-open-panel"
+   aria-label="Open table of contents">
+	<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M12 3.75L12 20.25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+		<path d="M18 3.75L18 20.25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+		<path d="M6 3.75L6 20.25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+	</svg>
+	<div class="btn-open-panel--text">Table of content</div>
+</a>
+<div id="table-of-contents" class="table-of-contents">
+	<a href="#"
+	   class="toggle-table-contents btn-close-panel"
+	   aria-label="Close table of contents">
+		<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M16.875 10H3.125" stroke="white" stroke-width="1.5" stroke-linecap="round"
+			      stroke-linejoin="round"/>
+			<path d="M8.75 4.375L3.125 10L8.75 15.625" stroke="white" stroke-width="1.5" stroke-linecap="round"
+			      stroke-linejoin="round"/>
+		</svg>
+	</a>
+	<div id="panel" class="panel">
+		<div class="panel-content">
+			<ul class="table-contents-list">
+				<li>
+					<a href="#polkadot-deep-dive" class="scroll-to">Polkadot Deep Dive</a>
+				</li>
+				<li>
+					<a href="#ecosystem-map" class="scroll-to">はじめてのインタラクティブ
+						Polkadot と Kusama のエコシステムマップ</a>
+				</li>
+				<li>
+					<a href="#ecosystem-overview" class="scroll-to">エコシステムの概要</a>
+					<ul>
+						<li>
+							<a href="#financial-status-dev-activity" class="scroll-to">財務状況・開発活動</a>
+						</li>
+						<li>
+							<a href="#decentralization-security" class="scroll-to">分散化とセキュリティ</a>
+						</li>
+						<li>
+							<a href="#parachain" class="scroll-to">パラチェーン</a>
+						</li>
+						<li>
+							<a href="#governance-grant" class="scroll-to">ガバナンス・助成金</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#defi-economy" class="scroll-to">DeFi エコノミー</a>
+					<ul>
+						<li>
+							<a href="#dex-amm" class="scroll-to">DEX (AMM)</a>
+						</li>
+						<li>
+							<a href="#lending-borrowing" class="scroll-to">レンディング & ボロウイング（マネーマーケット）</a>
+						</li>
+						<li>
+							<a href="#liquid-staking" class="scroll-to">リキッドステーキング</a>
+						</li>
+						<li>
+							<a href="#stablecoin" class="scroll-to">ステーブルコイン</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#nft" class="scroll-to">NFT</a>
+					<ul>
+						<li>
+							<a href="#nft-marketplace" class="scroll-to">NFTマーケットプレイス</a>
+						</li>
+						<li>
+							<a href="#game-fi" class="scroll-to">GameFi</a>
+						</li>
+						<li>
+							<a href="#metaverse" class="scroll-to">メタバース</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#nft" class="scroll-to">DAO</a>
+					<ul>
+						<li>
+							<a href="#chaosdao" class="scroll-to">ChaosDAO</a>
+						</li>
+						<li>
+							<a href="#astar-degens" class="scroll-to">Astar Degens</a>
+						</li>
+						<li>
+							<a href="#glmr-apes" class="scroll-to">GLMR Apes</a>
+						</li>
+						<li>
+							<a href="#tf-alpha" class="scroll-to">Take Flight Alpha (TFA)</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#web3" class="scroll-to">Web3</a>
+					<ul>
+						<li>
+							<a href="#web3-wallet" class="scroll-to">ウォレット</a>
+						</li>
+						<li>
+							<a href="#web3-socialfi" class="scroll-to">SocialFi</a>
+						</li>
+						<li>
+							<a href="#web3-bridge" class="scroll-to">ブリッジ</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#closing-thoughts" class="scroll-to">最後に</a>
+				</li>
+				<li>
+					<a href="#get-started-with-polkadot" class="scroll-to">Polkadot をはじめよう</a>
+				</li>
+				<li>
+					<a href="#about-dotinsights" class="scroll-to">dotinsights について</a>
+				</li>
+				<li>
+					<a href="#contributors" class="scroll-to">コントリビューター</a>
+				</li>
+				<li>
+					<a href="#friends" class="scroll-to">フレンズ</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="dotinsights-modal modal-connect-wallet" id="modal-connect-wallet">
+	<div class="modal-overlay"></div>
+	<div class="modal-content">
+		<div class="modal-content-wrap">
+			<div class="modal-content-inner">
+				<div class="modal-content-header">
+					<h3 class="modal-title">Connect Your Wallet</h3>
+					<div class="button-close-modal">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M18.75 5.25L5.25 18.75" stroke="#777777" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M18.75 18.75L5.25 5.25" stroke="#777777" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+				</div>
+
+				<div class="modal-content-body">
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="dotinsights-modal modal-show-error" id="modal-show-error">
+	<div class="modal-overlay"></div>
+	<div class="modal-content">
+		<div class="modal-content-wrap">
+			<div class="button-close-modal">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M18.75 5.25L5.25 18.75" stroke="#777777" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					<path d="M18.75 18.75L5.25 5.25" stroke="#777777" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+			</div>
+			<div class="modal-content-inner">
+				<div class="modal-content-body">
+					<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M48.0795 38.1876L30.2248 7.31255C29.7974 6.56999 29.1817 5.9532 28.44 5.52432C27.6983 5.09544 26.8566 4.86963 25.9998 4.86963C25.143 4.86963 24.3013 5.09544 23.5596 5.52432C22.8179 5.9532 22.2023 6.56999 21.7748 7.31255L3.92012 38.1876C3.48638 38.9263 3.25587 39.7668 3.252 40.6235C3.24813 41.4802 3.47104 42.3226 3.89808 43.0653C4.32513 43.808 4.9411 44.4245 5.68345 44.8521C6.42581 45.2797 7.2681 45.5033 8.1248 45.5001H43.8748C44.7315 45.5033 45.5738 45.2797 46.3162 44.8521C47.0585 44.4245 47.6745 43.808 48.1015 43.0653C48.5286 42.3226 48.7515 41.4802 48.7476 40.6235C48.7437 39.7668 48.5132 38.9263 48.0795 38.1876ZM24.3748 21.1251C24.3748 20.6941 24.546 20.2807 24.8508 19.976C25.1555 19.6713 25.5688 19.5001 25.9998 19.5001C26.4308 19.5001 26.8441 19.6713 27.1489 19.976C27.4536 20.2807 27.6248 20.6941 27.6248 21.1251V29.2501C27.6248 29.681 27.4536 30.0944 27.1489 30.3991C26.8441 30.7038 26.4308 30.8751 25.9998 30.8751C25.5688 30.8751 25.1555 30.7038 24.8508 30.3991C24.546 30.0944 24.3748 29.681 24.3748 29.2501V21.1251ZM25.9998 39.0001C25.5177 39.0001 25.0464 38.8571 24.6456 38.5893C24.2448 38.3214 23.9323 37.9407 23.7478 37.4953C23.5634 37.0499 23.5151 36.5599 23.6091 36.087C23.7032 35.6142 23.9353 35.1799 24.2762 34.839C24.6171 34.4981 25.0514 34.2659 25.5243 34.1719C25.9971 34.0778 26.4872 34.1261 26.9326 34.3106C27.378 34.4951 27.7587 34.8075 28.0265 35.2084C28.2943 35.6092 28.4373 36.0805 28.4373 36.5626C28.4373 37.209 28.1805 37.829 27.7234 38.2861C27.2663 38.7432 26.6463 39.0001 25.9998 39.0001Z"
+							fill="#F82613"/>
+					</svg>
+					<div class="modal-error-message"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--<div class="dotinsights-modal modal-subscribe" id="modal-subscribe">
+	<div class="modal-overlay"></div>
+	<div class="modal-content">
+		<div class="modal-content-wrap">
+			<div class="button-close-modal">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M18.75 5.25L5.25 18.75" stroke="#777777" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					<path d="M18.75 18.75L5.25 5.25" stroke="#777777" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+			</div>
+			<div class="modal-content-left">
+				<div class="modal-shape modal-shape-01">
+					<img loading="lazy" src="../assets/images/logo/simple-logo.png" alt="dotinsights - Polkadot & Kusama Ecosystem Map" width="116" height="123">
+				</div>
+				<div class="modal-shape modal-shape-02">
+					<img loading="lazy" src="../assets/images/logo/simple-logo.png" alt="dotinsights - Polkadot & Kusama Ecosystem Map" width="144" height="153">
+				</div>
+				<div class="modal-shape modal-shape-03">
+					<img loading="lazy" src="../assets/images/logo/simple-stroke-logo.png" alt="dotinsights - Polkadot & Kusama Ecosystem Map" width="59" height="63">
+				</div>
+				<div class="modal-shape modal-shape-04">
+					<img loading="lazy" src="../assets/images/logo/simple-stroke-logo.png" alt="dotinsights - Polkadot & Kusama Ecosystem Map" width="43" height="46">
+				</div>
+				<img class="subscribe-logo" loading="lazy" src="../assets/images/logo/vertical-logo.png" alt="dotinsights - Polkadot & Kusama Ecosystem Map" width="137" height="87" />
+				<div class="modal-copyright-text">
+					Made by <a href="https://www.subwallet.app/" target="_blank" rel="nofollow">SubWallet</a> with support from <a href="https://www.parity.io/" target="_blank" rel="nofollow">Parity Technologies</a>
+				</div>
+			</div>
+			<div class="modal-content-inner">
+				<div class="modal-content-header">
+					<h3 class="modal-title">Stay in the loop</h3>
+					<div class="modal-description">Subscribe to our newsletter to get the latest updates on everything Polkadot!</div>
+				</div>
+
+				<div class="modal-content-body">
+					<div id="mc_embed_signup">
+						<form action="https://app.us14.list-manage.com/subscribe/post?u=63a648a20f24e091426161b4e&amp;id=b86cdc9f6d&amp;f_id=002980e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+							<div id="mc_embed_signup_scroll">
+								<h2>Subscribe</h2>
+								<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+								<div class="mc-field-group">
+									<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+									</label>
+									<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
+									<span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+								</div>
+								&lt;!&ndash; real people should not fill this in and expect good things - do not remove this or risk form bot signups&ndash;&gt;
+								<div style="position: absolute; left: -5000px;" aria-hidden="true">
+									<input type="text" name="b_63a648a20f24e091426161b4e_b86cdc9f6d" tabindex="-1" value="">
+								</div>
+								<div class="optionalParent">
+									<div class="clear foot">
+										<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+										<p class="brandingLogo">
+											<a href="http://eepurl.com/ic4OLP" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a>
+										</p>
+									</div>
+								</div>
+								<div id="mce-responses" class="clear foot">
+									<div class="response" id="mce-error-response" style="display:none"></div>
+									<div class="response" id="mce-success-response" style="display:none"></div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>-->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T4R8Y0C0JQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-T4R8Y0C0JQ');
+</script>
+<script src="../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+<!--<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>-->
+<script src="../assets/libs/firefly/jquery.firefly-0.7.js"></script>
+<script src="../assets/libs/datatable/jquery.dataTables.min.js"></script>
+<script src="../assets/libs/echarts/echarts.min.js"></script>
+<script src="../assets/libs/waypoints/jquery.waypoints.min.js"></script>
+<script src="../assets/libs/readmore/readmore.min.js"></script>
+<script src="../assets/js/modal.js?v=1.0"></script>
+<script src="../assets/js/sidebar-menu.js?v=1.0"></script>
+<script src="./locate.js"></script>
+<script src="../assets/js/frontend.js?v=1.4"></script>
+<script src="../assets/js/reports.js?v=1.1"></script>
+<script src="../assets/js/wallet-manager.js?v=1.15"></script>
+</body>
+</html>

@@ -1,0 +1,821 @@
+[
+  {
+    "date": "2023-06-30",
+    "moonwell_artemis": "33858446.18",
+    "parallel": "22094547.24",
+    "karura": "5116776.36",
+    "moonwell_apollo": "3583108.96",
+    "starlay": "2244193.56",
+    "heiko": "1885851.57"
+  },
+  {
+    "date": "2023-06-29",
+    "moonwell_artemis": "33638513.69",
+    "parallel": "21836400.54",
+    "karura": "4931932.12",
+    "moonwell_apollo": "3572183.81",
+    "starlay": "2236112.45",
+    "heiko": "1879979.04"
+  },
+  {
+    "date": "2023-06-28",
+    "moonwell_artemis": "34215217.84",
+    "parallel": "22195688.28",
+    "karura": "5180062.72",
+    "moonwell_apollo": "3633652.44",
+    "starlay": "2309114.73",
+    "heiko": "1849492.97"
+  },
+  {
+    "date": "2023-06-27",
+    "moonwell_artemis": "34130353.24",
+    "parallel": "22521444.36",
+    "karura": "4790589.76",
+    "moonwell_apollo": "3580670.83",
+    "starlay": "2238946.86",
+    "heiko": "1829601.73"
+  },
+  {
+    "date": "2023-06-26",
+    "moonwell_artemis": "34734706.99",
+    "parallel": "23032071.12",
+    "karura": "4966981.05",
+    "moonwell_apollo": "3599064.64",
+    "starlay": "2279155.87",
+    "heiko": "1875685.61"
+  },
+  {
+    "date": "2023-06-25",
+    "moonwell_artemis": "34827300.22",
+    "parallel": "22518313.99",
+    "karura": "4839022.20",
+    "moonwell_apollo": "3568232.50",
+    "starlay": "2256694.60",
+    "heiko": "1803888.11"
+  },
+  {
+    "date": "2023-06-24",
+    "moonwell_artemis": "35078402.38",
+    "parallel": "23042470.80",
+    "karura": "4696959.73",
+    "moonwell_apollo": "3573708.16",
+    "starlay": "2269515.94",
+    "heiko": "1809896.24"
+  },
+  {
+    "date": "2023-06-23",
+    "moonwell_artemis": "34627959.12",
+    "parallel": "22058366.00",
+    "karura": "4765173.32",
+    "moonwell_apollo": "3550524.02",
+    "starlay": "2237055.47",
+    "heiko": "1875652.44"
+  },
+  {
+    "date": "2023-06-22",
+    "moonwell_artemis": "34441678.04",
+    "parallel": "21370541.34",
+    "karura": "4705010.26",
+    "moonwell_apollo": "3594302.06",
+    "starlay": "2257553.79",
+    "heiko": "1924988.63"
+  },
+  {
+    "date": "2023-06-21",
+    "moonwell_artemis": "33443920.97",
+    "parallel": "20773538.15",
+    "karura": "4440024.07",
+    "moonwell_apollo": "3347683.37",
+    "starlay": "2155451.79",
+    "heiko": "1822629.28"
+  },
+  {
+    "date": "2023-06-20",
+    "moonwell_artemis": "32654472.76",
+    "parallel": "20231461.54",
+    "karura": "4308315.79",
+    "moonwell_apollo": "3275142.91",
+    "starlay": "2084382.32",
+    "heiko": "1864129.01"
+  },
+  {
+    "date": "2023-06-19",
+    "moonwell_artemis": "32480485.34",
+    "parallel": "20210099.64",
+    "karura": "4380640.66",
+    "moonwell_apollo": "3157485.41",
+    "starlay": "2053131.72",
+    "heiko": "1707694.65"
+  },
+  {
+    "date": "2023-06-18",
+    "moonwell_artemis": "31939724.89",
+    "parallel": "19933600.81",
+    "karura": "4306158.23",
+    "moonwell_apollo": "3059680.46",
+    "starlay": "2092813.67",
+    "heiko": "1879382.49"
+  },
+  {
+    "date": "2023-06-17",
+    "moonwell_artemis": "31684225.12",
+    "parallel": "19800635.34",
+    "karura": "4173300.55",
+    "moonwell_apollo": "3026971.89",
+    "starlay": "2065233.99",
+    "heiko": "1744009.78"
+  },
+  {
+    "date": "2023-06-16",
+    "moonwell_artemis": "31193306.51",
+    "parallel": "19458731.00",
+    "karura": "3895850.90",
+    "moonwell_apollo": "3019905.25",
+    "starlay": "2038224.20",
+    "heiko": "1640548.72"
+  },
+  {
+    "date": "2023-06-15",
+    "moonwell_artemis": "31207903.90",
+    "parallel": "20670098.62",
+    "karura": "4123298.11",
+    "moonwell_apollo": "3029038.84",
+    "starlay": "2035175.40",
+    "heiko": "1445140.14"
+  },
+  {
+    "date": "2023-06-14",
+    "moonwell_artemis": "32596930.44",
+    "parallel": "20645263.65",
+    "karura": "4109485.44",
+    "moonwell_apollo": "3048503.72",
+    "starlay": "2075029.37",
+    "heiko": "1443652.52"
+  },
+  {
+    "date": "2023-06-13",
+    "moonwell_artemis": "32165975.73",
+    "parallel": "20655162.57",
+    "karura": "4181798.27",
+    "moonwell_apollo": "2998583.74",
+    "starlay": "2039475.53",
+    "heiko": "1666295.86"
+  },
+  {
+    "date": "2023-06-12",
+    "moonwell_artemis": "32330851.97",
+    "parallel": "20590470.51",
+    "karura": "4074772.51",
+    "moonwell_apollo": "2989799.74",
+    "starlay": "2047561.76",
+    "heiko": "1581390.80"
+  },
+  {
+    "date": "2023-06-11",
+    "moonwell_artemis": "31901186.94",
+    "parallel": "20728170.88",
+    "karura": "4107008.58",
+    "moonwell_apollo": "3090160.96",
+    "starlay": "2038401.80",
+    "heiko": "1660503.39"
+  },
+  {
+    "date": "2023-06-10",
+    "moonwell_artemis": "32768279.30",
+    "parallel": "22604137.69",
+    "karura": "4578913.64",
+    "moonwell_apollo": "3256696.28",
+    "starlay": "2281641.88",
+    "heiko": "1831949.77"
+  },
+  {
+    "date": "2023-06-09",
+    "moonwell_artemis": "33022710.40",
+    "parallel": "22870829.35",
+    "karura": "4663571.78",
+    "moonwell_apollo": "3047084.16",
+    "starlay": "2518261.27",
+    "heiko": "2046037.28"
+  },
+  {
+    "date": "2023-06-08",
+    "moonwell_artemis": "34187226.90",
+    "parallel": "22769741.30",
+    "karura": "4678289.50",
+    "moonwell_apollo": "2942394.67",
+    "starlay": "2497892.17",
+    "heiko": "2041198.77"
+  },
+  {
+    "date": "2023-06-07",
+    "moonwell_artemis": "34804710.61",
+    "parallel": "23940511.52",
+    "karura": "4809713.48",
+    "moonwell_apollo": "2880502.28",
+    "starlay": "2674553.03",
+    "heiko": "2043150.58"
+  },
+  {
+    "date": "2023-06-06",
+    "moonwell_artemis": "33851680.84",
+    "parallel": "23480000.79",
+    "karura": "4603210.13",
+    "moonwell_apollo": "2785811.24",
+    "starlay": "2588936.84",
+    "heiko": "2087578.50"
+  },
+  {
+    "date": "2023-06-05",
+    "moonwell_artemis": "35195441.53",
+    "parallel": "24221773.52",
+    "karura": "4866556.27",
+    "moonwell_apollo": "2847597.71",
+    "starlay": "2739754.74",
+    "heiko": "2237152.81"
+  },
+  {
+    "date": "2023-06-04",
+    "moonwell_artemis": "35290618.54",
+    "parallel": "24130796.78",
+    "karura": "4596406.15",
+    "moonwell_apollo": "2636047.46",
+    "starlay": "2762453.37",
+    "heiko": "2179319.66"
+  },
+  {
+    "date": "2023-06-03",
+    "moonwell_artemis": "35308950.19",
+    "parallel": "23958699.94",
+    "karura": "4796383.81",
+    "moonwell_apollo": "2628576.15",
+    "starlay": "2795358.44",
+    "heiko": "1954141.07"
+  },
+  {
+    "date": "2023-06-02",
+    "moonwell_artemis": "34910242.54",
+    "parallel": "23538057.43",
+    "karura": "4833729.77",
+    "moonwell_apollo": "2590081.88",
+    "starlay": "2746429.64",
+    "heiko": "1986234.02"
+  },
+  {
+    "date": "2023-06-01",
+    "moonwell_artemis": "34426543.77",
+    "parallel": "23615783.07",
+    "karura": "4908266.84",
+    "moonwell_apollo": "5276737.93",
+    "starlay": "2765564.76",
+    "heiko": "1869673.15"
+  },
+  {
+    "date": "2023-05-31",
+    "moonwell_artemis": "34884200.45",
+    "parallel": "24974935.27",
+    "karura": "4867079.66",
+    "moonwell_apollo": "6131800.19",
+    "starlay": "2809174.62",
+    "heiko": "1821161.92"
+  },
+  {
+    "date": "2023-05-30",
+    "moonwell_artemis": "34426279.93",
+    "parallel": "25395782.39",
+    "karura": "4825892.47",
+    "moonwell_apollo": "6108661.09",
+    "starlay": "2825173.17",
+    "heiko": "1862608.03"
+  },
+  {
+    "date": "2023-05-29",
+    "moonwell_artemis": "34904453.28",
+    "parallel": "25797182.18",
+    "karura": "4784705.29",
+    "moonwell_apollo": "5363941.58",
+    "starlay": "2877133.01",
+    "heiko": "1900236.67"
+  },
+  {
+    "date": "2023-05-28",
+    "moonwell_artemis": "34124408.93",
+    "parallel": "18956429.66",
+    "karura": "4743518.11",
+    "moonwell_apollo": "5250545.79",
+    "starlay": "2800814.26",
+    "heiko": "1684276.41"
+  },
+  {
+    "date": "2023-05-27",
+    "moonwell_artemis": "33766405.50",
+    "parallel": "18408669.29",
+    "karura": "4702330.93",
+    "moonwell_apollo": "5207719.17",
+    "starlay": "2785094.05",
+    "heiko": "1639973.18"
+  },
+  {
+    "date": "2023-05-26",
+    "moonwell_artemis": "33687453.66",
+    "parallel": "18772617.81",
+    "karura": "4661143.74",
+    "moonwell_apollo": "5181797.14",
+    "starlay": "2781509.45",
+    "heiko": "1629065.61"
+  },
+  {
+    "date": "2023-05-25",
+    "moonwell_artemis": "33581174.85",
+    "parallel": "19290748.35",
+    "karura": "4619956.56",
+    "moonwell_apollo": "5174111.74",
+    "starlay": "2783900.56",
+    "heiko": "1700650.23"
+  },
+  {
+    "date": "2023-05-24",
+    "moonwell_artemis": "34665124.61",
+    "parallel": "19821510.00",
+    "karura": "4578769.38",
+    "moonwell_apollo": "8582333.01",
+    "starlay": "2884507.96",
+    "heiko": "1648965.46"
+  },
+  {
+    "date": "2023-05-23",
+    "moonwell_artemis": "33920690.17",
+    "parallel": "19562532.64",
+    "karura": "4481057.39",
+    "moonwell_apollo": "8056554.15",
+    "starlay": "2862190.32",
+    "heiko": "1634162.25"
+  },
+  {
+    "date": "2023-05-22",
+    "moonwell_artemis": "33752964.30",
+    "parallel": "19257149.67",
+    "karura": "4606793.07",
+    "moonwell_apollo": "6817448.78",
+    "starlay": "2835070.53",
+    "heiko": "1681749.64"
+  },
+  {
+    "date": "2023-05-21",
+    "moonwell_artemis": "34143123.89",
+    "parallel": "20002149.08",
+    "karura": "4632615.61",
+    "moonwell_apollo": "6919923.53",
+    "starlay": "2917278.83",
+    "heiko": "1716268.20"
+  },
+  {
+    "date": "2023-05-20",
+    "moonwell_artemis": "33831391.55",
+    "parallel": "19815918.39",
+    "karura": "4711147.58",
+    "moonwell_apollo": "7128280.13",
+    "starlay": "1077417.11",
+    "heiko": "1708219.50"
+  },
+  {
+    "date": "2023-05-19",
+    "moonwell_artemis": "33901234.92",
+    "parallel": "19880947.67",
+    "karura": "4699206.53",
+    "moonwell_apollo": "7123941.67",
+    "starlay": "1072104.03",
+    "heiko": "1703353.74"
+  },
+  {
+    "date": "2023-05-18",
+    "moonwell_artemis": "34310661.99",
+    "parallel": "19853885.39",
+    "karura": "4871088.75",
+    "moonwell_apollo": "7158083.18",
+    "starlay": "1079719.57",
+    "heiko": "1703107.34"
+  },
+  {
+    "date": "2023-05-17",
+    "moonwell_artemis": "34018331.36",
+    "parallel": "19511799.12",
+    "karura": "4952418.45",
+    "moonwell_apollo": "7138294.94",
+    "starlay": "1052444.34",
+    "heiko": "1710335.59"
+  },
+  {
+    "date": "2023-05-16",
+    "moonwell_artemis": "32581936.71",
+    "parallel": "19641977.35",
+    "karura": "4889639.27",
+    "moonwell_apollo": "7132457.79",
+    "starlay": "1051711.01",
+    "heiko": "1772399.66"
+  },
+  {
+    "date": "2023-05-15",
+    "moonwell_artemis": "32594479.45",
+    "parallel": "20105153.45",
+    "karura": "4957374.76",
+    "moonwell_apollo": "7064887.97",
+    "starlay": "2873782.30",
+    "heiko": "1756273.96"
+  },
+  {
+    "date": "2023-05-14",
+    "moonwell_artemis": "32737869.36",
+    "parallel": "19940931.67",
+    "karura": "4822019.29",
+    "moonwell_apollo": "7069154.68",
+    "starlay": "2943176.85",
+    "heiko": "1725523.46"
+  },
+  {
+    "date": "2023-05-13",
+    "moonwell_artemis": "32943520.11",
+    "parallel": "19776709.89",
+    "karura": "4686663.81",
+    "moonwell_apollo": "7090273.25",
+    "starlay": "2993318.75",
+    "heiko": "1694772.95"
+  },
+  {
+    "date": "2023-05-12",
+    "moonwell_artemis": "33306668.49",
+    "parallel": "19612488.11",
+    "karura": "4551308.33",
+    "moonwell_apollo": "7100277.43",
+    "starlay": "2965653.07",
+    "heiko": "1664022.45"
+  },
+  {
+    "date": "2023-05-11",
+    "moonwell_artemis": "33734148.24",
+    "parallel": "20031201.62",
+    "karura": "4778465.69",
+    "moonwell_apollo": "7210355.46",
+    "starlay": "3256407.23",
+    "heiko": "1767484.35"
+  },
+  {
+    "date": "2023-05-10",
+    "moonwell_artemis": "33970361.41",
+    "parallel": "20106002.20",
+    "karura": "4742493.87",
+    "moonwell_apollo": "7206487.16",
+    "starlay": "3256714.49",
+    "heiko": "1765850.85"
+  },
+  {
+    "date": "2023-05-09",
+    "moonwell_artemis": "33928407.13",
+    "parallel": "20312457.22",
+    "karura": "4761952.60",
+    "moonwell_apollo": "7217678.51",
+    "starlay": "3148157.26",
+    "heiko": "1761029.62"
+  },
+  {
+    "date": "2023-05-08",
+    "moonwell_artemis": "35052857.25",
+    "parallel": "21220475.35",
+    "karura": "5086254.69",
+    "moonwell_apollo": "7366753.06",
+    "starlay": "3324199.46",
+    "heiko": "1938299.33"
+  },
+  {
+    "date": "2023-05-07",
+    "moonwell_artemis": "35112469.86",
+    "parallel": "21291236.78",
+    "karura": "5077916.68",
+    "moonwell_apollo": "7354337.53",
+    "starlay": "3359802.00",
+    "heiko": "1967841.53"
+  },
+  {
+    "date": "2023-05-06",
+    "moonwell_artemis": "35934229.74",
+    "parallel": "34762666.68",
+    "karura": "5325925.50",
+    "moonwell_apollo": "7501352.74",
+    "starlay": "3548386.38",
+    "heiko": "1857383.77"
+  },
+  {
+    "date": "2023-05-05",
+    "moonwell_artemis": "34912475.59",
+    "parallel": "33789514.45",
+    "karura": "5199513.31",
+    "moonwell_apollo": "7343783.64",
+    "starlay": "3437570.15",
+    "heiko": "1943217.63"
+  },
+  {
+    "date": "2023-05-04",
+    "moonwell_artemis": "34810758.33",
+    "parallel": "33755589.79",
+    "karura": "5448117.14",
+    "moonwell_apollo": "7445721.18",
+    "starlay": "3488622.95",
+    "heiko": "1924427.78"
+  },
+  {
+    "date": "2023-05-03",
+    "moonwell_artemis": "34499757.42",
+    "parallel": "33599108.71",
+    "karura": "5426790.92",
+    "moonwell_apollo": "7378756.50",
+    "starlay": "3443347.14",
+    "heiko": "2072566.27"
+  },
+  {
+    "date": "2023-05-02",
+    "moonwell_artemis": "33961830.12",
+    "parallel": "33608018.40",
+    "karura": "5506142.44",
+    "moonwell_apollo": "7337954.86",
+    "starlay": "3402607.28",
+    "heiko": "2031645.06"
+  },
+  {
+    "date": "2023-05-01",
+    "moonwell_artemis": "34998219.41",
+    "parallel": "34961601.48",
+    "karura": "5967040.69",
+    "moonwell_apollo": "7474448.91",
+    "starlay": "3515164.93",
+    "heiko": "2348191.61"
+  },
+  {
+    "date": "2023-04-30",
+    "moonwell_artemis": "35328645.33",
+    "parallel": "35450339.34",
+    "karura": "5961000.45",
+    "moonwell_apollo": "7480881.28",
+    "starlay": "3542482.94",
+    "heiko": "2333711.09"
+  },
+  {
+    "date": "2023-04-29",
+    "moonwell_artemis": "35244482.26",
+    "parallel": "35434721.72",
+    "karura": "6001574.44",
+    "moonwell_apollo": "7437036.04",
+    "starlay": "3535969.01",
+    "heiko": "2389466.42"
+  },
+  {
+    "date": "2023-04-28",
+    "moonwell_artemis": "35179119.02",
+    "parallel": "35419104.10",
+    "karura": "6042148.43",
+    "moonwell_apollo": "7495309.28",
+    "starlay": "3570011.65",
+    "heiko": "2445221.76"
+  },
+  {
+    "date": "2023-04-27",
+    "moonwell_artemis": "35215765.30",
+    "parallel": "35357067.99",
+    "karura": "6155422.70",
+    "moonwell_apollo": "7483406.47",
+    "starlay": "3581277.23",
+    "heiko": "2357622.67"
+  },
+  {
+    "date": "2023-04-26",
+    "moonwell_artemis": "35046251.93",
+    "parallel": "35024713.24",
+    "karura": "6404424.63",
+    "moonwell_apollo": "7466046.77",
+    "starlay": "3511192.82",
+    "heiko": "2353363.10"
+  },
+  {
+    "date": "2023-04-25",
+    "moonwell_artemis": "34396960.68",
+    "parallel": "34664746.13",
+    "karura": "5991213.93",
+    "moonwell_apollo": "7387076.55",
+    "starlay": "3425435.65",
+    "heiko": "2308124.41"
+  },
+  {
+    "date": "2023-04-24",
+    "moonwell_artemis": "33394624.61",
+    "parallel": "35080201.89",
+    "karura": "6034089.32",
+    "moonwell_apollo": "7192249.63",
+    "starlay": "3442315.34",
+    "heiko": "2448268.04"
+  },
+  {
+    "date": "2023-04-23",
+    "moonwell_artemis": "32160147.68",
+    "parallel": "34782575.00",
+    "karura": "6183689.37",
+    "moonwell_apollo": "7155163.96",
+    "starlay": "3456985.41",
+    "heiko": "2457444.07"
+  },
+  {
+    "date": "2023-04-22",
+    "moonwell_artemis": "32298023.69",
+    "parallel": "34493254.09",
+    "karura": "6116140.33",
+    "moonwell_apollo": "7103437.81",
+    "starlay": "3376117.67",
+    "heiko": "2442702.45"
+  },
+  {
+    "date": "2023-04-21",
+    "moonwell_artemis": "32882665.69",
+    "parallel": "36027739.79",
+    "karura": "6699961.32",
+    "moonwell_apollo": "7315010.91",
+    "starlay": "3520842.88",
+    "heiko": "2577689.08"
+  },
+  {
+    "date": "2023-04-20",
+    "moonwell_artemis": "33247703.80",
+    "parallel": "37429115.06",
+    "karura": "7102600.21",
+    "moonwell_apollo": "7423616.32",
+    "starlay": "3601526.24",
+    "heiko": "2612784.92"
+  },
+  {
+    "date": "2023-04-19",
+    "moonwell_artemis": "34725767.83",
+    "parallel": "40355086.38",
+    "karura": "7549678.70",
+    "moonwell_apollo": "7745000.53",
+    "starlay": "3877015.03",
+    "heiko": "2852792.68"
+  },
+  {
+    "date": "2023-04-18",
+    "moonwell_artemis": "34822667.36",
+    "parallel": "39575255.54",
+    "karura": "7601199.68",
+    "moonwell_apollo": "7721051.86",
+    "starlay": "3837493.46",
+    "heiko": "2673805.28"
+  },
+  {
+    "date": "2023-04-17",
+    "moonwell_artemis": "35296950.20",
+    "parallel": "39779188.63",
+    "karura": "7625035.17",
+    "moonwell_apollo": "8157825.65",
+    "starlay": "3858098.19",
+    "heiko": "2895134.83"
+  },
+  {
+    "date": "2023-04-16",
+    "moonwell_artemis": "36036445.67",
+    "parallel": "40193086.94",
+    "karura": "7788489.72",
+    "moonwell_apollo": "8252565.90",
+    "starlay": "3939389.33",
+    "heiko": "2828229.91"
+  },
+  {
+    "date": "2023-04-15",
+    "moonwell_artemis": "39126037.15",
+    "parallel": "39557051.48",
+    "karura": "7746859.48",
+    "moonwell_apollo": "8675200.35",
+    "starlay": "3906849.71",
+    "heiko": "2765541.41"
+  },
+  {
+    "date": "2023-04-14",
+    "moonwell_artemis": "39173487.51",
+    "parallel": "40068574.20",
+    "karura": "7580086.72",
+    "moonwell_apollo": "8653637.83",
+    "starlay": "3885481.48",
+    "heiko": "3015690.36"
+  },
+  {
+    "date": "2023-04-13",
+    "moonwell_artemis": "37319841.96",
+    "parallel": "37818357.00",
+    "karura": "7391215.77",
+    "moonwell_apollo": "8340165.47",
+    "starlay": "3637321.06",
+    "heiko": "2939960.07"
+  },
+  {
+    "date": "2023-04-12",
+    "moonwell_artemis": "35352128.80",
+    "parallel": "37507838.02",
+    "karura": "7559552.81",
+    "moonwell_apollo": "8318986.98",
+    "starlay": "3666886.83",
+    "heiko": "3006768.46"
+  },
+  {
+    "date": "2023-04-11",
+    "moonwell_artemis": "35374674.38",
+    "parallel": "37542824.13",
+    "karura": "7350891.18",
+    "moonwell_apollo": "8347109.06",
+    "starlay": "3630973.12",
+    "heiko": "2919096.21"
+  },
+  {
+    "date": "2023-04-10",
+    "moonwell_artemis": "33939717.95",
+    "parallel": "36897851.64",
+    "karura": "7385062.44",
+    "moonwell_apollo": "8236461.52",
+    "starlay": "3498424.74",
+    "heiko": "2427136.46"
+  },
+  {
+    "date": "2023-04-09",
+    "moonwell_artemis": "33942757.18",
+    "parallel": "36209016.94",
+    "karura": "7128688.50",
+    "moonwell_apollo": "8205789.03",
+    "starlay": "3479477.82",
+    "heiko": "2628909.56"
+  },
+  {
+    "date": "2023-04-08",
+    "moonwell_artemis": "33602172.05",
+    "parallel": "35938901.97",
+    "karura": "7122846.66",
+    "moonwell_apollo": "8163762.56",
+    "starlay": "3449098.20",
+    "heiko": "2677330.60"
+  },
+  {
+    "date": "2023-04-07",
+    "moonwell_artemis": "34398837.34",
+    "parallel": "38039910.59",
+    "karura": "7211131.91",
+    "moonwell_apollo": "8250936.75",
+    "starlay": "3549727.32",
+    "heiko": "3091881.27"
+  },
+  {
+    "date": "2023-04-06",
+    "moonwell_artemis": "34350116.80",
+    "parallel": "38499381.75",
+    "karura": "7266266.32",
+    "moonwell_apollo": "8316918.13",
+    "starlay": "3616660.77",
+    "heiko": "3168011.05"
+  },
+  {
+    "date": "2023-04-05",
+    "moonwell_artemis": "34816414.99",
+    "parallel": "39096977.23",
+    "karura": "7521290.96",
+    "moonwell_apollo": "8341672.70",
+    "starlay": "3646183.12",
+    "heiko": "3451833.61"
+  },
+  {
+    "date": "2023-04-04",
+    "moonwell_artemis": "34455650.86",
+    "parallel": "38312335.17",
+    "karura": "7394893.53",
+    "moonwell_apollo": "8116626.43",
+    "starlay": "3503592.62",
+    "heiko": "3341935.01"
+  },
+  {
+    "date": "2023-04-03",
+    "moonwell_artemis": "34204386.67",
+    "parallel": "37350159.48",
+    "karura": "7189222.79",
+    "moonwell_apollo": "8094934.40",
+    "starlay": "3464612.88",
+    "heiko": "3272833.82"
+  },
+  {
+    "date": "2023-04-02",
+    "moonwell_artemis": "35464348.28",
+    "parallel": "37534347.24",
+    "karura": "7204004.03",
+    "moonwell_apollo": "8185903.09",
+    "starlay": "3548162.06",
+    "heiko": "2993824.56"
+  },
+  {
+    "date": "2023-04-01",
+    "moonwell_artemis": "34950486.94",
+    "parallel": "37327630.20",
+    "karura": "7365791.39",
+    "moonwell_apollo": "8234948.79",
+    "starlay": "3564953.67",
+    "heiko": "2929360.39"
+  }
+]

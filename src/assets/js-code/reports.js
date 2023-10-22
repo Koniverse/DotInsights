@@ -256,6 +256,18 @@
 					flag: 'kr.svg',
 					url: 'polkadot-report-q3-2022-kr',
 					isActive: 1,
+				}, {
+					code: 'ja',
+					name: '日本語',
+					flag: 'jp.svg',
+					url: 'polkadot-report-q3-2022-ja',
+					isActive: 1,
+				}, {
+					code: 'fr',
+					name: 'Français',
+					flag: 'fr.svg',
+					url: 'polkadot-report-q3-2022-fr',
+					isActive: 1,
 				}
 			];
 

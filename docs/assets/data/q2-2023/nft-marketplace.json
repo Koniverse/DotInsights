@@ -1,0 +1,912 @@
+﻿[
+  {
+    "date": "2023-06-30",
+    "ksm_on_singular": "0.00",
+    "glmr_on_moonbeans": "126.35",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "60.01",
+    "glmr_on_tofu": "119.66",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-06-29",
+    "ksm_on_singular": "572.59",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "72.22",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "11.07",
+    "glmr_on_tofu": "0.00",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-06-28",
+    "ksm_on_singular": "36.19",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "30.84",
+    "glmr_on_tofu": "106.00",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-06-27",
+    "ksm_on_singular": "318.64",
+    "glmr_on_moonbeans": "9.03",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "422.18",
+    "glmr_on_tofu": "0.19",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-06-26",
+    "ksm_on_singular": "575.26",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "435.72",
+    "glmr_on_tofu": "57.92",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-06-25",
+    "ksm_on_singular": "248.72",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "179.83",
+    "glmr_on_tofu": "0.34",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-06-24",
+    "ksm_on_singular": "513.67",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "705.37",
+    "glmr_on_tofu": "0.16",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-06-23",
+    "ksm_on_singular": "18.94",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "1321.68",
+    "glmr_on_tofu": "250.64",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-06-22",
+    "ksm_on_singular": "0.00",
+    "glmr_on_moonbeans": "141.81",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "11.28",
+    "astr_on_tofu": "802.52",
+    "glmr_on_tofu": "27.21",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-06-21",
+    "ksm_on_singular": "19.66",
+    "glmr_on_moonbeans": "22.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "255.44",
+    "glmr_on_tofu": "29.25",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-06-20",
+    "ksm_on_singular": "0.00",
+    "glmr_on_moonbeans": "31.74",
+    "movr_on_moonbeans": "18.64",
+    "glmr_on_nftrade": "11.76",
+    "astr_on_tofu": "204.93",
+    "glmr_on_tofu": "124.25",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-06-19",
+    "ksm_on_singular": "59.25",
+    "glmr_on_moonbeans": "20.77",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "176.99",
+    "glmr_on_tofu": "1.23",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-06-18",
+    "ksm_on_singular": "218.82",
+    "glmr_on_moonbeans": "17.62",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "537.24",
+    "glmr_on_tofu": "20.86",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-06-17",
+    "ksm_on_singular": "888.33",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "367.55",
+    "glmr_on_tofu": "353.33",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-06-16",
+    "ksm_on_singular": "529.81",
+    "glmr_on_moonbeans": "649.64",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "823.00",
+    "glmr_on_tofu": "460.17",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-06-15",
+    "ksm_on_singular": "14.80",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "15.98",
+    "astr_on_tofu": "169.64",
+    "glmr_on_tofu": "38.74",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-06-14",
+    "ksm_on_singular": "192.06",
+    "glmr_on_moonbeans": "165.42",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "19.85",
+    "astr_on_tofu": "575.99",
+    "glmr_on_tofu": "31.70",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-06-13",
+    "ksm_on_singular": "1796.37",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "353.99",
+    "glmr_on_tofu": "88.99",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-06-12",
+    "ksm_on_singular": "2699.25",
+    "glmr_on_moonbeans": "67.89",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "503.05",
+    "glmr_on_tofu": "14.26",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-06-11",
+    "ksm_on_singular": "69.65",
+    "glmr_on_moonbeans": "34.03",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "11.01",
+    "glmr_on_tofu": "80.21",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-06-10",
+    "ksm_on_singular": "4109.86",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "329.56",
+    "glmr_on_tofu": "19.52",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-06-09",
+    "ksm_on_singular": "34.21",
+    "glmr_on_moonbeans": "66.41",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "1757.58",
+    "glmr_on_tofu": "91.25",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-06-08",
+    "ksm_on_singular": "13.23",
+    "glmr_on_moonbeans": "996.33",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "1153.09",
+    "glmr_on_tofu": "0.31",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-06-07",
+    "ksm_on_singular": "43.46",
+    "glmr_on_moonbeans": "89.76",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "1078.15",
+    "glmr_on_tofu": "21.09",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-06-06",
+    "ksm_on_singular": "645.35",
+    "glmr_on_moonbeans": "388.77",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "229.30",
+    "glmr_on_tofu": "28.15",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-06-05",
+    "ksm_on_singular": "26.17",
+    "glmr_on_moonbeans": "13.79",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "454.60",
+    "glmr_on_tofu": "36.21",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-06-04",
+    "ksm_on_singular": "113.29",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "485.57",
+    "glmr_on_tofu": "58.96",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-06-03",
+    "ksm_on_singular": "789.33",
+    "glmr_on_moonbeans": "34.51",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "311.39",
+    "glmr_on_tofu": "19.05",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-06-02",
+    "ksm_on_singular": "26.26",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "39.91",
+    "glmr_on_tofu": "341.85",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-06-01",
+    "ksm_on_singular": "0.00",
+    "glmr_on_moonbeans": "41.76",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "551.97",
+    "glmr_on_tofu": "0.22",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-05-31",
+    "ksm_on_singular": "454.18",
+    "glmr_on_moonbeans": "35.62",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "897.68",
+    "glmr_on_tofu": "81.38",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-05-30",
+    "ksm_on_singular": "1056.19",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "22.67",
+    "glmr_on_tofu": "0.28",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-05-29",
+    "ksm_on_singular": "2085.77",
+    "glmr_on_moonbeans": "11.50",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "2177.57",
+    "glmr_on_tofu": "93.93",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-05-28",
+    "ksm_on_singular": "359.71",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "726.14",
+    "glmr_on_tofu": "111.47",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-05-27",
+    "ksm_on_singular": "253.01",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "104.50",
+    "glmr_on_tofu": "9.85",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-05-26",
+    "ksm_on_singular": "61.13",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "432.63",
+    "glmr_on_tofu": "283.46",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-05-25",
+    "ksm_on_singular": "195.35",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "642.25",
+    "glmr_on_tofu": "27.13",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-05-24",
+    "ksm_on_singular": "264.95",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "7.80",
+    "glmr_on_nftrade": "0.84",
+    "astr_on_tofu": "280.68",
+    "glmr_on_tofu": "12.19",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-05-23",
+    "ksm_on_singular": "112.47",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "588.20",
+    "glmr_on_tofu": "60.17",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-05-22",
+    "ksm_on_singular": "2845.67",
+    "glmr_on_moonbeans": "168.14",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "226.67",
+    "glmr_on_tofu": "152.56",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-05-21",
+    "ksm_on_singular": "57.81",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "463.12",
+    "glmr_on_tofu": "305.94",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-05-20",
+    "ksm_on_singular": "31.44",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "561.84",
+    "glmr_on_tofu": "55.07",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-05-19",
+    "ksm_on_singular": "1530.93",
+    "glmr_on_moonbeans": "35.62",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.85",
+    "astr_on_tofu": "929.36",
+    "glmr_on_tofu": "21.94",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-05-18",
+    "ksm_on_singular": "342.11",
+    "glmr_on_moonbeans": "256.72",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "587.10",
+    "glmr_on_tofu": "68.07",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-05-17",
+    "ksm_on_singular": "13.74",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "395.12",
+    "glmr_on_tofu": "44.61",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-05-16",
+    "ksm_on_singular": "342.29",
+    "glmr_on_moonbeans": "138.27",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "182.89",
+    "glmr_on_tofu": "873.27",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-05-15",
+    "ksm_on_singular": "93.07",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "2.91",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "315.96",
+    "glmr_on_tofu": "207.48",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-05-14",
+    "ksm_on_singular": "510.61",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "421.86",
+    "glmr_on_tofu": "0.00",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-05-13",
+    "ksm_on_singular": "612.60",
+    "glmr_on_moonbeans": "108.57",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "502.49",
+    "glmr_on_tofu": "33.58",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-05-12",
+    "ksm_on_singular": "1018.36",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "380.33",
+    "glmr_on_nftrade": "1.68",
+    "astr_on_tofu": "325.24",
+    "glmr_on_tofu": "699.66",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-05-11",
+    "ksm_on_singular": "1280.68",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "1303.61",
+    "glmr_on_tofu": "123.48",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-05-10",
+    "ksm_on_singular": "7360.77",
+    "glmr_on_moonbeans": "213.24",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "420.94",
+    "glmr_on_tofu": "34.41",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-05-09",
+    "ksm_on_singular": "38.50",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "165.49",
+    "glmr_on_tofu": "75.10",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-05-08",
+    "ksm_on_singular": "87.06",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "682.14",
+    "glmr_on_tofu": "349.73",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-05-07",
+    "ksm_on_singular": "154.11",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "540.94",
+    "glmr_on_tofu": "39.26",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-05-06",
+    "ksm_on_singular": "437.53",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "367.99",
+    "glmr_on_tofu": "5.36",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-05-05",
+    "ksm_on_singular": "99.77",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "737.02",
+    "glmr_on_tofu": "121.74",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-05-04",
+    "ksm_on_singular": "65.20",
+    "glmr_on_moonbeans": "251.89",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "69.21",
+    "glmr_on_tofu": "179.38",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-05-03",
+    "ksm_on_singular": "719.25",
+    "glmr_on_moonbeans": "114.87",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "1634.07",
+    "glmr_on_tofu": "486.65",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-05-02",
+    "ksm_on_singular": "629.51",
+    "glmr_on_moonbeans": "73.27",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "270.03",
+    "glmr_on_tofu": "117.74",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-05-01",
+    "ksm_on_singular": "553.00",
+    "glmr_on_moonbeans": "324.26",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "189.09",
+    "glmr_on_tofu": "284.64",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-04-30",
+    "ksm_on_singular": "899.48",
+    "glmr_on_moonbeans": "226.63",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "277.13",
+    "glmr_on_tofu": "312.06",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-04-29",
+    "ksm_on_singular": "157.28",
+    "glmr_on_moonbeans": "44.03",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "843.39",
+    "glmr_on_tofu": "191.93",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-04-28",
+    "ksm_on_singular": "5848.45",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "921.24",
+    "glmr_on_tofu": "334.38",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-04-27",
+    "ksm_on_singular": "411.89",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "157.53",
+    "glmr_on_tofu": "162.63",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-04-26",
+    "ksm_on_singular": "929.83",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.38",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "475.58",
+    "glmr_on_tofu": "158.86",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-04-25",
+    "ksm_on_singular": "1282.78",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "479.87",
+    "glmr_on_tofu": "159.34",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-04-24",
+    "ksm_on_singular": "546.61",
+    "glmr_on_moonbeans": "104.62",
+    "movr_on_moonbeans": "7.59",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "245.51",
+    "glmr_on_tofu": "200.94",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-04-23",
+    "ksm_on_singular": "948.71",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "403.82",
+    "glmr_on_tofu": "425.01",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-04-22",
+    "ksm_on_singular": "3772.72",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "333.89",
+    "glmr_on_tofu": "539.87",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-04-21",
+    "ksm_on_singular": "658.21",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "869.45",
+    "glmr_on_tofu": "667.48",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-04-20",
+    "ksm_on_singular": "891.11",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "105.53",
+    "glmr_on_tofu": "97.08",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-04-19",
+    "ksm_on_singular": "1179.81",
+    "glmr_on_moonbeans": "213.34",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "35.27",
+    "glmr_on_tofu": "499.55",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-04-18",
+    "ksm_on_singular": "8437.09",
+    "glmr_on_moonbeans": "321.02",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "2233.46",
+    "glmr_on_tofu": "783.95",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-04-17",
+    "ksm_on_singular": "680.44",
+    "glmr_on_moonbeans": "286.91",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "1063.90",
+    "glmr_on_tofu": "518.16",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-04-16",
+    "ksm_on_singular": "1812.58",
+    "glmr_on_moonbeans": "83.19",
+    "movr_on_moonbeans": "15.67",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "383.11",
+    "glmr_on_tofu": "235.37",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-04-15",
+    "ksm_on_singular": "3263.21",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "987.76",
+    "glmr_on_tofu": "704.59",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-04-14",
+    "ksm_on_singular": "1239.50",
+    "glmr_on_moonbeans": "173.78",
+    "movr_on_moonbeans": "247.06",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "969.16",
+    "glmr_on_tofu": "902.46",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-04-13",
+    "ksm_on_singular": "1365.06",
+    "glmr_on_moonbeans": "720.30",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "1635.86",
+    "glmr_on_tofu": "958.43",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-04-12",
+    "ksm_on_singular": "6063.13",
+    "glmr_on_moonbeans": "269.68",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "584.97",
+    "glmr_on_tofu": "1473.31",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-04-11",
+    "ksm_on_singular": "2925.70",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "148.21",
+    "glmr_on_tofu": "681.01",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-04-10",
+    "ksm_on_singular": "2520.82",
+    "glmr_on_moonbeans": "52.19",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "541.41",
+    "glmr_on_tofu": "572.29",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-04-09",
+    "ksm_on_singular": "2365.30",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "895.00",
+    "glmr_on_tofu": "568.96",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-04-08",
+    "ksm_on_singular": "842.12",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "205.79",
+    "glmr_on_tofu": "211.27",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-04-07",
+    "ksm_on_singular": "3762.83",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "832.47",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "274.79",
+    "glmr_on_tofu": "362.18",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-04-06",
+    "ksm_on_singular": "3175.34",
+    "glmr_on_moonbeans": "117.05",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "679.07",
+    "glmr_on_tofu": "254.41",
+    "sdn_on_tofu": "1.89"
+  },
+  {
+    "date": "2023-04-05",
+    "ksm_on_singular": "1132.55",
+    "glmr_on_moonbeans": "80.48",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "13.48",
+    "astr_on_tofu": "35.11",
+    "glmr_on_tofu": "679.46",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-04-04",
+    "ksm_on_singular": "934.31",
+    "glmr_on_moonbeans": "276.01",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "987.16",
+    "glmr_on_tofu": "326.90",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-04-03",
+    "ksm_on_singular": "4632.39",
+    "glmr_on_moonbeans": "40.79",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "0.00",
+    "astr_on_tofu": "484.38",
+    "glmr_on_tofu": "187.21",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-04-02",
+    "ksm_on_singular": "675.93",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "382.79",
+    "glmr_on_nftrade": "33.75",
+    "astr_on_tofu": "210.77",
+    "glmr_on_tofu": "339.94",
+    "sdn_on_tofu": "0.00"
+  },
+  {
+    "date": "2023-04-01",
+    "ksm_on_singular": "938.96",
+    "glmr_on_moonbeans": "0.00",
+    "movr_on_moonbeans": "0.00",
+    "glmr_on_nftrade": "5.35",
+    "astr_on_tofu": "448.76",
+    "glmr_on_tofu": "878.51",
+    "sdn_on_tofu": "0.00"
+  }
+]

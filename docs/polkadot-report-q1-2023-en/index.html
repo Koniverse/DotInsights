@@ -1,0 +1,3418 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Site title and description -->
+	<title>Polkadot Deep Dive Report by dotinsights - The first Polkadot comprehensive quarterly report</title>
+	<meta name="title"
+	      content="Polkadot Deep Dive Report by dotinsights - The first Polkadot comprehensive quarterly report">
+	<meta name="description"
+	      content="In order to provide a panoramic view of and give detailed insights into the states of Polkadot and Kusama ecosystem, we are compiling data scattered around various sources to present this Polkadot Deep Dive quarterly report, with sections focused on DeFi, NFT and Web3.">
+	<meta property="og:site_name"
+	      content="Polkadot Deep Dive Report by dotinsights - The first Polkadot comprehensive quarterly report">
+	<meta property="og:url" content="https://dotinsights.subwallet.app/polkadot-report-q1-2023-en">
+	<meta property="og:title"
+	      content="Polkadot Deep Dive Report by dotinsights - The first Polkadot comprehensive quarterly report">
+	<meta property="og:type" content="website">
+	<meta property="og:description"
+	      content="In order to provide a panoramic view of and give detailed insights into the states of Polkadot and Kusama ecosystem, we are compiling data scattered around various sources to present this Polkadot Deep Dive quarterly report, with sections focused on DeFi, NFT and Web3.">
+	<meta name="twitter:site" content="@https://">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title"
+	      content="Polkadot Deep Dive Report by dotinsights - The first Polkadot comprehensive quarterly report">
+	<meta name="twitter:description"
+	      content="In order to provide a panoramic view of and give detailed insights into the states of Polkadot and Kusama ecosystem, we are compiling data scattered around various sources to present this Polkadot Deep Dive quarterly report, with sections focused on DeFi, NFT and Web3.">
+	<meta property="og:image"
+	      content="https://dotinsights.subwallet.app/assets/images/preview/polkadot-report-q1-2023.jpg"/>
+	<meta property="og:image:secure_url"
+	      content="https://dotinsights.subwallet.app/assets/images/preview/polkadot-report-q1-2023.jpg"/>
+	<meta property="og:image:alt"
+	      content="Polkadot Deep Dive Report by dotinsights - The first Polkadot comprehensive quarterly report"/>
+	<meta property="og:image:width" content="1200"/>
+	<meta property="og:image:height" content="630"/>
+
+	<!-- Favicon and App Icon -->
+	<link rel="icon" href="../assets/images/favicon/favicon-dark-32x32.png" sizes="32x32"
+	      media="(prefers-color-scheme: dark)">
+	<link rel="icon" href="../assets/images/favicon/favicon-dark-192x192.png" sizes="192x192"
+	      media="(prefers-color-scheme: dark)">
+	<link rel="icon" href="../assets/images/favicon/favicon-32x32.png" sizes="32x32"
+	      media="(prefers-color-scheme: light)">
+	<link rel="icon" href="../assets/images/favicon/favicon-192x192.png" sizes="192x192"
+	      media="(prefers-color-scheme: light)">
+	<link rel="apple-touch-icon-precomposed" href="../assets/images/favicon/favicon-180x180.png">
+	<meta name="msapplication-TileImage" content="../assets/images/favicon/favicon-270x270.png">
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+		rel="stylesheet">
+	<link href="../assets/fonts/unbounded/font-unbounded.css" rel="stylesheet">
+
+	<link href="../assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../assets/libs/swiper/css/swiper.min.css" rel="stylesheet">
+	<link href="../assets/fonts/awesome/css/all.min.css" rel="stylesheet">
+	<link href="../assets/css/style.css?v=1.9" rel="stylesheet">
+	<link href="../assets/css/report.css?v=2.0" rel="stylesheet">
+	<link href="../assets/css/report-q1-2023.css?v=2.2" rel="stylesheet">
+</head>
+<body tabindex="0" class="page-reports polkadot-q1-2023">
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" class="svg-symbols" id="svg-symbols">
+	<symbol id="symbol-ph-heart-straight" fill="#000000" viewBox="0 0 256 256">
+		<path class="icon"
+		      d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z"></path>
+	</symbol>
+	<symbol id="symbol-circle-check" fill="none" width="32" height="32" viewBox="0 0 32 32">
+		<path fill="#66E1B6"
+		      d="M16 3C13.4288 3 10.9154 3.76244 8.77759 5.1909C6.63975 6.61935 4.97351 8.64968 3.98957 11.0251C3.00563 13.4006 2.74818 16.0144 3.24979 18.5362C3.7514 21.0579 4.98953 23.3743 6.80761 25.1924C8.62569 27.0105 10.9421 28.2486 13.4638 28.7502C15.9856 29.2518 18.5994 28.9944 20.9749 28.0104C23.3503 27.0265 25.3806 25.3603 26.8091 23.2224C28.2376 21.0846 29 18.5712 29 16C28.9934 12.5542 27.6216 9.25145 25.1851 6.81491C22.7485 4.37837 19.4458 3.00661 16 3V3ZM22.1875 13.725L14.8625 20.725C14.6731 20.9031 14.4225 21.0016 14.1625 21C14.0354 21.0018 13.9092 20.9785 13.7912 20.9313C13.6732 20.8841 13.5658 20.814 13.475 20.725L9.8125 17.225C9.71092 17.1364 9.6283 17.0281 9.56962 16.9067C9.51094 16.7854 9.47741 16.6534 9.47104 16.5187C9.46466 16.3841 9.48559 16.2495 9.53255 16.1231C9.5795 15.9968 9.65153 15.8812 9.74429 15.7834C9.83706 15.6856 9.94864 15.6075 10.0723 15.5539C10.196 15.5003 10.3293 15.4723 10.4641 15.4715C10.5989 15.4707 10.7325 15.4972 10.8568 15.5493C10.9811 15.6015 11.0936 15.6783 11.1875 15.775L14.1625 18.6125L20.8125 12.275C21.0069 12.1054 21.2594 12.0174 21.5172 12.0296C21.7749 12.0418 22.018 12.1532 22.1955 12.3404C22.3731 12.5277 22.4714 12.7763 22.4699 13.0343C22.4684 13.2924 22.3672 13.5398 22.1875 13.725Z"></path>
+	</symbol>
+	<symbol id="symbol-circle-x" fill="none" width="32" height="32" viewBox="0 0 32 32">
+		<circle cx="16" cy="16" r="13" fill="white"/>
+		<path
+			d="M16 3C13.4288 3 10.9154 3.76244 8.77759 5.1909C6.63975 6.61935 4.97351 8.64968 3.98957 11.0251C3.00563 13.4006 2.74818 16.0144 3.24979 18.5362C3.7514 21.0579 4.98953 23.3743 6.80761 25.1924C8.62569 27.0105 10.9421 28.2486 13.4638 28.7502C15.9856 29.2518 18.5994 28.9944 20.9749 28.0104C23.3503 27.0265 25.3806 25.3603 26.8091 23.2224C28.2376 21.0846 29 18.5712 29 16C28.9934 12.5542 27.6216 9.25145 25.1851 6.81491C22.7485 4.37837 19.4458 3.00661 16 3V3ZM20.7125 19.2875C20.9003 19.4771 21.0056 19.7332 21.0056 20C21.0056 20.2668 20.9003 20.5229 20.7125 20.7125C20.5214 20.8973 20.2659 21.0006 20 21.0006C19.7341 21.0006 19.4786 20.8973 19.2875 20.7125L16 17.4125L12.7125 20.7125C12.5214 20.8973 12.2659 21.0006 12 21.0006C11.7341 21.0006 11.4786 20.8973 11.2875 20.7125C11.0997 20.5229 10.9944 20.2668 10.9944 20C10.9944 19.7332 11.0997 19.4771 11.2875 19.2875L14.5875 16L11.2875 12.7125C11.128 12.5182 11.0465 12.2715 11.0589 12.0205C11.0712 11.7694 11.1765 11.5319 11.3542 11.3542C11.5319 11.1765 11.7694 11.0712 12.0205 11.0589C12.2715 11.0465 12.5182 11.128 12.7125 11.2875L16 14.5875L19.2875 11.2875C19.4818 11.128 19.7285 11.0465 19.9795 11.0589C20.2306 11.0712 20.4681 11.1765 20.6458 11.3542C20.8235 11.5319 20.9288 11.7694 20.9411 12.0205C20.9535 12.2715 20.872 12.5182 20.7125 12.7125L17.4125 16L20.7125 19.2875Z"
+			fill="#F82613"/>
+	</symbol>
+</svg>
+<div class="section-effect-snow site-effect-snow" data-firefly-total="50"></div>
+<div id="page-preloader" class="page-loading"></div>
+<header id="header" class="header">
+	<div class="container-wide">
+		<div class="header-inner">
+			<div class="header-left">
+				<div class="site-branding">
+					<a href="/" id="logo">
+						<img loading="lazy" alt="dotinsights - Polkadot & Kusama Ecosystem Map"
+						     src="../assets/images/logo/logo.png"/>
+					</a>
+				</div>
+			</div>
+			<div class="header-center">
+				<nav id="primary-menu" class="primary-menu">
+					<ul class="nav">
+						<li class="nav-item">
+							<a class="nav-link" href="/">
+								<span class="nav-text">Most Loved Projects</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/projects/">
+								<span class="nav-text">Projects By Category</span>
+							</a>
+						</li>
+						<li class="nav-item active-item">
+							<a class="nav-link" href="/polkadot-report-q2-2023-en/">
+								<span class="nav-text">Deep Dive Report</span>
+							</a>
+							<ul class="sub-menu">
+								<li class="nav-item">
+									<a class="nav-link" href="/polkadot-report-q2-2023-en/">
+										<span class="nav-text">Q2 2023</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="/polkadot-staking-report-h1-2023-en/">
+										<span class="nav-text">Staking H1 2023</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="/polkadot-report-q1-2023-en/">
+										<span class="nav-text">Q1 2023</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="/polkadot-report-q4-2022-en/">
+										<span class="nav-text">Q4 2022</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="/polkadot-report-q3-2022-en/">
+										<span class="nav-text">Q3 2022</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="https://subwallet.app/v1/polkadot-report-h1-2022-en/"
+									   target="_blank">
+										<span class="nav-text">H1 2022</span>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item--mobile-button">
+							<a href="#" class="header-button button btn-open-connect-wallet"
+							   data-dotinsights-toggle="modal" data-dotinsights-target="#modal-connect-wallet">
+								<svg class="button-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+								     xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M20.25 6.75H5.25C5.05109 6.75 4.86032 6.67098 4.71967 6.53033C4.57902 6.38968 4.5 6.19891 4.5 6C4.5 5.80109 4.57902 5.61032 4.71967 5.46967C4.86032 5.32902 5.05109 5.25 5.25 5.25H18C18.1989 5.25 18.3897 5.17098 18.5303 5.03033C18.671 4.88968 18.75 4.69891 18.75 4.5C18.75 4.30109 18.671 4.11032 18.5303 3.96967C18.3897 3.82902 18.1989 3.75 18 3.75H5.25C4.65402 3.75247 4.08316 3.99031 3.66174 4.41174C3.24031 4.83316 3.00247 5.40402 3 6V18C3.00247 18.596 3.24031 19.1668 3.66174 19.5883C4.08316 20.0097 4.65402 20.2475 5.25 20.25H20.25C20.6478 20.25 21.0294 20.092 21.3107 19.8107C21.592 19.5294 21.75 19.1478 21.75 18.75V8.25C21.75 7.85218 21.592 7.47064 21.3107 7.18934C21.0294 6.90804 20.6478 6.75 20.25 6.75ZM16.875 14.625C16.6525 14.625 16.435 14.559 16.25 14.4354C16.065 14.3118 15.9208 14.1361 15.8356 13.9305C15.7505 13.725 15.7282 13.4988 15.7716 13.2805C15.815 13.0623 15.9222 12.8618 16.0795 12.7045C16.2368 12.5472 16.4373 12.44 16.6555 12.3966C16.8738 12.3532 17.1 12.3755 17.3055 12.4606C17.5111 12.5458 17.6868 12.69 17.8104 12.875C17.934 13.06 18 13.2775 18 13.5C18 13.7984 17.8815 14.0845 17.6705 14.2955C17.4595 14.5065 17.1734 14.625 16.875 14.625Z"
+										fill="white"/>
+								</svg>
+								<div class="button-text"><span>Connect Wallet</span></div>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="header-right">
+				<div id="language-switcher" class="language-switcher"></div>
+				<a href="#" class="header-button button btn-open-connect-wallet" data-dotinsights-toggle="modal"
+				   data-dotinsights-target="#modal-connect-wallet">
+					<svg class="button-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+					     xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M20.25 6.75H5.25C5.05109 6.75 4.86032 6.67098 4.71967 6.53033C4.57902 6.38968 4.5 6.19891 4.5 6C4.5 5.80109 4.57902 5.61032 4.71967 5.46967C4.86032 5.32902 5.05109 5.25 5.25 5.25H18C18.1989 5.25 18.3897 5.17098 18.5303 5.03033C18.671 4.88968 18.75 4.69891 18.75 4.5C18.75 4.30109 18.671 4.11032 18.5303 3.96967C18.3897 3.82902 18.1989 3.75 18 3.75H5.25C4.65402 3.75247 4.08316 3.99031 3.66174 4.41174C3.24031 4.83316 3.00247 5.40402 3 6V18C3.00247 18.596 3.24031 19.1668 3.66174 19.5883C4.08316 20.0097 4.65402 20.2475 5.25 20.25H20.25C20.6478 20.25 21.0294 20.092 21.3107 19.8107C21.592 19.5294 21.75 19.1478 21.75 18.75V8.25C21.75 7.85218 21.592 7.47064 21.3107 7.18934C21.0294 6.90804 20.6478 6.75 20.25 6.75ZM16.875 14.625C16.6525 14.625 16.435 14.559 16.25 14.4354C16.065 14.3118 15.9208 14.1361 15.8356 13.9305C15.7505 13.725 15.7282 13.4988 15.7716 13.2805C15.815 13.0623 15.9222 12.8618 16.0795 12.7045C16.2368 12.5472 16.4373 12.44 16.6555 12.3966C16.8738 12.3532 17.1 12.3755 17.3055 12.4606C17.5111 12.5458 17.6868 12.69 17.8104 12.875C17.934 13.06 18 13.2775 18 13.5C18 13.7984 17.8815 14.0845 17.6705 14.2955C17.4595 14.5065 17.1734 14.625 16.875 14.625Z"
+							fill="white"/>
+					</svg>
+					<div class="button-text"><span>Connect Wallet</span></div>
+				</a>
+				<button id="navbar-toggler" class="navbar-toggler collapsed" type="button" aria-controls="navbar"
+				        aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div id="main-content" class="main-content">
+
+	<div class="section section-reports-hero" id="polkadot-deep-dive">
+		<div class="section-shape hero-shape-dot move-vertical-reversed">
+			<img src="../assets/images/shapes/shape-dot-02.png" alt="Polkadot" loading="lazy" width="213" height="206"/>
+		</div>
+		<div class="section-shape hero-shape-ksm move-vertical-reversed">
+			<img src="../assets/images/shapes/shape-kusama.png" alt="Kusama" loading="lazy" width="226" height="221"/>
+		</div>
+		<div class="section-shape hero-shape-sw move-vertical">
+			<img src="../assets/images/shapes/shape-sub-wallet-02.png" alt="SW" loading="lazy" width="289"
+			     height="289"/>
+		</div>
+		<div class="section-shape hero-shape-satellite move-vertical">
+			<img src="../assets/images/shapes/shape-satellite3.png" alt="Shape" loading="lazy" width="36" height="36"/>
+		</div>
+		<div class="section-shape hero-shape-ring move-vertical">
+			<img src="../assets/images/shapes/shape-ring.png" alt="Shape" loading="lazy" width="59" height="46"/>
+		</div>
+		<div class="section-shape hero-shape-dotinsights move-vertical-reversed">
+			<img src="../assets/images/shapes/shape-dotinsights.png" alt="dotinsights" loading="lazy" width="255"
+			     height="251"/>
+		</div>
+		<div class="section-content">
+			<div class="container">
+				<div class="section-header">
+					<h1 class="section-title">Polkadot
+						<span class="sub-title">Deep Dive</span>
+					</h1>
+					<h2 class="section-sub-title">Q1 2023</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.section-reports-hero -->
+
+	<div class="section section-proudly-stepping-into" id="proudly-stepping-into">
+		<div class="section-content">
+			<div class="container">
+				<div class="section-header">
+					<div class="section-header-inner">
+						<h4 class="section-title">Proudly Stepping Into <span>The New Year</span></h4>
+						<div class="section-description-wrap">
+							<div class="section-description">
+								<p>2022 was a bad year and a good year. Bad because of the downfall series that at
+									times
+									threatened the whole Web3 space, but good because of the persistent development
+									and
+									innovation regardless of bad actors. Stepping into yet another
+									crypto-winter-new-year, Polkadot continued to thrive with technological updates
+									happening all around the ecosystem.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.section-proudly-stepping-into -->
+
+	<div class="section section-key-takeaways" id="key-takeaways">
+		<div class="container">
+			<div class="section-content">
+				<div class="section-shape shape-blur-circle shape-position-tl"></div>
+				<div class="section-shape shape-blur-circle shape-position-mr"></div>
+				<div class="section-content-inner">
+					<h2 class="section-title">Key Takeaways</h2>
+					<ul class="key-takeaways-list">
+						<li><i class="fa-regular fa-arrow-circle-right"></i>
+							<p><a href="#financial-status-dev-activity" class="scroll-to">Development activities</a>
+								at
+								the core protocol
+								(Parity Technologies’ public GitHub repo) remained strong and shared a fairly
+								similar
+								pattern with DOT and KSM prices. Daily active core developers reached an all-time
+								high at
+								175
+								on March 23.</p>
+						</li>
+						<li><i class="fa-regular fa-arrow-circle-right"></i>
+							<p>Ecosystem wide, quarterly new repos
+								<a href="#financial-status-dev-activity" class="scroll-to">increased drastically year
+									over year</a>. From 2019 to 2021, new repos nearly
+								doubled
+								every year.</p>
+						</li>
+						<li><i class="fa-regular fa-arrow-circle-right"></i>
+							<p><a href="#parachain" class="scroll-to">XCMv3</a> and <a href="#governance-grant"
+							                                                           class="scroll-to">OpenGov</a> on
+								Polkadot PRs were
+								merged, promising a new era of interoperability and democratization on Polkadot. On
+								April 5,
+								XCM v3 officially went live on Kusama.</p>
+						</li>
+						<li><i class="fa-regular fa-arrow-circle-right"></i>
+							<p><a href="#decentralization-staking" class="scroll-to">Nomination pool</a> stake surpassed
+								3M DOT with
+								108 active pools and 8K+ pool members on April 4. Minimum active stake for nominator
+								staking
+								(the threshold to begin receiving staking rewards) rose exponentially past 300
+								DOT.</p>
+						</li>
+						<li><i class="fa-regular fa-arrow-circle-right"></i>
+							<p>73.2% of <a href="#governance-grant" class="scroll-to">DOT treasury</a> was spent on
+								bounties.
+								Ever since OpenGov was deployed, the KSM treasury had spent 134K KSM, of which
+								50.02%
+								was
+								on big spender track.</p>
+						</li>
+						<li><i class="fa-regular fa-arrow-circle-right"></i>
+							<p>The Web3 Foundation Grants Program surpassed
+								the <a href="#governance-grant" class="scroll-to">500 project milestone</a>.</p>
+						</li>
+						<li><i class="fa-regular fa-arrow-circle-right"></i>
+							<p>There were 42 <a href="#parachain" class="scroll-to">parachains</a> on Polkadot and 45
+								on Kusama by the end of Q1. Subsocial was the third parachain after KILT and
+								Zeitgeist
+								to
+								successfully migrate from Kusama to Polkadot.</p>
+						</li>
+						<li><i class="fa-regular fa-arrow-circle-right"></i>
+							<p>Moonbeam continued to be the most vibrant
+								<a href="#defi-economy" class="scroll-to">DeFi parachain</a>, with StellaSwap as the
+								biggest DEX player in terms of TVL. Acala
+								topped
+								the
+								lending segment but fell considerably in lending and liquid staking due to whale
+								movements.</p>
+						</li>
+						<li><i class="fa-regular fa-arrow-circle-right"></i>
+							<p>Singular’s number one position in terms of
+								<a href="#nft" class="scroll-to">NFT</a> sales volume might not sustain into Q2 as RMRK
+								announced their migration into
+								EVM
+								and
+								their decision to phase out Singular on Kusama.</p>
+						</li>
+						<li><i class="fa-regular fa-arrow-circle-right"></i>
+							<p>Total number of <a href="#web3" class="scroll-to">WASM smart contracts</a> landed
+								at 2,577, among which 2,551 (98.99%) were written in ink!. Aleph Zero became the
+								second
+								after Shiden to bring ink! and WASM smart contracts to mainnet on March 29.
+								SubWallet is
+								by
+								far the only Polkadot wallet that supports ink! token standards (PSP-22 &
+								PSP-34).</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.section-key-takeaways -->
+
+	<div class="section section-ecosystem-overview" id="ecosystem-overview">
+		<div class="section-shape shape-group-grid">
+			<img src="../assets/images/report/shapes/shape-grid.png" loading="lazy" alt="Shape" width="1611"
+			     height="376"/>
+
+			<div class="section-shape shape-cone">
+				<img class="move-vertical-reversed" src="../assets/images/report/shapes/shape-cone.png"
+				     loading="lazy"
+				     alt="Shape" width="180" height="180"/>
+			</div>
+			<div class="section-shape shape-ring move-vertical">
+				<img src="../assets/images/report/shapes/shape-ring.png" loading="lazy" alt="Shape" width="110"
+				     height="131"/>
+			</div>
+			<div class="section-shape shape-02">
+				<img class="move-vertical" src="../assets/images/report/shapes/satellite3.png" alt="Shape"
+				     loading="lazy" width="142" height="142"/>
+			</div>
+		</div>
+		<div class="section-content">
+			<div class="section-header">
+				<div class="image-group shape-group-box-grid">
+					<div class="main-image">
+						<img loading="lazy" src="../assets/images/report/shapes/box-grid.png" alt="Shape"
+						     width="1462"
+						     height="516">
+					</div>
+					<div class="section-shape shape-ball move-vertical-reversed">
+						<img src="../assets/images/shapes/shape-ball.png" alt="Shape" loading="lazy" width="150"
+						     height="150"/>
+					</div>
+					<div class="section-shape shape-cone move-vertical-reversed">
+						<img src="../assets/images/shapes/shape-cone.png" alt="Shape" loading="lazy" width="190"
+						     height="190"/>
+					</div>
+					<div class="section-shape shape-dot move-vertical">
+						<img src="../assets/images/shapes/shape-dot-02.png" alt="Polkadot" loading="lazy"
+						     width="213"
+						     height="206"/>
+					</div>
+					<div class="section-shape shape-satellite-04">
+						<img loading="lazy" src="../assets/images/report/shapes/satellite4.png" alt="Shape"
+						     width="150"
+						     height="150" class="move-vertical">
+					</div>
+				</div>
+				<h2 class="section-top-title">Ecosystem Overview</h2>
+			</div>
+			<div class="container">
+				<div id="financial-status-dev-activity" class="block-text">
+					<h3 class="heading">Financial Status & Development Activity</h3>
+					<div class="text-wrap">
+						<div class="text">
+							<p>Both development activities and token prices of DOT and KSM enjoyed a sharp rise
+								after
+								the New Year break, and both shared quite the same pattern throughout Q1 2023.
+								Deviations appeared in late February and March as development activities remained
+								consistent while DOT and KSM prices spiraled down to the quarter’s bottom. The reason
+								for the price fall might have been a
+								series of macroeconomic events: US regulators’ <a
+									href="https://finance.yahoo.com/news/u-regulators-warn-banks-alert-150845781.html"
+									target="_blank"
+									rel="nofollow">warning statement</a>
+								for banks on risk
+								management of crypto asset funding, Silvergate’s <a
+									href="https://www.reuters.com/technology/crypto-focused-bank-silvergate-plans-wind-down-operations-2023-03-08/"
+									target="_blank"
+									rel="nofollow">shutdown</a> and
+								Silicon Valley Bank
+								(SVB)’s <a
+									href="https://www.reuters.com/business/finance/global-markets-banks-wrapup-1-2023-03-10/"
+									target="_blank" rel="nofollow">collapse</a>.
+							</p>
+							<p>Starting March 10, however, along with the recovery of the whole crypto space, DOT
+								and
+								KSM prices bounced back roughly 30%. Development activities also shot up and peaked at
+								90.27 points in this period.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="block-report-chart">
+					<div class="section-shape shape-blur-circle shape-position-tl"></div>
+					<div class="section-shape shape-blur-circle shape-position-mr"></div>
+					<div class="block-content">
+						<h3 class="block-chart-heading">Token Price vs. Development Activity</h3>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="price-dev-act"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Source: Santiment</p>
+								<p>Note: Development activities counted by GitHub events happening on Parity Tech's
+									public repos.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block-text">
+					<div class="text">
+						<p>
+							Note that development activities here are counted by <a
+							href="https://docs.GitHub.com/en/rest/activity/events?apiVersion=2022-11-28"
+							target="_blank"
+							rel="nofollow">GitHub events</a>
+							happening on Parity
+							Technologies’ public repositories, meaning activities on the Polkadot core protocol
+							layer
+							only rather than the vast ecosystem. At the core, daily active developers reached an
+							all-time
+							high of 175 on March 23 and averaged 153 in Q1 2023, a steady 10.04%
+							quarter-to-quarter
+							growth.
+						</p>
+					</div>
+				</div>
+				<div class="block-report-chart">
+					<div class="section-shape shape-blur-circle shape-position-ml pink"></div>
+					<div class="section-shape shape-blur-circle shape-position-tr purple"></div>
+					<div class="block-content">
+						<h3 class="block-chart-heading">Polkadot Core Daily Active Developers Reached All-Time High
+							In
+							Q1 2023</h3>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="active-devs-commits"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Source: Token Terminal</p>
+								<p>Note: Active developers are defined as distinct GitHub users that made 1+
+									commits to the project's public GitHub repositories during the past 30 days.
+									Data
+									from Parity Tech’s public repos.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block-text">
+					<div class="text">
+						<p>Of course, ecosystem-wide development activities were much more remarkable. The <a
+							href="https://www.developerreport.com/developer-report"
+							target="_blank"
+							rel="nofollow">2022
+							Developer Report</a> by Electric Capital ranked Polkadot second in terms of full-time
+							developer
+							count and third in terms of total developer count as of December 15, 2022. A look at the
+							number of new GitHub repositories every quarter from Q4 2015 to Q1 2023 shed a light on
+							the
+							drastic year-over-year increase. Annual total new repos increased almost two-fold from
+							2019
+							to 2021.</p>
+					</div>
+				</div>
+				<div class="block-report-chart" style="--chart-top-spacing: 112px; --chart-bot-spacing: 100px">
+					<div class="section-shape shape-blur-circle shape-position-ml green"></div>
+					<div class="section-shape shape-blur-circle shape-position-mr blue"></div>
+					<div class="section-shape shape-blur-circle shape-position-br purple"></div>
+					<div class="block-content">
+						<h3 class="block-chart-heading">Quarterly New Repos Increased Drastically YoY In Polkadot &
+							Kusama Ecosystem</h3>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="newly-created-repo"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Source: Dotinsights, GitHub</p>
+								<p>Note: Data as of 31 March 2023. Only public repos are counted.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.section-ecosystem-overview -->
+
+	<div class="section section-decentralization-staking">
+		<div class="container">
+			<div class="block-text" id="decentralization-staking">
+				<h3 class="heading">Decentralization & Staking</h3>
+				<div class="text-wrap">
+					<div class="text">
+						<p>In Q1 2023, total DOT staked increased steadily past 600M DOT, of which around 0.3% came
+							from
+							validators and the rest from direct nominators and nomination pools. DOT staking ratio
+							fluctuated marginally in the 40%-50% range, keeping inflation and reward rate stable
+							around
+							7% and 15% respectively. Note that inflation and reward rate represent the incentives
+							given
+							to DOT holders to maintain the staking ratio around the ideal rate of 50%, balancing out
+							economic security and market liquidity. If staking ratio falls under 50%, incentives go up
+							to
+							encourage
+							staking and vice versa. More details can be found in Web3 Foundation’s
+							<a href="https://research.web3.foundation/en/latest/polkadot/overview/2-token-economics.html#inflation-model"
+							   target="_blank" rel="nofollow">token
+								economics research</a>.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="block-report-chart"
+			     style="--chart-top-spacing: 100px; --chart-bot-spacing: 100px; --chart-ratio: 35%; --chart-height: 500px;">
+				<div class="section-shape shape-blur-circle shape-position-tl"></div>
+				<div class="section-shape shape-blur-circle shape-position-ml green"></div>
+				<div class="section-shape shape-blur-circle shape-position-br"></div>
+				<div class="block-content">
+					<h3 class="block-chart-heading">Inflation & rewards rate remained stable as staking ratio
+						slightly
+						fluctuated</h3>
+					<div class="block-chart-body">
+						<div class="block-chart" data-chart-name="staking-ratio"></div>
+					</div>
+					<div class="block-chart-footer">
+						<div class="block-chart-source">
+							<p>Source: Subsquid</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="block-text">
+				<div class="text-wrap">
+					<div class="text">
+						<p>The staking ratio experienced two unusual increases due to whale movements.
+							The first increase (by 2.44 percentage points) occurred on January 24, when <a
+								href="https://polkadot.subscan.io/extrinsic/0x7074a76c4605009e9b35c71196a004495dc1f3b9d66d9a8d1afaa1ea9bdf4d70"
+								target="_blank" rel="nofollow">34M DOT</a>
+							was bonded in one single transaction. In the next era, <a
+								href="https://polkadot.subscan.io/extrinsic/0x0dd9e7ec0590bc99bbbb5b998db4f8034869aa0fe104d25d273f4f2e55e854c7"
+								target="_blank"
+								rel="nofollow">30.6M DOT</a>
+							was unbonded, causing the staking ratio to go back down. The second increase (by 1.42
+							percentage points) was on February 28. Two whales added <a
+								href="https://polkadot.subscan.io/extrinsic/0x8dfe21c3606816e4e6080f966f8371f67b496775052d8faade5ff2d91ead7737"
+								target="_blank" rel="nofollow">10.85M DOT</a>
+							and <a
+								href="https://polkadot.subscan.io/extrinsic/0x5e8da85cd6a42bde5dd6cfe18ed874441d34236d9bdb02bce64516306b92dd24"
+								target="_blank" rel="nofollow">7M DOT</a> respectively, pushing the total stake past
+							630M DOT and the staking ratio past 49%.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="block-report-chart" style="--chart-top-spacing: 100px; --chart-bot-spacing: 100px">
+				<div class="section-shape shape-blur-circle shape-position-tl purple"></div>
+				<div class="section-shape shape-blur-circle shape-position-ml"></div>
+				<div class="section-shape shape-blur-circle shape-position-mr"></div>
+				<div class="block-content">
+					<h3 class="block-chart-heading">Total Stake In Nomination Pools Surpassed 3M DOT With 8K+ Pool
+						Members</h3>
+					<div class="block-chart-body">
+						<div class="block-chart" data-chart-name="nomination-pool-staking"></div>
+					</div>
+					<div class="block-chart-footer">
+						<div class="block-chart-source">
+							<p>Source: Subsquid</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="block-text">
+				<div class="text-wrap">
+					<div class="text">
+						<p>Introduced in November 2022, nomination pool is a <a
+							href="https://wiki.polkadot.network/docs/learn-nomination-pools#nominating-vs-joining-a-pool"
+							target="_blank" rel="nofollow">more
+							user-friendly</a> alternative to direct
+							nomination and validator operation that allows staking natively and earning rewards as
+							low
+							as 1 DOT. The initiative saw steady growth throughout Q1 2023: just after the quarter
+							ended
+							on April 4, total pool stake surpassed 3M DOT with 8,302 members participating in 108
+							active
+							pools. By April 5, 72.81K DOT was paid out in rewards to pool members, 44.40% of which
+							came
+							from Talisman Pool 1 according to <a
+								href="https://polkadot.polkawatch.app/pools" target="_blank"
+								rel="nofollow">Polkawatch</a>. The remaining pools in the top 5 ranked by
+							rewards are Amforc, SubWallet Official, decentraDOT.com and ParaNodes.io.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="block-report-chart section-holder-distribution"
+			     style="--chart-top-spacing: 100px; --chart-bot-spacing: 100px">
+				<div class="section-shape shape-blur-circle shape-position-tl green"></div>
+				<div class="section-shape shape-blur-circle shape-position-br"></div>
+				<div class="block-content">
+					<div class="block-chart-group">
+						<div class="block-chart-child">
+							<h3 class="block-chart-heading">Polkadot Holder Distribution</h3>
+							<div class="block-chart-body">
+								<div class="block-chart" data-chart-name="dot-holder-distribution"
+								     data-chart-source="inline"></div>
+								<ul id="custom-legend-dot" class="block-chart-legend">
+									<li data-id="Whale Account" class="active">
+										<img src="../assets/images/report/q1-2023/whale-acc.png" loading="lazy"
+										     alt="Whale Account" width="32" height="32">
+										<div class="acc-info">
+											<div class="acc-name">
+												Whale Account
+												<span class="hint--top-left hint--large hint--blue"
+												      aria-label="Whale account: An account that holds tokens (DOT) that make up more than 0.1% of the total supply.">
+													<img src="../assets/images/report/q1-2023/tooltip-icon.png"
+													     alt="Tooltip" width="16" height="16">
+												</span>
+											</div>
+											<div class="acc-count">145</div>
+										</div>
+									</li>
+									<li data-id="Dolphin Account">
+										<img src="../assets/images/report/q1-2023/dolphin-acc.png" loading="lazy"
+										     alt="Dolphin Account" width="32" height="32">
+										<div class="acc-info">
+											<div class="acc-name">
+												Dolphin Account
+												<span class="hint--top-left hint--large hint--blue"
+												      aria-label="Dolphin account: An account that holds tokens (DOT) that make up between 0.01% and 0.1% of the total supply.">
+													<img src="../assets/images/report/q1-2023/tooltip-icon.png"
+													     alt="Tooltip" width="16" height="16">
+												</span>
+											</div>
+											<div class="acc-count">591</div>
+										</div>
+									</li>
+									<li data-id="Fish Account">
+										<img src="../assets/images/report/q1-2023/fish-acc.png" loading="lazy"
+										     alt="Fish Account" width="32" height="32">
+										<div class="acc-info">
+											<div class="acc-name">
+												Fish Account
+												<span class="hint--top-left hint--large hint--blue"
+												      aria-label="Fish account: An account that holds tokens (DOT) that make up between 0.01% and 0.000001% of the total supply.">
+													<img src="../assets/images/report/q1-2023/tooltip-icon.png"
+													     alt="Tooltip" width="16" height="16">
+												</span>
+											</div>
+											<div class="acc-count">337,792</div>
+										</div>
+									</li>
+									<li data-id="Shrimp Account">
+										<img src="../assets/images/report/q1-2023/shrimp-acc.png" loading="lazy"
+										     alt="Shrimp Account" width="32" height="32">
+										<div class="acc-info">
+											<div class="acc-name">
+												Shrimp Account
+												<span class="hint--top-left hint--large hint--blue"
+												      aria-label="Shrimp account: An account that holds tokens (DOT) that make up less than 0.000001% of the total supply.">
+													<img src="../assets/images/report/q1-2023/tooltip-icon.png"
+													     alt="Tooltip" width="16" height="16">
+												</span>
+											</div>
+											<div class="acc-count">745,022</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="block-chart-child">
+							<h3 class="block-chart-heading">Kusama Holder Distribution</h3>
+							<div class="block-chart-body">
+								<div class="block-chart" data-chart-name="ksm-holder-distribution"
+								     data-chart-source="inline"></div>
+								<ul id="custom-legend-ksm" class="block-chart-legend">
+									<li data-id="Whale Account" class="active">
+										<img src="../assets/images/report/q1-2023/whale-acc.png" loading="lazy"
+										     alt="Whale Account" width="32" height="32">
+										<div class="acc-info">
+											<div class="acc-name">
+												Whale Account
+												<span class="hint--top-left hint--large hint--blue"
+												      aria-label="Whale account: An account that holds tokens (DOT) that make up more than 0.1% of the total supply.">
+													<img src="../assets/images/report/q1-2023/tooltip-icon.png"
+													     alt="Tooltip" width="16" height="16">
+												</span>
+											</div>
+											<div class="acc-count">176</div>
+										</div>
+									</li>
+									<li data-id="Dolphin Account">
+										<img src="../assets/images/report/q1-2023/dolphin-acc.png" loading="lazy"
+										     alt="Dolphin Account" width="32" height="32">
+										<div class="acc-info">
+											<div class="acc-name">
+												Dolphin Account
+												<span class="hint--top-left hint--large hint--blue"
+												      aria-label="Dolphin account: An account that holds tokens (DOT) that make up between 0.01% and 0.1% of the total supply.">
+													<img src="../assets/images/report/q1-2023/tooltip-icon.png"
+													     alt="Tooltip" width="16" height="16">
+												</span>
+											</div>
+											<div class="acc-count">547</div>
+										</div>
+									</li>
+									<li data-id="Fish Account">
+										<img src="../assets/images/report/q1-2023/fish-acc.png" loading="lazy"
+										     alt="Fish Account" width="32" height="32">
+										<div class="acc-info">
+											<div class="acc-name">
+												Fish Account
+												<span class="hint--top-left hint--large hint--blue"
+												      aria-label="Fish account: An account that holds tokens (DOT) that make up between 0.01% and 0.000001% of the total supply.">
+													<img src="../assets/images/report/q1-2023/tooltip-icon.png"
+													     alt="Tooltip" width="16" height="16">
+												</span>
+											</div>
+											<div class="acc-count">94,549</div>
+										</div>
+									</li>
+									<li data-id="Shrimp Account">
+										<img src="../assets/images/report/q1-2023/shrimp-acc.png" loading="lazy"
+										     alt="Shrimp Account" width="32" height="32">
+										<div class="acc-info">
+											<div class="acc-name">
+												Shrimp Account
+												<span class="hint--top-left hint--large hint--blue"
+												      aria-label="Shrimp account: An account that holds tokens (DOT) that make up less than 0.000001% of the total supply.">
+													<img src="../assets/images/report/q1-2023/tooltip-icon.png"
+													     alt="Tooltip" width="16" height="16">
+												</span>
+											</div>
+											<div class="acc-count">192,371</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="block-chart-footer">
+						<div class="block-chart-source">
+							<p>Source: Subscan</p>
+							<p>Note: Data as of 5 April 2023.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="block-text">
+				<div class="text-wrap">
+					<div class="text">
+						<p>According to data from Subscan, total holders went well above 1M for DOT and 280K for KSM
+							in
+							Q1 2023. Among holders, whales (defined as accounts that hold more than 0.1% of the
+							total
+							token supply) possessed 869M DOT and 9.65M KSM, of which 173.02M DOT and 848.14K KSM were
+							kept
+							in system accounts. Since <a
+								href="https://wiki.polkadot.network/docs/learn-account-advanced#system-accounts"
+								target="_blank"
+								rel="nofollow">system accounts</a> are not operated by
+							users
+							but by the systems for
+							specific purposes such as holding treasury, crowdloan funds and nomination pool stake,
+							their
+							fund movements are expected and their impacts controlled.
+						</p>
+						<p>This left the token ratio held by “real” whales to be 53.15% for DOT and 66.23% for
+							KSM,
+							which were still relatively high compared to <a href="https://etherscan.io/accounts"
+							                                                target="_blank"
+							                                                rel="nofollow">ETH</a> (38.78%) and <a
+								href="https://bitinfocharts.com/top-100-richest-bitcoin-addresses.html"
+								target="_blank"
+								rel="nofollow">BTC</a> (10.04%). Though natural and
+							normal in the real world, wealth clusterization goes against the decentralization ethos
+							of
+							Web3 and might present risks of security breach, governance disruption (especially in
+							<a href="https://wiki.polkadot.network/docs/learn-opengov" target="_blank"
+							   rel="nofollow">OpenGov</a> model) and market manipulation. The extraordinary peak in
+							staking mentioned in the
+							previous section is one example of how much whale movements can affect the system.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="section-governance-grant" id="governance-grant">
+				<div class="section-content">
+					<div class="block-text">
+						<h3 class="heading">Governance & Grant</h3>
+					</div>
+					<div class="block-report-chart" style="--chart-top-spacing: 30px; --chart-bot-spacing: 100px">
+						<div class="section-shape shape-blur-circle shape-position-tl green"></div>
+						<div class="section-shape shape-blur-circle shape-position-br"></div>
+						<div class="block-content">
+							<div class="block-chart-group">
+								<div class="block-chart-child">
+									<h3 class="block-chart-heading">Kusama Treasury Allocations by Category</h3>
+									<div class="block-chart-body">
+										<div class="block-chart" data-chart-name="ku-net-alloca"
+										     data-chart-source="inline"></div>
+									</div>
+								</div>
+								<div class="block-chart-child">
+									<h3 class="block-chart-heading">Polkadot Treasury Allocations by Category</h3>
+									<div class="block-chart-body">
+										<div class="block-chart" data-chart-name="pol-net-alloca"
+										     data-chart-source="inline"></div>
+									</div>
+								</div>
+							</div>
+							<div class="block-chart-footer">
+								<div class="block-chart-source">
+									<p>Source: doTreasury, Parity</p>
+									<p>Note: Data as of 31 March 2023.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="block-text">
+						<div class="text-wrap">
+							<div class="text">
+								<p>By the end of Q1 2023, DOT treasury sat at 44.55M DOT ($267.19M) and KSM treasury
+									at
+									324.68K
+									KSM ($10.82M). Spending by category varied significantly between Polkadot and
+									Kusama
+									treasuries. Five bounties accounted for 73.13% of DOT treasury expenditures,
+									among
+									which
+									four
+									were active in Q1: <a href="https://www.dotreasury.com/dot/bounties/10"
+									                      target="_blank"
+									                      rel="nofollow">Polkadot Pioneers Prize</a> (993K DOT),
+									<a
+										href="https://www.dotreasury.com/dot/bounties/11"
+										target="_blank"
+										rel="nofollow">Anti-Scam Bounty</a> (7.5K DOT), <a
+										href="https://www.dotreasury.com/dot/bounties/13"
+										target="_blank"
+										rel="nofollow">ORML
+										Security Bounty</a> (100K DOT) and <a
+										href="https://www.dotreasury.com/dot/bounties/17"
+										target="_blank"
+										rel="nofollow">Events Community Bounty</a> (1M
+									DOT). Meanwhile, infrastructure
+									deployment ranked first in KSM treasury allocation at 31%, followed by
+									software
+									development (12.2%), liquidity provision (13.5%) and others (13%).
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="block-report-chart" style="--chart-top-spacing: 100px; --chart-bot-spacing: 100px">
+						<div class="section-shape shape-blur-circle shape-position-ml purple"></div>
+						<div class="section-shape shape-blur-circle shape-position-tr green"></div>
+						<div class="section-shape shape-blur-circle shape-position-mr green"></div>
+						<div class="block-content">
+							<h3 class="block-chart-heading">Treasury spending dominated kusama openGov
+								Referenda</h3>
+							<div class="block-chart-body">
+								<div class="block-chart" data-chart-name="spending-dominated-kusama"
+								     data-chart-source="inline"></div>
+							</div>
+							<div class="block-chart-footer">
+								<div class="block-chart-source">
+									<p>Source: SubSquare</p>
+									<p>Note: Data as of 3 April 2023.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="block-text">
+						<div class="text-wrap">
+							<div class="text">
+								<p>Since November 2022, OpenGov had been deployed on Kusama, meaning that the
+									council was
+									dissolved and every decision made on the Kusama network had to go through
+									referenda
+									to
+									be voted by the community. With 6 out of 13 referendum tracks listed as subcategories,
+									treasury spending unsurprisingly dominated OpenGov referenda, taking up 93 out of 144 proposals (64.58%),
+									In total, the community had
+									approved
+									spending 231,403 KSM from the treasury, of which 47.9% (60,601 KSM) was on big
+									spender
+									track.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="block-report-chart" style="--chart-top-spacing: 100px; --chart-bot-spacing: 100px">
+						<div class="section-shape shape-blur-circle shape-position-ml"></div>
+						<div class="section-shape shape-blur-circle shape-position-tr green"></div>
+						<div class="section-shape shape-blur-circle shape-position-mr green"></div>
+						<div class="block-content">
+							<h3 class="block-chart-heading">Kusama OpenGov Average Turnout By Track Remarkably
+								Low</h3>
+							<div class="block-chart-body">
+								<div class="block-chart" data-chart-name="open-gov-average-turnout"
+								     data-chart-source="inline"></div>
+							</div>
+							<div class="block-chart-footer">
+								<div class="block-chart-source">
+									<p>Source: SubSquare, Subscan</p>
+									<p>Note: Data as of 3 April 2023. Voter turnout is calculated as total amount of token voted without conviction -
+										including aye, nay and abstain votes - divided by total token issuance.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="block-text">
+						<div class="text-wrap">
+							<div class="text">
+								<p>Among 40 unapproved referenda (including rejected, canceled and timed-out ones), an
+									astounding 17 were called for rejection by the proposer due to technical errors.
+									This 42.5% ratio means that many submitters struggled with the proposal submission
+									process. Thus, an emphasis on education and communication about OpenGov is much
+									needed,
+									especially when average voter turnout (calculated as total amount of token voted without conviction -
+									including aye, nay and abstain votes - divided by total token issuance) in Q1 was
+									remarkably low. Alarmingly, the
+									treasury
+									tracks were among the lowest turnout tracks, which could pose risks of treasury
+									misuse
+									and
+									depletion – a concern that some community members have raised recently (<a
+										href="https://twitter.com/DotsamaApe/status/1641967416396722178"
+										target="_blank"
+										rel="nofollow">1</a>,
+									<a href="https://twitter.com/AdamSteeber1/status/1641988218127015936"
+									   target="_blank" rel="nofollow">2</a>,
+									<a
+										href="https://www.reddit.com/r/dot/comments/127yx1h/polkadot_news_the_kusama_treasury_is_in_danger/?utm_source=share&utm_medium=ios_app&utm_name=iossmf"
+										target="_blank"
+										rel="nofollow">3</a>).
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="block-report-chart" style="--chart-top-spacing: 100px; --chart-bot-spacing: 100px">
+						<div class="section-shape shape-blur-circle shape-position-ml green"></div>
+						<div class="section-shape shape-blur-circle shape-position-tr"></div>
+						<div class="section-shape shape-blur-circle shape-position-mr purple"></div>
+						<div class="block-content">
+							<h3 class="block-chart-heading">Web3 foundation Grants program passed 500 grants
+								signed</h3>
+							<div class="block-chart-body">
+								<div class="block-chart" data-chart-name="web3-foundation-grants"
+								     data-chart-source="inline"></div>
+							</div>
+							<div class="block-chart-footer">
+								<div class="block-chart-source">
+									<p>Source: Web3 Foundation</p>
+									<p>Note: Data as of 3 April 2023.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="block-text">
+						<div class="text-wrap">
+							<div class="text">
+								<p>Besides the Polkadot and Kusama treasuries, the Web3 Foundation Grants Program had
+									also
+									been consistently awarding grants on a quarterly basis for teams looking to
+									build
+									Web3
+									projects. Stepping into its fifth year, the program marked a crucial milestone
+									of
+									surpassing 500 projects whose grantees came from more than 50 countries around
+									the
+									world. For more information about the Web3 Foundation Grants Program, check out
+									this
+									<a
+										href="https://web3.foundation/grants/" target="_blank"
+										rel="nofollow">page</a>.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="section-shape shape-group-grid">
+					<img src="../assets/images/report/shapes/shape-grid-2.png" loading="lazy" alt="Shape"
+					     width="1920"
+					     height="653">
+					<div class="section-shape shape-cube">
+						<img class="move-vertical-reversed" src="../assets/images/report/shapes/shape-cube.png"
+						     loading="lazy"
+						     alt="Shape" width="109" height="123">
+					</div>
+					<div class="section-shape shape-smooth-ring">
+						<img class="move-vertical" src="../assets/images/report/shapes/shape-smooth-ring.png"
+						     loading="lazy"
+						     alt="Shape" width="139" height="133">
+					</div>
+					<div class="section-shape shape-02">
+						<img class="move-vertical" src="../assets/images/report/shapes/satellite3.png" alt="Shape"
+						     loading="lazy" width="150" height="150">
+					</div>
+				</div>
+			</div>
+			<!-- /.section-governance-grant -->
+
+			<div class="section section-parachain" id="parachain">
+				<div class="section-content">
+					<div class="block-text">
+						<h3 class="heading">Parachain</h3>
+					</div>
+
+					<div class="block-report-chart" style="--chart-top-spacing: 30px; --chart-bot-spacing: 100px">
+						<div class="section-shape shape-blur-circle shape-position-ml green"></div>
+						<div class="section-shape shape-blur-circle shape-position-mr pink"></div>
+						<div class="block-content">
+							<h3 class="block-chart-heading">Polkadot & kusama chains with more than 20K token
+								holders</h3>
+							<div class="block-chart-body">
+								<div class="block-chart" data-chart-name="chain-with-more-token-holders"
+								     data-chart-source="inline"></div>
+							</div>
+							<div class="block-chart-footer">
+								<div class="block-chart-source">
+									<p>Source: Subscan</p>
+									<p>Note: Data as of 4 April 2023.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="block-text">
+						<div class="text-wrap">
+							<div class="text">
+								<p>Q1 2023 marked the <a
+									href="https://twitter.com/Polkadot/status/1636478519864598528"
+									target="_blank"
+									rel="nofollow">one-year anniversary</a> of parachain on
+									Polkadot and approximately a
+									year and a half on Kusama. By March-end, 42 parachains on Polkadot and 45 on
+									Kusama
+									were running, locking 133M DOT and 3M KSM respectively. Moonbeam became the first
+									parachain
+									to
+									reach 1M holders, and surpassed Polkadot by a small margin to become the number
+									one
+									chain in terms of token holders, possibly due to Moonbeam’s EVM compatibility
+									that
+									is easily approachable by EVM users. The 21 chains represented in the chart
+									below
+									(common good parachains not included) were fairly equally divided between Polkadot
+									chains
+									(9) and Kusama chains (12).</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="block-report-chart" style="--chart-top-spacing: 100px; --chart-bot-spacing: 100px">
+						<div class="section-shape shape-blur-circle shape-position-tl green"></div>
+						<div class="section-shape shape-blur-circle shape-position-br"></div>
+						<div class="block-content">
+							<h3 class="block-chart-heading">XCM Activities On Parachains By Transfer Count And
+								Channel
+								Count</h3>
+							<div class="block-chart-body">
+								<div class="block-chart" data-chart-name="xcm-activities-on-parachains"
+								     data-chart-source="inline"></div>
+							</div>
+							<div class="block-chart-footer">
+								<div class="block-chart-source">
+									<p>Source: Polkaholic</p>
+									<p>Note: Data as of 4 April 2023.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="block-text">
+						<div class="text-wrap">
+							<div class="text">
+								<p>Among the running parachains, 21 on Polkadot and 26 Kusama were actively engaged
+									in
+									XCM with 96 and 157 channels respectively. DeFi was undoubtedly the most widely
+									used
+									application of XCM, as the top chains with highest number of inbound and
+									outbound
+									transfers were chains heavily involved in DeFi activities. Bifrost Kusama and
+									Karura
+									were the most active channel pairs, with total transfers (41,479 transfers) more
+									than doubling the next pair in rank Moonbeam and Acala (15,206 transfers). Interestingly,
+									more opened XCM channels did not necessarily mean higher transfer counts.
+									The
+									introduction of <a
+										href="https://twitter.com/rphmeier/status/1643302806470664193"
+										target="_blank"
+										rel="nofollow">XCM v3 on Kusama</a> on April 5 would promise a more
+									bustling quarter of XCM
+									activities in Q2.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="row row-table-wrap row-table-top-10-xcm">
+						<div class="col-lg-6">
+							<div class="block-report-table table-top-10-xcm-channels-transfer-count"
+							     style=" --block-top-spacing: 100px;--block-bottom-spacing: 0;">
+								<div class="section-shape shape-blur-circle shape-position-ml green"></div>
+								<div class="section-shape shape-blur-circle shape-position-tc purple"></div>
+								<div class="block-content">
+									<h3 class="block-table-heading"
+									    style="background-image: url('../assets/images/xcm-channels/xcm-channel-top-bg-01.png');">
+										Top 10 XCM Channels On Polkadot <br>By Transfer
+										Count</h3>
+									<div class="block-table-body">
+										<table class="block-table-widget" id="table-top-10-xcm-on-polkadot">
+											<thead>
+											<tr>
+												<th>
+													<div class="th-chain">
+														<span>Origin Chain</span>
+														<span>Destination Chain</span>
+													</div>
+												</th>
+												<th>
+													<div class="th-count">
+														Transfers
+													</div>
+												</th>
+											</tr>
+											</thead>
+											<tbody>
+											<tr>
+												<td>
+													<div class="xcm-channel">
+														<img src="../assets/images/xcm-channels/moonbeam.png"
+														     alt="Moonbeam" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+														<div class="xcm-channel--info">
+															<div class="xcm-channel--name">
+																<span>Moonbeam</span>
+																<span>Acala</span>
+															</div>
+															<div class="xcm-channel--line"
+															     style="background-image: linear-gradient(90deg, #53cbc9, #ef274c);"></div>
+														</div>
+														<img src="../assets/images/xcm-channels/acala.png"
+														     alt="Acala" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+													</div>
+												</td>
+												<td>
+													<div class="xcm-channel--count">
+														8,009
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="xcm-channel">
+														<img src="../assets/images/xcm-channels/acala.png"
+														     alt="Acala" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+														<div class="xcm-channel--info">
+															<div class="xcm-channel--name">
+																<span>Acala</span>
+																<span>Moonbeam</span>
+															</div>
+															<div class="xcm-channel--line"
+															     style="background-image: linear-gradient(90deg, #ef274c, #53cbc9);"></div>
+														</div>
+														<img src="../assets/images/xcm-channels/moonbeam.png"
+														     alt="Moonbeam" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+													</div>
+												</td>
+												<td>
+													<div class="xcm-channel--count">
+														7,197
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="xcm-channel">
+														<img src="../assets/images/xcm-channels/acala.png"
+														     alt="Acala" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+														<div class="xcm-channel--info">
+															<div class="xcm-channel--name">
+																<span>Acala</span>
+																<span>Parallel</span>
+															</div>
+															<div class="xcm-channel--line"
+															     style="background-image: linear-gradient(90deg, #ef274c, #248cfb);"></div>
+														</div>
+														<img src="../assets/images/xcm-channels/parallel.png"
+														     alt="Parallel" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+													</div>
+												</td>
+												<td>
+													<div class="xcm-channel--count">
+														3,883
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="xcm-channel">
+														<img src="../assets/images/xcm-channels/interlay.png"
+														     alt="Interlay" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+														<div class="xcm-channel--info">
+															<div class="xcm-channel--name">
+																<span>Interlay</span>
+																<span>Moonbeam</span>
+															</div>
+															<div class="xcm-channel--line"
+															     style="background-image: linear-gradient(90deg, #1a0a2d, #f93f42);"></div>
+														</div>
+														<img src="../assets/images/xcm-channels/moonbeam.png"
+														     alt="Moonbeam" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+													</div>
+												</td>
+												<td>
+													<div class="xcm-channel--count">
+														3,319
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="xcm-channel">
+														<img src="../assets/images/xcm-channels/parallel.png"
+														     alt="Parallel" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+														<div class="xcm-channel--info">
+															<div class="xcm-channel--name">
+																<span>Parallel</span>
+																<span>Acala</span>
+															</div>
+															<div class="xcm-channel--line"
+															     style="background-image: linear-gradient(90deg, #248cfb, #ef274c);"></div>
+														</div>
+														<img src="../assets/images/xcm-channels/moonbeam.png"
+														     alt="Acala" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+													</div>
+												</td>
+												<td>
+													<div class="xcm-channel--count">
+														3,082
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="xcm-channel">
+														<img src="../assets/images/xcm-channels/moonbeam.png"
+														     alt="Moonbeam" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+														<div class="xcm-channel--info">
+															<div class="xcm-channel--name">
+																<span>Moonbeam</span>
+																<span>Interlay</span>
+															</div>
+															<div class="xcm-channel--line"
+															     style="background-image: linear-gradient(90deg, #53cbc9, #1a0a2d);"></div>
+														</div>
+														<img src="../assets/images/xcm-channels/interlay.png"
+														     alt="Interlay" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+													</div>
+												</td>
+												<td>
+													<div class="xcm-channel--count">
+														2,543
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="xcm-channel">
+														<img src="../assets/images/xcm-channels/moonbeam.png"
+														     alt="Moonbeam" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+														<div class="xcm-channel--info">
+															<div class="xcm-channel--name">
+																<span>Moonbeam</span>
+																<span>Parallel</span>
+															</div>
+															<div class="xcm-channel--line"
+															     style="background-image: linear-gradient(90deg, #53cbc9, #248cfb);"></div>
+														</div>
+														<img src="../assets/images/xcm-channels/parallel.png"
+														     alt="Parallel" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+													</div>
+												</td>
+												<td>
+													<div class="xcm-channel--count">
+														2,029
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="xcm-channel">
+														<img src="../assets/images/xcm-channels/parallel.png"
+														     alt="Parallel" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+														<div class="xcm-channel--info">
+															<div class="xcm-channel--name">
+																<span>Parallel</span>
+																<span>Acala</span>
+															</div>
+															<div class="xcm-channel--line"
+															     style="background-image: linear-gradient(90deg, #248cfb, #53cbc9);"></div>
+														</div>
+														<img src="../assets/images/xcm-channels/moonbeam.png"
+														     alt="Moonbeam" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+													</div>
+												</td>
+												<td>
+													<div class="xcm-channel--count">
+														1,857
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="xcm-channel">
+														<img src="../assets/images/xcm-channels/moonbeam.png"
+														     alt="Moonbeam" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+														<div class="xcm-channel--info">
+															<div class="xcm-channel--name">
+																<span>Moonbeam</span>
+																<span>Bifrost</span>
+															</div>
+															<div class="xcm-channel--line"
+															     style="background-image: linear-gradient(90deg, #53cbc9, #248cfb);"></div>
+														</div>
+														<img src="../assets/images/xcm-channels/bifrost.png"
+														     alt="Bifrost" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+													</div>
+												</td>
+												<td>
+													<div class="xcm-channel--count">
+														1,735
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="xcm-channel">
+														<img src="../assets/images/xcm-channels/acala.png"
+														     alt="Acala" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+														<div class="xcm-channel--info">
+															<div class="xcm-channel--name">
+																<span>Acala</span>
+																<span>Astar</span>
+															</div>
+															<div class="xcm-channel--line"
+															     style="background-image: linear-gradient(90deg, #ef274c, #004bff);"></div>
+														</div>
+														<img src="../assets/images/xcm-channels/astar.png"
+														     alt="Astar" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+													</div>
+												</td>
+												<td>
+													<div class="xcm-channel--count">
+														1,720
+													</div>
+												</td>
+											</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="block-table-footer">
+										<div class="block-table-source">
+											<p>Source: Polkaholic</p>
+											<p>Note: Data as of 4 April 2023.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="block-report-table table-top-10-xcm-channels-transfer-count"
+							     style=" --block-top-spacing: 100px;--block-bottom-spacing: 100px;">
+								<div class="section-shape shape-blur-circle shape-position-tr green"></div>
+								<div class="section-shape shape-blur-circle shape-position-br purple"></div>
+								<div class="block-content">
+									<h3 class="block-table-heading"
+									    style="background-image: url('../assets/images/xcm-channels/xcm-channel-top-bg-02.png');">
+										Top 10 XCM Channels On Kusama <br>By Transfer
+										Count</h3>
+									<div class="block-table-body">
+										<table class="block-table-widget" id="table-top-10-xcm-on-kusama">
+											<thead>
+											<tr>
+												<th>
+													<div class="th-chain">
+														<span>Origin Chain</span>
+														<span>Destination Chain</span>
+													</div>
+												</th>
+												<th>
+													<div class="th-count">
+														Transfers
+													</div>
+												</th>
+											</tr>
+											</thead>
+											<tbody>
+											<tr>
+												<td>
+													<div class="xcm-channel">
+														<img src="../assets/images/xcm-channels/bifrost.png"
+														     alt="Bifrost" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+														<div class="xcm-channel--info">
+															<div class="xcm-channel--name">
+																<span>Bifrost</span>
+																<span>Karura</span>
+															</div>
+															<div class="xcm-channel--line"
+															     style="background-image: linear-gradient(90deg, #004bff, #f93f42);"></div>
+														</div>
+														<img src="../assets/images/xcm-channels/karura.png"
+														     alt="Karura" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+													</div>
+												</td>
+												<td>
+													<div class="xcm-channel--count">
+														23,515
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="xcm-channel">
+														<img src="../assets/images/xcm-channels/karura.png"
+														     alt="Karura" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+														<div class="xcm-channel--info">
+															<div class="xcm-channel--name">
+																<span>Karura</span>
+																<span>Bifrost</span>
+															</div>
+															<div class="xcm-channel--line"
+															     style="background-image: linear-gradient(90deg, #f93f42, #004bff);"></div>
+														</div>
+														<img src="../assets/images/xcm-channels/bifrost.png"
+														     alt="Bifrost" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+													</div>
+												</td>
+												<td>
+													<div class="xcm-channel--count">
+														17,964
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="xcm-channel">
+														<img src="../assets/images/xcm-channels/kintsugi.png"
+														     alt="Kintsugi" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+														<div class="xcm-channel--info">
+															<div class="xcm-channel--name">
+																<span>Kintsugi</span>
+																<span>Moonriver</span>
+															</div>
+															<div class="xcm-channel--line"
+															     style="background-image: linear-gradient(90deg, #041334, #f2b705);"></div>
+														</div>
+														<img src="../assets/images/xcm-channels/moonriver.png"
+														     alt="Moonriver" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+													</div>
+												</td>
+												<td>
+													<div class="xcm-channel--count">
+														3,699
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="xcm-channel">
+														<img src="../assets/images/xcm-channels/moonriver.png"
+														     alt="Moonriver" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+														<div class="xcm-channel--info">
+															<div class="xcm-channel--name">
+																<span>Moonriver</span>
+																<span>Bifrost</span>
+															</div>
+															<div class="xcm-channel--line"
+															     style="background-image: linear-gradient(90deg, #f2b705, #004bff);"></div>
+														</div>
+														<img src="../assets/images/xcm-channels/bifrost.png"
+														     alt="Bifrost" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+													</div>
+												</td>
+												<td>
+													<div class="xcm-channel--count">
+														3,402
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="xcm-channel">
+														<img src="../assets/images/xcm-channels/karura.png"
+														     alt="Karura" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+														<div class="xcm-channel--info">
+															<div class="xcm-channel--name">
+																<span>Karura</span>
+																<span>Statemine</span>
+															</div>
+															<div class="xcm-channel--line"
+															     style="background-image: linear-gradient(90deg, #f93f42, #7757b6);"></div>
+														</div>
+														<img src="../assets/images/xcm-channels/statemine.png"
+														     alt="Statemine" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+													</div>
+												</td>
+												<td>
+													<div class="xcm-channel--count">
+														3,333
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="xcm-channel">
+														<img src="../assets/images/xcm-channels/kintsugi.png"
+														     alt="Kintsugi" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+														<div class="xcm-channel--info">
+															<div class="xcm-channel--name">
+																<span>Kintsugi</span>
+																<span>Karura</span>
+															</div>
+															<div class="xcm-channel--line"
+															     style="background-image: linear-gradient(90deg, #041334, #f93f42);"></div>
+														</div>
+														<img src="../assets/images/xcm-channels/karura.png"
+														     alt="Karura" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+													</div>
+												</td>
+												<td>
+													<div class="xcm-channel--count">
+														3,252
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="xcm-channel">
+														<img src="../assets/images/xcm-channels/statemine.png"
+														     alt="Statemine" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+														<div class="xcm-channel--info">
+															<div class="xcm-channel--name">
+																<span>Statemine</span>
+																<span>Moonriver</span>
+															</div>
+															<div class="xcm-channel--line"
+															     style="background-image: linear-gradient(90deg, #7757b6, #f2b705);"></div>
+														</div>
+														<img src="../assets/images/xcm-channels/moonriver.png"
+														     alt="Moonriver" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+													</div>
+												</td>
+												<td>
+													<div class="xcm-channel--count">
+														3,220
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="xcm-channel">
+														<img src="../assets/images/xcm-channels/karura.png"
+														     alt="Karura" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+														<div class="xcm-channel--info">
+															<div class="xcm-channel--name">
+																<span>Karura</span>
+																<span>Kintsugi</span>
+															</div>
+															<div class="xcm-channel--line"
+															     style="background-image: linear-gradient(90deg, #f93f42, #041334);"></div>
+														</div>
+														<img src="../assets/images/xcm-channels/kintsugi.png"
+														     alt="Kintsugi" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+													</div>
+												</td>
+												<td>
+													<div class="xcm-channel--count">
+														2,973
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="xcm-channel">
+														<img src="../assets/images/xcm-channels/karura.png"
+														     alt="Karura" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+														<div class="xcm-channel--info">
+															<div class="xcm-channel--name">
+																<span>Karura</span>
+																<span>Moonriver</span>
+															</div>
+															<div class="xcm-channel--line"
+															     style="background-image: linear-gradient(90deg, #f93f42, #f2b705);"></div>
+														</div>
+														<img src="../assets/images/xcm-channels/moonriver.png"
+														     alt="Moonriver" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+													</div>
+												</td>
+												<td>
+													<div class="xcm-channel--count">
+														2,726
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="xcm-channel">
+														<img src="../assets/images/xcm-channels/karura.png"
+														     alt="Karura" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+														<div class="xcm-channel--info">
+															<div class="xcm-channel--name">
+																<span>Karura</span>
+																<span>Khala</span>
+															</div>
+															<div class="xcm-channel--line"
+															     style="background-image: linear-gradient(90deg, #f93f42, #03ffff);"></div>
+														</div>
+														<img src="../assets/images/xcm-channels/khala.png"
+														     alt="Khaka" class="xcm-channel--thumbnail"
+														     loading="lazy" width="56" height="56"/>
+													</div>
+												</td>
+												<td>
+													<div class="xcm-channel--count">
+														2,624
+													</div>
+												</td>
+											</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="block-table-footer">
+										<div class="block-table-source">
+											<p>Source: Polkaholic</p>
+											<p>Note: Data as of 4 April 2023.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="block-text">
+						<div class="text-wrap">
+							<div class="text">
+								<p>In terms of chain fees, Phala’s canary network Khala topped the chart with
+									$7.67K, more than doubling the runner-up Astar at $3.78K and the second
+									runner-up
+									Bit.Country Pioneer at $3.13K. In Q1, Khala had about 23K+ workers
+									contributing
+									to the computing power and constantly claiming rewards, hence the high total
+									transaction
+									fees.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="block-report-chart" style="--chart-top-spacing: 100px; --chart-bot-spacing: 0;">
+						<div class="section-shape shape-blur-circle shape-position-ml"></div>
+						<div class="section-shape shape-blur-circle shape-position-mr green"></div>
+						<div class="block-content">
+							<h3 class="block-chart-heading">Top 10 polkadot & kusama parachains by total chain fees
+								Q1
+								2023</h3>
+							<div class="block-chart-body">
+								<div class="block-chart" data-chart-name="top-dot-ksm-chain-fees"
+								     data-chart-source="inline"></div>
+							</div>
+							<div class="block-chart-footer">
+								<div class="block-chart-source">
+									<p>Source: Subscan, CoinGecko</p>
+									<p>Note: Data as of 31 March 2023.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!-- /.section-parachain -->
+
+		</div>
+	</div>
+	<!-- /.section-decentralization-staking -->
+
+	<div class="section section-defi-economy" id="defi-economy">
+		<div class="section-shapes">
+			<div class="section-shape shape-corner-left-top shape-radial-circle green shape-corner-blur-1"></div>
+			<div
+				class="section-shape shape-corner-right-top shape-radial-circle dark-blue shape-corner-blur-2"></div>
+			<div class="section-shape shape-corner-right-top shape-radial-circle red shape-corner-blur-3"></div>
+			<div class="section-shape section-shape-corners reverse-direction"></div>
+		</div>
+		<div class="section-content">
+			<div class="section-header">
+				<div class="image-group shape-group-box-grid">
+					<div class="main-image">
+						<img loading="lazy" src="../assets/images/report/q4-2022/defi-economy.png" alt="Shape"
+						     width="748" height="574">
+					</div>
+					<div class="section-shape shape-ksm move-vertical-reversed">
+						<img src="../assets/images/shapes/shape-kusama.png" alt="Kusama" loading="lazy" width="226"
+						     height="221">
+					</div>
+					<div class="section-shape shape-dot move-vertical">
+						<img src="../assets/images/shapes/shape-dot.png" alt="Polkadot" loading="lazy" width="194"
+						     height="177">
+					</div>
+					<div class="section-shape shape-dotinsights move-vertical-reversed">
+						<img src="../assets/images/shapes/shape-dotinsights.png" alt="dotinsights" loading="lazy"
+						     width="255" height="251">
+					</div>
+					<div class="section-shape shape-sw">
+						<img src="../assets/images/shapes/shape-s-circle.png" alt="SW" loading="lazy" width="306"
+						     height="306">
+					</div>
+				</div>
+				<h3 class="section-top-title">The DeFi Economy</h3>
+			</div>
+			<div class="container">
+				<div class="block-text">
+					<div class="text-wrap">
+						<div class="text">
+							<p>Throughout Q1 2023, total TVL of top DeFi parachains on Polkadot and Kusama hovered
+								around $280M and peaked at $329.6M on February 21, a 61.67% decrease from <a
+									href="https://dotinsights.subwallet.app/polkadot-report-q4-2022-en/"
+									target="_blank"
+									rel="nofollow">the peak</a> on 19
+								April 2022. Astar enjoyed a surge in TVL on February 9 after news of <a
+									href="https://twitter.com/WatanabeSota/status/1623493167139135489"
+									target="_blank"
+									rel="nofollow">Upbit listing</a> led
+								to a sharp increase in ASTR price. On the contrary, Moonbeam and Acala suffered a
+								heavy
+								crash in TVL on March 10 and 11 as GLMR and ACA prices were affected by the
+								Silvergate and SVB incidents. Nevertheless, Moonbeam retained their reign all
+								through
+								the quarter while Karura had the lowest TVL in top 6. Note that the sudden increase in
+								Acala’s
+								TVL
+								was due to a <a href="https://GitHub.com/DefiLlama/DefiLlama-Adapters/pull/5746"
+								                target="_blank"
+								                rel="nofollow">fix</a> by DefiLlama.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="block-report-chart block-chart-style--02">
+					<div class="section-shape shape-blur-circle shape-position-tl"></div>
+					<div class="section-shape shape-blur-circle shape-position-ml green"></div>
+					<div class="section-shape shape-blur-circle shape-position-mr"></div>
+					<div class="section-shape shape-blur-circle shape-position-br purple"></div>
+					<div class="block-content">
+						<h3 class="block-chart-heading">TVL Share by Top DeFi Parachains Q1 2023</h3>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="tvl-defi-parachain"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Source: DefiLlama</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.section-defi-economy -->
+
+	<div class="section section-dex-amm">
+		<div class="section-content">
+			<div class="container">
+				<div class="block-text" id="dex-amm">
+					<h3 class="heading">DEX (AMM)</h3>
+					<div class="text">
+						<p>Thanks to ASTR’s price upsurge, DEX protocols on Astar such as ArthSwap, Avault and
+							Zenlink experienced a sharp increase in TVL, yet the range of the increase correlated with the
+							size of the already existent liquidity pools. ArthSwap’s TVL continued to rise to the
+							peak
+							of $26.19M on February 19 then began to fall. By the end of Q1, ArthSwap was the number
+							one
+							DEX in Polkadot at $16.23M TVL.
+						</p>
+					</div>
+				</div>
+				<div class="block-report-chart block-chart-style--02">
+					<div class="section-shape shape-blur-circle shape-position-tl"></div>
+					<div class="section-shape shape-blur-circle shape-position-ml green"></div>
+					<div class="section-shape shape-blur-circle shape-position-mr"></div>
+					<div class="section-shape shape-blur-circle shape-position-br purple"></div>
+					<div class="block-content">
+						<h3 class="block-chart-heading">Top 10 DEX on Polkadot by TVL</h3>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="tvl-dot-dex"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Source: DefiLlama</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block-text">
+					<div class="text">
+						<p>The situation on Moonbeam was bleaker, especially with cross-chain DEXes Curve and
+							Beefy.
+							Their TVL dropped in early February when Lido stopped giving incentives for stDOT, and
+							plummeted in mid-March after Lido announced <a
+								href="https://mixbytes.io/blog/mixbytes-sunsets-lido-on-polkadot-and-kusama"
+								target="_blank"
+								rel="nofollow">their operation cessation</a>
+							on Moonbeam and
+							Moonriver due to low protocol adoption and gloomy market conditions. Compared to the
+							February peak, Curve lost 99.95% and Beefy 99.89% in their TVL. StellaSwap and Beamswap
+							went
+							through the same TVL decline as their stDOT pools were liquidated.
+						</p>
+					</div>
+				</div>
+				<div class="block-report-chart block-chart-style--02">
+					<div class="section-shape shape-blur-circle shape-position-tl green"></div>
+					<div class="section-shape shape-blur-circle shape-position-bl"></div>
+					<div class="section-shape shape-blur-circle shape-position-tr"></div>
+					<div class="section-shape shape-blur-circle shape-position-br pink"></div>
+					<div class="block-content">
+						<h3 class="block-chart-heading">Top 7 DEX on Kusama by TVL</h3>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="tvl-ksm-dex"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Source: DefiLlama</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block-text">
+					<div class="text-wrap">
+						<div class="text">
+							<p>Similar to Moonbeam, AMM protocols on Moonriver such as Solarbeam and Beefy also
+								experienced huge TVL loss due to stKSM’s pools. Solarbeam’s TVL decline presented an
+								opportunity for Karura to take the lead. From February 15 onwards, the TVL of these
+								two
+								protocols share highly similar patterns with a correlation coefficient of 0.973.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.section-dex-amm -->
+
+	<div class="section section-lending-and-borrowing" id="lending-borrowing">
+		<div class="section-content">
+			<div class="container">
+				<div class="block-text">
+					<h3 class="heading">Lending & Borrowing (Money Market)</h3>
+				</div>
+				<div class="block-report-chart block-chart-style--02" style="--chart-top-spacing: 45px;">
+					<div class="section-shape shape-blur-circle shape-position-tl green"></div>
+					<div class="section-shape shape-blur-circle shape-position-bl"></div>
+					<div class="section-shape shape-blur-circle shape-position-tr"></div>
+					<div class="section-shape shape-blur-circle shape-position-br pink"></div>
+					<div class="block-content">
+						<h3 class="block-chart-heading">Top Lending Protocols On Polkadot & Kusama by TVL</h3>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="tvl-dot-lending"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Source: DefiLlama</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block-text">
+					<div class="text">
+						<p>Overall, the prolonged bear market did not treat money markets well. Acala's lending TVL
+							nearly halved
+							overnight from $32.03M to $19.55M largely due to whale movements (discussed in the next
+							section Liquid Staking). Though the impact was less considerable, Moonwell
+							protocols on Moonbeam and Moonriver were no exception, yet only Moonwell Artemis managed
+							to
+							quickly bounce back to pre-incident TVL. The team announced on February 23 that Moonwell
+							would <a href="https://twitter.com/MoonwellDeFi/status/1628758944285065217"
+							         target="_blank"
+							         rel="nofollow">expand to Ethereum L2 Base</a> thanks to Moonbeam’s connected
+							contracts integrations.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.section-lending-and-borrowing -->
+
+	<div class="section section-liquid-staking" id="liquid-staking">
+		<div class="section-content">
+			<div class="container">
+				<div class="block-text">
+					<h3 class="heading">Liquid Staking</h3>
+				</div>
+				<div class="block-report-chart block-chart-style--02"
+				     style="--chart-top-spacing: 30px; --chart-bottom-spacing: 100px;">
+					<div class="section-shape shape-blur-circle shape-position-tl"></div>
+					<div class="section-shape shape-blur-circle shape-position-br pink"></div>
+					<div class="block-content">
+						<h3 class="block-chart-heading">Top Liquid Staking Protocol By TVL on Polkadot</h3>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="tvl-dot-liquid-staking"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Source: DefiLlama</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block-text">
+					<div class="text-wrap">
+						<div class="text">
+							<div class="row">
+								<div class="col-md-6">Acala liquid staking protocol suffered a drastic drop in TVL
+									due
+									to whale movements. On February 4, a whale <a
+										href="https://acala.subscan.io/extrinsic/0xc08f7e9eb0555d9e83cfa61f622ba628c73b6460a40ebdfe9e811f0a50fa8cbc"
+										target="_blank"
+										rel="nofollow">withdrew</a> 11.46M LDOT from aUSD collateral
+									then immediately <a
+										href="https://acala.subscan.io/extrinsic/0x651bb113215515988142a2c01f8bf09927f94070c73b57faeda2d76f0bc2279c"
+										target="_blank"
+										rel="nofollow">requested slow unstake</a> of the same amount,
+									leading to the ~$10M
+									plunge in both Acala lending TVL and liquid staking TVL the next day. When the
+									fund
+									was unstaked 28 days later, the whale <a
+										href="https://acala.subscan.io/extrinsic/0x364ddbaea33f0b5f904c0ad59328860c9dc9c05da4e259cf50d94e220d511a49"
+										target="_blank"
+										rel="nofollow">transferred</a> all 1.35M DOT to Polkadot
+									Relaychain via XCM.
+								</div>
+								<div class="col-md-6">Meanwhile, an additional $1M in vDOT liquid staking slightly
+									boosted
+									Bifrost’s TVL on March 19. It is expected that the collaboration with Filecoin
+									to
+									launch <a href="https://twitter.com/BifrostFinance/status/1636382083122892801"
+									          target="_blank"
+									          rel="nofollow">vFIL liquid staking</a> will send an upward force to
+									their
+									TVL on Polkadot. On
+									Kusama, Bifrost continued to lead the TVL race and shared a highly similar chart
+									pattern with Karura with a correlation coefficient of 0.95. The team had changed
+									their branding into Omnichain Liquid Staking Derivative (LSD) and focused
+									full-force
+									on being the number one LSD protocol on Polkadot and Kusama.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block-report-chart">
+					<div class="section-shape shape-blur-circle shape-position-tl"></div>
+					<div class="section-shape shape-blur-circle shape-position-br pink"></div>
+					<div class="block-content">
+						<h3 class="block-chart-heading">Top Liquid Staking Protocol by TVL On Kusama</h3>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="tvl-ksm-liquid-staking"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Source: DefiLlama</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.section-liquid-staking -->
+
+	<div class="section section-stablecoin" id="stablecoin">
+		<div class="section-shapes">
+			<div
+				class="section-shape shape-corner-left-bottom shape-radial-circle purple shape-corner-blur-1"></div>
+			<div class="section-shape shape-corner-right-bottom shape-radial-circle blue shape-corner-blur-2"></div>
+		</div>
+		<div class="section-shape section-shape-corners"></div>
+		<div class="section-content">
+			<div class="container">
+				<div class="block-text">
+					<h3 class="heading">Stablecoin</h3>
+				</div>
+				<div class="block-report-chart" style="--chart-top-spacing: 30px; --chart-bot-spacing: 100px">
+					<div class="section-shape shape-blur-circle shape-position-tl green"></div>
+					<div class="section-shape shape-blur-circle shape-position-br"></div>
+					<div class="block-content">
+						<div class="block-chart-group">
+							<div class="block-chart-child">
+								<h3 class="block-chart-heading">USDT on Statemine (Kusama)</h3>
+								<div class="block-chart-body">
+									<div class="block-chart" data-chart-name="usdt-on-statemine-ksm"></div>
+								</div>
+							</div>
+							<div class="block-chart-child">
+								<h3 class="block-chart-heading">USDT on Statemint (Polkadot)</h3>
+								<div class="block-chart-body">
+									<div class="block-chart" data-chart-name="usdt-on-statemine-dot"></div>
+								</div>
+							</div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<p>Source: Statescan</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block-text">
+					<p class="text">In Q1 2023, USDT on both Statemine and Statemint was fully functional and in
+						use.
+						USDT supply
+						on Polkadot ($7M) was twice that on Kusama ($3.5M), and in Q1 total USDT transfer amount on
+						Polkadot was 2.36 times higher than on Kusama. February 7 saw a sudden decrease in the
+						number of holders on both Statemine (from 443 to 400) with a peak of $1.61M in transfer amount
+						and on Statemint (from 251 to 228) with ~$815K in transfer amount. There are two possible
+						reasons for this: whale movements (such as this <a
+							href="https://statemine.subscan.io/extrinsic/0xdf19a0db2c45d04d403903a8e287b145bac7f4cee6f76780b3a29a24e85b282f"
+							target="_blank"
+							rel="nofollow">$120K transaction</a> on Statemine and
+						<a href="https://statemint.statescan.io/#/extrinsics/3162064-2"
+						   target="_blank"
+						   rel="nofollow">$204K</a> transaction on Statemint imposing a large impact given the
+						relatively low liquidity),
+						and Binance’s <a
+							href="https://www.cnbc.com/2023/02/06/binance-will-suspend-us-dollar-transfers.html"
+							target="_blank"
+							rel="nofollow">announcement</a> to suspend U.S dollar transfers on
+						February 8.
+						Nevertheless, the announcement did not have market-wide repercussions as <a
+							href="https://studio.glassnode.com/metrics?a=USDT&m=transactions.TransfersVolumeSum"
+							target="_blank"
+							rel="nofollow">data on Glassnode</a>
+						show abnormalities in neither USDT transaction volume nor holder count on that day.
+					</p>
+					<p class="text">Besides USDT, native stablecoins such as Acala’s aUSD and AstridDAO’s BAI
+						managed to
+						sustain
+						their stable circulation supply. Newcomers including Equilibrium’s EQD and DAM Finance’s d2O
+						made a strong start in Q1, both with about $250K in supply by March 31. According to
+						<a
+							href="https://moonbeam.moonscan.io/topstat#Token"
+							target="_blank"
+							rel="nofollow">Moonscan</a>, d2O was consistently in the top 10 tokens by unique senders and
+						unique receivers
+						every day on Moonbeam.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.section-stablecoin -->
+
+	<div class="section section-report-nfts" id="nft">
+		<div class="section-content">
+			<div class="section-header">
+				<div class="image-group shape-group-box-grid">
+					<div class="main-image">
+						<img loading="lazy" src="../assets/images/report/q4-2022/nft-bg-shape.png" alt="Shape"
+						     width="770" height="590">
+					</div>
+					<div class="section-shape shape-ksm move-vertical-reversed">
+						<img src="../assets/images/shapes/shape-kusama.png" alt="Kusama" loading="lazy" width="226"
+						     height="221">
+					</div>
+					<div class="section-shape shape-dot move-vertical">
+						<img src="../assets/images/shapes/shape-dot-02.png" alt="Polkadot" loading="lazy"
+						     width="213"
+						     height="206">
+					</div>
+					<div class="section-shape shape-dotinsights move-vertical-reversed">
+						<img src="../assets/images/shapes/shape-dotinsights.png" alt="dotinsights" loading="lazy"
+						     width="255" height="251">
+					</div>
+					<div class="section-shape shape-sw">
+						<img class="move-vertical" src="../assets/images/shapes/shape-sub-wallet-02.png" alt="SW"
+						     loading="lazy" width="289" height="289">
+					</div>
+				</div>
+				<h3 class="section-top-title">Non-Fungible Token</h3>
+			</div>
+			<div class="container">
+				<div class="block-text" id="nft-marketplace">
+					<h3 class="heading">NFT Marketplace</h3>
+				</div>
+				<div class="block-report-chart" style="--chart-top-spacing: 30px;">
+					<div class="section-shape shape-blur-circle shape-position-ml pink"></div>
+					<div class="section-shape shape-blur-circle shape-position-tr purple"></div>
+					<div class="block-content">
+						<h3 class="block-chart-heading">Singular continued to dominate the NFT marketplace
+							sector</h3>
+						<div class="block-chart-body">
+							<div class="block-chart" data-chart-name="nft-marketplace"></div>
+						</div>
+						<div class="block-chart-footer">
+							<div class="block-chart-source">
+								<span>Source: Moonbeans Analytics, tofuNFT Analytics, RMRK Team, NFTScan</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block-text" style="--block-bottom-spacing: 100px;">
+					<div class="text">
+						<p>Singular continued to dominate the NFT market with an average of $3.78K in daily sales
+							volume, but this domination is unlikely to sustain into Q2 as RMRK <a
+								href="https://medium.com/rmrkapp/a-new-chapter-for-rmrk-embracing-evm-support-and-expanding-the-nft-ecosystem-18651baa3990?source=topics_v2---------3-84--------------------717ddd9e_67b5_404d_b580_5918d850c777-------17"
+								target="_blank"
+								rel="nofollow">decided</a> to phase out
+							NFT implementation on Kusama and focus solely on EVM implementation. Now that Moonsama
+							has
+							<a href="https://twitter.com/DonnieBigBags/status/1642118943098695681"
+							   target="_blank"
+							   rel="nofollow">won their parachain</a> on Polkadot, their NFT marketplace launch is
+							expected to draw in huge
+							sales volume in the coming months.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="section section-game-fi" id="game-fi">
+				<div class="container">
+					<div class="block-text">
+						<h3 class="heading">GameFi</h3>
+					</div>
+					<div class="block-report-chart block-chart-style--02" style="--chart-top-spacing: 30px;">
+						<div class="section-shape shape-blur-circle shape-position-tl green"></div>
+						<div class="section-shape shape-blur-circle shape-position-bl"></div>
+						<div class="section-shape shape-blur-circle shape-position-tr"></div>
+						<div class="section-shape shape-blur-circle shape-position-br pink"></div>
+						<div class="block-content">
+							<h3 class="block-chart-heading">Awesome Ajuna Avatars Concluded Season 1 With Impressive
+								Stats</h3>
+							<div class="block-chart-body">
+								<div class="block-chart" data-chart-name="ajuna-season-1-stats"></div>
+							</div>
+							<div class="block-chart-footer">
+								<div class="block-chart-source">
+									<p>Source: Ajuna Team</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="block-text">
+						<div class="text">
+							<p>Q1 2023 welcomed new player Awesome Ajuna Avatars into the GameFi segment with
+								impressive
+								results in the first week of launching: 1,001 players used a total of 305,836 mints
+								and
+								78,569 forges to create 999 Legendary, 1,778 Rare and 15,240 Common avatars. The
+								growth
+								slope largely flattened afterwards until Season 1 ended on March 1 at 1,090 players,
+								13.7K avatars and 318K mints, while trades continued in small amounts. As for
+								MoonFit,
+								the Incentivized Testnet rollout in December 2022 attracted a large number of weekly
+								new
+								users, aggregating to 1,689 by the end of March 2023. Total users in the Beta
+								version rose moderately and shared a highly similar trend with total incentivized
+								users
+								(a correlation coefficient of 0.98).
+							</p>
+						</div>
+					</div>
+					<div class="block-report-chart"
+					     style="--chart-top-spacing: 100px; --chart-bottom-spacing: 100px;">
+						<div class="section-shape shape-blur-circle shape-position-ml blue"></div>
+						<div class="section-shape shape-blur-circle shape-position-tr green"></div>
+						<div class="block-content">
+							<h3 class="block-chart-heading">MoonFit Weekly New Users In Beta Version & Incentivized
+								Testnet</h3>
+							<div class="block-chart-body">
+								<div class="block-chart" data-chart-name="moonfit-new-users"
+								     data-chart-source="inline"></div>
+							</div>
+							<div class="block-chart-footer">
+								<div class="block-chart-source">
+									<p>Source: MoonFit Team</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.section-report-nfts -->
+
+	<div class="section section-metaverse" id="metaverse">
+		<div class="section-shape shape-group-smooth-grid">
+			<div class="section-shape shape-radial-circle blue"></div>
+			<img loading="lazy" src="../assets/images/report/shapes/gird-4.png" alt="Shape" width="730"
+			     height="404">
+			<div class="section-shape shape-cube">
+				<img loading="lazy" src="../assets/images/report/shapes/shape-transparent-cube.png" alt="Shape"
+				     width="187" height="162" class="move-vertical-reversed">
+			</div>
+			<div class="section-shape shape-02">
+				<img src="../assets/images/report/shapes/satellite3.png" alt="Shape" loading="lazy" width="150"
+				     height="150" class="move-vertical">
+			</div>
+			<div class="section-shape section-gradient-circle brand-01 move-vertical"></div>
+			<div class="section-shape shape-satellite-04">
+				<img src="../assets/images/report/shapes/satellite4.png" alt="Shape" loading="lazy" width="34"
+				     height="34" class="move-vertical-reversed">
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-5 col-md-6">
+					<div class="block-text">
+						<h3 class="heading">Metaverse</h3>
+						<div class="text">
+							<p>By the end of Q1 2023, Bit.Country continued to be the leading metaverse platform in
+								the
+								Polkadot & Kusama ecosystem, with close to 4K NFTs traded for 500K+ NEER in total
+								trade
+								volume, and 693 metaverses created by burning 1.5M+ BIT. The first community
+								metaverse
+								project on Bit.Country Pioneer Kaosland saw their total land owners rising up past
+								10K
+								with 181K+ NEER in marketplace trading volume and 1,086 estates created. On April 3,
+								<a
+									href="https://twitter.com/BC_Pioneer/status/1642799063321153538"
+									target="_blank"
+									rel="nofollow">the first referendum</a> on Pioneer requesting a bridge that
+								connects
+								Kaosland Land and Ethereum
+								passed with 44,982 NEER in voter turnout, accounting for 0.04% total NEER issuance.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-push-1 col-md-6">
+					<div class="block-report-table table--metaverse"
+					     style="--block-top-spacing: 30px;--block-bottom-spacing: 30px;">
+						<div class="section-shape shape-blur-circle shape-position-tr pink"></div>
+						<div class="section-shape shape-blur-circle shape-position-ml green"></div>
+
+						<div class="block-content">
+							<div class="block-table-body">
+								<h4 class="table-heading">Bit.Country Pioneer Overall Statistics</h4>
+								<table class="block-table-widget">
+									<tr>
+										<th>Total NFT Trade Volume</th>
+										<td>543,726 NEER</td>
+									</tr>
+									<tr>
+										<th>Total NFTs Traded</th>
+										<td>3,897 NFTs</td>
+									</tr>
+									<tr>
+										<th>Total BIT Burnt</th>
+										<td>1,521,217 BIT</td>
+									</tr>
+									<tr>
+										<th>Total Metaverses Created</th>
+										<td>693 Metaverses</td>
+									</tr>
+								</table>
+
+								<h4 class="table-heading">Kaosland Statistics</h4>
+								<table class="block-table-widget">
+									<tr>
+										<th>Total Landowners</th>
+										<td>10,574 Owners</td>
+									</tr>
+									<tr>
+										<th>Total Marketplace Trading Volume</th>
+										<td>181,166 NEER</td>
+									</tr>
+									<tr>
+										<th>Total Estates Created</th>
+										<td>1,086 Estates</td>
+									</tr>
+								</table>
+
+								<h4 class="table-heading">Odyssey Key NFT Collection</h4>
+								<table class="block-table-widget">
+									<tr>
+										<th>Total NFT Trade Volume</th>
+										<td>543,726 NEER</td>
+									</tr>
+									<tr>
+										<th>Total NFTs Traded</th>
+										<td>3,897 NFTs</td>
+									</tr>
+								</table>
+							</div>
+							<div class="block-table-footer">
+								<div class="block-table-source">
+									<p>Source: Bit.Country Team</p>
+									<p>Note: Data as of 31 March 2023.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.section-metaverse -->
+
+	<div class="section section-web3" id="web3">
+		<div class="section-shapes">
+			<div
+				class="section-shape shape-corner-left-top shape-radial-circle dark-blue shape-corner-blur-1"></div>
+			<div class="section-shape shape-corner-right-top shape-radial-circle purple shape-corner-blur-2"></div>
+			<div class="section-shape section-shape-corners reverse-direction"></div>
+		</div>
+		<div class="container">
+			<div class="section-header">
+				<div class="image-group shape-group-box-grid">
+					<div class="section-shape shape-blur-circle purple"></div>
+					<div class="main-image">
+						<img loading="lazy" src="../assets/images/shapes/shape-circle-grid-line.png" alt="Shape"
+						     width="576" height="352"/>
+					</div>
+					<div class="section-shape shape-ksm move-vertical-reversed">
+						<img src="../assets/images/shapes/shape-kusama.png" alt="Kusama" loading="lazy" width="226"
+						     height="221"/>
+					</div>
+					<div class="section-shape shape-dot move-vertical">
+						<img src="../assets/images/shapes/shape-dot.png" alt="Polkadot" loading="lazy" width="194"
+						     height="177">
+					</div>
+					<div class="section-shape shape-dotinsights move-vertical-reversed">
+						<img src="../assets/images/shapes/shape-dotinsights.png" alt="dotinsights" loading="lazy"
+						     width="255" height="251"/>
+					</div>
+					<div class="section-shape shape-sw move-vertical">
+						<img src="../assets/images/shapes/shape-s-circle.png" alt="SW" loading="lazy" width="306"
+						     height="306">
+					</div>
+				</div>
+				<h3 class="section-top-title">Web3</h3>
+			</div>
+			<div class="row">
+				<div class="col-lg-5 col-md-6">
+					<div class="block-text" id="web3-wasm-ink">
+						<h3 class="heading">WASM & ink!</h3>
+						<div class="text">
+							<p>The rise of WASM smart contracts written in ink! marked a new era of smart contract
+								development in the Polkadot ecosystem in Q1 2023, starting with the launch of <a
+									href="https://twitter.com/ink_lang/status/1628769984234094592"
+									target="_blank"
+									rel="nofollow">ink!
+									4.0</a>
+								on February 23 and the approval of the <a
+									href="https://polkadot.polkassembly.io/referendum/101" target="_blank"
+									rel="nofollow">$1.62M
+									WASM Smart Contract Bounty</a> proposed by
+								Astar, Parity, 727 Ventures, Phala and Aleph Zero on February 27. By April 2, there
+								had
+								been 2,577 WASM smart contracts deployed on Aleph Zero Testnet, Rococo Testnet and
+								Shiden Mainnet, among which 2,551 were written in ink!.</p>
+							<p>After Shiden, Aleph Zero was the second to bring ink! and WASM smart contracts to
+								mainnet
+								on March 29, and Astar was the third on <a
+									href="https://twitter.com/AstarNetwork/status/1640352674611884033"
+									target="_blank"
+									rel="nofollow">April
+									6</a>. Within one week of launching, 188
+								smart contracts had been created on Aleph Zero mainnet by 29 developers, with a
+								peak of
+								65 new smart contracts on April 1 according to <a
+									href="https://demo.tokenguard.io/aleph-zero-smart-contracts"
+									target="_blank"
+									rel="nofollow">Tokenguard</a>. These kick-starting moves signaled booming
+								development
+								of ink! and WASM smart contracts in the remaining months of 2023.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-push-1 col-md-6">
+					<div class="block-report-table table-style-02 table--wasm-ink"
+					     style="--block-top-spacing: 0;--block-bottom-spacing: 0;">
+						<div class="section-shape shape-blur-circle shape-position-ml purple"></div>
+						<div class="section-shape shape-blur-circle shape-position-tr green"></div>
+						<div class="section-shape shape-blur-circle shape-position-br green"></div>
+
+						<div class="block-content">
+							<div class="block-table-body">
+								<table class="block-table-widget">
+									<thead>
+									<tr>
+										<th>Network</th>
+										<th>ink!</th>
+										<th>Solidity</th>
+										<th>ask!</th>
+										<th>Unknown</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td>Aleph Zero Testnet</td>
+										<td>1,813</td>
+										<td>3</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>Rococo Testnet</td>
+										<td>701</td>
+										<td>16</td>
+										<td>1</td>
+										<td>6</td>
+									</tr>
+									<tr>
+										<td>Shiden</td>
+										<td>37</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>Total</td>
+										<td>2,551</td>
+										<td>19</td>
+										<td>1</td>
+										<td>6</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="block-table-footer">
+								<div class="block-table-source">
+									<p>Source: Parity Data Team</p>
+									<p>Note: Data as of 2 April 2023.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="block-report-chart" style="--chart-top-spacing: 100px; --chart-bottom-spacing: 100px;">
+				<div class="section-shape shape-blur-circle shape-position-bl purple"></div>
+				<div class="section-shape shape-blur-circle shape-position-br"></div>
+				<div class="block-content">
+					<h3 class="block-chart-heading">Daily New Smart contracts created on aleph zero mainnet</h3>
+					<div class="block-chart-body">
+						<div class="block-chart" data-chart-name="daily-new-smart-contracts"></div>
+					</div>
+					<div class="block-chart-footer">
+						<div class="block-chart-source">
+							<p>Source: Tokenguard</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="block-text" id="web3-project-updates">
+				<h3 class="heading">OCIF Staking</h3>
+				<div class="text">
+					<p>After the success of the OCIF staking beta test with <a
+						href="https://twitter.com/InvArchNetwork/status/1621934265914085386" target="_blank"
+						rel="nofollow">over 9,300 participants</a>, the InvArch
+						Tinkernet team pushed the initiative <a
+							href="https://twitter.com/TinkerParachain/status/1639313518502592515" target="_blank"
+							rel="nofollow">on Tinkernet mainnet</a> on March 24 with three initial DAOs:
+						ChaosDAO, WAGmedia and YoudleDAO. Only a day later, the total TNKR stake had surpassed 1M,
+						and
+						by April 2 there had been a total of 666 stakers contributing in three DAOs.
+					</p>
+				</div>
+			</div>
+			<div class="block-report-chart" style="--chart-top-spacing: 100px; --chart-bottom-spacing: 100px;">
+				<div class="section-shape shape-blur-circle shape-position-tl"></div>
+				<div class="section-shape shape-blur-circle shape-position-ml green"></div>
+				<div class="section-shape shape-blur-circle shape-position-mr"></div>
+				<div class="section-shape shape-blur-circle shape-position-br purple"></div>
+				<div class="block-content">
+					<h3 class="block-chart-heading">Total TNKR staked in tinkernet OCIF</h3>
+					<div class="block-chart-body">
+						<div class="block-chart" data-chart-name="total-tnkr-staked-in-tinkernet-ocif"></div>
+					</div>
+					<div class="block-chart-footer">
+						<div class="block-chart-source">
+							<p>Source: InvArch Team</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.section-web3 -->
+
+	<div class="section section-closing-thoughts" id="closing-thoughts">
+		<div class="section-shape shape-blur-circle purple blur-1"></div>
+		<div class="section-shape shape-blur-circle green blur-2"></div>
+		<div class="section-shape shape-blur-circle purple blur-3"></div>
+		<div class="section-shape shape-blur-circle light-blue blur-4"></div>
+		<div class="container-wide">
+			<div class="section-content">
+				<div class="section-header">
+					<div class="section-header-inner">
+						<h2 class="section-top-title">Closing Thoughts</h2>
+						<div class="section-description-wrap">
+							<div class="section-description">
+								<p>If we had to choose a key phrase for Q1 2023 in Polkadot ecosystem, it would be
+									"whale movements." The transfers of large amounts of funds had major and significant
+									impacts
+									on staking & liquidity in DeFi protocols this quarter, and this could be a warning
+									sign for possible risks of voting and market manipulation caused by wealth
+									centralization in the future.
+									Polkadot and ecosystem teams need to find a solution to further declusterize token
+									distribution should the decentralization vision of Web3 is to be achieved.</p>
+								<p>On the other hand, despite the bear market, development and building activities in
+									the Polkadot & Kusama ecosystem
+									remained robust. Ecosystem-wide innovations and updates rolled out on a regular
+									basis, with OpenGov, XCM v3, ink! 4.0 and WASM smart contracts
+									deployed on mainnets, whereas layer-1 projects consistently took part in parachain
+									auctions. It is worth looking forward to launches in all sectors in the
+									coming months.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.section-closing-thoughts -->
+
+	<div class="section section-get-started" id="get-started-with-polkadot">
+		<div class="container">
+			<div class="section-header">
+				<div class="section-header-inner">
+					<h2 class="section-top-title">Get Started With Polkadot</h2>
+				</div>
+			</div>
+			<div class="section-content">
+				<div class="block-report-post">
+					<div class="post-thumbnail">
+						<img loading="lazy" src="../assets/images/report/blog/post-subwallet.jpg" alt="SubWallet"
+						     width="540" height="345"/>
+					</div>
+					<div class="post-info">
+						<a href="https://subwallet.app/" target="_blank" rel="nofollow"><a
+							href="https://subwallet.app/"
+							target="_blank"
+							rel="nofollow">
+							<mark>SubWallet</mark>
+						</a></a>
+						is the comprehensive non-custodial wallet solution for Polkadot, Substrate & Ethereum
+						ecosystems.
+						With the mission of bringing users closer to Web3, we envision a Web3 multiverse gateway
+						through which users can enjoy multichain services with utmost ease and absolute security.
+						Connecting and using blockchain-based applications is smoother than ever with SubWallet Browser
+						Extension & SubWallet Mobile App.
+						As of April 2023, SubWallet has supported 150+ networks, 480+ tokens and is the only Polkadot
+						wallet
+						to support ink! token standards (PSP-22 & PSS34). The wallet has gained 50K+ installs
+						on both Extension and Mobile App. Stay tuned for SubWallet full launch in Q2 2023!
+					</div>
+				</div>
+				<div class="block-report-post">
+					<div class="post-thumbnail">
+						<div class="section-shape shape-blur-circle purple"></div>
+						<img loading="lazy" src="../assets/images/report/q1-2023/alephzero.png"
+						     alt="Aleph Zero" width="540" height="346"/>
+					</div>
+					<div class="post-info">
+						<a href="https://alephzero.org/" target="_blank" rel="nofollow">
+							<mark>Aleph Zero</mark>
+						</a>
+						is a privacy-enhancing public blockchain that uses Directed Acyclic Graph (DAG) technology to
+						provide fast validation times, scalability, and security.
+						Aleph Zero uses zero-knowledge proofs (ZKPs) and secure multi-party computation (sMPC) to ensure
+						user data privacy and security.
+						The goal of Aleph Zero is to make it possible for SMBs and enterprises to communicate at a rate
+						close to regular internet communication while still utilizing the benefits of decentralization.
+						On March 29, Aleph Zero became the second network after Shiden to launch WASM smart contracts on
+						mainnet.
+					</div>
+				</div>
+				<div class="block-report-post">
+					<div class="post-thumbnail">
+						<div class="section-shape shape-blur-circle"></div>
+						<img loading="lazy" src="../assets/images/report/q1-2023/Bifrost.jpg" alt="Bifrost"
+						     width="540" height="346"/>
+					</div>
+					<div class="post-info">
+						<a href="https://bifrost.finance/" target="_blank" rel="nofollow">
+							<mark>Bifrost</mark>
+						</a>
+						is a dedicated Layer 1 built on Substrate providing non custodial decentralized cross-chain
+						liquid tokens for staked assets.
+						By leveraging off Polkadots cross-consensus message format (XCM) it can provide standardized
+						cross-chain liquid staking solutions for multiple chains.
+						Moreover, by aggregating over 80% of PoS consensus chains’ staking liquidity through cross-chain
+						derivatives,
+						our protocol lowers users’ staking threshold, increases multi-chain staking ratio, and improves
+						the ecosystems application interest base.
+					</div>
+				</div>
+			</div>
+			<div class="section-call-to-actions">
+				<h6>Stay tuned for more project features in the next reports!</h6>
+				<a href="https://twitter.com/dotinsights_xyz" target="_blank" rel="nofollow" class="button">
+					<span class="button-icon">
+						<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M15.6482 5.50898C16.281 5.03437 16.8505 4.46484 17.2935 3.80039C16.724 4.05352 16.0595 4.24336 15.395 4.30664C16.0911 3.89531 16.5974 3.2625 16.8505 2.47148C16.2177 2.85117 15.49 3.13594 14.7622 3.29414C14.1294 2.62969 13.2751 2.25 12.3259 2.25C10.4907 2.25 9.00364 3.73711 9.00364 5.57227C9.00364 5.82539 9.03528 6.07852 9.09856 6.33164C6.34583 6.17344 3.87786 4.84453 2.23254 2.85117C1.94778 3.32578 1.78958 3.89531 1.78958 4.52812C1.78958 5.66719 2.35911 6.67969 3.27668 7.28086C2.73879 7.24922 2.2009 7.12266 1.75793 6.86953V6.90117C1.75793 8.51484 2.897 9.84375 4.41575 10.1602C4.16262 10.2234 3.84622 10.2867 3.56145 10.2867C3.33997 10.2867 3.15012 10.2551 2.92864 10.2234C3.33997 11.5523 4.57395 12.5016 6.02942 12.5332C4.89036 13.4191 3.46653 13.957 1.91614 13.957C1.63137 13.957 1.37825 13.9254 1.12512 13.8937C2.58059 14.843 4.32083 15.3809 6.21926 15.3809C12.3259 15.3809 15.6482 10.35 15.6482 5.95195C15.6482 5.79375 15.6482 5.66719 15.6482 5.50898Z"
+								fill="white"/>
+						</svg>
+					</span>
+					<span class="button-text">Follow Our Twitter</span>
+				</a>
+			</div>
+		</div>
+	</div>
+	<!-- /.section-get-started -->
+
+	<div class="section section-about-us" id="about-dotinsights">
+		<div class="container-wide">
+			<div class="section-content">
+				<div class="block-about-us">
+					<h2>
+						<span>About</span><img loading="lazy" alt="dotinsights - Polkadot & Kusama Ecosystem Map"
+						                       src="../assets/images/logo/logo.png" width="426"/>
+					</h2>
+					<p>
+						<mark>Dotinsights</mark>
+						is a research-focused initiative by <a href="https://subwallet.app/" target="_blank"
+						                                       rel="nofollow">SubWallet</a>, the leading
+						non-custodial
+						Polkadot and Kusama wallet. By providing the most comprehensive and up-to-date Polkadot &
+						Kusama
+						Ecosystem Map, along with data-driven Polkadot Deep Dive reports on a quarterly basis, our
+						vision
+						at
+						<mark>Dotinsights</mark>
+						is to become the official and trusted research hub and data platform of Polkadot.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.section-about-us -->
+
+	<div class="section section-report-contributors" id="contributors">
+		<div class="section-shape section-shape-blur">
+			<img loading="lazy" src="../assets/images/report/shapes/full-wide-blur.png" alt="Shape" width="1920"
+			     height="851">
+		</div>
+		<div class="section-content">
+			<div class="container">
+				<div class="section-header">
+					<div class="section-header-inner">
+						<h3 class="section-top-title">Contributors</h3>
+					</div>
+				</div>
+				<div class="grid-contributors">
+					<div class="grid-item grid-item-lg-1-5 grid-item-md-1-3">
+						<div class="block-contributor block-small">
+							<div class="avatar-wrap">
+								<div class="avatar">
+									<img src="../assets/images/report/contributors/trang-ha.jpg" alt="DJ Hà Trang"
+									     loading="lazy" width="164" height="164"/>
+								</div>
+							</div>
+							<div class="info">
+								<h4 class="name">DJ Hà Trang</h4>
+								<div class="position">Lead Researcher</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item grid-item-lg-1-5 grid-item-md-1-3">
+						<div class="block-contributor block-small">
+							<div class="avatar-wrap">
+								<div class="avatar">
+									<img src="../assets/images/report/contributors/alex-vu.jpg" alt="Alex Vu"
+									     loading="lazy" width="164" height="164"/>
+								</div>
+							</div>
+							<div class="info">
+								<h4 class="name">Alex Vu</h4>
+								<div class="position">Data Engineer</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item grid-item-lg-1-5 grid-item-md-1-3">
+						<div class="block-contributor block-small">
+							<div class="avatar-wrap">
+								<div class="avatar">
+									<img src="../assets/images/report/contributors/darrell-ha.jpg" alt="Darrell Ha"
+									     loading="lazy" width="164" height="164"/>
+								</div>
+							</div>
+							<div class="info">
+								<h4 class="name">Darrell Ha</h4>
+								<div class="position">Data Engineer</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item grid-item-lg-1-5 grid-item-md-1-3">
+						<div class="block-contributor block-small">
+							<div class="avatar-wrap">
+								<div class="avatar">
+									<img src="../assets/images/report/contributors/le-bui.jpg" alt="Le Bui"
+									     loading="lazy" width="164" height="164"/>
+								</div>
+							</div>
+							<div class="info">
+								<h4 class="name">Le Bui</h4>
+								<div class="position">Web Designer</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item grid-item-lg-1-5 grid-item-md-1-3">
+						<div class="block-contributor block-small">
+							<div class="avatar-wrap">
+								<div class="avatar">
+									<img src="../assets/images/report/contributors/viet-cao.png"
+									     alt="Viet Cao"
+									     loading="lazy" width="164" height="164"/>
+								</div>
+							</div>
+							<div class="info">
+								<h4 class="name">Viet Cao</h4>
+								<div class="position">Frontend Developer</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item grid-item-1-3">
+						<div class="block-contributor layout-horizontal">
+							<div class="avatar-wrap">
+								<div class="avatar">
+									<img src="../assets/images/report/contributors/hieu-dao.jpg" alt="Hieu Dao"
+									     loading="lazy" width="164" height="164"/>
+								</div>
+							</div>
+							<div class="info">
+								<h4 class="name">Hieu Dao</h4>
+								<div class="position">Co-founder &<br/>Head of Product
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item grid-item-1-3">
+						<div class="block-contributor layout-horizontal">
+							<div class="avatar-wrap">
+								<div class="avatar">
+									<img src="../assets/images/report/contributors/frankie.jpg" alt="Frankie Kao"
+									     loading="lazy" width="164" height="164"/>
+								</div>
+							</div>
+							<div class="info">
+								<h4 class="name">Frankie Kao</h4>
+								<div class="position">Co-founder &<br/>Creative Director
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item grid-item-1-3">
+						<div class="block-contributor layout-horizontal">
+							<div class="avatar-wrap">
+								<div class="avatar">
+									<img src="../assets/images/report/contributors/thony.jpg" alt="Thony"
+									     loading="lazy" width="164" height="164"/>
+								</div>
+							</div>
+							<div class="info">
+								<h4 class="name">Thony</h4>
+								<div class="position">Co-founder &<br/>Head of Strategy
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item grid-item-1-3">
+						<div class="block-contributor layout-horizontal">
+							<div class="avatar-wrap">
+								<div class="avatar">
+									<img src="../assets/images/report/contributors/peter-mai.jpg" alt="Peter Mai"
+									     loading="lazy" width="164" height="164"/>
+								</div>
+							</div>
+							<div class="info">
+								<h4 class="name">Peter Mai</h4>
+								<div class="position">Head of Engineering</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item grid-item-1-3">
+						<div class="block-contributor layout-horizontal">
+							<div class="avatar-wrap">
+								<div class="avatar">
+									<img src="../assets/images/report/contributors/ryan-dinh.jpg" alt="Ryan Dinh"
+									     loading="lazy" width="164" height="164"/>
+								</div>
+							</div>
+							<div class="info">
+								<h4 class="name">Ryan Dinh</h4>
+								<div class="position">Business
+									<br/>Development Manager
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item grid-item-1-3">
+						<div class="block-contributor layout-horizontal">
+							<div class="avatar-wrap">
+								<div class="avatar">
+									<img src="../assets/images/report/contributors/kate-ha.jpg" alt="Kate Ha"
+									     loading="lazy" width="164" height="164"/>
+								</div>
+							</div>
+							<div class="info">
+								<h4 class="name">Kate Ha</h4>
+								<div class="position">Growth Lead</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item grid-item-1-3">
+						<div class="block-contributor layout-horizontal">
+							<div class="avatar-wrap">
+								<div class="avatar">
+									<img src="../assets/images/report/contributors/emily-nguyen.jpg"
+									     alt="Emily Nguyen"
+									     loading="lazy" width="164" height="164"/>
+								</div>
+							</div>
+							<div class="info">
+								<h4 class="name">Emily Nguyen</h4>
+								<div class="position">Growth Executive</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item grid-item-1-3">
+						<div class="block-contributor layout-horizontal">
+							<div class="avatar-wrap">
+								<div class="avatar">
+									<img src="../assets/images/report/contributors/mabel-nguyen.jpg"
+									     alt="Mabel Nguyen"
+									     loading="lazy" width="164" height="164"/>
+								</div>
+							</div>
+							<div class="info">
+								<h4 class="name">Mabel Nguyen</h4>
+								<div class="position">BD Executive</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item grid-item-1-3">
+						<div class="block-contributor layout-horizontal">
+							<div class="avatar-wrap">
+								<div class="avatar">
+									<img src="../assets/images/report/contributors/tara-nguyen.png"
+									     alt="Tara Nguyen"
+									     loading="lazy" width="164" height="164"/>
+								</div>
+							</div>
+							<div class="info">
+								<h4 class="name">Tara Nguyen</h4>
+								<div class="position">Data Analyst</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item grid-item-1-3">
+						<div class="block-contributor layout-horizontal">
+							<div class="avatar-wrap">
+								<div class="avatar">
+									<img src="../assets/images/report/contributors/dara-mai.png"
+									     alt="Dara Mai"
+									     loading="lazy" width="164" height="164"/>
+								</div>
+							</div>
+							<div class="info">
+								<h4 class="name">Dara Mai</h4>
+								<div class="position">Graphic Designer</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.section-report-contributors -->
+
+	<div class="section section-report-friends" id="friends">
+		<div class="section-content">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="section-header section-header-beside">
+							<div class="section-header-inner">
+								<h3 class="section-top-title">Friends</h3>
+								<div class="section-description-wrap">
+									<div class="section-description">We would like to express our sincere gratitude
+										to
+										friends who have supported us and provided data so that we can complete this
+										report.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-8">
+						<div class="grid-modern grid--friends"
+						     style="--grid-columns-desktop: 4; --grid-gutter-desktop: 20; --grid-columns-tablet: 3; --grid-columns-mobile: 2; --grid-gutter-mobile-extra: 12;">
+							<a class="block-friend grid-item" target="_blank" href="https://polkadot.network/">
+								<img loading="lazy" src="../assets/images/report/friends/polkadot.png"
+								     alt="Polkadot" width="114" height="28"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://www.parity.io/">
+								<img loading="lazy" src="../assets/images/report/friends/parity.png"
+								     alt="Parity" width="94" height="42"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://bit.country/">
+								<img loading="lazy" src="../assets/images/report/friends/bit-country.png"
+								     alt="Bit.Country & Metaverse.Network" width="110" height="34"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://moonbeam.network/">
+								<img loading="lazy" src="../assets/images/report/friends/moonbeam.png"
+								     alt="Moonbeam" width="126" height="35"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://astar.network/">
+								<img loading="lazy" src="../assets/images/report/friends/astar.png"
+								     alt="Astar" width="114" height="53"/>
+							</a>
+
+							<a class="block-friend grid-item" target="_blank" href="https://alephzero.org/">
+								<img loading="lazy" src="../assets/images/report/friends/aleph-zero.png"
+								     alt="Aleph Zero" width="148" height="25"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://acala.network/">
+								<img loading="lazy" src="../assets/images/report/friends/acala.png"
+								     alt="Acala" width="102" height="41"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://www.rmrk.app/">
+								<img loading="lazy" src="../assets/images/report/friends/rmrk.png"
+								     alt="RMRK" width="95" height="33"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://bifrost.finance/">
+								<img loading="lazy" src="../assets/images/report/friends/bifrost.png"
+								     alt="Bifrost" width="107" height="26"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://ajuna.io/">
+								<img loading="lazy" src="../assets/images/report/friends/ajuna.png"
+								     alt="Ajuna" width="107" height="26"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://litentry.com/">
+								<img loading="lazy" src="../assets/images/report/friends/litentry.png"
+								     alt="litentry" width="127" height="27"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://www.kilt.io/">
+								<img loading="lazy" src="../assets/images/report/friends/kilt.png"
+								     alt="KILT" width="82" height="34"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://www.phala.network/">
+								<img loading="lazy" src="../assets/images/report/friends/phala-network.png"
+								     alt="Phala Network" width="120" height="40"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://parallel.fi/">
+								<img loading="lazy" src="../assets/images/report/friends/parallel.png"
+								     alt="Parallel" width="117" height="29"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://invarch.network/">
+								<img loading="lazy" src="../assets/images/report/friends/inv-arch.png"
+								     alt="InvArch" width="114" height="26"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://polkaholic.io/">
+								<img loading="lazy" src="../assets/images/report/friends/polkaholic.png"
+								     alt="Polkaholic" width="57" height="45"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://subsquid.io/">
+								<img loading="lazy" src="../assets/images/report/friends/subsquid.png"
+								     alt="Subsquid" width="130" height="30"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://www.subscan.io/">
+								<img loading="lazy" src="../assets/images/report/friends/subscan.png"
+								     alt="Subscan" width="133" height="28"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://tokenguard.io/">
+								<img loading="lazy" src="../assets/images/report/friends/token-guard.png"
+								     alt="Token Guard" width="140" height="22"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://zenlink.pro/">
+								<img loading="lazy" src="../assets/images/report/friends/zenlink.png"
+								     alt="Zenlink" width="119" height="39"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://stellaswap.com/">
+								<img loading="lazy" src="../assets/images/report/friends/stella-swap.png"
+								     alt="StellaSwap" width="136" height="28"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://beamswap.io/">
+								<img loading="lazy" src="../assets/images/report/friends/beamswap.png"
+								     alt="Beamswap" width="136" height="27"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://solarbeam.io/">
+								<img loading="lazy" src="../assets/images/report/friends/solarbeam.png"
+								     alt="Solarbeam" width="150" height="29"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://moonwell.fi/">
+								<img loading="lazy" src="../assets/images/report/friends/moonwell.png"
+								     alt="Moonwell" width="130" height="37"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://www.arthswap.org/">
+								<img loading="lazy" src="../assets/images/report/friends/arthswap.png"
+								     alt="ArthSwap" width="130" height="31"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://starlay.finance/">
+								<img loading="lazy" src="../assets/images/report/friends/starlay.png"
+								     alt="Starlay" width="122" height="44"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://astriddao.xyz/">
+								<img loading="lazy" src="../assets/images/report/friends/astrid-dao.png"
+								     alt="AstridDAO" width="130" height="36"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://moonbeans.io/">
+								<img loading="lazy" src="../assets/images/report/friends/moonbeans.png"
+								     alt="MoonBeans" width="140" height="70"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://www.paka.fund/">
+								<img loading="lazy" src="../assets/images/report/friends/paka.png"
+								     alt="PAKA" width="93" height="25"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://web3go.xyz/">
+								<img loading="lazy" src="../assets/images/report/friends/web3-go.png"
+								     alt="Web3Go" width="113" height="30"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://lido.fi/">
+								<img loading="lazy" src="../assets/images/report/friends/lido.png"
+								     alt="Lido" width="108" height="26"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://moonfit.xyz/">
+								<img loading="lazy" src="../assets/images/report/friends/moonfit.png"
+								     alt="MoonFit" width="121" height="20"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://www.glmrapes.com/">
+								<img loading="lazy" src="../assets/images/report/friends/glmr-apes.png"
+								     alt="GLMR Apes" width="55" height="43"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://www.tapioprotocol.io/">
+								<img loading="lazy" src="../assets/images/report/friends/tapio.png"
+								     alt="Tapio Protocol" width="133" height="38"/>
+							</a>
+							<a class="block-friend grid-item" target="_blank" href="https://www.avault.network/">
+								<img loading="lazy" src="../assets/images/report/friends/avault.png"
+								     alt="Avault Finance" width="61" height="39"/>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.section-report-friends -->
+</div>
+
+<footer id="footer" class="section site-footer">
+	<div class="section-shape section-footer-bg">
+		<img src="../assets/images/footer-bg.png" alt="Shape" width="796" height="218" loading="lazy"/>
+	</div>
+	<div class="section-shape footer-shape-dot">
+		<img src="../assets/images/shapes/shape-dot.png" alt="Polkadot" loading="lazy" width="194"
+		     height="177"/>
+	</div>
+	<div class="section-shape footer-shape-ksm">
+		<img src="../assets/images/shapes/shape-kusama.png" alt="Kusama" loading="lazy" width="220"
+		     height="212"/>
+	</div>
+	<div class="section-shape footer-shape-s-circle">
+		<img src="../assets/images/shapes/shape-s-circle.png" alt="SW" loading="lazy" width="306" height="306"/>
+	</div>
+	<div class="section-shape footer-shape-satellite">
+		<img src="../assets/images/shapes/shape-satellite.png" alt="SW" loading="lazy" width="34" height="34"/>
+	</div>
+	<div class="section-shape footer-shape-02">
+		<img src="../assets/images/shapes/shape-02.png" alt="Shape" loading="lazy" width="51" height="51"/>
+	</div>
+	<div class="section-shape footer-shape-03">
+		<img src="../assets/images/shapes/shape-dotinsights.png" alt="Shape" loading="lazy" width="255"
+		     height="251"/>
+	</div>
+	<div class="section-content">
+		<div class="container">
+			<div class="section-description-wrap">
+				<div class="section-description">
+					<p>
+						<mark>Disclaimer:</mark>
+						The views expressed here are those of SubWallet. The data in here are acquired from
+						third-party
+						sources, including data aggregator platforms and team projects. While taken from sources
+						believed to be reliable, SubWallet has not independently verified such information and
+						makes no
+						representations about the enduring accuracy of the information or its appropriateness
+						for a
+						given situation.
+					</p>
+					<p>This content is provided for informational purposes only, and should not be relied upon
+						as legal,
+						business, investment, or tax advice. You should consult your own advisers as to those
+						matters.</p>
+				</div>
+			</div>
+			<div class="section-call-to-actions button-group">
+				<a href="https://bit.ly/dotinsights-projectsubmit" target="_blank" rel="nofollow"
+				   class="button">
+					<span class="button-icon">
+						<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M5.52755 5.98006C5.48498 5.87728 5.47385 5.76418 5.49556 5.65508C5.51727 5.54597 5.57086 5.44575 5.64954 5.36709L8.60266 2.41472C8.70815 2.30927 8.85121 2.25003 9.00037 2.25003C9.14953 2.25003 9.29258 2.30927 9.39807 2.41472L12.3512 5.36709C12.4299 5.44576 12.4835 5.54598 12.5052 5.6551C12.5269 5.76421 12.5157 5.87732 12.4732 5.9801C12.4306 6.08289 12.3585 6.17075 12.266 6.23256C12.1735 6.29437 12.0647 6.32737 11.9535 6.32737H9.56287V10.6875C9.56287 10.8367 9.5036 10.9798 9.39811 11.0852C9.29262 11.1907 9.14955 11.25 9.00037 11.25C8.85118 11.25 8.70811 11.1907 8.60262 11.0852C8.49713 10.9798 8.43787 10.8367 8.43787 10.6875V6.32737H6.04724C5.93598 6.32737 5.82721 6.29438 5.73471 6.23256C5.6422 6.17074 5.57011 6.08287 5.52755 5.98006V5.98006ZM15.1879 10.125C15.0387 10.125 14.8956 10.1843 14.7901 10.2898C14.6846 10.3952 14.6254 10.5383 14.6254 10.6875V14.625H3.37537V10.6875C3.37537 10.5383 3.3161 10.3952 3.21061 10.2898C3.10512 10.1843 2.96205 10.125 2.81287 10.125C2.66368 10.125 2.52061 10.1843 2.41512 10.2898C2.30963 10.3952 2.25037 10.5383 2.25037 10.6875V14.625C2.25071 14.9233 2.36934 15.2092 2.58025 15.4201C2.79115 15.631 3.0771 15.7497 3.37537 15.75H14.6254C14.9236 15.7497 15.2096 15.631 15.4205 15.4201C15.6314 15.2092 15.75 14.9233 15.7504 14.625V10.6875C15.7504 10.5383 15.6911 10.3952 15.5856 10.2898C15.4801 10.1843 15.337 10.125 15.1879 10.125V10.125Z"
+								fill="white"/>
+						</svg>
+					</span>
+					<span class="button-text">Submit Your Project</span>
+				</a>
+				<a href="https://subwallet.notion.site/Polkadot-Kusama-Ecosystem-Map-Listing-Standards-74dbd43ae5fc40cabec43587414812d2" target="_blank" rel="nofollow" class="button button-outline">
+					<span class="button-icon">
+						<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M5.52755 5.98006C5.48498 5.87728 5.47385 5.76418 5.49556 5.65508C5.51727 5.54597 5.57086 5.44575 5.64954 5.36709L8.60266 2.41472C8.70815 2.30927 8.85121 2.25003 9.00037 2.25003C9.14953 2.25003 9.29258 2.30927 9.39807 2.41472L12.3512 5.36709C12.4299 5.44576 12.4835 5.54598 12.5052 5.6551C12.5269 5.76421 12.5157 5.87732 12.4732 5.9801C12.4306 6.08289 12.3585 6.17075 12.266 6.23256C12.1735 6.29437 12.0647 6.32737 11.9535 6.32737H9.56287V10.6875C9.56287 10.8367 9.5036 10.9798 9.39811 11.0852C9.29262 11.1907 9.14955 11.25 9.00037 11.25C8.85118 11.25 8.70811 11.1907 8.60262 11.0852C8.49713 10.9798 8.43787 10.8367 8.43787 10.6875V6.32737H6.04724C5.93598 6.32737 5.82721 6.29438 5.73471 6.23256C5.6422 6.17074 5.57011 6.08287 5.52755 5.98006V5.98006ZM15.1879 10.125C15.0387 10.125 14.8956 10.1843 14.7901 10.2898C14.6846 10.3952 14.6254 10.5383 14.6254 10.6875V14.625H3.37537V10.6875C3.37537 10.5383 3.3161 10.3952 3.21061 10.2898C3.10512 10.1843 2.96205 10.125 2.81287 10.125C2.66368 10.125 2.52061 10.1843 2.41512 10.2898C2.30963 10.3952 2.25037 10.5383 2.25037 10.6875V14.625C2.25071 14.9233 2.36934 15.2092 2.58025 15.4201C2.79115 15.631 3.0771 15.7497 3.37537 15.75H14.6254C14.9236 15.7497 15.2096 15.631 15.4205 15.4201C15.6314 15.2092 15.75 14.9233 15.7504 14.625V10.6875C15.7504 10.5383 15.6911 10.3952 15.5856 10.2898C15.4801 10.1843 15.337 10.125 15.1879 10.125V10.125Z"
+								fill="white"/>
+						</svg>
+					</span>
+					<span class="button-text">View Listing Standards</span>
+				</a>
+				<a href="https://twitter.com/dotinsights_xyz" target="_blank" rel="nofollow" class="button">
+					<span class="button-icon">
+						<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M15.6482 5.50898C16.281 5.03437 16.8505 4.46484 17.2935 3.80039C16.724 4.05352 16.0595 4.24336 15.395 4.30664C16.0911 3.89531 16.5974 3.2625 16.8505 2.47148C16.2177 2.85117 15.49 3.13594 14.7622 3.29414C14.1294 2.62969 13.2751 2.25 12.3259 2.25C10.4907 2.25 9.00364 3.73711 9.00364 5.57227C9.00364 5.82539 9.03528 6.07852 9.09856 6.33164C6.34583 6.17344 3.87786 4.84453 2.23254 2.85117C1.94778 3.32578 1.78958 3.89531 1.78958 4.52812C1.78958 5.66719 2.35911 6.67969 3.27668 7.28086C2.73879 7.24922 2.2009 7.12266 1.75793 6.86953V6.90117C1.75793 8.51484 2.897 9.84375 4.41575 10.1602C4.16262 10.2234 3.84622 10.2867 3.56145 10.2867C3.33997 10.2867 3.15012 10.2551 2.92864 10.2234C3.33997 11.5523 4.57395 12.5016 6.02942 12.5332C4.89036 13.4191 3.46653 13.957 1.91614 13.957C1.63137 13.957 1.37825 13.9254 1.12512 13.8937C2.58059 14.843 4.32083 15.3809 6.21926 15.3809C12.3259 15.3809 15.6482 10.35 15.6482 5.95195C15.6482 5.79375 15.6482 5.66719 15.6482 5.50898Z"
+								fill="#fff"></path>
+						</svg>
+					</span>
+					<span class="button-text">Follow Our Twitter</span>
+				</a>
+			</div>
+			<div class="copyright-text">
+				<p>Made with
+					<svg>
+						<use xlink:href="#symbol-ph-heart-straight"></use>
+					</svg>
+					by
+					<a href="https://www.subwallet.app/" target="_blank" rel="nofollow"><img loading="lazy"
+					                                                                         src="../assets/images/subwallet.png"
+					                                                                         alt="SubWallet"
+					                                                                         width="108"
+					                                                                         height="36"/></a>
+				</p>
+				<p>Ecosystem Map proudly supported by
+					<a href="https://www.parity.io/" target="_blank" rel="nofollow"><img loading="lazy"
+					                                                                     src="../assets/images/parity.png"
+					                                                                     alt="Parity Technologies"
+					                                                                     width="82"
+					                                                                     height="30"/></a>
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<a href="#" class="toggle-table-contents btn-open-panel"
+   id="btn-open-panel"
+   aria-label="Open table of contents">
+	<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M12 3.75L12 20.25" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+		      stroke-linejoin="round"/>
+		<path d="M18 3.75L18 20.25" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+		      stroke-linejoin="round"/>
+		<path d="M6 3.75L6 20.25" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+		      stroke-linejoin="round"/>
+	</svg>
+	<div class="btn-open-panel--text">Table of content</div>
+</a>
+
+<div id="table-of-contents" class="table-of-contents">
+	<a href="#"
+	   class="toggle-table-contents btn-close-panel"
+	   aria-label="Close table of contents">
+		<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M16.875 10H3.125" stroke="white" stroke-width="1.5" stroke-linecap="round"
+			      stroke-linejoin="round"/>
+			<path d="M8.75 4.375L3.125 10L8.75 15.625" stroke="white" stroke-width="1.5" stroke-linecap="round"
+			      stroke-linejoin="round"/>
+		</svg>
+	</a>
+	<div id="panel" class="panel">
+		<div class="panel-content">
+			<ul class="table-contents-list">
+				<li>
+					<a href="#polkadot-deep-dive" class="scroll-to">Polkadot Deep Dive</a>
+				</li>
+				<li>
+					<a href="#proudly-stepping-into" class="scroll-to">Proudly Stepping Into The New Year</a>
+				</li>
+				<li>
+					<a href="#key-takeaways" class="scroll-to">Key Takeaways</a>
+				</li>
+				<li>
+					<a href="#ecosystem-overview" class="scroll-to">Ecosystem Overview</a>
+					<ul>
+						<li>
+							<a href="#financial-status-dev-activity" class="scroll-to">Financial Status & Development
+								Activity</a>
+						</li>
+						<li>
+							<a href="#decentralization-staking" class="scroll-to">Decentralization & Staking</a>
+						</li>
+						<li>
+							<a href="#governance-grant" class="scroll-to">Governance & Grant</a>
+						</li>
+						<li>
+							<a href="#parachain" class="scroll-to">Parachain</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#defi-economy" class="scroll-to">The DeFi Economy</a>
+					<ul>
+						<li>
+							<a href="#dex-amm" class="scroll-to">DEX (AMM)</a>
+						</li>
+						<li>
+							<a href="#lending-borrowing" class="scroll-to">Lending & Borrowing (Money Market)</a>
+						</li>
+						<li>
+							<a href="#liquid-staking" class="scroll-to">Liquid Staking</a>
+						</li>
+						<li>
+							<a href="#stablecoin" class="scroll-to">Stablecoin</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#nft" class="scroll-to">NFT</a>
+					<ul>
+						<li>
+							<a href="#nft-marketplace" class="scroll-to">NFT Marketplace</a>
+						</li>
+						<li>
+							<a href="#game-fi" class="scroll-to">GameFi</a>
+						</li>
+						<li>
+							<a href="#metaverse" class="scroll-to">Metaverse</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#web3" class="scroll-to">Web3</a>
+					<ul>
+						<li>
+							<a href="#web3-wasm-ink" class="scroll-to">WASM & ink!</a>
+						</li>
+						<li>
+							<a href="#web3-project-updates" class="scroll-to">OCIF Staking</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#closing-thoughts" class="scroll-to">Closing Thoughts</a>
+				</li>
+				<li>
+					<a href="#get-started-with-polkadot" class="scroll-to">Get Started With Polkadot</a>
+				</li>
+				<li>
+					<a href="#about-dotinsights" class="scroll-to">About Dotinsights</a>
+				</li>
+				<li>
+					<a href="#contributors" class="scroll-to">Contributors</a>
+				</li>
+				<li>
+					<a href="#friends" class="scroll-to">Friends</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="dotinsights-modal modal-connect-wallet" id="modal-connect-wallet">
+	<div class="modal-overlay"></div>
+	<div class="modal-content">
+		<div class="modal-content-wrap">
+			<div class="modal-content-inner">
+				<div class="modal-content-header">
+					<h3 class="modal-title">Connect Your Wallet</h3>
+					<div class="button-close-modal">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M18.75 5.25L5.25 18.75" stroke="#777777" stroke-width="2" stroke-linecap="round"
+							      stroke-linejoin="round"/>
+							<path d="M18.75 18.75L5.25 5.25" stroke="#777777" stroke-width="2" stroke-linecap="round"
+							      stroke-linejoin="round"/>
+						</svg>
+					</div>
+				</div>
+
+				<div class="modal-content-body">
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="dotinsights-modal modal-show-error" id="modal-show-error">
+	<div class="modal-overlay"></div>
+	<div class="modal-content">
+		<div class="modal-content-wrap">
+			<div class="button-close-modal">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M18.75 5.25L5.25 18.75" stroke="#777777" stroke-width="2" stroke-linecap="round"
+					      stroke-linejoin="round"/>
+					<path d="M18.75 18.75L5.25 5.25" stroke="#777777" stroke-width="2" stroke-linecap="round"
+					      stroke-linejoin="round"/>
+				</svg>
+			</div>
+			<div class="modal-content-inner">
+				<div class="modal-content-body">
+					<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M48.0795 38.1876L30.2248 7.31255C29.7974 6.56999 29.1817 5.9532 28.44 5.52432C27.6983 5.09544 26.8566 4.86963 25.9998 4.86963C25.143 4.86963 24.3013 5.09544 23.5596 5.52432C22.8179 5.9532 22.2023 6.56999 21.7748 7.31255L3.92012 38.1876C3.48638 38.9263 3.25587 39.7668 3.252 40.6235C3.24813 41.4802 3.47104 42.3226 3.89808 43.0653C4.32513 43.808 4.9411 44.4245 5.68345 44.8521C6.42581 45.2797 7.2681 45.5033 8.1248 45.5001H43.8748C44.7315 45.5033 45.5738 45.2797 46.3162 44.8521C47.0585 44.4245 47.6745 43.808 48.1015 43.0653C48.5286 42.3226 48.7515 41.4802 48.7476 40.6235C48.7437 39.7668 48.5132 38.9263 48.0795 38.1876ZM24.3748 21.1251C24.3748 20.6941 24.546 20.2807 24.8508 19.976C25.1555 19.6713 25.5688 19.5001 25.9998 19.5001C26.4308 19.5001 26.8441 19.6713 27.1489 19.976C27.4536 20.2807 27.6248 20.6941 27.6248 21.1251V29.2501C27.6248 29.681 27.4536 30.0944 27.1489 30.3991C26.8441 30.7038 26.4308 30.8751 25.9998 30.8751C25.5688 30.8751 25.1555 30.7038 24.8508 30.3991C24.546 30.0944 24.3748 29.681 24.3748 29.2501V21.1251ZM25.9998 39.0001C25.5177 39.0001 25.0464 38.8571 24.6456 38.5893C24.2448 38.3214 23.9323 37.9407 23.7478 37.4953C23.5634 37.0499 23.5151 36.5599 23.6091 36.087C23.7032 35.6142 23.9353 35.1799 24.2762 34.839C24.6171 34.4981 25.0514 34.2659 25.5243 34.1719C25.9971 34.0778 26.4872 34.1261 26.9326 34.3106C27.378 34.4951 27.7587 34.8075 28.0265 35.2084C28.2943 35.6092 28.4373 36.0805 28.4373 36.5626C28.4373 37.209 28.1805 37.829 27.7234 38.2861C27.2663 38.7432 26.6463 39.0001 25.9998 39.0001Z"
+							fill="#F82613"/>
+					</svg>
+					<div class="modal-error-message"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T4R8Y0C0JQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-T4R8Y0C0JQ');
+</script>
+<script src="../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+<script src="../assets/libs/firefly/jquery.firefly-0.7.js"></script>
+<script src="../assets/libs/datatable/jquery.dataTables.min.js"></script>
+<script src="../assets/libs/echarts/echarts.min.js"></script>
+<script src="../assets/libs/waypoints/jquery.waypoints.min.js"></script>
+<script src="../assets/libs/readmore/readmore.min.js"></script>
+<script src="../assets/js/modal.js?v=1.0"></script>
+<script src="../assets/js/sidebar-menu.js?v=1.0"></script>
+<script src="./locate.js"></script>
+<script src="../assets/js/frontend.js?v=1.4"></script>
+<script src="../assets/js/reports-q1-2023.js?v=1.0"></script>
+<script src="../assets/js/wallet-manager.js?v=1.15"></script>
+</body>
+</html>

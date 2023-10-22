@@ -18,96 +18,76 @@
 
 @keyframes move-vertical {
 	0% {
-		-webkit-transform: translate(0);
 		transform: translate(0);
 	}
 	25% {
-		-webkit-transform: translate(0, 10px);
 		transform: translate(0, 10px);
 	}
 	50% {
-		-webkit-transform: translate(0, 5px);
 		transform: translate(0, 5px);
 	}
 	75% {
-		-webkit-transform: translate(0, -5px);
 		transform: translate(0, -5px);
 	}
 	to {
-		-webkit-transform: translate(0);
 		transform: translate(0);
 	}
 }
 
 @keyframes move-vertical-reversed {
 	0% {
-		-webkit-transform: translate(0);
 		transform: translate(0);
 	}
 	25% {
-		-webkit-transform: translate(0, -10px);
 		transform: translate(0, -10px);
 	}
 	50% {
-		-webkit-transform: translate(0, -5px);
 		transform: translate(0, -5px);
 	}
 	75% {
-		-webkit-transform: translate(0, 5px);
 		transform: translate(0, 5px);
 	}
 	to {
-		-webkit-transform: translate(0);
 		transform: translate(0);
 	}
 }
 
 @keyframes move-skew {
 	0% {
-		-webkit-transform: translate(0);
 		transform: translate(0);
 	}
 	25% {
-		-webkit-transform: translate(0, 10px) rotate(5deg) skew(25deg);
 		transform: translate(0, 10px) rotate(5deg) skew(25deg);
 
 	}
 	50% {
-		-webkit-transform: translate(0, 5px) rotate(0deg) skew(0deg);
 		transform: translate(0, 5px) rotate(0deg) skew(0deg);
 	}
 	75% {
-		-webkit-transform: translate(0, -5px) rotate(-5deg) skew(-25deg);
 		transform: translate(0, -5px) rotate(-5deg) skew(-25deg);
 	}
 	to {
-		-webkit-transform: translate(0);
 		transform: translate(0);
 	}
 }
 
 @keyframes zoom-in-zoom-out {
 	0% {
-		-webkit-transform: scale(1, 1);
 		transform: scale(1, 1);
 	}
 	50% {
-		-webkit-transform: scale(1.1, 1.1);
 		transform: scale(1.1, 1.1);
 	}
 	100% {
-		-webkit-transform: scale(1, 1);
 		transform: scale(1, 1);
 	}
 }
 
 .move-vertical {
-	-webkit-animation: move-vertical 5s linear infinite;
 	animation: move-vertical 5s linear infinite;
 }
 
 .move-vertical-reversed {
-	-webkit-animation: move-vertical-reversed 5s linear infinite;
 	animation: move-vertical-reversed 5s linear infinite;
 }
 
@@ -124,11 +104,9 @@
 }
 
 .move-skew {
-	-webkit-animation: move-skew 5s linear infinite;
 	animation: move-skew 5s linear infinite;
 }
 
 .zoom-in-out-box {
-	-webkit-animation: zoom-in-zoom-out 5s linear infinite;
 	animation: zoom-in-zoom-out 5s linear infinite;
 }

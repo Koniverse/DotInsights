@@ -94,6 +94,7 @@
 		position: relative;
 		margin: 0 var(--item-gutter-x, 20px) var(--item-spacing, 27px);
 		border-bottom: 2px solid transparent;
+		font-size: var(--item-font-size, 20px);
 
 		&:after {
 			content: '';
@@ -139,13 +140,12 @@
 	.filter-name {
 		font-family: $heading-font-family;
 		font-weight: $heading-font-weight;
-		font-size: 20px;
 		line-height: 26px;
 	}
 
 	.filter-count {
-		font-size: 18px;
-		margin: 0 0 0 10px;
+		font-size: .9em;
+		margin: 0 0 0 var(--item-count-spacing, 10px);
 		position: relative;
 		top: -5px;
 	}
@@ -168,10 +168,7 @@
 	.project-categories-filter {
 		--item-gutter-x: 10px;
 		--item-spacing: 20px;
-
-		.filter-name {
-			font-size: 18px;
-		}
+		--item-font-size: 18px;
 	}
 }
 
@@ -187,10 +184,8 @@
 	.project-categories-filter {
 		--item-gutter-x: 8px;
 		--item-spacing: 15px;
-
-		.filter-name {
-			font-size: 16px;
-		}
+		--item-font-size: 16px;
+		--item-count-spacing: 5px;
 	}
 
 	.project-categories-list {
@@ -205,8 +200,6 @@
 
 @include media-breakpoint-down(xs) {
 	.project-categories-filter {
-		.filter-name {
-			font-size: 14px;
-		}
+		--item-font-size: 14px;
 	}
 }

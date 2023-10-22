@@ -1,0 +1,1062 @@
+[
+  {
+    "date": "2023-05-31",
+    "min_total_stake": "1554274.96",
+    "zero_self_stake_count": "200"
+  },
+  {
+    "date": "2023-05-30",
+    "min_total_stake": "1604221.14",
+    "zero_self_stake_count": "202"
+  },
+  {
+    "date": "2023-05-29",
+    "min_total_stake": "1604221.14",
+    "zero_self_stake_count": "201"
+  },
+  {
+    "date": "2023-05-28",
+    "min_total_stake": "1604221.14",
+    "zero_self_stake_count": "201"
+  },
+  {
+    "date": "2023-05-27",
+    "min_total_stake": "1604221.14",
+    "zero_self_stake_count": "201"
+  },
+  {
+    "date": "2023-05-26",
+    "min_total_stake": "1604221.14",
+    "zero_self_stake_count": "201"
+  },
+  {
+    "date": "2023-05-25",
+    "min_total_stake": "1554212.78",
+    "zero_self_stake_count": "200"
+  },
+  {
+    "date": "2023-05-24",
+    "min_total_stake": "1554212.78",
+    "zero_self_stake_count": "201"
+  },
+  {
+    "date": "2023-05-23",
+    "min_total_stake": "1511317.30",
+    "zero_self_stake_count": "200"
+  },
+  {
+    "date": "2023-05-22",
+    "min_total_stake": "1511317.30",
+    "zero_self_stake_count": "198"
+  },
+  {
+    "date": "2023-05-21",
+    "min_total_stake": "1511317.30",
+    "zero_self_stake_count": "198"
+  },
+  {
+    "date": "2023-05-20",
+    "min_total_stake": "1511317.30",
+    "zero_self_stake_count": "197"
+  },
+  {
+    "date": "2023-05-19",
+    "min_total_stake": "1511317.30",
+    "zero_self_stake_count": "197"
+  },
+  {
+    "date": "2023-05-18",
+    "min_total_stake": "1511317.30",
+    "zero_self_stake_count": "198"
+  },
+  {
+    "date": "2023-05-17",
+    "min_total_stake": "1486758.11",
+    "zero_self_stake_count": "195"
+  },
+  {
+    "date": "2023-05-16",
+    "min_total_stake": "1483706.75",
+    "zero_self_stake_count": "196"
+  },
+  {
+    "date": "2023-05-15",
+    "min_total_stake": "1483706.75",
+    "zero_self_stake_count": "196"
+  },
+  {
+    "date": "2023-05-14",
+    "min_total_stake": "1440256.56",
+    "zero_self_stake_count": "195"
+  },
+  {
+    "date": "2023-05-13",
+    "min_total_stake": "1440256.56",
+    "zero_self_stake_count": "196"
+  },
+  {
+    "date": "2023-05-12",
+    "min_total_stake": "1440256.56",
+    "zero_self_stake_count": "196"
+  },
+  {
+    "date": "2023-05-11",
+    "min_total_stake": "1440256.56",
+    "zero_self_stake_count": "196"
+  },
+  {
+    "date": "2023-05-10",
+    "min_total_stake": "1440256.56",
+    "zero_self_stake_count": "201"
+  },
+  {
+    "date": "2023-05-09",
+    "min_total_stake": "1440256.56",
+    "zero_self_stake_count": "201"
+  },
+  {
+    "date": "2023-05-08",
+    "min_total_stake": "1440256.56",
+    "zero_self_stake_count": "200"
+  },
+  {
+    "date": "2023-05-07",
+    "min_total_stake": "1440256.56",
+    "zero_self_stake_count": "197"
+  },
+  {
+    "date": "2023-05-06",
+    "min_total_stake": "1426324.75",
+    "zero_self_stake_count": "199"
+  },
+  {
+    "date": "2023-05-05",
+    "min_total_stake": "1411612.85",
+    "zero_self_stake_count": "201"
+  },
+  {
+    "date": "2023-05-04",
+    "min_total_stake": "1411148.60",
+    "zero_self_stake_count": "197"
+  },
+  {
+    "date": "2023-05-03",
+    "min_total_stake": "1779903.20",
+    "zero_self_stake_count": "218"
+  },
+  {
+    "date": "2023-05-02",
+    "min_total_stake": "1785553.47",
+    "zero_self_stake_count": "216"
+  },
+  {
+    "date": "2023-05-01",
+    "min_total_stake": "1785553.47",
+    "zero_self_stake_count": "217"
+  },
+  {
+    "date": "2023-04-30",
+    "min_total_stake": "1785553.47",
+    "zero_self_stake_count": "217"
+  },
+  {
+    "date": "2023-04-29",
+    "min_total_stake": "1785553.47",
+    "zero_self_stake_count": "217"
+  },
+  {
+    "date": "2023-04-28",
+    "min_total_stake": "1785553.47",
+    "zero_self_stake_count": "217"
+  },
+  {
+    "date": "2023-04-27",
+    "min_total_stake": "1761700.25",
+    "zero_self_stake_count": "217"
+  },
+  {
+    "date": "2023-04-26",
+    "min_total_stake": "1785553.47",
+    "zero_self_stake_count": "216"
+  },
+  {
+    "date": "2023-04-25",
+    "min_total_stake": "1785553.47",
+    "zero_self_stake_count": "216"
+  },
+  {
+    "date": "2023-04-24",
+    "min_total_stake": "1752663.65",
+    "zero_self_stake_count": "216"
+  },
+  {
+    "date": "2023-04-23",
+    "min_total_stake": "1752663.65",
+    "zero_self_stake_count": "216"
+  },
+  {
+    "date": "2023-04-22",
+    "min_total_stake": "1752898.99",
+    "zero_self_stake_count": "216"
+  },
+  {
+    "date": "2023-04-21",
+    "min_total_stake": "1730774.76",
+    "zero_self_stake_count": "215"
+  },
+  {
+    "date": "2023-04-20",
+    "min_total_stake": "1730774.76",
+    "zero_self_stake_count": "214"
+  },
+  {
+    "date": "2023-04-19",
+    "min_total_stake": "1730774.76",
+    "zero_self_stake_count": "214"
+  },
+  {
+    "date": "2023-04-18",
+    "min_total_stake": "1730993.85",
+    "zero_self_stake_count": "216"
+  },
+  {
+    "date": "2023-04-17",
+    "min_total_stake": "1730993.85",
+    "zero_self_stake_count": "215"
+  },
+  {
+    "date": "2023-04-16",
+    "min_total_stake": "1730993.85",
+    "zero_self_stake_count": "215"
+  },
+  {
+    "date": "2023-04-15",
+    "min_total_stake": "1730993.85",
+    "zero_self_stake_count": "215"
+  },
+  {
+    "date": "2023-04-14",
+    "min_total_stake": "1730940.52",
+    "zero_self_stake_count": "215"
+  },
+  {
+    "date": "2023-04-13",
+    "min_total_stake": "1730774.76",
+    "zero_self_stake_count": "215"
+  },
+  {
+    "date": "2023-04-12",
+    "min_total_stake": "1730774.76",
+    "zero_self_stake_count": "216"
+  },
+  {
+    "date": "2023-04-11",
+    "min_total_stake": "1730279.61",
+    "zero_self_stake_count": "216"
+  },
+  {
+    "date": "2023-04-10",
+    "min_total_stake": "1725000.10",
+    "zero_self_stake_count": "216"
+  },
+  {
+    "date": "2023-04-09",
+    "min_total_stake": "1724064.94",
+    "zero_self_stake_count": "216"
+  },
+  {
+    "date": "2023-04-08",
+    "min_total_stake": "1723558.71",
+    "zero_self_stake_count": "216"
+  },
+  {
+    "date": "2023-04-07",
+    "min_total_stake": "1723549.91",
+    "zero_self_stake_count": "217"
+  },
+  {
+    "date": "2023-04-06",
+    "min_total_stake": "1723195.17",
+    "zero_self_stake_count": "215"
+  },
+  {
+    "date": "2023-04-05",
+    "min_total_stake": "1726986.15",
+    "zero_self_stake_count": "216"
+  },
+  {
+    "date": "2023-04-04",
+    "min_total_stake": "1729480.08",
+    "zero_self_stake_count": "214"
+  },
+  {
+    "date": "2023-04-03",
+    "min_total_stake": "1707809.83",
+    "zero_self_stake_count": "214"
+  },
+  {
+    "date": "2023-04-02",
+    "min_total_stake": "1707760.95",
+    "zero_self_stake_count": "212"
+  },
+  {
+    "date": "2023-04-01",
+    "min_total_stake": "1707853.20",
+    "zero_self_stake_count": "212"
+  },
+  {
+    "date": "2023-03-31",
+    "min_total_stake": "1703400.09",
+    "zero_self_stake_count": "214"
+  },
+  {
+    "date": "2023-03-30",
+    "min_total_stake": "1701911.24",
+    "zero_self_stake_count": "212"
+  },
+  {
+    "date": "2023-03-29",
+    "min_total_stake": "1702416.89",
+    "zero_self_stake_count": "212"
+  },
+  {
+    "date": "2023-03-28",
+    "min_total_stake": "1697349.33",
+    "zero_self_stake_count": "211"
+  },
+  {
+    "date": "2023-03-27",
+    "min_total_stake": "1698179.16",
+    "zero_self_stake_count": "212"
+  },
+  {
+    "date": "2023-03-26",
+    "min_total_stake": "1698879.84",
+    "zero_self_stake_count": "212"
+  },
+  {
+    "date": "2023-03-25",
+    "min_total_stake": "1699345.67",
+    "zero_self_stake_count": "215"
+  },
+  {
+    "date": "2023-03-24",
+    "min_total_stake": "1699371.11",
+    "zero_self_stake_count": "213"
+  },
+  {
+    "date": "2023-03-23",
+    "min_total_stake": "1699552.90",
+    "zero_self_stake_count": "212"
+  },
+  {
+    "date": "2023-03-22",
+    "min_total_stake": "1704402.28",
+    "zero_self_stake_count": "212"
+  },
+  {
+    "date": "2023-03-21",
+    "min_total_stake": "1615484.97",
+    "zero_self_stake_count": "213"
+  },
+  {
+    "date": "2023-03-20",
+    "min_total_stake": "1699063.00",
+    "zero_self_stake_count": "212"
+  },
+  {
+    "date": "2023-03-19",
+    "min_total_stake": "1698741.81",
+    "zero_self_stake_count": "211"
+  },
+  {
+    "date": "2023-03-18",
+    "min_total_stake": "1698649.27",
+    "zero_self_stake_count": "214"
+  },
+  {
+    "date": "2023-03-17",
+    "min_total_stake": "1730687.32",
+    "zero_self_stake_count": "214"
+  },
+  {
+    "date": "2023-03-16",
+    "min_total_stake": "1695687.92",
+    "zero_self_stake_count": "216"
+  },
+  {
+    "date": "2023-03-15",
+    "min_total_stake": "1694734.15",
+    "zero_self_stake_count": "215"
+  },
+  {
+    "date": "2023-03-14",
+    "min_total_stake": "1685263.04",
+    "zero_self_stake_count": "216"
+  },
+  {
+    "date": "2023-03-13",
+    "min_total_stake": "1685456.80",
+    "zero_self_stake_count": "214"
+  },
+  {
+    "date": "2023-03-12",
+    "min_total_stake": "1681318.86",
+    "zero_self_stake_count": "229"
+  },
+  {
+    "date": "2023-03-11",
+    "min_total_stake": "1681250.13",
+    "zero_self_stake_count": "231"
+  },
+  {
+    "date": "2023-03-10",
+    "min_total_stake": "1795275.50",
+    "zero_self_stake_count": "230"
+  },
+  {
+    "date": "2023-03-09",
+    "min_total_stake": "1795275.50",
+    "zero_self_stake_count": "234"
+  },
+  {
+    "date": "2023-03-08",
+    "min_total_stake": "1801744.36",
+    "zero_self_stake_count": "231"
+  },
+  {
+    "date": "2023-03-07",
+    "min_total_stake": "1801755.61",
+    "zero_self_stake_count": "233"
+  },
+  {
+    "date": "2023-03-06",
+    "min_total_stake": "1801312.49",
+    "zero_self_stake_count": "234"
+  },
+  {
+    "date": "2023-03-05",
+    "min_total_stake": "1807382.41",
+    "zero_self_stake_count": "232"
+  },
+  {
+    "date": "2023-03-04",
+    "min_total_stake": "1801385.69",
+    "zero_self_stake_count": "231"
+  },
+  {
+    "date": "2023-03-03",
+    "min_total_stake": "1799106.69",
+    "zero_self_stake_count": "233"
+  },
+  {
+    "date": "2023-03-02",
+    "min_total_stake": "1787997.69",
+    "zero_self_stake_count": "234"
+  },
+  {
+    "date": "2023-03-01",
+    "min_total_stake": "1789399.10",
+    "zero_self_stake_count": "235"
+  },
+  {
+    "date": "2023-02-28",
+    "min_total_stake": "1753338.47",
+    "zero_self_stake_count": "230"
+  },
+  {
+    "date": "2023-02-27",
+    "min_total_stake": "1731485.16",
+    "zero_self_stake_count": "228"
+  },
+  {
+    "date": "2023-02-26",
+    "min_total_stake": "1731485.16",
+    "zero_self_stake_count": "228"
+  },
+  {
+    "date": "2023-02-25",
+    "min_total_stake": "1731485.16",
+    "zero_self_stake_count": "229"
+  },
+  {
+    "date": "2023-02-24",
+    "min_total_stake": "1731485.16",
+    "zero_self_stake_count": "229"
+  },
+  {
+    "date": "2023-02-23",
+    "min_total_stake": "1731484.85",
+    "zero_self_stake_count": "229"
+  },
+  {
+    "date": "2023-02-22",
+    "min_total_stake": "1694586.51",
+    "zero_self_stake_count": "227"
+  },
+  {
+    "date": "2023-02-21",
+    "min_total_stake": "1675124.00",
+    "zero_self_stake_count": "227"
+  },
+  {
+    "date": "2023-02-20",
+    "min_total_stake": "1699630.93",
+    "zero_self_stake_count": "228"
+  },
+  {
+    "date": "2023-02-19",
+    "min_total_stake": "1689161.86",
+    "zero_self_stake_count": "228"
+  },
+  {
+    "date": "2023-02-18",
+    "min_total_stake": "1652294.96",
+    "zero_self_stake_count": "228"
+  },
+  {
+    "date": "2023-02-17",
+    "min_total_stake": "1685933.42",
+    "zero_self_stake_count": "227"
+  },
+  {
+    "date": "2023-02-16",
+    "min_total_stake": "1676860.14",
+    "zero_self_stake_count": "228"
+  },
+  {
+    "date": "2023-02-15",
+    "min_total_stake": "1668345.57",
+    "zero_self_stake_count": "228"
+  },
+  {
+    "date": "2023-02-14",
+    "min_total_stake": "1659537.31",
+    "zero_self_stake_count": "228"
+  },
+  {
+    "date": "2023-02-13",
+    "min_total_stake": "1602895.54",
+    "zero_self_stake_count": "234"
+  },
+  {
+    "date": "2023-02-12",
+    "min_total_stake": "1625100.94",
+    "zero_self_stake_count": "233"
+  },
+  {
+    "date": "2023-02-11",
+    "min_total_stake": "1626607.59",
+    "zero_self_stake_count": "233"
+  },
+  {
+    "date": "2023-02-10",
+    "min_total_stake": "1598620.15",
+    "zero_self_stake_count": "235"
+  },
+  {
+    "date": "2023-02-09",
+    "min_total_stake": "1561807.96",
+    "zero_self_stake_count": "235"
+  },
+  {
+    "date": "2023-02-08",
+    "min_total_stake": "1588875.99",
+    "zero_self_stake_count": "232"
+  },
+  {
+    "date": "2023-02-07",
+    "min_total_stake": "1590128.00",
+    "zero_self_stake_count": "232"
+  },
+  {
+    "date": "2023-02-06",
+    "min_total_stake": "1594907.70",
+    "zero_self_stake_count": "232"
+  },
+  {
+    "date": "2023-02-05",
+    "min_total_stake": "1576718.49",
+    "zero_self_stake_count": "232"
+  },
+  {
+    "date": "2023-02-04",
+    "min_total_stake": "1576294.58",
+    "zero_self_stake_count": "232"
+  },
+  {
+    "date": "2023-02-03",
+    "min_total_stake": "1591613.27",
+    "zero_self_stake_count": "233"
+  },
+  {
+    "date": "2023-02-02",
+    "min_total_stake": "1620068.52",
+    "zero_self_stake_count": "231"
+  },
+  {
+    "date": "2023-02-01",
+    "min_total_stake": "1575031.56",
+    "zero_self_stake_count": "232"
+  },
+  {
+    "date": "2023-01-31",
+    "min_total_stake": "1563145.37",
+    "zero_self_stake_count": "230"
+  },
+  {
+    "date": "2023-01-30",
+    "min_total_stake": "1535255.14",
+    "zero_self_stake_count": "231"
+  },
+  {
+    "date": "2023-01-29",
+    "min_total_stake": "1546627.89",
+    "zero_self_stake_count": "229"
+  },
+  {
+    "date": "2023-01-28",
+    "min_total_stake": "1534582.19",
+    "zero_self_stake_count": "229"
+  },
+  {
+    "date": "2023-01-27",
+    "min_total_stake": "1512802.22",
+    "zero_self_stake_count": "228"
+  },
+  {
+    "date": "2023-01-26",
+    "min_total_stake": "1513182.25",
+    "zero_self_stake_count": "230"
+  },
+  {
+    "date": "2023-01-25",
+    "min_total_stake": "1516632.18",
+    "zero_self_stake_count": "230"
+  },
+  {
+    "date": "2023-01-24",
+    "min_total_stake": "1462249.13",
+    "zero_self_stake_count": "231"
+  },
+  {
+    "date": "2023-01-23",
+    "min_total_stake": "1483385.29",
+    "zero_self_stake_count": "229"
+  },
+  {
+    "date": "2023-01-22",
+    "min_total_stake": "1483385.29",
+    "zero_self_stake_count": "229"
+  },
+  {
+    "date": "2023-01-21",
+    "min_total_stake": "1483371.60",
+    "zero_self_stake_count": "227"
+  },
+  {
+    "date": "2023-01-20",
+    "min_total_stake": "1492649.93",
+    "zero_self_stake_count": "226"
+  },
+  {
+    "date": "2023-01-19",
+    "min_total_stake": "1483251.01",
+    "zero_self_stake_count": "228"
+  },
+  {
+    "date": "2023-01-18",
+    "min_total_stake": "1470696.64",
+    "zero_self_stake_count": "228"
+  },
+  {
+    "date": "2023-01-17",
+    "min_total_stake": "1413902.44",
+    "zero_self_stake_count": "230"
+  },
+  {
+    "date": "2023-01-16",
+    "min_total_stake": "1397329.47",
+    "zero_self_stake_count": "231"
+  },
+  {
+    "date": "2023-01-15",
+    "min_total_stake": "1395115.97",
+    "zero_self_stake_count": "231"
+  },
+  {
+    "date": "2023-01-14",
+    "min_total_stake": "1407964.27",
+    "zero_self_stake_count": "232"
+  },
+  {
+    "date": "2023-01-13",
+    "min_total_stake": "1402682.52",
+    "zero_self_stake_count": "233"
+  },
+  {
+    "date": "2023-01-12",
+    "min_total_stake": "1390878.65",
+    "zero_self_stake_count": "233"
+  },
+  {
+    "date": "2023-01-11",
+    "min_total_stake": "1390914.77",
+    "zero_self_stake_count": "234"
+  },
+  {
+    "date": "2023-01-10",
+    "min_total_stake": "1391113.72",
+    "zero_self_stake_count": "233"
+  },
+  {
+    "date": "2023-01-09",
+    "min_total_stake": "1382279.84",
+    "zero_self_stake_count": "232"
+  },
+  {
+    "date": "2023-01-08",
+    "min_total_stake": "1392137.92",
+    "zero_self_stake_count": "231"
+  },
+  {
+    "date": "2023-01-07",
+    "min_total_stake": "1391147.63",
+    "zero_self_stake_count": "232"
+  },
+  {
+    "date": "2023-01-06",
+    "min_total_stake": "1374776.53",
+    "zero_self_stake_count": "233"
+  },
+  {
+    "date": "2023-01-05",
+    "min_total_stake": "1312201.30",
+    "zero_self_stake_count": "234"
+  },
+  {
+    "date": "2023-01-04",
+    "min_total_stake": "1334991.25",
+    "zero_self_stake_count": "233"
+  },
+  {
+    "date": "2023-01-03",
+    "min_total_stake": "1334872.20",
+    "zero_self_stake_count": "232"
+  },
+  {
+    "date": "2023-01-02",
+    "min_total_stake": "1334872.20",
+    "zero_self_stake_count": "232"
+  },
+  {
+    "date": "2023-01-01",
+    "min_total_stake": "1334368.52",
+    "zero_self_stake_count": "232"
+  },
+  {
+    "date": "2022-12-31",
+    "min_total_stake": "1310492.15",
+    "zero_self_stake_count": "232"
+  },
+  {
+    "date": "2022-12-30",
+    "min_total_stake": "1310188.39",
+    "zero_self_stake_count": "232"
+  },
+  {
+    "date": "2022-12-29",
+    "min_total_stake": "1310188.39",
+    "zero_self_stake_count": "233"
+  },
+  {
+    "date": "2022-12-28",
+    "min_total_stake": "1284412.49",
+    "zero_self_stake_count": "235"
+  },
+  {
+    "date": "2022-12-27",
+    "min_total_stake": "1242751.66",
+    "zero_self_stake_count": "236"
+  },
+  {
+    "date": "2022-12-26",
+    "min_total_stake": "1246599.11",
+    "zero_self_stake_count": "235"
+  },
+  {
+    "date": "2022-12-25",
+    "min_total_stake": "1245782.93",
+    "zero_self_stake_count": "234"
+  },
+  {
+    "date": "2022-12-24",
+    "min_total_stake": "1352000.83",
+    "zero_self_stake_count": "238"
+  },
+  {
+    "date": "2022-12-23",
+    "min_total_stake": "1345181.33",
+    "zero_self_stake_count": "237"
+  },
+  {
+    "date": "2022-12-22",
+    "min_total_stake": "1352755.98",
+    "zero_self_stake_count": "238"
+  },
+  {
+    "date": "2022-12-21",
+    "min_total_stake": "1305516.99",
+    "zero_self_stake_count": "238"
+  },
+  {
+    "date": "2022-12-20",
+    "min_total_stake": "1312075.71",
+    "zero_self_stake_count": "238"
+  },
+  {
+    "date": "2022-12-19",
+    "min_total_stake": "1420608.47",
+    "zero_self_stake_count": "237"
+  },
+  {
+    "date": "2022-12-18",
+    "min_total_stake": "1400770.77",
+    "zero_self_stake_count": "240"
+  },
+  {
+    "date": "2022-12-17",
+    "min_total_stake": "1428298.01",
+    "zero_self_stake_count": "237"
+  },
+  {
+    "date": "2022-12-16",
+    "min_total_stake": "1391200.06",
+    "zero_self_stake_count": "240"
+  },
+  {
+    "date": "2022-12-15",
+    "min_total_stake": "1429569.88",
+    "zero_self_stake_count": "238"
+  },
+  {
+    "date": "2022-12-14",
+    "min_total_stake": "1372409.74",
+    "zero_self_stake_count": "239"
+  },
+  {
+    "date": "2022-12-13",
+    "min_total_stake": "1453548.64",
+    "zero_self_stake_count": "239"
+  },
+  {
+    "date": "2022-12-12",
+    "min_total_stake": "1542403.92",
+    "zero_self_stake_count": "241"
+  },
+  {
+    "date": "2022-12-11",
+    "min_total_stake": "1554383.70",
+    "zero_self_stake_count": "240"
+  },
+  {
+    "date": "2022-12-10",
+    "min_total_stake": "1542216.24",
+    "zero_self_stake_count": "241"
+  },
+  {
+    "date": "2022-12-09",
+    "min_total_stake": "1542216.24",
+    "zero_self_stake_count": "241"
+  },
+  {
+    "date": "2022-12-08",
+    "min_total_stake": "1542216.24",
+    "zero_self_stake_count": "241"
+  },
+  {
+    "date": "2022-12-07",
+    "min_total_stake": "1532354.61",
+    "zero_self_stake_count": "241"
+  },
+  {
+    "date": "2022-12-06",
+    "min_total_stake": "1542216.24",
+    "zero_self_stake_count": "241"
+  },
+  {
+    "date": "2022-12-05",
+    "min_total_stake": "1542403.92",
+    "zero_self_stake_count": "241"
+  },
+  {
+    "date": "2022-12-04",
+    "min_total_stake": "1542228.20",
+    "zero_self_stake_count": "241"
+  },
+  {
+    "date": "2022-12-03",
+    "min_total_stake": "1542403.92",
+    "zero_self_stake_count": "241"
+  },
+  {
+    "date": "2022-12-02",
+    "min_total_stake": "1529954.13",
+    "zero_self_stake_count": "240"
+  },
+  {
+    "date": "2022-12-01",
+    "min_total_stake": "1529925.20",
+    "zero_self_stake_count": "241"
+  },
+  {
+    "date": "2022-11-30",
+    "min_total_stake": "1542403.92",
+    "zero_self_stake_count": "240"
+  },
+  {
+    "date": "2022-11-29",
+    "min_total_stake": "1499765.52",
+    "zero_self_stake_count": "244"
+  },
+  {
+    "date": "2022-11-28",
+    "min_total_stake": "1529721.70",
+    "zero_self_stake_count": "244"
+  },
+  {
+    "date": "2022-11-27",
+    "min_total_stake": "1529721.70",
+    "zero_self_stake_count": "244"
+  },
+  {
+    "date": "2022-11-26",
+    "min_total_stake": "1529721.70",
+    "zero_self_stake_count": "244"
+  },
+  {
+    "date": "2022-11-25",
+    "min_total_stake": "1540793.75",
+    "zero_self_stake_count": "244"
+  },
+  {
+    "date": "2022-11-24",
+    "min_total_stake": "1789037.74",
+    "zero_self_stake_count": "247"
+  },
+  {
+    "date": "2022-11-23",
+    "min_total_stake": "1789444.63",
+    "zero_self_stake_count": "247"
+  },
+  {
+    "date": "2022-11-22",
+    "min_total_stake": "1806755.50",
+    "zero_self_stake_count": "247"
+  },
+  {
+    "date": "2022-11-21",
+    "min_total_stake": "1802555.58",
+    "zero_self_stake_count": "246"
+  },
+  {
+    "date": "2022-11-20",
+    "min_total_stake": "1795965.13",
+    "zero_self_stake_count": "247"
+  },
+  {
+    "date": "2022-11-19",
+    "min_total_stake": "1806755.50",
+    "zero_self_stake_count": "246"
+  },
+  {
+    "date": "2022-11-18",
+    "min_total_stake": "1791532.67",
+    "zero_self_stake_count": "247"
+  },
+  {
+    "date": "2022-11-17",
+    "min_total_stake": "1817881.36",
+    "zero_self_stake_count": "244"
+  },
+  {
+    "date": "2022-11-16",
+    "min_total_stake": "1806755.50",
+    "zero_self_stake_count": "246"
+  },
+  {
+    "date": "2022-11-15",
+    "min_total_stake": "1789663.80",
+    "zero_self_stake_count": "245"
+  },
+  {
+    "date": "2022-11-14",
+    "min_total_stake": "1794513.77",
+    "zero_self_stake_count": "244"
+  },
+  {
+    "date": "2022-11-13",
+    "min_total_stake": "1789579.53",
+    "zero_self_stake_count": "245"
+  },
+  {
+    "date": "2022-11-12",
+    "min_total_stake": "1785793.97",
+    "zero_self_stake_count": "247"
+  },
+  {
+    "date": "2022-11-11",
+    "min_total_stake": "1786368.65",
+    "zero_self_stake_count": "248"
+  },
+  {
+    "date": "2022-11-10",
+    "min_total_stake": "1849119.67",
+    "zero_self_stake_count": "246"
+  },
+  {
+    "date": "2022-11-09",
+    "min_total_stake": "1844772.40",
+    "zero_self_stake_count": "246"
+  },
+  {
+    "date": "2022-11-08",
+    "min_total_stake": "1880974.95",
+    "zero_self_stake_count": "246"
+  },
+  {
+    "date": "2022-11-07",
+    "min_total_stake": "1893000.30",
+    "zero_self_stake_count": "244"
+  },
+  {
+    "date": "2022-11-06",
+    "min_total_stake": "1888085.10",
+    "zero_self_stake_count": "245"
+  },
+  {
+    "date": "2022-11-05",
+    "min_total_stake": "1878148.49",
+    "zero_self_stake_count": "246"
+  },
+  {
+    "date": "2022-11-04",
+    "min_total_stake": "1876965.99",
+    "zero_self_stake_count": "246"
+  },
+  {
+    "date": "2022-11-03",
+    "min_total_stake": "1878148.49",
+    "zero_self_stake_count": "247"
+  },
+  {
+    "date": "2022-11-02",
+    "min_total_stake": "1865175.23",
+    "zero_self_stake_count": "247"
+  },
+  {
+    "date": "2022-11-01",
+    "min_total_stake": "1871372.94",
+    "zero_self_stake_count": "245"
+  }
+]
