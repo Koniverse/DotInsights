@@ -42,7 +42,7 @@
 				}
 			},
 			'metamask': {
-				name: 'Metamask',
+				name: 'MetaMask',
 				type: 'evm',
 				provider: 'ethereum',
 				evmDetect: 'isMetaMask',
