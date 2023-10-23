@@ -14,7 +14,7 @@
 					if ( isHandheld ) {
 						return 'https://mobile.subwallet.app/?url=https%3A%2F%2Fdotinsights.subwallet.app%2F';
 					} else {
-						return isFirefox ? 'https://mzl.la/3rQ0awW' : 'https://bit.ly/3BGqFt1'
+						return isFirefox ? 'https://mzl.la/3rQ0awW' : 'https://subwallet.app/download.html'
 					}
 				}
 			},
@@ -28,8 +28,27 @@
 					if ( isHandheld ) {
 						return 'https://mobile.subwallet.app/?url=https%3A%2F%2Fdotinsights.subwallet.app%2F';
 					} else {
-						return isFirefox ? 'https://mzl.la/3rQ0awW' : 'https://bit.ly/3BGqFt1'
+						return isFirefox ? 'https://mzl.la/3rQ0awW' : 'https://subwallet.app/download.html'
 					}
+				}
+			},
+			'polkadot': {
+				name: 'Polkadot{.js}',
+				type: 'substrate',
+				provider: 'polkadot-js',
+				logo: '',
+				getInstallUrl: function() {
+					return 'https://polkadot.js.org/extension/'
+				}
+			},
+			'metamask': {
+				name: 'Metamask',
+				type: 'evm',
+				provider: 'ethereum',
+				evmDetect: 'isMetaMask',
+				logo: '',
+				getInstallUrl: function() {
+					return 'https://metamask.io/download/';
 				}
 			},
 			talisman: {
@@ -51,18 +70,6 @@
 					return 'https://talisman.xyz/download'
 				}
 			}
-			/*,
-			'metamask': {
-				name: 'Metamask',
-				type: 'evm',
-				provider: 'ethereum',
-				evmDetect: 'isMetaMask',
-				logo: '',
-				getInstallUrl: function() {
-					return 'https://metamask.io/download/';
-				}
-			}
-			*/
 		};
 
 		const STORE_STATE_KEY = 'dotinsightsWalletInfo';

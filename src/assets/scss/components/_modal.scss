@@ -258,6 +258,12 @@
 			}
 		}
 
+		&.wallet--polkadot {
+			&:after {
+				background: url(../images/projects/polkadot-{.js}.png) no-repeat center;
+			}
+		}
+
 		&.wallet--talisman,
 		&.wallet--talisman-evm {
 			&:after {
