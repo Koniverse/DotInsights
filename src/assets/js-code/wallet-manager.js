@@ -32,25 +32,6 @@
 					}
 				}
 			},
-			'polkadot': {
-				name: 'Polkadot{.js}',
-				type: 'substrate',
-				provider: 'polkadot-js',
-				logo: '',
-				getInstallUrl: function() {
-					return 'https://polkadot.js.org/extension/'
-				}
-			},
-			'metamask': {
-				name: 'MetaMask',
-				type: 'evm',
-				provider: 'ethereum',
-				evmDetect: 'isMetaMask',
-				logo: '',
-				getInstallUrl: function() {
-					return 'https://metamask.io/download/';
-				}
-			},
 			talisman: {
 				name: 'Talisman',
 				type: 'substrate',
@@ -68,6 +49,25 @@
 				logo: '',
 				getInstallUrl: function() {
 					return 'https://talisman.xyz/download'
+				}
+			},
+			'polkadot': {
+				name: 'Polkadot{.js}',
+				type: 'substrate',
+				provider: 'polkadot-js',
+				logo: '',
+				getInstallUrl: function() {
+					return 'https://polkadot.js.org/extension/'
+				}
+			},
+			'metamask': {
+				name: 'MetaMask',
+				type: 'evm',
+				provider: 'ethereum',
+				evmDetect: 'isMetaMask',
+				logo: '',
+				getInstallUrl: function() {
+					return 'https://metamask.io/download/';
 				}
 			}
 		};
