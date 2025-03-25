@@ -37,6 +37,12 @@
       ]
     },
     {
+      "name": "reports-q3-2023",
+      "files": [
+        "src/assets/js-code/reports-q3-2023.js"
+      ]
+    },
+    {
       "name": "reports-h1-2023",
       "files": [
         "src/assets/js-code/reports-h1-2023.js"
